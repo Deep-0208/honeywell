@@ -1,0 +1,462 @@
+{
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\eslint.config.mjs": {
+    "mtime": 1780747575.2139792,
+    "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
+    "semantic_hash": "dfa1f5f6a7037bf39dc510f30b180002"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\next-sitemap.config.js": {
+    "mtime": 1781358933.3537734,
+    "ast_hash": "423445e45e777290ec25a640874ccf96",
+    "semantic_hash": "423445e45e777290ec25a640874ccf96"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\next.config.ts": {
+    "mtime": 1781355380.251252,
+    "ast_hash": "780877245688cb9320d8011db264e254",
+    "semantic_hash": "780877245688cb9320d8011db264e254"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\package.json": {
+    "mtime": 1781707995.700977,
+    "ast_hash": "3eca86319fb554c9bf7935840fc57784",
+    "semantic_hash": "3eca86319fb554c9bf7935840fc57784"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\postcss.config.mjs": {
+    "mtime": 1780834655.6380012,
+    "ast_hash": "27808b58abfd6d09739e715b81724384",
+    "semantic_hash": "27808b58abfd6d09739e715b81724384"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\tailwind.config.ts": {
+    "mtime": 1781348888.5639508,
+    "ast_hash": "7c364a363776b9c6adebe822d52d7d3a",
+    "semantic_hash": "7c364a363776b9c6adebe822d52d7d3a"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\tsconfig.json": {
+    "mtime": 1780831658.4552653,
+    "ast_hash": "02fc19ad21338c2ab820a70136310db4",
+    "semantic_hash": "02fc19ad21338c2ab820a70136310db4"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\layout.tsx": {
+    "mtime": 1781708744.6202276,
+    "ast_hash": "1b98d6adf7612baa336d96aeb2e2dbea",
+    "semantic_hash": "1b98d6adf7612baa336d96aeb2e2dbea"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\not-found.tsx": {
+    "mtime": 1781359049.2904413,
+    "ast_hash": "6ed11a813675adf6557dbb9000f6b73a",
+    "semantic_hash": "6ed11a813675adf6557dbb9000f6b73a"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\error.tsx": {
+    "mtime": 1781343772.5627253,
+    "ast_hash": "0cb4b4dc7fa043090691f03e2dbed1e2",
+    "semantic_hash": "0cb4b4dc7fa043090691f03e2dbed1e2"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\layout.tsx": {
+    "mtime": 1781351014.0218294,
+    "ast_hash": "b87f3438c877b441561a45a3df3187c2",
+    "semantic_hash": "b87f3438c877b441561a45a3df3187c2"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\loading.tsx": {
+    "mtime": 1780939286.029479,
+    "ast_hash": "1d65207d71041687b87aa9b113a8fe2f",
+    "semantic_hash": "1d65207d71041687b87aa9b113a8fe2f"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\page.tsx": {
+    "mtime": 1781351625.6005032,
+    "ast_hash": "1705dec1f980b9eab38431607281ee3d",
+    "semantic_hash": "1705dec1f980b9eab38431607281ee3d"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\about-us\\page.tsx": {
+    "mtime": 1781896693.8281808,
+    "ast_hash": "a95ff4ee58d60f1520961105e062da1f",
+    "semantic_hash": "a95ff4ee58d60f1520961105e062da1f"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\contact-us\\page.tsx": {
+    "mtime": 1781896691.637885,
+    "ast_hash": "db2ea3f7df1125eec45ca97a8db082a5",
+    "semantic_hash": "db2ea3f7df1125eec45ca97a8db082a5"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\infrastructure\\page.tsx": {
+    "mtime": 1781896527.7161024,
+    "ast_hash": "68474178cdbc17d641c7e30479c44992",
+    "semantic_hash": "68474178cdbc17d641c7e30479c44992"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\manufacturing-facility\\page.tsx": {
+    "mtime": 1781896511.7001717,
+    "ast_hash": "a5328479be13be047bcb670ac42ddd55",
+    "semantic_hash": "a5328479be13be047bcb670ac42ddd55"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\products\\page.tsx": {
+    "mtime": 1781898127.3508055,
+    "ast_hash": "348fd80230c1936feb023dc83dc0d9c0",
+    "semantic_hash": "348fd80230c1936feb023dc83dc0d9c0"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\products\\hydraulic-cylinders\\page.tsx": {
+    "mtime": 1781896557.5746288,
+    "ast_hash": "5792692ab9b8b1be63355f1f0b116963",
+    "semantic_hash": "5792692ab9b8b1be63355f1f0b116963"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\products\\hydraulic-cylinders\\custom-hydraulic-cylinders\\page.tsx": {
+    "mtime": 1781334290.3941486,
+    "ast_hash": "fab72735b327ebe137f3a5422a8bf474",
+    "semantic_hash": "fab72735b327ebe137f3a5422a8bf474"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\products\\hydraulic-cylinders\\telescopic-hydraulic-cylinders\\page.tsx": {
+    "mtime": 1781896595.5624447,
+    "ast_hash": "c3821c48230c3e0f3090c36f1823c540",
+    "semantic_hash": "c3821c48230c3e0f3090c36f1823c540"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\products\\hydraulic-cylinders\\tie-rod-hydraulic-cylinders\\page.tsx": {
+    "mtime": 1781896579.6913917,
+    "ast_hash": "2e1569e0949f6a93f7e9455392bbbdf1",
+    "semantic_hash": "2e1569e0949f6a93f7e9455392bbbdf1"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\products\\hydraulic-power-packs\\page.tsx": {
+    "mtime": 1781896555.5221996,
+    "ast_hash": "99e032fc60a067e454282298736910c1",
+    "semantic_hash": "99e032fc60a067e454282298736910c1"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\quality\\page.tsx": {
+    "mtime": 1781896525.2543473,
+    "ast_hash": "cd09a7f4addb6bab433b24f6ba8d50a9",
+    "semantic_hash": "cd09a7f4addb6bab433b24f6ba8d50a9"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\app\\(site)\\request-quote\\page.tsx": {
+    "mtime": 1781896625.3428597,
+    "ast_hash": "47b96c7448bcb0ad60db5b718dacf6f2",
+    "semantic_hash": "47b96c7448bcb0ad60db5b718dacf6f2"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\Footer.tsx": {
+    "mtime": 1781896654.4030213,
+    "ast_hash": "cea8dc49625f79b51091eda715f7576b",
+    "semantic_hash": "cea8dc49625f79b51091eda715f7576b"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\Header.tsx": {
+    "mtime": 1781896375.4183047,
+    "ast_hash": "851aa71a9c5319bfce20f794918d8aba",
+    "semantic_hash": "851aa71a9c5319bfce20f794918d8aba"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\MegaMenu.tsx": {
+    "mtime": 1781324868.2600825,
+    "ast_hash": "bb3cfc70074c2df6735c69ef1c258c09",
+    "semantic_hash": "bb3cfc70074c2df6735c69ef1c258c09"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\MobileMenu.tsx": {
+    "mtime": 1781359283.29605,
+    "ast_hash": "9fc76344b8eb4fbf9b62edc15803d583",
+    "semantic_hash": "9fc76344b8eb4fbf9b62edc15803d583"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\cards\\ApplicationCard.tsx": {
+    "mtime": 1780837548.6388671,
+    "ast_hash": "906adf6b8fc070341bdf497c1d3c7797",
+    "semantic_hash": "906adf6b8fc070341bdf497c1d3c7797"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\cards\\IndustryCard.tsx": {
+    "mtime": 1781324583.680252,
+    "ast_hash": "7f6de648316b1d21b458ac65cdf49a98",
+    "semantic_hash": "7f6de648316b1d21b458ac65cdf49a98"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\cards\\LocationCard.tsx": {
+    "mtime": 1780837553.0791223,
+    "ast_hash": "9c801b691c29f94ebdda0a660a613491",
+    "semantic_hash": "9c801b691c29f94ebdda0a660a613491"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\cards\\ProductCard.tsx": {
+    "mtime": 1781324565.267664,
+    "ast_hash": "5fa650230bd9704302aa94dafd4b5de8",
+    "semantic_hash": "5fa650230bd9704302aa94dafd4b5de8"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\cards\\ServiceCard.tsx": {
+    "mtime": 1780837550.6754494,
+    "ast_hash": "6a0a03c6dc19de3279650948c185d132",
+    "semantic_hash": "6a0a03c6dc19de3279650948c185d132"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\cards\\TestimonialCard.tsx": {
+    "mtime": 1781324602.0688,
+    "ast_hash": "31e294805c611728ffc59125fbb0fe57",
+    "semantic_hash": "31e294805c611728ffc59125fbb0fe57"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\faq\\FAQAccordion.tsx": {
+    "mtime": 1780837578.5740705,
+    "ast_hash": "bc116b2ece7fc5d95a40585c7e514f07",
+    "semantic_hash": "bc116b2ece7fc5d95a40585c7e514f07"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\faq\\FAQItem.tsx": {
+    "mtime": 1781324542.3776834,
+    "ast_hash": "951f8566fecd2a774046457ad0f370bd",
+    "semantic_hash": "951f8566fecd2a774046457ad0f370bd"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\forms\\ContactForm.tsx": {
+    "mtime": 1781029488.7170935,
+    "ast_hash": "1cf69fcff23b80d6d07bbd188c647bf3",
+    "semantic_hash": "1cf69fcff23b80d6d07bbd188c647bf3"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\forms\\QuoteForm.tsx": {
+    "mtime": 1781358785.8324592,
+    "ast_hash": "b1e5bc369e073dc462560b42cb279ea8",
+    "semantic_hash": "b1e5bc369e073dc462560b42cb279ea8"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\homepage\\FAQSection.tsx": {
+    "mtime": 1781324439.1379395,
+    "ast_hash": "40f0462b75b608d578266c25f3b97897",
+    "semantic_hash": "40f0462b75b608d578266c25f3b97897"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\homepage\\HeroSection.tsx": {
+    "mtime": 1781896482.148297,
+    "ast_hash": "bc2809c4e0ed0342db8df70077050b02",
+    "semantic_hash": "bc2809c4e0ed0342db8df70077050b02"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\homepage\\HomepageCTASection.tsx": {
+    "mtime": 1781896473.7247906,
+    "ast_hash": "463b92f0c30ebf442a9ff9e42a5f5337",
+    "semantic_hash": "463b92f0c30ebf442a9ff9e42a5f5337"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\homepage\\IndustriesSection.tsx": {
+    "mtime": 1781347076.0289352,
+    "ast_hash": "bf6705f5eb19a41cd54bde82c77b485c",
+    "semantic_hash": "bf6705f5eb19a41cd54bde82c77b485c"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\homepage\\LocationsSection.tsx": {
+    "mtime": 1781324422.8544865,
+    "ast_hash": "d052682aa61720faade6b40a1567e522",
+    "semantic_hash": "d052682aa61720faade6b40a1567e522"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\homepage\\ProcessSection.tsx": {
+    "mtime": 1781324726.623487,
+    "ast_hash": "21b8b7c17f17caf4bbb41180e62eea14",
+    "semantic_hash": "21b8b7c17f17caf4bbb41180e62eea14"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\homepage\\ProductsSection.tsx": {
+    "mtime": 1781896465.9517198,
+    "ast_hash": "22c80df05c015685bd9aa9fbbfc0c0c6",
+    "semantic_hash": "22c80df05c015685bd9aa9fbbfc0c0c6"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\homepage\\TestimonialsSection.tsx": {
+    "mtime": 1781324334.9439578,
+    "ast_hash": "1f5fe00d1a32d3eed591d957b85f07da",
+    "semantic_hash": "1f5fe00d1a32d3eed591d957b85f07da"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\homepage\\TrustStrip.tsx": {
+    "mtime": 1781324225.503778,
+    "ast_hash": "c8d7a759546d715530ce4c0e8ce637a1",
+    "semantic_hash": "c8d7a759546d715530ce4c0e8ce637a1"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\homepage\\WhyChooseUsSection.tsx": {
+    "mtime": 1781896447.054963,
+    "ast_hash": "89b65df3bcdff51baa2899a07827b6d7",
+    "semantic_hash": "89b65df3bcdff51baa2899a07827b6d7"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\layout\\Breadcrumb.tsx": {
+    "mtime": 1780835551.7396686,
+    "ast_hash": "9e322449abd882ae1c801da19f605868",
+    "semantic_hash": "9e322449abd882ae1c801da19f605868"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\layout\\PageContainer.tsx": {
+    "mtime": 1780835553.831305,
+    "ast_hash": "2eebe37f66246a97103f49f69f55c329",
+    "semantic_hash": "2eebe37f66246a97103f49f69f55c329"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\motion\\motion-primitives.tsx": {
+    "mtime": 1781359317.1554906,
+    "ast_hash": "e079ce8793fa4c6a3f95a1646aa21237",
+    "semantic_hash": "e079ce8793fa4c6a3f95a1646aa21237"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\motion\\motion-variants.ts": {
+    "mtime": 1781324847.7155313,
+    "ast_hash": "8c557c3c6fe2fea87041fda7e23547e2",
+    "semantic_hash": "8c557c3c6fe2fea87041fda7e23547e2"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-cylinders\\CylinderFAQs.tsx": {
+    "mtime": 1780942654.738822,
+    "ast_hash": "cdcb6077f8341c716d15a295cad3bf71",
+    "semantic_hash": "cdcb6077f8341c716d15a295cad3bf71"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-cylinders\\CylinderIndustries.tsx": {
+    "mtime": 1780942649.0054922,
+    "ast_hash": "f3365a3a420e6ae2239376cd2778cde3",
+    "semantic_hash": "f3365a3a420e6ae2239376cd2778cde3"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-cylinders\\CylinderManufacturingProcess.tsx": {
+    "mtime": 1780942653.3813734,
+    "ast_hash": "da7e11e5a40ac773c9993a10b298f370",
+    "semantic_hash": "da7e11e5a40ac773c9993a10b298f370"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-cylinders\\CylinderOverview.tsx": {
+    "mtime": 1780942642.7058234,
+    "ast_hash": "bd97faec3843d9007559ab3e799bd241",
+    "semantic_hash": "bd97faec3843d9007559ab3e799bd241"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-cylinders\\CylinderTechnicalSpecs.tsx": {
+    "mtime": 1780942713.4186795,
+    "ast_hash": "a47df8247c02e51de55c4aea3dfb29d2",
+    "semantic_hash": "a47df8247c02e51de55c4aea3dfb29d2"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-cylinders\\CylinderTypesGrid.tsx": {
+    "mtime": 1780942644.9174292,
+    "ast_hash": "b6310857312ba7f1c0cb24f5703093b8",
+    "semantic_hash": "b6310857312ba7f1c0cb24f5703093b8"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-cylinders\\HydraulicCylinderHero.tsx": {
+    "mtime": 1780942760.9874535,
+    "ast_hash": "eb90ddb529a76a3cf7d5fb5609724195",
+    "semantic_hash": "eb90ddb529a76a3cf7d5fb5609724195"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-cylinders\\WhyChooseCylinders.tsx": {
+    "mtime": 1780942650.475288,
+    "ast_hash": "95a5412e248373fd5ffe76c1a9bd976f",
+    "semantic_hash": "95a5412e248373fd5ffe76c1a9bd976f"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-power-packs\\HydraulicPowerPackHero.tsx": {
+    "mtime": 1781025637.9203718,
+    "ast_hash": "04548c319c3a5191a6494f9a646b07fd",
+    "semantic_hash": "04548c319c3a5191a6494f9a646b07fd"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-power-packs\\PowerPackFAQs.tsx": {
+    "mtime": 1781025684.879683,
+    "ast_hash": "be62f9673399ea0d91abc3cc635e0ac0",
+    "semantic_hash": "be62f9673399ea0d91abc3cc635e0ac0"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-power-packs\\PowerPackIndustries.tsx": {
+    "mtime": 1781025668.6212044,
+    "ast_hash": "31a181aa45fe156dce72a70609111c83",
+    "semantic_hash": "31a181aa45fe156dce72a70609111c83"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-power-packs\\PowerPackManufacturingProcess.tsx": {
+    "mtime": 1781025682.8232071,
+    "ast_hash": "c7d2d278500cab1f63299ca50278f473",
+    "semantic_hash": "c7d2d278500cab1f63299ca50278f473"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-power-packs\\PowerPackOverview.tsx": {
+    "mtime": 1781025642.5823748,
+    "ast_hash": "78aec0bd05a6139e2121eb4342b96702",
+    "semantic_hash": "78aec0bd05a6139e2121eb4342b96702"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-power-packs\\PowerPackTechnicalSpecs.tsx": {
+    "mtime": 1781025680.7898653,
+    "ast_hash": "4c2426c3a4ce40fbabc090e350a79a91",
+    "semantic_hash": "4c2426c3a4ce40fbabc090e350a79a91"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-power-packs\\PowerPackTypesGrid.tsx": {
+    "mtime": 1781025900.1460364,
+    "ast_hash": "62bdae046d4fa58d76cc826b64e99261",
+    "semantic_hash": "62bdae046d4fa58d76cc826b64e99261"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\products\\hydraulic-power-packs\\WhyChoosePowerPacks.tsx": {
+    "mtime": 1781025675.5236592,
+    "ast_hash": "3425f6507204e9a7143dae51053225be",
+    "semantic_hash": "3425f6507204e9a7143dae51053225be"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\seo\\JsonLd.tsx": {
+    "mtime": 1780941303.608853,
+    "ast_hash": "23e1e77bec9aa825c4e3801b616c7010",
+    "semantic_hash": "23e1e77bec9aa825c4e3801b616c7010"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\seo\\SEO.tsx": {
+    "mtime": 1781359559.259519,
+    "ast_hash": "cc7ef054004aab0c168cbc3189f284ef",
+    "semantic_hash": "cc7ef054004aab0c168cbc3189f284ef"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\tables\\SpecTable.tsx": {
+    "mtime": 1780837583.2034547,
+    "ast_hash": "5127b3260a3a19fc686e44a20d313e7a",
+    "semantic_hash": "5127b3260a3a19fc686e44a20d313e7a"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\ui\\Badge.tsx": {
+    "mtime": 1780837464.3114283,
+    "ast_hash": "98e4eab44453ad5a5263d7a9d03bbb6c",
+    "semantic_hash": "98e4eab44453ad5a5263d7a9d03bbb6c"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\ui\\Button.tsx": {
+    "mtime": 1781324496.9167676,
+    "ast_hash": "57baea5e94c0582d5710e642dbae27ce",
+    "semantic_hash": "57baea5e94c0582d5710e642dbae27ce"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\ui\\Card.tsx": {
+    "mtime": 1781324473.9536853,
+    "ast_hash": "c0952a348e96a3c66772adb5abbf8926",
+    "semantic_hash": "c0952a348e96a3c66772adb5abbf8926"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\ui\\Container.tsx": {
+    "mtime": 1780837478.9137495,
+    "ast_hash": "caf34157b72524d535fc970236f77b16",
+    "semantic_hash": "caf34157b72524d535fc970236f77b16"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\ui\\CTA.tsx": {
+    "mtime": 1781324620.2746394,
+    "ast_hash": "b679bc47676197e76d06e0d29382416a",
+    "semantic_hash": "b679bc47676197e76d06e0d29382416a"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\ui\\EmptyState.tsx": {
+    "mtime": 1780837503.2771263,
+    "ast_hash": "6ea9bf0377a722bd999709ad041e0162",
+    "semantic_hash": "6ea9bf0377a722bd999709ad041e0162"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\ui\\Heading.tsx": {
+    "mtime": 1781346709.5943687,
+    "ast_hash": "fa3780f404872732a1c510f85f95328f",
+    "semantic_hash": "fa3780f404872732a1c510f85f95328f"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\ui\\IconBox.tsx": {
+    "mtime": 1781324510.4342234,
+    "ast_hash": "a162a8a11740ffd1821c9e0ff110bd51",
+    "semantic_hash": "a162a8a11740ffd1821c9e0ff110bd51"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\ui\\LoadingSkeleton.tsx": {
+    "mtime": 1780837523.9742823,
+    "ast_hash": "6dabed16f8ebb3bc30f2f6f14963cc31",
+    "semantic_hash": "6dabed16f8ebb3bc30f2f6f14963cc31"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\components\\ui\\Section.tsx": {
+    "mtime": 1780837478.9727843,
+    "ast_hash": "d08ec03756f12468fe86ce4e2c82242b",
+    "semantic_hash": "d08ec03756f12468fe86ce4e2c82242b"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\data\\homepage.ts": {
+    "mtime": 1781898098.9413152,
+    "ast_hash": "5ef988d0dc9966113bc099901890f3c4",
+    "semantic_hash": "5ef988d0dc9966113bc099901890f3c4"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\data\\navigation.ts": {
+    "mtime": 1781898086.4808972,
+    "ast_hash": "f657b6c81473c84977f78d596f160814",
+    "semantic_hash": "f657b6c81473c84977f78d596f160814"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\lib\\constants.ts": {
+    "mtime": 1781896423.9603574,
+    "ast_hash": "6abafca9b2f00822f31afd7b1fdfc937",
+    "semantic_hash": "6abafca9b2f00822f31afd7b1fdfc937"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\lib\\content.ts": {
+    "mtime": 1780832723.5320673,
+    "ast_hash": "852169b70e6e24591aa3eec98ff86e4b",
+    "semantic_hash": "852169b70e6e24591aa3eec98ff86e4b"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\lib\\navigation.ts": {
+    "mtime": 1781898114.1120064,
+    "ast_hash": "79aad8b7617736cb12b7c031d737f272",
+    "semantic_hash": "79aad8b7617736cb12b7c031d737f272"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\lib\\seo.ts": {
+    "mtime": 1781343512.6907108,
+    "ast_hash": "1d60afe98402d36a39f63b179c833aac",
+    "semantic_hash": "1d60afe98402d36a39f63b179c833aac"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\lib\\utils.ts": {
+    "mtime": 1780832690.2268586,
+    "ast_hash": "a24aae59febca67a249e12f10c2daec8",
+    "semantic_hash": "a24aae59febca67a249e12f10c2daec8"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\scripts\\migrate-content.js": {
+    "mtime": 1780831758.068197,
+    "ast_hash": "bdffbc21138acbaaf0f2f6184688d898",
+    "semantic_hash": "bdffbc21138acbaaf0f2f6184688d898"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\types\\index.ts": {
+    "mtime": 1780832685.3402722,
+    "ast_hash": "fe98f7678b373746cbedccbe87757abc",
+    "semantic_hash": "fe98f7678b373746cbedccbe87757abc"
+  },
+  "C:\\Users\\DELL\\Desktop\\Honeywell Seo\\website\\types\\navigation.ts": {
+    "mtime": 1780834431.919311,
+    "ast_hash": "9d76b37c93bf3115fde332af07ede364",
+    "semantic_hash": "9d76b37c93bf3115fde332af07ede364"
+  }
+}

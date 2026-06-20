@@ -1,0 +1,83 @@
+
+
+import React from 'react';
+import { Section } from '@/components/ui/Section';
+import { Container } from '@/components/ui/Container';
+import { Heading } from '@/components/ui/Heading';
+import { LocationCard } from '@/components/cards/LocationCard';
+import { homepageLocations } from '@/data/homepage';
+
+/**
+ * LocationsSection — Section 09
+ *
+ * Local SEO: distributes authority to location pillar pages.
+ * Includes NAP block with PostalAddress schema markup.
+ *
+ * Components: LocationCard, Section, Container, Heading
+ * @see HOMEPAGE_ARCHITECTURE.md § Section 09
+ */
+export function LocationsSection() {
+  return (
+    <Section bg="white" aria-labelledby="locations-heading">
+      <Container>
+        {/* Section header */}
+        <div className="text-center mb-12">
+          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-[#E31B23] mb-3">
+            Our Service Areas
+          </p>
+          <Heading variant="section" as="h2" id="locations-heading">
+            Serving Manufacturers Across Gujarat &amp; India
+          </Heading>
+          <p className="text-[#64748B] font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
+            Factory in Kathwada GIDC, Ahmedabad. Delivering hydraulic systems
+            across Gujarat and all major Indian industrial cities.
+          </p>
+        </div>
+
+        {/* Location cards grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          {homepageLocations.map((loc) => (
+            <div key={loc.city}>
+              <LocationCard
+                city={loc.city}
+                description={loc.description}
+                industries={loc.industries}
+                href={loc.href}
+                ctaText={loc.ctaText}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* NAP block — Local SEO critical */}
+        <div>
+          <address
+            className="not-italic text-center text-sm text-[#64748B] font-body pt-8 border-t border-[#E2E8F0]"
+            itemScope
+            itemType="https://schema.org/PostalAddress"
+          >
+            <strong className="text-[#0D1B5C] font-display text-base">
+              Honeywell Hydraulics
+            </strong>
+            <br />
+            <span itemProp="streetAddress">
+              B-18, Suryam Plaza Estate, Near Nilkanth Estate, Road No. 15,
+              Kathwada GIDC
+            </span>
+            <br />
+            <span itemProp="addressLocality">Ahmedabad</span>,{' '}
+            <span itemProp="addressRegion">Gujarat</span>{' '}
+            <span itemProp="postalCode">382430</span>
+            <br />
+            <a
+              href="tel:+91-9924343873"
+              className="text-[#0D1B5C] hover:text-[#E31B23] transition-colors font-mono text-[13px] tracking-wide mt-1 inline-block"
+            >
+              +91 99243 43873
+            </a>
+          </address>
+        </div>
+      </Container>
+    </Section>
+  );
+}

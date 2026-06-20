@@ -1,0 +1,72 @@
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/Card';
+import { Badge } from '@/components/ui/Badge';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+export interface LocationCardProps {
+  city: string;
+  description: string;
+  industries: string[];
+  href: string;
+  ctaText?: string;
+}
+
+/**
+ * LocationCard Component
+ * 
+ * Designed for programmatic Local SEO pages (e.g. Hydraulic Cylinders in Mumbai).
+ */
+export function LocationCard({
+  city,
+  description,
+  industries,
+  href,
+  ctaText = 'View Location Details',
+}: LocationCardProps) {
+  return (
+    <Card variant="interactive" className="flex flex-col h-full group relative">
+      <CardContent className="flex flex-col flex-1 p-6">
+        <div className="flex items-start gap-3 mb-4">
+          <div className="mt-1 p-2 bg-[#E31B23]/10 rounded-full text-[#E31B23]">
+            <MapPin className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-xl font-display font-bold text-[#0D1B5C] group-hover:text-[#E31B23] transition-colors">
+              <a href={href} className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C] focus-visible:rounded-sm">
+                <span className="absolute inset-0" aria-hidden="true" />
+                {city}
+              </a>
+            </h3>
+          </div>
+        </div>
+        
+        <p className="text-[#64748B] font-body text-sm mb-6 line-clamp-3">
+          {description}
+        </p>
+
+        {industries.length > 0 && (
+          <div className="mb-6 flex-1">
+            <p className="text-xs font-semibold text-[#0D1B5C] uppercase tracking-wider mb-2">Key Industries</p>
+            <div className="flex flex-wrap gap-2">
+              {industries.slice(0, 3).map((ind) => (
+                <Badge key={ind} variant="default" className="bg-[#F1F5F9]">
+                  {ind}
+                </Badge>
+              ))}
+              {industries.length > 3 && (
+                <Badge variant="default" className="bg-[#F1F5F9]">
+                  +{industries.length - 3} more
+                </Badge>
+              )}
+            </div>
+          </div>
+        )}
+
+        <div className="mt-auto pt-4 border-t border-[#F1F5F9] flex items-center text-[#0D1B5C] font-medium font-body text-sm group-hover:text-[#E31B23] transition-colors">
+          {ctaText}
+          <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
+        </div>
+      </CardContent>
+    </Card>
+  );
+}

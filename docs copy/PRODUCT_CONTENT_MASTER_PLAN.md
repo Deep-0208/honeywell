@@ -1,0 +1,25 @@
+# PHASE 4.5A.6 — PRODUCT CONTENT MASTER PLAN
+
+| Product Name | Proposed Route | Primary Source | Secondary Source | Reuse % | Missing Content | Missing Specs | Missing FAQs | Missing Images | Ready To Build? | Score |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Custom Hydraulic Cylinders | `/products/hydraulic-cylinders/custom-hydraulic-cylinders/` | `docs/content/products/cylinders/custom-hydraulic-cylinders.md` | `legacy-website/pages-content/hydraulic-cylinder.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| Telescopic Hydraulic Cylinders | `/products/hydraulic-cylinders/telescopic-hydraulic-cylinders/` | `docs/content/products/cylinders/telescopic-hydraulic-cylinders.md` | `legacy-website/pages-content/hydraulic-cylinder.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| Tie Rod Hydraulic Cylinders | `/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/` | `docs/content/products/cylinders/tie-rod-hydraulic-cylinders.md` | `legacy-website/pages-content/hydraulic-cylinder.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| Welded Hydraulic Cylinders | `/products/hydraulic-cylinders/welded-hydraulic-cylinders/` | `docs/content/products/cylinders/welded-hydraulic-cylinders.md` | `legacy-website/pages-content/hydraulic-cylinder.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| Hydraulic Cylinders | `/products/hydraulic-cylinders/hydraulic-cylinders/` | `docs/content/products/hydraulic-cylinders.md` | `legacy-website/pages-content/hydraulic-cylinder.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| Hydraulic Power Packs | `/products/hydraulic-power-packs/hydraulic-power-packs/` | `docs/content/products/hydraulic-power-packs.md` | `legacy-website/pages-content/hydraulic-power-packs.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| Hydraulic Systems | `/products/hydraulic-systems/` | `docs/content/products/hydraulic-systems.md` | `None` | 0% | None | NO | NO | NO | **YES** | 90% |
+| Manifold Blocks | `/products/manifold-blocks/` | `docs/content/products/manifold-blocks.md` | `legacy-website/pages-content/manifold-block.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| 06 Size Manifold Blocks | `/products/manifold-blocks/06-size-manifold-blocks/` | `docs/content/products/manifolds/06-size-manifold-blocks.md` | `legacy-website/pages-content/manifold-block.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| 10 Size Manifold Blocks | `/products/manifold-blocks/10-size-manifold-blocks/` | `docs/content/products/manifolds/10-size-manifold-blocks.md` | `legacy-website/pages-content/manifold-block.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| Cetop Manifold Blocks | `/products/manifold-blocks/cetop-manifold-blocks/` | `docs/content/products/manifolds/cetop-manifold-blocks.md` | `legacy-website/pages-content/manifold-block.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| Custom Manifold Blocks | `/products/manifold-blocks/custom-manifold-blocks/` | `docs/content/products/manifolds/custom-manifold-blocks.md` | `legacy-website/pages-content/manifold-block.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| Multi Station Manifold Blocks | `/products/manifold-blocks/multi-station-manifold-blocks/` | `docs/content/products/manifolds/multi-station-manifold-blocks.md` | `legacy-website/pages-content/manifold-block.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| 3 Phase Hydraulic Power Packs | `/products/hydraulic-power-packs/3-phase-hydraulic-power-packs/` | `docs/content/products/power-packs/3-phase-hydraulic-power-packs.md` | `legacy-website/pages-content/hydraulic-power-packs.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| Dc Mini Power Packs | `/products/hydraulic-power-packs/dc-mini-power-packs/` | `docs/content/products/power-packs/dc-mini-power-packs.md` | `None` | 0% | None | NO | NO | NO | **YES** | 90% |
+| High Low Hydraulic Power Packs | `/products/hydraulic-power-packs/high-low-hydraulic-power-packs/` | `docs/content/products/power-packs/high-low-hydraulic-power-packs.md` | `legacy-website/pages-content/hydraulic-power-packs.html` | 100% | None | NO | NO | NO | **YES** | 100% |
+| High Pressure Hydraulic Systems | `/products/high-pressure-hydraulic-systems/` | `docs/content/products/systems/high-pressure-hydraulic-systems.md` | `None` | 0% | None | NO | NO | NO | **YES** | 90% |
+| Industrial Hydraulic Systems | `/products/industrial-hydraulic-systems/` | `docs/content/products/systems/industrial-hydraulic-systems.md` | `None` | 0% | None | NO | NO | NO | **YES** | 90% |
+| Marine Hydraulic Systems | `/products/marine-hydraulic-systems/` | `docs/content/products/systems/marine-hydraulic-systems.md` | `None` | 0% | None | NO | NO | NO | **YES** | 90% |
+| Mobile Hydraulic Systems | `/products/mobile-hydraulic-systems/` | `docs/content/products/systems/mobile-hydraulic-systems.md` | `None` | 0% | None | NO | NO | NO | **YES** | 90% |
+| Proportional Hydraulic Systems | `/products/proportional-hydraulic-systems/` | `docs/content/products/systems/proportional-hydraulic-systems.md` | `None` | 0% | None | NO | NO | NO | **YES** | 90% |
