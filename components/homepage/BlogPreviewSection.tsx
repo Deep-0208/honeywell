@@ -13,7 +13,7 @@ export function BlogPreviewSection() {
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
           <div className="max-w-2xl">
-            <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-[#E31B23] mb-3">
+            <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
               Knowledge Hub
             </p>
             <Heading variant="section" as="h2" id="blog-heading" className="mb-0">
@@ -31,25 +31,25 @@ export function BlogPreviewSection() {
           {blogPreviews.map((post) => (
             <article 
               key={post.href}
-              className="bg-white border border-[#E2E8F0] rounded-xl overflow-hidden shadow-sm hover:shadow-elevated transition-shadow duration-300 flex flex-col h-full"
+              className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-elevated transition-shadow duration-300 flex flex-col h-full"
             >
               <div className="p-6 md:p-8 flex flex-col h-full">
-                <div className="flex items-center gap-2 text-xs text-[#64748B] font-body mb-4">
+                <div className="flex items-center gap-2 text-xs text-brand-steelGray font-body mb-4">
                   <Calendar className="w-4 h-4" />
                   <time dateTime={new Date(post.date).toISOString()}>{post.date}</time>
                 </div>
-                <h3 className="font-display font-bold text-[#0D1B5C] text-xl mb-3 line-clamp-2">
-                  <Link href={post.href} className="hover:text-[#E31B23] transition-colors focus-visible:outline-none focus-visible:underline">
+                <h3 className="font-display font-bold text-honeywell-navy text-xl mb-3 line-clamp-2">
+                  <Link href={post.href} className="hover:text-honeywell-red transition-colors focus-visible:outline-none focus-visible:underline">
                     {post.title}
                   </Link>
                 </h3>
-                <p className="text-[#64748B] font-body text-sm leading-relaxed mb-6 line-clamp-3 flex-grow">
+                <p className="text-brand-steelGray font-body text-sm leading-relaxed mb-6 line-clamp-3 flex-grow">
                   {post.excerpt}
                 </p>
-                <div className="mt-auto pt-4 border-t border-[#E2E8F0]/50">
+                <div className="mt-auto pt-4 border-t border-slate-200/50">
                   <Link 
                     href={post.href}
-                    className="inline-flex items-center gap-2 text-sm font-bold text-[#E31B23] hover:text-[#0D1B5C] transition-colors group"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-honeywell-red hover:text-honeywell-navy transition-colors group"
                   >
                     Read Article 
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

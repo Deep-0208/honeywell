@@ -42,11 +42,11 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const baseStyles = 'inline-flex items-center justify-center font-body font-medium transition-all duration-200 ease-premium rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.97]';
     
     const variants = {
-      primary: 'bg-[#E31B23] text-white hover:bg-[#C41220] focus-visible:ring-[#E31B23] shadow-[0_2px_8px_-2px_rgba(227,27,35,0.3)] hover:shadow-[0_6px_20px_-4px_rgba(227,27,35,0.4)]',
-      secondary: 'bg-[#0D1B5C] text-white hover:bg-[#0a154a] focus-visible:ring-[#0D1B5C] shadow-subtle hover:shadow-elevated',
-      outline: 'bg-transparent border-2 border-[#0D1B5C] text-[#0D1B5C] hover:bg-[#0D1B5C] hover:text-white focus-visible:ring-[#0D1B5C]',
-      ghost: 'bg-transparent text-[#0D1B5C] hover:bg-[#F1F5F9] focus-visible:ring-[#0D1B5C]',
-      link: 'bg-transparent text-[#E31B23] hover:underline underline-offset-4 focus-visible:ring-[#E31B23] px-0 py-0',
+      primary: 'bg-honeywell-red text-white hover:bg-[#C41220] focus-visible:ring-honeywell-red shadow-[0_2px_8px_-2px_rgba(227,27,35,0.3)] hover:shadow-[0_6px_20px_-4px_rgba(227,27,35,0.4)]',
+      secondary: 'bg-honeywell-navy text-white hover:bg-[#0a154a] focus-visible:ring-honeywell-navy shadow-subtle hover:shadow-elevated',
+      outline: 'bg-transparent border-2 border-honeywell-navy text-honeywell-navy hover:bg-honeywell-navy hover:text-white focus-visible:ring-honeywell-navy',
+      ghost: 'bg-transparent text-honeywell-navy hover:bg-brand-lightSurface focus-visible:ring-honeywell-navy',
+      link: 'bg-transparent text-honeywell-red hover:underline underline-offset-4 focus-visible:ring-honeywell-red px-0 py-0',
     };
 
     const sizes = {

@@ -15,7 +15,7 @@ import { trustMetrics, trustBadges } from '@/data/homepage';
  */
 export function TrustStrip() {
   return (
-    <Section bg="white" className="py-16 md:py-20 lg:py-24 border-y border-[#E2E8F0]">
+    <Section bg="white" className="py-16 md:py-20 lg:py-24 border-y border-slate-200">
       <Container>
         {/* Metrics row */}
         <div 
@@ -24,10 +24,10 @@ export function TrustStrip() {
         >
           {trustMetrics.map((metric) => (
             <div key={metric.label} className="text-center group">
-              <div className="font-display text-[40px] sm:text-[52px] leading-none font-semibold text-[#0D1B5C] mb-2 sm:mb-3 group-hover:scale-[1.02] transition-transform duration-300">
+              <div className="font-display text-[40px] sm:text-[52px] leading-none font-semibold text-honeywell-navy mb-2 sm:mb-3 group-hover:scale-[1.02] transition-transform duration-300">
                 {metric.value}
               </div>
-              <p className="text-[11px] sm:text-[13px] text-[#E31B23] font-display font-bold uppercase tracking-[0.1em]">
+              <p className="text-[11px] sm:text-[13px] text-honeywell-red font-display font-bold uppercase tracking-[0.1em]">
                 {metric.label}
               </p>
             </div>

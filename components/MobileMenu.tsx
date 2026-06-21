@@ -61,7 +61,7 @@ export default function MobileMenu({ navigation, isOpen, onClose }: MobileMenuPr
         <>
           {/* ── Backdrop ── */}
           <div
-            className="fixed inset-0 z-40 bg-[#0D1B5C]/20 backdrop-blur-sm transition-opacity duration-300"
+            className="fixed inset-0 z-40 bg-honeywell-navy/20 backdrop-blur-sm transition-opacity duration-300"
             aria-hidden="true"
             onClick={onClose}
           />
@@ -80,8 +80,8 @@ export default function MobileMenu({ navigation, isOpen, onClose }: MobileMenuPr
             "
           >
             {/* ── Header ── */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-[#E2E8F0] shrink-0">
-              <span className="text-sm font-semibold text-[#0D1B5C] uppercase tracking-widest font-display">
+            <div className="flex items-center justify-between px-5 py-4 border-b border-slate-200 shrink-0">
+              <span className="text-sm font-semibold text-honeywell-navy uppercase tracking-widest font-display">
                 Menu
               </span>
               <button
@@ -89,10 +89,10 @@ export default function MobileMenu({ navigation, isOpen, onClose }: MobileMenuPr
                 onClick={onClose}
                 aria-label="Close menu"
                 className="
-                  p-2 rounded-md text-[#334155]
-                  hover:bg-[#F1F5F9] hover:text-[#0D1B5C]
+                  p-2 rounded-md text-brand-darkSlate
+                  hover:bg-brand-lightSurface hover:text-honeywell-navy
                   transition-colors duration-150
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C]
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy
                 "
               >
                 <X className="w-5 h-5" />
@@ -120,18 +120,18 @@ export default function MobileMenu({ navigation, isOpen, onClose }: MobileMenuPr
 
             {/* ── Sticky Bottom CTA ── */}
             <div
-              className="shrink-0 border-t border-[#E2E8F0] bg-white px-5 py-4 space-y-3"
+              className="shrink-0 border-t border-slate-200 bg-white px-5 py-4 space-y-3"
             >
               {/* Phone */}
               <a
                 href={`tel:${navigation.phone}`}
                 className="
                   flex items-center justify-center gap-2.5
-                  px-4 py-3 rounded-sm border-2 border-[#0D1B5C]
-                  text-sm font-medium text-[#0D1B5C] font-body
-                  hover:bg-[#0D1B5C] hover:text-white
+                  px-4 py-3 rounded-sm border-2 border-honeywell-navy
+                  text-sm font-medium text-honeywell-navy font-body
+                  hover:bg-honeywell-navy hover:text-white
                   transition-colors duration-150
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C]
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy
                 "
               >
                 <Phone className="w-4 h-4" aria-hidden="true" />
@@ -145,10 +145,10 @@ export default function MobileMenu({ navigation, isOpen, onClose }: MobileMenuPr
                 className="
                   flex items-center justify-center gap-2.5
                   px-4 py-3 rounded-sm
-                  bg-[#E31B23] text-white text-sm font-semibold font-body
+                  bg-honeywell-red text-white text-sm font-semibold font-body
                   hover:bg-[#C41220]
                   transition-colors duration-150
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E31B23] focus-visible:ring-offset-2
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2
                 "
               >
                 {navigation.ctaLabel}
@@ -187,10 +187,10 @@ function MobileNavItem({
         onClick={onClose}
         className="
           flex items-center px-3 py-3.5
-          text-[15px] font-medium text-[#111827] font-body
-          rounded-md hover:bg-[#F8FAFC]
+          text-[15px] font-medium text-brand-textDark font-body
+          rounded-md hover:bg-brand-surfaceGray
           transition-colors duration-150
-          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C]
+          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy
         "
       >
         {item.label}
@@ -206,10 +206,10 @@ function MobileNavItem({
         aria-controls={panelId}
         className="
           w-full flex items-center justify-between px-3 py-3.5
-          text-[15px] font-medium text-[#111827] font-body
-          rounded-md hover:bg-[#F8FAFC]
+          text-[15px] font-medium text-brand-textDark font-body
+          rounded-md hover:bg-brand-surfaceGray
           transition-colors duration-150
-          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C]
+          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy
         "
       >
         {item.label}
@@ -217,20 +217,19 @@ function MobileNavItem({
           className={`transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
         >
           <ChevronDown
-            className="w-4 h-4 text-[#64748B]"
+            className="w-4 h-4 text-brand-steelGray"
             />
         </span>
       </button>
 
       {/* Accordion Panel */}
-      <>
-        {isExpanded && (
-          <div
-            id={panelId}
-            role="region"
-            aria-label={`${item.label} submenu`}
-            className="overflow-hidden transition-all duration-300"
-          >
+        <div
+          id={panelId}
+          role="region"
+          aria-label={`${item.label} submenu`}
+          className={`grid transition-all duration-300 ease-premium ${isExpanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+        >
+          <div className="overflow-hidden">
             <ul className="pl-4 pr-2 pb-2 space-y-0.5" role="list">
               {item.megaMenu!.columns.flatMap((col) =>
                 col.links.map((link) => (
@@ -240,21 +239,21 @@ function MobileNavItem({
                       onClick={onClose}
                       className="
                         flex items-start gap-2.5 px-3 py-2.5
-                        rounded-md hover:bg-[#F1F5F9]
+                        rounded-md hover:bg-brand-lightSurface
                         transition-colors duration-150
-                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C]
+                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy
                       "
                     >
                       <ChevronDown
-                        className="w-3 h-3 mt-1 shrink-0 -rotate-90 text-[#CBD5E1]"
+                        className="w-3 h-3 mt-1 shrink-0 -rotate-90 text-brand-borderGray"
                         aria-hidden="true"
                       />
                       <div className="min-w-0">
-                        <span className="block text-sm text-[#334155] font-body leading-tight">
+                        <span className="block text-sm text-brand-darkSlate font-body leading-tight">
                           {link.label}
                         </span>
                         {link.description && (
-                          <span className="block text-[11px] text-[#64748B] mt-0.5 leading-relaxed line-clamp-2 font-body">
+                          <span className="block text-[11px] text-brand-steelGray mt-0.5 leading-relaxed line-clamp-2 font-body">
                             {link.description}
                           </span>
                         )}
@@ -271,9 +270,9 @@ function MobileNavItem({
                   onClick={onClose}
                   className="
                     flex items-center gap-1.5 px-3 py-2.5
-                    text-xs font-semibold text-[#0D1B5C]
-                    hover:text-[#E31B23] transition-colors font-body
-                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C]
+                    text-xs font-semibold text-honeywell-navy
+                    hover:text-honeywell-red transition-colors font-body
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy
                     group
                   "
                 >
@@ -283,8 +282,7 @@ function MobileNavItem({
               </li>
             </ul>
           </div>
-        )}
-      </>
+        </div>
     </>
   );
 }

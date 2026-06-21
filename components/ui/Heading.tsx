@@ -20,7 +20,7 @@ export function Heading({
   children, 
   ...props 
 }: HeadingProps) {
-  const baseStyles = 'font-display font-bold text-[#0D1B5C]';
+  const baseStyles = 'font-display font-bold text-honeywell-navy';
   
   const variants = {
     hero: 'text-4xl md:text-5xl lg:text-6xl leading-tight',

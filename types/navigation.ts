@@ -9,6 +9,7 @@ export interface NavLink {
   href: string;
   description?: string;
   icon?: string;
+  subcategories?: NavLink[];
 }
 
 /** A column/group within a mega menu panel */

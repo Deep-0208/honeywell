@@ -41,13 +41,13 @@ export function IndustriesSection() {
       <Container>
         {/* Section header */}
         <div className="text-center mb-12">
-          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-[#E31B23] mb-3">
+          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
             Industries We Serve
           </p>
           <Heading variant="section" as="h2" id="industries-heading">
             Hydraulic Solutions for 25+ Industrial Sectors
           </Heading>
-          <p className="text-[#64748B] font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
+          <p className="text-brand-steelGray font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
             From injection moulding in Ahmedabad to automotive OEMs in Pune, we
             supply high-performance hydraulic equipment to core industries
             across India.

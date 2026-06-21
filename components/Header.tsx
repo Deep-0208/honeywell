@@ -131,7 +131,7 @@ export default function Header({ navigation }: HeaderProps) {
     <>
       <header
         ref={headerRef}
-        className={`sticky top-0 z-50 w-full bg-white transition-shadow duration-200 ${
+        className={`sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md transition-shadow duration-200 ${
           isScrolled
             ? 'shadow-[0_1px_3px_0_rgba(13,27,92,0.06),0_4px_16px_-4px_rgba(13,27,92,0.08)]'
             : 'shadow-[0_1px_0_0_#E2E8F0]'
@@ -148,7 +148,7 @@ export default function Header({ navigation }: HeaderProps) {
               href="/"
               className="
                 shrink-0 flex items-center mr-8 xl:mr-12
-                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C] focus-visible:ring-offset-2 focus-visible:rounded-sm
+                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:ring-offset-2 focus-visible:rounded-sm
               "
               aria-label="Honeywell Hydraulics — Home"
             >
@@ -195,10 +195,10 @@ export default function Header({ navigation }: HeaderProps) {
                             h-[40px] px-4 rounded-md
                             text-[14px] font-semibold tracking-[0.02em] uppercase
                             font-body transition-all duration-200
-                            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#0D1B5C]
+                            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                             ${isActive || isMenuOpen
-                              ? 'text-[#E31B23] bg-red-50/50'
-                              : 'text-[#1A2A6C] hover:text-[#E31B23] hover:bg-slate-50'
+                              ? 'text-honeywell-red bg-red-50/50'
+                              : 'text-[#1A2A6C] hover:text-honeywell-red hover:bg-slate-50'
                             }
                           `}
                         >
@@ -206,7 +206,7 @@ export default function Header({ navigation }: HeaderProps) {
                           <span className={`flex items-center transition-transform duration-200 ${isMenuOpen ? 'rotate-180' : ''}`}>
                             <ChevronDown
                               className={`w-4 h-4 transition-colors duration-200 ${
-                                isActive || isMenuOpen ? 'text-[#E31B23]' : 'text-[#64748B] group-hover:text-[#E31B23]'
+                                isActive || isMenuOpen ? 'text-honeywell-red' : 'text-brand-steelGray group-hover:text-honeywell-red'
                               }`}
                               strokeWidth={2}
                               aria-hidden="true"
@@ -221,10 +221,10 @@ export default function Header({ navigation }: HeaderProps) {
                             h-[40px] px-4 rounded-md
                             text-[14px] font-semibold tracking-[0.02em] uppercase
                             font-body transition-all duration-200
-                            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#0D1B5C]
+                            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                             ${isActive
-                              ? 'text-[#E31B23] bg-red-50/50'
-                              : 'text-[#1A2A6C] hover:text-[#E31B23] hover:bg-slate-50'
+                              ? 'text-honeywell-red bg-red-50/50'
+                              : 'text-[#1A2A6C] hover:text-honeywell-red hover:bg-slate-50'
                             }
                           `}
                         >
@@ -257,26 +257,26 @@ export default function Header({ navigation }: HeaderProps) {
                 className="
                   hidden xl:inline-flex items-center gap-2.5
                   px-4 py-2.5 rounded-lg
-                  text-[#0D1B5C]
-                  hover:bg-[#F1F5F9]
+                  text-honeywell-navy
+                  hover:bg-brand-lightSurface
                   transition-all duration-200 font-body
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C] focus-visible:ring-offset-2 focus-visible:rounded-lg
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:ring-offset-2 focus-visible:rounded-lg
                   group
                 "
                 aria-label={`Call us at ${navigation.phoneDisplay}`}
               >
                 <span className="
                   flex items-center justify-center w-8 h-8 rounded-lg
-                  bg-[#0D1B5C]/[0.06] group-hover:bg-[#E31B23]/10
+                  bg-honeywell-navy/[0.06] group-hover:bg-honeywell-red/10
                   transition-colors duration-200
                 ">
                   <Phone
-                    className="w-[15px] h-[15px] text-[#0D1B5C] group-hover:text-[#E31B23] transition-colors duration-200"
+                    className="w-[15px] h-[15px] text-honeywell-navy group-hover:text-honeywell-red transition-colors duration-200"
                     strokeWidth={2}
                     aria-hidden="true"
                   />
                 </span>
-                <span className="text-[14px] font-semibold tracking-[0.01em] font-body text-[#0D1B5C] group-hover:text-[#0D1B5C]">
+                <span className="text-[14px] font-semibold tracking-[0.01em] font-body text-honeywell-navy group-hover:text-honeywell-navy">
                   {navigation.phoneDisplay}
                 </span>
               </a>
@@ -290,13 +290,13 @@ export default function Header({ navigation }: HeaderProps) {
                   className="
                     hidden sm:inline-flex items-center gap-2
                     px-5 py-2.5 rounded-lg
-                    bg-[#D32F2F] text-white
+                    bg-honeywell-red text-white
                     text-[13px] font-bold font-body tracking-[0.02em]
                     hover:bg-[#B71C1C]
                     transition-all duration-250
-                    shadow-[0_1px_3px_rgba(211,47,47,0.24)]
-                    hover:shadow-[0_4px_12px_-2px_rgba(211,47,47,0.32)]
-                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D32F2F] focus-visible:ring-offset-2
+                    shadow-[0_1px_3px_rgba(227,27,35,0.24)]
+                    hover:shadow-[0_4px_12px_-2px_rgba(227,27,35,0.32)]
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2
                   "
                 >
                   {navigation.ctaLabel}
@@ -312,10 +312,10 @@ export default function Header({ navigation }: HeaderProps) {
                 aria-expanded={isMobileMenuOpen}
                 className="
                   lg:hidden p-2.5 rounded-lg
-                  text-[#0D1B5C] hover:bg-[#F1F5F9]
-                  border border-[#E2E8F0]
+                  text-honeywell-navy hover:bg-brand-lightSurface
+                  border border-slate-200
                   transition-all duration-200
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C]
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy
                 "
               >
                 <Menu className="w-5 h-5" strokeWidth={2} aria-hidden="true" />

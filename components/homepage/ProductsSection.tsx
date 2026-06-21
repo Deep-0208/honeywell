@@ -24,13 +24,13 @@ export function ProductsSection() {
       <Container>
         {/* Section header */}
         <div className="text-center mb-12">
-          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-[#E31B23] mb-3">
+          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
             Our Products
           </p>
           <Heading variant="section" as="h2" id="products-heading">
             Precision-Engineered Hydraulic Equipment
           </Heading>
-          <p className="text-[#64748B] font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
+          <p className="text-brand-steelGray font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
             From individual replacement cylinders to complete turnkey hydraulic
             systems. Built to your exact specifications in our Ahmedabad
             manufacturing facility.

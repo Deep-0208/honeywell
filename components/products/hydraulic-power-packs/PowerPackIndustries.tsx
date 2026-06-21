@@ -38,15 +38,15 @@ export function PowerPackIndustries() {
       <Container>
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Industries Served
             </h2>
-            <p className="text-lg text-[#64748B] font-body">
+            <p className="text-lg text-brand-steelGray font-body">
               Our power packs are the driving force behind India&apos;s core industrial manufacturing sectors.
             </p>
           </div>
           <div className="mt-6 md:mt-0">
-            <Link href="/request-quote/" className="text-[#E31B23] font-bold hover:underline">
+            <Link href="/request-quote/" className="text-honeywell-red font-bold hover:underline">
               Don&apos;t see your industry? Contact us →
             </Link>
           </div>

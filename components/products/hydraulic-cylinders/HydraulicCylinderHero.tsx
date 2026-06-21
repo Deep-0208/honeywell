@@ -8,9 +8,9 @@ import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
 
 export function HydraulicCylinderHero() {
   return (
-    <div className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-[#E2E8F0]">
+    <div className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200">
       {/* Background Decorative Elements */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F8FAFC] skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-surfaceGray skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block" />
       
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -18,18 +18,18 @@ export function HydraulicCylinderHero() {
           {/* Content Column */}
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-[#E31B23] font-bold tracking-widest text-sm uppercase font-body">
+              <span className="text-honeywell-red font-bold tracking-widest text-sm uppercase font-body">
                 PRODUCTS
               </span>
-              <div className="h-4 w-px bg-[#CBD5E1]" />
-              <span className="text-[#64748B] text-sm font-medium">Hydraulic Cylinders</span>
+              <div className="h-4 w-px bg-brand-borderGray" />
+              <span className="text-brand-steelGray text-sm font-medium">Hydraulic Cylinders</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-[#0D1B5C] leading-[1.1] mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               Hydraulic Cylinder Manufacturer in Ahmedabad
             </h1>
 
-            <p className="text-lg text-[#334155] font-body mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed">
               Engineered for precision and built for endurance. We are a leading manufacturer of custom and industrial hydraulic cylinders, delivering high-performance fluid power solutions to OEMs and heavy industries across India.
             </p>
 
@@ -44,15 +44,15 @@ export function HydraulicCylinderHero() {
             </div>
 
             {/* Contact Bar */}
-            <div className="flex flex-wrap items-center gap-6 py-4 border-t border-[#E2E8F0] w-full">
-              <a href="tel:+919924343873" className="flex items-center text-[#0D1B5C] hover:text-[#E31B23] font-medium transition-colors font-body">
-                <div className="w-10 h-10 rounded-full bg-[#F1F5F9] flex items-center justify-center mr-3">
+            <div className="flex flex-wrap items-center gap-6 py-4 border-t border-slate-200 w-full">
+              <a href="tel:+919924343873" className="flex items-center text-honeywell-navy hover:text-honeywell-red font-medium transition-colors font-body">
+                <div className="w-10 h-10 rounded-full bg-brand-lightSurface flex items-center justify-center mr-3">
                   <Phone className="w-5 h-5" />
                 </div>
                 +91 99243 43873
               </a>
-              <a href="https://wa.me/919924343873" target="_blank" rel="noopener noreferrer" className="flex items-center text-[#0D1B5C] hover:text-[#25D366] font-medium transition-colors font-body">
-                <div className="w-10 h-10 rounded-full bg-[#F1F5F9] flex items-center justify-center mr-3">
+              <a href="https://wa.me/919924343873" target="_blank" rel="noopener noreferrer" className="flex items-center text-honeywell-navy hover:text-[#25D366] font-medium transition-colors font-body">
+                <div className="w-10 h-10 rounded-full bg-brand-lightSurface flex items-center justify-center mr-3">
                   <MessageCircle className="w-5 h-5" />
                 </div>
                 WhatsApp for Quick Quote
@@ -68,8 +68,8 @@ export function HydraulicCylinderHero() {
           </div>
 
           {/* Image Column */}
-          <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-[#E2E8F0] shadow-sm p-4 overflow-hidden group">
-            <div className="absolute inset-0 bg-[#F8FAFC] opacity-50 rounded-xl" />
+          <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm p-4 overflow-hidden group">
+            <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
             <Image
               src="/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad.webp"
               alt="Hydraulic Cylinder Manufacturer in Ahmedabad"
@@ -84,24 +84,24 @@ export function HydraulicCylinderHero() {
       </Container>
 
       {/* Key Specs Strip */}
-      <div className="absolute bottom-0 left-0 w-full border-t border-[#E2E8F0] bg-white hidden md:block">
+      <div className="absolute bottom-0 left-0 w-full border-t border-slate-200 bg-white hidden md:block">
         <Container>
-          <div className="flex flex-wrap divide-x divide-[#E2E8F0] py-4">
+          <div className="flex flex-wrap divide-x divide-slate-200 py-4">
             <div className="px-6 flex-1 text-center first:pl-0 last:pr-0">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">Bore</span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">40–300mm</span>
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">Bore</span>
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">40–300mm</span>
             </div>
             <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">Stroke</span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">Up to 3000mm</span>
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">Stroke</span>
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">Up to 3000mm</span>
             </div>
             <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">Working Pressure</span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">Up to 350 Bar</span>
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">Working Pressure</span>
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">Up to 350 Bar</span>
             </div>
             <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">Mounting</span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">All Types</span>
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">Mounting</span>
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">All Types</span>
             </div>
           </div>
         </Container>

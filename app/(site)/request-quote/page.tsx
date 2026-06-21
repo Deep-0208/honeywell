@@ -196,11 +196,11 @@ export default function RequestQuotePage() {
       <JsonLd data={faqSchema} />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
-      <section className="bg-[#0D1B5C] text-white pt-12 pb-16 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#E31B23] opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
+      <section className="bg-honeywell-navy text-white pt-12 pb-16 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
         <Container className="relative z-10">
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="text-sm font-body text-[#CBD5E1] mb-6">
+          <nav aria-label="Breadcrumb" className="text-sm font-body text-brand-borderGray mb-6">
             <ol className="flex items-center gap-2">
               <li>
                 <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -211,19 +211,19 @@ export default function RequestQuotePage() {
           </nav>
 
           <div className="max-w-3xl">
-            <span className="inline-block py-1 px-3 rounded-sm bg-[#E31B23] text-white text-xs font-bold uppercase tracking-wider mb-6">
+            <span className="inline-block py-1 px-3 rounded-sm bg-honeywell-red text-white text-xs font-bold uppercase tracking-wider mb-6">
               Free Engineering Consultation
             </span>
             <Heading variant="hero" as="h1" className="text-white mb-6">
               Request a Hydraulic Solution Quote
             </Heading>
-            <p className="text-[#CBD5E1] text-lg font-body leading-relaxed max-w-2xl">
+            <p className="text-brand-borderGray text-lg font-body leading-relaxed max-w-2xl">
               Submit your technical requirements below. Our engineering team in Ahmedabad will personally review your specifications and prepare a detailed proposal. For urgent requirements, call us directly.
             </p>
             <p className="mt-4">
               <a
                 href="tel:+919924343873"
-                className="inline-flex items-center gap-2 text-[#E31B23] font-semibold font-body hover:underline underline-offset-4"
+                className="inline-flex items-center gap-2 text-honeywell-red font-semibold font-body hover:underline underline-offset-4"
               >
                 <Phone className="w-4 h-4" aria-hidden="true" />
                 +91 9924343873 — Urgent Support
@@ -239,12 +239,12 @@ export default function RequestQuotePage() {
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 items-start">
 
             {/* Form Panel */}
-            <div className="bg-white rounded-sm border border-[#E2E8F0] shadow-sm p-6 sm:p-10">
+            <div className="bg-white rounded-sm border border-slate-200 shadow-sm p-6 sm:p-10">
               <Heading as="h2" variant="subsection" className="mb-2">
                 Quote Request Form
               </Heading>
-              <p className="text-sm text-[#64748B] font-body mb-8">
-                Fields marked <span className="text-[#E31B23] font-bold">*</span> are required. For urgent breakdowns, call us directly.
+              <p className="text-sm text-brand-steelGray font-body mb-8">
+                Fields marked <span className="text-honeywell-red font-bold">*</span> are required. For urgent breakdowns, call us directly.
               </p>
               <QuoteForm />
             </div>
@@ -253,8 +253,8 @@ export default function RequestQuotePage() {
             <aside aria-label="Contact details and why choose us" className="space-y-6">
 
               {/* Why Choose Honeywell */}
-              <div className="bg-white rounded-sm border border-[#E2E8F0] shadow-sm p-6">
-                <h3 className="text-lg font-display font-bold text-[#0D1B5C] mb-5">
+              <div className="bg-white rounded-sm border border-slate-200 shadow-sm p-6">
+                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-5">
                   Why Request a Quote From Us?
                 </h3>
                 <ul className="space-y-5">
@@ -262,8 +262,8 @@ export default function RequestQuotePage() {
                     <li key={b.title} className="flex items-start gap-4">
                       <IconBox icon={b.icon} variant="primary" size="sm" className="shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold font-body text-[#0D1B5C] text-sm mb-0.5">{b.title}</p>
-                        <p className="text-xs text-[#64748B] font-body leading-relaxed">{b.body}</p>
+                        <p className="font-semibold font-body text-honeywell-navy text-sm mb-0.5">{b.title}</p>
+                        <p className="text-xs text-brand-steelGray font-body leading-relaxed">{b.body}</p>
                       </div>
                     </li>
                   ))}
@@ -271,43 +271,43 @@ export default function RequestQuotePage() {
               </div>
 
               {/* Direct Contact */}
-              <div className="bg-[#0D1B5C] text-white rounded-sm p-6 space-y-4">
+              <div className="bg-honeywell-navy text-white rounded-sm p-6 space-y-4">
                 <h3 className="text-lg font-display font-bold mb-2">Contact Us Directly</h3>
                 <a
                   href="tel:+919924343873"
-                  className="flex items-center gap-3 text-sm font-body hover:text-[#E31B23] transition-colors"
+                  className="flex items-center gap-3 text-sm font-body hover:text-honeywell-red transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-[#E31B23] shrink-0" aria-hidden="true" />
+                  <Phone className="w-4 h-4 text-honeywell-red shrink-0" aria-hidden="true" />
                   +91 9924343873
                 </a>
                 <a
                   href="https://wa.me/919924343873"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm font-body hover:text-[#E31B23] transition-colors"
+                  className="flex items-center gap-3 text-sm font-body hover:text-honeywell-red transition-colors"
                 >
-                  <MessageCircle className="w-4 h-4 text-[#E31B23] shrink-0" aria-hidden="true" />
+                  <MessageCircle className="w-4 h-4 text-honeywell-red shrink-0" aria-hidden="true" />
                   WhatsApp — Engineering Team
                 </a>
                 <a
                   href="mailto:sales@honeywellhydraulics.com"
-                  className="flex items-center gap-3 text-sm font-body hover:text-[#E31B23] transition-colors"
+                  className="flex items-center gap-3 text-sm font-body hover:text-honeywell-red transition-colors"
                 >
-                  <Mail className="w-4 h-4 text-[#E31B23] shrink-0" aria-hidden="true" />
+                  <Mail className="w-4 h-4 text-honeywell-red shrink-0" aria-hidden="true" />
                   sales@honeywellhydraulics.com
                 </a>
-                <div className="flex items-start gap-3 text-sm font-body text-[#CBD5E1]">
-                  <MapPin className="w-4 h-4 text-[#E31B23] shrink-0 mt-0.5" aria-hidden="true" />
+                <div className="flex items-start gap-3 text-sm font-body text-brand-borderGray">
+                  <MapPin className="w-4 h-4 text-honeywell-red shrink-0 mt-0.5" aria-hidden="true" />
                   <span>Ahmedabad, Gujarat, India</span>
                 </div>
               </div>
 
               {/* Made in India badge */}
-              <div className="border border-[#E2E8F0] rounded-sm p-4 flex items-center gap-4 bg-white">
+              <div className="border border-slate-200 rounded-sm p-4 flex items-center gap-4 bg-white">
                 <span className="text-3xl" role="img" aria-label="Indian Flag">🇮🇳</span>
                 <div>
-                  <p className="font-display font-bold text-[#0D1B5C] text-sm">Made in India</p>
-                  <p className="text-xs text-[#64748B] font-body">Designed, machined, and tested at our Ahmedabad facility.</p>
+                  <p className="font-display font-bold text-honeywell-navy text-sm">Made in India</p>
+                  <p className="text-xs text-brand-steelGray font-body">Designed, machined, and tested at our Ahmedabad facility.</p>
                 </div>
               </div>
             </aside>
@@ -316,7 +316,7 @@ export default function RequestQuotePage() {
       </Section>
 
       {/* ── Trust Signals ─────────────────────────────────────────────────── */}
-      <section className="bg-[#0D1B5C] py-10">
+      <section className="bg-honeywell-navy py-10">
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {TRUST_STATS.map((stat) => (
@@ -336,7 +336,7 @@ export default function RequestQuotePage() {
             <Heading as="h2" variant="section" className="mb-4">
               How the Quote Process Works
             </Heading>
-            <p className="text-lg text-[#64748B] font-body max-w-2xl mx-auto">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
               From your first inquiry to a finalised manufacturing proposal — four clear steps.
             </p>
           </div>
@@ -350,22 +350,22 @@ export default function RequestQuotePage() {
                 {/* Connector line (desktop only) */}
                 {idx < PROCESS_STEPS.length - 1 && (
                   <div
-                    className="hidden lg:block absolute top-8 left-[calc(50%+32px)] w-[calc(100%-64px)] h-px bg-[#E2E8F0]"
+                    className="hidden lg:block absolute top-8 left-[calc(50%+32px)] w-[calc(100%-64px)] h-px bg-slate-200"
                     aria-hidden="true"
                   />
                 )}
 
                 <div className="relative mb-5">
-                  <div className="w-16 h-16 rounded-full bg-[#0D1B5C] flex items-center justify-center text-white shadow-md group-hover:bg-[#E31B23] transition-colors duration-200">
+                  <div className="w-16 h-16 rounded-full bg-honeywell-navy flex items-center justify-center text-white shadow-md group-hover:bg-honeywell-red transition-colors duration-200">
                     {step.icon}
                   </div>
-                  <span className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-[#E31B23] text-white text-[10px] font-bold flex items-center justify-center font-body">
+                  <span className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-honeywell-red text-white text-[10px] font-bold flex items-center justify-center font-body">
                     {step.step}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-display font-bold text-[#0D1B5C] mb-2">{step.title}</h3>
-                <p className="text-sm text-[#64748B] font-body leading-relaxed">{step.body}</p>
+                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">{step.title}</h3>
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed">{step.body}</p>
               </li>
             ))}
           </ol>
@@ -379,7 +379,7 @@ export default function RequestQuotePage() {
             <Heading as="h2" variant="section" className="mb-4 text-center">
               Frequently Asked Questions
             </Heading>
-            <p className="text-[#64748B] font-body text-center mb-10">
+            <p className="text-brand-steelGray font-body text-center mb-10">
               Everything you need to know before submitting your quote request.
             </p>
             <FAQAccordion faqs={FAQS} />
@@ -388,15 +388,15 @@ export default function RequestQuotePage() {
       </Section>
 
       {/* ── Lead Generation CTA ──────────────────────────────────────────── */}
-      <section className="bg-[#0D1B5C] py-16 md:py-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#E31B23] opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 w-1/3 h-full bg-[#E31B23] opacity-[0.03] skew-x-12 -translate-x-1/4" aria-hidden="true" />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#E31B23]/40 to-transparent" aria-hidden="true" />
+      <section className="bg-honeywell-navy py-16 md:py-20 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
+        <div className="absolute bottom-0 left-0 w-1/3 h-full bg-honeywell-red opacity-[0.03] skew-x-12 -translate-x-1/4" aria-hidden="true" />
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-honeywell-red/40 to-transparent" aria-hidden="true" />
         <Container className="relative z-10 text-center">
           <Heading variant="section" className="text-white mb-4">
             Need a Custom Hydraulic Solution?
           </Heading>
-          <p className="text-[#CBD5E1] font-body max-w-2xl mx-auto mb-4 text-lg leading-relaxed">
+          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-4 text-lg leading-relaxed">
             We design and manufacture precision hydraulic equipment tailored to your exact specifications.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
@@ -407,7 +407,7 @@ export default function RequestQuotePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="tel:+919924343873"
-              className="inline-flex items-center gap-2 bg-[#E31B23] hover:bg-[#C41220] text-white font-semibold font-body text-sm px-6 py-3 rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E31B23] focus-visible:ring-offset-2"
+              className="inline-flex items-center gap-2 bg-honeywell-red hover:bg-red-700 text-white font-semibold font-body text-sm px-6 py-3 rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2"
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
               Talk to an Engineer
@@ -416,7 +416,7 @@ export default function RequestQuotePage() {
               href="https://wa.me/919924343873"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-transparent border border-white text-white hover:bg-white hover:text-[#0D1B5C] font-semibold font-body text-sm px-6 py-3 rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+              className="inline-flex items-center gap-2 bg-transparent border border-white text-white hover:bg-white hover:text-honeywell-navy font-semibold font-body text-sm px-6 py-3 rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
             >
               <MessageCircle className="w-4 h-4" aria-hidden="true" />
               WhatsApp Us

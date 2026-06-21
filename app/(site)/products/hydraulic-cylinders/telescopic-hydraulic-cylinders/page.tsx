@@ -335,23 +335,23 @@ export default function TelescopicHydraulicCylindersPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200"
       id="hero"
     >
       {/* Background Decorative Element */}
       <div
-        className="absolute top-0 right-0 w-1/2 h-full bg-[#F8FAFC] skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block"
+        className="absolute top-0 right-0 w-1/2 h-full bg-brand-surfaceGray skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block"
         aria-hidden="true"
       />
 
       <Container>
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-8">
-          <ol className="flex flex-wrap items-center text-sm text-[#64748B] font-body gap-1.5">
+          <ol className="flex flex-wrap items-center text-sm text-brand-steelGray font-body gap-1.5">
             <li>
               <Link
                 href="/"
-                className="hover:text-[#E31B23] transition-colors"
+                className="hover:text-honeywell-red transition-colors"
               >
                 Home
               </Link>
@@ -360,7 +360,7 @@ function HeroSection() {
             <li>
               <Link
                 href="/products/"
-                className="hover:text-[#E31B23] transition-colors"
+                className="hover:text-honeywell-red transition-colors"
               >
                 Products
               </Link>
@@ -369,14 +369,14 @@ function HeroSection() {
             <li>
               <Link
                 href="/products/hydraulic-cylinders/"
-                className="hover:text-[#E31B23] transition-colors"
+                className="hover:text-honeywell-red transition-colors"
               >
                 Hydraulic Cylinders
               </Link>
             </li>
             <li aria-hidden="true">/</li>
             <li
-              className="text-[#0D1B5C] font-semibold"
+              className="text-honeywell-navy font-semibold"
               aria-current="page"
             >
               Telescopic Cylinders
@@ -391,11 +391,11 @@ function HeroSection() {
               <Badge variant="custom">EXTREME STROKE IN COMPACT SPACES</Badge>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-[#0D1B5C] leading-[1.1] mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               Telescopic Hydraulic Cylinder Manufacturer
             </h1>
 
-            <p className="text-lg text-[#334155] font-body mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed">
               Engineered for massive lifting heights from a minimal footprint. Honeywell Hydraulics is a premier custom telescopic hydraulic cylinder manufacturer in Gujarat, supplying highly robust, multi-stage cylinders exclusively for tipper bodies, dump trucks, and mobile lifting equipment.
             </p>
 
@@ -414,7 +414,7 @@ function HeroSection() {
                 href="/contact-us/"
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto bg-white hover:bg-[#F8FAFC]"
+                className="w-full sm:w-auto bg-white hover:bg-brand-surfaceGray"
               >
                 STROKE CALCULATION{' '}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -422,13 +422,13 @@ function HeroSection() {
             </div>
 
             {/* Contact Bar */}
-            <div className="flex flex-wrap items-center gap-6 py-4 border-t border-[#E2E8F0] w-full">
+            <div className="flex flex-wrap items-center gap-6 py-4 border-t border-slate-200 w-full">
               <a
                 href="tel:+919924343873"
-                className="flex items-center text-[#0D1B5C] hover:text-[#E31B23] font-medium transition-colors font-body"
+                className="flex items-center text-honeywell-navy hover:text-honeywell-red font-medium transition-colors font-body"
                 aria-label="Call Honeywell Hydraulics"
               >
-                <div className="w-10 h-10 rounded-full bg-[#F1F5F9] flex items-center justify-center mr-3">
+                <div className="w-10 h-10 rounded-full bg-brand-lightSurface flex items-center justify-center mr-3">
                   <Phone className="w-5 h-5" />
                 </div>
                 +91 99243 43873
@@ -437,10 +437,10 @@ function HeroSection() {
                 href="https://wa.me/919924343873"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-[#0D1B5C] hover:text-[#25D366] font-medium transition-colors font-body"
+                className="flex items-center text-honeywell-navy hover:text-[#25D366] font-medium transition-colors font-body"
                 aria-label="WhatsApp Honeywell Hydraulics"
               >
-                <div className="w-10 h-10 rounded-full bg-[#F1F5F9] flex items-center justify-center mr-3">
+                <div className="w-10 h-10 rounded-full bg-brand-lightSurface flex items-center justify-center mr-3">
                   <MessageCircle className="w-5 h-5" />
                 </div>
                 WhatsApp Engineering Team
@@ -468,8 +468,8 @@ function HeroSection() {
           </div>
 
           {/* Image Column */}
-          <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-[#E2E8F0] shadow-sm p-4 overflow-hidden group">
-            <div className="absolute inset-0 bg-[#F8FAFC] opacity-50 rounded-xl" />
+          <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm p-4 overflow-hidden group">
+            <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
             <Image
               src="/images/products/hydraulic-cylinders/telescopic-hydraulic-cylinders-manufacturer.webp"
               alt="Telescopic Hydraulic Cylinder Manufacturer in Ahmedabad - Multi-stage tipper cylinder by Honeywell Hydraulics"
@@ -483,38 +483,38 @@ function HeroSection() {
       </Container>
 
       {/* Key Specs Strip */}
-      <div className="absolute bottom-0 left-0 w-full border-t border-[#E2E8F0] bg-white hidden md:block">
+      <div className="absolute bottom-0 left-0 w-full border-t border-slate-200 bg-white hidden md:block">
         <Container>
-          <div className="flex flex-wrap divide-x divide-[#E2E8F0] py-4">
+          <div className="flex flex-wrap divide-x divide-slate-200 py-4">
             <div className="px-6 flex-1 text-center first:pl-0 last:pr-0">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
                 Stages
               </span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 2 to 6 Stages
               </span>
             </div>
             <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
                 Max Stroke
               </span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 8,000+ mm
               </span>
             </div>
             <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
                 Pressure
               </span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 Up to 250 Bar
               </span>
             </div>
             <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
                 Primary Use
               </span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 Tippers & Trailers
               </span>
             </div>
@@ -531,18 +531,18 @@ function ProductOverview() {
     <Section bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-6">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
             What Are Telescopic Hydraulic Cylinders?
           </h2>
-          <div className="space-y-5 text-[#334155] font-body text-lg leading-relaxed">
+          <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
             <p>
-              When a machine requires a massive lifting stroke but has virtually no physical space to house a fully retracted cylinder, engineers turn to <strong className="text-[#0D1B5C]">Telescopic Hydraulic Cylinders</strong>.
+              When a machine requires a massive lifting stroke but has virtually no physical space to house a fully retracted cylinder, engineers turn to <strong className="text-honeywell-navy">Telescopic Hydraulic Cylinders</strong>.
             </p>
             <p>
               Unlike standard Tie Rod Cylinders or Welded Cylinders which consist of a single rod and barrel, a telescopic cylinder features a series of nested, tubular steel stages (often referred to as sleeves or sleeves-and-plunger). These nested tubes slide outward from each other, operating much like a collapsible pirate&apos;s telescope.
             </p>
             <p>
-              As a leading <strong className="text-[#0D1B5C]">multi-stage hydraulic cylinder supplier</strong>, we design these complex actuators specifically for mobile equipment. A telescopic cylinder can provide an extended stroke that is significantly longer than its collapsed length—sometimes extending up to six times its closed dimension. This makes them the undisputed standard for dump trucks, refuse collection vehicles, and heavy-duty tipper bodies where space under the chassis is severely limited.
+              As a leading <strong className="text-honeywell-navy">multi-stage hydraulic cylinder supplier</strong>, we design these complex actuators specifically for mobile equipment. A telescopic cylinder can provide an extended stroke that is significantly longer than its collapsed length—sometimes extending up to six times its closed dimension. This makes them the undisputed standard for dump trucks, refuse collection vehicles, and heavy-duty tipper bodies where space under the chassis is severely limited.
             </p>
           </div>
         </div>
@@ -590,10 +590,10 @@ function KeyFeatures() {
     <Section bg="gray" id="how-they-work">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             How Multi-Stage Cylinders Work
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             The internal fluid dynamics of a telescopic cylinder are vastly more complex than a standard single-rod actuator, offering unique engineering advantages.
           </p>
         </div>
@@ -602,7 +602,7 @@ function KeyFeatures() {
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-[#E2E8F0] p-8 hover:shadow-md transition-shadow duration-300 group"
+              className="bg-white rounded-xl border border-slate-200 p-8 hover:shadow-md transition-shadow duration-300 group"
             >
               <div className="flex items-center gap-4 mb-5">
                 <IconBox
@@ -611,10 +611,10 @@ function KeyFeatures() {
                   size="md"
                 />
               </div>
-              <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3 group-hover:text-[#E31B23] transition-colors">
+              <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {step.title}
               </h3>
-              <p className="text-[#64748B] font-body text-sm leading-relaxed">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed">
                 {step.desc}
               </p>
             </div>
@@ -632,10 +632,10 @@ function TechnicalSpecifications() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Technical Specifications
             </h2>
-            <p className="text-lg text-[#64748B] font-body mb-8">
+            <p className="text-lg text-brand-steelGray font-body mb-8">
               Engineered to support immense tipping loads with precise stage sequencing and robust column strength.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -672,54 +672,54 @@ function ProductVariants() {
     <Section bg="gray" id="telescopic-vs-standard">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Telescopic vs. Standard Cylinders
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Choosing between a multi-stage cylinder and a standard actuator dictates the entire chassis design of your mobile equipment.
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto bg-white rounded-xl border border-[#E2E8F0] overflow-hidden shadow-sm">
+        <div className="max-w-5xl mx-auto bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-[#F8FAFC] border-b border-[#E2E8F0]">
-                  <th className="p-4 font-display font-bold text-[#0D1B5C]">Engineering Feature</th>
-                  <th className="p-4 font-display font-bold text-[#0D1B5C] border-l border-[#E2E8F0]">Telescopic Hydraulic Cylinders</th>
-                  <th className="p-4 font-display font-bold text-[#0D1B5C] border-l border-[#E2E8F0]">Standard Cylinders (Welded/Tie Rod)</th>
+                <tr className="bg-brand-surfaceGray border-b border-slate-200">
+                  <th className="p-4 font-display font-bold text-honeywell-navy">Engineering Feature</th>
+                  <th className="p-4 font-display font-bold text-honeywell-navy border-l border-slate-200">Telescopic Hydraulic Cylinders</th>
+                  <th className="p-4 font-display font-bold text-honeywell-navy border-l border-slate-200">Standard Cylinders (Welded/Tie Rod)</th>
                 </tr>
               </thead>
-              <tbody className="text-sm font-body text-[#334155]">
-                <tr className="border-b border-[#E2E8F0]">
-                  <td className="p-4 font-semibold text-[#0D1B5C]">Piston Rod Design</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Multiple nested tubular sleeves</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Single solid or hollow rod</td>
+              <tbody className="text-sm font-body text-brand-darkSlate">
+                <tr className="border-b border-slate-200">
+                  <td className="p-4 font-semibold text-honeywell-navy">Piston Rod Design</td>
+                  <td className="p-4 border-l border-slate-200">Multiple nested tubular sleeves</td>
+                  <td className="p-4 border-l border-slate-200">Single solid or hollow rod</td>
                 </tr>
-                <tr className="border-b border-[#E2E8F0]">
-                  <td className="p-4 font-semibold text-[#0D1B5C]">Collapsed Length</td>
-                  <td className="p-4 border-l border-[#E2E8F0] font-semibold text-[#25D366]">Highly compact (20% to 40% of extended stroke)</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Bulky (Always longer than the extended stroke)</td>
+                <tr className="border-b border-slate-200">
+                  <td className="p-4 font-semibold text-honeywell-navy">Collapsed Length</td>
+                  <td className="p-4 border-l border-slate-200 font-semibold text-[#25D366]">Highly compact (20% to 40% of extended stroke)</td>
+                  <td className="p-4 border-l border-slate-200">Bulky (Always longer than the extended stroke)</td>
                 </tr>
-                <tr className="border-b border-[#E2E8F0]">
-                  <td className="p-4 font-semibold text-[#0D1B5C]">Force Profile</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Force decreases as each smaller stage extends</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Constant force throughout the entire stroke</td>
+                <tr className="border-b border-slate-200">
+                  <td className="p-4 font-semibold text-honeywell-navy">Force Profile</td>
+                  <td className="p-4 border-l border-slate-200">Force decreases as each smaller stage extends</td>
+                  <td className="p-4 border-l border-slate-200">Constant force throughout the entire stroke</td>
                 </tr>
-                <tr className="border-b border-[#E2E8F0]">
-                  <td className="p-4 font-semibold text-[#0D1B5C]">Speed Profile</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Speed increases as each smaller stage extends</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Constant speed throughout the entire stroke</td>
+                <tr className="border-b border-slate-200">
+                  <td className="p-4 font-semibold text-honeywell-navy">Speed Profile</td>
+                  <td className="p-4 border-l border-slate-200">Speed increases as each smaller stage extends</td>
+                  <td className="p-4 border-l border-slate-200">Constant speed throughout the entire stroke</td>
                 </tr>
-                <tr className="border-b border-[#E2E8F0]">
-                  <td className="p-4 font-semibold text-[#0D1B5C]">Primary Action</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Usually Single-Acting (Gravity return)</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Usually Double-Acting (Powered return)</td>
+                <tr className="border-b border-slate-200">
+                  <td className="p-4 font-semibold text-honeywell-navy">Primary Action</td>
+                  <td className="p-4 border-l border-slate-200">Usually Single-Acting (Gravity return)</td>
+                  <td className="p-4 border-l border-slate-200">Usually Double-Acting (Powered return)</td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-[#0D1B5C]">Primary Risk</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Susceptible to side-loading and column buckling</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Highly rigid against side-loads</td>
+                  <td className="p-4 font-semibold text-honeywell-navy">Primary Risk</td>
+                  <td className="p-4 border-l border-slate-200">Susceptible to side-loading and column buckling</td>
+                  <td className="p-4 border-l border-slate-200">Highly rigid against side-loads</td>
                 </tr>
               </tbody>
             </table>
@@ -760,10 +760,10 @@ function IndustriesSection() {
     <Section bg="gray" id="industries">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Industries Served
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Our custom telescopic cylinders are the backbone of the heavy transportation and mobile infrastructure sectors.
           </p>
         </div>
@@ -772,7 +772,7 @@ function IndustriesSection() {
           {industries.map((ind, idx) => (
             <div
               key={idx}
-              className="flex gap-5 bg-white rounded-xl border border-[#E2E8F0] p-6 hover:shadow-md transition-shadow duration-300"
+              className="flex gap-5 bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition-shadow duration-300"
             >
               <IconBox
                 icon={ind.icon}
@@ -781,10 +781,10 @@ function IndustriesSection() {
                 className="shrink-0"
               />
               <div>
-                <h3 className="text-lg font-display font-bold text-[#0D1B5C] mb-2">
+                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">
                   {ind.name}
                 </h3>
-                <p className="text-sm text-[#64748B] font-body leading-relaxed">
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed">
                   {ind.desc}
                 </p>
               </div>
@@ -802,62 +802,62 @@ function ManufacturingProcess() {
     <Section bg="white" id="manufacturing-process">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Manufacturing & Quality Process
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Every multi-stage cylinder is delivered with complete stroke-multiplication reports and certified column-load limits, ensuring the actuator meets all safety factors required for heavy mobile equipment.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-[#F8FAFC] rounded-xl border border-[#E2E8F0] p-8">
+          <div className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8">
             <div className="flex items-center gap-3 mb-4">
-              <Cog className="w-6 h-6 text-[#E31B23]" />
-              <h3 className="text-lg font-display font-bold text-[#0D1B5C]">
+              <Cog className="w-6 h-6 text-honeywell-red" />
+              <h3 className="text-lg font-display font-bold text-honeywell-navy">
                 Precision Stage Honing
               </h3>
             </div>
-            <p className="text-sm text-[#64748B] font-body leading-relaxed">
+            <p className="text-sm text-brand-steelGray font-body leading-relaxed">
               Every tubular stage is CNC-machined, skived, and roller-burnished internally and externally to ensure absolute concentricity. This prevents the stages from binding or galling.
             </p>
           </div>
 
-          <div className="bg-[#F8FAFC] rounded-xl border border-[#E2E8F0] p-8">
+          <div className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8">
             <div className="flex items-center gap-3 mb-4">
-              <ShieldCheck className="w-6 h-6 text-[#E31B23]" />
-              <h3 className="text-lg font-display font-bold text-[#0D1B5C]">
+              <ShieldCheck className="w-6 h-6 text-honeywell-red" />
+              <h3 className="text-lg font-display font-bold text-honeywell-navy">
                 Hard Chrome Plating
               </h3>
             </div>
-            <p className="text-sm text-[#64748B] font-body leading-relaxed">
+            <p className="text-sm text-brand-steelGray font-body leading-relaxed">
               Because the exterior of every stage acts as a rod, all stages are heavily hard-chrome plated to resist scoring and environmental corrosion from road salt and mud.
             </p>
           </div>
 
-          <div className="bg-[#F8FAFC] rounded-xl border border-[#E2E8F0] p-8">
+          <div className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8">
             <div className="flex items-center gap-3 mb-4">
-              <FileCheck className="w-6 h-6 text-[#E31B23]" />
-              <h3 className="text-lg font-display font-bold text-[#0D1B5C]">
+              <FileCheck className="w-6 h-6 text-honeywell-red" />
+              <h3 className="text-lg font-display font-bold text-honeywell-navy">
                 Sequential Validation
               </h3>
             </div>
-            <p className="text-sm text-[#64748B] font-body leading-relaxed">
+            <p className="text-sm text-brand-steelGray font-body leading-relaxed">
               100% of our telescopic cylinders undergo rigorous vertical hydrostatic testing to verify smooth stage sequencing and test the integrity of the mechanical stop rings.
             </p>
           </div>
         </div>
 
         {/* Mid-page Guarantee */}
-        <div className="bg-[#0D1B5C] rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
+        <div className="bg-honeywell-navy rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
           <div
-            className="absolute top-0 right-0 w-1/2 h-full bg-[#E31B23] opacity-5 -skew-x-12 translate-x-1/4"
+            className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4"
             aria-hidden="true"
           />
           <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-4 relative z-10">
             The Honeywell Guarantee
           </h3>
-          <p className="text-[#CBD5E1] font-body max-w-2xl mx-auto mb-6 relative z-10">
+          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-6 relative z-10">
             Our heavy-duty telescopic cylinders are backed by a strict Defect Warranty. Should your mobile equipment experience seal failure due to harsh environmental debris, our Cylinder Repair division can completely rebuild the unit.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
@@ -887,51 +887,51 @@ function ProjectSpotlight() {
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <Badge variant="years">CASE STUDY</Badge>
-            <span className="text-sm text-[#64748B] font-body font-medium">
+            <span className="text-sm text-brand-steelGray font-body font-medium">
               Earth-Moving Equipment
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-3">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-3">
             Project Spotlight: Custom 5-Stage Mining Tipper Cylinder
           </h2>
-          <p className="text-[#64748B] font-body mb-10">
+          <p className="text-brand-steelGray font-body mb-10">
             Client: Heavy Mining Tipper OEM &mdash; Metoda GIDC, Rajkot
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 rounded-2xl overflow-hidden border border-[#E2E8F0] shadow-sm">
-            <div className="bg-[#F8FAFC] p-8 border-b md:border-b-0 md:border-r border-[#E2E8F0]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+            <div className="bg-brand-surfaceGray p-8 border-b md:border-b-0 md:border-r border-slate-200">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-8 rounded-full bg-[#E31B23]/10 flex items-center justify-center shrink-0">
-                  <span className="text-[#E31B23] font-bold text-sm">01</span>
+                <div className="w-8 h-8 rounded-full bg-honeywell-red/10 flex items-center justify-center shrink-0">
+                  <span className="text-honeywell-red font-bold text-sm">01</span>
                 </div>
-                <h3 className="text-lg font-display font-bold text-[#0D1B5C]">The Challenge</h3>
+                <h3 className="text-lg font-display font-bold text-honeywell-navy">The Challenge</h3>
               </div>
-              <p className="text-sm text-[#64748B] font-body leading-relaxed">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed">
                 The OEM was designing a massive new dump truck specifically for heavy iron-ore mining. Standard 4-stage cylinders could not provide the required tipping angle without raising the truck&apos;s center of gravity dangerously high during transit.
               </p>
             </div>
 
-            <div className="bg-white p-8 border-b md:border-b-0 md:border-r border-[#E2E8F0]">
+            <div className="bg-white p-8 border-b md:border-b-0 md:border-r border-slate-200">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-8 rounded-full bg-[#0D1B5C]/10 flex items-center justify-center shrink-0">
-                  <span className="text-[#0D1B5C] font-bold text-sm">02</span>
+                <div className="w-8 h-8 rounded-full bg-honeywell-navy/10 flex items-center justify-center shrink-0">
+                  <span className="text-honeywell-navy font-bold text-sm">02</span>
                 </div>
-                <h3 className="text-lg font-display font-bold text-[#0D1B5C]">The Solution</h3>
+                <h3 className="text-lg font-display font-bold text-honeywell-navy">The Solution</h3>
               </div>
-              <p className="text-sm text-[#64748B] font-body leading-relaxed">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed">
                 We engineered a custom 5-Stage Telescopic Cylinder. By adding an extra stage, we reduced the collapsed length by 15%, allowing the OEM to lower the dump bed. We also integrated heavy-duty metallic scrapers onto every stage to clear abrasive ore dust.
               </p>
             </div>
 
-            <div className="bg-[#0D1B5C] p-8">
+            <div className="bg-honeywell-navy p-8">
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                   <span className="text-white font-bold text-sm">03</span>
                 </div>
                 <h3 className="text-lg font-display font-bold text-white">The Outcome</h3>
               </div>
-              <p className="text-sm text-[#CBD5E1] font-body leading-relaxed mb-6">
+              <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6">
                 The truck achieved a perfect 50-degree tipping angle from an ultra-low chassis profile. The specialized wiper seals prevented dust ingress, extending the cylinder&apos;s operational lifespan in the mining environment by over <strong className="text-white">200%</strong>.
               </p>
               <Button
@@ -986,17 +986,17 @@ function RelatedProducts() {
       <Container>
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Integrate Your Telescopic Cylinder
             </h2>
-            <p className="text-lg text-[#64748B] font-body">
+            <p className="text-lg text-brand-steelGray font-body">
               Telescopic cylinders power mobile equipment. Control them with our robust mobile fluid power systems.
             </p>
           </div>
           <div className="mt-6 md:mt-0 shrink-0">
             <Link
               href="/products/"
-              className="text-[#E31B23] font-bold hover:underline font-body"
+              className="text-honeywell-red font-bold hover:underline font-body"
             >
               Browse all products →
             </Link>
@@ -1054,10 +1054,10 @@ function EngineeringAdvantage() {
     <Section bg="white" id="engineering-advantage">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             The Mobile OEM Advantage
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Purchasing a telescopic cylinder is an investment in your vehicle&apos;s safety. Leverage our heavy engineering services.
           </p>
         </div>
@@ -1066,7 +1066,7 @@ function EngineeringAdvantage() {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="flex gap-5 bg-[#F8FAFC] rounded-xl border border-[#E2E8F0] p-7 hover:shadow-md transition-shadow duration-300"
+              className="flex gap-5 bg-brand-surfaceGray rounded-xl border border-slate-200 p-7 hover:shadow-md transition-shadow duration-300"
             >
               <IconBox
                 icon={service.icon}
@@ -1075,10 +1075,10 @@ function EngineeringAdvantage() {
                 className="shrink-0 mt-1"
               />
               <div>
-                <h3 className="text-lg font-display font-bold text-[#0D1B5C] mb-2">
+                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">
                   {service.title}
                 </h3>
-                <p className="text-sm text-[#64748B] font-body leading-relaxed">
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -1139,10 +1139,10 @@ function LocalServiceAreas() {
     <Section bg="gray" id="local-service-areas">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Telescopic Cylinder Manufacturer in Gujarat
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             We provide direct engineering support and heavy-freight delivery to commercial vehicle OEMs across the state.
           </p>
         </div>
@@ -1198,10 +1198,10 @@ function ResourcesSection() {
     <Section bg="white" id="resources">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Resources & Engineering Guides
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Equip your vehicle design and fleet maintenance teams with vital multi-stage technical data.
           </p>
         </div>
@@ -1210,7 +1210,7 @@ function ResourcesSection() {
           {resources.map((resource, idx) => (
             <div
               key={idx}
-              className="bg-[#F8FAFC] rounded-xl border border-[#E2E8F0] p-8 flex flex-col hover:shadow-md transition-shadow duration-300"
+              className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8 flex flex-col hover:shadow-md transition-shadow duration-300"
             >
               <IconBox
                 icon={resource.icon}
@@ -1218,10 +1218,10 @@ function ResourcesSection() {
                 size="lg"
                 className="mb-6"
               />
-              <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3">
+              <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">
                 {resource.title}
               </h3>
-              <p className="text-sm text-[#64748B] font-body leading-relaxed mb-6 flex-grow">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed mb-6 flex-grow">
                 {resource.description}
               </p>
               <div className="mt-auto">
@@ -1249,10 +1249,10 @@ function FAQSection() {
       <Container>
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-[#64748B] font-body">
+            <p className="text-lg text-brand-steelGray font-body">
               Common questions about our telescopic hydraulic cylinder capabilities.
             </p>
           </div>

@@ -9,7 +9,7 @@ import React from 'react';
 export function Skeleton({ className = '' }: { className?: string }) {
   return (
     <div 
-      className={`animate-pulse bg-[#E2E8F0] rounded-sm ${className}`} 
+      className={`animate-pulse bg-slate-200 rounded-sm ${className}`} 
       aria-hidden="true" 
     />
   );
@@ -17,7 +17,7 @@ export function Skeleton({ className = '' }: { className?: string }) {
 
 export function CardSkeleton() {
   return (
-    <div className="bg-white rounded-xl border border-[#E2E8F0] p-6 w-full">
+    <div className="bg-white rounded-xl border border-slate-200 p-6 w-full">
       <Skeleton className="h-48 w-full mb-6 rounded-md" />
       <Skeleton className="h-6 w-3/4 mb-3" />
       <Skeleton className="h-4 w-full mb-2" />
@@ -45,12 +45,12 @@ export function PageSkeleton() {
 
 export function TableSkeleton({ rows = 5 }: { rows?: number }) {
   return (
-    <div className="w-full border border-[#E2E8F0] rounded-sm overflow-hidden">
-      <div className="bg-[#F8FAFC] p-4 border-b border-[#E2E8F0]">
+    <div className="w-full border border-slate-200 rounded-sm overflow-hidden">
+      <div className="bg-brand-surfaceGray p-4 border-b border-slate-200">
         <Skeleton className="h-5 w-1/4" />
       </div>
       {Array.from({ length: rows }).map((_, i) => (
-        <div key={i} className="flex p-4 border-b border-[#E2E8F0] last:border-0">
+        <div key={i} className="flex p-4 border-b border-slate-200 last:border-0">
           <Skeleton className="h-4 w-1/3 mr-4" />
           <Skeleton className="h-4 w-1/2" />
         </div>

@@ -67,12 +67,25 @@ export const siteNavigation: SiteNavigation = {
                 href: '/products/hydraulic-cylinders/',
                 description:
                   'Custom industrial hydraulic cylinders with bore sizes from 40–300 mm. Engineered for precision and endurance.',
+                subcategories: [
+                  { label: 'Double Acting Cylinders', href: '/products/hydraulic-cylinders/' },
+                  { label: 'Single Acting Cylinders', href: '/products/hydraulic-cylinders/' },
+                  { label: 'Tie Rod Cylinders', href: '/products/hydraulic-cylinders/' },
+                  { label: 'Welded Cylinders', href: '/products/hydraulic-cylinders/' },
+                  { label: 'Telescopic Cylinders', href: '/products/hydraulic-cylinders/' },
+                ],
               },
               {
                 label: 'Hydraulic Power Packs',
                 href: '/products/hydraulic-power-packs/',
                 description:
                   'Custom-engineered hydraulic power units delivering precise flow rates for automated machinery and heavy presses.',
+                subcategories: [
+                  { label: 'Custom Power Units', href: '/products/hydraulic-power-packs/' },
+                  { label: 'Standard Power Packs', href: '/products/hydraulic-power-packs/' },
+                  { label: 'Mini Power Packs', href: '/products/hydraulic-power-packs/' },
+                  { label: 'High Pressure Units', href: '/products/hydraulic-power-packs/' },
+                ],
               },
             ],
           },

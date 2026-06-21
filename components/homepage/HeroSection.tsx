@@ -86,8 +86,8 @@ export function HeroSection() {
         aria-hidden="true"
       >
         {/* Diagonal accent stripe */}
-        <div className="absolute -top-20 -right-40 w-[800px] h-[800px] rounded-full bg-[#F8FAFC] opacity-70" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E2E8F0] to-transparent" />
+        <div className="absolute -top-20 -right-40 w-[800px] h-[800px] rounded-full bg-brand-surfaceGray opacity-70" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
       </div>
 
       <Container className="relative z-10">
@@ -102,7 +102,7 @@ export function HeroSection() {
 
             {/* Overline — primary keyword signal */}
             <p
-              className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-[#E31B23] mb-4"
+              className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-4"
             >
               Hydraulic Equipment Manufacturer in Gujarat
             </p>
@@ -113,17 +113,17 @@ export function HeroSection() {
                 variant="hero"
                 as="h1"
                 id="hero-heading"
-                className="text-[#0D1B5C] mb-5 leading-[1.1]"
+                className="text-honeywell-navy mb-5 leading-[1.1]"
               >
                 Hydraulic Cylinder{' '}
-                <span className="text-[#E31B23]">&amp;</span> Power Pack
+                <span className="text-honeywell-red">&amp;</span> Power Pack
                 Manufacturer in Ahmedabad
               </Heading>
             </div>
 
             {/* Subtitle — from homepage-copy.md */}
             <p
-              className="text-base sm:text-lg text-[#64748B] font-body leading-relaxed mb-6 max-w-xl"
+              className="text-base sm:text-lg text-brand-steelGray font-body leading-relaxed mb-6 max-w-xl"
             >
               Custom hydraulic cylinders, power packs, and complete hydraulic
               systems. Precision-engineered for 25+ industries across India
@@ -138,10 +138,10 @@ export function HeroSection() {
               {trustChips.map((chip, i) => (
                 <li
                   key={chip}
-                  className="flex items-center gap-1.5 text-sm font-medium text-[#334155] font-body"
+                  className="flex items-center gap-1.5 text-sm font-medium text-brand-darkSlate font-body"
                 >
                   <CheckCircle2
-                    className="w-4 h-4 text-[#E31B23] shrink-0"
+                    className="w-4 h-4 text-honeywell-red shrink-0"
                     aria-hidden="true"
                   />
                   {chip}
@@ -200,7 +200,7 @@ export function HeroSection() {
             className="order-2 relative"
           >
             {/* Light surface background for product showcase */}
-            <div className="relative aspect-[4/3] lg:aspect-square rounded-lg bg-[#F8FAFC] border border-[#E2E8F0] overflow-hidden shadow-elevated">
+            <div className="relative aspect-[4/3] lg:aspect-square rounded-lg bg-brand-surfaceGray border border-slate-200 overflow-hidden shadow-elevated">
               <Image
                 src="/images/hero/honeywell-hydraulic-cylinder-hero.webp"
                 alt="Double acting hydraulic cylinder manufactured by Honeywell Hydraulics, Ahmedabad"
@@ -216,15 +216,15 @@ export function HeroSection() {
 
               {/* Product label overlay */}
               <div
-                className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm border border-[#E2E8F0] rounded-sm px-4 py-3"
+                className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-sm px-4 py-3"
               >
-                <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#E31B23] font-body mb-0.5">
+                <p className="text-xs font-bold uppercase tracking-[0.12em] text-honeywell-red font-body mb-0.5">
                   Featured Product
                 </p>
-                <p className="text-sm font-display font-bold text-[#0D1B5C]">
+                <p className="text-sm font-display font-bold text-honeywell-navy">
                   Double Acting Hydraulic Cylinder
                 </p>
-                <p className="text-xs text-[#64748B] font-body">
+                <p className="text-xs text-brand-steelGray font-body">
                   Custom bore: 40mm – 300mm · Pressure tested · Factory-direct
                 </p>
               </div>
@@ -232,11 +232,11 @@ export function HeroSection() {
 
             {/* Decorative accents — engineering precision feel */}
             <div
-              className="hidden lg:block absolute -bottom-4 -right-4 w-24 h-24 border-2 border-[#E2E8F0] rounded-lg -z-10"
+              className="hidden lg:block absolute -bottom-4 -right-4 w-24 h-24 border-2 border-slate-200 rounded-lg -z-10"
               aria-hidden="true"
             />
             <div
-              className="hidden lg:block absolute -top-4 -left-4 w-16 h-16 border-2 border-[#E31B23]/15 rounded-lg -z-10"
+              className="hidden lg:block absolute -top-4 -left-4 w-16 h-16 border-2 border-honeywell-red/15 rounded-lg -z-10"
               aria-hidden="true"
             />
           </div>

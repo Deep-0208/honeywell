@@ -53,10 +53,10 @@ export function CylinderTypesGrid() {
     <Section bg="gray" id="products">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Types of Hydraulic Cylinders
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             We manufacture a comprehensive range of hydraulic cylinder types, each engineered for specific industrial applications and mounting requirements.
           </p>
         </div>

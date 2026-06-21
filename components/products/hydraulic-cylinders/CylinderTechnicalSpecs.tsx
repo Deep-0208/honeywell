@@ -30,16 +30,16 @@ export function CylinderTechnicalSpecs() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           <div className="lg:col-span-5">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-6">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
               Technical Specifications & Capabilities
             </h2>
-            <p className="text-lg text-[#334155] font-body mb-6">
+            <p className="text-lg text-brand-darkSlate font-body mb-6">
               As a leading hydraulic cylinder manufacturer, we offer a vast range of technical specifications to meet the exact demands of your industry. Our engineering team can work with your existing CAD drawings or design a completely new cylinder based on your load calculations.
             </p>
             
-            <div className="bg-white p-6 rounded-xl border border-[#E2E8F0] shadow-sm mb-8">
-              <h3 className="font-bold text-[#0D1B5C] mb-2 font-display">Need a custom dimension?</h3>
-              <p className="text-sm text-[#64748B] mb-4">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm mb-8">
+              <h3 className="font-bold text-honeywell-navy mb-2 font-display">Need a custom dimension?</h3>
+              <p className="text-sm text-brand-steelGray mb-4">
                 We specialize in drawing-to-delivery services for non-standard requirements.
               </p>
               <Button href="/request-quote/" variant="primary">

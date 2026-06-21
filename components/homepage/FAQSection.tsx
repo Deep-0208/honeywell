@@ -22,7 +22,7 @@ export function FAQSection() {
       <Container>
         {/* Section header */}
         <div className="text-center mb-12">
-          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-[#E31B23] mb-3">
+          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
             Frequently Asked Questions
           </p>
           <Heading variant="section" as="h2" id="faq-heading">

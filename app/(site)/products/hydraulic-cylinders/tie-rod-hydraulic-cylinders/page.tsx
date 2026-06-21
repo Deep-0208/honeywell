@@ -327,23 +327,23 @@ export default function TieRodHydraulicCylindersPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200"
       id="hero"
     >
       {/* Background Decorative Element */}
       <div
-        className="absolute top-0 right-0 w-1/2 h-full bg-[#F8FAFC] skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block"
+        className="absolute top-0 right-0 w-1/2 h-full bg-brand-surfaceGray skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block"
         aria-hidden="true"
       />
 
       <Container>
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-8">
-          <ol className="flex flex-wrap items-center text-sm text-[#64748B] font-body gap-1.5">
+          <ol className="flex flex-wrap items-center text-sm text-brand-steelGray font-body gap-1.5">
             <li>
               <Link
                 href="/"
-                className="hover:text-[#E31B23] transition-colors"
+                className="hover:text-honeywell-red transition-colors"
               >
                 Home
               </Link>
@@ -352,7 +352,7 @@ function HeroSection() {
             <li>
               <Link
                 href="/products/"
-                className="hover:text-[#E31B23] transition-colors"
+                className="hover:text-honeywell-red transition-colors"
               >
                 Products
               </Link>
@@ -361,14 +361,14 @@ function HeroSection() {
             <li>
               <Link
                 href="/products/hydraulic-cylinders/"
-                className="hover:text-[#E31B23] transition-colors"
+                className="hover:text-honeywell-red transition-colors"
               >
                 Hydraulic Cylinders
               </Link>
             </li>
             <li aria-hidden="true">/</li>
             <li
-              className="text-[#0D1B5C] font-semibold"
+              className="text-honeywell-navy font-semibold"
               aria-current="page"
             >
               Tie Rod Cylinders
@@ -383,11 +383,11 @@ function HeroSection() {
               <Badge variant="custom">HIGH SERVICEABILITY ACTUATION</Badge>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-[#0D1B5C] leading-[1.1] mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               Tie Rod Hydraulic Cylinder Manufacturer
             </h1>
 
-            <p className="text-lg text-[#334155] font-body mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed">
               Engineered for absolute precision and rapid field maintenance. Honeywell Hydraulics is a premier tie rod hydraulic cylinder manufacturer in Gujarat, supplying highly standardized, heavy-duty NFPA tie rod cylinders to OEMs, machine builders, and automated factories.
             </p>
 
@@ -406,7 +406,7 @@ function HeroSection() {
                 href="/contact-us/"
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto bg-white hover:bg-[#F8FAFC]"
+                className="w-full sm:w-auto bg-white hover:bg-brand-surfaceGray"
               >
                 SIZING CONSULTATION{' '}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -414,13 +414,13 @@ function HeroSection() {
             </div>
 
             {/* Contact Bar */}
-            <div className="flex flex-wrap items-center gap-6 py-4 border-t border-[#E2E8F0] w-full">
+            <div className="flex flex-wrap items-center gap-6 py-4 border-t border-slate-200 w-full">
               <a
                 href="tel:+919924343873"
-                className="flex items-center text-[#0D1B5C] hover:text-[#E31B23] font-medium transition-colors font-body"
+                className="flex items-center text-honeywell-navy hover:text-honeywell-red font-medium transition-colors font-body"
                 aria-label="Call Honeywell Hydraulics"
               >
-                <div className="w-10 h-10 rounded-full bg-[#F1F5F9] flex items-center justify-center mr-3">
+                <div className="w-10 h-10 rounded-full bg-brand-lightSurface flex items-center justify-center mr-3">
                   <Phone className="w-5 h-5" />
                 </div>
                 +91 99243 43873
@@ -429,10 +429,10 @@ function HeroSection() {
                 href="https://wa.me/919924343873"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-[#0D1B5C] hover:text-[#25D366] font-medium transition-colors font-body"
+                className="flex items-center text-honeywell-navy hover:text-[#25D366] font-medium transition-colors font-body"
                 aria-label="WhatsApp Honeywell Hydraulics"
               >
-                <div className="w-10 h-10 rounded-full bg-[#F1F5F9] flex items-center justify-center mr-3">
+                <div className="w-10 h-10 rounded-full bg-brand-lightSurface flex items-center justify-center mr-3">
                   <MessageCircle className="w-5 h-5" />
                 </div>
                 WhatsApp Engineering Team
@@ -460,8 +460,8 @@ function HeroSection() {
           </div>
 
           {/* Image Column */}
-          <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-[#E2E8F0] shadow-sm p-4 overflow-hidden group">
-            <div className="absolute inset-0 bg-[#F8FAFC] opacity-50 rounded-xl" />
+          <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm p-4 overflow-hidden group">
+            <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
             <Image
               src="/images/products/hydraulic-cylinders/tie-rod-hydraulic-cylinder-manufacturer.webp"
               alt="Tie Rod Hydraulic Cylinder Manufacturer in Ahmedabad - NFPA tie rod cylinder by Honeywell Hydraulics"
@@ -475,38 +475,38 @@ function HeroSection() {
       </Container>
 
       {/* Key Specs Strip */}
-      <div className="absolute bottom-0 left-0 w-full border-t border-[#E2E8F0] bg-white hidden md:block">
+      <div className="absolute bottom-0 left-0 w-full border-t border-slate-200 bg-white hidden md:block">
         <Container>
-          <div className="flex flex-wrap divide-x divide-[#E2E8F0] py-4">
+          <div className="flex flex-wrap divide-x divide-slate-200 py-4">
             <div className="px-6 flex-1 text-center first:pl-0 last:pr-0">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
                 Bore
               </span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 40mm - 250mm
               </span>
             </div>
             <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
                 Standard
               </span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 NFPA / ISO 6020
               </span>
             </div>
             <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
                 Pressure
               </span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 Up to 210 Bar
               </span>
             </div>
             <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
                 Maintenance
               </span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 Field Serviceable
               </span>
             </div>
@@ -523,13 +523,13 @@ function ProductOverview() {
     <Section bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-6">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
             What Are Tie Rod Hydraulic Cylinders?
           </h2>
-          <div className="space-y-5 text-[#334155] font-body text-lg leading-relaxed">
+          <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
             <p>
               In the world of industrial linear actuation, the{' '}
-              <strong className="text-[#0D1B5C]">Tie Rod Hydraulic Cylinder</strong> is the undisputed standard for automated manufacturing.
+              <strong className="text-honeywell-navy">Tie Rod Hydraulic Cylinder</strong> is the undisputed standard for automated manufacturing.
             </p>
             <p>
               Unlike welded cylinders, which permanently fuse the barrel to the end caps, a tie rod cylinder relies on four or more high-tensile threaded steel rods (the &quot;tie rods&quot;) running the entire length of the cylinder exterior. These rods clamp the two end caps tightly against the central steel barrel.
@@ -583,10 +583,10 @@ function KeyFeatures() {
     <Section bg="gray" id="construction">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Tie Rod Construction Explained
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             The structural integrity of a tie rod cylinder relies entirely on the precise machining and torquing of its core components.
           </p>
         </div>
@@ -595,7 +595,7 @@ function KeyFeatures() {
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-[#E2E8F0] p-8 hover:shadow-md transition-shadow duration-300 group"
+              className="bg-white rounded-xl border border-slate-200 p-8 hover:shadow-md transition-shadow duration-300 group"
             >
               <div className="flex items-center gap-4 mb-5">
                 <IconBox
@@ -604,10 +604,10 @@ function KeyFeatures() {
                   size="md"
                 />
               </div>
-              <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3 group-hover:text-[#E31B23] transition-colors">
+              <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {step.title}
               </h3>
-              <p className="text-[#64748B] font-body text-sm leading-relaxed">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed">
                 {step.desc}
               </p>
             </div>
@@ -625,10 +625,10 @@ function TechnicalSpecifications() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Technical Specifications
             </h2>
-            <p className="text-lg text-[#64748B] font-body mb-8">
+            <p className="text-lg text-brand-steelGray font-body mb-8">
               Manufactured to industry standard specifications to ensure interchangeability and reliability across all automated applications.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -665,49 +665,49 @@ function ProductVariants() {
     <Section bg="gray" id="tie-rod-vs-welded">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Tie Rod vs. Welded Cylinders
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Understanding when to specify a tie rod cylinder versus a welded cylinder is critical to machine design.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-white rounded-xl border border-[#E2E8F0] overflow-hidden shadow-sm">
+        <div className="max-w-4xl mx-auto bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-[#F8FAFC] border-b border-[#E2E8F0]">
-                  <th className="p-4 font-display font-bold text-[#0D1B5C]">Feature</th>
-                  <th className="p-4 font-display font-bold text-[#0D1B5C] border-l border-[#E2E8F0]">Tie Rod Cylinders</th>
-                  <th className="p-4 font-display font-bold text-[#0D1B5C] border-l border-[#E2E8F0]">Welded Cylinders</th>
+                <tr className="bg-brand-surfaceGray border-b border-slate-200">
+                  <th className="p-4 font-display font-bold text-honeywell-navy">Feature</th>
+                  <th className="p-4 font-display font-bold text-honeywell-navy border-l border-slate-200">Tie Rod Cylinders</th>
+                  <th className="p-4 font-display font-bold text-honeywell-navy border-l border-slate-200">Welded Cylinders</th>
                 </tr>
               </thead>
-              <tbody className="text-sm font-body text-[#334155]">
-                <tr className="border-b border-[#E2E8F0]">
-                  <td className="p-4 font-semibold text-[#0D1B5C]">Construction</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Bolted exterior rods clamp caps to barrel</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">End caps permanently welded to the barrel</td>
+              <tbody className="text-sm font-body text-brand-darkSlate">
+                <tr className="border-b border-slate-200">
+                  <td className="p-4 font-semibold text-honeywell-navy">Construction</td>
+                  <td className="p-4 border-l border-slate-200">Bolted exterior rods clamp caps to barrel</td>
+                  <td className="p-4 border-l border-slate-200">End caps permanently welded to the barrel</td>
                 </tr>
-                <tr className="border-b border-[#E2E8F0]">
-                  <td className="p-4 font-semibold text-[#0D1B5C]">Maximum Pressure</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Low to Medium (Typically up to 210 Bar / 3000 PSI)</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">High to Extreme (Up to 350+ Bar / 5000+ PSI)</td>
+                <tr className="border-b border-slate-200">
+                  <td className="p-4 font-semibold text-honeywell-navy">Maximum Pressure</td>
+                  <td className="p-4 border-l border-slate-200">Low to Medium (Typically up to 210 Bar / 3000 PSI)</td>
+                  <td className="p-4 border-l border-slate-200">High to Extreme (Up to 350+ Bar / 5000+ PSI)</td>
                 </tr>
-                <tr className="border-b border-[#E2E8F0]">
-                  <td className="p-4 font-semibold text-[#0D1B5C]">Serviceability</td>
-                  <td className="p-4 border-l border-[#E2E8F0] font-semibold text-[#25D366]">Extremely High (Disassembled with standard wrenches)</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Low (Requires specialized tools or cutting to rebuild)</td>
+                <tr className="border-b border-slate-200">
+                  <td className="p-4 font-semibold text-honeywell-navy">Serviceability</td>
+                  <td className="p-4 border-l border-slate-200 font-semibold text-[#25D366]">Extremely High (Disassembled with standard wrenches)</td>
+                  <td className="p-4 border-l border-slate-200">Low (Requires specialized tools or cutting to rebuild)</td>
                 </tr>
-                <tr className="border-b border-[#E2E8F0]">
-                  <td className="p-4 font-semibold text-[#0D1B5C]">Environment</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Clean indoor factories, automated assembly lines</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Harsh outdoor, heavy construction, mining</td>
+                <tr className="border-b border-slate-200">
+                  <td className="p-4 font-semibold text-honeywell-navy">Environment</td>
+                  <td className="p-4 border-l border-slate-200">Clean indoor factories, automated assembly lines</td>
+                  <td className="p-4 border-l border-slate-200">Harsh outdoor, heavy construction, mining</td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-[#0D1B5C]">Standardization</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Highly standardized (NFPA/ISO interchangeable)</td>
-                  <td className="p-4 border-l border-[#E2E8F0]">Usually highly customized per application</td>
+                  <td className="p-4 font-semibold text-honeywell-navy">Standardization</td>
+                  <td className="p-4 border-l border-slate-200">Highly standardized (NFPA/ISO interchangeable)</td>
+                  <td className="p-4 border-l border-slate-200">Usually highly customized per application</td>
                 </tr>
               </tbody>
             </table>
@@ -748,10 +748,10 @@ function IndustriesSection() {
     <Section bg="gray" id="industries">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Industries Served
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Our custom tie rod hydraulic cylinders are the standard actuators for continuous manufacturing sectors.
           </p>
         </div>
@@ -760,7 +760,7 @@ function IndustriesSection() {
           {industries.map((ind, idx) => (
             <div
               key={idx}
-              className="flex gap-5 bg-white rounded-xl border border-[#E2E8F0] p-6 hover:shadow-md transition-shadow duration-300"
+              className="flex gap-5 bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition-shadow duration-300"
             >
               <IconBox
                 icon={ind.icon}
@@ -769,10 +769,10 @@ function IndustriesSection() {
                 className="shrink-0"
               />
               <div>
-                <h3 className="text-lg font-display font-bold text-[#0D1B5C] mb-2">
+                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">
                   {ind.name}
                 </h3>
-                <p className="text-sm text-[#64748B] font-body leading-relaxed">
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed">
                   {ind.desc}
                 </p>
               </div>
@@ -790,62 +790,62 @@ function ManufacturingProcess() {
     <Section bg="white" id="manufacturing-process">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Manufacturing & Quality Process
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Every NFPA tie rod cylinder is delivered with a complete dimensional test certificate, verifying that the pin-to-pin lengths and port orientations exactly match your supplied CAD drawings.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-[#F8FAFC] rounded-xl border border-[#E2E8F0] p-8">
+          <div className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8">
             <div className="flex items-center gap-3 mb-4">
-              <Cog className="w-6 h-6 text-[#E31B23]" />
-              <h3 className="text-lg font-display font-bold text-[#0D1B5C]">
+              <Cog className="w-6 h-6 text-honeywell-red" />
+              <h3 className="text-lg font-display font-bold text-honeywell-navy">
                 Precision Machining
               </h3>
             </div>
-            <p className="text-sm text-[#64748B] font-body leading-relaxed">
+            <p className="text-sm text-brand-steelGray font-body leading-relaxed">
               Advanced CNC milling centers utilized to machine perfectly square end caps, ensuring exact tie-rod alignment.
             </p>
           </div>
 
-          <div className="bg-[#F8FAFC] rounded-xl border border-[#E2E8F0] p-8">
+          <div className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8">
             <div className="flex items-center gap-3 mb-4">
-              <WrenchIcon className="w-6 h-6 text-[#E31B23]" />
-              <h3 className="text-lg font-display font-bold text-[#0D1B5C]">
+              <WrenchIcon className="w-6 h-6 text-honeywell-red" />
+              <h3 className="text-lg font-display font-bold text-honeywell-navy">
                 Torque Calibration
               </h3>
             </div>
-            <p className="text-sm text-[#64748B] font-body leading-relaxed">
+            <p className="text-sm text-brand-steelGray font-body leading-relaxed">
               Pneumatic torque-yield wrenches used during assembly to guarantee uniform clamping force across all four tie rods, preventing asymmetrical barrel stress.
             </p>
           </div>
 
-          <div className="bg-[#F8FAFC] rounded-xl border border-[#E2E8F0] p-8">
+          <div className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8">
             <div className="flex items-center gap-3 mb-4">
-              <FileCheck className="w-6 h-6 text-[#E31B23]" />
-              <h3 className="text-lg font-display font-bold text-[#0D1B5C]">
+              <FileCheck className="w-6 h-6 text-honeywell-red" />
+              <h3 className="text-lg font-display font-bold text-honeywell-navy">
                 System Validation
               </h3>
             </div>
-            <p className="text-sm text-[#64748B] font-body leading-relaxed">
+            <p className="text-sm text-brand-steelGray font-body leading-relaxed">
               100% of our tie rod cylinders undergo rigorous 1.5x working pressure hydrostatic testing to verify rod seal integrity and ensure zero static O-ring extrusion.
             </p>
           </div>
         </div>
 
         {/* Mid-page Guarantee */}
-        <div className="bg-[#0D1B5C] rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
+        <div className="bg-honeywell-navy rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
           <div
-            className="absolute top-0 right-0 w-1/2 h-full bg-[#E31B23] opacity-5 -skew-x-12 translate-x-1/4"
+            className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4"
             aria-hidden="true"
           />
           <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-4 relative z-10">
             The Honeywell Guarantee
           </h3>
-          <p className="text-[#CBD5E1] font-body max-w-2xl mx-auto mb-6 relative z-10">
+          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-6 relative z-10">
             Our heavy-duty tie rod cylinders are backed by a strict Defect Warranty. Should a unit require maintenance, our highly serviceable design allows your technicians to replace seals in minutes.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
@@ -875,51 +875,51 @@ function ProjectSpotlight() {
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <Badge variant="years">CASE STUDY</Badge>
-            <span className="text-sm text-[#64748B] font-body font-medium">
+            <span className="text-sm text-brand-steelGray font-body font-medium">
               Automotive Robotic Welding Cell
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-3">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-3">
             Project Spotlight: Standardized Tie Rod Cylinders
           </h2>
-          <p className="text-[#64748B] font-body mb-10">
+          <p className="text-brand-steelGray font-body mb-10">
             Client: Automotive Automation Integrator &mdash; Sanand, Gujarat
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 rounded-2xl overflow-hidden border border-[#E2E8F0] shadow-sm">
-            <div className="bg-[#F8FAFC] p-8 border-b md:border-b-0 md:border-r border-[#E2E8F0]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+            <div className="bg-brand-surfaceGray p-8 border-b md:border-b-0 md:border-r border-slate-200">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-8 rounded-full bg-[#E31B23]/10 flex items-center justify-center shrink-0">
-                  <span className="text-[#E31B23] font-bold text-sm">01</span>
+                <div className="w-8 h-8 rounded-full bg-honeywell-red/10 flex items-center justify-center shrink-0">
+                  <span className="text-honeywell-red font-bold text-sm">01</span>
                 </div>
-                <h3 className="text-lg font-display font-bold text-[#0D1B5C]">The Challenge</h3>
+                <h3 className="text-lg font-display font-bold text-honeywell-navy">The Challenge</h3>
               </div>
-              <p className="text-sm text-[#64748B] font-body leading-relaxed">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed">
                 The OEM built a multi-station robotic welding cell using custom-welded cylinders for part clamping. When a seal failed due to weld-spatter damage, the maintenance team had to cut the cylinder apart, causing 14 hours of assembly line downtime.
               </p>
             </div>
 
-            <div className="bg-white p-8 border-b md:border-b-0 md:border-r border-[#E2E8F0]">
+            <div className="bg-white p-8 border-b md:border-b-0 md:border-r border-slate-200">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-8 rounded-full bg-[#0D1B5C]/10 flex items-center justify-center shrink-0">
-                  <span className="text-[#0D1B5C] font-bold text-sm">02</span>
+                <div className="w-8 h-8 rounded-full bg-honeywell-navy/10 flex items-center justify-center shrink-0">
+                  <span className="text-honeywell-navy font-bold text-sm">02</span>
                 </div>
-                <h3 className="text-lg font-display font-bold text-[#0D1B5C]">The Solution</h3>
+                <h3 className="text-lg font-display font-bold text-honeywell-navy">The Solution</h3>
               </div>
-              <p className="text-sm text-[#64748B] font-body leading-relaxed">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed">
                 Honeywell Hydraulics replaced the entire clamping network with standardized NFPA Tie Rod Cylinders. We equipped the cylinders with heavy-duty rod wipers to clear weld spatter and standardized the mounting footprint across all 12 stations.
               </p>
             </div>
 
-            <div className="bg-[#0D1B5C] p-8">
+            <div className="bg-honeywell-navy p-8">
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                   <span className="text-white font-bold text-sm">03</span>
                 </div>
                 <h3 className="text-lg font-display font-bold text-white">The Outcome</h3>
               </div>
-              <p className="text-sm text-[#CBD5E1] font-body leading-relaxed mb-6">
+              <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6">
                 When future seal replacements were required, the automotive maintenance crew simply unbolted the tie rods and replaced the seals directly on the jig without removing the cylinder body. Downtime was reduced from 14 hours to <strong className="text-white">45 minutes</strong>.
               </p>
               <Button
@@ -975,17 +975,17 @@ function RelatedProducts() {
       <Container>
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Integrate Your Tie Rod Cylinder
             </h2>
-            <p className="text-lg text-[#64748B] font-body">
+            <p className="text-lg text-brand-steelGray font-body">
               Tie rod cylinders are the standard actuators for automated environments. Power and control them with our premium fluid generation and logic systems.
             </p>
           </div>
           <div className="mt-6 md:mt-0 shrink-0">
             <Link
               href="/products/"
-              className="text-[#E31B23] font-bold hover:underline font-body"
+              className="text-honeywell-red font-bold hover:underline font-body"
             >
               Browse all products →
             </Link>
@@ -1043,10 +1043,10 @@ function EngineeringAdvantage() {
     <Section bg="white" id="engineering-advantage">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             The OEM Advantage
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Purchasing a tie rod cylinder is about ensuring long-term machine uptime. Leverage our engineering services to optimize your plant.
           </p>
         </div>
@@ -1055,7 +1055,7 @@ function EngineeringAdvantage() {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="flex gap-5 bg-[#F8FAFC] rounded-xl border border-[#E2E8F0] p-7 hover:shadow-md transition-shadow duration-300"
+              className="flex gap-5 bg-brand-surfaceGray rounded-xl border border-slate-200 p-7 hover:shadow-md transition-shadow duration-300"
             >
               <IconBox
                 icon={service.icon}
@@ -1064,10 +1064,10 @@ function EngineeringAdvantage() {
                 className="shrink-0 mt-1"
               />
               <div>
-                <h3 className="text-lg font-display font-bold text-[#0D1B5C] mb-2">
+                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">
                   {service.title}
                 </h3>
-                <p className="text-sm text-[#64748B] font-body leading-relaxed">
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -1128,10 +1128,10 @@ function LocalServiceAreas() {
     <Section bg="gray" id="local-service-areas">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Tie Rod Cylinder Manufacturer in Gujarat
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Procure NFPA standard cylinders directly in your city with immediate dispatch capability.
           </p>
         </div>
@@ -1187,10 +1187,10 @@ function ResourcesSection() {
     <Section bg="white" id="resources">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Resources & Engineering Guides
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Equip your design and maintenance engineers with technical data.
           </p>
         </div>
@@ -1199,7 +1199,7 @@ function ResourcesSection() {
           {resources.map((resource, idx) => (
             <div
               key={idx}
-              className="bg-[#F8FAFC] rounded-xl border border-[#E2E8F0] p-8 flex flex-col hover:shadow-md transition-shadow duration-300"
+              className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8 flex flex-col hover:shadow-md transition-shadow duration-300"
             >
               <IconBox
                 icon={resource.icon}
@@ -1207,10 +1207,10 @@ function ResourcesSection() {
                 size="lg"
                 className="mb-6"
               />
-              <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3">
+              <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">
                 {resource.title}
               </h3>
-              <p className="text-sm text-[#64748B] font-body leading-relaxed mb-6 flex-grow">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed mb-6 flex-grow">
                 {resource.description}
               </p>
               <div className="mt-auto">
@@ -1238,10 +1238,10 @@ function FAQSection() {
       <Container>
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-[#64748B] font-body">
+            <p className="text-lg text-brand-steelGray font-body">
               Common questions about our tie rod hydraulic cylinder capabilities.
             </p>
           </div>

@@ -22,13 +22,13 @@ export function LocationsSection() {
       <Container>
         {/* Section header */}
         <div className="text-center mb-12">
-          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-[#E31B23] mb-3">
+          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
             Our Service Areas
           </p>
           <Heading variant="section" as="h2" id="locations-heading">
             Serving Manufacturers Across Gujarat &amp; India
           </Heading>
-          <p className="text-[#64748B] font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
+          <p className="text-brand-steelGray font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
             Factory in Kathwada GIDC, Ahmedabad. Delivering hydraulic systems
             across Gujarat and all major Indian industrial cities.
           </p>
@@ -52,11 +52,11 @@ export function LocationsSection() {
         {/* NAP block — Local SEO critical */}
         <div>
           <address
-            className="not-italic text-center text-sm text-[#64748B] font-body pt-8 border-t border-[#E2E8F0]"
+            className="not-italic text-center text-sm text-brand-steelGray font-body pt-8 border-t border-slate-200"
             itemScope
             itemType="https://schema.org/PostalAddress"
           >
-            <strong className="text-[#0D1B5C] font-display text-base">
+            <strong className="text-honeywell-navy font-display text-base">
               Honeywell Hydraulics
             </strong>
             <br />
@@ -71,7 +71,7 @@ export function LocationsSection() {
             <br />
             <a
               href="tel:+91-9924343873"
-              className="text-[#0D1B5C] hover:text-[#E31B23] transition-colors font-mono text-[13px] tracking-wide mt-1 inline-block"
+              className="text-honeywell-navy hover:text-honeywell-red transition-colors font-mono text-[13px] tracking-wide mt-1 inline-block"
             >
               +91 99243 43873
             </a>

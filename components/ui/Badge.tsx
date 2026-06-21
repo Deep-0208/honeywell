@@ -16,8 +16,8 @@ export function Badge({ variant = 'default', className = '', children, ...props 
   const baseStyles = 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium font-body uppercase tracking-wider';
   
   const variants = {
-    iso: 'bg-[#0D1B5C]/10 text-[#0D1B5C]', // Navy subtle
-    years: 'bg-[#E31B23]/10 text-[#B91C1C]', // Red subtle with higher contrast text
+    iso: 'bg-honeywell-navy/10 text-honeywell-navy', // Navy subtle
+    years: 'bg-honeywell-red/10 text-[#B91C1C]', // Red subtle with higher contrast text
     clients: 'bg-green-100 text-green-800',
     madeInIndia: 'bg-orange-100 text-orange-800',
     custom: 'bg-purple-100 text-purple-800',

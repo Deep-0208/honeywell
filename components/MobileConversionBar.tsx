@@ -23,7 +23,7 @@ export function MobileConversionBar() {
       className="
         fixed bottom-0 left-0 right-0 z-50
         lg:hidden
-        bg-[#0D1B5C] border-t border-[#1A2A6C]
+        bg-honeywell-navy border-t border-[#1A2A6C]
         shadow-[0_-4px_12px_-2px_rgba(0,0,0,0.2)]
       "
       style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
@@ -73,7 +73,7 @@ export function MobileConversionBar() {
           className="
             flex flex-col items-center justify-center gap-1
             py-3 min-h-[56px]
-            text-white bg-[#E31B23] hover:bg-[#C41220] active:bg-[#C41220]
+            text-white bg-honeywell-red hover:bg-red-700 active:bg-red-700
             transition-colors duration-150
           "
           aria-label="Request a quote"

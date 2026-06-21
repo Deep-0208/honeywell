@@ -55,10 +55,10 @@ const INITIAL_STATE: QuoteFormPayload = {
 // Shared field styles
 // ─────────────────────────────────────────────────────────────────────────────
 const fieldBase =
-  'w-full bg-white border border-[#CBD5E1] rounded-sm px-4 py-3 text-sm font-body text-[#0D1B5C] placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#E31B23] focus:border-[#E31B23] transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed';
+  'w-full bg-white border border-brand-borderGray rounded-sm px-4 py-3 text-sm font-body text-honeywell-navy placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-honeywell-red focus:border-honeywell-red transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed';
 
-const labelBase = 'block text-sm font-semibold font-body text-[#0D1B5C] mb-1.5';
-const errorBase = 'mt-1 text-xs text-[#E31B23] font-body flex items-center gap-1';
+const labelBase = 'block text-sm font-semibold font-body text-honeywell-navy mb-1.5';
+const errorBase = 'mt-1 text-xs text-honeywell-red font-body flex items-center gap-1';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Sub-components
@@ -86,7 +86,7 @@ function LabelledField({ id, label, required, error, children }: LabelledFieldPr
     <div>
       <label htmlFor={id} className={labelBase}>
         {label}
-        {required && <span className="text-[#E31B23] ml-0.5" aria-hidden="true">*</span>}
+        {required && <span className="text-honeywell-red ml-0.5" aria-hidden="true">*</span>}
       </label>
       {children}
       <FieldError message={error} />
@@ -195,23 +195,23 @@ export function QuoteForm() {
 
   if (status === 'success') {
     return (
-      <div className="flex flex-col items-center justify-center text-center py-16 px-6 bg-white rounded-sm border border-[#E2E8F0] shadow-sm">
+      <div className="flex flex-col items-center justify-center text-center py-16 px-6 bg-white rounded-sm border border-slate-200 shadow-sm">
         <CheckCircle className="w-16 h-16 text-green-500 mb-6" aria-hidden="true" />
-        <h2 className="text-2xl font-display font-bold text-[#0D1B5C] mb-4">
+        <h2 className="text-2xl font-display font-bold text-honeywell-navy mb-4">
           Quote Request Submitted
         </h2>
-        <p className="text-[#64748B] font-body max-w-md mb-8">
+        <p className="text-brand-steelGray font-body max-w-md mb-8">
           Thank you. Our engineering team will review your requirements and respond as soon as possible. For urgent requirements, call us directly.
         </p>
         <a
           href="tel:+919924343873"
-          className="inline-flex items-center gap-2 text-[#E31B23] font-semibold font-body hover:underline underline-offset-4"
+          className="inline-flex items-center gap-2 text-honeywell-red font-semibold font-body hover:underline underline-offset-4"
         >
           📞 +91 9924343873
         </a>
         <button
           onClick={() => setStatus('idle')}
-          className="mt-6 text-sm text-[#64748B] font-body underline underline-offset-4 hover:text-[#0D1B5C]"
+          className="mt-6 text-sm text-brand-steelGray font-body underline underline-offset-4 hover:text-honeywell-navy"
         >
           Submit another request
         </button>
@@ -238,7 +238,7 @@ export function QuoteForm() {
 
       {/* ── Section 1: Contact Information ────────────────────────────────── */}
       <fieldset className="space-y-5">
-        <legend className="text-base font-display font-bold text-[#0D1B5C] uppercase tracking-wide pb-3 border-b border-[#E2E8F0] w-full mb-2">
+        <legend className="text-base font-display font-bold text-honeywell-navy uppercase tracking-wide pb-3 border-b border-slate-200 w-full mb-2">
           1. Contact Information
         </legend>
 
@@ -326,7 +326,7 @@ export function QuoteForm() {
 
       {/* ── Section 2: Project Information ───────────────────────────────── */}
       <fieldset className="space-y-5">
-        <legend className="text-base font-display font-bold text-[#0D1B5C] uppercase tracking-wide pb-3 border-b border-[#E2E8F0] w-full mb-2">
+        <legend className="text-base font-display font-bold text-honeywell-navy uppercase tracking-wide pb-3 border-b border-slate-200 w-full mb-2">
           2. Project Information
         </legend>
 
@@ -407,10 +407,10 @@ export function QuoteForm() {
           aria-expanded={showTechnical}
           aria-controls="technical-details"
           onClick={() => setShowTechnical((v) => !v)}
-          className="flex items-center gap-2 text-base font-display font-bold text-[#0D1B5C] uppercase tracking-wide pb-3 border-b border-[#E2E8F0] w-full text-left hover:text-[#E31B23] transition-colors"
+          className="flex items-center gap-2 text-base font-display font-bold text-honeywell-navy uppercase tracking-wide pb-3 border-b border-slate-200 w-full text-left hover:text-honeywell-red transition-colors"
         >
           <span>3. Technical Details</span>
-          <span className="ml-auto text-xs text-[#64748B] font-body normal-case tracking-normal">
+          <span className="ml-auto text-xs text-brand-steelGray font-body normal-case tracking-normal">
             {showTechnical ? 'Hide optional fields ▲' : 'Add technical specs (optional) ▼'}
           </span>
         </button>
@@ -455,13 +455,13 @@ export function QuoteForm() {
         <p className={labelBase}>4. Attach Technical Drawing (Optional)</p>
         <label
           htmlFor="fileUpload"
-          className="flex flex-col items-center justify-center gap-3 border-2 border-dashed border-[#CBD5E1] rounded-sm py-8 px-4 cursor-pointer hover:border-[#E31B23] hover:bg-red-50/30 transition-colors group"
+          className="flex flex-col items-center justify-center gap-3 border-2 border-dashed border-brand-borderGray rounded-sm py-8 px-4 cursor-pointer hover:border-honeywell-red hover:bg-red-50/30 transition-colors group"
         >
-          <Upload className="w-8 h-8 text-[#94A3B8] group-hover:text-[#E31B23] transition-colors" aria-hidden="true" />
-          <span className="text-sm font-body text-[#64748B] text-center">
+          <Upload className="w-8 h-8 text-[#94A3B8] group-hover:text-honeywell-red transition-colors" aria-hidden="true" />
+          <span className="text-sm font-body text-brand-steelGray text-center">
             {formData.attachmentName
-              ? <span className="text-[#0D1B5C] font-semibold">📎 {formData.attachmentName}</span>
-              : <>Drag & drop or <span className="text-[#E31B23] font-semibold underline">browse file</span></>
+              ? <span className="text-honeywell-navy font-semibold">📎 {formData.attachmentName}</span>
+              : <>Drag & drop or <span className="text-honeywell-red font-semibold underline">browse file</span></>
             }
           </span>
           <span className="text-xs text-[#94A3B8] font-body">PDF, JPG, PNG, STEP, DXF — max 10 MB</span>
@@ -485,7 +485,7 @@ export function QuoteForm() {
         <button
           type="submit"
           disabled={status === 'submitting'}
-          className="w-full inline-flex items-center justify-center gap-3 bg-[#E31B23] hover:bg-[#C41220] disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold font-body text-base px-6 py-4 rounded-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E31B23] focus-visible:ring-offset-2"
+          className="w-full inline-flex items-center justify-center gap-3 bg-honeywell-red hover:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold font-body text-base px-6 py-4 rounded-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2"
           aria-busy={status === 'submitting'}
         >
           {status === 'submitting' ? (

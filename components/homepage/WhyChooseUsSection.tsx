@@ -38,7 +38,7 @@ export function WhyChooseUsSection() {
       <Container>
         {/* Section header */}
         <div className="text-center mb-12">
-          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-[#E31B23] mb-3">
+          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
             Why Honeywell Hydraulics
           </p>
           <Heading variant="section" as="h2" id="why-heading">
@@ -57,10 +57,10 @@ export function WhyChooseUsSection() {
                   variant="primary"
                   className="mx-auto mb-5 group-hover:scale-110 transition-transform duration-300"
                 />
-                <h3 className="font-display font-bold text-[#0D1B5C] text-xl mb-2">
+                <h3 className="font-display font-bold text-honeywell-navy text-xl mb-2">
                   {usp.title}
                 </h3>
-                <p className="text-[#64748B] font-body text-sm leading-relaxed">
+                <p className="text-brand-steelGray font-body text-sm leading-relaxed">
                   {usp.body}
                 </p>
               </div>

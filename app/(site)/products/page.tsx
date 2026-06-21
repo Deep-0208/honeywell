@@ -118,10 +118,10 @@ export default function ProductsHubPage() {
       <JsonLd data={productListSchema} />
 
       {/* Hero Section */}
-      <Section className="bg-[#0D1B5C] text-white pt-12 pb-16 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#E31B23] opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
+      <Section className="bg-honeywell-navy text-white pt-12 pb-16 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
         <Container className="relative z-10">
-          <nav aria-label="Breadcrumb" className="text-sm font-body text-[#CBD5E1] mb-6">
+          <nav aria-label="Breadcrumb" className="text-sm font-body text-brand-borderGray mb-6">
             <ol className="flex items-center space-x-2">
               <li>
                 <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -132,13 +132,13 @@ export default function ProductsHubPage() {
           </nav>
 
           <div className="max-w-3xl">
-            <span className="inline-block py-1 px-3 rounded-sm bg-[#E31B23] text-white text-xs font-bold uppercase tracking-wider mb-6">
+            <span className="inline-block py-1 px-3 rounded-sm bg-honeywell-red text-white text-xs font-bold uppercase tracking-wider mb-6">
               PRODUCTS HUB
             </span>
             <Heading variant="hero" as="h1" className="text-white mb-6">
               Industrial Hydraulic Products Manufacturer
             </Heading>
-            <p className="text-[#CBD5E1] text-lg font-body mb-8 leading-relaxed max-w-2xl">
+            <p className="text-brand-borderGray text-lg font-body mb-8 leading-relaxed max-w-2xl">
               Precision-engineered fluid power solutions for heavy industry. As a leading hydraulic products manufacturer, we design, machine, and test highly reliable hydraulic cylinders and power packs. Built for continuous operation in the most demanding manufacturing environments.
             </p>
 
@@ -148,7 +148,7 @@ export default function ProductsHubPage() {
                 REQUEST A CUSTOM QUOTE
               </Button>
               {/* M2: Replaced dead /contact/engineering/ href with /contact */}
-              <Button variant="outline" size="lg" href="/contact-us/" className="border-white text-white hover:bg-white hover:text-[#0D1B5C]">
+              <Button variant="outline" size="lg" href="/contact-us/" className="border-white text-white hover:bg-white hover:text-honeywell-navy">
                 CONTACT ENGINEERING TEAM
               </Button>
             </div>
@@ -167,16 +167,16 @@ export default function ProductsHubPage() {
             <Heading as="h2" variant="section" className="mb-6">
               The Honeywell Fluid Power Ecosystem
             </Heading>
-            <p className="text-lg text-[#64748B] font-body">
+            <p className="text-lg text-brand-steelGray font-body">
               Industrial automation requires more than just individual components; it requires a synchronized fluid power ecosystem. At Honeywell Hydraulics, we manufacture every critical node of that ecosystem under one roof, ensuring absolute compatibility, minimal pressure drops, and maximum mechanical efficiency.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-[#F8FAFC] p-6 rounded-sm border border-[#E2E8F0] hover:border-[#E31B23] transition-colors">
+            <div className="bg-brand-surfaceGray p-6 rounded-sm border border-slate-200 hover:border-honeywell-red transition-colors">
                <IconBox icon={<Activity className="w-6 h-6" />} variant="primary" className="mb-4" />
-               <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3">Heart: Power Packs</h3>
-               <p className="text-sm text-[#64748B] font-body">Converting electrical energy into pressurized hydrostatic energy.</p>
+               <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Heart: Power Packs</h3>
+               <p className="text-sm text-brand-steelGray font-body">Converting electrical energy into pressurized hydrostatic energy.</p>
             </div>
           </div>
         </Container>
@@ -189,7 +189,7 @@ export default function ProductsHubPage() {
             <Heading as="h2" variant="section" className="mb-6">
               Product Categories
             </Heading>
-            <p className="text-lg text-[#64748B] font-body">
+            <p className="text-lg text-brand-steelGray font-body">
               We manufacture two core families of industrial hydraulic equipment. Select a category below to explore technical specifications, mounting configurations, and variant options.
             </p>
           </div>
@@ -227,9 +227,9 @@ export default function ProductsHubPage() {
               <div className="flex gap-4">
                 <IconBox icon={<span className="font-bold text-lg">1</span>} variant="secondary" className="shrink-0 rounded-full" />
                 <div>
-                  <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-2">Do you need to generate physical motion or force?</h3>
-                  <p className="text-[#64748B] font-body mb-2">If you need linear push/pull force, you need a <strong>Hydraulic Cylinder</strong>.</p>
-                  <p className="text-sm text-[#334155] font-body bg-[#F1F5F9] p-3 rounded-sm border-l-4 border-[#E31B23]">
+                  <h3 className="text-xl font-display font-bold text-honeywell-navy mb-2">Do you need to generate physical motion or force?</h3>
+                  <p className="text-brand-steelGray font-body mb-2">If you need linear push/pull force, you need a <strong>Hydraulic Cylinder</strong>.</p>
+                  <p className="text-sm text-brand-darkSlate font-body bg-brand-lightSurface p-3 rounded-sm border-l-4 border-honeywell-red">
                     <em>Key consideration:</em> Determine your required tonnage (Force = Pressure × Piston Area) to select the correct bore size.
                   </p>
                 </div>
@@ -238,9 +238,9 @@ export default function ProductsHubPage() {
               <div className="flex gap-4">
                 <IconBox icon={<span className="font-bold text-lg">2</span>} variant="secondary" className="shrink-0 rounded-full" />
                 <div>
-                  <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-2">Do you need to generate pressurized fluid flow?</h3>
-                  <p className="text-[#64748B] font-body mb-2">If you are building a new machine or replacing a failing pump system, you need a <strong>Hydraulic Power Pack</strong>.</p>
-                  <p className="text-sm text-[#334155] font-body bg-[#F1F5F9] p-3 rounded-sm border-l-4 border-[#E31B23]">
+                  <h3 className="text-xl font-display font-bold text-honeywell-navy mb-2">Do you need to generate pressurized fluid flow?</h3>
+                  <p className="text-brand-steelGray font-body mb-2">If you are building a new machine or replacing a failing pump system, you need a <strong>Hydraulic Power Pack</strong>.</p>
+                  <p className="text-sm text-brand-darkSlate font-body bg-brand-lightSurface p-3 rounded-sm border-l-4 border-honeywell-red">
                     <em>Key consideration:</em> Determine your required cycle speed (Flow Rate/LPM) and system pressure (Bar) to size the motor and pump correctly.
                   </p>
                 </div>
@@ -258,21 +258,21 @@ export default function ProductsHubPage() {
               <Heading as="h2" variant="section" className="mb-6">
                 Industries Served
               </Heading>
-              <p className="text-[#64748B] font-body mb-6">
+              <p className="text-brand-steelGray font-body mb-6">
                 Our hydraulic products are engineered to meet the strict regulatory and operational standards of India&apos;s core manufacturing sectors.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#E31B23] shrink-0 mt-0.5" />
-                  <span className="text-[#334155] font-body"><strong>Injection Moulding:</strong> High-speed clamping and ejection cylinders.</span>
+                  <CheckCircle className="w-5 h-5 text-honeywell-red shrink-0 mt-0.5" />
+                  <span className="text-brand-darkSlate font-body"><strong>Injection Moulding:</strong> High-speed clamping and ejection cylinders.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#E31B23] shrink-0 mt-0.5" />
-                  <span className="text-[#334155] font-body"><strong>Automotive OEM:</strong> Highly repeatable hydraulic systems for robotic assembly and welding lines.</span>
+                  <CheckCircle className="w-5 h-5 text-honeywell-red shrink-0 mt-0.5" />
+                  <span className="text-brand-darkSlate font-body"><strong>Automotive OEM:</strong> Highly repeatable hydraulic systems for robotic assembly and welding lines.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#E31B23] shrink-0 mt-0.5" />
-                  <span className="text-[#334155] font-body"><strong>Steel & Metallurgy:</strong> Heat-resistant cylinders for continuous rolling mill operations.</span>
+                  <CheckCircle className="w-5 h-5 text-honeywell-red shrink-0 mt-0.5" />
+                  <span className="text-brand-darkSlate font-body"><strong>Steel & Metallurgy:</strong> Heat-resistant cylinders for continuous rolling mill operations.</span>
                 </li>
               </ul>
             </div>
@@ -289,29 +289,29 @@ export default function ProductsHubPage() {
             <Heading as="h2" variant="section" className="mb-6 text-center">
               Engineering & Manufacturing Capabilities
             </Heading>
-            <p className="text-lg text-[#64748B] font-body text-center mb-12">
+            <p className="text-lg text-brand-steelGray font-body text-center mb-12">
               As an end-to-end hydraulic products manufacturer, we do not outsource our core competencies. By controlling the entire manufacturing lifecycle, we guarantee the structural integrity and performance of every product.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-[#0D1B5C] text-white p-8 rounded-sm shadow-md">
+              <div className="bg-honeywell-navy text-white p-8 rounded-sm shadow-md">
                 <h4 className="text-xl font-display font-bold mb-6 flex items-center gap-3">
-                  <Shield className="w-6 h-6 text-[#E31B23]" />
+                  <Shield className="w-6 h-6 text-honeywell-red" />
                   Facility Technology Stack
                 </h4>
-                <ul className="space-y-4 font-body text-[#CBD5E1]">
+                <ul className="space-y-4 font-body text-brand-borderGray">
                   <li><strong>Design & Simulation:</strong> 3D Modeling for fluid dynamic and stress analysis.</li>
                   <li><strong>Precision Machining:</strong> CNC Turning Centers ensuring h8 tolerances on all piston rods.</li>
                   <li><strong>Validation & Testing:</strong> PLC-driven hydrostatic test benches. Every unit is tested at 1.5x working pressure before dispatch.</li>
                 </ul>
               </div>
 
-              <div className="bg-[#F8FAFC] border border-[#E2E8F0] p-8 rounded-sm">
-                <h4 className="text-xl font-display font-bold text-[#0D1B5C] mb-6 flex items-center gap-3">
-                  <Shield className="w-6 h-6 text-[#E31B23]" />
+              <div className="bg-brand-surfaceGray border border-slate-200 p-8 rounded-sm">
+                <h4 className="text-xl font-display font-bold text-honeywell-navy mb-6 flex items-center gap-3">
+                  <Shield className="w-6 h-6 text-honeywell-red" />
                   The Honeywell Guarantee
                 </h4>
-                <p className="text-[#334155] font-body leading-relaxed mb-4">
+                <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
                   Every hydraulic product we manufacture is backed by our strict Defect Warranty. In the event of an operational anomaly, our emergency engineering team dispatches replacement components or seal kits to minimize your production downtime.
                 </p>
               </div>

@@ -45,7 +45,7 @@ export function ManufacturingFacilitySection() {
 
           {/* ─── Left Column — Facility Image ─── */}
           <div className="relative order-2 lg:order-1">
-            <div className="relative aspect-[4/3] rounded-lg bg-[#F1F5F9] border border-[#E2E8F0] overflow-hidden shadow-elevated">
+            <div className="relative aspect-[4/3] rounded-lg bg-brand-lightSurface border border-slate-200 overflow-hidden shadow-elevated">
               <Image
                 src="/images/facility/honeywell-manufacturing-facility-kathwada.webp"
                 alt="Honeywell Hydraulics manufacturing facility at Kathwada GIDC, Ahmedabad — CNC machining and hydraulic cylinder assembly"
@@ -55,11 +55,11 @@ export function ManufacturingFacilitySection() {
               />
 
               {/* Location label overlay */}
-              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm border border-[#E2E8F0] rounded-sm px-4 py-3">
-                <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#E31B23] font-body mb-0.5">
+              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-sm px-4 py-3">
+                <p className="text-xs font-bold uppercase tracking-[0.12em] text-honeywell-red font-body mb-0.5">
                   Manufacturing Headquarters
                 </p>
-                <p className="text-sm font-display font-bold text-[#0D1B5C]">
+                <p className="text-sm font-display font-bold text-honeywell-navy">
                   Kathwada GIDC, Ahmedabad, Gujarat
                 </p>
               </div>
@@ -67,20 +67,20 @@ export function ManufacturingFacilitySection() {
 
             {/* Decorative accent — engineering precision feel */}
             <div
-              className="hidden lg:block absolute -bottom-4 -left-4 w-24 h-24 border-2 border-[#E2E8F0] rounded-lg -z-10"
+              className="hidden lg:block absolute -bottom-4 -left-4 w-24 h-24 border-2 border-slate-200 rounded-lg -z-10"
               aria-hidden="true"
             />
           </div>
 
           {/* ─── Right Column — Manufacturing Capabilities ─── */}
           <div className="order-1 lg:order-2">
-            <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-[#E31B23] mb-3">
+            <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
               Kathwada GIDC, Ahmedabad
             </p>
             <Heading variant="section" as="h2" id="facility-heading" className="mb-4">
               Our Manufacturing Facility
             </Heading>
-            <p className="text-[#64748B] font-body text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+            <p className="text-brand-steelGray font-body text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
               Every hydraulic cylinder and power pack is engineered and manufactured
               in-house at our Kathwada facility. Factory-direct production ensures
               quality control at every stage — from raw material to final dispatch.
@@ -90,16 +90,16 @@ export function ManufacturingFacilitySection() {
             <div className="space-y-5 mb-8">
               {manufacturingHighlights.map((highlight) => (
                 <div key={highlight.title} className="flex gap-4 items-start group">
-                  <div className="w-10 h-10 rounded-lg bg-[#0D1B5C]/[0.06] flex items-center justify-center shrink-0 group-hover:bg-[#E31B23]/10 transition-colors duration-200">
-                    <span className="text-[#0D1B5C] group-hover:text-[#E31B23] transition-colors duration-200">
+                  <div className="w-10 h-10 rounded-lg bg-honeywell-navy/[0.06] flex items-center justify-center shrink-0 group-hover:bg-honeywell-red/10 transition-colors duration-200">
+                    <span className="text-honeywell-navy group-hover:text-honeywell-red transition-colors duration-200">
                       {iconMap[highlight.iconName] || <Cog className="w-5 h-5" />}
                     </span>
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-[#0D1B5C] text-base mb-0.5">
+                    <h3 className="font-display font-bold text-honeywell-navy text-base mb-0.5">
                       {highlight.title}
                     </h3>
-                    <p className="text-[#64748B] font-body text-sm leading-relaxed">
+                    <p className="text-brand-steelGray font-body text-sm leading-relaxed">
                       {highlight.description}
                     </p>
                   </div>

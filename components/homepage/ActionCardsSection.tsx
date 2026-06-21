@@ -25,21 +25,21 @@ export function ActionCardsSection() {
             <Link 
               key={card.title} 
               href={card.href}
-              className="bg-white border border-[#E2E8F0] rounded-xl p-6 md:p-8 flex flex-col items-center text-center group hover:border-[#0D1B5C] hover:shadow-elevated transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C]"
+              className="bg-white border border-slate-200 rounded-xl p-6 md:p-8 flex flex-col items-center text-center group hover:border-honeywell-navy hover:shadow-elevated transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy"
             >
               <IconBox
                 icon={iconMap[card.iconName] || <ArrowRight className="w-6 h-6" />}
                 size="md"
                 variant="outline"
-                className="mb-4 group-hover:bg-[#0D1B5C] group-hover:text-white group-hover:border-[#0D1B5C] transition-colors duration-300"
+                className="mb-4 group-hover:bg-honeywell-navy group-hover:text-white group-hover:border-honeywell-navy transition-colors duration-300"
               />
-              <h3 className="font-display font-bold text-[#0D1B5C] text-lg mb-2">
+              <h3 className="font-display font-bold text-honeywell-navy text-lg mb-2">
                 {card.title}
               </h3>
-              <p className="text-[#64748B] font-body text-sm leading-relaxed mb-4 flex-grow">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed mb-4 flex-grow">
                 {card.description}
               </p>
-              <div className="text-sm font-bold text-[#E31B23] flex items-center gap-2 group-hover:text-[#0D1B5C] transition-colors mt-auto">
+              <div className="text-sm font-bold text-honeywell-red flex items-center gap-2 group-hover:text-honeywell-navy transition-colors mt-auto">
                 {card.ctaText}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>

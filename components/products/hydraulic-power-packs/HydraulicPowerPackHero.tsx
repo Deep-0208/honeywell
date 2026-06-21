@@ -7,23 +7,23 @@ import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
 
 export function HydraulicPowerPackHero() {
   return (
-    <section className="relative bg-[#F8FAFC] pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden">
+    <section className="relative bg-brand-surfaceGray pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Content */}
           <div className="relative z-10">
             <div className="mb-6">
-              <span className="text-[#E31B23] font-display font-bold tracking-widest text-sm uppercase">
+              <span className="text-honeywell-red font-display font-bold tracking-widest text-sm uppercase">
                 INDUSTRIAL FLUID POWER
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-[#0D1B5C] leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-honeywell-navy leading-tight mb-6">
               Hydraulic Power Pack Manufacturer in Gujarat, India
             </h1>
             
-            <p className="text-lg md:text-xl text-[#64748B] font-body mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg md:text-xl text-brand-steelGray font-body mb-8 max-w-xl leading-relaxed">
               Generating reliable, continuous fluid power for heavy industry. Custom-engineered hydraulic power units delivering precise flow rates and exact operating pressures to drive automated machinery and commercial lifting equipment without fluctuation or heat degradation.
             </p>
 
@@ -38,15 +38,15 @@ export function HydraulicPowerPackHero() {
             </div>
 
             {/* Contact Bar */}
-            <div className="flex flex-wrap items-center gap-6 py-4 border-t border-[#E2E8F0] w-full">
-              <a href="tel:+919924343873" className="flex items-center text-[#0D1B5C] hover:text-[#E31B23] font-medium transition-colors font-body">
-                <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-[#E2E8F0] flex items-center justify-center mr-3">
+            <div className="flex flex-wrap items-center gap-6 py-4 border-t border-slate-200 w-full">
+              <a href="tel:+919924343873" className="flex items-center text-honeywell-navy hover:text-honeywell-red font-medium transition-colors font-body">
+                <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-200 flex items-center justify-center mr-3">
                   <Phone className="w-5 h-5" />
                 </div>
                 +91 99243 43873
               </a>
-              <a href="https://wa.me/919924343873" target="_blank" rel="noopener noreferrer" className="flex items-center text-[#0D1B5C] hover:text-[#25D366] font-medium transition-colors font-body">
-                <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-[#E2E8F0] flex items-center justify-center mr-3">
+              <a href="https://wa.me/919924343873" target="_blank" rel="noopener noreferrer" className="flex items-center text-honeywell-navy hover:text-[#25D366] font-medium transition-colors font-body">
+                <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-200 flex items-center justify-center mr-3">
                   <MessageCircle className="w-5 h-5" />
                 </div>
                 WhatsApp for Quick Quote
@@ -72,9 +72,9 @@ export function HydraulicPowerPackHero() {
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B5C]/80 to-transparent flex flex-col justify-end p-6 md:p-8">
+              <div className="absolute inset-0 bg-gradient-to-t from-honeywell-navy/80 to-transparent flex flex-col justify-end p-6 md:p-8">
                 <div className="flex items-center gap-4 text-white">
-                  <div className="w-1.5 h-12 bg-[#E31B23]"></div>
+                  <div className="w-1.5 h-12 bg-honeywell-red"></div>
                   <div>
                     <div className="text-2xl font-bold font-display">0.5 HP to 150+ HP</div>
                     <div className="text-sm font-body text-gray-200 uppercase tracking-wider">Heavy-Duty Continuous Operation</div>
@@ -88,7 +88,7 @@ export function HydraulicPowerPackHero() {
       </Container>
       
       {/* Decorative background element */}
-      <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] bg-gradient-to-br from-[#E31B23]/5 to-[#0D1B5C]/5 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] bg-gradient-to-br from-honeywell-red/5 to-honeywell-navy/5 rounded-full blur-3xl pointer-events-none -z-10" />
     </section>
   );
 }

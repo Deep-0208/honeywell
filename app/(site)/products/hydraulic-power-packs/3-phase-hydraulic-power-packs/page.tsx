@@ -296,37 +296,37 @@ export default function ThreePhasePowerPacksPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200"
       id="hero"
     >
       <div
-        className="absolute top-0 right-0 w-1/2 h-full bg-[#F8FAFC] skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block"
+        className="absolute top-0 right-0 w-1/2 h-full bg-brand-surfaceGray skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block"
         aria-hidden="true"
       />
 
       <Container>
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-8">
-          <ol className="flex flex-wrap items-center text-sm text-[#64748B] font-body gap-1.5">
+          <ol className="flex flex-wrap items-center text-sm text-brand-steelGray font-body gap-1.5">
             <li>
-              <Link href="/" className="hover:text-[#E31B23] transition-colors">
+              <Link href="/" className="hover:text-honeywell-red transition-colors">
                 Home
               </Link>
             </li>
             <li aria-hidden="true">/</li>
             <li>
-              <Link href="/products/" className="hover:text-[#E31B23] transition-colors">
+              <Link href="/products/" className="hover:text-honeywell-red transition-colors">
                 Products
               </Link>
             </li>
             <li aria-hidden="true">/</li>
             <li>
-              <Link href="/products/hydraulic-power-packs/" className="hover:text-[#E31B23] transition-colors">
+              <Link href="/products/hydraulic-power-packs/" className="hover:text-honeywell-red transition-colors">
                 Hydraulic Power Packs
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="text-[#0D1B5C] font-semibold" aria-current="page">
+            <li className="text-honeywell-navy font-semibold" aria-current="page">
               3 Phase Hydraulic Power Packs
             </li>
           </ol>
@@ -339,11 +339,11 @@ function HeroSection() {
               <Badge variant="custom">CONTINUOUS DUTY FLUID POWER</Badge>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-[#0D1B5C] leading-[1.1] mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               3 Phase Hydraulic Power Pack Manufacturer
             </h1>
 
-            <p className="text-lg text-[#334155] font-body mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed">
               Unyielding, continuous fluid power for automated factories. Honeywell Hydraulics is a premier 3 phase hydraulic power pack manufacturer in Gujarat, engineering heavy-duty, industrial AC power units for manufacturing plants running 24/7. Designed specifically to leverage three-phase grid electricity, our systems provide the absolute thermal stability, electrical efficiency, and mechanical reliability required to power your critical production line machinery without interruption.
             </p>
 
@@ -361,20 +361,20 @@ function HeroSection() {
                 href="#"
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto bg-white hover:bg-[#F8FAFC]"
+                className="w-full sm:w-auto bg-white hover:bg-brand-surfaceGray"
               >
                 SCHEDULE SYSTEM AUDIT <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
 
             {/* Contact Bar */}
-            <div className="flex flex-wrap items-center gap-6 py-4 border-t border-[#E2E8F0] w-full">
+            <div className="flex flex-wrap items-center gap-6 py-4 border-t border-slate-200 w-full">
               <a
                 href="tel:+919924343873"
-                className="flex items-center text-[#0D1B5C] hover:text-[#E31B23] font-medium transition-colors font-body"
+                className="flex items-center text-honeywell-navy hover:text-honeywell-red font-medium transition-colors font-body"
                 aria-label="Call Honeywell Hydraulics"
               >
-                <div className="w-10 h-10 rounded-full bg-[#F1F5F9] flex items-center justify-center mr-3">
+                <div className="w-10 h-10 rounded-full bg-brand-lightSurface flex items-center justify-center mr-3">
                   <Phone className="w-5 h-5" />
                 </div>
                 +91 99243 43873
@@ -383,10 +383,10 @@ function HeroSection() {
                 href="https://wa.me/919924343873"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-[#0D1B5C] hover:text-[#25D366] font-medium transition-colors font-body"
+                className="flex items-center text-honeywell-navy hover:text-[#25D366] font-medium transition-colors font-body"
                 aria-label="WhatsApp Honeywell Hydraulics"
               >
-                <div className="w-10 h-10 rounded-full bg-[#F1F5F9] flex items-center justify-center mr-3">
+                <div className="w-10 h-10 rounded-full bg-brand-lightSurface flex items-center justify-center mr-3">
                   <MessageCircle className="w-5 h-5" />
                 </div>
                 WhatsApp Engineering Team
@@ -408,8 +408,8 @@ function HeroSection() {
           </div>
 
           {/* Image Column */}
-          <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-[#E2E8F0] shadow-sm p-4 overflow-hidden group">
-            <div className="absolute inset-0 bg-[#F8FAFC] opacity-50 rounded-xl" />
+          <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm p-4 overflow-hidden group">
+            <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
             <Image
               src="/images/products/3-phase-hydraulic-power-pack-manufacturer.webp"
               alt="3 Phase Hydraulic Power Pack Manufacturer in Ahmedabad - Continuous duty AC power unit by Honeywell Hydraulics"
@@ -423,38 +423,38 @@ function HeroSection() {
       </Container>
 
       {/* Key Specs Strip */}
-      <div className="absolute bottom-0 left-0 w-full border-t border-[#E2E8F0] bg-white hidden md:block">
+      <div className="absolute bottom-0 left-0 w-full border-t border-slate-200 bg-white hidden md:block">
         <Container>
-          <div className="flex flex-wrap divide-x divide-[#E2E8F0] py-4">
+          <div className="flex flex-wrap divide-x divide-slate-200 py-4">
             <div className="px-6 flex-1 text-center first:pl-0 last:pr-0">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
                 Duty Cycle
               </span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 100% Continuous
               </span>
             </div>
             <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
                 Motor Input
               </span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 3-Phase AC (415V/440V)
               </span>
             </div>
             <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
                 Efficiency
               </span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 IE2 / IE3 / IE4
               </span>
             </div>
             <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-[#64748B] uppercase tracking-wider mb-1">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
                 Applications
               </span>
-              <span className="block text-sm font-mono text-[#0D1B5C] font-semibold">
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 Heavy Automation
               </span>
             </div>
@@ -471,18 +471,18 @@ function ProductOverview() {
     <Section bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-6">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
             What Is A 3 Phase Hydraulic Power Pack?
           </h2>
-          <div className="space-y-5 text-[#334155] font-body text-lg leading-relaxed">
+          <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
             <p>
               In heavy manufacturing and automated production environments, fluid power must be generated constantly and reliably. 
             </p>
             <p>
-              A <strong className="text-[#0D1B5C]">3 Phase Hydraulic Power Pack</strong> is the standard industrial workhorse. Unlike{' '}
+              A <strong className="text-honeywell-navy">3 Phase Hydraulic Power Pack</strong> is the standard industrial workhorse. Unlike{' '}
               <Link
                 href="#"
-                className="text-[#E31B23] font-semibold hover:underline"
+                className="text-honeywell-red font-semibold hover:underline"
               >
                 DC mini power packs
               </Link>{' '}
@@ -527,10 +527,10 @@ function WhyThreePhase() {
     <Section bg="gray" id="why-3-phase">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Why Industrial Plants Prefer 3 Phase Systems
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Plant engineers and automation integrators exclusively specify 3-phase hydraulic power units for continuous-duty manufacturing for several critical physics-based reasons:
           </p>
         </div>
@@ -539,15 +539,15 @@ function WhyThreePhase() {
           {reasons.map((comp, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-[#E2E8F0] p-8 hover:shadow-md transition-shadow duration-300 group"
+              className="bg-white rounded-xl border border-slate-200 p-8 hover:shadow-md transition-shadow duration-300 group"
             >
               <div className="flex items-center gap-4 mb-5">
                 <IconBox icon={comp.icon} variant="primary" size="md" />
               </div>
-              <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3 group-hover:text-[#E31B23] transition-colors">
+              <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {comp.title}
               </h3>
-              <p className="text-[#64748B] font-body text-sm leading-relaxed">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed">
                 {comp.desc}
               </p>
             </div>
@@ -564,60 +564,60 @@ function ComparisonSection() {
     <Section bg="white" id="comparison">
       <Container>
         <div className="max-w-4xl mx-auto mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             3 Phase vs. Single Phase Power Packs
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Understanding when to specify a 3-phase unit versus a standard single-phase unit is critical for plant electrical planning.
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto overflow-x-auto bg-white rounded-xl border border-[#E2E8F0] shadow-sm">
+        <div className="max-w-5xl mx-auto overflow-x-auto bg-white rounded-xl border border-slate-200 shadow-sm">
           <table className="w-full text-left border-collapse min-w-[800px]">
             <thead>
-              <tr className="border-b border-[#E2E8F0] bg-[#0D1B5C] text-white">
+              <tr className="border-b border-slate-200 bg-honeywell-navy text-white">
                 <th className="px-6 py-4 font-display font-bold text-lg w-[20%]">Engineering Feature</th>
                 <th className="px-6 py-4 font-display font-bold text-lg w-[40%] border-l border-white/20">3 Phase Hydraulic Power Packs</th>
                 <th className="px-6 py-4 font-display font-bold text-lg w-[40%] border-l border-white/20">Single Phase Hydraulic Power Packs</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#E2E8F0]">
-              <tr className="hover:bg-[#F8FAFC]/50">
-                <td className="px-6 py-4 font-semibold text-[#334155]">Electrical Input</td>
-                <td className="px-6 py-4 text-[#334155] border-l border-[#E2E8F0]">415V / 440V (Three alternating currents)</td>
-                <td className="px-6 py-4 text-[#334155] border-l border-[#E2E8F0]">220V / 240V (Single alternating current)</td>
+            <tbody className="divide-y divide-slate-200">
+              <tr className="hover:bg-brand-surfaceGray/50">
+                <td className="px-6 py-4 font-semibold text-brand-darkSlate">Electrical Input</td>
+                <td className="px-6 py-4 text-brand-darkSlate border-l border-slate-200">415V / 440V (Three alternating currents)</td>
+                <td className="px-6 py-4 text-brand-darkSlate border-l border-slate-200">220V / 240V (Single alternating current)</td>
               </tr>
-              <tr className="hover:bg-[#F8FAFC]/50 bg-[#F8FAFC]/30">
-                <td className="px-6 py-4 font-semibold text-[#334155]">Duty Cycle</td>
-                <td className="px-6 py-4 text-[#0D1B5C] font-bold border-l border-[#E2E8F0]">Continuous (100% Duty Cycle)</td>
-                <td className="px-6 py-4 text-[#E31B23] border-l border-[#E2E8F0]">Intermittent (Prone to overheating if run constantly)</td>
+              <tr className="hover:bg-brand-surfaceGray/50 bg-brand-surfaceGray/30">
+                <td className="px-6 py-4 font-semibold text-brand-darkSlate">Duty Cycle</td>
+                <td className="px-6 py-4 text-honeywell-navy font-bold border-l border-slate-200">Continuous (100% Duty Cycle)</td>
+                <td className="px-6 py-4 text-honeywell-red border-l border-slate-200">Intermittent (Prone to overheating if run constantly)</td>
               </tr>
-              <tr className="hover:bg-[#F8FAFC]/50">
-                <td className="px-6 py-4 font-semibold text-[#334155]">Horsepower Limits</td>
-                <td className="px-6 py-4 text-[#334155] border-l border-[#E2E8F0]">Virtually unlimited (Fractional up to 200+ HP)</td>
-                <td className="px-6 py-4 text-[#334155] border-l border-[#E2E8F0]">Practically limited to 5 HP (due to extreme amp draw)</td>
+              <tr className="hover:bg-brand-surfaceGray/50">
+                <td className="px-6 py-4 font-semibold text-brand-darkSlate">Horsepower Limits</td>
+                <td className="px-6 py-4 text-brand-darkSlate border-l border-slate-200">Virtually unlimited (Fractional up to 200+ HP)</td>
+                <td className="px-6 py-4 text-brand-darkSlate border-l border-slate-200">Practically limited to 5 HP (due to extreme amp draw)</td>
               </tr>
-              <tr className="hover:bg-[#F8FAFC]/50 bg-[#F8FAFC]/30">
-                <td className="px-6 py-4 font-semibold text-[#334155]">Motor Components</td>
-                <td className="px-6 py-4 text-[#334155] border-l border-[#E2E8F0]">Simple, highly reliable (No capacitors/centrifugal switches)</td>
-                <td className="px-6 py-4 text-[#334155] border-l border-[#E2E8F0]">Complex (Requires start/run capacitors that frequently fail)</td>
+              <tr className="hover:bg-brand-surfaceGray/50 bg-brand-surfaceGray/30">
+                <td className="px-6 py-4 font-semibold text-brand-darkSlate">Motor Components</td>
+                <td className="px-6 py-4 text-brand-darkSlate border-l border-slate-200">Simple, highly reliable (No capacitors/centrifugal switches)</td>
+                <td className="px-6 py-4 text-brand-darkSlate border-l border-slate-200">Complex (Requires start/run capacitors that frequently fail)</td>
               </tr>
-              <tr className="hover:bg-[#F8FAFC]/50">
-                <td className="px-6 py-4 font-semibold text-[#334155]">Operating Torque</td>
-                <td className="px-6 py-4 text-[#0D1B5C] border-l border-[#E2E8F0]">Smooth, continuous torque delivery</td>
-                <td className="px-6 py-4 text-[#334155] border-l border-[#E2E8F0]">Pulsating torque</td>
+              <tr className="hover:bg-brand-surfaceGray/50">
+                <td className="px-6 py-4 font-semibold text-brand-darkSlate">Operating Torque</td>
+                <td className="px-6 py-4 text-honeywell-navy border-l border-slate-200">Smooth, continuous torque delivery</td>
+                <td className="px-6 py-4 text-brand-darkSlate border-l border-slate-200">Pulsating torque</td>
               </tr>
-              <tr className="hover:bg-[#F8FAFC]/50 bg-[#F8FAFC]/30">
-                <td className="px-6 py-4 font-semibold text-[#334155]">Primary Application</td>
-                <td className="px-6 py-4 text-[#0D1B5C] font-bold border-l border-[#E2E8F0]">Factory automation, heavy manufacturing, continuous processing</td>
-                <td className="px-6 py-4 text-[#334155] border-l border-[#E2E8F0]">Home garages, light commercial lifts, remote single-phase grids</td>
+              <tr className="hover:bg-brand-surfaceGray/50 bg-brand-surfaceGray/30">
+                <td className="px-6 py-4 font-semibold text-brand-darkSlate">Primary Application</td>
+                <td className="px-6 py-4 text-honeywell-navy font-bold border-l border-slate-200">Factory automation, heavy manufacturing, continuous processing</td>
+                <td className="px-6 py-4 text-brand-darkSlate border-l border-slate-200">Home garages, light commercial lifts, remote single-phase grids</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <div className="max-w-4xl mx-auto mt-8 bg-[#F1F5F9] p-6 rounded-lg border-l-4 border-[#0D1B5C]">
-          <p className="text-[#334155] font-body italic">
+        <div className="max-w-4xl mx-auto mt-8 bg-brand-lightSurface p-6 rounded-lg border-l-4 border-honeywell-navy">
+          <p className="text-brand-darkSlate font-body italic">
             *If you are operating a small car lift in a residential garage, a single-phase unit is sufficient. If you are operating an automated production line, a CNC machine, or a massive material handling system inside a GIDC, the <strong>3 Phase Hydraulic Power Pack</strong> is the only safe and efficient choice.*
           </p>
         </div>
@@ -633,10 +633,10 @@ function TechnicalSpecifications() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Technical Specifications Framework
             </h2>
-            <p className="text-lg text-[#64748B] font-body mb-8">
+            <p className="text-lg text-brand-steelGray font-body mb-8">
               Our 3-phase industrial power packs are engineered for absolute fluid consistency and thermal stability in continuous manufacturing.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -688,10 +688,10 @@ function IndustriesSection() {
     <Section bg="white" id="industries">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Industries Served
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Our custom AC industrial power units are the central fluid generation engines for continuous-manufacturing sectors:
           </p>
         </div>
@@ -700,16 +700,16 @@ function IndustriesSection() {
           {industries.map((ind, idx) => (
             <div
               key={idx}
-              className="bg-[#F8FAFC] rounded-xl border border-[#E2E8F0] p-6 flex flex-col items-start gap-4 hover:shadow-md transition-shadow duration-300 h-full"
+              className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-6 flex flex-col items-start gap-4 hover:shadow-md transition-shadow duration-300 h-full"
             >
               <div className="mt-1">
                 <IconBox icon={ind.icon} variant="primary" size="sm" />
               </div>
               <div className="flex-grow">
-                <h3 className="text-lg font-bold text-[#0D1B5C] mb-2">{ind.name}</h3>
-                <p className="text-[#64748B] text-sm leading-relaxed mb-4">{ind.desc}</p>
+                <h3 className="text-lg font-bold text-honeywell-navy mb-2">{ind.name}</h3>
+                <p className="text-brand-steelGray text-sm leading-relaxed mb-4">{ind.desc}</p>
               </div>
-              <Link href={ind.link} className="text-[#E31B23] font-semibold text-sm hover:underline mt-auto flex items-center">
+              <Link href={ind.link} className="text-honeywell-red font-semibold text-sm hover:underline mt-auto flex items-center">
                 Learn More <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </div>
@@ -726,44 +726,44 @@ function EngineeringConsiderations() {
     <Section bg="gray" id="engineering-considerations">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-6">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
             Engineering Considerations (Specifying AC Systems)
           </h2>
-          <p className="text-[#334155] font-body text-lg mb-8">
+          <p className="text-brand-darkSlate font-body text-lg mb-8">
             Our{' '}
-            <Link href="#" className="text-[#E31B23] font-semibold hover:underline">
+            <Link href="#" className="text-honeywell-red font-semibold hover:underline">
               Custom Hydraulic System Design
             </Link>{' '}
             team analyzes your factory's electrical grid and machine duty cycle before engineering an industrial power pack.
           </p>
 
           <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg border border-[#E2E8F0] shadow-sm">
-              <h3 className="text-xl font-bold text-[#0D1B5C] mb-3 flex items-center">
-                <Zap className="w-5 h-5 mr-3 text-[#E31B23]" />
+            <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+              <h3 className="text-xl font-bold text-honeywell-navy mb-3 flex items-center">
+                <Zap className="w-5 h-5 mr-3 text-honeywell-red" />
                 A. Motor Selection & Efficiency Ratings
               </h3>
-              <p className="text-[#64748B] font-body leading-relaxed">
+              <p className="text-brand-steelGray font-body leading-relaxed">
                 We specify highly efficient IE2, IE3, or IE4 rated 3-phase induction motors. By accurately calculating the exact fluid volume (LPM) and system pressure (Bar) required by your machine, we select the smallest possible motor horsepower that can handle the peak load, drastically lowering your factory's reactive power consumption.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg border border-[#E2E8F0] shadow-sm">
-              <h3 className="text-xl font-bold text-[#0D1B5C] mb-3 flex items-center">
-                <Thermometer className="w-5 h-5 mr-3 text-[#E31B23]" />
+            <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+              <h3 className="text-xl font-bold text-honeywell-navy mb-3 flex items-center">
+                <Thermometer className="w-5 h-5 mr-3 text-honeywell-red" />
                 B. Duty Cycles & Heat Management
               </h3>
-              <p className="text-[#64748B] font-body leading-relaxed">
+              <p className="text-brand-steelGray font-body leading-relaxed">
                 Even with an efficient 3-phase motor, pushing oil through a circuit 24 hours a day generates fluid heat. We engineer massive fabricated steel reservoirs to act as massive heat sinks, allowing the fluid to cool naturally and aerate properly. For high-cycle automated machinery, we integrate automated shell-and-tube water coolers or thermostatically controlled air-blast heat exchangers to maintain the oil at an optimal 45°C.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg border border-[#E2E8F0] shadow-sm">
-              <h3 className="text-xl font-bold text-[#0D1B5C] mb-3 flex items-center">
-                <ShieldAlert className="w-5 h-5 mr-3 text-[#E31B23]" />
+            <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+              <h3 className="text-xl font-bold text-honeywell-navy mb-3 flex items-center">
+                <ShieldAlert className="w-5 h-5 mr-3 text-honeywell-red" />
                 C. Reliability Planning & Filtration
               </h3>
-              <p className="text-[#64748B] font-body leading-relaxed">
+              <p className="text-brand-steelGray font-body leading-relaxed">
                 In continuous-duty operations, fluid contamination causes catastrophic downtime. We equip our 3-phase power packs with oversized, 10-micron absolute return line filters, offline kidney-loop filtration systems, and electronic clogging indicators that alert your PLC <em>before</em> dirt destroys the hydraulic pump.
               </p>
             </div>
@@ -781,52 +781,52 @@ function ManufacturingProcess() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-6">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
               Manufacturing & Testing Process
             </h2>
-            <p className="text-[#334155] font-body text-lg mb-8 leading-relaxed">
+            <p className="text-brand-darkSlate font-body text-lg mb-8 leading-relaxed">
               Every 3-phase power unit is built in-house and validated rigorously for thermal and pressure stability.
             </p>
 
             <ul className="space-y-6">
               <li className="flex items-start">
                 <div className="flex-shrink-0 mt-1">
-                  <Cog className="w-6 h-6 text-[#E31B23]" />
+                  <Cog className="w-6 h-6 text-honeywell-red" />
                 </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-bold text-[#0D1B5C]">Laser Motor Alignment</h4>
-                  <p className="text-[#64748B] font-body mt-1">
+                  <h4 className="text-lg font-bold text-honeywell-navy">Laser Motor Alignment</h4>
+                  <p className="text-brand-steelGray font-body mt-1">
                     The 3-phase electric motor and hydraulic pump are mounted on a precision-machined bell housing and coupled using laser alignment. This guarantees absolute concentricity, eliminating vibration and preventing pump shaft seal failures.
                   </p>
                 </div>
               </li>
               <li className="flex items-start">
                 <div className="flex-shrink-0 mt-1">
-                  <Hammer className="w-6 h-6 text-[#E31B23]" />
+                  <Hammer className="w-6 h-6 text-honeywell-red" />
                 </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-bold text-[#0D1B5C]">Custom Reservoir Fabrication</h4>
-                  <p className="text-[#64748B] font-body mt-1">
+                  <h4 className="text-lg font-bold text-honeywell-navy">Custom Reservoir Fabrication</h4>
+                  <p className="text-brand-steelGray font-body mt-1">
                     We laser-cut and seam-weld custom steel reservoirs in-house, integrating internal baffle plates to prevent oil foaming and ensure complete fluid de-aeration during continuous pumping.
                   </p>
                 </div>
               </li>
               <li className="flex items-start">
                 <div className="flex-shrink-0 mt-1">
-                  <Activity className="w-6 h-6 text-[#E31B23]" />
+                  <Activity className="w-6 h-6 text-honeywell-red" />
                 </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-bold text-[#0D1B5C]">Continuous Run Validation</h4>
-                  <p className="text-[#64748B] font-body mt-1">
+                  <h4 className="text-lg font-bold text-honeywell-navy">Continuous Run Validation</h4>
+                  <p className="text-brand-steelGray font-body mt-1">
                     100% of our industrial power packs undergo rigorous 24-hour continuous-run testing on our dynamometer rigs. We monitor motor amperage draw, fluid temperature rise, and pressure stability before authorizing shipment.
                   </p>
                 </div>
               </li>
             </ul>
             
-            <div className="mt-8 bg-[#F8FAFC] p-4 rounded-lg border border-[#E2E8F0]">
-              <p className="text-sm text-[#0D1B5C] font-semibold flex items-center">
-                <ShieldAlert className="w-4 h-4 mr-2 text-[#E31B23]" />
+            <div className="mt-8 bg-brand-surfaceGray p-4 rounded-lg border border-slate-200">
+              <p className="text-sm text-honeywell-navy font-semibold flex items-center">
+                <ShieldAlert className="w-4 h-4 mr-2 text-honeywell-red" />
                 Backed by a strict [WARRANTY_MONTHS]-Month Defect Warranty.
               </p>
             </div>
@@ -839,7 +839,7 @@ function ManufacturingProcess() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B5C]/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-honeywell-navy/80 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
               <Badge variant="custom" className="mb-3">QA LAB</Badge>
               <h3 className="text-white text-xl font-bold">24-Hour Dynamometer Testing</h3>
@@ -856,43 +856,43 @@ function ProjectSpotlight() {
   return (
     <Section bg="gray" id="project-spotlight">
       <Container>
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-[#E2E8F0]">
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
               <Badge variant="custom" className="w-fit mb-6">PROJECT SPOTLIGHT</Badge>
-              <h2 className="text-3xl font-display font-bold text-[#0D1B5C] mb-6">
+              <h2 className="text-3xl font-display font-bold text-honeywell-navy mb-6">
                 Continuous-Duty 3-Phase Power Pack for an Automated Textile Calendering Machine
               </h2>
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-[#E31B23] font-bold mb-2 uppercase text-sm tracking-wider">The Challenge</h4>
-                  <p className="text-[#64748B] font-body leading-relaxed">
+                  <h4 className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Challenge</h4>
+                  <p className="text-brand-steelGray font-body leading-relaxed">
                     The client's automated calendering machine in Surat was operating on an under-sized, single-phase power unit. Running 24 hours a day to meet export demands, the single-phase motor constantly overheated and tripped thermal breakers. The pulsating pressure also caused microscopic variations in textile fabric tension.
                   </p>
                 </div>
                 
                 <div>
-                  <h4 className="text-[#E31B23] font-bold mb-2 uppercase text-sm tracking-wider">The Solution</h4>
-                  <p className="text-[#64748B] font-body leading-relaxed">
+                  <h4 className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Solution</h4>
+                  <p className="text-brand-steelGray font-body leading-relaxed">
                     Honeywell redesigned the fluid generation system entirely, manufacturing a custom 3-Phase Hydraulic Power Pack utilizing a premium-efficiency IE3 motor and a variable displacement vane pump. We integrated a massive 200-liter baffled reservoir with a dedicated offline cooling circuit.
                   </p>
                 </div>
                 
                 <div>
-                  <h4 className="text-[#E31B23] font-bold mb-2 uppercase text-sm tracking-wider">The Outcome</h4>
-                  <p className="text-[#0D1B5C] font-body font-semibold leading-relaxed">
+                  <h4 className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Outcome</h4>
+                  <p className="text-honeywell-navy font-body font-semibold leading-relaxed">
                     The 3-phase motor delivered flawlessly smooth torque, completely stabilizing hydraulic pressure and eliminating fabric tensioning issues. The new power pack has run continuously for 14 months without a single thermal shutdown, saving the plant over ₹45,000 in monthly electricity costs.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="relative min-h-[300px] bg-[#0D1B5C] flex flex-col items-center justify-center p-12 text-center text-white">
+            <div className="relative min-h-[300px] bg-honeywell-navy flex flex-col items-center justify-center p-12 text-center text-white">
                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
-               <Activity className="w-16 h-16 text-[#E31B23] mb-6 relative z-10" />
+               <Activity className="w-16 h-16 text-honeywell-red mb-6 relative z-10" />
                <div className="text-5xl font-bold mb-2 relative z-10">₹45,000</div>
                <div className="text-xl font-medium text-white/80 relative z-10">Monthly Energy Savings</div>
-               <div className="w-16 h-1 bg-[#E31B23] mx-auto my-6 relative z-10"></div>
+               <div className="w-16 h-1 bg-honeywell-red mx-auto my-6 relative z-10"></div>
                <div className="text-5xl font-bold mb-2 relative z-10">100%</div>
                <div className="text-xl font-medium text-white/80 relative z-10">Duty Cycle Uptime</div>
             </div>
@@ -910,25 +910,25 @@ function RelatedProducts() {
       title: 'Hydraulic Power Packs Hub',
       desc: 'Explore our master category of power packs.',
       link: '/products/hydraulic-power-packs/',
-      icon: <Zap className="w-6 h-6 text-[#E31B23]" />
+      icon: <Zap className="w-6 h-6 text-honeywell-red" />
     },
     {
       title: 'High-Low Logic Power Packs',
       desc: 'Specialized power units for press machinery.',
       link: '#',
-      icon: <Activity className="w-6 h-6 text-[#E31B23]" />
+      icon: <Activity className="w-6 h-6 text-honeywell-red" />
     },
     {
       title: 'Hydraulic Cylinders Hub',
       desc: 'Explore our master category of hydraulic cylinders.',
       link: '/products/hydraulic-cylinders/',
-      icon: <Box className="w-6 h-6 text-[#E31B23]" />
+      icon: <Box className="w-6 h-6 text-honeywell-red" />
     },
     {
       title: 'Complete Hydraulic Systems',
       desc: 'Turnkey automated systems with PLC integration.',
       link: '#',
-      icon: <Settings className="w-6 h-6 text-[#E31B23]" />
+      icon: <Settings className="w-6 h-6 text-honeywell-red" />
     }
   ];
 
@@ -936,10 +936,10 @@ function RelatedProducts() {
     <Section bg="white" id="related-products">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Related Products
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             A continuous-duty 3-phase power pack provides the heartbeat of your factory. Connect it to our extreme-duty industrial components:
           </p>
         </div>
@@ -947,17 +947,17 @@ function RelatedProducts() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product, idx) => (
             <Link key={idx} href={product.link} className="group block h-full">
-              <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-6 h-full transition-all duration-300 hover:shadow-lg hover:border-[#0D1B5C]/30 flex flex-col">
-                <div className="w-12 h-12 bg-white rounded-lg border border-[#E2E8F0] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <div className="bg-brand-surfaceGray border border-slate-200 rounded-xl p-6 h-full transition-all duration-300 hover:shadow-lg hover:border-honeywell-navy/30 flex flex-col">
+                <div className="w-12 h-12 bg-white rounded-lg border border-slate-200 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   {product.icon}
                 </div>
-                <h3 className="text-lg font-bold text-[#0D1B5C] mb-2 group-hover:text-[#E31B23] transition-colors">
+                <h3 className="text-lg font-bold text-honeywell-navy mb-2 group-hover:text-honeywell-red transition-colors">
                   {product.title}
                 </h3>
-                <p className="text-[#64748B] text-sm leading-relaxed mb-4 flex-grow">
+                <p className="text-brand-steelGray text-sm leading-relaxed mb-4 flex-grow">
                   {product.desc}
                 </p>
-                <div className="flex items-center text-[#E31B23] font-semibold text-sm mt-auto">
+                <div className="flex items-center text-honeywell-red font-semibold text-sm mt-auto">
                   View Category <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -976,19 +976,19 @@ function RelatedServices() {
       title: 'Custom Hydraulic System Design',
       desc: 'We design the entire factory circuit, calculating the exact motor horsepower and cooling tonnage required for continuous operation.',
       link: '#',
-      icon: <FileCheck className="w-6 h-6 text-[#0D1B5C]" />
+      icon: <FileCheck className="w-6 h-6 text-honeywell-navy" />
     },
     {
       title: 'OEM Hydraulic Manufacturing',
       desc: 'High-volume, repeatable production of standard 3-phase power units specifically for CNC and SPM machine builders.',
       link: '#',
-      icon: <Settings className="w-6 h-6 text-[#0D1B5C]" />
+      icon: <Settings className="w-6 h-6 text-honeywell-navy" />
     },
     {
       title: 'Hydraulic Consulting',
       desc: 'Hire our systems architects to audit your factory\'s electrical efficiency and recommend power unit upgrades to lower your grid consumption.',
       link: '#',
-      icon: <MessageCircle className="w-6 h-6 text-[#0D1B5C]" />
+      icon: <MessageCircle className="w-6 h-6 text-honeywell-navy" />
     }
   ];
 
@@ -996,25 +996,25 @@ function RelatedServices() {
     <Section bg="gray" id="related-services">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Related Services
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Purchasing an industrial AC power unit is an investment in factory uptime. Leverage our heavy engineering services:
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, idx) => (
-            <div key={idx} className="bg-white rounded-xl p-8 border border-[#E2E8F0] shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-[#F1F5F9] rounded-lg flex items-center justify-center mb-6">
+            <div key={idx} className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 bg-brand-lightSurface rounded-lg flex items-center justify-center mb-6">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold text-[#0D1B5C] mb-3">{service.title}</h3>
-              <p className="text-[#64748B] font-body leading-relaxed mb-6">
+              <h3 className="text-xl font-bold text-honeywell-navy mb-3">{service.title}</h3>
+              <p className="text-brand-steelGray font-body leading-relaxed mb-6">
                 {service.desc}
               </p>
-              <Link href={service.link} className="inline-flex items-center text-[#E31B23] font-bold hover:underline">
+              <Link href={service.link} className="inline-flex items-center text-honeywell-red font-bold hover:underline">
                 Explore Service <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
@@ -1033,10 +1033,10 @@ function LocalServiceAreas() {
     <Section bg="white" id="local-service-areas">
       <Container>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-display font-bold text-[#0D1B5C] mb-6">
+          <h2 className="text-3xl font-display font-bold text-honeywell-navy mb-6">
             Local Service Areas in Gujarat
           </h2>
-          <p className="text-[#64748B] font-body text-lg mb-10">
+          <p className="text-brand-steelGray font-body text-lg mb-10">
             As a premier industrial hydraulic power pack manufacturer in Gujarat, we provide direct energy-efficiency consulting and heavy-freight delivery to automated factories and GIDCs across the state.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -1044,7 +1044,7 @@ function LocalServiceAreas() {
               <Link 
                 key={idx} 
                 href={`/locations/${city.toLowerCase()}/`}
-                className="bg-[#F8FAFC] border border-[#E2E8F0] text-[#0D1B5C] px-6 py-3 rounded-full font-semibold hover:bg-[#0D1B5C] hover:text-white hover:border-[#0D1B5C] transition-colors"
+                className="bg-brand-surfaceGray border border-slate-200 text-honeywell-navy px-6 py-3 rounded-full font-semibold hover:bg-honeywell-navy hover:text-white hover:border-honeywell-navy transition-colors"
               >
                 3 Phase Power Packs in {city}
               </Link>
@@ -1061,7 +1061,7 @@ function ResourcesSection() {
   return (
     <Section bg="gray" id="resources">
       <Container>
-        <div className="bg-[#0D1B5C] rounded-2xl p-8 md:p-12 text-center text-white">
+        <div className="bg-honeywell-navy rounded-2xl p-8 md:p-12 text-center text-white">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
             Technical Resources
           </h2>
@@ -1071,17 +1071,17 @@ function ResourcesSection() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <Link href="#" className="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-colors flex flex-col items-center text-center group">
-              <Settings className="w-8 h-8 text-[#E31B23] mb-4 group-hover:scale-110 transition-transform" />
+              <Settings className="w-8 h-8 text-honeywell-red mb-4 group-hover:scale-110 transition-transform" />
               <h3 className="font-bold text-lg mb-2">Motor Amp Calculators</h3>
               <p className="text-white/70 text-sm">Calculate required 3-phase motor HP and full-load amperage.</p>
             </Link>
             <Link href="#" className="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-colors flex flex-col items-center text-center group">
-              <Box className="w-8 h-8 text-[#E31B23] mb-4 group-hover:scale-110 transition-transform" />
+              <Box className="w-8 h-8 text-honeywell-red mb-4 group-hover:scale-110 transition-transform" />
               <h3 className="font-bold text-lg mb-2">3D CAD Models</h3>
               <p className="text-white/70 text-sm">Access STEP/IGES files for plant integration.</p>
             </Link>
             <Link href="#" className="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-colors flex flex-col items-center text-center group">
-              <Thermometer className="w-8 h-8 text-[#E31B23] mb-4 group-hover:scale-110 transition-transform" />
+              <Thermometer className="w-8 h-8 text-honeywell-red mb-4 group-hover:scale-110 transition-transform" />
               <h3 className="font-bold text-lg mb-2">Thermal Management</h3>
               <p className="text-white/70 text-sm">Guide to sizing heat exchangers for 100% duty cycles.</p>
             </Link>
@@ -1098,10 +1098,10 @@ function FAQSection() {
     <Section bg="white" id="faq">
       <Container>
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-[#64748B] font-body">
+          <p className="text-lg text-brand-steelGray font-body">
             Technical answers from our AC systems engineering team.
           </p>
         </div>

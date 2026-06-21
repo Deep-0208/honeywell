@@ -22,10 +22,10 @@ export function PowerPackTechnicalSpecs() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           <div className="lg:col-span-5">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-6">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
               Technical Specifications
             </h2>
-            <p className="text-lg text-[#334155] font-body mb-6">
+            <p className="text-lg text-brand-darkSlate font-body mb-6">
               While custom engineering is our specialty, our power packs generally fall within high-performance parameters to meet the exact demands of your industry. Our engineering team designs the reservoir dimensions, motor horsepower, pump displacement, and valve logic specifically to match your machine&apos;s unique cycle profile.
             </p>
             

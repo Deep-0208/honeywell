@@ -31,21 +31,21 @@ export function CylinderFAQs() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           <div className="lg:col-span-4">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#0D1B5C] mb-4">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-[#64748B] font-body mb-6">
+            <p className="text-lg text-brand-steelGray font-body mb-6">
               Find answers to common questions about our custom hydraulic cylinder manufacturing process and capabilities.
             </p>
-            <div className="bg-[#F8FAFC] p-6 rounded-xl border border-[#E2E8F0]">
-              <h3 className="font-bold text-[#0D1B5C] mb-2 font-display">Still have questions?</h3>
-              <p className="text-sm text-[#64748B] mb-4">
+            <div className="bg-brand-surfaceGray p-6 rounded-xl border border-slate-200">
+              <h3 className="font-bold text-honeywell-navy mb-2 font-display">Still have questions?</h3>
+              <p className="text-sm text-brand-steelGray mb-4">
                 Our engineering team is ready to discuss your specific hydraulic requirements.
               </p>
-              <a href="tel:+919924343873" className="block text-[#E31B23] font-bold hover:underline mb-2">
+              <a href="tel:+919924343873" className="block text-honeywell-red font-bold hover:underline mb-2">
                 📞 +91 99243 43873
               </a>
-              <a href="mailto:sales@honeywellhydraulics.com" className="block text-[#0D1B5C] font-bold hover:underline">
+              <a href="mailto:sales@honeywellhydraulics.com" className="block text-honeywell-navy font-bold hover:underline">
                 ✉️ sales@honeywellhydraulics.com
               </a>
             </div>

@@ -11,7 +11,6 @@ export interface ContactFormPayload {
   company: string;
   phone: string;
   email: string;
-  department: string;
   message: string;
 }
 
@@ -22,7 +21,6 @@ const INITIAL: ContactFormPayload = {
   company: '',
   phone: '',
   email: '',
-  department: '',
   message: '',
 };
 
@@ -32,9 +30,9 @@ type Errors = Partial<Record<keyof ContactFormPayload, string>>;
 // Styles
 // ─────────────────────────────────────────────────────────────────────────────
 const fieldBase =
-  'w-full bg-white border border-[#CBD5E1] rounded-sm px-4 py-3 text-sm font-body text-[#0D1B5C] placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#E31B23] focus:border-[#E31B23] transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed';
+  'w-full bg-white border border-brand-borderGray rounded-sm px-4 py-3 text-sm font-body text-honeywell-navy placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-honeywell-red focus:border-honeywell-red transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed';
 
-const labelBase = 'block text-sm font-semibold font-body text-[#0D1B5C] mb-1.5';
+const labelBase = 'block text-sm font-semibold font-body text-honeywell-navy mb-1.5';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Validation
@@ -111,15 +109,15 @@ export function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="flex flex-col items-center justify-center text-center py-14 px-6 bg-white rounded-sm border border-[#E2E8F0] shadow-sm">
+      <div className="flex flex-col items-center justify-center text-center py-14 px-6 bg-white rounded-sm border border-slate-200 shadow-sm">
         <CheckCircle className="w-14 h-14 text-green-500 mb-5" aria-hidden="true" />
-        <h2 className="text-2xl font-display font-bold text-[#0D1B5C] mb-3">Message Sent</h2>
-        <p className="text-[#64748B] font-body max-w-sm mb-6">
+        <h2 className="text-2xl font-display font-bold text-honeywell-navy mb-3">Message Sent</h2>
+        <p className="text-brand-steelGray font-body max-w-sm mb-6">
           Thank you. We have received your inquiry and will respond as soon as possible.
         </p>
         <button
           onClick={() => setStatus('idle')}
-          className="text-sm text-[#64748B] font-body underline underline-offset-4 hover:text-[#0D1B5C]"
+          className="text-sm text-brand-steelGray font-body underline underline-offset-4 hover:text-honeywell-navy"
         >
           Send another message
         </button>
@@ -145,7 +143,7 @@ export function ContactForm() {
         {/* Full Name */}
         <div>
           <label htmlFor="fullName" className={labelBase}>
-            Full Name <span className="text-[#E31B23]" aria-hidden="true">*</span>
+            Full Name <span className="text-honeywell-red" aria-hidden="true">*</span>
           </label>
           <input
             id="fullName"
@@ -161,7 +159,7 @@ export function ContactForm() {
             disabled={status === 'submitting'}
           />
           {errors.fullName && (
-            <p role="alert" className="mt-1 text-xs text-[#E31B23] font-body flex items-center gap-1">
+            <p role="alert" className="mt-1 text-xs text-honeywell-red font-body flex items-center gap-1">
               <AlertCircle className="w-3 h-3" />{errors.fullName}
             </p>
           )}
@@ -186,7 +184,7 @@ export function ContactForm() {
         {/* Phone */}
         <div>
           <label htmlFor="contactPhone" className={labelBase}>
-            Phone / WhatsApp <span className="text-[#E31B23]" aria-hidden="true">*</span>
+            Phone / WhatsApp <span className="text-honeywell-red" aria-hidden="true">*</span>
           </label>
           <input
             id="contactPhone"
@@ -202,7 +200,7 @@ export function ContactForm() {
             disabled={status === 'submitting'}
           />
           {errors.phone && (
-            <p role="alert" className="mt-1 text-xs text-[#E31B23] font-body flex items-center gap-1">
+            <p role="alert" className="mt-1 text-xs text-honeywell-red font-body flex items-center gap-1">
               <AlertCircle className="w-3 h-3" />{errors.phone}
             </p>
           )}
@@ -211,7 +209,7 @@ export function ContactForm() {
         {/* Email */}
         <div>
           <label htmlFor="contactEmail" className={labelBase}>
-            Email Address <span className="text-[#E31B23]" aria-hidden="true">*</span>
+            Email Address <span className="text-honeywell-red" aria-hidden="true">*</span>
           </label>
           <input
             id="contactEmail"
@@ -227,35 +225,19 @@ export function ContactForm() {
             disabled={status === 'submitting'}
           />
           {errors.email && (
-            <p role="alert" className="mt-1 text-xs text-[#E31B23] font-body flex items-center gap-1">
+            <p role="alert" className="mt-1 text-xs text-honeywell-red font-body flex items-center gap-1">
               <AlertCircle className="w-3 h-3" />{errors.email}
             </p>
           )}
         </div>
       </div>
 
-      {/* Department */}
-      <div>
-        <label htmlFor="contactDepartment" className={labelBase}>Department</label>
-        <select
-          id="contactDepartment"
-          name="department"
-          value={form.department}
-          onChange={(e) => update('department', e.target.value)}
-          className={fieldBase}
-          disabled={status === 'submitting'}
-        >
-          <option value="" disabled>Select department…</option>
-          <option value="general-sales">General Sales</option>
-          <option value="engineering-support">Engineering Support</option>
-          <option value="maintenance-repair">Maintenance &amp; Repair</option>
-        </select>
-      </div>
+
 
       {/* Message */}
       <div>
         <label htmlFor="contactMessage" className={labelBase}>
-          Message <span className="text-[#E31B23]" aria-hidden="true">*</span>
+          Message <span className="text-honeywell-red" aria-hidden="true">*</span>
         </label>
         <textarea
           id="contactMessage"
@@ -270,7 +252,7 @@ export function ContactForm() {
           disabled={status === 'submitting'}
         />
         {errors.message && (
-          <p role="alert" className="mt-1 text-xs text-[#E31B23] font-body flex items-center gap-1">
+          <p role="alert" className="mt-1 text-xs text-honeywell-red font-body flex items-center gap-1">
             <AlertCircle className="w-3 h-3" />{errors.message}
           </p>
         )}
@@ -279,7 +261,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full inline-flex items-center justify-center gap-3 bg-[#E31B23] hover:bg-[#C41220] disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold font-body text-base px-6 py-4 rounded-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E31B23] focus-visible:ring-offset-2"
+        className="w-full inline-flex items-center justify-center gap-3 bg-honeywell-red hover:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold font-body text-base px-6 py-4 rounded-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2"
         aria-busy={status === 'submitting'}
       >
         {status === 'submitting' ? (

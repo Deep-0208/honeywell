@@ -22,10 +22,10 @@ export function ClientLogosSection() {
         
         {/* Layer 1 — Trust Headline */}
         <div className="text-center max-w-[700px] mx-auto">
-          <Heading variant="section" as="h2" id="trust-heading" className="text-3xl sm:text-4xl text-[#0D1B5C] mb-4">
+          <Heading variant="section" as="h2" id="trust-heading" className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
             Trusted by Manufacturers Across India
           </Heading>
-          <p className="text-[#64748B] font-body text-base md:text-lg">
+          <p className="text-brand-steelGray font-body text-base md:text-lg">
             Supporting OEMs, process industries, infrastructure projects, and industrial automation companies with reliable hydraulic solutions.
           </p>
         </div>
@@ -37,10 +37,10 @@ export function ClientLogosSection() {
         >
           {trustMetrics.map((metric) => (
             <div key={metric.label} className="flex flex-col items-center justify-center text-center p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
-              <div className="font-display text-[32px] sm:text-[40px] leading-tight font-bold text-[#0D1B5C] mb-1">
+              <div className="font-display text-[32px] sm:text-[40px] leading-tight font-bold text-honeywell-navy mb-1">
                 {metric.value}
               </div>
-              <p className="text-[11px] sm:text-[12px] text-[#E31B23] font-display font-bold uppercase tracking-[0.1em]">
+              <p className="text-[11px] sm:text-[12px] text-honeywell-red font-display font-bold uppercase tracking-[0.1em]">
                 {metric.label}
               </p>
             </div>
@@ -62,7 +62,7 @@ export function ClientLogosSection() {
                     src={client.imageSrc}
                     alt="" /* Decorative in marquee context */
                     fill
-                    className="object-contain p-4"
+                    className="object-contain p-4 transition-all duration-300"
                     sizes="(max-width: 768px) 160px, 200px"
                     quality={100}
                     aria-hidden="true"
@@ -84,7 +84,7 @@ export function ClientLogosSection() {
                     src={client.imageSrc}
                     alt="" 
                     fill
-                    className="object-contain p-4"
+                    className="object-contain p-4 transition-all duration-300"
                     sizes="(max-width: 768px) 160px, 200px"
                     quality={100}
                     aria-hidden="true"

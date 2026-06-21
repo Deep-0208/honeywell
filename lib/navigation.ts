@@ -57,12 +57,17 @@ export function getDynamicNavigation(): SiteNavigation {
 
   // Map products
   const productNav = nav.mainNav.find((n) => n.label === 'Products');
+  const originalProductNav = siteNavigation.mainNav.find((n) => n.label === 'Products');
   if (productNav && productNav.megaMenu && products.length > 0) {
-    productNav.megaMenu.columns[0].links = products.map((p) => ({
-      label: p.frontmatter.title,
-      href: `/products/${p.slug}`,
-      description: p.frontmatter.description,
-    }));
+    productNav.megaMenu.columns[0].links = products.map((p) => {
+      const originalLink = originalProductNav?.megaMenu?.columns[0].links.find(l => l.href.includes(p.slug));
+      return {
+        label: p.frontmatter.title,
+        href: `/products/${p.slug}/`,
+        description: p.frontmatter.description,
+        subcategories: originalLink?.subcategories,
+      };
+    });
   }
 
   // Map industries

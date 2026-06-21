@@ -99,23 +99,23 @@ export default function Footer() {
       <WhatsAppFloatingCTA href={NAP.whatsapp} />
 
       <footer
-        className="bg-[#F8FAFC] border-t border-[#E2E8F0]"
+        className="bg-brand-surfaceGray border-t border-slate-200"
         role="contentinfo"
         aria-label="Site footer"
       >
         {/* ═══════════════════════════════════════
             TRUST STRIP
             ═══════════════════════════════════════ */}
-        <div className="border-b border-[#E2E8F0] bg-white">
+        <div className="border-b border-slate-200 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
               {trustBadges.map((badge) => (
                 <div key={badge}>
                   <span
-                    className="flex items-center gap-2 text-xs font-semibold text-[#0D1B5C] uppercase tracking-wider font-body"
+                    className="flex items-center gap-2 text-xs font-semibold text-honeywell-navy uppercase tracking-wider font-body"
                   >
                     <span
-                      className="w-1.5 h-1.5 rounded-full bg-[#E31B23] shrink-0"
+                      className="w-1.5 h-1.5 rounded-full bg-honeywell-red shrink-0"
                       aria-hidden="true"
                     />
                     {badge}
@@ -136,7 +136,7 @@ export default function Footer() {
             <div className="lg:col-span-2">
               <Link
                 href="/"
-                className="inline-block mb-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C] focus-visible:rounded-sm"
+                className="inline-block mb-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:rounded-sm"
                 aria-label="Honeywell Hydraulics — Home"
               >
                 <Image
@@ -148,7 +148,7 @@ export default function Footer() {
                 />
               </Link>
 
-              <p className="text-sm text-[#64748B] font-body leading-relaxed mb-6 max-w-xs">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed mb-6 max-w-xs">
                 Precision hydraulic cylinder and power pack manufacturer in Ahmedabad, Gujarat.
                 Custom-engineered solutions for 25+ industries across India.
               </p>
@@ -157,28 +157,28 @@ export default function Footer() {
               <address className="not-italic space-y-3" itemScope itemType="https://schema.org/PostalAddress">
                 <a
                   href={`tel:${NAP.phone}`}
-                  className="flex items-center gap-3 text-sm text-[#334155] hover:text-[#E31B23] transition-colors font-body group"
+                  className="flex items-center gap-3 text-sm text-brand-darkSlate hover:text-honeywell-red transition-colors font-body group"
                   aria-label={`Call us at ${NAP.phoneDisplay}`}
                 >
-                  <span className="w-8 h-8 rounded-full bg-[#0D1B5C]/8 flex items-center justify-center shrink-0 group-hover:bg-[#E31B23]/10 transition-colors">
-                    <Phone className="w-4 h-4 text-[#0D1B5C] group-hover:text-[#E31B23] transition-colors" aria-hidden="true" />
+                  <span className="w-8 h-8 rounded-full bg-honeywell-navy/8 flex items-center justify-center shrink-0 group-hover:bg-honeywell-red/10 transition-colors">
+                    <Phone className="w-4 h-4 text-honeywell-navy group-hover:text-honeywell-red transition-colors" aria-hidden="true" />
                   </span>
                   <span className="font-mono text-[13px] tracking-wide">{NAP.phoneDisplay}</span>
                 </a>
 
                 <a
                   href={`mailto:${NAP.email}`}
-                  className="flex items-center gap-3 text-sm text-[#334155] hover:text-[#E31B23] transition-colors font-body group"
+                  className="flex items-center gap-3 text-sm text-brand-darkSlate hover:text-honeywell-red transition-colors font-body group"
                 >
-                  <span className="w-8 h-8 rounded-full bg-[#0D1B5C]/8 flex items-center justify-center shrink-0 group-hover:bg-[#E31B23]/10 transition-colors">
-                    <Mail className="w-4 h-4 text-[#0D1B5C] group-hover:text-[#E31B23] transition-colors" aria-hidden="true" />
+                  <span className="w-8 h-8 rounded-full bg-honeywell-navy/8 flex items-center justify-center shrink-0 group-hover:bg-honeywell-red/10 transition-colors">
+                    <Mail className="w-4 h-4 text-honeywell-navy group-hover:text-honeywell-red transition-colors" aria-hidden="true" />
                   </span>
                   <span>{NAP.email}</span>
                 </a>
 
-                <div className="flex items-start gap-3 text-sm text-[#334155] font-body">
-                  <span className="w-8 h-8 rounded-full bg-[#0D1B5C]/8 flex items-center justify-center shrink-0 mt-0.5">
-                    <MapPin className="w-4 h-4 text-[#0D1B5C]" aria-hidden="true" />
+                <div className="flex items-start gap-3 text-sm text-brand-darkSlate font-body">
+                  <span className="w-8 h-8 rounded-full bg-honeywell-navy/8 flex items-center justify-center shrink-0 mt-0.5">
+                    <MapPin className="w-4 h-4 text-honeywell-navy" aria-hidden="true" />
                   </span>
                   <span
                     className="leading-relaxed"
@@ -197,10 +197,10 @@ export default function Footer() {
                 className="
                   inline-flex items-center gap-2 mt-6
                   px-5 py-2.5 rounded-sm
-                  bg-[#E31B23] text-white text-sm font-semibold font-body
-                  hover:bg-[#C41220] transition-all duration-200
+                  bg-honeywell-red text-white text-sm font-semibold font-body
+                  hover:bg-red-700 transition-all duration-200
                   hover:shadow-[0_4px_16px_-4px_rgba(227,27,35,0.4)]
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E31B23] focus-visible:ring-offset-2
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2
                   group
                 "
               >
@@ -212,7 +212,7 @@ export default function Footer() {
             {/* NAVIGATION COLUMNS */}
             {footerColumns.map((col, colIdx) => (
               <div key={col.heading}>
-                <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-[#0D1B5C] font-body mb-4">
+                <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-honeywell-navy font-body mb-4">
                   {col.heading}
                 </h3>
                 <ul className="space-y-2.5" role="list">
@@ -221,7 +221,7 @@ export default function Footer() {
                       <Link
                         href={link.href}
                         className="
-                          text-sm text-[#475569] hover:text-[#E31B23]
+                          text-sm text-[#475569] hover:text-honeywell-red
                           transition-colors duration-150 font-body
                           focus-visible:outline-none focus-visible:underline
                           inline-block hover:translate-x-0.5 transition-transform
@@ -237,8 +237,8 @@ export default function Footer() {
           </div>
 
           {/* LOCATIONS ROW — Local SEO internal links */}
-          <div className="mt-10 pt-8 border-t border-[#E2E8F0]">
-            <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#0D1B5C] font-body mb-4">
+          <div className="mt-10 pt-8 border-t border-slate-200">
+            <p className="text-xs font-bold uppercase tracking-[0.12em] text-honeywell-navy font-body mb-4">
               Serving Locations
             </p>
             <ul className="flex flex-wrap gap-x-4 gap-y-2" role="list" aria-label="Service locations">
@@ -247,7 +247,7 @@ export default function Footer() {
                   <Link
                     href={loc.href}
                     className="
-                      text-sm text-[#475569] hover:text-[#E31B23]
+                      text-sm text-[#475569] hover:text-honeywell-red
                       transition-colors duration-150 font-body
                       focus-visible:outline-none focus-visible:underline
                     "
@@ -263,7 +263,7 @@ export default function Footer() {
         {/* ═══════════════════════════════════════
             BOTTOM BAR — Navy strip
             ═══════════════════════════════════════ */}
-        <div className="bg-[#0D1B5C]">
+        <div className="bg-honeywell-navy">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
 
@@ -272,7 +272,7 @@ export default function Footer() {
                 &copy; {currentYear}{' '}
                 <Link
                   href="/"
-                  className="text-white underline hover:text-[#E31B23] transition-colors focus-visible:outline-none"
+                  className="text-white underline hover:text-honeywell-red transition-colors focus-visible:outline-none"
                 >
                   Honeywell Hydraulics
                 </Link>

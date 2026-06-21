@@ -38,13 +38,13 @@ export function ProcessSection() {
       <Container>
         {/* Section header */}
         <div className="text-center mb-12">
-          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-[#E31B23] mb-3">
+          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
             Our Process
           </p>
           <Heading variant="section" as="h2" id="process-heading">
             From Design to Dispatch
           </Heading>
-          <p className="text-[#64748B] font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
+          <p className="text-brand-steelGray font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
             Engineering precision at every step of the manufacturing process.
           </p>
         </div>
@@ -53,7 +53,7 @@ export function ProcessSection() {
         <div className="relative">
           {/* Connector line — desktop only */}
           <div
-            className="hidden lg:block absolute top-16 left-[12.5%] right-[12.5%] h-0.5 bg-[#E2E8F0] origin-left"
+            className="hidden lg:block absolute top-16 left-[12.5%] right-[12.5%] h-0.5 bg-slate-200 origin-left"
             aria-hidden="true"
           />
 
@@ -65,7 +65,7 @@ export function ProcessSection() {
               >
                 {/* Step number */}
                 <div
-                  className="w-12 h-12 rounded-full bg-[#0D1B5C] text-white font-mono font-bold text-lg flex items-center justify-center mb-4 relative z-10 ring-4 ring-[#F8FAFC]"
+                  className="w-12 h-12 rounded-full bg-honeywell-navy text-white font-mono font-bold text-lg flex items-center justify-center mb-4 relative z-10 ring-4 ring-brand-surfaceGray"
                 >
                   {String(i + 1).padStart(2, '0')}
                 </div>
@@ -79,10 +79,10 @@ export function ProcessSection() {
                 />
 
                 {/* Content */}
-                <h3 className="font-display font-bold text-[#0D1B5C] text-lg mb-2">
+                <h3 className="font-display font-bold text-honeywell-navy text-lg mb-2">
                   {step.title}
                 </h3>
-                <p className="text-[#64748B] font-body text-sm leading-relaxed max-w-[240px]">
+                <p className="text-brand-steelGray font-body text-sm leading-relaxed max-w-[240px]">
                   {step.body}
                 </p>
               </div>

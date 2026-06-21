@@ -34,7 +34,7 @@ export function ProductCard({
       className={`flex flex-col h-full ${isComingSoon ? '' : 'group'}`}
     >
       {/* Image Container */}
-      <div className="relative w-full aspect-[4/3] bg-[#F1F5F9] overflow-hidden border-b border-[#E2E8F0]">
+      <div className="relative w-full aspect-[4/3] bg-brand-lightSurface overflow-hidden border-b border-slate-200">
         <Image
           src={imageSrc}
           alt={`${title} - Honeywell Hydraulics`}
@@ -42,10 +42,10 @@ export function ProductCard({
           className={`object-cover ${isComingSoon ? '' : 'group-hover:scale-105 transition-transform duration-700 ease-premium'}`}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-sm text-xs font-semibold text-[#0D1B5C] tracking-wide uppercase font-body border border-[#E2E8F0] flex items-center">
+        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-sm text-xs font-semibold text-honeywell-navy tracking-wide uppercase font-body border border-slate-200 flex items-center">
           {category}
           {isComingSoon && (
-            <span className="ml-2 px-1.5 py-0.5 text-[10px] bg-[#E31B23] text-white rounded-sm font-bold tracking-wider">
+            <span className="ml-2 px-1.5 py-0.5 text-[10px] bg-honeywell-red text-white rounded-sm font-bold tracking-wider">
               COMING SOON
             </span>
           )}
@@ -53,22 +53,22 @@ export function ProductCard({
       </div>
 
       <CardContent className="flex flex-col flex-1 p-6">
-        <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-2 line-clamp-1">
+        <h3 className="text-xl font-display font-bold text-honeywell-navy mb-2 line-clamp-1">
           {isComingSoon ? (
             title
           ) : (
-            <a href={href} className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C] focus-visible:rounded-sm">
+            <a href={href} className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:rounded-sm">
               {/* Extended click target removed to prevent blocking image */}
               {title}
             </a>
           )}
         </h3>
         
-        <p className="text-[#64748B] font-body text-sm mb-6 line-clamp-2 flex-1">
+        <p className="text-brand-steelGray font-body text-sm mb-6 line-clamp-2 flex-1">
           {description}
         </p>
 
-        <div className={`mt-auto pt-4 border-t border-[#F1F5F9] flex items-center justify-between font-body text-sm ${isComingSoon ? 'text-[#94A3B8]' : 'text-[#0D1B5C] font-medium group-hover:text-[#E31B23] transition-colors duration-200'}`}>
+        <div className={`mt-auto pt-4 border-t border-brand-lightSurface flex items-center justify-between font-body text-sm ${isComingSoon ? 'text-[#94A3B8]' : 'text-honeywell-navy font-medium group-hover:text-honeywell-red transition-colors duration-200'}`}>
           {isComingSoon ? 'Coming Soon' : ctaText}
           {!isComingSoon && <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" />}
         </div>
