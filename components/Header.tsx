@@ -131,15 +131,17 @@ export default function Header({ navigation }: HeaderProps) {
     <>
       <header
         ref={headerRef}
-        className={`sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md transition-shadow duration-200 ${
-          isScrolled
-            ? 'shadow-[0_1px_3px_0_rgba(13,27,92,0.06),0_4px_16px_-4px_rgba(13,27,92,0.08)]'
-            : 'shadow-[0_1px_0_0_#E2E8F0]'
+        className={`sticky top-0 z-50 w-full flex justify-center transition-all duration-300 px-4 sm:px-6 pb-2 ${
+          isScrolled ? 'pt-2 sm:pt-4' : 'pt-4 sm:pt-6'
         }`}
         role="banner"
       >
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center h-16 lg:h-[84px]">
+        <div className={`w-full max-w-[1360px] bg-white rounded-full transition-all duration-300 ${
+          isScrolled 
+            ? 'shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100' 
+            : 'shadow-[0_4px_20px_rgb(0,0,0,0.06)] border border-gray-200'
+        }`}>
+          <div className="flex items-center justify-between h-16 lg:h-[76px] px-4 sm:px-6 lg:px-8">
 
             {/* ═══════════════════════════════
                LEFT — Logo
@@ -147,17 +149,17 @@ export default function Header({ navigation }: HeaderProps) {
             <Link
               href="/"
               className="
-                shrink-0 flex items-center mr-8 xl:mr-12
-                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:ring-offset-2 focus-visible:rounded-sm
+                shrink-0 flex items-center mr-2 lg:mr-4 xl:mr-8
+                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:ring-offset-2 focus-visible:rounded-full
               "
               aria-label="Honeywell Hydraulics — Home"
             >
               <Image
                 src="/long-size-logohydralics-logo.png"
                 alt="Honeywell Hydraulics — Custom Hydraulic Cylinder & Power Pack Manufacturer"
-                width={180}
-                height={52}
-                className="h-10 lg:h-[46px] w-auto"
+                width={200}
+                height={58}
+                className="h-9 lg:h-[44px] xl:h-[48px] w-auto"
                 priority
               />
             </Link>
@@ -169,8 +171,8 @@ export default function Header({ navigation }: HeaderProps) {
               className="hidden lg:flex items-center justify-center h-full flex-1"
               aria-label="Main navigation"
             >
-              <ul className="flex items-center justify-center h-full gap-1 xl:gap-2">
-                {navigation.mainNav.map((item) => {
+              <ul className="flex items-center justify-center h-full">
+                {navigation.mainNav.map((item, index) => {
                   const hasMega = !!item.megaMenu;
                   const isMenuOpen = openMenu === item.label;
                   const isActive = isNavActive(item);
@@ -191,14 +193,14 @@ export default function Header({ navigation }: HeaderProps) {
                           onKeyDown={(e) => handleNavKeyDown(e, item.label, hasMega)}
                           onClick={() => setOpenMenu(isMenuOpen ? null : item.label)}
                           className={`
-                            group inline-flex items-center gap-1.5
-                            h-[40px] px-4 rounded-md
-                            text-[14px] font-semibold tracking-[0.02em] uppercase
+                            group inline-flex items-center gap-1 xl:gap-1.5
+                            h-[36px] xl:h-[40px] px-2 xl:px-4 rounded-full
+                            text-[13px] xl:text-[15px] font-medium tracking-wide whitespace-nowrap
                             font-body transition-all duration-200
                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                             ${isActive || isMenuOpen
-                              ? 'text-honeywell-red bg-red-50/50'
-                              : 'text-[#1A2A6C] hover:text-honeywell-red hover:bg-slate-50'
+                              ? 'text-honeywell-navy bg-slate-100'
+                              : 'text-slate-600 hover:text-honeywell-navy hover:bg-slate-50'
                             }
                           `}
                         >
@@ -206,7 +208,7 @@ export default function Header({ navigation }: HeaderProps) {
                           <span className={`flex items-center transition-transform duration-200 ${isMenuOpen ? 'rotate-180' : ''}`}>
                             <ChevronDown
                               className={`w-4 h-4 transition-colors duration-200 ${
-                                isActive || isMenuOpen ? 'text-honeywell-red' : 'text-brand-steelGray group-hover:text-honeywell-red'
+                                isActive || isMenuOpen ? 'text-honeywell-navy' : 'text-slate-400 group-hover:text-honeywell-navy'
                               }`}
                               strokeWidth={2}
                               aria-hidden="true"
@@ -218,13 +220,13 @@ export default function Header({ navigation }: HeaderProps) {
                           href={item.href}
                           className={`
                             group inline-flex items-center
-                            h-[40px] px-4 rounded-md
-                            text-[14px] font-semibold tracking-[0.02em] uppercase
+                            h-[36px] xl:h-[40px] px-2 xl:px-4 rounded-full
+                            text-[13px] xl:text-[15px] font-medium tracking-wide whitespace-nowrap
                             font-body transition-all duration-200
                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                             ${isActive
-                              ? 'text-honeywell-red bg-red-50/50'
-                              : 'text-[#1A2A6C] hover:text-honeywell-red hover:bg-slate-50'
+                              ? 'text-honeywell-navy bg-slate-100'
+                              : 'text-slate-600 hover:text-honeywell-navy hover:bg-slate-50'
                             }
                           `}
                         >
@@ -240,6 +242,11 @@ export default function Header({ navigation }: HeaderProps) {
                           onClose={handleCloseMega}
                         />
                       )}
+
+                      {/* Separator Line */}
+                      {index < navigation.mainNav.length - 1 && (
+                        <div className="hidden lg:block w-[1px] h-4 xl:h-5 bg-gray-200 mx-0.5 xl:mx-2 shrink-0" aria-hidden="true" />
+                      )}
                     </li>
                   );
                 })}
@@ -249,24 +256,24 @@ export default function Header({ navigation }: HeaderProps) {
             {/* ═══════════════════════════════
                RIGHT — Phone + CTA + Mobile Toggle
                ═══════════════════════════════ */}
-            <div className="flex items-center gap-1 sm:gap-2 ml-auto lg:ml-0">
+            <div className="flex items-center gap-1 sm:gap-2 lg:gap-1 xl:gap-2 ml-auto lg:ml-0 shrink-0">
 
               {/* Phone — Desktop only */}
               <a
                 href={`tel:${navigation.phone}`}
                 className="
-                  hidden xl:inline-flex items-center gap-2.5
-                  px-4 py-2.5 rounded-lg
+                  hidden xl:inline-flex items-center gap-2
+                  px-3 xl:px-4 py-2 rounded-full
                   text-honeywell-navy
-                  hover:bg-brand-lightSurface
+                  hover:bg-slate-50
                   transition-all duration-200 font-body
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:ring-offset-2 focus-visible:rounded-lg
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:ring-offset-2 focus-visible:rounded-full
                   group
                 "
                 aria-label={`Call us at ${navigation.phoneDisplay}`}
               >
                 <span className="
-                  flex items-center justify-center w-8 h-8 rounded-lg
+                  flex items-center justify-center w-8 h-8 rounded-full
                   bg-honeywell-navy/[0.06] group-hover:bg-honeywell-red/10
                   transition-colors duration-200
                 ">
@@ -288,15 +295,15 @@ export default function Header({ navigation }: HeaderProps) {
                 <Link
                   href={navigation.ctaHref}
                   className="
-                    hidden sm:inline-flex items-center gap-2
-                    px-5 py-2.5 rounded-lg
+                    hidden sm:inline-flex items-center gap-1.5 xl:gap-2
+                    px-4 xl:px-5 py-2 xl:py-2.5 rounded-full
                     bg-honeywell-red text-white
-                    text-[13px] font-bold font-body tracking-[0.02em]
+                    text-[12px] xl:text-[13px] font-bold font-body tracking-[0.02em] whitespace-nowrap
                     hover:bg-[#B71C1C]
                     transition-all duration-250
                     shadow-[0_1px_3px_rgba(227,27,35,0.24)]
                     hover:shadow-[0_4px_12px_-2px_rgba(227,27,35,0.32)]
-                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2 focus-visible:rounded-full
                   "
                 >
                   {navigation.ctaLabel}
@@ -311,11 +318,11 @@ export default function Header({ navigation }: HeaderProps) {
                 aria-label="Open navigation menu"
                 aria-expanded={isMobileMenuOpen}
                 className="
-                  lg:hidden p-2.5 rounded-lg
-                  text-honeywell-navy hover:bg-brand-lightSurface
+                  lg:hidden p-2.5 rounded-full
+                  text-honeywell-navy hover:bg-slate-100
                   border border-slate-200
                   transition-all duration-200
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:rounded-full
                 "
               >
                 <Menu className="w-5 h-5" strokeWidth={2} aria-hidden="true" />

@@ -102,22 +102,22 @@ export function HeroSection() {
 
             {/* Overline — primary keyword signal */}
             <p
-              className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-4"
+              className="text-base sm:text-lg font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-4"
             >
-              Hydraulic Equipment Manufacturer in Gujarat
+              Hydraulic System Manufacturer in Ahmedabad
             </p>
 
             {/* H1 — single per page, keyword-optimized */}
             <div>
               <Heading
-                variant="hero"
+                variant="section"
                 as="h1"
                 id="hero-heading"
                 className="text-honeywell-navy mb-5 leading-[1.1]"
               >
-                Hydraulic Cylinder{' '}
-                <span className="text-honeywell-red">&amp;</span> Power Pack
-                Manufacturer in Ahmedabad
+                Hydraulic Cylinder<br />
+                &amp; Power Pack<br />
+                Manufacturer in India
               </Heading>
             </div>
 
