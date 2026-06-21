@@ -22,7 +22,7 @@ import { PowerPackFAQs } from '@/components/products/hydraulic-power-packs/Power
 const PAGE_TITLE = 'Hydraulic Power Pack Manufacturer in Gujarat, India | Honeywell';
 const PAGE_DESCRIPTION = 'Leading hydraulic power pack manufacturer in Ahmedabad, Gujarat. Custom industrial hydraulic power packs and units. ISO certified engineering and manufacturing.';
 const PAGE_URL = '/products/hydraulic-power-packs/';
-const PAGE_IMAGE = '/images/products/hydraulic-power-pack-manufacturer.webp';
+const PAGE_IMAGE = '/images/products/hydraulic-power-packs/hydraulic-power-pack-manufacturer.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({

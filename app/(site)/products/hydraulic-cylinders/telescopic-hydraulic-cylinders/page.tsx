@@ -60,7 +60,7 @@ const PAGE_TITLE =
 const PAGE_DESCRIPTION =
   'Leading telescopic hydraulic cylinder manufacturer in Gujarat. We engineer extreme-stroke, multi-stage cylinders for dump trucks, tipper bodies, and material handling.';
 const PAGE_URL = '/products/hydraulic-cylinders/telescopic-hydraulic-cylinders/';
-const PAGE_IMAGE = '/images/products/telescopic-hydraulic-cylinder-manufacturer.webp';
+const PAGE_IMAGE = '/images/products/hydraulic-cylinders/telescopic-hydraulic-cylinders-manufacturer.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -335,7 +335,7 @@ export default function TelescopicHydraulicCylindersPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
       id="hero"
     >
       {/* Background Decorative Element */}
@@ -471,7 +471,7 @@ function HeroSection() {
           <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-[#E2E8F0] shadow-sm p-4 overflow-hidden group">
             <div className="absolute inset-0 bg-[#F8FAFC] opacity-50 rounded-xl" />
             <Image
-              src="/images/products/telescopic-hydraulic-cylinder-manufacturer.webp"
+              src="/images/products/hydraulic-cylinders/telescopic-hydraulic-cylinders-manufacturer.webp"
               alt="Telescopic Hydraulic Cylinder Manufacturer in Ahmedabad - Multi-stage tipper cylinder by Honeywell Hydraulics"
               fill
               priority
@@ -966,7 +966,7 @@ function RelatedProducts() {
       description:
         'Compact DC power units specifically designed for mounting on commercial vehicles and tipper trucks.',
       category: 'Power Generation',
-      imageSrc: '/images/products/hydraulic-power-pack-manufacturer.webp',
+      imageSrc: '/images/products/hydraulic-power-packs/hydraulic-power-pack-manufacturer.webp',
       href: '/products/hydraulic-power-packs/',
       ctaText: 'View Power Packs',
     },

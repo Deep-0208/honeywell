@@ -29,20 +29,6 @@ export function PowerPackTechnicalSpecs() {
               While custom engineering is our specialty, our power packs generally fall within high-performance parameters to meet the exact demands of your industry. Our engineering team designs the reservoir dimensions, motor horsepower, pump displacement, and valve logic specifically to match your machine&apos;s unique cycle profile.
             </p>
             
-            <div className="bg-white p-6 rounded-xl border border-[#E2E8F0] shadow-sm mb-8">
-              <h3 className="font-bold text-[#0D1B5C] mb-2 font-display">Need to calculate your required motor and pump size?</h3>
-              <p className="text-sm text-[#64748B] mb-4">
-                Use our automated Power Pack Sizing Calculator to instantly find your required motor HP and pump flow based on your cycle time and tonnage.
-              </p>
-              <Button href="/resources/calculators/" variant="primary">
-                USE SIZING CALCULATOR
-              </Button>
-            </div>
-            
-            <Button href="/resources/downloads/" variant="outline" className="w-full justify-center">
-              <Download className="w-4 h-4 mr-2" />
-              DOWNLOAD COMPLETE SPEC SHEET (PDF)
-            </Button>
           </div>
 
           <div className="lg:col-span-7">

@@ -38,7 +38,7 @@ const PAGE_TITLE =
 const PAGE_DESCRIPTION =
   'Expert DC hydraulic power pack manufacturer. We supply 12V and 24V mini hydraulic power units for tipper trucks, tail lifts, and mobile material handling.';
 const PAGE_URL = '/products/hydraulic-power-packs/dc-mini-power-packs/';
-const PAGE_IMAGE = '/images/products/dc-hydraulic-power-pack-manufacturer.webp';
+const PAGE_IMAGE = '/images/products/hydraulic-power-packs/hydraulic-power-pack-with-multiple-solenoid-valve.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -291,7 +291,7 @@ export default function DcMiniPowerPacksPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
       id="hero"
     >
       <div
@@ -873,7 +873,7 @@ function ManufacturingProcess() {
 
           <div className="relative aspect-square lg:aspect-[4/3] rounded-xl overflow-hidden shadow-lg border border-[#E2E8F0]">
             <Image
-              src="/images/hero/hydraulic-cylinder-manufacturing-ahmedabad.png" // Placeholder
+              src="/images/hero/hydraulic-cylinder-manufacturing-ahmedabad.webp" // Placeholder
               alt="Hydraulic Power Pack Testing Facility"
               fill
               className="object-cover"

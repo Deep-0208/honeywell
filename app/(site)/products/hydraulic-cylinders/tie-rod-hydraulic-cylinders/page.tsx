@@ -55,7 +55,7 @@ const PAGE_TITLE =
 const PAGE_DESCRIPTION =
   'Leading tie rod hydraulic cylinder manufacturer in India. We supply heavy-duty, highly serviceable NFPA standard tie rod cylinders to OEMs and machine builders.';
 const PAGE_URL = '/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/';
-const PAGE_IMAGE = '/images/products/tie-rod-hydraulic-cylinder-manufacturer.webp';
+const PAGE_IMAGE = '/images/products/hydraulic-cylinders/tie-rod-hydraulic-cylinder-manufacturer.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -327,7 +327,7 @@ export default function TieRodHydraulicCylindersPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
       id="hero"
     >
       {/* Background Decorative Element */}
@@ -463,7 +463,7 @@ function HeroSection() {
           <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-[#E2E8F0] shadow-sm p-4 overflow-hidden group">
             <div className="absolute inset-0 bg-[#F8FAFC] opacity-50 rounded-xl" />
             <Image
-              src="/images/products/tie-rod-hydraulic-cylinder-manufacturer.webp"
+              src="/images/products/hydraulic-cylinders/tie-rod-hydraulic-cylinder-manufacturer.webp"
               alt="Tie Rod Hydraulic Cylinder Manufacturer in Ahmedabad - NFPA tie rod cylinder by Honeywell Hydraulics"
               fill
               priority
@@ -955,7 +955,7 @@ function RelatedProducts() {
       description:
         'The fluid generation cores that supply the flow required for rapid tie rod actuation in automated environments.',
       category: 'Power Generation',
-      imageSrc: '/images/products/hydraulic-power-pack-manufacturer.webp',
+      imageSrc: '/images/products/hydraulic-power-packs/hydraulic-power-pack-manufacturer.webp',
       href: '/products/hydraulic-power-packs/',
       ctaText: 'View Power Packs',
     },

@@ -8,7 +8,7 @@ import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
 
 export function HydraulicCylinderHero() {
   return (
-    <div className="relative bg-white pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden border-b border-[#E2E8F0]">
+    <div className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-[#E2E8F0]">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F8FAFC] skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block" />
       
@@ -38,7 +38,7 @@ export function HydraulicCylinderHero() {
               <Button href="/request-quote/" size="lg" variant="primary" className="w-full sm:w-auto font-bold tracking-wide">
                 REQUEST QUOTE <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button href="#products" size="lg" variant="outline" className="w-full sm:w-auto bg-white">
+              <Button href="#products" size="lg" variant="outline" className="w-full sm:w-auto">
                 VIEW PRODUCTS <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
@@ -71,7 +71,7 @@ export function HydraulicCylinderHero() {
           <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-[#E2E8F0] shadow-sm p-4 overflow-hidden group">
             <div className="absolute inset-0 bg-[#F8FAFC] opacity-50 rounded-xl" />
             <Image
-              src="/images/products/hydraulic-cylinders-ahmedabad.webp"
+              src="/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad.webp"
               alt="Hydraulic Cylinder Manufacturer in Ahmedabad"
               fill
               priority

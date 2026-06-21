@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Phone, MessageCircle, ChevronDown, Menu, ArrowRight } from 'lucide-react';
+import { Phone, ChevronDown, Menu, ArrowRight } from 'lucide-react';
 import MegaMenu from './MegaMenu';
 import MobileMenu from './MobileMenu';
 import type { SiteNavigation } from '@/types/navigation';
@@ -281,30 +281,7 @@ export default function Header({ navigation }: HeaderProps) {
                 </span>
               </a>
 
-              {/* WhatsApp — Desktop only */}
-              <a
-                href="https://wa.me/919924343873?text=Hello%2C%20I%20need%20a%20quote%20for%20hydraulic%20equipment."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  hidden xl:inline-flex items-center justify-center
-                  w-10 h-10 rounded-lg
-                  hover:bg-[#25D366]/10
-                  transition-all duration-200
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:rounded-lg
-                  group
-                "
-                aria-label="Message us on WhatsApp"
-              >
-                <MessageCircle
-                  className="w-[18px] h-[18px] text-[#25D366] group-hover:scale-110 transition-transform duration-200"
-                  strokeWidth={2}
-                  aria-hidden="true"
-                />
-              </a>
 
-              {/* Vertical divider */}
-              <span className="hidden xl:block w-px h-7 bg-[#E2E8F0] mx-1" aria-hidden="true" />
 
               {/* Request Quote CTA */}
               <div>

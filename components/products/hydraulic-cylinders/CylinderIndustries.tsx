@@ -11,31 +11,31 @@ export function CylinderIndustries() {
       industryName: "Injection Moulding",
       description: "High-speed, high-cycle cylinders designed to withstand rapid heat generation and continuous operation.",
       href: "/industries/injection-moulding/",
-      icon: <Factory className="w-6 h-6 text-white" />
+      icon: <Factory className="w-6 h-6" />
     },
     {
       industryName: "Automotive OEM",
       description: "Precision actuators for assembly lines, testing equipment, and automated manufacturing systems.",
       href: "/industries/automotive/",
-      icon: <Truck className="w-6 h-6 text-white" />
+      icon: <Truck className="w-6 h-6" />
     },
     {
       industryName: "Steel & Metallurgy",
       description: "Heavy-duty cylinders built for extreme temperatures, high loads, and abrasive environments.",
       href: "/industries/steel-metallurgy/",
-      icon: <Hammer className="w-6 h-6 text-white" />
+      icon: <Hammer className="w-6 h-6" />
     },
     {
       industryName: "Agricultural Equipment",
       description: "Reliable hydraulic solutions for tractors, harvesters, and heavy farm machinery.",
       href: "/industries/agricultural-equipment/",
-      icon: <Combine className="w-6 h-6 text-white" />
+      icon: <Combine className="w-6 h-6" />
     },
     {
       industryName: "Fly Ash Brick Machinery",
       description: "High-pressure compaction cylinders ensuring uniform brick density and rapid production cycles.",
       href: "/industries/fly-ash-brick/",
-      icon: <Settings className="w-6 h-6 text-white" />
+      icon: <Settings className="w-6 h-6" />
     }
   ];
 

@@ -91,7 +91,7 @@ export function HeroSection() {
       </div>
 
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center py-12 md:py-16 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center pt-8 pb-12 md:pt-12 md:pb-16 lg:pt-16 lg:pb-20">
 
           {/* ═══════════════════════════════════════
               LEFT COLUMN — Content (Staggered entrance)

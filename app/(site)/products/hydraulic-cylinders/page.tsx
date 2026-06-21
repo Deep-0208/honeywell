@@ -22,7 +22,7 @@ import { CylinderFAQs } from '@/components/products/hydraulic-cylinders/Cylinder
 const PAGE_TITLE = 'Custom Industrial Hydraulic Cylinders Manufacturer in India | Honeywell';
 const PAGE_DESCRIPTION = 'Leading custom industrial hydraulic cylinders manufacturer in India. Engineering high-pressure cylinders from 40-300mm bore. Factory-direct pricing and 7-15 day delivery.';
 const PAGE_URL = '/products/hydraulic-cylinders/';
-const PAGE_IMAGE = '/images/products/hydraulic-cylinders-ahmedabad.webp';
+const PAGE_IMAGE = '/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({

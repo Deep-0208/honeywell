@@ -254,7 +254,7 @@ export default function ContactUsPage() {
       <JsonLd data={faqSchema} />
 
       {/* ── Section 1: Hero ──────────────────────────────────────────────── */}
-      <section className="bg-[#0D1B5C] text-white pt-24 pb-16 relative overflow-hidden">
+      <section className="bg-[#0D1B5C] text-white pt-12 pb-16 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#E31B23] opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
         <Container className="relative z-10">
           {/* Breadcrumb */}

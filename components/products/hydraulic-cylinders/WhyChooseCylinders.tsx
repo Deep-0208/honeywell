@@ -20,7 +20,7 @@ export function WhyChooseCylinders() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           <div className="flex flex-col">
-            <IconBox icon={<Cog className="w-6 h-6 text-white" />} variant="primary" size="lg" className="mb-6" />
+            <IconBox icon={<Cog className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
             <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3">Engineering Expertise</h3>
             <p className="text-[#64748B] font-body">
               Our engineers analyze your load calculations, cycle rates, and environmental factors to design the perfect custom cylinder for your exact application.
@@ -28,7 +28,7 @@ export function WhyChooseCylinders() {
           </div>
 
           <div className="flex flex-col">
-            <IconBox icon={<ShieldCheck className="w-6 h-6 text-white" />} variant="primary" size="lg" className="mb-6" />
+            <IconBox icon={<ShieldCheck className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
             <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3">1.5x Pressure Testing</h3>
             <p className="text-[#64748B] font-body">
               Every cylinder is hydrostatically pressure-tested at 1.5 times its rated working pressure before dispatch. Out-of-the-box leaks are non-existent.
@@ -36,7 +36,7 @@ export function WhyChooseCylinders() {
           </div>
 
           <div className="flex flex-col">
-            <IconBox icon={<Zap className="w-6 h-6 text-white" />} variant="primary" size="lg" className="mb-6" />
+            <IconBox icon={<Zap className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
             <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3">Custom Manufacturing</h3>
             <p className="text-[#64748B] font-body">
               Drawing-to-delivery service. We can manufacture exactly to your existing CAD drawings or reverse-engineer a replacement for an obsolete part.
@@ -44,7 +44,7 @@ export function WhyChooseCylinders() {
           </div>
 
           <div className="flex flex-col">
-            <IconBox icon={<Truck className="w-6 h-6 text-white" />} variant="primary" size="lg" className="mb-6" />
+            <IconBox icon={<Truck className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
             <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3">Fast Delivery</h3>
             <p className="text-[#64748B] font-body">
               With our streamlined manufacturing processes in Ahmedabad, we offer some of the fastest turnaround times in the industry for custom components.

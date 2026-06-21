@@ -58,8 +58,7 @@ export function ProductCard({
             title
           ) : (
             <a href={href} className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0D1B5C] focus-visible:rounded-sm">
-              {/* Extended click target */}
-              <span className="absolute inset-0" aria-hidden="true" />
+              {/* Extended click target removed to prevent blocking image */}
               {title}
             </a>
           )}

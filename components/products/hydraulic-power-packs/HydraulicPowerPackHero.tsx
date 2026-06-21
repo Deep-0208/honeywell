@@ -7,7 +7,7 @@ import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
 
 export function HydraulicPowerPackHero() {
   return (
-    <section className="relative bg-[#F8FAFC] pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden">
+    <section className="relative bg-[#F8FAFC] pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
@@ -32,12 +32,25 @@ export function HydraulicPowerPackHero() {
               <Button href="/request-quote/" size="lg" variant="primary" className="w-full sm:w-auto font-bold tracking-wide">
                 REQUEST QUOTE <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button href="tel:+919924343873" size="lg" variant="outline" className="w-full sm:w-auto bg-white hover:bg-[#F8FAFC]">
-                <Phone className="w-5 h-5 mr-2" /> CALL NOW
+              <Button href="#specifications" size="lg" variant="outline" className="w-full sm:w-auto">
+                VIEW SPECIFICATIONS <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button href="https://wa.me/919924343873" size="lg" variant="ghost" className="w-full sm:w-auto text-green-600 hover:bg-green-50 hover:text-green-700">
-                <MessageCircle className="w-5 h-5 mr-2" /> WHATSAPP
-              </Button>
+            </div>
+
+            {/* Contact Bar */}
+            <div className="flex flex-wrap items-center gap-6 py-4 border-t border-[#E2E8F0] w-full">
+              <a href="tel:+919924343873" className="flex items-center text-[#0D1B5C] hover:text-[#E31B23] font-medium transition-colors font-body">
+                <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-[#E2E8F0] flex items-center justify-center mr-3">
+                  <Phone className="w-5 h-5" />
+                </div>
+                +91 99243 43873
+              </a>
+              <a href="https://wa.me/919924343873" target="_blank" rel="noopener noreferrer" className="flex items-center text-[#0D1B5C] hover:text-[#25D366] font-medium transition-colors font-body">
+                <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-[#E2E8F0] flex items-center justify-center mr-3">
+                  <MessageCircle className="w-5 h-5" />
+                </div>
+                WhatsApp for Quick Quote
+              </a>
             </div>
 
             {/* Trust Badges */}
@@ -52,7 +65,7 @@ export function HydraulicPowerPackHero() {
           <div className="relative z-10">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
               <Image 
-                src="/images/products/hydraulic-power-pack-manufacturer.webp"
+                src="/images/products/hydraulic-power-packs/hydraulic-power-pack-manufacturer.webp"
                 alt="Industrial Hydraulic Power Pack Manufacturer in Ahmedabad"
                 fill
                 priority

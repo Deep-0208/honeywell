@@ -9,31 +9,31 @@ export function PowerPackTypesGrid() {
       title: "3 Phase Industrial Power Packs",
       description: "Heavy-duty power units with high-efficiency 3-phase motors and large reservoir capacities for 24/7 continuous factory operation.",
       href: "/products/hydraulic-power-packs/3-phase/",
-      image: "/images/products/3-phase-power-pack.webp"
+      image: "/images/products/hydraulic-power-packs/hydraulic-power-pack-3-phase.webp"
     },
     {
       title: "High-Low Power Packs",
       description: "Dual-pump systems engineered for press machines, utilizing a high-volume/low-pressure and low-volume/high-pressure circuit for massive energy savings.",
       href: "/products/hydraulic-power-packs/high-low/",
-      image: "/images/products/high-low-power-pack.webp"
+      image: "/images/products/hydraulic-power-packs/hydraulic-power-pack-single-phase.webp"
     },
     {
       title: "Compact & Micro Power Packs",
       description: "Miniature AC and DC power units providing significant force in a compact vertical footprint, ideal for CNC clamping and small scissor lifts.",
       href: "/products/hydraulic-power-packs/compact/",
-      image: "/images/products/compact-power-pack.webp"
+      image: "/images/products/hydraulic-power-packs/hand-lever-operated-power-pack.webp"
     },
     {
       title: "Mobile & DC Power Packs",
       description: "12V and 24V DC motor-driven power packs engineered to withstand severe vibration and shock loads for vehicular and material handling integration.",
       href: "/products/hydraulic-power-packs/mobile/",
-      image: "/images/products/mobile-power-pack.webp"
+      image: "/images/products/hydraulic-power-packs/hydraulic-power-pack-with-multiple-solenoid-valve.webp"
     },
     {
       title: "Custom Turnkey Power Packs",
       description: "Bespoke fluid power generation built from the ground up for Special Purpose Machines (SPMs) with full PLC integration and custom manifold logic.",
       href: "/products/hydraulic-power-packs/custom/",
-      image: "/images/products/custom-power-pack.webp"
+      image: "/images/products/hydraulic-power-packs/hydraulic-power-pack-with-accumulator.webp"
     }
   ];
 

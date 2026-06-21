@@ -294,7 +294,7 @@ export default function WeldedHydraulicCylindersPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
       id="hero"
     >
       <div
@@ -985,7 +985,7 @@ function RelatedProducts() {
       title: 'Tie-Rod Hydraulic Cylinders',
       description: 'Highly serviceable cylinders with external tie rods, ideal for automated indoor packaging lines and standard automation.',
       href: '/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/',
-      image: '/images/products/tie-rod-hydraulic-cylinder-manufacturer.webp',
+      image: '/images/products/hydraulic-cylinders/tie-rod-hydraulic-cylinder-manufacturer.webp',
     },
     {
       title: 'Custom Hydraulic Cylinders',

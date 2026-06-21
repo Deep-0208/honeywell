@@ -46,7 +46,7 @@ const PAGE_TITLE =
 const PAGE_DESCRIPTION =
   'Leading 3 phase hydraulic power pack manufacturer. We engineer continuous-duty industrial AC power units for factory automation and heavy manufacturing.';
 const PAGE_URL = '/products/hydraulic-power-packs/3-phase-hydraulic-power-packs/';
-const PAGE_IMAGE = '/images/products/3-phase-hydraulic-power-pack-manufacturer.webp';
+const PAGE_IMAGE = '/images/products/hydraulic-power-packs/hydraulic-power-pack-3-phase.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -296,7 +296,7 @@ export default function ThreePhasePowerPacksPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
       id="hero"
     >
       <div
@@ -834,7 +834,7 @@ function ManufacturingProcess() {
 
           <div className="relative aspect-square lg:aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/images/hero/hydraulic-cylinder-manufacturing-ahmedabad.png" // Placeholder, will be replaced with power pack validation image later
+              src="/images/hero/hydraulic-cylinder-manufacturing-ahmedabad.webp" // Placeholder, will be replaced with power pack validation image later
               alt="Hydraulic Power Pack Testing Facility"
               fill
               className="object-cover"

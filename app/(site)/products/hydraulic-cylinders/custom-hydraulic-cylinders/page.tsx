@@ -329,7 +329,7 @@ export default function CustomHydraulicCylindersPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-[#E2E8F0]"
       id="hero"
     >
       {/* Background Decorative Element */}
@@ -1061,7 +1061,7 @@ function RelatedProducts() {
       description:
         'We design massive, custom-built fluid reservoirs and multi-pump architectures specifically sized to drive your large-bore custom cylinders.',
       category: 'Power Generation',
-      imageSrc: '/images/products/hydraulic-power-pack-manufacturer.webp',
+      imageSrc: '/images/products/hydraulic-power-packs/hydraulic-power-pack-manufacturer.webp',
       href: '/products/hydraulic-power-packs/',  // existing route
       ctaText: 'View Power Packs',
     },

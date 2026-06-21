@@ -76,7 +76,7 @@ export function SEO({
       telephone: COMPANY_INFO.phone,
       email: COMPANY_INFO.email,
       priceRange: '₹₹',
-      image: `${siteUrl}/images/hero/hydraulic-cylinder-manufacturing-ahmedabad.png`,
+      image: `${siteUrl}/images/hero/hydraulic-cylinder-manufacturing-ahmedabad.webp`,
       address: {
         '@type': 'PostalAddress',
         streetAddress: COMPANY_INFO.address.streetAddress,

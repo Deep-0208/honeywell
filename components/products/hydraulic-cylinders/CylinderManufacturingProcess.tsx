@@ -23,7 +23,7 @@ export function CylinderManufacturingProcess() {
 
           <div className="flex flex-col items-center text-center">
             <div className="bg-white p-2 rounded-full mb-6">
-              <IconBox icon={<PenTool className="w-6 h-6 text-white" />} variant="primary" size="lg" />
+              <IconBox icon={<PenTool className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3">1. Custom Design</h3>
             <p className="text-[#64748B] font-body text-sm">
@@ -33,7 +33,7 @@ export function CylinderManufacturingProcess() {
 
           <div className="flex flex-col items-center text-center">
             <div className="bg-white p-2 rounded-full mb-6">
-              <IconBox icon={<Cog className="w-6 h-6 text-white" />} variant="primary" size="lg" />
+              <IconBox icon={<Cog className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3">2. Precision Manufacture</h3>
             <p className="text-[#64748B] font-body text-sm">
@@ -43,7 +43,7 @@ export function CylinderManufacturingProcess() {
 
           <div className="flex flex-col items-center text-center">
             <div className="bg-white p-2 rounded-full mb-6">
-              <IconBox icon={<FlaskConical className="w-6 h-6 text-white" />} variant="primary" size="lg" />
+              <IconBox icon={<FlaskConical className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3">3. Rigorous Testing</h3>
             <p className="text-[#64748B] font-body text-sm">
@@ -53,7 +53,7 @@ export function CylinderManufacturingProcess() {
 
           <div className="flex flex-col items-center text-center">
             <div className="bg-white p-2 rounded-full mb-6">
-              <IconBox icon={<Truck className="w-6 h-6 text-white" />} variant="primary" size="lg" />
+              <IconBox icon={<Truck className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <h3 className="text-xl font-display font-bold text-[#0D1B5C] mb-3">4. Secure Delivery</h3>
             <p className="text-[#64748B] font-body text-sm">

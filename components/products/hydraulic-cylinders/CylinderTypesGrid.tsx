@@ -9,21 +9,21 @@ export function CylinderTypesGrid() {
       title: "Double Acting Hydraulic Cylinders",
       description: "Utilize hydraulic pressure to provide force in both extend and retract strokes. The backbone of modern industrial automation.",
       category: "Hydraulic Cylinders",
-      imageSrc: "/images/products/double-acting-cylinder.webp",
+      imageSrc: "/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinder-manufacturer.webp",
       href: "/products/hydraulic-cylinders/double-acting/"
     },
     {
       title: "Single Acting Hydraulic Cylinders",
       description: "Apply hydraulic force in one direction, relying on external force, gravity, or an internal spring for return.",
       category: "Hydraulic Cylinders",
-      imageSrc: "/images/products/single-acting-cylinder.webp",
+      imageSrc: "/images/products/hydraulic-cylinders/single-acting-hydraulic-cylinder-manufacturer.webp",
       href: "/products/hydraulic-cylinders/single-acting/"
     },
     {
       title: "Tie Rod Hydraulic Cylinders",
       description: "Standard in industrial manufacturing, utilizing high-strength threaded steel rods to hold end caps securely.",
       category: "Hydraulic Cylinders",
-      imageSrc: "/images/products/tie-rod-cylinder.webp",
+      imageSrc: "/images/products/hydraulic-cylinders/tie-rod-hydraulic-cylinder-manufacturer.webp",
       href: "/products/hydraulic-cylinders/tie-rod/"
     },
     {
@@ -37,7 +37,7 @@ export function CylinderTypesGrid() {
       title: "Telescopic Hydraulic Cylinders",
       description: "Provide exceptionally long stroke from a highly compact retracted length. Perfect for space-constrained applications.",
       category: "Hydraulic Cylinders",
-      imageSrc: "/images/products/telescopic-cylinder.webp",
+      imageSrc: "/images/products/hydraulic-cylinders/telescopic-hydraulic-cylinders-manufacturer.webp",
       href: "/products/hydraulic-cylinders/telescopic/"
     },
     {

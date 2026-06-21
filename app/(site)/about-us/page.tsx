@@ -9,6 +9,8 @@ import { Button } from '@/components/ui/Button';
 import { FAQAccordion } from '@/components/faq/FAQAccordion';
 import JsonLd from '@/components/seo/JsonLd';
 import { COMPANY_INFO } from '@/lib/constants';
+import Image from 'next/image';
+import { clientLogos } from '@/data/homepage';
 import {
   ArrowRight,
   Phone,
@@ -274,7 +276,7 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 1: HERO
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1B5C] text-white pt-12 md:pt-16 pb-12 md:pb-16 relative overflow-hidden">
+      <section className="bg-[#0D1B5C] text-white pt-8 md:pt-12 pb-12 md:pb-16 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#E31B23] opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
         <Container className="relative z-10">
           <nav aria-label="Breadcrumb" className="text-sm font-body text-[#CBD5E1] mb-6">
@@ -678,13 +680,53 @@ export default function AboutUsPage() {
               OEMs, SPM builders, and maintenance engineers across Gujarat and India trust Honeywell Hydraulics for reliable, correctly specified hydraulic equipment.
             </p>
           </div>
-          {/* Client logos placeholder */}
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center mb-12">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-sm h-20 flex items-center justify-center">
-                <span className="text-xs text-[#94A3B8] font-body">Client Logo</span>
-              </div>
-            ))}
+          {/* Premium Logo Marquee */}
+          <div className="relative flex w-full max-w-7xl mx-auto overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] group pt-4 mb-12">
+
+            {/* First set of logos */}
+            <div className="flex shrink-0 animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+              {clientLogos.map((client, index) => (
+                <div
+                  key={`${client.name}-${index}`}
+                  className="flex items-center justify-center shrink-0 pr-6 md:pr-10"
+                >
+                  <div className="relative flex items-center justify-center w-[160px] h-[80px] md:w-[200px] md:h-[100px] bg-white rounded-xl border border-slate-200 shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1 p-4">
+                    <Image
+                      src={client.imageSrc}
+                      alt={client.name}
+                      fill
+                      className="object-contain p-4"
+                      sizes="(max-width: 768px) 160px, 200px"
+                      quality={100}
+                      aria-hidden="true"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Second set of logos for seamless loop */}
+            <div className="flex shrink-0 animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none" aria-hidden="true">
+              {clientLogos.map((client, index) => (
+                <div
+                  key={`dup-${client.name}-${index}`}
+                  className="flex items-center justify-center shrink-0 pr-6 md:pr-10"
+                >
+                  <div className="relative flex items-center justify-center w-[160px] h-[80px] md:w-[200px] md:h-[100px] bg-white rounded-xl border border-slate-200 shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1 p-4">
+                    <Image
+                      src={client.imageSrc}
+                      alt={client.name}
+                      fill
+                      className="object-contain p-4"
+                      sizes="(max-width: 768px) 160px, 200px"
+                      quality={100}
+                      aria-hidden="true"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+
           </div>
           {/* Testimonial */}
           <div className="max-w-2xl mx-auto text-center bg-[#F8FAFC] border border-[#E2E8F0] rounded-sm p-8">
