@@ -6,6 +6,7 @@ import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { heroCarouselImages } from '@/data/hero-carousel-images';
 import {
   ArrowRight,
   CheckCircle2,
@@ -75,6 +76,15 @@ const trustBadges: { label: string; variant: 'iso' | 'madeInIndia' | 'years' | '
  * @see HOMEPAGE_ARCHITECTURE.md § Section 01
  */
 export function HeroSection() {
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroCarouselImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [heroCarouselImages.length]);
+
   return (
     <section
       aria-labelledby="hero-heading"
@@ -200,34 +210,51 @@ export function HeroSection() {
             className="order-2 relative"
           >
             {/* Light surface background for product showcase */}
-            <div className="relative aspect-[4/3] lg:aspect-square rounded-lg bg-brand-surfaceGray border border-slate-200 overflow-hidden shadow-elevated">
-              <Image
-                src="/images/hero/honeywell-hydraulic-cylinder-hero.webp"
-                alt="Double acting hydraulic cylinder manufactured by Honeywell Hydraulics, Ahmedabad"
-                fill
-                priority
-                fetchPriority="high"
-                decoding="sync"
-                quality={85}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                className="object-contain p-4"
-                unoptimized
-              />
+            <div className="relative aspect-[4/3] lg:aspect-square rounded-lg bg-white border border-slate-200 overflow-hidden shadow-elevated">
+              {heroCarouselImages.map((item, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                  }`}
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    title={item.title}
+                    fill
+                    priority={index === 0}
+                    fetchPriority={index === 0 ? "high" : "auto"}
+                    decoding="sync"
+                    quality={85}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                    className="object-contain p-2 lg:p-6 w-full h-full"
+                    unoptimized
+                  />
 
-              {/* Product label overlay */}
-              <div
-                className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-sm px-4 py-3"
-              >
-                <p className="text-xs font-bold uppercase tracking-[0.12em] text-honeywell-red font-body mb-0.5">
-                  Featured Product
-                </p>
-                <p className="text-sm font-display font-bold text-honeywell-navy">
-                  Double Acting Hydraulic Cylinder
-                </p>
-                <p className="text-xs text-brand-steelGray font-body">
-                  Custom bore: 40mm – 300mm · Pressure tested · Factory-direct
-                </p>
-              </div>
+                  {/* Product label overlay */}
+                  <div
+                    className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-sm px-4 py-3"
+                  >
+                    <div className="flex items-center justify-between mb-0.5">
+                      <p className="text-xs font-bold uppercase tracking-[0.12em] text-honeywell-red font-body">
+                        Featured Product
+                      </p>
+                      <div className="flex gap-1">
+                        {heroCarouselImages.map((_, dotIndex) => (
+                          <div 
+                            key={dotIndex} 
+                            className={`h-1.5 rounded-full transition-all duration-300 ${dotIndex === currentSlide ? 'w-4 bg-honeywell-red' : 'w-1.5 bg-slate-300'}`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <p className="text-sm font-display font-bold text-honeywell-navy">
+                      {item.title}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Decorative accents — engineering precision feel */}

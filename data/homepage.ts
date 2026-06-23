@@ -272,7 +272,7 @@ export const processSteps: ProcessStep[] = [
   {
     iconName: 'Drill',
     title: 'Micron-Level CNC Machining',
-    body: 'In-house precision honing, skiving, and automated CNC turning in our Kathwada facility guarantees zero-tolerance manufacturing.',
+    body: 'In-house precision CNC machining in our Kathwada facility guarantees zero-tolerance manufacturing.',
   },
   {
     iconName: 'ShieldCheck',

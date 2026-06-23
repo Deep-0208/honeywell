@@ -199,8 +199,8 @@ export default function Header({ navigation }: HeaderProps) {
                             font-body transition-all duration-200
                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                             ${isActive || isMenuOpen
-                              ? 'text-honeywell-navy bg-slate-100'
-                              : 'text-slate-600 hover:text-honeywell-navy hover:bg-slate-50'
+                              ? 'text-honeywell-navy bg-slate-100 font-bold'
+                              : 'text-honeywell-navy font-bold hover:text-honeywell-red hover:bg-slate-50'
                             }
                           `}
                         >
@@ -225,8 +225,8 @@ export default function Header({ navigation }: HeaderProps) {
                             font-body transition-all duration-200
                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                             ${isActive
-                              ? 'text-honeywell-navy bg-slate-100'
-                              : 'text-slate-600 hover:text-honeywell-navy hover:bg-slate-50'
+                              ? 'text-honeywell-navy bg-slate-100 font-bold'
+                              : 'text-honeywell-navy font-bold hover:text-honeywell-red hover:bg-slate-50'
                             }
                           `}
                         >
@@ -290,26 +290,7 @@ export default function Header({ navigation }: HeaderProps) {
 
 
 
-              {/* Request Quote CTA */}
-              <div>
-                <Link
-                  href={navigation.ctaHref}
-                  className="
-                    hidden sm:inline-flex items-center gap-1.5 xl:gap-2
-                    px-4 xl:px-5 py-2 xl:py-2.5 rounded-full
-                    bg-honeywell-red text-white
-                    text-[12px] xl:text-[13px] font-bold font-body tracking-[0.02em] whitespace-nowrap
-                    hover:bg-[#B71C1C]
-                    transition-all duration-250
-                    shadow-[0_1px_3px_rgba(227,27,35,0.24)]
-                    hover:shadow-[0_4px_12px_-2px_rgba(227,27,35,0.32)]
-                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2 focus-visible:rounded-full
-                  "
-                >
-                  {navigation.ctaLabel}
-                  <ArrowRight className="w-3.5 h-3.5" strokeWidth={2.5} aria-hidden="true" />
-                </Link>
-              </div>
+              {/* Removed Request Quote CTA from header */}
 
               {/* Mobile Menu Toggle */}
               <button

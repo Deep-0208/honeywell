@@ -16,12 +16,12 @@ export function Badge({ variant = 'default', className = '', children, ...props 
   const baseStyles = 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium font-body uppercase tracking-wider';
   
   const variants = {
-    iso: 'bg-honeywell-navy/10 text-honeywell-navy', // Navy subtle
-    years: 'bg-honeywell-red/10 text-[#B91C1C]', // Red subtle with higher contrast text
-    clients: 'bg-green-100 text-green-800',
-    madeInIndia: 'bg-orange-100 text-orange-800',
-    custom: 'bg-purple-100 text-purple-800',
-    default: 'bg-gray-100 text-gray-800',
+    iso: 'bg-honeywell-navy text-white',
+    years: 'bg-honeywell-navy text-white',
+    clients: 'bg-honeywell-red text-white',
+    madeInIndia: 'bg-honeywell-red text-white',
+    custom: 'bg-honeywell-navy text-white',
+    default: 'bg-honeywell-navy text-white',
   };
 
   const classes = `

@@ -164,5 +164,9 @@ export const siteNavigation: SiteNavigation = {
       label: 'Contact',
       href: '/contact-us/',
     },
+    {
+      label: 'Gallery',
+      href: '/gallery/',
+    },
   ],
 };

@@ -26,7 +26,7 @@ export function ClientLogosSection() {
             Trusted by Manufacturers Across India
           </Heading>
           <p className="text-brand-steelGray font-body text-base md:text-lg">
-            Supporting OEMs, process industries, infrastructure projects, and industrial automation companies with reliable hydraulic solutions.
+            Delivering reliable hydraulic solutions for plastic moulding, construction, heavy-duty press, and agricultural industries.
           </p>
         </div>
 
