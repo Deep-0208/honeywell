@@ -151,7 +151,7 @@ export const homepageProducts: HomepageProduct[] = [
     description:
       'Robust 3-phase and single-phase units for continuous plant operations. Custom flow rates and pressures for your exact machinery requirements.',
     category: 'Power Units',
-    imageSrc: '/images/products/hero/hydraulic-power-pack-manufacturer.webp',
+    imageSrc: '/images/products/hero/hydraulic-power-pack.webp',
     href: '/products/hydraulic-power-packs/',
     ctaText: 'View Power Packs',
   },
