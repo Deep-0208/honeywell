@@ -21,7 +21,7 @@ export function ClientLogosSection() {
       <Container className="relative z-10 flex flex-col gap-12 md:gap-16">
 
         {/* Layer 1 — Trust Headline */}
-        <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
+        <div className="text-center flex flex-col items-center">
           <Heading variant="section" as="h2" id="trust-heading" className="text-honeywell-navy mb-4">
             Trusted by Manufacturers Across India
           </Heading>
@@ -42,9 +42,9 @@ export function ClientLogosSection() {
                   <Image
                     src={client.imageSrc}
                     alt="" /* Decorative in marquee context */
-                    fill
-                    className="object-contain p-2 transition-all duration-300"
-                    sizes="(max-width: 768px) 200px, 240px"
+                    width={240}
+                    height={120}
+                    className="object-contain p-2 transition-all duration-300 w-full h-full"
                     quality={100}
                     aria-hidden="true"
                   />
@@ -64,9 +64,9 @@ export function ClientLogosSection() {
                   <Image
                     src={client.imageSrc}
                     alt=""
-                    fill
-                    className="object-contain p-2 transition-all duration-300"
-                    sizes="(max-width: 768px) 200px, 240px"
+                    width={240}
+                    height={120}
+                    className="object-contain p-2 transition-all duration-300 w-full h-full"
                     quality={100}
                     aria-hidden="true"
                   />

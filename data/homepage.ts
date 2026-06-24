@@ -212,44 +212,44 @@ export const homepageIndustries: HomepageIndustry[] = [
   {
     industryName: 'Injection Moulding',
     description:
-      'High-speed clamping cylinders and core-pull cylinders for continuous moulding operations.',
+      'High-speed hydraulic cylinders and robust power packs for continuous plastic injection moulding operations.',
     iconName: 'Cog',
     href: '/industries/injection-moulding/',
   },
   {
-    industryName: 'Automotive OEM',
+    industryName: 'Construction & Earthmoving',
     description:
-      'Precision-engineered hydraulic components for assembly lines and robotic welding stations.',
-    iconName: 'Car',
-    href: '/industries/automotive/',
-  },
-  {
-    industryName: 'Steel & Metallurgy',
-    description:
-      'Rugged, heat-resistant hydraulic cylinders for rolling mills and forging operations.',
-    iconName: 'Factory',
-    href: '/industries/steel-metallurgy/',
-  },
-  {
-    industryName: 'Construction Equipment',
-    description:
-      'Shock-resistant boom and bucket cylinders built for extreme outdoor environments.',
+      'Shock-resistant boom and bucket hydraulic cylinders built for excavators, loaders, and extreme outdoor environments.',
     iconName: 'Construction',
-    href: '/industries/construction-equipment/',
+    href: '/industries/construction-earthmoving/',
+  },
+  {
+    industryName: 'Manufacturing & Industrial Automation',
+    description:
+      'Precision-engineered fluid power systems, actuators, and power units for automated assembly lines.',
+    iconName: 'Factory',
+    href: '/industries/manufacturing-automation/',
   },
   {
     industryName: 'Material Handling',
     description:
-      'Judder-free lifting power for warehouse automation and conveyor logistics.',
+      'Judder-free hydraulic lifting power for warehouse automation, scissor lifts, dock levelers, and conveyors.',
     iconName: 'Package',
     href: '/industries/material-handling/',
   },
   {
-    industryName: 'Special Purpose Machines',
+    industryName: 'Rolling Mill',
     description:
-      'Custom fluid power for unique, one-off manufacturing equipment and SPMs.',
+      'Heavy-duty hydraulic cylinders and power units engineered to withstand high temperatures and abrasive steel mill environments.',
+    iconName: 'Hammer',
+    href: '/industries/rolling-mill/',
+  },
+  {
+    industryName: 'Wooden Industries',
+    description:
+      'Custom hydraulic presses and high-pressure fluid power solutions for heavy-duty timber processing and plywood manufacturing.',
     iconName: 'Wrench',
-    href: '/industries/special-purpose-machines/',
+    href: '/industries/wooden-industries/',
   },
 ];
 

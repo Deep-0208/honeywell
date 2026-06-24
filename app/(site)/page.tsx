@@ -22,7 +22,7 @@ import { HomepageCTASection } from '@/components/homepage/HomepageCTASection';
    ═══════════════════════════════════════════════ */
 
 const HOMEPAGE_TITLE =
-  'Hydraulic Cylinder & Power Pack Manufacturer in Ahmedabad | Honeywell Hydraulics';
+  'Hydraulic Cylinder & Power Pack Manufacturer in Ahmedabad';
 
 const HOMEPAGE_DESCRIPTION =
   'Leading manufacturer of hydraulic cylinders, power packs, manifold blocks, and custom hydraulic systems in Ahmedabad, Gujarat. ISO 9001:2015 certified. Serving 25+ industries across India.';
@@ -48,11 +48,6 @@ export const metadata: Metadata = {
     canonical: '/',
     image: '/images/og/default-og.jpg',
   }),
-  /* Override title with `absolute` to bypass layout template
-     and prevent "... | Honeywell Hydraulics | Honeywell Hydraulics" */
-  title: {
-    absolute: HOMEPAGE_TITLE,
-  },
 };
 
 /* ═══════════════════════════════════════════════

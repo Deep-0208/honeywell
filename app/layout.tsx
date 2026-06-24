@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   },
   description: SEO_DEFAULTS.description,
   metadataBase: new URL(COMPANY_INFO.websiteUrl),
-  alternates: {},
   openGraph: {
     title: {
       template: `%s | ${COMPANY_INFO.name}`,
@@ -44,11 +43,11 @@ export const metadata: Metadata = {
     images: [SEO_DEFAULTS.ogImage],
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     googleBot: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,

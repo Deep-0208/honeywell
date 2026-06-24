@@ -2,8 +2,6 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { MobileConversionBar } from '@/components/MobileConversionBar';
-import JsonLd from '@/components/seo/JsonLd';
-import { buildOrganizationJsonLd } from '@/lib/seo';
 import { getDynamicNavigation } from '@/lib/navigation';
 
 /**
@@ -22,12 +20,10 @@ export default function SiteLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const orgSchema = buildOrganizationJsonLd();
   const navigationData = getDynamicNavigation();
 
   return (
     <>
-      <JsonLd data={orgSchema} />
 
       {/* Accessibility: Skip to Main Content */}
       <a

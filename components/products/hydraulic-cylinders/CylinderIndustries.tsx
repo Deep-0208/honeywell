@@ -9,33 +9,39 @@ export function CylinderIndustries() {
   const industries = [
     {
       industryName: "Injection Moulding",
-      description: "High-speed, high-cycle cylinders designed to withstand rapid heat generation and continuous operation.",
+      description: "High-speed, high-cycle tie-rod hydraulic cylinders designed for rapid core-pulling and mould clamping.",
       href: "/industries/injection-moulding/",
       icon: <FaIndustry className="w-6 h-6" />
     },
     {
-      industryName: "Automotive OEM",
-      description: "Precision actuators for assembly lines, testing equipment, and automated manufacturing systems.",
-      href: "/industries/automotive/",
-      icon: <FaTruck className="w-6 h-6" />
-    },
-    {
-      industryName: "Steel & Metallurgy",
-      description: "Heavy-duty cylinders built for extreme temperatures, high loads, and abrasive environments.",
-      href: "/industries/steel-metallurgy/",
-      icon: <FaHammer className="w-6 h-6" />
-    },
-    {
-      industryName: "Agricultural Equipment",
-      description: "Reliable hydraulic solutions for tractors, harvesters, and heavy farm machinery.",
-      href: "/industries/agricultural-equipment/",
+      industryName: "Construction & Earthmoving",
+      description: "Heavy-duty boom, stick, and bucket hydraulic cylinders engineered for shock resistance in excavators and earthmovers.",
+      href: "/industries/construction-earthmoving/",
       icon: <FaTractor className="w-6 h-6" />
     },
     {
-      industryName: "Fly Ash Brick Machinery",
-      description: "High-pressure compaction cylinders ensuring uniform brick density and rapid production cycles.",
-      href: "/industries/fly-ash-brick/",
+      industryName: "Manufacturing & Industrial Automation",
+      description: "Precision hydraulic actuators with micron-level accuracy for robotic welding, assembly lines, and testing jigs.",
+      href: "/industries/manufacturing-automation/",
       icon: <FaCogs className="w-6 h-6" />
+    },
+    {
+      industryName: "Material Handling",
+      description: "Reliable, leak-free telescopic and double-acting cylinders for forklifts, scissor lifts, and automated guided vehicles (AGVs).",
+      href: "/industries/material-handling/",
+      icon: <FaTruck className="w-6 h-6" />
+    },
+    {
+      industryName: "Rolling Mill",
+      description: "Rugged mill-type hydraulic cylinders built with high-temperature Viton seals to withstand extreme foundry environments.",
+      href: "/industries/rolling-mill/",
+      icon: <FaHammer className="w-6 h-6" />
+    },
+    {
+      industryName: "Wooden Industries",
+      description: "High-tonnage hydraulic press cylinders optimized for plywood pressing, veneer peeling, and heavy timber cutting machines.",
+      href: "/industries/wooden-industries/",
+      icon: <FaIndustry className="w-6 h-6" />
     }
   ];
 

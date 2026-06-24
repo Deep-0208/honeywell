@@ -360,12 +360,12 @@ export function QuoteForm() {
               disabled={status === 'submitting'}
             >
               <option value="" disabled>Select your industry…</option>
-              <option value="automotive">Automotive OEM</option>
               <option value="injection-moulding">Injection Moulding</option>
-              <option value="steel-metallurgy">Steel &amp; Metallurgy</option>
-              <option value="press-machine">Press Machine Manufacturing</option>
-              <option value="goods-lifts">Goods Lifts &amp; Elevators</option>
-              <option value="car-parking">Car Parking Systems</option>
+              <option value="construction-earthmoving">Construction &amp; Earthmoving</option>
+              <option value="manufacturing-automation">Manufacturing &amp; Industrial Automation</option>
+              <option value="material-handling">Material Handling</option>
+              <option value="rolling-mill">Rolling Mill</option>
+              <option value="wooden-industries">Wooden Industries</option>
               <option value="other">Other</option>
             </select>
           </LabelledField>

@@ -3,33 +3,45 @@ import Link from 'next/link';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { IndustryCard } from '@/components/cards/IndustryCard';
-import { FaIndustry, FaHammer, FaTruck, FaCogs } from 'react-icons/fa';
+import { FaIndustry, FaHammer, FaTruck, FaCogs, FaTractor } from 'react-icons/fa';
 
 export function PowerPackIndustries() {
   const industries = [
     {
-      industryName: "Plastic Injection Moulding",
-      description: "Providing the rapid flow required for high-speed core pulls and the sustained high pressure required for mould clamping without overheating.",
+      industryName: "Injection Moulding",
+      description: "High-flow hydraulic power packs delivering sustained pressure for rapid mould clamping and injection cycles without overheating.",
       href: "/industries/injection-moulding/",
       icon: <FaIndustry className="w-6 h-6" />
     },
     {
-      industryName: "Steel & Metallurgy",
-      description: "Delivering extreme-pressure fluid power to rolling mills while resisting the ambient radiant heat of the foundry environment.",
-      href: "/industries/steel-metallurgy/",
-      icon: <FaHammer className="w-6 h-6" />
+      industryName: "Construction & Earthmoving",
+      description: "Compact, high-torque hydraulic power units designed to drive heavy earthmoving attachments and mobile construction equipment.",
+      href: "/industries/construction-earthmoving/",
+      icon: <FaTractor className="w-6 h-6" />
+    },
+    {
+      industryName: "Manufacturing & Industrial Automation",
+      description: "Energy-efficient hydraulic power units with proportional control valves for synchronized, automated manufacturing lines.",
+      href: "/industries/manufacturing-automation/",
+      icon: <FaCogs className="w-6 h-6" />
     },
     {
       industryName: "Material Handling",
-      description: "Supplying judder-free, highly reliable lifting power for automated warehouse logistics, scissor lifts, and dock levelers.",
+      description: "Reliable AC/DC hydraulic power packs providing smooth, judder-free lifting force for dock levelers and warehouse lifts.",
       href: "/industries/material-handling/",
       icon: <FaTruck className="w-6 h-6" />
     },
     {
-      industryName: "Automotive OEM",
-      description: "Driving synchronized robotic welding and assembly stations with 0.01mm repeatability and zero-leak reliability.",
-      href: "/industries/automotive/",
-      icon: <FaCogs className="w-6 h-6" />
+      industryName: "Rolling Mill",
+      description: "Heavy-duty, continuous-duty hydraulic power systems engineered for the extreme pressures and high temperatures of steel mills.",
+      href: "/industries/rolling-mill/",
+      icon: <FaHammer className="w-6 h-6" />
+    },
+    {
+      industryName: "Wooden Industries",
+      description: "High-capacity hydraulic power packs designed to drive multi-cylinder plywood presses and continuous timber processing machinery.",
+      href: "/industries/wooden-industries/",
+      icon: <FaIndustry className="w-6 h-6" />
     }
   ];
 
