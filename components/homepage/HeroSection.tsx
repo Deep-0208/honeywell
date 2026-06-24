@@ -105,7 +105,7 @@ export function HeroSection() {
 
             {/* Overline — primary keyword signal */}
             <p
-              className="text-lg sm:text-xl md:text-2xl font-bold font-body text-honeywell-red mb-3 sm:mb-4"
+              className="text-lg sm:text-xl md:text-2xl font-body text-honeywell-red mb-3 sm:mb-4"
             >
               Hydraulic System Manufacturer in Ahmedabad
             </p>
@@ -128,7 +128,7 @@ export function HeroSection() {
                 <span className="flex shrink-0 items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-honeywell-navy/5 border border-honeywell-navy/10">
                   <Globe className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-honeywell-navy" strokeWidth={2} />
                 </span>
-                <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-honeywell-navy leading-tight">
+                <p className="text-lg sm:text-xl md:text-2xl font-display text-honeywell-navy leading-tight">
                   Export Hydraulic Solution to All Over India.
                 </p>
               </div>
@@ -136,7 +136,7 @@ export function HeroSection() {
               <div className="flex items-center">
                 <div className="inline-flex items-center gap-3.5 px-6 py-3 rounded-full bg-honeywell-navy shadow-sm">
                   <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                  <span className="text-sm sm:text-base md:text-lg font-bold text-white tracking-wide uppercase">
+                  <span className="text-sm sm:text-base md:text-lg text-white tracking-wide uppercase">
                     ISO 9001:2015 Certified Company
                   </span>
                 </div>
@@ -145,13 +145,13 @@ export function HeroSection() {
 
             {/* ─── Trust Chips ─── */}
             <ul
-              className="flex flex-wrap gap-x-4 sm:gap-x-6 gap-y-3 mb-8 sm:mb-10"
+              className="flex flex-wrap lg:flex-nowrap gap-x-3 sm:gap-x-5 md:gap-x-6 gap-y-3 mb-8 sm:mb-10"
               aria-label="Key advantages"
             >
               {trustChips.map((chip, i) => (
                 <li
                   key={chip}
-                  className="flex items-center gap-2 text-sm sm:text-base font-medium text-brand-darkSlate font-body"
+                  className="flex items-center gap-1.5 sm:gap-2 text-sm sm:text-[15px] font-medium text-brand-darkSlate font-body whitespace-nowrap"
                 >
                   <CheckCircle2
                     className="w-5 h-5 text-honeywell-red shrink-0"

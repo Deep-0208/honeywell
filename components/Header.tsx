@@ -173,7 +173,7 @@ export default function Header({ navigation }: HeaderProps) {
           {/* ═══════════════════════════════
              RIGHT — Pill Container (Nav + Contact)
              ═══════════════════════════════ */}
-          <div className={`flex-1 flex items-center justify-between transition-all duration-300 ${isScrolled
+          <div className={`flex items-center justify-end transition-all duration-300 ${isScrolled
               ? ''
               : 'h-16 lg:h-[76px] px-4 sm:px-6 lg:px-8 bg-white rounded-full shadow-[0_4px_20px_rgb(0,0,0,0.06)]'
             }`}>
@@ -182,10 +182,10 @@ export default function Header({ navigation }: HeaderProps) {
                CENTER — Desktop Navigation
                ═══════════════════════════════ */}
             <nav
-              className="hidden lg:flex items-center justify-start h-full flex-1"
+              className="hidden lg:flex items-center justify-end h-full"
               aria-label="Main navigation"
             >
-              <ul className="flex items-center justify-start h-full">
+              <ul className="flex items-center justify-end h-full pr-3 xl:pr-4">
                 {navigation.mainNav.map((item, index) => {
                   const hasMega = !!item.megaMenu;
                   const isMenuOpen = openMenu === item.label;
@@ -208,8 +208,8 @@ export default function Header({ navigation }: HeaderProps) {
                           onClick={() => setOpenMenu(isMenuOpen ? null : item.label)}
                           className={`
                             group inline-flex items-center gap-1 xl:gap-1.5
-                            h-[36px] xl:h-[40px] px-2 xl:px-4 rounded-full
-                            text-[14px] lg:text-[15px] xl:text-[16px] font-semibold tracking-wide whitespace-nowrap
+                            h-[36px] xl:h-[40px] px-2 xl:px-3 rounded-full
+                            text-[16px] lg:text-[18px] xl:text-[20px] font-medium tracking-wide whitespace-nowrap
                             font-body transition-all duration-200
                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                             ${isActive || isMenuOpen
@@ -233,8 +233,8 @@ export default function Header({ navigation }: HeaderProps) {
                           href={item.href}
                           className={`
                             group inline-flex items-center
-                            h-[36px] xl:h-[40px] px-2 xl:px-4 rounded-full
-                            text-[14px] lg:text-[15px] xl:text-[16px] font-semibold tracking-wide whitespace-nowrap
+                            h-[36px] xl:h-[40px] px-2 xl:px-3 rounded-full
+                            text-[16px] lg:text-[18px] xl:text-[20px] font-medium tracking-wide whitespace-nowrap
                             font-body transition-all duration-200
                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                             ${isActive
@@ -258,7 +258,7 @@ export default function Header({ navigation }: HeaderProps) {
 
                       {/* Separator Line */}
                       {index < navigation.mainNav.length - 1 && (
-                        <div className="hidden lg:block w-[1px] h-4 xl:h-5 bg-gray-200 mx-0.5 xl:mx-2 shrink-0" aria-hidden="true" />
+                        <div className="hidden lg:block w-[1px] h-4 xl:h-5 bg-gray-200 mx-0.5 xl:mx-1 shrink-0" aria-hidden="true" />
                       )}
                     </li>
                   );
@@ -296,7 +296,7 @@ export default function Header({ navigation }: HeaderProps) {
                     aria-hidden="true"
                   />
                 </span>
-                <span className="text-[14px] font-semibold tracking-[0.01em] font-body text-honeywell-navy group-hover:text-honeywell-navy">
+                <span className="text-[16px] lg:text-[18px] xl:text-[20px] font-medium tracking-[0.01em] font-body text-honeywell-navy group-hover:text-honeywell-navy">
                   {navigation.phoneDisplay}
                 </span>
               </a>
