@@ -23,18 +23,11 @@ export function ProductsSection() {
     <Section bg="gray" aria-labelledby="products-heading">
       <Container>
         {/* Section header */}
-        <div className="text-center mb-12">
-          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
+        <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
+          <Heading variant="section" as="h2" id="products-heading" className="text-honeywell-navy mb-4">
             Our Products
-          </p>
-          <Heading variant="section" as="h2" id="products-heading">
-            Precision-Engineered Hydraulic Equipment
           </Heading>
-          <p className="text-brand-steelGray font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
-            From individual replacement cylinders to complete turnkey hydraulic
-            systems. Built to your exact specifications in our Ahmedabad
-            manufacturing facility.
-          </p>
+          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
         </div>
 
         {/* Product cards grid */}
@@ -56,12 +49,12 @@ export function ProductsSection() {
         {/* Section CTA */}
         <div className="text-center mt-10">
           <Button
-            href="/contact-us/"
+            href="/products/"
             variant="primary"
             size="lg"
             rightIcon={<ArrowRight className="w-5 h-5" />}
           >
-            Contact Us
+            View All Products
           </Button>
         </div>
       </Container>

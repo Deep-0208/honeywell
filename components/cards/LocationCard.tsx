@@ -31,7 +31,7 @@ export function LocationCard({
             <MapPin className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-xl font-display font-bold text-honeywell-navy group-hover:text-honeywell-red transition-colors">
+            <h3 className="text-xl font-display font-bold text-honeywell-navy">
               <a href={href} className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:rounded-sm">
                 <span className="absolute inset-0" aria-hidden="true" />
                 {city}

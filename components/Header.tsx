@@ -38,7 +38,13 @@ export default function Header({ navigation }: HeaderProps) {
   /* ── Scroll detection ── */
   useEffect(() => {
     function handleScroll() {
-      setIsScrolled(window.scrollY > 10);
+      const currentScrollY = window.scrollY;
+
+      setIsScrolled((prev) => {
+        if (!prev && currentScrollY > 50) return true;
+        if (prev && currentScrollY < 10) return false;
+        return prev;
+      });
     }
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
@@ -131,47 +137,55 @@ export default function Header({ navigation }: HeaderProps) {
     <>
       <header
         ref={headerRef}
-        className={`sticky top-0 z-50 w-full flex justify-center transition-all duration-300 px-4 sm:px-6 pb-2 ${
-          isScrolled ? 'pt-2 sm:pt-4' : 'pt-4 sm:pt-6'
-        }`}
+        className={`sticky top-0 z-50 w-full flex justify-center transition-all duration-300 ${isScrolled
+            ? 'bg-white shadow-md rounded-b-3xl'
+            : 'bg-transparent pt-4 sm:pt-6 pb-2 px-4 sm:px-6'
+          }`}
         role="banner"
       >
-        <div className={`w-full max-w-[1360px] bg-white rounded-full transition-all duration-300 ${
-          isScrolled 
-            ? 'shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100' 
-            : 'shadow-[0_4px_20px_rgb(0,0,0,0.06)] border border-gray-200'
-        }`}>
-          <div className="flex items-center justify-between h-16 lg:h-[76px] px-4 sm:px-6 lg:px-8">
+        <div
+          className={`w-full max-w-[1360px] flex items-center justify-between transition-all duration-300 ${isScrolled
+              ? 'h-16 lg:h-20 px-4 sm:px-6 lg:px-8 gap-4 lg:gap-8'
+              : 'gap-4 lg:gap-8'
+            }`}
+        >
 
-            {/* ═══════════════════════════════
-               LEFT — Logo
-               ═══════════════════════════════ */}
-            <Link
-              href="/"
-              className="
-                shrink-0 flex items-center mr-2 lg:mr-4 xl:mr-8
-                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:ring-offset-2 focus-visible:rounded-full
-              "
-              aria-label="Honeywell Hydraulics — Home"
-            >
-              <Image
-                src="/long-size-logohydralics-logo.png"
-                alt="Honeywell Hydraulics — Custom Hydraulic Cylinder & Power Pack Manufacturer"
-                width={200}
-                height={58}
-                className="h-9 lg:h-[44px] xl:h-[48px] w-auto"
-                priority
-              />
-            </Link>
+          {/* ═══════════════════════════════
+             LEFT — Logo (Pill Background)
+             ═══════════════════════════════ */}
+          <Link
+            href="/"
+            className={`shrink-0 flex items-center justify-center transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:ring-offset-2 h-16 lg:h-[76px] ${
+              isScrolled ? '' : 'px-3 sm:px-4 lg:px-6 bg-white rounded-full shadow-[0_4px_20px_rgb(0,0,0,0.06)]'
+            }`}
+            aria-label="Honeywell Hydraulics — Home"
+          >
+            <Image
+              src="/long-size-logohydralics-logo.png"
+              alt="Honeywell Hydraulics — Custom Hydraulic Cylinder & Power Pack Manufacturer"
+              width={350}
+              height={100}
+              className="w-auto transition-all duration-300 h-12 lg:h-[56px] xl:h-[64px]"
+              priority
+            />
+          </Link>
+
+          {/* ═══════════════════════════════
+             RIGHT — Pill Container (Nav + Contact)
+             ═══════════════════════════════ */}
+          <div className={`flex-1 flex items-center justify-between transition-all duration-300 ${isScrolled
+              ? ''
+              : 'h-16 lg:h-[76px] px-4 sm:px-6 lg:px-8 bg-white rounded-full shadow-[0_4px_20px_rgb(0,0,0,0.06)]'
+            }`}>
 
             {/* ═══════════════════════════════
                CENTER — Desktop Navigation
                ═══════════════════════════════ */}
             <nav
-              className="hidden lg:flex items-center justify-center h-full flex-1"
+              className="hidden lg:flex items-center justify-start h-full flex-1"
               aria-label="Main navigation"
             >
-              <ul className="flex items-center justify-center h-full">
+              <ul className="flex items-center justify-start h-full">
                 {navigation.mainNav.map((item, index) => {
                   const hasMega = !!item.megaMenu;
                   const isMenuOpen = openMenu === item.label;
@@ -195,21 +209,20 @@ export default function Header({ navigation }: HeaderProps) {
                           className={`
                             group inline-flex items-center gap-1 xl:gap-1.5
                             h-[36px] xl:h-[40px] px-2 xl:px-4 rounded-full
-                            text-[13px] xl:text-[15px] font-medium tracking-wide whitespace-nowrap
+                            text-[14px] lg:text-[15px] xl:text-[16px] font-semibold tracking-wide whitespace-nowrap
                             font-body transition-all duration-200
                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                             ${isActive || isMenuOpen
-                              ? 'text-honeywell-navy bg-slate-100 font-bold'
-                              : 'text-honeywell-navy font-bold hover:text-honeywell-red hover:bg-slate-50'
+                              ? 'text-honeywell-navy bg-slate-100'
+                              : 'text-honeywell-navy hover:text-honeywell-red hover:bg-slate-50'
                             }
                           `}
                         >
                           <span>{item.label}</span>
                           <span className={`flex items-center transition-transform duration-200 ${isMenuOpen ? 'rotate-180' : ''}`}>
                             <ChevronDown
-                              className={`w-4 h-4 transition-colors duration-200 ${
-                                isActive || isMenuOpen ? 'text-honeywell-navy' : 'text-slate-400 group-hover:text-honeywell-navy'
-                              }`}
+                              className={`w-4 h-4 transition-colors duration-200 ${isActive || isMenuOpen ? 'text-honeywell-navy' : 'text-slate-400 group-hover:text-honeywell-navy'
+                                }`}
                               strokeWidth={2}
                               aria-hidden="true"
                             />
@@ -221,12 +234,12 @@ export default function Header({ navigation }: HeaderProps) {
                           className={`
                             group inline-flex items-center
                             h-[36px] xl:h-[40px] px-2 xl:px-4 rounded-full
-                            text-[13px] xl:text-[15px] font-medium tracking-wide whitespace-nowrap
+                            text-[14px] lg:text-[15px] xl:text-[16px] font-semibold tracking-wide whitespace-nowrap
                             font-body transition-all duration-200
                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                             ${isActive
-                              ? 'text-honeywell-navy bg-slate-100 font-bold'
-                              : 'text-honeywell-navy font-bold hover:text-honeywell-red hover:bg-slate-50'
+                              ? 'text-honeywell-navy bg-slate-100'
+                              : 'text-honeywell-navy hover:text-honeywell-red hover:bg-slate-50'
                             }
                           `}
                         >

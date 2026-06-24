@@ -5,11 +5,13 @@ import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { IconBox } from '@/components/ui/IconBox';
+import { Button } from '@/components/ui/Button';
 import {
   ClipboardList,
   PenTool,
   Drill,
   ShieldCheck,
+  ArrowRight,
 } from 'lucide-react';
 
 import { processSteps } from '@/data/homepage';
@@ -34,26 +36,28 @@ const iconMap: Record<string, React.ReactNode> = {
 export function ProcessSection() {
 
   return (
-    <Section bg="white" aria-labelledby="process-heading">
+    <Section bg="gray" aria-labelledby="process-heading">
       <Container>
         {/* Section header */}
-        <div className="text-center mb-12">
-          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
-            Our Process
-          </p>
-          <Heading variant="section" as="h2" id="process-heading">
+        <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
+          <Heading variant="section" as="h2" id="process-heading" className="text-honeywell-navy mb-4">
             From Design to Dispatch
           </Heading>
-          <p className="text-brand-steelGray font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
+          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
+          <p className="text-brand-steelGray font-body text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-4">
             Engineering precision at every step of the manufacturing process.
           </p>
         </div>
 
         {/* Process steps */}
         <div className="relative">
-          {/* Connector line — desktop only */}
+          {/* Connector line — desktop: horizontal, mobile: vertical */}
           <div
             className="hidden lg:block absolute top-16 left-[12.5%] right-[12.5%] h-0.5 bg-slate-200 origin-left"
+            aria-hidden="true"
+          />
+          <div
+            className="lg:hidden absolute top-0 bottom-0 left-1/2 w-0.5 bg-slate-200 -translate-x-1/2"
             aria-hidden="true"
           />
 
@@ -65,7 +69,7 @@ export function ProcessSection() {
               >
                 {/* Step number */}
                 <div
-                  className="w-12 h-12 rounded-full bg-honeywell-navy text-white font-mono font-bold text-lg flex items-center justify-center mb-4 relative z-10 ring-4 ring-brand-surfaceGray"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-honeywell-navy text-white font-mono font-bold text-base sm:text-lg flex items-center justify-center mb-4 relative z-10 ring-4 ring-brand-surfaceGray"
                 >
                   {String(i + 1).padStart(2, '0')}
                 </div>
@@ -88,6 +92,18 @@ export function ProcessSection() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-10 md:mt-12">
+          <Button
+            href="/request-quote/"
+            variant="primary"
+            size="lg"
+            rightIcon={<ArrowRight className="w-5 h-5" />}
+          >
+            Discuss Your Requirements
+          </Button>
         </div>
       </Container>
     </Section>

@@ -95,7 +95,7 @@ const contactPageSchema = {
       email: COMPANY_INFO.email,
       areaServed: 'IN',
       availableLanguage: ['English', 'Hindi', 'Gujarati'],
-      hoursAvailable: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], opens: '09:00', closes: '19:00' },
+      hoursAvailable: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '09:00', closes: '19:00' },
     },
   ],
 };

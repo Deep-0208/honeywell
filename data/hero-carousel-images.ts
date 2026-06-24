@@ -9,7 +9,7 @@ export const heroCarouselImages = [
   {
     src: "/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp",
     alt: "Custom-engineered hydraulic cylinder manufactured by Honeywell Hydraulics Ahmedabad",
-    title: "Custom Hydraulic Cylinder Manufacturer Ahmedabad",
+    title: "Customized Hydraulic Cylinder Manufacturer",
     description: "Tailor-made hydraulic cylinders with bore sizes up to 300mm. Engineered for specific industrial machinery requirements.",
     caption: "Precision-engineered custom hydraulic cylinder by Honeywell Hydraulics.",
     keyword: "Custom Hydraulic Cylinder",
@@ -17,7 +17,7 @@ export const heroCarouselImages = [
   {
     src: "/images/home/hero/heavy-duty-hydraulic-press-cylinder.webp",
     alt: "Heavy-duty industrial hydraulic press cylinder manufactured by Honeywell Hydraulics",
-    title: "Heavy Duty Hydraulic Press Cylinder",
+    title: "Heavy Duty Hydraulic Press Cylinder Manufacturer",
     description: "High-tonnage hydraulic cylinders designed for heavy-duty industrial presses and continuous high-pressure operations.",
     caption: "Heavy-duty hydraulic press cylinder for maximum force applications.",
     keyword: "Heavy Duty Hydraulic Cylinder",
@@ -41,7 +41,7 @@ export const heroCarouselImages = [
   {
     src: "/images/home/hero/multi-station-hydraulic-power-pack.webp",
     alt: "Multi-station hydraulic power pack system manufactured by Honeywell Hydraulics",
-    title: "Hydraulic Power Pack Manufacturer",
+    title: "Multi-Station Hydraulic Power Pack  Manufacturer",
     description: "Custom multi-station hydraulic power packs providing centralized fluid power for complex synchronized manufacturing processes.",
     caption: "Multi-station hydraulic power pack for synchronized industrial processes.",
     keyword: "Hydraulic Power Pack Manufacturer",

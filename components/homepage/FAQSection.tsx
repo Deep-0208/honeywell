@@ -21,13 +21,11 @@ export function FAQSection() {
     <Section bg="gray" aria-labelledby="faq-heading">
       <Container>
         {/* Section header */}
-        <div className="text-center mb-12">
-          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
-            Frequently Asked Questions
-          </p>
-          <Heading variant="section" as="h2" id="faq-heading">
+        <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
+          <Heading variant="section" as="h2" id="faq-heading" className="text-honeywell-navy mb-4">
             Common Questions About Our Hydraulic Equipment
           </Heading>
+          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
         </div>
 
         {/* FAQAccordion — schema disabled here because the homepage

@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
@@ -11,6 +10,7 @@ import {
   ShieldCheck,
   Gauge,
   Users,
+  Factory,
 } from 'lucide-react';
 import { manufacturingHighlights } from '@/data/homepage';
 
@@ -45,14 +45,16 @@ export function ManufacturingFacilitySection() {
 
           {/* ─── Left Column — Facility Image ─── */}
           <div className="relative order-2 lg:order-1">
-            <div className="relative aspect-[4/3] rounded-lg bg-brand-lightSurface border border-slate-200 overflow-hidden shadow-elevated">
-              <Image
-                src="/images/facility/honeywell-manufacturing-facility-kathwada.webp"
-                alt="Honeywell Hydraulics manufacturing facility at Kathwada GIDC, Ahmedabad — CNC machining and hydraulic cylinder assembly"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-              />
+            <div className="relative aspect-[3/2] sm:aspect-[4/3] rounded-lg bg-brand-lightSurface border border-slate-200 overflow-hidden shadow-elevated">
+              {/* Placeholder — image pending: honeywell-manufacturing-facility-kathwada.webp */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-brand-surfaceGray to-brand-lightSurface p-8">
+                <div className="w-20 h-20 rounded-2xl bg-honeywell-navy/[0.06] flex items-center justify-center mb-4">
+                  <Factory className="w-10 h-10 text-honeywell-navy/40" />
+                </div>
+                <p className="text-brand-steelGray font-body text-sm text-center max-w-[240px]">
+                  Manufacturing facility at Kathwada GIDC, Ahmedabad
+                </p>
+              </div>
 
               {/* Location label overlay */}
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-sm px-4 py-3">
@@ -74,20 +76,18 @@ export function ManufacturingFacilitySection() {
 
           {/* ─── Right Column — Manufacturing Capabilities ─── */}
           <div className="order-1 lg:order-2">
-            <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
-              Kathwada GIDC, Ahmedabad
-            </p>
-            <Heading variant="section" as="h2" id="facility-heading" className="mb-4">
+            <Heading variant="section" as="h2" id="facility-heading" className="text-honeywell-navy mb-4">
               Our Manufacturing Facility
             </Heading>
-            <p className="text-brand-steelGray font-body text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+            <div className="w-16 h-1 bg-honeywell-red rounded-full mb-6 sm:mb-8" aria-hidden="true"></div>
+            <p className="text-brand-steelGray font-body text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xl">
               Every hydraulic cylinder and power pack is engineered and manufactured
               in-house at our Kathwada facility. Factory-direct production ensures
               quality control at every stage — from raw material to final dispatch.
             </p>
 
             {/* Capability highlights */}
-            <div className="space-y-5 mb-8">
+            <div className="space-y-4 md:space-y-5 mb-6 sm:mb-8">
               {manufacturingHighlights.map((highlight) => (
                 <div key={highlight.title} className="flex gap-4 items-start group">
                   <div className="w-10 h-10 rounded-lg bg-honeywell-navy/[0.06] flex items-center justify-center shrink-0 group-hover:bg-honeywell-red/10 transition-colors duration-200">

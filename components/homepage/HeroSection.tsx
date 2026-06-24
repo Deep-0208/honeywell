@@ -5,18 +5,18 @@ import Image from 'next/image';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
-import { Badge } from '@/components/ui/Badge';
 import { heroCarouselImages } from '@/data/hero-carousel-images';
 import {
   ArrowRight,
   CheckCircle2,
+  Globe,
 } from 'lucide-react';
 
 /* ─────────────────────────────────────────────
    HeroSection — Honeywell Hydraulics Homepage
    ─────────────────────────────────────────────
 
-   Architecture:  HOMEPAGE_ARCHITECTURE.md § Section 01
+   A  rchitecture:  HOMEPAGE_ARCHITECTURE.md § Section 01
    Design:        DESIGN.md § Hero Section
    SEO:           SEO_ARCHITECTURE.md § Homepage
    Content:       docs/content/homepage/homepage-copy.md § Section 01
@@ -59,13 +59,6 @@ const trustChips = [
   '7–15 Day Delivery',
 ] as const;
 
-/* ─── Trust Badges (verified values only) ─── */
-const trustBadges: { label: string; variant: 'iso' | 'madeInIndia' | 'years' | 'clients' }[] = [
-  { label: 'ISO 9001:2015', variant: 'iso' },
-  { label: 'Made In India', variant: 'madeInIndia' },
-  { label: 'Since 2018', variant: 'years' },
-  { label: '25+ Industries', variant: 'clients' },
-];
 
 /**
  * HeroSection
@@ -101,7 +94,7 @@ export function HeroSection() {
       </div>
 
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center pt-8 pb-12 md:pt-12 md:pb-16 lg:pt-16 lg:pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center pt-6 pb-8 sm:pt-8 sm:pb-12 md:pt-12 md:pb-16 lg:pt-16 lg:pb-20">
 
           {/* ═══════════════════════════════════════
               LEFT COLUMN — Content (Staggered entrance)
@@ -112,7 +105,7 @@ export function HeroSection() {
 
             {/* Overline — primary keyword signal */}
             <p
-              className="text-base sm:text-lg font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-4"
+              className="text-lg sm:text-xl md:text-2xl font-bold font-body text-honeywell-red mb-3 sm:mb-4"
             >
               Hydraulic System Manufacturer in Ahmedabad
             </p>
@@ -123,35 +116,45 @@ export function HeroSection() {
                 variant="section"
                 as="h1"
                 id="hero-heading"
-                className="text-honeywell-navy mb-5 leading-[1.1]"
+                className="text-honeywell-navy mb-4 sm:mb-5 leading-[1.1]"
               >
-                Hydraulic Cylinder<br />
-                &amp; Power Pack<br />
-                Manufacturer in India
+                Hydraulic Cylinder & Hydraulic Powerpack Manufacturer in India Since 2018
               </Heading>
             </div>
 
-            {/* Subtitle — from homepage-copy.md */}
-            <p
-              className="text-base sm:text-lg text-brand-steelGray font-body leading-relaxed mb-6 max-w-xl"
-            >
-              Custom hydraulic cylinders, power packs, and complete hydraulic
-              systems. Precision-engineered for 25+ industries across India
-              since 2018.
-            </p>
+            {/* Subtitle & Certification */}
+            <div className="flex flex-col gap-5 sm:gap-7 mb-8 sm:mb-10 max-w-2xl">
+              <div className="flex items-center gap-3 sm:gap-5">
+                <span className="flex shrink-0 items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-honeywell-navy/5 border border-honeywell-navy/10">
+                  <Globe className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-honeywell-navy" strokeWidth={2} />
+                </span>
+                <p className="text-lg sm:text-xl md:text-2xl font-display font-bold text-honeywell-navy leading-tight">
+                  Export Hydraulic Solution to All Over India.
+                </p>
+              </div>
+
+              <div className="flex items-center">
+                <div className="inline-flex items-center gap-3.5 px-6 py-3 rounded-full bg-honeywell-navy shadow-sm">
+                  <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                  <span className="text-sm sm:text-base md:text-lg font-bold text-white tracking-wide uppercase">
+                    ISO 9001:2015 Certified Company
+                  </span>
+                </div>
+              </div>
+            </div>
 
             {/* ─── Trust Chips ─── */}
             <ul
-              className="flex flex-wrap gap-x-5 gap-y-2 mb-8"
+              className="flex flex-wrap gap-x-4 sm:gap-x-6 gap-y-3 mb-8 sm:mb-10"
               aria-label="Key advantages"
             >
               {trustChips.map((chip, i) => (
                 <li
                   key={chip}
-                  className="flex items-center gap-1.5 text-sm font-medium text-brand-darkSlate font-body"
+                  className="flex items-center gap-2 text-sm sm:text-base font-medium text-brand-darkSlate font-body"
                 >
                   <CheckCircle2
-                    className="w-4 h-4 text-honeywell-red shrink-0"
+                    className="w-5 h-5 text-honeywell-red shrink-0"
                     aria-hidden="true"
                   />
                   {chip}
@@ -161,7 +164,7 @@ export function HeroSection() {
 
             {/* ─── CTA Group ─── */}
             <div
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-6"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-8"
             >
               <div
               >
@@ -186,21 +189,7 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* ─── Trust Badges (verified values) ─── */}
-            <div
-              className="flex flex-wrap gap-2"
-              aria-label="Company credentials"
-            >
-              {trustBadges.map((badge, i) => (
-                <span
-                  key={badge.label}
-                >
-                  <Badge variant={badge.variant}>
-                    {badge.label}
-                  </Badge>
-                </span>
-              ))}
-            </div>
+
           </div>
 
           {/* ═══════════════════════════════════════
@@ -210,13 +199,12 @@ export function HeroSection() {
             className="order-2 relative"
           >
             {/* Light surface background for product showcase */}
-            <div className="relative aspect-[4/3] lg:aspect-square rounded-lg bg-white border border-slate-200 overflow-hidden shadow-elevated">
+            <div className="relative aspect-[3/2] sm:aspect-[4/3] lg:aspect-square rounded-2xl bg-white border border-slate-200/80 overflow-hidden shadow-sm">
               {heroCarouselImages.map((item, index) => (
                 <div
                   key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
-                  }`}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                    }`}
                 >
                   <Image
                     src={item.src}
@@ -228,28 +216,28 @@ export function HeroSection() {
                     decoding="sync"
                     quality={85}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                    className="object-contain p-2 lg:p-6 w-full h-full"
+                    className="object-contain p-2 pb-[80px] sm:p-4 sm:pb-[96px] lg:p-8 lg:pb-[112px] w-full h-full"
                     unoptimized
                   />
 
                   {/* Product label overlay */}
                   <div
-                    className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-sm px-4 py-3"
+                    className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-xl px-4 py-3 sm:px-5 sm:py-4 shadow-sm"
                   >
-                    <div className="flex items-center justify-between mb-0.5">
-                      <p className="text-xs font-bold uppercase tracking-[0.12em] text-honeywell-red font-body">
+                    <div className="flex items-center justify-between mb-1.5">
+                      <p className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.15em] text-honeywell-red font-body">
                         Featured Product
                       </p>
-                      <div className="flex gap-1">
+                      <div className="flex gap-1.5">
                         {heroCarouselImages.map((_, dotIndex) => (
-                          <div 
-                            key={dotIndex} 
-                            className={`h-1.5 rounded-full transition-all duration-300 ${dotIndex === currentSlide ? 'w-4 bg-honeywell-red' : 'w-1.5 bg-slate-300'}`}
+                          <div
+                            key={dotIndex}
+                            className={`h-1.5 rounded-full transition-all duration-300 ${dotIndex === currentSlide ? 'w-4 bg-honeywell-red' : 'w-1.5 bg-slate-200'}`}
                           />
                         ))}
                       </div>
                     </div>
-                    <p className="text-sm font-display font-bold text-honeywell-navy">
+                    <p className="text-sm sm:text-base font-display font-bold text-honeywell-navy">
                       {item.title}
                     </p>
                   </div>
@@ -259,11 +247,11 @@ export function HeroSection() {
 
             {/* Decorative accents — engineering precision feel */}
             <div
-              className="hidden lg:block absolute -bottom-4 -right-4 w-24 h-24 border-2 border-slate-200 rounded-lg -z-10"
+              className="hidden lg:block absolute -bottom-5 -right-5 w-28 h-28 border-[1.5px] border-slate-200 rounded-2xl -z-10"
               aria-hidden="true"
             />
             <div
-              className="hidden lg:block absolute -top-4 -left-4 w-16 h-16 border-2 border-honeywell-red/15 rounded-lg -z-10"
+              className="hidden lg:block absolute -top-5 -left-5 w-20 h-20 border-[1.5px] border-honeywell-red/20 rounded-2xl -z-10"
               aria-hidden="true"
             />
           </div>

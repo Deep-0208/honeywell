@@ -19,9 +19,9 @@ export default function NotFound() {
       <Image
         src="/long-size-logohydralics-logo.png"
         alt="Honeywell Hydraulics Logo"
-        width={240}
-        height={58}
-        className="mb-12 h-12 md:h-14 w-auto"
+        width={280}
+        height={68}
+        className="mb-12 h-16 md:h-20 w-auto"
         priority
       />
       

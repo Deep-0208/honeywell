@@ -158,15 +158,18 @@ export const siteNavigation: SiteNavigation = {
     },
 
     /* ──────────────────────────────────────────────
+       GALLERY — Direct Link
+       ────────────────────────────────────────────── */
+    {
+      label: 'Gallery',
+      href: '/gallery/',
+    },
+    /* ──────────────────────────────────────────────
        CONTACT — Direct Link
        ────────────────────────────────────────────── */
     {
       label: 'Contact',
       href: '/contact-us/',
-    },
-    {
-      label: 'Gallery',
-      href: '/gallery/',
     },
   ],
 };

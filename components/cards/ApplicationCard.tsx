@@ -23,7 +23,7 @@ export function ApplicationCard({
   return (
     <Card variant="interactive" className="flex flex-col h-full group relative">
       <CardContent className="flex flex-col flex-1 p-6 md:p-8">
-        <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors pr-8">
+        <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3 pr-8">
           <a href={href} className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:rounded-sm">
             <span className="absolute inset-0" aria-hidden="true" />
             {applicationName}

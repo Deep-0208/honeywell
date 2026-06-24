@@ -1,26 +1,11 @@
 import type { Metadata, Viewport } from 'next';
-import { Poppins, JetBrains_Mono, Roboto } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { COMPANY_INFO, SEO_DEFAULTS } from '@/lib/constants';
 import './globals.css';
 import { Agentation } from 'agentation';
-
-const poppins = Poppins({
-  variable: '--font-poppins',
-  subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  style: ['normal', 'italic'],
-  display: 'swap',
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: '--font-jetbrains-mono',
-  subsets: ['latin'],
-  weight: ['400'],
-  display: 'swap',
-});
 
 const roboto = Roboto({
   variable: '--font-roboto',
@@ -89,6 +74,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5, // Allow zooming for accessibility
+  interactiveWidget: 'resizes-content', // Prevents CLS when mobile keyboard opens
 };
 
 /**
@@ -105,13 +91,10 @@ export default function RootLayout({
   return (
     <html
       lang="en-IN"
-      className={`${poppins.variable} ${jetbrainsMono.variable} ${roboto.variable} scroll-smooth`}
+      className={`${roboto.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
       </head>
       <body className="flex min-h-screen flex-col bg-white selection:bg-[#B2D4FF] selection:text-black">
         {children}

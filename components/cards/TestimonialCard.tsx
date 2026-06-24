@@ -26,11 +26,11 @@ export function TestimonialCard({
       {/* Subtle top accent on hover */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-honeywell-red to-honeywell-navy scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-premium origin-left" aria-hidden="true" />
       
-      <CardContent className="p-8 flex flex-col h-full">
-        <Quote className="w-10 h-10 text-slate-200 group-hover:text-honeywell-red/20 transition-colors duration-300 mb-6 shrink-0" aria-hidden="true" />
+      <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col h-full">
+        <Quote className="w-6 h-6 sm:w-10 sm:h-10 text-slate-200 group-hover:text-honeywell-red/20 transition-colors duration-300 mb-4 sm:mb-6 shrink-0" aria-hidden="true" />
         
         <blockquote className="flex-1">
-          <p className="text-brand-darkSlate font-body text-base leading-relaxed italic mb-8">
+          <p className="text-brand-darkSlate font-body text-sm sm:text-base leading-relaxed italic mb-6 sm:mb-8">
             &ldquo;{quote}&rdquo;
           </p>
         </blockquote>

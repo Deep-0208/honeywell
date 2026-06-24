@@ -142,7 +142,7 @@ export const homepageProducts: HomepageProduct[] = [
     description:
       'Heavy-duty hydraulic cylinders for continuous industrial operations. 8 standard mounting types including flange, clevis, trunnion, and tie-rod configurations.',
     category: 'Core Products',
-    imageSrc: '/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad.webp',
+    imageSrc: '/images/products/hero/hydraulic-cylinders-ahmedabad.webp',
     href: '/products/hydraulic-cylinders/',
     ctaText: 'View Cylinders',
   },
@@ -151,7 +151,7 @@ export const homepageProducts: HomepageProduct[] = [
     description:
       'Robust 3-phase and single-phase units for continuous plant operations. Custom flow rates and pressures for your exact machinery requirements.',
     category: 'Power Units',
-    imageSrc: '/images/products/hydraulic-power-packs/hydraulic-power-pack-manufacturer.webp',
+    imageSrc: '/images/products/hero/hydraulic-power-pack-manufacturer.webp',
     href: '/products/hydraulic-power-packs/',
     ctaText: 'View Power Packs',
   },
@@ -160,7 +160,7 @@ export const homepageProducts: HomepageProduct[] = [
     description:
       'Custom-machined manifold blocks for integrated hydraulic circuits. Precision-drilled ports with optimized flow paths for your specific valve configurations.',
     category: 'Fluid Control',
-    imageSrc: '/images/products/hydraulic-manifold-blocks-manufacturer.webp',
+    imageSrc: '/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp',
     href: '/products/hydraulic-manifold-blocks/',
     ctaText: 'View Manifold Blocks',
   },
@@ -169,7 +169,7 @@ export const homepageProducts: HomepageProduct[] = [
     description:
       'Complete turnkey hydraulic solutions — from engineering to commissioning. Designed for your specific industrial application and production requirements.',
     category: 'Engineered Solutions',
-    imageSrc: '/images/products/custom-hydraulic-systems-ahmedabad.webp',
+    imageSrc: '/images/products/hero/custom-hydraulic-systems-ahmedabad.webp',
     href: '/products/custom-hydraulic-systems/',
     ctaText: 'View Systems',
   },

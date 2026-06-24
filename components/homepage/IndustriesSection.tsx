@@ -40,18 +40,11 @@ export function IndustriesSection() {
     <Section bg="gray" aria-labelledby="industries-heading">
       <Container>
         {/* Section header */}
-        <div className="text-center mb-12">
-          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
+        <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
+          <Heading variant="section" as="h2" id="industries-heading" className="text-honeywell-navy mb-4">
             Industries We Serve
-          </p>
-          <Heading variant="section" as="h2" id="industries-heading">
-            Hydraulic Solutions for 25+ Industrial Sectors
           </Heading>
-          <p className="text-brand-steelGray font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
-            From injection moulding in Ahmedabad to automotive OEMs in Pune, we
-            supply high-performance hydraulic equipment to core industries
-            across India.
-          </p>
+          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
         </div>
 
         {/* Industry cards grid */}

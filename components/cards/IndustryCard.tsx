@@ -36,7 +36,7 @@ export function IndustryCard({
           className="mb-6 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-350 ease-premium"
         />
         
-        <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors duration-200">
+        <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">
           <a href={href} className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:rounded-sm">
             <span className="absolute inset-0" aria-hidden="true" />
             {industryName}

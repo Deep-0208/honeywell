@@ -21,14 +21,12 @@ export function LocationsSection() {
     <Section bg="white" aria-labelledby="locations-heading">
       <Container>
         {/* Section header */}
-        <div className="text-center mb-12">
-          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
-            Our Service Areas
-          </p>
-          <Heading variant="section" as="h2" id="locations-heading">
+        <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
+          <Heading variant="section" as="h2" id="locations-heading" className="text-honeywell-navy mb-4">
             Serving Manufacturers Across Gujarat &amp; India
           </Heading>
-          <p className="text-brand-steelGray font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
+          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
+          <p className="text-brand-steelGray font-body text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-4">
             Factory in Kathwada GIDC, Ahmedabad. Delivering hydraulic systems
             across Gujarat and all major Indian industrial cities.
           </p>
@@ -71,7 +69,7 @@ export function LocationsSection() {
             <br />
             <a
               href="tel:+91-9924343873"
-              className="text-honeywell-navy hover:text-honeywell-red transition-colors font-mono text-[13px] tracking-wide mt-1 inline-block"
+              className="text-honeywell-navy hover:text-honeywell-red transition-colors font-mono text-base sm:text-[13px] tracking-wide mt-1 inline-block min-h-[48px] flex items-center justify-center"
             >
               +91 99243 43873
             </a>

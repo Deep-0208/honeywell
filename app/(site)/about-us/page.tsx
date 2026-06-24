@@ -290,14 +290,11 @@ export default function AboutUsPage() {
           </nav>
 
           <div className="max-w-3xl">
-            <span className="inline-block py-1 px-3 rounded-sm bg-honeywell-red text-white text-xs font-bold uppercase tracking-wider mb-6">
-              Engineering-Led Manufacturing
-            </span>
             <Heading variant="hero" as="h1" className="text-white mb-6">
-              About Honeywell Hydraulics — Precision Hydraulic Manufacturing Since 2018
+              Honeywell Hydraulics — Precision Hydraulic Manufacturer Since 2018
             </Heading>
             <p className="text-brand-borderGray text-lg font-body leading-relaxed max-w-2xl">
-              Honeywell Hydraulics is a premier engineering firm specialising in the design, manufacturing, and supply of industrial hydraulic equipment. Based in the Kathwada GIDC industrial zone in Ahmedabad, we deliver precision-engineered fluid power solutions that minimise downtime and maximise operational efficiency.
+              Honeywell Hydraulics is a premier engineering firm specialising in the design, manufacturing, and supply of industrial hydraulic cylinders and power packs. Based in the Kathwada GIDC industrial zone in Ahmedabad, we deliver precision-engineered fluid power solutions that minimise downtime and maximise operational efficiency.
             </p>
           </div>
         </Container>
@@ -310,11 +307,11 @@ export default function AboutUsPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Heading as="h2" variant="section" className="mb-6">
+              <Heading as="h2" variant="section" className="mb-6 text-honeywell-red">
                 Precision Engineering, Proven Performance
               </Heading>
               <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
-                Founded in 2018 in Ahmedabad&apos;s Kathwada GIDC industrial corridor, Honeywell Hydraulics has grown from a focused cylinder manufacturing operation into a comprehensive hydraulic equipment manufacturer serving 25+ industries across India.
+                Founded in 2018 in Ahmedabad&apos;s industrial corridor, Honeywell Hydraulics has grown from a focused cylinder manufacturing operation into a comprehensive hydraulic equipment manufacturer serving 25+ industries across India.
               </p>
               <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
                 We are not a trading company that relabels third-party products. Every hydraulic cylinder, power pack, and accessory that carries our name is designed, machined, assembled, pressure-tested, and certified within our own manufacturing facility. This end-to-end production control is the foundation of our quality consistency.
@@ -323,15 +320,15 @@ export default function AboutUsPage() {
                 Our engineering team applies rigorous fluid power physics to every project — calculating forces, flows, velocities, and thermal outputs before manufacturing a single component. This discipline is what separates engineered hydraulic solutions from catalogue-copied ones.
               </p>
             </div>
-            <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-8">
+            <div className="bg-honeywell-red text-white rounded-sm p-8">
               {/* IMAGE REQUIREMENT: /images/about/about-us-hero.webp
                   Alt: Honeywell Hydraulics manufacturing facility — precision hydraulic production in Ahmedabad
                   Priority: High */}
-              <div className="aspect-[4/3] bg-slate-200 rounded-sm flex items-center justify-center">
+              <div className="aspect-[4/3] bg-black/10 rounded-sm flex items-center justify-center">
                 <div className="text-center px-6">
-                  <Factory className="w-12 h-12 text-[#94A3B8] mx-auto mb-3" aria-hidden="true" />
-                  <p className="text-sm font-semibold text-brand-darkSlate font-body">Manufacturing Facility</p>
-                  <p className="text-xs text-[#94A3B8] font-body">Kathwada GIDC, Ahmedabad</p>
+                  <Factory className="w-12 h-12 text-white/80 mx-auto mb-3" aria-hidden="true" />
+                  <p className="text-sm font-semibold text-white font-body">Manufacturing Facility</p>
+                  <p className="text-xs text-white/80 font-body">Ahmedabad</p>
                 </div>
               </div>
             </div>
@@ -345,7 +342,7 @@ export default function AboutUsPage() {
       <Section bg="gray">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
-            <Heading as="h2" variant="section" className="mb-6">
+            <Heading as="h2" variant="section" className="mb-6 text-honeywell-red">
               Our Story
             </Heading>
             <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
@@ -401,7 +398,7 @@ export default function AboutUsPage() {
       <Section bg="gray">
         <Container>
           <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4">
+            <Heading as="h2" variant="section" className="mb-4 text-honeywell-red">
               Core Values
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -429,7 +426,7 @@ export default function AboutUsPage() {
       <Section bg="white">
         <Container>
           <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4">
+            <Heading as="h2" variant="section" className="mb-4 text-honeywell-red">
               Why Choose Honeywell Hydraulics
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -459,7 +456,7 @@ export default function AboutUsPage() {
       <Section bg="gray">
         <Container>
           <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4">
+            <Heading as="h2" variant="section" className="mb-4 text-honeywell-red">
               Industries We Serve
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -488,7 +485,7 @@ export default function AboutUsPage() {
       <Section bg="white">
         <Container>
           <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4">
+            <Heading as="h2" variant="section" className="mb-4 text-honeywell-red">
               Our Products
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -520,7 +517,7 @@ export default function AboutUsPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Heading as="h2" variant="section" className="mb-6">
+              <Heading as="h2" variant="section" className="mb-6 text-honeywell-red">
                 Manufacturing Capabilities
               </Heading>
               <p className="text-brand-darkSlate font-body leading-relaxed mb-6">
@@ -565,7 +562,7 @@ export default function AboutUsPage() {
       <Section bg="white">
         <Container>
           <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4">
+            <Heading as="h2" variant="section" className="mb-4 text-honeywell-red">
               Our Engineering Team
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -632,7 +629,7 @@ export default function AboutUsPage() {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <Heading as="h2" variant="section" className="mb-6">
+              <Heading as="h2" variant="section" className="mb-6 text-honeywell-red">
                 Quality Commitment
               </Heading>
               <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
@@ -673,7 +670,7 @@ export default function AboutUsPage() {
       <Section bg="white">
         <Container>
           <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4">
+            <Heading as="h2" variant="section" className="mb-4 text-honeywell-red">
               Trusted by Industry Leaders
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -690,13 +687,13 @@ export default function AboutUsPage() {
                   key={`${client.name}-${index}`}
                   className="flex items-center justify-center shrink-0 pr-6 md:pr-10"
                 >
-                  <div className="relative flex items-center justify-center w-[160px] h-[80px] md:w-[200px] md:h-[100px] bg-white rounded-xl border border-slate-200 shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1 p-4">
+                  <div className="relative flex items-center justify-center w-[160px] h-[80px] sm:w-[200px] sm:h-[100px] md:w-[240px] md:h-[120px] bg-white rounded-xl border border-slate-200 shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1 p-2 sm:p-3">
                     <Image
                       src={client.imageSrc}
-                      alt={client.name}
+                      alt="" /* Decorative in marquee context */
                       fill
-                      className="object-contain p-4"
-                      sizes="(max-width: 768px) 160px, 200px"
+                      className="object-contain p-2 transition-all duration-300"
+                      sizes="(max-width: 768px) 200px, 240px"
                       quality={100}
                       aria-hidden="true"
                     />
@@ -712,13 +709,13 @@ export default function AboutUsPage() {
                   key={`dup-${client.name}-${index}`}
                   className="flex items-center justify-center shrink-0 pr-6 md:pr-10"
                 >
-                  <div className="relative flex items-center justify-center w-[160px] h-[80px] md:w-[200px] md:h-[100px] bg-white rounded-xl border border-slate-200 shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1 p-4">
+                  <div className="relative flex items-center justify-center w-[160px] h-[80px] sm:w-[200px] sm:h-[100px] md:w-[240px] md:h-[120px] bg-white rounded-xl border border-slate-200 shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1 p-2 sm:p-3">
                     <Image
                       src={client.imageSrc}
-                      alt={client.name}
+                      alt=""
                       fill
-                      className="object-contain p-4"
-                      sizes="(max-width: 768px) 160px, 200px"
+                      className="object-contain p-2 transition-all duration-300"
+                      sizes="(max-width: 768px) 200px, 240px"
                       quality={100}
                       aria-hidden="true"
                     />
@@ -785,7 +782,7 @@ export default function AboutUsPage() {
       <Section bg="gray">
         <Container>
           <div className="max-w-3xl mx-auto">
-            <Heading as="h2" variant="section" className="mb-4 text-center">
+            <Heading as="h2" variant="section" className="mb-4 text-center text-honeywell-red">
               Frequently Asked Questions
             </Heading>
             <p className="text-brand-steelGray font-body text-center mb-10">

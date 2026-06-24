@@ -25,9 +25,9 @@ export default function Error({
         <Image
           src="/long-size-logohydralics-logo.png"
           alt="Honeywell Hydraulics"
-          width={160}
-          height={40}
-          className="h-10 w-auto mx-auto"
+          width={240}
+          height={60}
+          className="h-14 md:h-16 w-auto mx-auto"
           priority
         />
       </Link>

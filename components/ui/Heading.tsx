@@ -23,10 +23,10 @@ export function Heading({
   const baseStyles = 'font-display font-bold text-honeywell-navy';
   
   const variants = {
-    hero: 'text-4xl md:text-5xl lg:text-6xl leading-tight',
-    section: 'text-3xl md:text-4xl lg:text-5xl leading-tight',
-    subsection: 'text-2xl md:text-3xl leading-snug',
-    card: 'text-xl md:text-2xl leading-snug',
+    hero: 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight',
+    section: 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight',
+    subsection: 'text-xl sm:text-2xl md:text-3xl leading-snug',
+    card: 'text-lg sm:text-xl md:text-2xl leading-snug',
   };
 
   const defaultTags = {

@@ -17,14 +17,12 @@ export function CertificationsSection() {
   return (
     <Section bg="white" aria-labelledby="certifications-heading">
       <Container>
-        <div className="text-center mb-12">
-          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
-            Standards & Compliance
-          </p>
-          <Heading variant="section" as="h2" id="certifications-heading">
+        <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
+          <Heading variant="section" as="h2" id="certifications-heading" className="text-honeywell-navy mb-4">
             Quality Certifications & Compliance
           </Heading>
-          <p className="text-brand-steelGray font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
+          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
+          <p className="text-brand-steelGray font-body text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-4">
             Our manufacturing processes adhere to the highest international quality standards,
             ensuring precision, reliability, and safety in every hydraulic system we deliver.
           </p>
@@ -32,7 +30,7 @@ export function CertificationsSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert) => (
-            <div key={cert.title} className="bg-brand-surfaceGray border border-slate-200 rounded-xl p-6 text-center hover:shadow-elevated transition-shadow duration-300">
+            <div key={cert.title} className="bg-brand-surfaceGray border border-slate-200 rounded-xl p-4 sm:p-6 text-center hover:shadow-elevated transition-shadow duration-300">
               <IconBox
                 icon={iconMap[cert.iconName] || <Award className="w-8 h-8" />}
                 size="lg"

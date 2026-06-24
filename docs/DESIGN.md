@@ -41,9 +41,9 @@ The website design is strictly built around making the **Honeywell Hydraulics lo
 ---
 
 ## 🔤 Typography
-- **Display Font:** Barlow Condensed (Weights: 600, 700)
-- **Body Font:** DM Sans (Weights: 400, 500)
-- **Technical Data:** JetBrains Mono (For data tables, metrics, specs)
+- **Primary Font (Headings + Body):** Poppins (Weights: 400, 500, 600, 700)
+- **Technical Data:** System monospace `ui-monospace` (For data tables, metrics, specs)
+- **Note:** globals.css enforces Poppins on all headings and body via `!important` rules.
 
 ---
 

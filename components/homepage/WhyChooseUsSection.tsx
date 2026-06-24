@@ -37,17 +37,15 @@ export function WhyChooseUsSection() {
     <Section bg="white" aria-labelledby="why-heading">
       <Container>
         {/* Section header */}
-        <div className="text-center mb-12">
-          <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
-            Why Honeywell Hydraulics
-          </p>
-          <Heading variant="section" as="h2" id="why-heading">
+        <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
+          <Heading variant="section" as="h2" id="why-heading" className="text-honeywell-navy mb-4">
             Why Top Manufacturers Trust Us
           </Heading>
+          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
         </div>
 
         {/* USP grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {usps.map((usp) => (
             <div key={usp.title}>
               <div className="text-center group">
@@ -69,7 +67,7 @@ export function WhyChooseUsSection() {
         </div>
 
         {/* CTA group */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 md:mt-12">
           <Button
             href="/contact-us/"
             variant="primary"
@@ -79,11 +77,11 @@ export function WhyChooseUsSection() {
             Contact Us
           </Button>
           <Button
-            href="/resources/case-studies/"
+            href="/contact-us/"
             variant="ghost"
             size="lg"
           >
-            View Case Studies
+            Get In Touch
           </Button>
         </div>
       </Container>

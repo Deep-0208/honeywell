@@ -30,7 +30,10 @@ export function CTA({
   className = '',
 }: CTAProps) {
   return (
-    <div className={`bg-honeywell-navy py-16 md:py-20 relative overflow-hidden ${className}`}>
+    <section
+      className={`bg-honeywell-navy py-12 md:py-16 lg:py-20 relative overflow-hidden ${className}`}
+      aria-labelledby="cta-heading"
+    >
       {/* Background Accents — animated diagonal */}
       <div 
         className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" 
@@ -47,17 +50,17 @@ export function CTA({
       />
       
       <Container className="relative z-10 text-center">
-        <Heading variant="section" className="text-white mb-4">
+        <Heading variant="section" id="cta-heading" className="text-white mb-4">
           {title}
         </Heading>
         
         {description && (
-          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-8 text-lg leading-relaxed">
+          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
             {description}
           </p>
         )}
         
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
           <Button 
             href={primaryCtaHref} 
             variant="primary" 
@@ -79,6 +82,6 @@ export function CTA({
           )}
         </div>
       </Container>
-    </div>
+    </section>
   );
 }

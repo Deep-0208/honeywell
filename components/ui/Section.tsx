@@ -19,7 +19,7 @@ export function Section({ children, bg = 'white', className = '', ...props }: Se
   };
 
   const classes = `
-    py-16 md:py-24
+    py-12 md:py-16 lg:py-24
     ${bgStyles[bg]}
     ${className}
   `.trim().replace(/\s+/g, ' ');
