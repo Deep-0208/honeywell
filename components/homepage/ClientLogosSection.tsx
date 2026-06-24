@@ -26,9 +26,6 @@ export function ClientLogosSection() {
             Trusted by Manufacturers Across India
           </Heading>
           <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
-          <p className="text-brand-steelGray font-body text-sm sm:text-base md:text-lg">
-            Delivering reliable hydraulic solutions for plastic moulding, construction, heavy-duty press, and agricultural industries.
-          </p>
         </div>
 
         {/* Layer 2 — Premium Logo Marquee */}

@@ -6,22 +6,18 @@ import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { IconBox } from '@/components/ui/IconBox';
 import { Button } from '@/components/ui/Button';
-import {
-  ClipboardList,
-  PenTool,
-  Drill,
-  ShieldCheck,
-  ArrowRight,
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { FaClipboardList, FaTools, FaShieldAlt } from 'react-icons/fa';
+import { GiDrill } from 'react-icons/gi';
 
 import { processSteps } from '@/data/homepage';
 
 /* Icon mapping */
 const iconMap: Record<string, React.ReactNode> = {
-  ClipboardList: <ClipboardList className="w-6 h-6" />,
-  PenTool: <PenTool className="w-6 h-6" />,
-  Drill: <Drill className="w-6 h-6" />,
-  ShieldCheck: <ShieldCheck className="w-6 h-6" />,
+  ClipboardList: <FaClipboardList className="w-6 h-6" />,
+  PenTool: <FaTools className="w-6 h-6" />,
+  Drill: <GiDrill className="w-6 h-6" />,
+  ShieldCheck: <FaShieldAlt className="w-6 h-6" />,
 };
 
 /**
@@ -44,9 +40,6 @@ export function ProcessSection() {
             From Design to Dispatch
           </Heading>
           <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
-          <p className="text-brand-steelGray font-body text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-4">
-            Engineering precision at every step of the manufacturing process.
-          </p>
         </div>
 
         {/* Process steps */}
@@ -76,7 +69,7 @@ export function ProcessSection() {
 
                 {/* Icon */}
                 <IconBox
-                  icon={iconMap[step.iconName] || <ClipboardList className="w-6 h-6" />}
+                  icon={iconMap[step.iconName] || <FaClipboardList className="w-6 h-6" />}
                   size="md"
                   variant="outline"
                   className="mb-4"

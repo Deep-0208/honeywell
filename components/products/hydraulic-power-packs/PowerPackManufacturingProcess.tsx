@@ -2,7 +2,7 @@ import React from 'react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { IconBox } from '@/components/ui/IconBox';
-import { PenTool, Cog, FlaskConical, Truck } from 'lucide-react';
+import { FaTools, FaCogs, FaVial, FaTruck } from 'react-icons/fa';
 
 export function PowerPackManufacturingProcess() {
   return (
@@ -23,7 +23,7 @@ export function PowerPackManufacturingProcess() {
 
           <div className="flex flex-col items-center text-center">
             <div className="bg-white p-2 rounded-full mb-6">
-              <IconBox icon={<PenTool className="w-6 h-6" />} variant="primary" size="lg" />
+              <IconBox icon={<FaTools className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">1. Custom Design</h3>
             <p className="text-brand-steelGray font-body text-sm">
@@ -33,7 +33,7 @@ export function PowerPackManufacturingProcess() {
 
           <div className="flex flex-col items-center text-center">
             <div className="bg-white p-2 rounded-full mb-6">
-              <IconBox icon={<Cog className="w-6 h-6" />} variant="primary" size="lg" />
+              <IconBox icon={<FaCogs className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">2. Precision Assembly</h3>
             <p className="text-brand-steelGray font-body text-sm">
@@ -43,7 +43,7 @@ export function PowerPackManufacturingProcess() {
 
           <div className="flex flex-col items-center text-center">
             <div className="bg-white p-2 rounded-full mb-6">
-              <IconBox icon={<FlaskConical className="w-6 h-6" />} variant="primary" size="lg" />
+              <IconBox icon={<FaVial className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">3. Rigorous Testing</h3>
             <p className="text-brand-steelGray font-body text-sm">
@@ -53,7 +53,7 @@ export function PowerPackManufacturingProcess() {
 
           <div className="flex flex-col items-center text-center">
             <div className="bg-white p-2 rounded-full mb-6">
-              <IconBox icon={<Truck className="w-6 h-6" />} variant="primary" size="lg" />
+              <IconBox icon={<FaTruck className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">4. Secure Delivery</h3>
             <p className="text-brand-steelGray font-body text-sm">

@@ -2,7 +2,7 @@ import React from 'react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { IconBox } from '@/components/ui/IconBox';
-import { ShieldCheck, Settings, PenTool, Zap } from 'lucide-react';
+import { FaShieldAlt, FaCogs, FaTools, FaBolt } from 'react-icons/fa';
 
 export function WhyChoosePowerPacks() {
   return (
@@ -20,7 +20,7 @@ export function WhyChoosePowerPacks() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           <div className="flex flex-col">
-            <IconBox icon={<PenTool className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
+            <IconBox icon={<FaTools className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
             <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Custom Design</h3>
             <p className="text-brand-steelGray font-body">
               Engineered using advanced CAD software for exact fluid dynamic calculation, heat load analysis, and 3D spatial integration perfectly matched to your machine cycle.
@@ -28,7 +28,7 @@ export function WhyChoosePowerPacks() {
           </div>
 
           <div className="flex flex-col">
-            <IconBox icon={<Settings className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
+            <IconBox icon={<FaCogs className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
             <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Engineering Expertise</h3>
             <p className="text-brand-steelGray font-body">
               All custom valve blocks and manifolds are CNC-machined in-house to ensure absolute zero-leak internal galleries and precise control logic.
@@ -36,7 +36,7 @@ export function WhyChoosePowerPacks() {
           </div>
 
           <div className="flex flex-col">
-            <IconBox icon={<ShieldCheck className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
+            <IconBox icon={<FaShieldAlt className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
             <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Rigorous Testing</h3>
             <p className="text-brand-steelGray font-body">
               Every power pack is run on our test bench under simulated maximum load to verify flow rates, pressure relief settings, and thermal stability.
@@ -44,7 +44,7 @@ export function WhyChoosePowerPacks() {
           </div>
 
           <div className="flex flex-col">
-            <IconBox icon={<Zap className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
+            <IconBox icon={<FaBolt className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
             <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Proven Reliability</h3>
             <p className="text-brand-steelGray font-body">
               Engineered with integrated thermal management to prevent fluid overheating. Our power units are built for continuous 24/7 manufacturing without thermal degradation.

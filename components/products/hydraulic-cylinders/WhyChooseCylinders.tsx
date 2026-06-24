@@ -2,7 +2,7 @@ import React from 'react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { IconBox } from '@/components/ui/IconBox';
-import { ShieldCheck, Zap, Cog, Truck } from 'lucide-react';
+import { FaShieldAlt, FaBolt, FaCogs, FaTruck } from 'react-icons/fa';
 
 export function WhyChooseCylinders() {
   return (
@@ -20,7 +20,7 @@ export function WhyChooseCylinders() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           <div className="flex flex-col">
-            <IconBox icon={<Cog className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
+            <IconBox icon={<FaCogs className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
             <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Engineering Expertise</h3>
             <p className="text-brand-steelGray font-body">
               Our engineers analyze your load calculations, cycle rates, and environmental factors to design the perfect custom cylinder for your exact application.
@@ -28,7 +28,7 @@ export function WhyChooseCylinders() {
           </div>
 
           <div className="flex flex-col">
-            <IconBox icon={<ShieldCheck className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
+            <IconBox icon={<FaShieldAlt className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
             <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">1.5x Pressure Testing</h3>
             <p className="text-brand-steelGray font-body">
               Every cylinder is hydrostatically pressure-tested at 1.5 times its rated working pressure before dispatch. Out-of-the-box leaks are non-existent.
@@ -36,7 +36,7 @@ export function WhyChooseCylinders() {
           </div>
 
           <div className="flex flex-col">
-            <IconBox icon={<Zap className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
+            <IconBox icon={<FaBolt className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
             <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Custom Manufacturing</h3>
             <p className="text-brand-steelGray font-body">
               Drawing-to-delivery service. We can manufacture exactly to your existing CAD drawings or reverse-engineer a replacement for an obsolete part.
@@ -44,7 +44,7 @@ export function WhyChooseCylinders() {
           </div>
 
           <div className="flex flex-col">
-            <IconBox icon={<Truck className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
+            <IconBox icon={<FaTruck className="w-6 h-6" />} variant="primary" size="lg" className="mb-6" />
             <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Fast Delivery</h3>
             <p className="text-brand-steelGray font-body">
               With our streamlined manufacturing processes in Ahmedabad, we offer some of the fastest turnaround times in the industry for custom components.

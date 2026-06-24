@@ -26,16 +26,12 @@ export function LocationsSection() {
             Serving Manufacturers Across Gujarat &amp; India
           </Heading>
           <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
-          <p className="text-brand-steelGray font-body text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-4">
-            Factory in Kathwada GIDC, Ahmedabad. Delivering hydraulic systems
-            across Gujarat and all major Indian industrial cities.
-          </p>
         </div>
 
         {/* Location cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {homepageLocations.map((loc) => (
-            <div key={loc.city}>
+          {homepageLocations.map((loc, index) => (
+            <div key={`${loc.city}-${index}`}>
               <LocationCard
                 city={loc.city}
                 description={loc.description}

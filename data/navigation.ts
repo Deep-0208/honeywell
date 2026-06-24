@@ -43,7 +43,7 @@ export const siteNavigation: SiteNavigation = {
               {
                 label: 'Manufacturing Facility',
                 href: '/manufacturing-facility/',
-                description: 'End-to-end hydraulic manufacturing at Kathwada GIDC, Ahmedabad.',
+                description: 'End-to-end hydraulic manufacturing at our state-of-the-art facility in Gujarat.',
               },
             ],
           },

@@ -6,24 +6,17 @@ import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
 import { IndustryCard } from '@/components/cards/IndustryCard';
-import {
-  Cog,
-  Car,
-  Factory,
-  Construction,
-  Package,
-  Wrench,
-} from 'lucide-react';
+import { FaCogs, FaCar, FaIndustry, FaHardHat, FaBox, FaWrench } from 'react-icons/fa';
 import { homepageIndustries } from '@/data/homepage';
 
 /* Icon mapping */
 const iconMap: Record<string, React.ReactNode> = {
-  Cog: <Cog className="w-6 h-6" />,
-  Car: <Car className="w-6 h-6" />,
-  Factory: <Factory className="w-6 h-6" />,
-  Construction: <Construction className="w-6 h-6" />,
-  Package: <Package className="w-6 h-6" />,
-  Wrench: <Wrench className="w-6 h-6" />,
+  Cog: <FaCogs className="w-6 h-6" />,
+  Car: <FaCar className="w-6 h-6" />,
+  Factory: <FaIndustry className="w-6 h-6" />,
+  Construction: <FaHardHat className="w-6 h-6" />,
+  Package: <FaBox className="w-6 h-6" />,
+  Wrench: <FaWrench className="w-6 h-6" />,
 };
 
 /**
@@ -54,7 +47,7 @@ export function IndustriesSection() {
               <IndustryCard
                 industryName={industry.industryName}
                 description={industry.description}
-                icon={iconMap[industry.iconName] || <Cog className="w-6 h-6" />}
+                icon={iconMap[industry.iconName] || <FaCogs className="w-6 h-6" />}
                 href={industry.href}
               />
             </div>

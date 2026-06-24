@@ -322,44 +322,44 @@ export const homepageTestimonials: HomepageTestimonial[] = [
 
 export const homepageLocations: HomepageLocation[] = [
   {
-    city: 'Ahmedabad',
-    description:
-      'Our manufacturing headquarters in Kathwada GIDC. Factory-direct supply of hydraulic cylinders and power packs.',
-    industries: ['Injection Moulding', 'Automotive', 'Steel', 'Textile'],
-    href: '/locations/ahmedabad/',
-    ctaText: 'View Ahmedabad Facility',
-  },
-  {
-    city: 'Surat',
-    description:
-      'Same-week delivery to Sachin, Pandesara, and Hazira GIDC industrial zones.',
-    industries: ['Diamond Processing', 'Textile', 'Chemical'],
-    href: '/locations/surat/',
-    ctaText: 'Hydraulic Supply in Surat',
-  },
-  {
-    city: 'Vadodara',
-    description:
-      'Serving Makarpura and Halol GIDC with hydraulic cylinders and system solutions.',
-    industries: ['Pharmaceutical', 'Automotive', 'Chemical'],
-    href: '/locations/vadodara/',
-    ctaText: 'Hydraulic Supply in Vadodara',
-  },
-  {
-    city: 'Rajkot',
-    description:
-      "Custom hydraulic solutions for Rajkot's precision engineering and machine tool industry.",
-    industries: ['Machine Tools', 'Auto Parts', 'Casting'],
-    href: '/locations/rajkot/',
-    ctaText: 'Hydraulic Supply in Rajkot',
-  },
-  {
     city: 'Gujarat',
     description:
-      'Pan-Gujarat supply covering all major GIDC industrial estates with 7-day delivery.',
-    industries: ['All Industries', '25+ Sectors'],
-    href: '/locations/gujarat/',
-    ctaText: 'Gujarat Coverage',
+      'Our manufacturing headquarters in Gujarat. Factory-direct supply of high-performance hydraulic cylinders and power packs.',
+    industries: ['Injection Moulding', 'Automotive', 'Steel', 'Textile'],
+    href: '/locations/gujarat-facility/',
+    ctaText: 'View Gujarat Facility',
+  },
+  {
+    city: 'Maharashtra',
+    description:
+      'Fast delivery of hydraulic solutions to Pune, Mumbai, and major MIDC industrial zones across the state.',
+    industries: ['Automotive', 'Manufacturing', 'Engineering'],
+    href: '/locations/maharashtra/',
+    ctaText: 'Hydraulic Supply in Maharashtra',
+  },
+  {
+    city: 'Indore',
+    description:
+      'Serving Pithampur, Sanwer Road, and major industrial hubs with precision hydraulic cylinders and system solutions.',
+    industries: ['Auto Parts', 'Pharmaceuticals', 'Food Processing'],
+    href: '/locations/indore/',
+    ctaText: 'Hydraulic Supply in Indore',
+  },
+  {
+    city: 'West Bengal',
+    description:
+      'Custom hydraulic solutions for heavy engineering, steel, and mining industries across Kolkata, Durgapur, and Haldia.',
+    industries: ['Steel & Mining', 'Heavy Engineering', 'Manufacturing'],
+    href: '/locations/west-bengal/',
+    ctaText: 'Hydraulic Supply in West Bengal',
+  },
+  {
+    city: 'Rajasthan',
+    description:
+      'Pan-Rajasthan supply of custom hydraulic cylinders and power packs to major RIICO industrial areas like Bhiwadi and Neemrana.',
+    industries: ['Auto Components', 'Cement', 'Mining'],
+    href: '/locations/rajasthan/',
+    ctaText: 'Hydraulic Supply in Rajasthan',
   },
   {
     city: 'Pan India',
@@ -380,7 +380,7 @@ export const homepageFAQs: HomepageFAQ[] = [
   {
     question: 'What hydraulic products does Honeywell Hydraulics manufacture?',
     answer:
-      'Honeywell Hydraulics manufactures custom hydraulic cylinders (double acting, single acting, telescopic, tie-rod, and all mounting types) and hydraulic power packs (3-phase and single-phase). All products are precision-engineered at our Ahmedabad facility.',
+      'Honeywell Hydraulics manufactures custom hydraulic cylinders (double acting, single acting, telescopic, tie-rod, and all mounting types) and hydraulic power packs (3-phase and single-phase). All products are precision-engineered at our facility in Gujarat.',
   },
   {
     question: 'What bore sizes do you manufacture for hydraulic cylinders?',
@@ -396,7 +396,7 @@ export const homepageFAQs: HomepageFAQ[] = [
   {
     question: 'Do you supply hydraulic equipment across India?',
     answer:
-      'Yes. We are based in Kathwada GIDC, Ahmedabad, Gujarat and supply to clients across all major industrial cities in India including Surat, Vadodara, Rajkot, Pune, Mumbai, Chennai, and Bangalore. We serve 25+ industries pan-India.',
+      'Yes. We are based in Gujarat and supply to clients across all major industrial cities in India including Surat, Vadodara, Rajkot, Pune, Mumbai, Chennai, and Bangalore. We serve 25+ industries pan-India.',
   },
 ];
 

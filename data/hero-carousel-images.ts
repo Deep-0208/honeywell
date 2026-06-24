@@ -8,7 +8,7 @@
 export const heroCarouselImages = [
   {
     src: "/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp",
-    alt: "Custom-engineered hydraulic cylinder manufactured by Honeywell Hydraulics Ahmedabad",
+    alt: "Custom-engineered hydraulic cylinder manufactured by Honeywell Hydraulics Gujarat",
     title: "Customized Hydraulic Cylinder Manufacturer",
     description: "Tailor-made hydraulic cylinders with bore sizes up to 300mm. Engineered for specific industrial machinery requirements.",
     caption: "Precision-engineered custom hydraulic cylinder by Honeywell Hydraulics.",

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { IndustryCard } from '@/components/cards/IndustryCard';
-import { Factory, Hammer, Truck, Cog } from 'lucide-react';
+import { FaIndustry, FaHammer, FaTruck, FaCogs } from 'react-icons/fa';
 
 export function PowerPackIndustries() {
   const industries = [
@@ -11,25 +11,25 @@ export function PowerPackIndustries() {
       industryName: "Plastic Injection Moulding",
       description: "Providing the rapid flow required for high-speed core pulls and the sustained high pressure required for mould clamping without overheating.",
       href: "/industries/injection-moulding/",
-      icon: <Factory className="w-6 h-6" />
+      icon: <FaIndustry className="w-6 h-6" />
     },
     {
       industryName: "Steel & Metallurgy",
       description: "Delivering extreme-pressure fluid power to rolling mills while resisting the ambient radiant heat of the foundry environment.",
       href: "/industries/steel-metallurgy/",
-      icon: <Hammer className="w-6 h-6" />
+      icon: <FaHammer className="w-6 h-6" />
     },
     {
       industryName: "Material Handling",
       description: "Supplying judder-free, highly reliable lifting power for automated warehouse logistics, scissor lifts, and dock levelers.",
       href: "/industries/material-handling/",
-      icon: <Truck className="w-6 h-6" />
+      icon: <FaTruck className="w-6 h-6" />
     },
     {
       industryName: "Automotive OEM",
       description: "Driving synchronized robotic welding and assembly stations with 0.01mm repeatability and zero-leak reliability.",
       href: "/industries/automotive/",
-      icon: <Cog className="w-6 h-6" />
+      icon: <FaCogs className="w-6 h-6" />
     }
   ];
 

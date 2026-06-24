@@ -2,15 +2,17 @@ import React from 'react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { IconBox } from '@/components/ui/IconBox';
-import { Calculator, Download, Wrench, PhoneCall, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { FaCalculator, FaFileDownload, FaWrench } from 'react-icons/fa';
+import { MdPhoneInTalk } from 'react-icons/md';
 import { actionCards } from '@/data/homepage';
 import Link from 'next/link';
 
 const iconMap: Record<string, React.ReactNode> = {
-  Calculator: <Calculator className="w-6 h-6" />,
-  Download: <Download className="w-6 h-6" />,
-  Wrench: <Wrench className="w-6 h-6" />,
-  PhoneCall: <PhoneCall className="w-6 h-6" />,
+  Calculator: <FaCalculator className="w-6 h-6" />,
+  Download: <FaFileDownload className="w-6 h-6" />,
+  Wrench: <FaWrench className="w-6 h-6" />,
+  PhoneCall: <MdPhoneInTalk className="w-6 h-6" />,
 };
 
 export function ActionCardsSection() {

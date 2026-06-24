@@ -3,14 +3,14 @@ import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { IconBox } from '@/components/ui/IconBox';
-import { Award, Building2, FileCheck2, Factory } from 'lucide-react';
+import { FaAward, FaBuilding, FaFileContract, FaIndustry } from 'react-icons/fa';
 import { certifications } from '@/data/homepage';
 
 const iconMap: Record<string, React.ReactNode> = {
-  Award: <Award className="w-8 h-8" />,
-  Building2: <Building2 className="w-8 h-8" />,
-  FileCheck2: <FileCheck2 className="w-8 h-8" />,
-  Factory: <Factory className="w-8 h-8" />,
+  Award: <FaAward className="w-8 h-8" />,
+  Building2: <FaBuilding className="w-8 h-8" />,
+  FileCheck2: <FaFileContract className="w-8 h-8" />,
+  Factory: <FaIndustry className="w-8 h-8" />,
 };
 
 export function CertificationsSection() {
@@ -22,17 +22,13 @@ export function CertificationsSection() {
             Quality Certifications & Compliance
           </Heading>
           <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
-          <p className="text-brand-steelGray font-body text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-4">
-            Our manufacturing processes adhere to the highest international quality standards,
-            ensuring precision, reliability, and safety in every hydraulic system we deliver.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert) => (
             <div key={cert.title} className="bg-brand-surfaceGray border border-slate-200 rounded-xl p-4 sm:p-6 text-center hover:shadow-elevated transition-shadow duration-300">
               <IconBox
-                icon={iconMap[cert.iconName] || <Award className="w-8 h-8" />}
+                icon={iconMap[cert.iconName] || <FaAward className="w-8 h-8" />}
                 size="lg"
                 variant="primary"
                 className="mx-auto mb-4"

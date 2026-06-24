@@ -47,7 +47,7 @@ export function FAQAccordion({ faqs, className = '', injectSchema = true }: FAQA
     <>
       {injectSchema && <JsonLd data={schema} />}
       
-      <div className={`w-full divide-y divide-slate-200 border-y border-slate-200 ${className}`}>
+      <div className={`w-full space-y-4 ${className}`}>
         {faqs.map((faq, index) => (
           <FAQItem
             key={index}

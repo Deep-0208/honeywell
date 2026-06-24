@@ -59,11 +59,11 @@ const footerColumns = [
 ];
 
 const locationLinks = [
-  { label: 'Ahmedabad', href: '/locations/ahmedabad/' },
-  { label: 'Surat', href: '/locations/surat/' },
-  { label: 'Vadodara', href: '/locations/vadodara/' },
-  { label: 'Rajkot', href: '/locations/rajkot/' },
-  { label: 'Gujarat', href: '/locations/gujarat/' },
+  { label: 'Gujarat', href: '/locations/gujarat-facility/' },
+  { label: 'Maharashtra', href: '/locations/maharashtra/' },
+  { label: 'Indore', href: '/locations/indore/' },
+  { label: 'West Bengal', href: '/locations/west-bengal/' },
+  { label: 'Rajasthan', href: '/locations/rajasthan/' },
   { label: 'Pan India', href: '/locations/india/' },
 ];
 
@@ -211,7 +211,7 @@ export default function Footer() {
 
             {/* NAVIGATION COLUMNS */}
             {footerColumns.map((col, colIdx) => (
-              <div key={col.heading}>
+              <div key={col.heading} className="lg:mt-[108px]">
                 <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-honeywell-navy font-body mb-4">
                   {col.heading}
                 </h3>

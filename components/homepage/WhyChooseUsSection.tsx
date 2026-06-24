@@ -6,21 +6,16 @@ import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { IconBox } from '@/components/ui/IconBox';
 import { Button } from '@/components/ui/Button';
-import {
-  Settings2,
-  ShieldCheck,
-  Timer,
-  IndianRupee,
-  ArrowRight,
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { FaCogs, FaShieldAlt, FaRegClock, FaRupeeSign } from 'react-icons/fa';
 import { usps } from '@/data/homepage';
 
 /* Icon mapping — avoids storing JSX in data file */
 const iconMap: Record<string, React.ReactNode> = {
-  Settings2: <Settings2 className="w-6 h-6" />,
-  ShieldCheck: <ShieldCheck className="w-6 h-6" />,
-  Timer: <Timer className="w-6 h-6" />,
-  IndianRupee: <IndianRupee className="w-6 h-6" />,
+  Settings2: <FaCogs className="w-6 h-6" />,
+  ShieldCheck: <FaShieldAlt className="w-6 h-6" />,
+  Timer: <FaRegClock className="w-6 h-6" />,
+  IndianRupee: <FaRupeeSign className="w-6 h-6" />,
 };
 
 /**
@@ -50,7 +45,7 @@ export function WhyChooseUsSection() {
             <div key={usp.title}>
               <div className="text-center group">
                 <IconBox
-                  icon={iconMap[usp.iconName] || <Settings2 className="w-6 h-6" />}
+                  icon={iconMap[usp.iconName] || <FaCogs className="w-6 h-6" />}
                   size="lg"
                   variant="primary"
                   className="mx-auto mb-5 group-hover:scale-110 transition-transform duration-300"
