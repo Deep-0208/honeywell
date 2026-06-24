@@ -209,7 +209,7 @@ export default function Header({ navigation }: HeaderProps) {
                           className={`
                             group inline-flex items-center gap-1 xl:gap-1.5
                             h-[36px] xl:h-[40px] px-1 xl:px-2 rounded-full
-                            text-[15px] lg:text-[15px] xl:text-[18px] 2xl:text-[20px] font-medium tracking-wide whitespace-nowrap
+                            text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-medium tracking-wide whitespace-nowrap
                             font-body transition-all duration-200
                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                             ${isActive || isMenuOpen
@@ -234,7 +234,7 @@ export default function Header({ navigation }: HeaderProps) {
                           className={`
                             group inline-flex items-center
                             h-[36px] xl:h-[40px] px-1 xl:px-2 rounded-full
-                            text-[15px] lg:text-[15px] xl:text-[18px] 2xl:text-[20px] font-medium tracking-wide whitespace-nowrap
+                            text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-medium tracking-wide whitespace-nowrap
                             font-body transition-all duration-200
                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                             ${isActive
@@ -296,7 +296,7 @@ export default function Header({ navigation }: HeaderProps) {
                     aria-hidden="true"
                   />
                 </span>
-                <span className="text-[15px] lg:text-[15px] xl:text-[18px] 2xl:text-[20px] font-medium tracking-[0.01em] font-body text-honeywell-navy group-hover:text-honeywell-navy">
+                <span className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-medium tracking-[0.01em] font-body text-honeywell-navy group-hover:text-honeywell-navy">
                   {navigation.phoneDisplay}
                 </span>
               </a>
