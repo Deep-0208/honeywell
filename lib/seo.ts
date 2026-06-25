@@ -12,14 +12,12 @@ import type { FAQ, Product } from '@/types';
 export function buildMetadata({
   title = SEO_DEFAULTS.title,
   description = SEO_DEFAULTS.description,
-  keywords = [],
   canonical,
   image = SEO_DEFAULTS.ogImage,
   noIndex = process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production', // true for preview/development/undefined
 }: {
   title?: string;
   description?: string;
-  keywords?: string[];
   canonical: string;
   image?: string;
   noIndex?: boolean;
@@ -27,7 +25,6 @@ export function buildMetadata({
   return {
     title,
     description,
-    keywords: keywords.join(', '),
     alternates: {
       canonical: `${COMPANY_INFO.websiteUrl}${canonical}`,
     },

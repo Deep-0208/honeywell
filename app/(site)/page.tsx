@@ -27,24 +27,10 @@ const HOMEPAGE_TITLE =
 const HOMEPAGE_DESCRIPTION =
   'Leading manufacturer of hydraulic cylinders, power packs & custom hydraulic systems in Ahmedabad, serving Gujarat & India. ISO 9001:2015 certified.';
 
-const HOMEPAGE_KEYWORDS = [
-  'hydraulic cylinder manufacturer',
-  'hydraulic power pack manufacturer',
-  'hydraulic cylinder manufacturer in Ahmedabad',
-  'hydraulic power pack manufacturer in Gujarat',
-  'hydraulic manifold block manufacturer',
-  'custom hydraulic systems',
-  'custom hydraulic cylinders',
-  'hydraulic press power pack',
-  'hydraulic equipment manufacturer Ahmedabad Gujarat India',
-  'Honeywell Hydraulics',
-];
-
 export const metadata: Metadata = {
   ...buildMetadata({
     title: HOMEPAGE_TITLE, // used for OG/Twitter fallbacks
     description: HOMEPAGE_DESCRIPTION,
-    keywords: HOMEPAGE_KEYWORDS,
     canonical: '/',
     image: '/images/og/custom-hydraulic-cylinder-manufacturer-og.jpg',
   }),
