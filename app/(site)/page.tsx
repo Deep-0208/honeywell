@@ -42,12 +42,13 @@ const HOMEPAGE_KEYWORDS = [
 
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: HOMEPAGE_TITLE,
+    title: HOMEPAGE_TITLE, // used for OG/Twitter fallbacks
     description: HOMEPAGE_DESCRIPTION,
     keywords: HOMEPAGE_KEYWORDS,
     canonical: '/',
     image: '/images/og/default-og.jpg',
   }),
+  title: { absolute: "Hydraulic Cylinder & Powerpack Manufacturer | Honeywell" },
 };
 
 /* ═══════════════════════════════════════════════
