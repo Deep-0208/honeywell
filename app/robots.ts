@@ -1,27 +1,18 @@
 import { MetadataRoute } from 'next';
-import { headers } from 'next/headers';
 import { COMPANY_INFO } from '@/lib/constants';
 
-export default async function robots(): Promise<MetadataRoute.Robots> {
-  const headersList = await headers();
-  const host = headersList.get('host') || '';
-
-  // Block indexing on any vercel.app domain (staging or production deployment before cutover)
-  if (host.includes('vercel.app')) {
-    return {
-      rules: {
-        userAgent: '*',
-        disallow: '/',
-      },
-    };
-  }
-
+export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/search', '/search?', '/admin/', '/api/', '/thank-you/', '/*.pdf$'],
+        disallow: [
+          '/search',
+          '/admin/',
+          '/api/',
+          '/thank-you/',
+        ],
       },
       {
         userAgent: 'Googlebot',
@@ -29,7 +20,7 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
       },
       {
         userAgent: 'Googlebot-Image',
-        allow: ['/images/', '/*.webp$', '/*.jpg$', '/*.png$'],
+        allow: '/',
       },
       {
         userAgent: 'Bingbot',
@@ -53,7 +44,12 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
         allow: '/',
       },
       {
-        userAgent: ['AhrefsBot', 'SemrushBot', 'MJ12bot', 'DotBot'],
+        userAgent: [
+          'AhrefsBot',
+          'SemrushBot',
+          'MJ12bot',
+          'DotBot',
+        ],
         disallow: '/',
       },
     ],
@@ -61,6 +57,5 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
       `${COMPANY_INFO.websiteUrl}/sitemap.xml`,
       `${COMPANY_INFO.websiteUrl}/sitemap-images.xml`,
     ],
-    host: 'https://www.honeywellhydraulics.com',
   };
 }

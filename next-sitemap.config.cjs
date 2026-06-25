@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://www.honeywellhydraulics.com',
-  generateRobotsTxt: true,
+  generateRobotsTxt: false,
   generateIndexSitemap: true,
 
   // ── Exclude non-indexable routes ──
