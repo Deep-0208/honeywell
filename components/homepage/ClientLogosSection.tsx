@@ -41,12 +41,12 @@ export function ClientLogosSection() {
                 <div className="relative flex items-center justify-center w-[160px] h-[80px] sm:w-[200px] sm:h-[100px] md:w-[240px] md:h-[120px] bg-white rounded-xl border border-slate-200 shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1 p-2 sm:p-3">
                   <Image
                     src={client.imageSrc}
-                    alt="" /* Decorative in marquee context */
+                    alt={`${client.name} Logo`}
                     width={240}
                     height={120}
+                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 240px"
                     className="object-contain p-2 transition-all duration-300 w-full h-full"
                     quality={100}
-                    aria-hidden="true"
                   />
                 </div>
               </div>
@@ -63,12 +63,12 @@ export function ClientLogosSection() {
                 <div className="relative flex items-center justify-center w-[160px] h-[80px] sm:w-[200px] sm:h-[100px] md:w-[240px] md:h-[120px] bg-white rounded-xl border border-slate-200 shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1 p-2 sm:p-3">
                   <Image
                     src={client.imageSrc}
-                    alt=""
+                    alt={`${client.name} Logo`}
                     width={240}
                     height={120}
+                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 240px"
                     className="object-contain p-2 transition-all duration-300 w-full h-full"
                     quality={100}
-                    aria-hidden="true"
                   />
                 </div>
               </div>
