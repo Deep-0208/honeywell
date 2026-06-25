@@ -15,7 +15,7 @@ export function buildMetadata({
   keywords = [],
   canonical,
   image = SEO_DEFAULTS.ogImage,
-  noIndex = true, // Temporarily set to true while hosted on vercel.app
+  noIndex = process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production', // true for preview/development/undefined
 }: {
   title?: string;
   description?: string;
