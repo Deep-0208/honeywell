@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     description: HOMEPAGE_DESCRIPTION,
     keywords: HOMEPAGE_KEYWORDS,
     canonical: '/',
-    image: '/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp',
+    image: '/images/og/custom-hydraulic-cylinder-manufacturer-og.jpg',
   }),
   title: { absolute: "Hydraulic Cylinder & Powerpack Manufacturer | Honeywell" },
 };
