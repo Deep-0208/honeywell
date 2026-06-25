@@ -398,7 +398,7 @@ export default function ContactUsPage() {
                 </div>
                 <div className="px-6 py-3 bg-brand-surfaceGray">
                   <a
-                    href={`https://www.google.com/maps/search/?api=1&query=${NAP.geo.latitude},${NAP.geo.longitude}`}
+                    href={COMPANY_INFO.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-honeywell-red hover:underline underline-offset-4 font-body"

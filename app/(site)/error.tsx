@@ -23,7 +23,7 @@ export default function Error({
       {/* Logo */}
       <Link href="/" className="mb-8 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:rounded-sm">
         <Image
-          src="/long-size-logohydralics-logo.png"
+          src="/images/logos/long-size-logohydralics-logo.png"
           alt="Honeywell Hydraulics"
           width={240}
           height={60}
@@ -115,3 +115,4 @@ export default function Error({
     </div>
   );
 }
+

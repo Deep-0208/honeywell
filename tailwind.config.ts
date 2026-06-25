@@ -26,10 +26,10 @@ const config: Config = {
         }
       },
       fontFamily: {
-        display: ['"Poppins"', 'sans-serif'],
-        body: ['"Poppins"', 'sans-serif'],
+        display: ['var(--font-poppins)', 'sans-serif'],
+        body: ['var(--font-poppins)', 'sans-serif'],
         mono: ['ui-monospace', 'monospace'],
-        roboto: ['"Roboto"', 'sans-serif'],
+        roboto: ['var(--font-roboto)', 'sans-serif'],
       },
       boxShadow: {
         card: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',

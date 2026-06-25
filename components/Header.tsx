@@ -161,7 +161,7 @@ export default function Header({ navigation }: HeaderProps) {
             aria-label="Honeywell Hydraulics — Home"
           >
             <Image
-              src="/long-size-logohydralics-logo.png"
+              src="/images/logos/long-size-logohydralics-logo.png"
               alt="Honeywell Hydraulics — Custom Hydraulic Cylinder & Power Pack Manufacturer"
               width={350}
               height={100}
@@ -335,3 +335,4 @@ export default function Header({ navigation }: HeaderProps) {
     </>
   );
 }
+

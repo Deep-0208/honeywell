@@ -44,14 +44,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    keywords: [
-      'High Low Hydraulic Power Pack Manufacturer in Ahmedabad',
-      'Dual Pump Hydraulic Power Unit',
-      'Press Machine Power Pack',
-      'Energy Efficient Hydraulic Power Pack',
-      'High Low Power Pack Gujarat',
-      'Unloading Valve Hydraulic Circuit',
-    ],
+    
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),

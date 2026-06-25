@@ -28,14 +28,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    keywords: [
-      'Hydraulic Cylinder Manufacturer in Ahmedabad',
-      'Custom Hydraulic Cylinders',
-      'Industrial Hydraulic Cylinders',
-      'Hydraulic Cylinder Supplier Gujarat',
-      'Double Acting Hydraulic Cylinders',
-      'Tie Rod Hydraulic Cylinders'
-    ],
+    
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),

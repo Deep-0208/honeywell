@@ -1,11 +1,9 @@
-'use client';
-
 import React from 'react';
-import Image from 'next/image';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
 import { heroCarouselImages } from '@/data/hero-carousel-images';
+import { HeroCarousel } from '@/components/homepage/HeroCarousel';
 import {
   ArrowRight,
   CheckCircle2,
@@ -16,7 +14,7 @@ import {
    HeroSection — Honeywell Hydraulics Homepage
    ─────────────────────────────────────────────
 
-   A  rchitecture:  HOMEPAGE_ARCHITECTURE.md § Section 01
+   Architecture:  HOMEPAGE_ARCHITECTURE.md § Section 01
    Design:        DESIGN.md § Hero Section
    SEO:           SEO_ARCHITECTURE.md § Homepage
    Content:       docs/content/homepage/homepage-copy.md § Section 01
@@ -69,15 +67,6 @@ const trustChips = [
  * @see HOMEPAGE_ARCHITECTURE.md § Section 01
  */
 export function HeroSection() {
-  const [currentSlide, setCurrentSlide] = React.useState(0);
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroCarouselImages.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [heroCarouselImages.length]);
-
   return (
     <section
       aria-labelledby="hero-heading"
@@ -148,7 +137,7 @@ export function HeroSection() {
               className="flex flex-wrap lg:flex-nowrap gap-x-3 sm:gap-x-5 md:gap-x-6 gap-y-3 mb-8 sm:mb-10"
               aria-label="Key advantages"
             >
-              {trustChips.map((chip, i) => (
+              {trustChips.map((chip) => (
                 <li
                   key={chip}
                   className="flex items-center gap-1.5 sm:gap-2 text-sm sm:text-[15px] font-medium text-brand-darkSlate font-body whitespace-nowrap"
@@ -166,8 +155,7 @@ export function HeroSection() {
             <div
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-8"
             >
-              <div
-              >
+              <div>
                 <Button
                   href="/request-quote/"
                   variant="primary"
@@ -177,8 +165,7 @@ export function HeroSection() {
                   Request Quote
                 </Button>
               </div>
-              <div
-              >
+              <div>
                 <Button
                   href="/products/"
                   variant="outline"
@@ -200,49 +187,7 @@ export function HeroSection() {
           >
             {/* Light surface background for product showcase */}
             <div className="relative aspect-[3/2] sm:aspect-[4/3] lg:aspect-square rounded-2xl bg-white border border-slate-200/80 overflow-hidden shadow-sm">
-              {heroCarouselImages.map((item, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
-                    }`}
-                >
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    title={item.title}
-                    fill
-                    priority={index === 0}
-                    fetchPriority={index === 0 ? "high" : "auto"}
-                    decoding="sync"
-                    quality={85}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                    className="object-contain p-2 pb-[80px] sm:p-4 sm:pb-[96px] lg:p-8 lg:pb-[112px] w-full h-full"
-                    unoptimized
-                  />
-
-                  {/* Product label overlay */}
-                  <div
-                    className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-xl px-4 py-3 sm:px-5 sm:py-4 shadow-sm"
-                  >
-                    <div className="flex items-center justify-between mb-1.5">
-                      <p className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.15em] text-honeywell-red font-body">
-                        Featured Product
-                      </p>
-                      <div className="flex gap-1.5">
-                        {heroCarouselImages.map((_, dotIndex) => (
-                          <div
-                            key={dotIndex}
-                            className={`h-1.5 rounded-full transition-all duration-300 ${dotIndex === currentSlide ? 'w-4 bg-honeywell-red' : 'w-1.5 bg-slate-200'}`}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                    <p className="text-sm sm:text-base font-display font-bold text-honeywell-navy">
-                      {item.title}
-                    </p>
-                  </div>
-                </div>
-              ))}
+              <HeroCarousel images={heroCarouselImages} />
             </div>
 
             {/* Decorative accents — engineering precision feel */}

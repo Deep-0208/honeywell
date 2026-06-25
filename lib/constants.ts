@@ -16,7 +16,7 @@ export const COMPANY_INFO = {
   foundingYear: '2018',
   openingHours: { opens: '09:00', closes: '19:00' },
   geo: { latitude: 23.035, longitude: 72.668 },
-  googleMapsUrl: 'https://maps.google.com/?cid=123456789', // Replace with actual Google Maps CID/URL
+  googleMapsUrl: 'https://maps.app.goo.gl/GYx2VmdKC4PJWww16',
   themeColor: '#0D1B5C',
   websiteUrl: 'https://www.honeywellhydraulics.com',
   socialUrls: {

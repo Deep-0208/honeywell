@@ -140,7 +140,7 @@ export default function Footer() {
                 aria-label="Honeywell Hydraulics — Home"
               >
                 <Image
-                  src="/long-size-logohydralics-logo.png"
+                  src="/images/logos/long-size-logohydralics-logo.png"
                   alt="Honeywell Hydraulics Logo"
                   width={240}
                   height={60}
@@ -349,3 +349,4 @@ export default function Footer() {
     </>
   );
 }
+

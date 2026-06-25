@@ -77,7 +77,7 @@ const organizationSchema = {
   '@type': 'Organization',
   name: COMPANY_INFO.name,
   url: COMPANY_INFO.websiteUrl,
-  logo: `${COMPANY_INFO.websiteUrl}/long-size-logohydralics-logo.png`,
+  logo: `${COMPANY_INFO.websiteUrl}/images/logos/long-size-logohydralics-logo.png`,
   foundingDate: COMPANY_INFO.foundingYear,
   description: 'Leading hydraulic cylinder and power pack manufacturer in Ahmedabad, Gujarat. Custom-engineered hydraulic solutions for 25+ industries across India.',
   address: {
@@ -795,3 +795,4 @@ export default function AboutUsPage() {
     </>
   );
 }
+

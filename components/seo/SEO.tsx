@@ -53,8 +53,8 @@ export function SEO({
       logo: {
         '@type': 'ImageObject',
         '@id': `${siteUrl}/#logo`,
-        url: `${siteUrl}/long-size-logohydralics-logo.png`,
-        contentUrl: `${siteUrl}/long-size-logohydralics-logo.png`,
+        url: `${siteUrl}/images/logos/long-size-logohydralics-logo.png`,
+        contentUrl: `${siteUrl}/images/logos/long-size-logohydralics-logo.png`,
         caption: COMPANY_INFO.name,
       },
       image: { '@id': `${siteUrl}/#logo` },
@@ -140,4 +140,5 @@ export function SEO({
 
   return <JsonLd data={{ '@graph': graph }} />;
 }
+
 

@@ -28,14 +28,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    keywords: [
-      'Hydraulic Power Pack Manufacturer in Ahmedabad',
-      'Custom Hydraulic Power Packs',
-      'Industrial Hydraulic Power Packs',
-      'Hydraulic Power Unit Manufacturer',
-      'Hydraulic Power Pack Supplier Gujarat',
-      'Compact Hydraulic Power Packs'
-    ],
+    
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),

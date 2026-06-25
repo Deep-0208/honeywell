@@ -48,14 +48,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    keywords: [
-      'Welded Hydraulic Cylinder Manufacturer in Ahmedabad',
-      'Welded Hydraulic Cylinder',
-      'Heavy Duty Welded Cylinder',
-      'Industrial Welded Hydraulic Cylinder',
-      'Hydraulic Cylinder Manufacturer Gujarat',
-      'Welded Cylinder Supplier India',
-    ],
+    
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),

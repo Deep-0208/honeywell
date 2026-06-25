@@ -62,7 +62,7 @@ export function buildOrganizationJsonLd() {
     '@type': 'Organization',
     name: COMPANY_INFO.name,
     url: COMPANY_INFO.websiteUrl,
-    logo: `${COMPANY_INFO.websiteUrl}/long-size-logohydralics-logo.png`,
+    logo: `${COMPANY_INFO.websiteUrl}/images/logos/long-size-logohydralics-logo.png`,
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: COMPANY_INFO.phone,
@@ -261,8 +261,8 @@ export function buildHomepageGraphSchema({
         logo: {
           '@type': 'ImageObject',
           '@id': `${siteUrl}/#logo`,
-          url: `${siteUrl}/long-size-logohydralics-logo.png`,
-          contentUrl: `${siteUrl}/long-size-logohydralics-logo.png`,
+          url: `${siteUrl}/images/logos/long-size-logohydralics-logo.png`,
+          contentUrl: `${siteUrl}/images/logos/long-size-logohydralics-logo.png`,
           caption: COMPANY_INFO.name,
         },
         image: { '@id': `${siteUrl}/#logo` },
@@ -367,3 +367,4 @@ export function buildHomepageGraphSchema({
     ],
   };
 }
+

@@ -61,14 +61,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    keywords: [
-      'Tie Rod Hydraulic Cylinder Manufacturer Ahmedabad',
-      'Tie Rod Hydraulic Cylinder Supplier Gujarat',
-      'Industrial Tie Rod Cylinder',
-      'NFPA Hydraulic Cylinder Manufacturer',
-      'Tie Rod Cylinders India',
-      'Tie Rod Hydraulic Cylinders',
-    ],
+    
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),

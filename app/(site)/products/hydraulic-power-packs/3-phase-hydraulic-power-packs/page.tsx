@@ -52,14 +52,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    keywords: [
-      '3 Phase Hydraulic Power Pack Manufacturer in Ahmedabad',
-      '3 Phase Hydraulic Power Pack',
-      'Industrial Hydraulic Power Pack',
-      'Hydraulic Power Unit Manufacturer',
-      'Hydraulic Power Pack Gujarat',
-      'Hydraulic Power Pack Supplier India',
-    ],
+    
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),

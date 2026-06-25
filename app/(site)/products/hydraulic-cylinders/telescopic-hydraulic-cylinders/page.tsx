@@ -66,13 +66,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    keywords: [
-      'Telescopic Hydraulic Cylinder Manufacturer Ahmedabad',
-      'Multi Stage Hydraulic Cylinder Manufacturer',
-      'Dump Truck Hydraulic Cylinder Supplier',
-      'Telescopic Cylinder Manufacturer Gujarat',
-      'Tipper Cylinder Manufacturer',
-    ],
+    
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),

@@ -44,14 +44,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    keywords: [
-      'DC Hydraulic Power Pack Manufacturer in Ahmedabad',
-      '12V Hydraulic Power Pack',
-      '24V Hydraulic Power Pack',
-      'Mini Hydraulic Power Unit',
-      'Mobile Hydraulic Power Pack Gujarat',
-      'DC Power Pack Supplier India',
-    ],
+    
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),

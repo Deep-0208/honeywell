@@ -58,16 +58,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    keywords: [
-      'Custom Hydraulic Cylinder Manufacturer Ahmedabad',
-      'Custom Hydraulic Cylinder Supplier Gujarat',
-      'Industrial Hydraulic Cylinder Manufacturer',
-      'Custom Hydraulic Cylinders India',
-      'Hydraulic Cylinder Manufacturer Gujarat',
-      'Bespoke Hydraulic Cylinder',
-      'Large Bore Hydraulic Cylinder',
-      'Reverse Engineering Hydraulic Cylinder',
-    ],
+    
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),
