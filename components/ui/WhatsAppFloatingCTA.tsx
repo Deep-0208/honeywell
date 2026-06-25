@@ -10,7 +10,7 @@ interface WhatsAppFloatingCTAProps {
 export function WhatsAppFloatingCTA({ href }: WhatsAppFloatingCTAProps) {
 
   return (
-    <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-8 left-8 z-50 flex flex-col items-start gap-3">
       {/* Request Quote Button */}
       <a
         href="/request-quote/"

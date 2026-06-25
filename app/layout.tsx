@@ -5,6 +5,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { COMPANY_INFO, SEO_DEFAULTS } from '@/lib/constants';
 import './globals.css';
 import { Agentation } from 'agentation';
+import { ElevenLabsWidget } from '@/components/ElevenLabsWidget';
 import { Poppins, Roboto } from 'next/font/google';
 
 const poppins = Poppins({
@@ -130,6 +131,7 @@ export default function RootLayout({
           </>
         )}
         {process.env.NODE_ENV === 'development' && <Agentation />}
+        <ElevenLabsWidget />
       </body>
     </html>
   );
