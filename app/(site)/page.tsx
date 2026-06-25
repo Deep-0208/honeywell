@@ -25,7 +25,7 @@ const HOMEPAGE_TITLE =
   'Hydraulic Cylinder & Power Pack Manufacturer in Ahmedabad';
 
 const HOMEPAGE_DESCRIPTION =
-  'Leading manufacturer of hydraulic cylinders, power packs, manifold blocks, and custom hydraulic systems in Ahmedabad, Gujarat. ISO 9001:2015 certified. Serving 25+ industries across India.';
+  'Leading manufacturer of hydraulic cylinders, power packs & custom hydraulic systems in Ahmedabad. ISO 9001:2015 certified. Serving 25+ industries across India.';
 
 const HOMEPAGE_KEYWORDS = [
   'hydraulic cylinder manufacturer',

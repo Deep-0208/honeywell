@@ -30,7 +30,7 @@ const iconMap: Record<string, React.ReactNode> = {
  */
 export function IndustriesSection() {
   return (
-    <Section bg="gray" aria-labelledby="industries-heading">
+    <Section bg="white" aria-labelledby="industries-heading">
       <Container>
         {/* Section header */}
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">

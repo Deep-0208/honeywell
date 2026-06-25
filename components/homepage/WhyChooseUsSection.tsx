@@ -29,7 +29,7 @@ const iconMap: Record<string, React.ReactNode> = {
  */
 export function WhyChooseUsSection() {
   return (
-    <Section bg="white" aria-labelledby="why-heading">
+    <Section bg="gray" aria-labelledby="why-heading">
       <Container>
         {/* Section header */}
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">

@@ -18,7 +18,7 @@ import { homepageFAQs } from '@/data/homepage';
  */
 export function FAQSection() {
   return (
-    <Section bg="gray" aria-labelledby="faq-heading">
+    <Section bg="white" aria-labelledby="faq-heading">
       <Container>
         {/* Section header */}
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">

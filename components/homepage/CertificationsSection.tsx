@@ -15,7 +15,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export function CertificationsSection() {
   return (
-    <Section bg="white" aria-labelledby="certifications-heading">
+    <Section bg="gray" aria-labelledby="certifications-heading">
       <Container>
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
           <Heading variant="section" as="h2" id="certifications-heading" className="text-honeywell-navy mb-4">

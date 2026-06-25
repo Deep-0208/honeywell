@@ -18,7 +18,7 @@ import { homepageLocations } from '@/data/homepage';
  */
 export function LocationsSection() {
   return (
-    <Section bg="white" aria-labelledby="locations-heading">
+    <Section bg="gray" aria-labelledby="locations-heading">
       <Container>
         {/* Section header */}
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">

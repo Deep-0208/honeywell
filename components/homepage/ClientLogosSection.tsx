@@ -8,7 +8,7 @@ import { clientLogos, trustMetrics } from '@/data/homepage';
 export function ClientLogosSection() {
   return (
     <Section
-      bg="gray"
+      bg="white"
       aria-labelledby="trust-heading"
       className="py-16 sm:py-20 md:py-24 relative overflow-hidden border-t border-slate-200"
     >

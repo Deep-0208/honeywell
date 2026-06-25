@@ -39,7 +39,7 @@ const iconMap: Record<string, React.ReactNode> = {
  */
 export function ManufacturingFacilitySection() {
   return (
-    <Section bg="white" aria-labelledby="facility-heading">
+    <Section bg="gray" aria-labelledby="facility-heading">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 

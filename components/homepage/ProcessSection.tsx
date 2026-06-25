@@ -32,7 +32,7 @@ const iconMap: Record<string, React.ReactNode> = {
 export function ProcessSection() {
 
   return (
-    <Section bg="gray" aria-labelledby="process-heading">
+    <Section bg="white" aria-labelledby="process-heading">
       <Container>
         {/* Section header */}
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">

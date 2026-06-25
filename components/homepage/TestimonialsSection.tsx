@@ -19,7 +19,7 @@ import { homepageTestimonials } from '@/data/homepage';
  */
 export function TestimonialsSection() {
   return (
-    <Section bg="gray" aria-labelledby="testimonials-heading">
+    <Section bg="white" aria-labelledby="testimonials-heading">
       <Container>
         {/* Section header */}
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
