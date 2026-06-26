@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
@@ -46,15 +47,14 @@ export function ManufacturingFacilitySection() {
           {/* ─── Left Column — Facility Image ─── */}
           <div className="relative order-2 lg:order-1">
             <div className="relative aspect-[3/2] sm:aspect-[4/3] rounded-lg bg-brand-lightSurface border border-slate-200 overflow-hidden shadow-elevated">
-              {/* Placeholder — image pending: honeywell-manufacturing-facility-kathwada.webp */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-brand-surfaceGray to-brand-lightSurface p-8">
-                <div className="w-20 h-20 rounded-2xl bg-honeywell-navy/[0.06] flex items-center justify-center mb-4">
-                  <Factory className="w-10 h-10 text-honeywell-navy/40" />
-                </div>
-                <p className="text-brand-steelGray font-body text-sm text-center max-w-[240px]">
-                  Manufacturing facility at Kathwada GIDC, Ahmedabad
-                </p>
-              </div>
+              <Image
+                src="/images/home/facility/honeywell-manufacturing-facility-kathwada.webp"
+                alt="Honeywell Hydraulics manufacturing facility at Kathwada GIDC, Ahmedabad"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+                quality={85}
+              />
 
               {/* Location label overlay */}
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-sm px-4 py-3">
@@ -96,9 +96,9 @@ export function ManufacturingFacilitySection() {
                     </span>
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-honeywell-navy text-base mb-0.5">
+                    <Heading variant="card" as="h3" className="mb-0.5">
                       {highlight.title}
-                    </h3>
+                    </Heading>
                     <p className="text-brand-steelGray font-body text-sm leading-relaxed">
                       {highlight.description}
                     </p>

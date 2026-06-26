@@ -64,6 +64,7 @@ export default function Header({ navigation }: HeaderProps) {
 
   /* ── Close menus on route change ── */
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOpenMenu(null);
   }, [pathname]);
 

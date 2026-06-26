@@ -33,9 +33,9 @@ export function CertificationsSection() {
                 variant="primary"
                 className="mx-auto mb-4"
               />
-              <h3 className="font-display font-bold text-honeywell-navy text-lg mb-2">
+              <Heading variant="card" as="h3" className="mb-2">
                 {cert.title}
-              </h3>
+              </Heading>
               <p className="text-brand-steelGray font-body text-sm leading-relaxed">
                 {cert.description}
               </p>

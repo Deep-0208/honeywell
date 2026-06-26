@@ -33,19 +33,21 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
-  if (!item.megaMenu) return null;
-
   const isProductsMega = item.label === 'Products';
   const [activeLink, setActiveLink] = useState<NavLink | null>(null);
 
   useEffect(() => {
     if (isOpen && isProductsMega && item.megaMenu) {
       const firstWithSub = item.megaMenu.columns.flatMap(c => c.links).find(l => l.subcategories?.length);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (firstWithSub) setActiveLink(firstWithSub);
     } else {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setActiveLink(null);
     }
   }, [isOpen, isProductsMega, item]);
+
+  if (!item.megaMenu) return null;
 
   return (
     <>

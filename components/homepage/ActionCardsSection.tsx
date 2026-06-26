@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
+import { Heading } from '@/components/ui/Heading';
 import { IconBox } from '@/components/ui/IconBox';
 import { ArrowRight } from 'lucide-react';
 import { FaCalculator, FaFileDownload, FaWrench } from 'react-icons/fa';
@@ -20,7 +21,7 @@ export function ActionCardsSection() {
     <Section bg="white" aria-labelledby="action-cards-heading">
       <Container>
         <div className="sr-only" id="action-cards-heading">
-          <h2>Quick Actions</h2>
+          <Heading variant="section" as="h2">Quick Actions</Heading>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 relative z-20">
           {actionCards.map((card) => (
@@ -35,9 +36,9 @@ export function ActionCardsSection() {
                 variant="outline"
                 className="mb-4 group-hover:bg-honeywell-navy group-hover:text-white group-hover:border-honeywell-navy transition-colors duration-300"
               />
-              <h3 className="font-display font-bold text-honeywell-navy text-lg mb-2">
+              <Heading variant="card" as="h3" className="mb-2">
                 {card.title}
-              </h3>
+              </Heading>
               <p className="text-brand-steelGray font-body text-sm leading-relaxed mb-4 flex-grow">
                 {card.description}
               </p>

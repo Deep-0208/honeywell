@@ -1,0 +1,25 @@
+# Honeywell Hydraulics
+
+> Industrial hydraulic cylinders, power packs, and custom fluid power systems manufactured in India.
+
+## About Us
+Honeywell Hydraulics is an ISO 9001:2015 certified manufacturer of heavy-duty hydraulic solutions. Based in Ahmedabad, Gujarat, we engineer and produce reliable hydraulic equipment for continuous industrial operations, serving over 25 industries globally.
+
+## Core Products
+- **Hydraulic Cylinders:** Single acting, double acting, telescopic, and tie-rod cylinders. Bore sizes up to 300mm.
+- **Hydraulic Power Packs:** Custom multi-station and hand-lever power units for precise fluid control.
+- **Hydraulic Manifold Blocks:** Custom-machined blocks for space-efficient hydraulic circuits.
+- **Custom Hydraulic Systems:** Complete turnkey fluid power solutions from engineering to commissioning.
+
+## Trust & Quality
+- **Certification:** ISO 9001:2015
+- **Track Record:** 500+ projects completed, 5,000+ cylinders delivered.
+- **Quality Control:** 100% of units are hydrostatic pressure tested at 1.5x operating pressure before dispatch.
+
+## Links & Machine-Readable Files
+- Main Website: https://honeywellhydraulics.com
+- Product Catalog Data (Markdown): https://honeywellhydraulics.com/catalog.md
+
+## Contact
+- Location: Kathwada GIDC, Ahmedabad, Gujarat, India
+- For quotes and custom engineering, visit our website's contact section.

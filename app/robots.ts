@@ -28,20 +28,19 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: 'GPTBot',
-        allow: '/',
-        disallow: '/admin/',
+        disallow: '/',
       },
       {
         userAgent: 'Google-Extended',
-        allow: '/',
+        disallow: '/',
       },
       {
         userAgent: 'ClaudeBot',
-        allow: '/',
+        disallow: '/',
       },
       {
         userAgent: 'PerplexityBot',
-        allow: '/',
+        disallow: '/',
       },
       {
         userAgent: [

@@ -76,9 +76,9 @@ export function ProcessSection() {
                 />
 
                 {/* Content */}
-                <h3 className="font-display font-bold text-honeywell-navy text-lg mb-2">
+                <Heading variant="card" as="h3" className="mb-2">
                   {step.title}
-                </h3>
+                </Heading>
                 <p className="text-brand-steelGray font-body text-sm leading-relaxed max-w-[240px]">
                   {step.body}
                 </p>

@@ -1,189 +1,149 @@
-# Local SEO Implementation — Honeywell Hydraulics
+# Local SEO Implementation
 
-**Consolidated By:** Senior Local SEO Specialist
-**Date:** June 7, 2026
-**Sources:** `local_seo_schema.md`, `honeywell-technical-seo-spec.md` §17, `docs/content/locations/*`
+> **Living Document** — Reflects exact implementation in `lib/constants.ts`, `app/robots.ts`, `components/Footer.tsx`, and the `data/homepage.ts` locations data.
 
 ---
 
-## 1. NAP Standard (Canonical — Use Everywhere)
+## 1. HQ Location (Primary)
 
-```
-Name:    Honeywell Hydraulics
-Address: B-18, Suryam Plaza Estate, Near Nilkanth Estate, Road no. 15, Kathwada GIDC, Ahmedabad, Gujarat 382430, India
-Phone:   +91 9924343873
-Email:   sales@honeywellhydraulics.com
+**Source:** `lib/constants.ts → COMPANY_INFO`
+
+```typescript
+address: {
+  streetAddress: 'B-18, Suryam Plaza Estate, Near Nilkanth Estate, Road no. 15, Kathwada GIDC',
+  addressLocality: 'Ahmedabad',
+  addressRegion: 'Gujarat',
+  postalCode: '382430',
+  addressCountry: 'IN'
+},
+geo: { latitude: 23.035, longitude: 72.668 },
+openingHours: { opens: '09:00', closes: '19:00' },
+googleMapsUrl: 'https://maps.app.goo.gl/GYx2VmdKC4PJWww16'
 ```
 
-> **Rule:** This exact NAP must appear identically in the website header, footer, contact page, all schema markup, Google Business Profile, and every citation.
+This data automatically populates:
+1. `ManufacturingBusiness` JSON-LD on the homepage
+2. NAP block in `Footer.tsx`
+3. Contact page address block
 
 ---
 
-## 2. Location Pages
+## 2. NAP Citation Consistency
 
-### Target Cities
+The NAP is hardcoded identically in `components/Footer.tsx` to match Google Business Profile exactly:
 
-| # | City | URL | Content Status | Priority |
-|---|---|---|---|---|
-| 1 | Ahmedabad (HQ) | `/locations/ahmedabad/` | ✅ Full content exists | 🔴 Critical |
-| 2 | Gujarat (State) | `/locations/gujarat/` | ✅ Full content exists | 🔴 Critical |
-| 3 | India (National) | `/locations/india/` | ✅ Full content exists | 🔴 Critical |
-| 4 | Surat | `/locations/surat/` | ✅ Full content exists | 🟠 High |
-| 5 | Vadodara | `/locations/vadodara/` | ✅ Full content exists | 🟠 High |
-| 6 | Rajkot | `/locations/rajkot/` | ✅ Full content exists | 🟠 High |
-| 7 | Bhavnagar | `/locations/bhavnagar/` | ✅ Full content exists | 🟡 Medium |
-| 8 | Gandhinagar | `/locations/gandhinagar/` | ✅ Full content exists | 🟡 Medium |
-| 9 | Vapi | `/locations/vapi/` | ✅ Full content exists | 🟡 Medium |
-| 10 | Jamnagar | `/locations/jamnagar/` | ✅ Full content exists | 🟡 Medium |
+```
+Name:     Honeywell Hydraulics
+Address:  B-18, Suryam Plaza Estate, Near Nilkanth Estate,
+          Road No. 15, Kathwada GIDC,
+          Ahmedabad, Gujarat 382430, India
+Phone:    +91-9924343873
+Email:    sales@honeywellhydraulics.com
+WhatsApp: https://wa.me/919924343873
+```
+
+**Critical rule:** If the GBP address changes, update `lib/constants.ts` first. The Footer and schema pull from it automatically.
 
 ---
 
-## 3. Metadata Structure Per Location Page
+## 3. Service Area Pages
 
-### Ahmedabad (HQ)
-```
-Title:       Hydraulic Cylinder Manufacturer in Ahmedabad | Honeywell Hydraulics
-Description: Hydraulic cylinder, power pack & manifold block manufacturer in Kathwada GIDC, Ahmedabad, Gujarat. Factory-direct pricing. 200+ clients served. Get a free quote.
-H1:          Hydraulic Cylinder Manufacturer in Ahmedabad
-```
+Homepage `LocationsSection` links to 6 service area pages. All share the HQ schema but target regional keywords via page titles and H1s.
 
-### Service-Area Cities (Surat, Rajkot, Vadodara, etc.)
-```
-Title:       Hydraulic Cylinder Manufacturer in {City} | Honeywell Hydraulics
-Description: Hydraulic cylinder manufacturer serving {City}, Gujarat. Cylinders, power packs & complete systems. {Delivery promise to city}. {Number}+ clients. Contact us today.
-H1:          Hydraulic Cylinder Manufacturer in {City}
+| City/Region | Page URL | Target Industries |
+|------------|----------|-------------------|
+| Gujarat | `/locations/gujarat-facility/` | Injection Moulding, Automotive, Steel, Textile |
+| Maharashtra | `/locations/maharashtra/` | Automotive, Manufacturing, Engineering |
+| Indore | `/locations/indore/` | Auto Parts, Pharmaceuticals, Food Processing |
+| West Bengal | `/locations/west-bengal/` | Steel & Mining, Heavy Engineering, Manufacturing |
+| Rajasthan | `/locations/rajasthan/` | Auto Components, Cement, Mining |
+| Pan India | `/locations/india/` | OEM Supply, Project Orders, Export |
+
+### Schema for Location Pages
+
+Location pages should inject a `WebPage` schema with:
+- `areaServed` set to the target region
+- `parentOrganization` pointing to the HQ `@id`
+
+```typescript
+// Example for Maharashtra
+buildWebPageJsonLd(
+  'Hydraulic Cylinder Supplier in Maharashtra',
+  'Factory-direct hydraulic equipment supply to Pune, Mumbai...',
+  '/locations/maharashtra/'
+)
 ```
 
 ---
 
-## 4. ManufacturingBusiness Schema
+## 4. LocalBusiness Schema Fields
 
-### HQ Location (Ahmedabad)
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "ManufacturingBusiness",
-  "@id": "https://www.honeywellhydraulics.com/locations/ahmedabad/#localbusiness",
-  "name": "Honeywell Hydraulics — Ahmedabad",
-  "image": "https://www.honeywellhydraulics.com/images/factory/honeywell-hydraulics-factory.jpg",
-  "url": "https://www.honeywellhydraulics.com/locations/ahmedabad/",
-  "telephone": "+91-9924343873",
-  "email": "sales@honeywellhydraulics.com",
-  "priceRange": "₹₹",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "B-18, Suryam Plaza Estate, Near Nilkanth Estate, Road no. 15, Kathwada GIDC",
-    "addressLocality": "Ahmedabad",
-    "addressRegion": "Gujarat",
-    "postalCode": "382430",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 23.035,
-    "longitude": 72.668
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "09:00",
-      "closes": "19:00"
-    }
-  ],
-  "areaServed": [
-    { "@type": "City", "name": "Ahmedabad" },
-    { "@type": "State", "name": "Gujarat" }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "50",
-    "bestRating": "5"
-  }
-}
+The `ManufacturingBusiness` schema includes all fields required for a rich knowledge panel:
+
+| Field | Value |
+|-------|-------|
+| `@type` | `ManufacturingBusiness` |
+| `priceRange` | `₹₹` |
+| `telephone` | `+91-9924343873` |
+| `email` | `sales@honeywellhydraulics.com` |
+| `latitude` | `23.035` |
+| `longitude` | `72.668` |
+| `openingHours` | Mon–Sat, 09:00–19:00 |
+| `image` | `/images/hero/hydraulic-cylinder-manufacturing-ahmedabad.png` |
+
+---
+
+## 5. Footer Local SEO Links
+
+`components/Footer.tsx` includes a dedicated locations row:
+
+```
+Gujarat | Maharashtra | Indore | West Bengal | Rajasthan | Pan India
 ```
 
-### Service-Area Location (e.g., Surat)
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "ManufacturingBusiness",
-  "name": "Honeywell Hydraulics — Serving Surat",
-  "description": "Hydraulic cylinder manufacturer serving Surat, Gujarat. Delivery to Sachin GIDC, Pandesara, and Hazira within 1-3 days.",
-  "url": "https://www.honeywellhydraulics.com/locations/surat/",
-  "telephone": "+91-9924343873",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "B-18, Suryam Plaza Estate, Near Nilkanth Estate, Road no. 15, Kathwada GIDC",
-    "addressLocality": "Ahmedabad",
-    "addressRegion": "Gujarat",
-    "postalCode": "382430",
-    "addressCountry": "IN"
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "Surat",
-    "containedIn": { "@type": "State", "name": "Gujarat" }
-  }
-}
+These links form the internal link matrix that signals Googlebot about service areas.
+
+---
+
+## 6. Google Maps Integration
+
+- Footer links to `COMPANY_INFO.googleMapsUrl`
+- WhatsApp CTA links: `wa.me/919924343873`
+- Both are configured in `lib/constants.ts`
+
+---
+
+## 7. Language & Locale
+
+- `<html lang="en-IN">` — signals Indian English to search engines
+- OpenGraph: `locale: 'en_IN'`
+- Schema `ContactPoint.availableLanguage: ['en', 'hi', 'gu']` — signals multilingual support
+
+---
+
+## 8. Sitemap Priority for Local Pages
+
+From `next-sitemap.config.cjs`:
+
+```javascript
+// Key location pages — Priority 0.9
+const keyLocations = ['/locations/ahmedabad', '/locations/gujarat', '/locations/india'];
+
+// Other location pages — Priority 0.7
+if (path.startsWith('/locations/')) → priority: 0.7
 ```
 
-> **Critical:** The physical `address` is always the Ahmedabad HQ. For service-area pages, we are NOT claiming an office in that city. The `areaServed` declares the business serves that region from its actual location.
-
 ---
 
-## 5. FAQ Rules Per Location Page
+## 9. Industry Targeting (National SEO)
 
-Each location page must include 3–5 city-specific FAQs with `FAQPage` schema. Examples:
+The Industries mega menu and `IndustriesSection` on the homepage target national verticals. Each industry page provides a topical authority signal:
 
-**Surat:**
-- "Do you deliver hydraulic cylinders to Surat?"
-- "What is the delivery time from Ahmedabad to Surat?"
-- "Which GIDC areas in Surat do you serve?"
-
-**Rajkot:**
-- "Do you manufacture hydraulic cylinders for Rajkot industries?"
-- "What industries in Rajkot use your hydraulic equipment?"
-- "Can I visit your factory from Rajkot?"
-
----
-
-## 6. Geo Coordinates Reference
-
-| City | Latitude | Longitude | Notes |
-|---|---|---|---|
-| Ahmedabad (HQ) | 23.035 | 72.668 | Kathwada GIDC — actual factory location |
-| Surat | 21.170 | 72.831 | Reference only (no office) |
-| Vadodara | 22.307 | 73.181 | Reference only |
-| Rajkot | 22.304 | 70.802 | Reference only |
-| Bhavnagar | 21.764 | 72.153 | Reference only |
-| Gandhinagar | 23.215 | 72.637 | Reference only |
-| Vapi | 20.372 | 72.904 | Reference only |
-| Jamnagar | 22.471 | 70.058 | Reference only |
-
-> Only the Ahmedabad HQ coordinates should appear in `geo` schema. Service-area pages omit `geo` and use only `areaServed`.
-
----
-
-## 7. Internal Linking Rules for Location Pages
-
-Each location page must link to:
-- All 4 product pillar pages
-- Industries prevalent in that city/region
-- Relevant service pages
-- `/request-quote/`
-- Other nearby location pages (geo-cluster linking)
-
----
-
-## 8. Google Business Profile Checklist
-
-- [ ] Claim and verify profile at Kathwada GIDC address
-- [ ] Primary Category: `Hydraulic Equipment Supplier`
-- [ ] Secondary Categories: `Manufacturer`, `Industrial Equipment Supplier`
-- [ ] Add top products with photos and links to `/request-quote/`
-- [ ] Upload photos: factory exterior (with signage), factory floor, CNC machines, finished products
-- [ ] Service areas: Ahmedabad, Surat, Rajkot, Vadodara, Gujarat
-- [ ] UTM-tracked website link: `https://www.honeywellhydraulics.com/?utm_source=gmb&utm_medium=organic&utm_campaign=local`
-- [ ] Weekly GBP posts scheduled
+| Industry | Target Query Pattern |
+|----------|---------------------|
+| Injection Moulding | "hydraulic cylinder for injection moulding machine" |
+| Automotive | "hydraulic power pack for automotive assembly" |
+| Steel & Metallurgy | "heavy duty hydraulic cylinder for rolling mill" |
+| Construction Equipment | "boom cylinder for excavator manufacturer" |
+| Material Handling | "hydraulic lifting cylinder for warehouse" |
+| Special Purpose Machines | "custom hydraulic cylinder for SPM" |

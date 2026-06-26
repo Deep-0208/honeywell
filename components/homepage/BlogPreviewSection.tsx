@@ -38,11 +38,11 @@ export function BlogPreviewSection() {
                   <Calendar className="w-4 h-4" />
                   <time dateTime={new Date(post.date).toISOString()}>{post.date}</time>
                 </div>
-                <h3 className="font-display font-bold text-honeywell-navy text-xl mb-3 line-clamp-2">
+                <Heading variant="card" as="h3" className="mb-3 line-clamp-2">
                   <Link href={post.href} className="hover:text-honeywell-red transition-colors focus-visible:outline-none focus-visible:underline">
                     {post.title}
                   </Link>
-                </h3>
+                </Heading>
                 <p className="text-brand-steelGray font-body text-sm leading-relaxed mb-6 line-clamp-3 flex-grow">
                   {post.excerpt}
                 </p>

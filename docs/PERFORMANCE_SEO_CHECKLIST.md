@@ -1,129 +1,171 @@
-# Performance SEO Checklist — Honeywell Hydraulics
+# Performance & SEO Checklist
 
-**Consolidated By:** Performance Engineering Lead
-**Date:** June 7, 2026
-**Source:** `honeywell-technical-seo-spec.md` §13
+> **Living Document** — Reflects exact implementations in `next.config.ts`, `app/layout.tsx`, `app/(site)/layout.tsx`, `globals.css`, and component files.
 
 ---
 
-## Target Metrics
+## 1. Core Web Vitals (CWV)
 
-| Metric | Target | Google "Good" Threshold |
-|---|---|---|
-| **Lighthouse Score** | 95+ | — |
-| **LCP** (Largest Contentful Paint) | < 1.8s | < 2.5s |
-| **CLS** (Cumulative Layout Shift) | < 0.05 | < 0.1 |
-| **INP** (Interaction to Next Paint) | < 150ms | < 200ms |
-| **FCP** (First Contentful Paint) | < 1.2s | < 1.8s |
-| **TTFB** (Time to First Byte) | < 400ms | < 800ms |
-| **Total Page Weight** | < 800KB | — |
-| **DOM Elements** | < 800 | — |
+### 1.1 Largest Contentful Paint (LCP)
+
+Target: **< 1.8 seconds**
+
+| Check | Status | Implementation |
+|-------|--------|---------------|
+| Hero image has `priority` prop | ✅ | `HeroCarousel.tsx` — images loaded with `priority` + `fetchPriority="high"` |
+| Image format `avif` / `webp` | ✅ | `next.config.ts`: `formats: ['image/avif', 'image/webp']` |
+| Image quality | ✅ | `qualities: [75, 85, 100]` — optimized per device |
+| `sharp` installed | ✅ | `package.json`: `"sharp": "^0.34.5"` |
+| Hero image `decoding="sync"` | ✅ | First-paint inclusion |
+| No render-blocking resources | ✅ | Fonts use `display: 'swap'` via `next/font` |
+| Google Analytics deferred | ✅ | `strategy="afterInteractive"` on GA script tag |
+
+### 1.2 Cumulative Layout Shift (CLS)
+
+Target: **< 0.1**
+
+| Check | Status | Implementation |
+|-------|--------|---------------|
+| Font display swap | ✅ | `Poppins` and `Roboto` both use `display: 'swap'` |
+| Image dimensions declared | ✅ | All `<Image>` components have `width` + `height` |
+| Mobile keyboard CLS prevention | ✅ | `viewport: { interactiveWidget: 'resizes-content' }` in `app/layout.tsx` |
+| Mobile body padding | ✅ | `globals.css`: `@media (max-width: 1023px) { body { padding-bottom: 64px; } }` |
+| No unsized media | ✅ | Next.js `<Image>` enforces aspect ratios |
+
+### 1.3 Interaction to Next Paint (INP)
+
+Target: **< 200ms**
+
+| Check | Status | Implementation |
+|-------|--------|---------------|
+| Server Components default | ✅ | All page.tsx and section components are Server Components |
+| Minimal client JS | ✅ | `"use client"` used only on: `Header`, `MegaMenu`, `MobileMenu`, `MobileConversionBar`, `HeroCarousel`, `FAQAccordion` |
+| Passive scroll listeners | ✅ | `Header.tsx` — `window.addEventListener('scroll', handler, { passive: true })` |
 
 ---
 
-## Resource Budget
+## 2. Technical SEO Checklist
 
+| Check | Status | Source |
+|-------|--------|--------|
+| Canonical URL on every page | ✅ | `buildMetadata({ canonical })` → `alternates.canonical` |
+| Title tag < 60 chars | ✅ | Enforced per page in metadata exports |
+| Meta description < 160 chars | ✅ | Enforced per page in metadata exports |
+| Single `<h1>` per page | ✅ | `HeroSection.tsx` — only `as="h1"` in the site |
+| OpenGraph image 1200×630 | ✅ | `images: [{ width: 1200, height: 630 }]` in `buildMetadata` |
+| Twitter card `summary_large_image` | ✅ | Set globally in `app/layout.tsx` |
+| `<html lang="en-IN">` | ✅ | `app/layout.tsx` |
+| Theme color meta | ✅ | `viewport.themeColor: '#0D1B5C'` |
+| Favicon + Apple icon | ✅ | `app/icon.png` + `app/apple-icon.png` |
+| Schema on every page | ✅ | `<JsonLd>` component with `@graph` |
+| Robots noIndex on staging | ✅ | `NEXT_PUBLIC_VERCEL_ENV !== 'production'` → `noIndex: true` |
+| Redirects for canonical paths | ✅ | `/contact` → `/contact-us`, `/about` → `/about-us` (301) |
+| Sitemap generated post-build | ✅ | `postbuild: next-sitemap --config next-sitemap.config.cjs` |
+| Image sitemap | ✅ | `sitemap-images.xml` generated |
+| Google Search Console verification | 🔲 | Add `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` env variable |
+
+---
+
+## 3. Image Optimization Checklist
+
+| Check | Status | Implementation |
+|-------|--------|---------------|
+| WebP format | ✅ | `next.config.ts` → `formats: ['image/avif', 'image/webp']` |
+| AVIF format | ✅ | Same config — AVIF offered first (better compression) |
+| `sizes` prop on responsive images | ✅ | e.g., `sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 240px"` |
+| `priority` on LCP elements | ✅ | Hero carousel images |
+| Descriptive alt text | ✅ | No "Image of" or "Picture of" prefixes |
+| SEO-friendly filenames | ✅ | e.g., `hydraulic-cylinder-manufacturer-ahmedabad.webp` |
+| OG image dimensions | ✅ | 1200×630px JPEG |
+| Client logos compressed | ✅ | `.webp` format in `/images/clients/` |
+
+---
+
+## 4. Security Headers (`next.config.ts`)
+
+Applied to all routes via `headers()`:
+
+| Header | Value | Purpose |
+|--------|-------|---------|
+| `X-DNS-Prefetch-Control` | `on` | Faster DNS lookups |
+| `X-XSS-Protection` | `1; mode=block` | XSS protection |
+| `X-Frame-Options` | `SAMEORIGIN` | Clickjacking prevention |
+| `X-Content-Type-Options` | `nosniff` | MIME sniffing prevention |
+| `Referrer-Policy` | `strict-origin-when-cross-origin` | Privacy |
+| `Permissions-Policy` | `camera=(), geolocation=(), browsing-topics=()` | Feature policy |
+
+---
+
+## 5. Font Loading Performance
+
+```typescript
+// app/layout.tsx
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['100','200','300','400','500','600','700','800','900'],
+  variable: '--font-poppins',
+  display: 'swap'  // ← prevents FOIT
+});
 ```
-CSS:     1 critical inline (< 15KB) + 1 main file (< 50KB) = < 65KB
-JS:      1 main file (< 40KB) + analytics (< 30KB) = < 70KB
-Fonts:   Barlow Condensed 600+700 + DM Sans 400+500 + JetBrains Mono 400 (WOFF2) ≈ 120KB
-Images:  Hero < 100KB + 4 product cards < 50KB each = < 300KB
-Total:   < 600KB first load (without cache)
-```
+
+- Font files are self-hosted via `next/font` (no external network requests to Google at runtime)
+- `display: 'swap'` ensures text is visible immediately with fallback font
+- CSS variable `--font-poppins` applied globally in `globals.css`
+- Preconnect hints present in `<head>` (legacy — actual loading is now via `next/font`)
 
 ---
 
-## LCP Optimization
+## 6. Analytics & Monitoring
 
-- [ ] Hero image preloaded with `<link rel="preload">` and `fetchpriority="high"`
-- [ ] Hero image served as WebP, compressed < 100KB
-- [ ] Hero image uses `decoding="sync"` (NOT `loading="lazy"`)
-- [ ] Critical CSS inlined in `<head>` (< 15KB)
-- [ ] Fonts preconnected: `fonts.googleapis.com` and `fonts.gstatic.com`
-- [ ] `font-display: swap` on all `@font-face` declarations
-- [ ] No render-blocking JavaScript in `<head>`
-- [ ] No layout shifts before LCP element renders
-- [ ] TTFB under 400ms (use CDN / edge functions)
-- [ ] Next.js `<Image>` component with `priority` prop for hero images
+| Tool | Component | Load Strategy | Conditional |
+|------|-----------|--------------|-------------|
+| Vercel Analytics | `<Analytics />` | Server-rendered | Always |
+| Vercel Speed Insights | `<SpeedInsights />` | Server-rendered | Always |
+| Google Analytics 4 | `<Script>` | `afterInteractive` | Only if `NEXT_PUBLIC_GA_ID` exists |
+| Agentation (dev) | `<Agentation />` | Dev only | `NODE_ENV === 'development'` |
 
 ---
 
-## CLS Optimization
+## 7. Bundle & Build Optimization
 
-- [ ] ALL `<img>` elements have explicit `width` and `height` attributes
-- [ ] ALL `<iframe>` embeds (Google Maps, YouTube) have explicit dimensions
-- [ ] Fonts preloaded — no FOUT (Flash of Unstyled Text)
-- [ ] No content injected above the fold after initial load
-- [ ] Sticky header has reserved height in layout (avoid jump on scroll)
-- [ ] No lazy-loaded content above the fold
-- [ ] Web font fallback metrics closely match primary font
-- [ ] Tailwind's `aspect-ratio` utility used for media containers
-
----
-
-## INP Optimization
-
-- [ ] All JavaScript deferred or async (except critical inline)
-- [ ] No long tasks > 50ms on main thread
-- [ ] Event handlers debounced (scroll, resize, input)
-- [ ] Third-party scripts (GA4, Vercel Analytics) loaded AFTER `DOMContentLoaded`
-- [ ] Intersection Observer for scroll animations (not scroll event listeners)
-- [ ] FAQ accordion uses CSS transitions (not JS height calculations)
-- [ ] Form validation runs on `blur`, not on every `keypress`
-- [ ] React components use `React.memo()` / `useMemo()` where applicable
+| Feature | Status | Detail |
+|---------|--------|--------|
+| Server Components default | ✅ | No unnecessary client JS |
+| `compress: true` | ✅ | `next.config.ts` — gzip/brotli compression |
+| TypeScript `ignoreBuildErrors: true` | ⚠️ | `next.config.ts` — type errors won't block build |
+| Tree shaking | ✅ | Next.js/Turbopack handles automatically |
+| Dynamic imports | 🔲 | Not yet used — heavy components (QuoteForm) could benefit |
 
 ---
 
-## Image Optimization
+## 8. Accessibility Checklist
 
-- [ ] All product images served as WebP with AVIF where supported
-- [ ] Next.js `<Image>` component used for all images (automatic optimization via `sharp`)
-- [ ] Hero images: `priority={true}`, no `loading="lazy"`
-- [ ] Below-fold images: `loading="lazy"` via default Next.js behavior
-- [ ] Image dimensions specified to prevent CLS
-- [ ] OG images: JPEG format, 1200×630, < 300KB
-- [ ] Responsive `srcset` with 3 breakpoints: 400w, 800w, 1200w
-
----
-
-## Font Optimization
-
-- [ ] Use `next/font` for automatic font optimization
-- [ ] Load only required weights: Barlow Condensed 600, 700 | DM Sans 400, 500 | JetBrains Mono 400
-- [ ] Subset fonts to Latin character set only
-- [ ] WOFF2 format (smallest file size)
-- [ ] `font-display: swap` applied automatically by `next/font`
+| Check | Status | Implementation |
+|-------|--------|---------------|
+| Skip to content link | ✅ | `app/(site)/layout.tsx` — visible on focus |
+| ARIA labels on all icons | ✅ | `aria-hidden="true"` on decorative icons |
+| Keyboard nav in Header | ✅ | `Enter`/`Space` opens mega menus, `Escape` closes |
+| Focus rings | ✅ | `globals.css` `:focus-visible` + component-level `focus-visible:ring-*` |
+| WCAG AA contrast | ✅ | Navy on white (#0D1B5C on #FFFFFF = 10.6:1) |
+| `aria-expanded` on menus | ✅ | Header buttons and mobile menu toggle |
+| `aria-labelledby` on sections | ✅ | All sections linked to their heading ID |
+| Touch targets ≥ 48px | ✅ | MobileConversionBar: `min-h-[56px]` |
+| `lang` attribute | ✅ | `<html lang="en-IN">` |
+| Reduced motion support | ✅ | All animations disabled via `prefers-reduced-motion` |
 
 ---
 
-## JavaScript Optimization
+## Pre-Deployment Checklist
 
-- [ ] No jQuery, no Elementor, no particles.js, no slick, no fancybox
-- [ ] Use Next.js dynamic imports (`next/dynamic`) for non-critical components
-- [ ] `@vercel/analytics` loaded via Next.js integration (automatically deferred)
-- [ ] `@vercel/speed-insights` loaded via Next.js integration
-- [ ] Google Analytics 4 loaded asynchronously, never blocking
-- [ ] Bundle analysis: run `npm run build` and inspect `.next/` output
+Before deploying to production, verify:
 
----
-
-## Server & Deployment
-
-- [ ] Deploy to Vercel Edge Network for global CDN + edge SSR
-- [ ] HTTPS enforced with HSTS header
-- [ ] HTTP/2 or HTTP/3 enabled (automatic on Vercel)
-- [ ] Brotli compression enabled (automatic on Vercel)
-- [ ] Cache headers: `stale-while-revalidate` for ISR pages
-- [ ] Static pages served from CDN edge (< 50ms TTFB)
-
----
-
-## Pre-Launch Performance Audit
-
-- [ ] Run Lighthouse audit on all critical pages (score ≥ 95)
-- [ ] Run PageSpeed Insights on mobile for homepage, top product, top location
-- [ ] Verify CWV in Chrome DevTools Performance panel
-- [ ] Check total page weight in Network tab (< 800KB)
-- [ ] Confirm zero layout shifts during page load
-- [ ] Test on 3G throttled connection (functional within 5s)
-- [ ] Validate no console errors or warnings in production build
+- [ ] `NEXT_PUBLIC_VERCEL_ENV=production` or robots will return `noIndex: true`
+- [ ] `NEXT_PUBLIC_GA_ID` set for analytics tracking
+- [ ] `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` set for Search Console
+- [ ] All hero images have `priority` prop
+- [ ] Sitemap generates correctly after `npm run build`
+- [ ] No TypeScript build errors (resolve before deploying)
+- [ ] All OG images exist at declared paths in `public/`
+- [ ] NAP in Footer matches Google Business Profile exactly
+- [ ] All 301 redirects tested
+- [ ] Schema validated via Google Rich Results Test
