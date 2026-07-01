@@ -40,7 +40,7 @@ export function LocationCard({
           </div>
         </div>
         
-        <p className="text-brand-steelGray font-body text-sm mb-6 line-clamp-3">
+        <p className="text-brand-steelGray font-body text-sm mb-6 line-clamp-3 text-justify">
           {description}
         </p>
 
@@ -49,14 +49,14 @@ export function LocationCard({
             <p className="text-xs font-semibold text-honeywell-navy uppercase tracking-wider mb-2">Key Industries</p>
             <div className="flex flex-wrap gap-2">
               {industries.slice(0, 3).map((ind) => (
-                <Badge key={ind} variant="default" className="bg-brand-lightSurface">
+                <span key={ind} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium font-body uppercase tracking-wider bg-slate-100 text-slate-700">
                   {ind}
-                </Badge>
+                </span>
               ))}
               {industries.length > 3 && (
-                <Badge variant="default" className="bg-brand-lightSurface">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium font-body uppercase tracking-wider bg-slate-100 text-slate-700">
                   +{industries.length - 3} more
-                </Badge>
+                </span>
               )}
             </div>
           </div>

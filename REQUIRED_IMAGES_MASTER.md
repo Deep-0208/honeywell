@@ -51,13 +51,23 @@ All files in `/images/clients/*.webp`:
 
 | Asset Description | Route | Target Path | SEO Alt Text | Priority | Status |
 |-------------------|-------|-------------|--------------|----------|--------|
-| Testimonial Avatar 1 (Rajesh Desai) | Homepage | `/images/testimonials/avatar-1.webp` | Rajesh Desai, Maintenance Head, Gujarat Metal Stamping | Low | ⏳ PENDING |
-| Testimonial Avatar 2 (Sandeep Sharma) | Homepage | `/images/testimonials/avatar-2.webp` | Sandeep Sharma, OEM Procurement, Apex Heavy Haulers | Low | ⏳ PENDING |
-| Testimonial Avatar 3 (Amit Patel) | Homepage | `/images/testimonials/avatar-3.webp` | Amit Patel, Plant Engineering, Precision Auto Components | Low | ⏳ PENDING |
-| Manufacturing Facility Overview | `/about-us/`, `/manufacturing-facility/` | `/images/facility/honeywell-manufacturing-facility-kathwada.webp` | Honeywell Hydraulics manufacturing facility at Kathwada GIDC, Ahmedabad | High | ⏳ PENDING |
-| CNC Machining Center | `/manufacturing-facility/`, `/infrastructure/` | `/images/facility/cnc-machining-center-hydraulic-cylinder.webp` | CNC machining center for hydraulic cylinder manufacturing at Honeywell Hydraulics | High | ⏳ PENDING |
-| Hydrostatic Test Rig | `/quality/` | `/images/facility/hydrostatic-pressure-testing-hydraulic-cylinder.webp` | Hydrostatic pressure testing equipment for hydraulic cylinders at ISO 9001:2015 certified facility | Medium | ⏳ PENDING |
-| About Us / Team | `/about-us/` | `/images/about/honeywell-hydraulics-team-ahmedabad.webp` | Honeywell Hydraulics engineering team in Ahmedabad Gujarat | Medium | ⏳ PENDING |
+| Testimonial Avatar 1 (Rajesh Desai) | Homepage | `/images/testimonials/avatar-1.webp` | Rajesh Desai, Maintenance Head, Gujarat Metal Stamping | Low | ✅ In Place |
+| Testimonial Avatar 2 (Sandeep Sharma) | Homepage | `/images/testimonials/avatar-2.webp` | Sandeep Sharma, OEM Procurement, Apex Heavy Haulers | Low | ✅ In Place |
+| Testimonial Avatar 3 (Amit Patel) | Homepage | `/images/testimonials/avatar-3.webp` | Amit Patel, Plant Engineering, Precision Auto Components | Low | ✅ In Place |
+| Manufacturing Facility Overview | `/about-us/`, `/manufacturing-facility/` | `/images/facility/honeywell-manufacturing-facility-kathwada.webp` | Honeywell Hydraulics manufacturing facility at Kathwada GIDC, Ahmedabad | High | ✅ In Place |
+| CNC Machining Center | `/manufacturing-facility/`, `/infrastructure/` | `/images/facility/cnc-machining-center-hydraulic-cylinder.webp` | CNC machining center for hydraulic cylinder manufacturing at Honeywell Hydraulics | High | ✅ In Place |
+| Hydrostatic Test Rig | `/quality/` | `/images/facility/hydrostatic-pressure-testing-hydraulic-cylinder.webp` | Hydrostatic pressure testing equipment for hydraulic cylinders at ISO 9001:2015 certified facility | Medium | ✅ In Place |
+| About Us / Team | `/about-us/` | `/images/about/honeywell-hydraulics-team-ahmedabad.webp` | Honeywell Hydraulics engineering team in Ahmedabad Gujarat | Medium | ✅ In Place |
+| Double Acting Cylinder Hero | `/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/` | `/images/products/double-acting-hydraulic-cylinder.webp` | Double acting hydraulic cylinder manufacturer in Ahmedabad — Honeywell Hydraulics | High | ✅ In Place |
+| Double Acting Cylinder OG | `/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/` | `/images/og/double-acting-hydraulic-cylinder-og.webp` | Double Acting Hydraulic Cylinder — Honeywell Hydraulics | Medium | ✅ In Place |
+| Single Acting Cylinder Hero | `/products/hydraulic-cylinders/single-acting-hydraulic-cylinders/` | `/images/products/single-acting-hydraulic-cylinder.webp` | Single acting hydraulic cylinder manufacturer in Ahmedabad — Honeywell Hydraulics | High | ❌ Pending |
+| Single Acting Cylinder OG | `/products/hydraulic-cylinders/single-acting-hydraulic-cylinders/` | `/images/og/single-acting-hydraulic-cylinder-og.webp` | Single Acting Hydraulic Cylinder — Honeywell Hydraulics | Medium | ❌ Pending |
+| Infrastructure: Hydrostatic Test Rig | `/infrastructure/` | `/images/infrastructure/hydrostatic-test-rig.webp` | Hydrostatic pressure testing rig for hydraulic cylinders | Medium | ❌ Pending |
+| Infrastructure: Assembly Bay | `/infrastructure/` | `/images/infrastructure/assembly-bay.webp` | Hydraulic power pack assembly bay | Medium | ❌ Pending |
+| Infrastructure: Quality Inspection | `/infrastructure/` | `/images/infrastructure/quality-inspection.webp` | Quality inspection equipment — CMM and bore gauges | Medium | ❌ Pending |
+| Manufacturing: Welding Bay | `/manufacturing-facility/` | `/images/manufacturing/welding-bay.webp` | Heavy-duty welding bay for cylinder barrel construction | Medium | ❌ Pending |
+| Manufacturing: Assembly Area | `/manufacturing-facility/` | `/images/manufacturing/assembly-area.webp` | Hydraulic power pack assembly area | Medium | ❌ Pending |
+| Manufacturing: Test Rig | `/manufacturing-facility/` | `/images/manufacturing/test-rig.webp` | Hydrostatic pressure test rig | Medium | ❌ Pending |
 
 ---
 

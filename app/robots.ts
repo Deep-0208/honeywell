@@ -1,31 +1,45 @@
 import { MetadataRoute } from 'next';
 import { COMPANY_INFO } from '@/lib/constants';
 
+/**
+ * robots.txt configuration
+ *
+ * ⚠️ MAINTENANCE MODE — ALL bots are currently BLOCKED.
+ * The site is under active development. When the site is declared
+ * "production-ready" by the owner, UNBLOCK the following:
+ *   - Googlebot → allow: '/'
+ *   - Googlebot-Image → allow: '/'
+ *   - Bingbot → allow: '/'
+ *   - GPTBot → allow: '/'
+ *   - Google-Extended → allow: '/'
+ *   - ClaudeBot → allow: '/'
+ *   - PerplexityBot → allow: '/'
+ *   - Remove the wildcard disallow
+ *
+ * Keep blocked permanently: AhrefsBot, SemrushBot, MJ12bot, DotBot
+ */
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
+      // ── MAINTENANCE MODE: Block all crawlers ──
       {
         userAgent: '*',
-        allow: '/',
-        disallow: [
-          '/search',
-          '/admin/',
-          '/api/',
-          '/thank-you/',
-        ],
+        disallow: '/',
       },
+      // ── Search engine crawlers — BLOCKED until production ──
       {
         userAgent: 'Googlebot',
-        allow: '/',
+        disallow: '/',
       },
       {
         userAgent: 'Googlebot-Image',
-        allow: '/',
+        disallow: '/',
       },
       {
         userAgent: 'Bingbot',
-        allow: '/',
+        disallow: '/',
       },
+      // ── AI crawlers — BLOCKED until production ──
       {
         userAgent: 'GPTBot',
         disallow: '/',
@@ -42,6 +56,7 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'PerplexityBot',
         disallow: '/',
       },
+      // ── Scraper bots — ALWAYS blocked ──
       {
         userAgent: [
           'AhrefsBot',
@@ -54,7 +69,6 @@ export default function robots(): MetadataRoute.Robots {
     ],
     sitemap: [
       `${COMPANY_INFO.websiteUrl}/sitemap.xml`,
-      `${COMPANY_INFO.websiteUrl}/sitemap-images.xml`,
     ],
   };
 }

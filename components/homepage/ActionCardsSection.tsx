@@ -21,7 +21,7 @@ export function ActionCardsSection() {
     <Section bg="white" aria-labelledby="action-cards-heading">
       <Container>
         <div className="sr-only" id="action-cards-heading">
-          <Heading variant="section" as="h2">Quick Actions</Heading>
+          <Heading variant="section" underline="center" as="h2">Quick Actions</Heading>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 relative z-20">
           {actionCards.map((card) => (

@@ -109,7 +109,7 @@ Full source of truth: `docs/DESIGN_SYSTEM.md`
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         Title
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
     </div>
     {/* Content grid */}
     {/* Section CTA */}
@@ -166,3 +166,20 @@ Never skip heading levels.
 - Breadcrumb navigation in hero
 - Section CTAs to /request-quote/ or /contact-us/
 <!-- END:seo-requirements -->
+
+
+<!-- BEGIN:migration-context -->
+# WordPress to Next.js Migration Context
+
+## Historical Context
+- The live site (WordPress/Elementor) ranks #3 on Google, but its ranking is driven almost entirely by Off-Page signals, Domain Age, and RankMath LocalBusiness schema.
+- The live site's content is extremely poor (contains 'Lorem Ipsum' and generic 'Yacht Build' templates).
+- The new Next.js codebase is an enterprise-grade SEO replacement that possesses vastly superior E-E-A-T content, component-driven semantic architecture, and dynamic Schema injection.
+
+## Critical Migration Rules (DO NOT BREAK)
+1. **301 Redirects:** The old WordPress URLs (e.g., /2025/05/13/hydraulic-cylinder/) MUST be mapped 1-to-1 to the new Next.js routes in 
+ext.config.ts. If this is skipped, the #3 ranking will be lost to 404 errors.
+2. **Schema Parity:** The LocalBusiness schema tied to Kathwada GIDC must remain intact.
+3. **Bot Blocking:** Ensure obots: { index: true, follow: true } is enabled in layout.tsx before going to production.
+4. **Environment Variables:** NEXT_PUBLIC_GA_ID and NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION must be populated before launch.
+<!-- END:migration-context -->

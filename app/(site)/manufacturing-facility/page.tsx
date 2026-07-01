@@ -1,18 +1,19 @@
 import React from 'react';
 import { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
 import { IconBox } from '@/components/ui/IconBox';
 import { Button } from '@/components/ui/Button';
-import { FAQAccordion } from '@/components/faq/FAQAccordion';
+import { CTA } from '@/components/ui/CTA';
+import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
 import JsonLd from '@/components/seo/JsonLd';
 import { COMPANY_INFO } from '@/lib/constants';
 import {
   ArrowRight,
-  Phone,
-  Factory,
   PenTool,
   Cog,
   Wrench,
@@ -31,28 +32,12 @@ import {
 // SEO Metadata
 // ─────────────────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Manufacturing Facility | Hydraulic Cylinder & Power Pack Production Ahmedabad',
-  description:
-    'Tour the Honeywell Hydraulics manufacturing facility in Kathwada GIDC, Ahmedabad. CNC machining, hydraulic testing, assembly, and quality inspection — all under one roof.',
-  alternates: {
+  ...buildMetadata({
+    title: 'Manufacturing Facility | Honeywell Hydraulics',
+    description: 'Tour the Honeywell Hydraulics manufacturing facility in Kathwada GIDC, Ahmedabad. CNC machining, hydraulic testing, and quality inspection under one roof.',
     canonical: '/manufacturing-facility',
-  },
+  }),
   keywords: 'hydraulic manufacturing facility ahmedabad, hydraulic cylinder factory, power pack manufacturing plant, kathwada gidc manufacturer',
-  openGraph: {
-    title: 'Manufacturing Facility | Honeywell Hydraulics Ahmedabad',
-    description:
-      'End-to-end hydraulic cylinder and power pack manufacturing at our Kathwada GIDC facility in Ahmedabad, Gujarat.',
-    url: '/manufacturing-facility',
-    siteName: COMPANY_INFO.name,
-    locale: 'en_IN',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Manufacturing Facility | Honeywell Hydraulics Ahmedabad',
-    description:
-      'End-to-end hydraulic cylinder and power pack manufacturing at our Kathwada GIDC facility in Ahmedabad, Gujarat.',
-  },
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -157,7 +142,7 @@ const CAPACITY_SPECS = [
 ];
 
 const GALLERY_ITEMS = [
-  { name: 'CNC Turning Centre', file: '/images/manufacturing/cnc-turning-centre.webp', alt: 'CNC turning centre for piston rod machining' },
+  { name: 'CNC Turning Centre', file: '/images/facility/cnc-machining-center-hydraulic-cylinder.webp', alt: 'CNC turning centre for piston rod machining', isReady: true },
   { name: 'Welding Bay', file: '/images/manufacturing/welding-bay.webp', alt: 'Heavy-duty welding bay for cylinder barrel construction' },
   { name: 'Assembly Area', file: '/images/manufacturing/assembly-area.webp', alt: 'Hydraulic power pack assembly area' },
   { name: 'Test Rig', file: '/images/manufacturing/test-rig.webp', alt: 'Hydrostatic pressure test rig' },
@@ -216,17 +201,13 @@ export default function ManufacturingFacilityPage() {
       <JsonLd data={faqSchema} />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="bg-honeywell-navy text-white pt-12 pb-16 relative overflow-hidden">
+      <section className="bg-honeywell-navy text-white pt-6 md:pt-8 pb-16 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
         <Container className="relative z-10">
           <nav aria-label="Breadcrumb" className="text-sm font-body text-brand-borderGray mb-6">
             <ol className="flex items-center gap-2">
               <li>
                 <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              </li>
-              <li aria-hidden="true">&rsaquo;</li>
-              <li>
-                <Link href="/about-us" className="hover:text-white transition-colors">About Us</Link>
               </li>
               <li aria-hidden="true">&rsaquo;</li>
               <li className="text-white font-semibold" aria-current="page">Manufacturing Facility</li>
@@ -246,11 +227,11 @@ export default function ManufacturingFacilityPage() {
         </Container>
       </section>
 
-      {/* ── Facility Overview ─────────────────────────────────────────────── */}
-      <Section bg="white">
+      {/* ── Facility Overview ──────────────────── */}
+      <Section bg="white" aria-labelledby="facility-overview-heading">
         <Container>
-          <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4">
+          <div className="text-center mb-12 flex flex-col items-center">
+            <Heading as="h2" variant="section" id="facility-overview-heading" className="mb-3">
               Facility Overview
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -259,20 +240,20 @@ export default function ManufacturingFacilityPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {FACILITY_OVERVIEW.map((item) => (
-              <div key={item.label} className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-5 text-center hover:border-honeywell-red transition-colors">
+              <div key={item.label} className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-5 text-center transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group">
                 <p className="text-sm text-[#94A3B8] font-body mb-1">{item.label}</p>
-                <p className="text-sm font-display font-bold text-honeywell-navy">{item.value}</p>
+                <p className="text-sm font-display font-bold text-honeywell-navy group-hover:text-honeywell-red transition-colors">{item.value}</p>
               </div>
             ))}
           </div>
         </Container>
       </Section>
 
-      {/* ── Manufacturing Workflow ─────────────────────────────────────────── */}
-      <Section bg="gray">
+      {/* ── Manufacturing Workflow ──────────────────── */}
+      <Section bg="gray" aria-labelledby="workflow-heading">
         <Container>
-          <div className="text-center mb-14">
-            <Heading as="h2" variant="section" className="mb-4">
+          <div className="text-center mb-14 flex flex-col items-center">
+            <Heading as="h2" variant="section" id="workflow-heading" className="mb-3">
               End-to-End Manufacturing Workflow
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -281,14 +262,14 @@ export default function ManufacturingFacilityPage() {
           </div>
           <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" aria-label="Manufacturing workflow steps">
             {WORKFLOW_STEPS.map((step) => (
-              <li key={step.step} className="bg-white border border-slate-200 rounded-sm p-6 hover:border-honeywell-red transition-colors relative group">
+              <li key={step.step} className="bg-white border border-slate-200 rounded-sm p-6 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red relative group">
                 <span className="absolute top-4 right-4 w-7 h-7 rounded-full bg-honeywell-red text-white text-xs font-bold flex items-center justify-center font-body">
                   {step.step}
                 </span>
-                <div className="w-12 h-12 rounded-full bg-honeywell-navy flex items-center justify-center text-white mb-4 group-hover:bg-honeywell-red transition-colors">
+                <div className="w-12 h-12 rounded-full bg-honeywell-navy flex items-center justify-center text-white mb-4 group-hover:bg-honeywell-red group-hover:scale-110 transition-all duration-300">
                   {step.icon}
                 </div>
-                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">{step.title}</h3>
+                <Heading as="h3" variant="card" className="mb-2 group-hover:text-honeywell-red transition-colors">{step.title}</Heading>
                 <p className="text-sm text-brand-steelGray font-body leading-relaxed">{step.body}</p>
               </li>
             ))}
@@ -296,12 +277,12 @@ export default function ManufacturingFacilityPage() {
         </Container>
       </Section>
 
-      {/* ── Design & Engineering ──────────────────────────────────────────── */}
-      <Section bg="white">
+      {/* ── Design & Engineering ──────────────────── */}
+      <Section bg="white" aria-labelledby="design-heading">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Heading as="h3" variant="subsection" className="mb-6">
+              <Heading as="h3" variant="subsection" id="design-heading" className="mb-3">
                 Design &amp; Engineering
               </Heading>
               <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
@@ -334,15 +315,15 @@ export default function ManufacturingFacilityPage() {
         </Container>
       </Section>
 
-      {/* ── Custom Manufacturing ──────────────────────────────────────────── */}
-      <Section bg="gray">
+      {/* ── Custom Manufacturing ──────────────────── */}
+      <Section bg="gray" aria-labelledby="custom-mfg-heading">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 bg-honeywell-navy text-white rounded-sm p-8 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
               <div className="relative z-10">
                 <Users className="w-10 h-10 text-honeywell-red mb-4" aria-hidden="true" />
-                <h3 className="text-xl font-display font-bold mb-4">OEM Partnership Benefits</h3>
+                <Heading as="h3" variant="card" className="text-white mb-4">OEM Partnership Benefits</Heading>
                 <ul className="space-y-3">
                   {[
                     'No additional design consultation fee for custom work',
@@ -361,7 +342,7 @@ export default function ManufacturingFacilityPage() {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <Heading as="h2" variant="section" className="mb-6">
+              <Heading as="h2" variant="section" id="custom-mfg-heading" className="mb-3">
                 Custom Manufacturing Capability
               </Heading>
               <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
@@ -399,11 +380,11 @@ export default function ManufacturingFacilityPage() {
         </Container>
       </section>
 
-      {/* ── Safety Standards ───────────────────────────────────────────────── */}
-      <Section bg="white">
+      {/* ── Safety Standards ──────────────────── */}
+      <Section bg="white" aria-labelledby="safety-mfg-heading">
         <Container>
-          <div className="max-w-3xl mx-auto text-center">
-            <Heading as="h2" variant="section" className="mb-4">
+          <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
+            <Heading as="h2" variant="section" id="safety-mfg-heading" className="mb-3">
               Safety &amp; Compliance Standards
             </Heading>
             <p className="text-lg text-brand-steelGray font-body mb-8">
@@ -426,11 +407,11 @@ export default function ManufacturingFacilityPage() {
         </Container>
       </Section>
 
-      {/* ── Facility Gallery ──────────────────────────────────────────────── */}
-      <Section bg="gray">
+      {/* ── Facility Gallery ──────────────────── */}
+      <Section bg="gray" aria-labelledby="gallery-mfg-heading">
         <Container>
-          <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4">
+          <div className="text-center mb-12 flex flex-col items-center">
+            <Heading as="h2" variant="section" id="gallery-mfg-heading" className="mb-3">
               Facility Gallery
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -439,12 +420,22 @@ export default function ManufacturingFacilityPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {GALLERY_ITEMS.map((item) => (
-              <div key={item.name} className="bg-white border border-slate-200 rounded-sm overflow-hidden hover:border-honeywell-red transition-colors">
-                <div className="aspect-square bg-brand-lightSurface flex items-center justify-center">
-                  <div className="text-center px-4">
-                    <Camera className="w-8 h-8 text-brand-borderGray mx-auto mb-2" aria-hidden="true" />
-                    <p className="text-xs text-[#94A3B8] font-body">{item.name}</p>
-                  </div>
+              <div key={item.name} className="bg-white border border-slate-200 rounded-sm overflow-hidden transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group">
+                <div className="aspect-square bg-brand-lightSurface flex items-center justify-center relative">
+                  {('isReady' in item) ? (
+                    <Image
+                      src={item.file}
+                      alt={item.alt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-premium"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                  ) : (
+                    <div className="text-center px-4">
+                      <Camera className="w-8 h-8 text-brand-borderGray mx-auto mb-2" aria-hidden="true" />
+                      <p className="text-xs text-[#94A3B8] font-body">{item.name}</p>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -459,51 +450,17 @@ export default function ManufacturingFacilityPage() {
       </Section>
 
       {/* ── Lead Generation CTA ──────────────────────────────────────────── */}
-      <section className="bg-honeywell-navy py-16 md:py-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 w-1/3 h-full bg-honeywell-red opacity-[0.03] skew-x-12 -translate-x-1/4" aria-hidden="true" />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-honeywell-red/40 to-transparent" aria-hidden="true" />
-        <Container className="relative z-10 text-center">
-          <Heading variant="section" className="text-white mb-4">
-            Need a Custom Hydraulic Solution?
-          </Heading>
-          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-4 text-lg leading-relaxed">
-            We design and manufacture precision hydraulic equipment tailored to your exact specifications.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-sm font-body">Hydraulic Cylinders</span>
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-sm font-body">Hydraulic Power Packs</span>
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-sm font-body">Hydraulic Accessories</span>
-          </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button href="/contact-us" variant="primary" size="lg" rightIcon={<ArrowRight className="w-5 h-5" />}>
-              Contact Us
-            </Button>
-            <a
-              href="tel:+91-9924343873"
-              className="inline-flex items-center gap-2 bg-transparent border border-white text-white hover:bg-white hover:text-honeywell-navy font-semibold font-body text-sm px-6 py-3 rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
-            >
-              <Phone className="w-4 h-4" aria-hidden="true" />
-              Talk to an Engineer
-            </a>
-          </div>
-        </Container>
-      </section>
+      <CTA
+        title="Ready to See Our Factory in Action?"
+        description="We welcome facility visits, witnessed pressure tests, and OEM capability audits. Factory-direct hydraulic manufacturing from our Ahmedabad facility."
+        primaryCtaText="Request a Quote"
+        primaryCtaHref="/request-quote/"
+        secondaryCtaText="Call +91 99243 43873"
+        secondaryCtaHref="tel:+91-9924343873"
+      />
 
       {/* ── FAQ ───────────────────────────────────────────────────────────── */}
-      <Section bg="white">
-        <Container>
-          <div className="max-w-3xl mx-auto">
-            <Heading as="h2" variant="section" className="mb-4 text-center">
-              Frequently Asked Questions
-            </Heading>
-            <p className="text-brand-steelGray font-body text-center mb-10">
-              Common questions about our manufacturing facility, capabilities, and visiting our factory.
-            </p>
-            <FAQAccordion faqs={MFG_FAQS} />
-          </div>
-        </Container>
-      </Section>
+      <SiteFAQSection faqs={MFG_FAQS} />
     </>
   );
 }

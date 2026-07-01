@@ -16,12 +16,12 @@ export function BlogPreviewSection() {
             <p className="text-xs sm:text-sm font-bold font-body uppercase tracking-[0.15em] text-honeywell-red mb-3">
               Knowledge Hub
             </p>
-            <Heading variant="section" as="h2" id="blog-heading" className="mb-0">
+            <Heading variant="section" underline="center" as="h2" id="blog-heading" className="mb-0">
               Latest Insights from Honeywell Hydraulics
             </Heading>
           </div>
           <div className="shrink-0">
-            <Button href="/blog/" variant="outline" rightIcon={<ArrowRight className="w-4 h-4" />}>
+            <Button href="/blog" variant="outline" rightIcon={<ArrowRight className="w-4 h-4" />}>
               View All Articles
             </Button>
           </div>

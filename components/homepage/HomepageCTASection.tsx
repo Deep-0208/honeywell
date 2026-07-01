@@ -18,8 +18,8 @@ export function HomepageCTASection() {
       <CTA
         title="Ready to Discuss Your Hydraulic Requirements?"
         description="Our engineering team in Ahmedabad is ready to review your specifications. Factory-direct pricing. 7–15 day delivery across India."
-        primaryCtaText="Contact Us"
-        primaryCtaHref="/contact-us/"
+        primaryCtaText="Request a Quote"
+        primaryCtaHref="/request-quote"
         secondaryCtaText="Call +91 99243 43873"
         secondaryCtaHref="tel:+91-9924343873"
       />

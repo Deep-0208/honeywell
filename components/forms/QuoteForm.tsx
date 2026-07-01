@@ -1,33 +1,26 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import { ArrowRight, Upload, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { ArrowRight, Upload, CheckCircle, AlertCircle, Loader2, ChevronDown, ChevronUp } from 'lucide-react';
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Types — future-proof payload for CRM / email / WhatsApp integration
+// Types
 // ─────────────────────────────────────────────────────────────────────────────
 export interface QuoteFormPayload {
-  // Contact Information
   fullName: string;
   company: string;
   email: string;
   phone: string;
   city: string;
-
-  // Project Information
   productInterest: string;
   industry: string;
   application: string;
   requirementDescription: string;
-
-  // Optional Technical Details
   pressure?: string;
   boreSize?: string;
   strokeLength?: string;
   flowRate?: string;
   quantity?: string;
-
-  // File Upload (placeholder — replace with S3 / Uploadthing in production)
   attachmentName?: string;
 }
 
@@ -52,13 +45,12 @@ const INITIAL_STATE: QuoteFormPayload = {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Shared field styles
+// Shared field styles — using universal rounded-sm (2px) corner shape
 // ─────────────────────────────────────────────────────────────────────────────
 const fieldBase =
-  'w-full bg-white border border-brand-borderGray rounded-sm px-4 py-3 text-sm font-body text-honeywell-navy placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-honeywell-red focus:border-honeywell-red transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed';
+  'w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-3 text-sm font-body text-honeywell-navy placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-honeywell-red/40 focus:border-honeywell-red focus:bg-white transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed';
 
 const labelBase = 'block text-sm font-semibold font-body text-honeywell-navy mb-1.5';
-const errorBase = 'mt-1 text-xs text-honeywell-red font-body flex items-center gap-1';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Sub-components
@@ -66,8 +58,8 @@ const errorBase = 'mt-1 text-xs text-honeywell-red font-body flex items-center g
 function FieldError({ message }: { message?: string }) {
   if (!message) return null;
   return (
-    <p className={errorBase} role="alert" aria-live="polite">
-      <AlertCircle className="w-3 h-3 shrink-0" />
+    <p className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1" role="alert" aria-live="polite">
+      <AlertCircle className="w-3.5 h-3.5 shrink-0" />
       {message}
     </p>
   );
@@ -78,16 +70,18 @@ interface LabelledFieldProps {
   label: string;
   required?: boolean;
   error?: string;
+  hint?: string;
   children: React.ReactNode;
 }
 
-function LabelledField({ id, label, required, error, children }: LabelledFieldProps) {
+function LabelledField({ id, label, required, error, hint, children }: LabelledFieldProps) {
   return (
     <div>
       <label htmlFor={id} className={labelBase}>
         {label}
         {required && <span className="text-honeywell-red ml-0.5" aria-hidden="true">*</span>}
       </label>
+      {hint && <p className="text-xs text-slate-400 font-body mb-1.5">{hint}</p>}
       {children}
       <FieldError message={error} />
     </div>
@@ -101,26 +95,47 @@ type Errors = Partial<Record<keyof QuoteFormPayload, string>>;
 
 function validate(data: QuoteFormPayload): Errors {
   const errors: Errors = {};
-  if (!data.fullName.trim()) errors.fullName = 'Full name is required.';
-  if (!data.company.trim()) errors.company = 'Company name is required.';
+  if (!data.fullName.trim()) errors.fullName = 'Please enter your name.';
   if (!data.email.trim()) {
-    errors.email = 'Email address is required.';
+    errors.email = 'Please enter your email address.';
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-    errors.email = 'Please enter a valid email address.';
+    errors.email = 'That email doesn\'t look right — please check it.';
   }
   if (!data.phone.trim()) {
-    errors.phone = 'Phone number is required.';
+    errors.phone = 'Please enter your phone number.';
   } else if (!/^[+\d\s\-()]{7,}$/.test(data.phone)) {
     errors.phone = 'Please enter a valid phone number.';
   }
-  if (!data.productInterest) errors.productInterest = 'Please select a product category.';
+  if (!data.productInterest) errors.productInterest = 'Please select what you\'re looking for.';
   if (!data.requirementDescription.trim()) {
-    errors.requirementDescription = 'Please describe your requirement.';
-  } else if (data.requirementDescription.trim().length < 20) {
-    errors.requirementDescription = 'Please provide at least 20 characters.';
+    errors.requirementDescription = 'Please describe what you need — even a few words help.';
+  } else if (data.requirementDescription.trim().length < 10) {
+    errors.requirementDescription = 'Please add a bit more detail (at least 10 characters).';
   }
   return errors;
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Product options — user-friendly labels
+// ─────────────────────────────────────────────────────────────────────────────
+const PRODUCT_OPTIONS = [
+  { value: 'hydraulic-cylinders', label: 'Hydraulic Cylinders' },
+  { value: 'hydraulic-power-packs', label: 'Hydraulic Power Packs' },
+  { value: 'hydraulic-accessories', label: 'Hydraulic Accessories (valves, fittings, hoses)' },
+  { value: 'custom-solution', label: 'Custom / Special Design' },
+  { value: 'not-sure', label: 'I\'m Not Sure — Need Advice' },
+];
+
+const INDUSTRY_OPTIONS = [
+  { value: 'injection-moulding', label: 'Injection Moulding' },
+  { value: 'construction-earthmoving', label: 'Construction & Earthmoving' },
+  { value: 'manufacturing-automation', label: 'Manufacturing & Automation' },
+  { value: 'material-handling', label: 'Material Handling & Lifting' },
+  { value: 'rolling-mill', label: 'Rolling Mill & Steel' },
+  { value: 'wooden-industries', label: 'Woodworking / Furniture' },
+  { value: 'agriculture', label: 'Agriculture & Farm Equipment' },
+  { value: 'other', label: 'Other Industry' },
+];
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Main Component
@@ -131,60 +146,30 @@ export function QuoteForm() {
   const [status, setStatus] = useState<FormStatus>('idle');
   const [showTechnical, setShowTechnical] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
-  const firstErrorRef = useRef<HTMLElement | null>(null);
 
   const update = (field: keyof QuoteFormPayload, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
-    // Clear inline error on change
     if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
 
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (file) {
-      update('attachmentName', file.name);
-    }
+    if (file) update('attachmentName', file.name);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     const validationErrors = validate(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      // Focus first field with error for accessibility
       const firstErrorKey = Object.keys(validationErrors)[0];
-      const el = document.getElementById(firstErrorKey);
-      if (el) el.focus();
-      firstErrorRef.current = el;
+      document.getElementById(firstErrorKey)?.focus();
       return;
     }
-
     setStatus('submitting');
     setErrors({});
-
     try {
-      /**
-       * INTEGRATION POINT
-       * ─────────────────
-       * Replace this block with your actual submission handler:
-       *
-       * Option A — Email (e.g., Resend / Nodemailer):
-       *   await fetch('/api/quote', { method: 'POST', body: JSON.stringify(formData) });
-       *
-       * Option B — CRM (e.g., HubSpot, Zoho, Salesforce):
-       *   await submitToCRM(formData);
-       *
-       * Option C — WhatsApp (e.g., Twilio / Meta Cloud API):
-       *   await sendWhatsAppNotification(formData);
-       *
-       * The `formData` object is intentionally structured to match a generic
-       * CRM contact schema and can be mapped to any provider's field names.
-       */
-
-      // Simulate async submission (remove in production)
       await new Promise((res) => setTimeout(res, 1500));
-
       setStatus('success');
       setFormData(INITIAL_STATE);
       if (fileRef.current) fileRef.current.value = '';
@@ -193,25 +178,31 @@ export function QuoteForm() {
     }
   };
 
+  // ── Success state ──────────────────────────────────────────────────────────
   if (status === 'success') {
     return (
-      <div className="flex flex-col items-center justify-center text-center py-16 px-6 bg-white rounded-sm border border-slate-200 shadow-sm">
-        <CheckCircle className="w-16 h-16 text-green-500 mb-6" aria-hidden="true" />
-        <h2 className="text-2xl font-display font-bold text-honeywell-navy mb-4">
-          Quote Request Submitted
+      <div className="flex flex-col items-center justify-center text-center py-16 px-6 bg-white rounded-sm border border-slate-200">
+        <div className="w-20 h-20 rounded-full bg-green-50 flex items-center justify-center mb-6">
+          <CheckCircle className="w-10 h-10 text-green-500" aria-hidden="true" />
+        </div>
+        <h2 className="text-2xl font-display font-bold text-honeywell-navy mb-3">
+          Request Sent! 🎉
         </h2>
-        <p className="text-brand-steelGray font-body max-w-md mb-8">
-          Thank you. Our engineering team will review your requirements and respond as soon as possible. For urgent requirements, call us directly.
+        <p className="text-brand-steelGray font-body max-w-sm mb-2 leading-relaxed">
+          Thank you! Our team will review your request and get back to you shortly.
+        </p>
+        <p className="text-sm text-slate-400 font-body mb-8">
+          For urgent requirements, call us directly.
         </p>
         <a
           href="tel:+919924343873"
-          className="inline-flex items-center gap-2 text-honeywell-red font-semibold font-body hover:underline underline-offset-4"
+          className="inline-flex items-center gap-2 bg-honeywell-red text-white font-semibold font-body px-6 py-3 rounded-full hover:bg-red-700 transition-colors mb-4"
         >
           📞 +91 9924343873
         </a>
         <button
           onClick={() => setStatus('idle')}
-          className="mt-6 text-sm text-brand-steelGray font-body underline underline-offset-4 hover:text-honeywell-navy"
+          className="text-sm text-slate-400 font-body hover:text-honeywell-navy transition-colors"
         >
           Submit another request
         </button>
@@ -219,6 +210,7 @@ export function QuoteForm() {
     );
   }
 
+  // ── Form ───────────────────────────────────────────────────────────────────
   return (
     <form
       onSubmit={handleSubmit}
@@ -229,70 +221,51 @@ export function QuoteForm() {
       {status === 'error' && (
         <div
           role="alert"
-          className="flex items-start gap-3 bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-sm text-sm font-body"
+          className="flex items-start gap-3 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-sm text-sm font-body"
         >
           <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
-          <span>There was an error submitting your request. Please try again or contact us directly.</span>
+          <span>Something went wrong. Please try again or call us directly at +91 9924343873.</span>
         </div>
       )}
 
-      {/* ── Section 1: Contact Information ────────────────────────────────── */}
-      <fieldset className="space-y-5">
-        <legend className="text-base font-display font-bold text-honeywell-navy uppercase tracking-wide pb-3 border-b border-slate-200 w-full mb-2">
-          1. Contact Information
-        </legend>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <LabelledField id="fullName" label="Full Name" required error={errors.fullName}>
+      {/* ── Your Details ──────────────────────────────────────────────────── */}
+      <div>
+        <div className="flex items-center gap-3 mb-5">
+          <div className="w-7 h-7 rounded-full bg-honeywell-red text-white text-xs font-bold flex items-center justify-center font-body shrink-0">1</div>
+          <h3 className="text-base font-display font-bold text-honeywell-navy">Your Details</h3>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <LabelledField id="fullName" label="Your Name" required error={errors.fullName}>
             <input
               id="fullName"
               name="fullName"
               type="text"
               autoComplete="name"
-              placeholder="Rajesh Kumar"
+              placeholder="e.g. Rajesh Kumar"
               value={formData.fullName}
               onChange={(e) => update('fullName', e.target.value)}
               className={fieldBase}
               aria-required="true"
               aria-invalid={!!errors.fullName}
-              aria-describedby={errors.fullName ? 'fullName-error' : undefined}
               disabled={status === 'submitting'}
             />
           </LabelledField>
 
-          <LabelledField id="company" label="Company Name" required error={errors.company}>
+          <LabelledField id="company" label="Company / Business Name" error={errors.company}>
             <input
               id="company"
               name="company"
               type="text"
               autoComplete="organization"
-              placeholder="ABC Manufacturing Pvt Ltd"
+              placeholder="e.g. ABC Manufacturing"
               value={formData.company}
               onChange={(e) => update('company', e.target.value)}
               className={fieldBase}
-              aria-required="true"
-              aria-invalid={!!errors.company}
               disabled={status === 'submitting'}
             />
           </LabelledField>
 
-          <LabelledField id="email" label="Email Address" required error={errors.email}>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              placeholder="rajesh@abcmfg.com"
-              value={formData.email}
-              onChange={(e) => update('email', e.target.value)}
-              className={fieldBase}
-              aria-required="true"
-              aria-invalid={!!errors.email}
-              disabled={status === 'submitting'}
-            />
-          </LabelledField>
-
-          <LabelledField id="phone" label="Phone / WhatsApp" required error={errors.phone}>
+          <LabelledField id="phone" label="Phone / WhatsApp" required error={errors.phone} hint="We'll call or WhatsApp you at this number.">
             <input
               id="phone"
               name="phone"
@@ -308,13 +281,29 @@ export function QuoteForm() {
             />
           </LabelledField>
 
-          <LabelledField id="city" label="City / Location" error={errors.city}>
+          <LabelledField id="email" label="Email Address" required error={errors.email}>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              placeholder="you@company.com"
+              value={formData.email}
+              onChange={(e) => update('email', e.target.value)}
+              className={fieldBase}
+              aria-required="true"
+              aria-invalid={!!errors.email}
+              disabled={status === 'submitting'}
+            />
+          </LabelledField>
+
+          <LabelledField id="city" label="Your City" error={errors.city}>
             <input
               id="city"
               name="city"
               type="text"
               autoComplete="address-level2"
-              placeholder="Ahmedabad, Gujarat"
+              placeholder="e.g. Ahmedabad, Surat…"
               value={formData.city}
               onChange={(e) => update('city', e.target.value)}
               className={fieldBase}
@@ -322,16 +311,16 @@ export function QuoteForm() {
             />
           </LabelledField>
         </div>
-      </fieldset>
+      </div>
 
-      {/* ── Section 2: Project Information ───────────────────────────────── */}
-      <fieldset className="space-y-5">
-        <legend className="text-base font-display font-bold text-honeywell-navy uppercase tracking-wide pb-3 border-b border-slate-200 w-full mb-2">
-          2. Project Information
-        </legend>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <LabelledField id="productInterest" label="Product Interest" required error={errors.productInterest}>
+      {/* ── Your Requirement ─────────────────────────────────────────────── */}
+      <div>
+        <div className="flex items-center gap-3 mb-5">
+          <div className="w-7 h-7 rounded-full bg-honeywell-red text-white text-xs font-bold flex items-center justify-center font-body shrink-0">2</div>
+          <h3 className="text-base font-display font-bold text-honeywell-navy">What Do You Need?</h3>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <LabelledField id="productInterest" label="Product You're Looking For" required error={errors.productInterest}>
             <select
               id="productInterest"
               name="productInterest"
@@ -342,15 +331,14 @@ export function QuoteForm() {
               aria-invalid={!!errors.productInterest}
               disabled={status === 'submitting'}
             >
-              <option value="" disabled>Select product category…</option>
-              <option value="hydraulic-cylinders">Hydraulic Cylinders</option>
-              <option value="hydraulic-power-packs">Hydraulic Power Packs</option>
-              <option value="hydraulic-accessories">Hydraulic Accessories</option>
-              <option value="custom-solution">Custom Solution</option>
+              <option value="" disabled>Choose a product…</option>
+              {PRODUCT_OPTIONS.map((opt) => (
+                <option key={opt.value} value={opt.value}>{opt.label}</option>
+              ))}
             </select>
           </LabelledField>
 
-          <LabelledField id="industry" label="Industry" error={errors.industry}>
+          <LabelledField id="industry" label="Your Industry" error={errors.industry}>
             <select
               id="industry"
               name="industry"
@@ -360,111 +348,137 @@ export function QuoteForm() {
               disabled={status === 'submitting'}
             >
               <option value="" disabled>Select your industry…</option>
-              <option value="injection-moulding">Injection Moulding</option>
-              <option value="construction-earthmoving">Construction &amp; Earthmoving</option>
-              <option value="manufacturing-automation">Manufacturing &amp; Industrial Automation</option>
-              <option value="material-handling">Material Handling</option>
-              <option value="rolling-mill">Rolling Mill</option>
-              <option value="wooden-industries">Wooden Industries</option>
-              <option value="other">Other</option>
+              {INDUSTRY_OPTIONS.map((opt) => (
+                <option key={opt.value} value={opt.value}>{opt.label}</option>
+              ))}
             </select>
           </LabelledField>
 
-          <LabelledField id="application" label="Application" error={errors.application} >
-            <input
+          <div className="sm:col-span-2">
+            <LabelledField
               id="application"
-              name="application"
-              type="text"
-              placeholder="e.g. Deep draw press, Robotic welding jig…"
-              value={formData.application}
-              onChange={(e) => update('application', e.target.value)}
-              className={fieldBase}
-              disabled={status === 'submitting'}
-            />
-          </LabelledField>
+              label="What's it used for? (Optional)"
+              error={errors.application}
+              hint="e.g. 'press machine', 'tractor lift arm', 'conveyor system'"
+            >
+              <input
+                id="application"
+                name="application"
+                type="text"
+                placeholder="Describe the machine or use case…"
+                value={formData.application}
+                onChange={(e) => update('application', e.target.value)}
+                className={fieldBase}
+                disabled={status === 'submitting'}
+              />
+            </LabelledField>
+          </div>
+
+          <div className="sm:col-span-2">
+            <LabelledField
+              id="requirementDescription"
+              label="Describe Your Requirement"
+              required
+              error={errors.requirementDescription}
+              hint="Even a rough idea helps. You can also mention quantity, size, pressure, or any specific concern."
+            >
+              <textarea
+                id="requirementDescription"
+                name="requirementDescription"
+                rows={5}
+                placeholder="e.g. 'I need a hydraulic cylinder for my press machine. The stroke should be around 400mm and it should handle heavy loads. Currently using a 10-year-old cylinder that keeps leaking…'"
+                value={formData.requirementDescription}
+                onChange={(e) => update('requirementDescription', e.target.value)}
+                className={`${fieldBase} resize-y min-h-[130px]`}
+                aria-required="true"
+                aria-invalid={!!errors.requirementDescription}
+                disabled={status === 'submitting'}
+              />
+            </LabelledField>
+          </div>
         </div>
+      </div>
 
-        <LabelledField id="requirementDescription" label="Requirement Description" required error={errors.requirementDescription}>
-          <textarea
-            id="requirementDescription"
-            name="requirementDescription"
-            rows={5}
-            placeholder="Describe your project requirements in detail — existing machine setup, operating conditions, problem you are solving, or any other relevant information…"
-            value={formData.requirementDescription}
-            onChange={(e) => update('requirementDescription', e.target.value)}
-            className={`${fieldBase} resize-y min-h-[120px]`}
-            aria-required="true"
-            aria-invalid={!!errors.requirementDescription}
-            disabled={status === 'submitting'}
-          />
-        </LabelledField>
-      </fieldset>
-
-      {/* ── Section 3: Optional Technical Details ────────────────────────── */}
-      <fieldset className="space-y-5">
+      {/* ── Optional Technical Details ────────────────────────────────────── */}
+      <div>
         <button
           type="button"
           aria-expanded={showTechnical}
-          aria-controls="technical-details"
+          aria-controls="technical-details-panel"
           onClick={() => setShowTechnical((v) => !v)}
-          className="flex items-center gap-2 text-base font-display font-bold text-honeywell-navy uppercase tracking-wide pb-3 border-b border-slate-200 w-full text-left hover:text-honeywell-red transition-colors"
+          className="flex items-center justify-between w-full bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-sm px-5 py-3.5 transition-colors group"
         >
-          <span>3. Technical Details</span>
-          <span className="ml-auto text-xs text-brand-steelGray font-body normal-case tracking-normal">
-            {showTechnical ? 'Hide optional fields ▲' : 'Add technical specs (optional) ▼'}
-          </span>
+          <div className="flex items-center gap-3">
+            <div className="w-7 h-7 rounded-full bg-slate-200 text-slate-500 text-xs font-bold flex items-center justify-center font-body shrink-0 group-hover:bg-honeywell-red/10 group-hover:text-honeywell-red transition-colors">3</div>
+            <span className="text-sm font-display font-bold text-honeywell-navy">Technical Specifications</span>
+            <span className="text-xs bg-slate-200 text-slate-500 px-2 py-0.5 rounded-full font-body">Optional</span>
+          </div>
+          {showTechnical
+            ? <ChevronUp className="w-4 h-4 text-slate-400" />
+            : <ChevronDown className="w-4 h-4 text-slate-400" />
+          }
         </button>
+        <p className="text-xs text-slate-400 font-body mt-2 px-1">
+          Know the specs? Add them here. If not, skip this — our engineers will ask.
+        </p>
 
         {showTechnical && (
-          <div id="technical-details" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            <LabelledField id="pressure" label="Operating Pressure (Bar)">
-              <input id="pressure" name="pressure" type="text" placeholder="e.g. 210 Bar"
+          <div id="technical-details-panel" className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-5 bg-slate-50 border border-slate-200 rounded-sm">
+            <LabelledField id="pressure" label="Operating Pressure (Bar)" hint="e.g. 200 Bar">
+              <input id="pressure" name="pressure" type="text" placeholder="e.g. 200 Bar"
                 value={formData.pressure} onChange={(e) => update('pressure', e.target.value)}
                 className={fieldBase} disabled={status === 'submitting'} />
             </LabelledField>
 
-            <LabelledField id="boreSize" label="Bore Size (mm)">
-              <input id="boreSize" name="boreSize" type="text" placeholder="e.g. 100 mm"
+            <LabelledField id="boreSize" label="Bore / Cylinder Size (mm)" hint="e.g. 80 mm">
+              <input id="boreSize" name="boreSize" type="text" placeholder="e.g. 80 mm"
                 value={formData.boreSize} onChange={(e) => update('boreSize', e.target.value)}
                 className={fieldBase} disabled={status === 'submitting'} />
             </LabelledField>
 
-            <LabelledField id="strokeLength" label="Stroke Length (mm)">
-              <input id="strokeLength" name="strokeLength" type="text" placeholder="e.g. 500 mm"
+            <LabelledField id="strokeLength" label="Stroke Length (mm)" hint="e.g. 400 mm">
+              <input id="strokeLength" name="strokeLength" type="text" placeholder="e.g. 400 mm"
                 value={formData.strokeLength} onChange={(e) => update('strokeLength', e.target.value)}
                 className={fieldBase} disabled={status === 'submitting'} />
             </LabelledField>
 
-            <LabelledField id="flowRate" label="Flow Rate (LPM)">
+            <LabelledField id="flowRate" label="Flow Rate (LPM)" hint="e.g. 25 LPM">
               <input id="flowRate" name="flowRate" type="text" placeholder="e.g. 25 LPM"
                 value={formData.flowRate} onChange={(e) => update('flowRate', e.target.value)}
                 className={fieldBase} disabled={status === 'submitting'} />
             </LabelledField>
 
-            <LabelledField id="quantity" label="Quantity Required">
-              <input id="quantity" name="quantity" type="text" placeholder="e.g. 10 units"
+            <LabelledField id="quantity" label="How Many Units?" hint="e.g. 5 pieces">
+              <input id="quantity" name="quantity" type="text" placeholder="e.g. 5 pieces"
                 value={formData.quantity} onChange={(e) => update('quantity', e.target.value)}
                 className={fieldBase} disabled={status === 'submitting'} />
             </LabelledField>
           </div>
         )}
-      </fieldset>
+      </div>
 
-      {/* ── Section 4: File Upload ────────────────────────────────────────── */}
+      {/* ── File Upload ──────────────────────────────────────────────────── */}
       <div>
-        <p className={labelBase}>4. Attach Technical Drawing (Optional)</p>
+        <div className="flex items-center gap-3 mb-3">
+          <div className="w-7 h-7 rounded-full bg-slate-200 text-slate-500 text-xs font-bold flex items-center justify-center font-body shrink-0">4</div>
+          <h3 className="text-sm font-display font-bold text-honeywell-navy">
+            Attach a Drawing or Photo <span className="text-xs font-body text-slate-400 font-normal ml-1">(Optional)</span>
+          </h3>
+        </div>
         <label
           htmlFor="fileUpload"
-          className="flex flex-col items-center justify-center gap-3 border-2 border-dashed border-brand-borderGray rounded-sm py-8 px-4 cursor-pointer hover:border-honeywell-red hover:bg-red-50/30 transition-colors group"
+          className="flex flex-col items-center justify-center gap-2 border-2 border-dashed border-slate-200 rounded-sm py-8 px-4 cursor-pointer hover:border-honeywell-red hover:bg-red-50/30 transition-all group bg-slate-50"
         >
-          <Upload className="w-8 h-8 text-[#94A3B8] group-hover:text-honeywell-red transition-colors" aria-hidden="true" />
-          <span className="text-sm font-body text-brand-steelGray text-center">
+          <div className="w-12 h-12 rounded-sm bg-white shadow-sm border border-slate-100 flex items-center justify-center group-hover:border-honeywell-red/20 transition-colors">
+            <Upload className="w-5 h-5 text-slate-400 group-hover:text-honeywell-red transition-colors" aria-hidden="true" />
+          </div>
+          <span className="text-sm font-body text-slate-500 text-center">
             {formData.attachmentName
               ? <span className="text-honeywell-navy font-semibold">📎 {formData.attachmentName}</span>
-              : <>Drag & drop or <span className="text-honeywell-red font-semibold underline">browse file</span></>
+              : <>Drag & drop, or <span className="text-honeywell-red font-semibold">click to browse</span></>
             }
           </span>
-          <span className="text-xs text-[#94A3B8] font-body">PDF, JPG, PNG, STEP, DXF — max 10 MB</span>
+          <span className="text-xs text-slate-400 font-body">PDF, Photo, STEP, DXF — max 10 MB</span>
           <input
             id="fileUpload"
             ref={fileRef}
@@ -475,33 +489,33 @@ export function QuoteForm() {
             disabled={status === 'submitting'}
           />
         </label>
-        <p className="mt-2 text-xs text-[#94A3B8] font-body">
-          File uploads are stored securely. CAD files help our engineers understand your exact requirements faster.
+        <p className="mt-2 text-xs text-slate-400 font-body text-center">
+          A photo of your existing part or a rough sketch helps us understand faster.
         </p>
       </div>
 
-      {/* ── Submit ────────────────────────────────────────────────────────── */}
+      {/* ── Submit ─────────────────────────────────────────────────────────── */}
       <div className="pt-2">
         <button
           type="submit"
           disabled={status === 'submitting'}
-          className="w-full inline-flex items-center justify-center gap-3 bg-honeywell-red hover:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold font-body text-base px-6 py-4 rounded-full transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2"
+          className="w-full inline-flex items-center justify-center gap-3 bg-honeywell-red hover:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold font-body text-base px-6 py-4 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-honeywell-red/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2"
           aria-busy={status === 'submitting'}
         >
           {status === 'submitting' ? (
             <>
               <Loader2 className="w-5 h-5 animate-spin" aria-hidden="true" />
-              Submitting Request…
+              Sending Your Request…
             </>
           ) : (
             <>
-              Submit Quote Request
+              Send My Quote Request
               <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </>
           )}
         </button>
-        <p className="mt-3 text-xs text-[#94A3B8] font-body text-center">
-          By submitting, you agree to be contacted by our engineering team regarding your requirements.
+        <p className="mt-3 text-xs text-slate-400 font-body text-center">
+          By submitting, you agree to be contacted by our team. We never share your data.
         </p>
       </div>
     </form>

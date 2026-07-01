@@ -22,6 +22,11 @@ export function buildMetadata({
   image?: string;
   noIndex?: boolean;
 }): Metadata {
+  const isDefaultImage = image === SEO_DEFAULTS.ogImage;
+  const ogImageUrl = isDefaultImage 
+    ? `${COMPANY_INFO.websiteUrl}/api/og?title=${encodeURIComponent(title)}`
+    : `${COMPANY_INFO.websiteUrl}${image}`;
+
   return {
     title,
     description,
@@ -35,7 +40,7 @@ export function buildMetadata({
       siteName: COMPANY_INFO.name,
       images: [
         {
-          url: `${COMPANY_INFO.websiteUrl}${image}`,
+          url: ogImageUrl,
           width: 1200,
           height: 630,
         },
@@ -47,7 +52,7 @@ export function buildMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: [`${COMPANY_INFO.websiteUrl}${image}`],
+      images: [ogImageUrl],
     },
     robots: {
       index: !noIndex,
@@ -119,13 +124,17 @@ export function buildProductJsonLd(product: Product) {
       name: COMPANY_INFO.name,
     },
     offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'INR',
+      '@type': 'Offer',
       availability: 'https://schema.org/InStock',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'INR',
+      },
       seller: {
         '@type': 'Organization',
         name: COMPANY_INFO.name,
       },
+      url: `${COMPANY_INFO.websiteUrl}/request-quote`,
     },
   };
 }

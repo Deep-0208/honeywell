@@ -1,15 +1,16 @@
 import React from 'react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
+import { Heading } from '@/components/ui/Heading';
 
 export function PowerPackOverview() {
   return (
-    <Section bg="white" id="overview">
+    <Section bg="white" id="overview" aria-labelledby="overview-heading">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+          <Heading variant="section" underline="center" as="h2" id="overview-heading" className="mb-6">
             What is a Hydraulic Power Pack?
-          </h2>
+          </Heading>
           
           <div className="prose prose-lg prose-slate max-w-none font-body">
             <p className="text-brand-darkSlate mb-6">

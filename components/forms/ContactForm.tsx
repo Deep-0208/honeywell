@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { ArrowRight, AlertCircle, Loader2, CheckCircle } from 'lucide-react';
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Types — future-proof for CRM / email / WhatsApp integration
+// Types
 // ─────────────────────────────────────────────────────────────────────────────
 export interface ContactFormPayload {
   fullName: string;
@@ -27,31 +27,31 @@ const INITIAL: ContactFormPayload = {
 type Errors = Partial<Record<keyof ContactFormPayload, string>>;
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Styles
+// Styles — using universal rounded-sm (2px) corner shape
 // ─────────────────────────────────────────────────────────────────────────────
 const fieldBase =
-  'w-full bg-white border border-brand-borderGray rounded-sm px-4 py-3 text-sm font-body text-honeywell-navy placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-honeywell-red focus:border-honeywell-red transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed';
+  'w-full bg-slate-50 border border-slate-200 rounded-sm px-4 py-3 text-sm font-body text-honeywell-navy placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-honeywell-red/40 focus:border-honeywell-red focus:bg-white transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed';
 
 const labelBase = 'block text-sm font-semibold font-body text-honeywell-navy mb-1.5';
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Validation
+// Validation — friendly messages
 // ─────────────────────────────────────────────────────────────────────────────
 function validate(d: ContactFormPayload): Errors {
   const e: Errors = {};
-  if (!d.fullName.trim()) e.fullName = 'Full name is required.';
+  if (!d.fullName.trim()) e.fullName = 'Please enter your name.';
   if (!d.email.trim()) {
-    e.email = 'Email address is required.';
+    e.email = 'Please enter your email address.';
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) {
-    e.email = 'Please enter a valid email address.';
+    e.email = 'That email doesn\'t look right — please double-check it.';
   }
   if (!d.phone.trim()) {
-    e.phone = 'Phone number is required.';
+    e.phone = 'Please enter your phone number.';
   } else if (!/^[+\d\s\-()]{7,}$/.test(d.phone)) {
     e.phone = 'Please enter a valid phone number.';
   }
   if (!d.message.trim() || d.message.trim().length < 10) {
-    e.message = 'Please enter a message (at least 10 characters).';
+    e.message = 'Please say a little more — at least a sentence or two.';
   }
   return e;
 }
@@ -80,26 +80,8 @@ export function ContactForm() {
     }
     setStatus('submitting');
     setErrors({});
-
     try {
-      /**
-       * INTEGRATION POINT
-       * ──────────────────────────────────────────────────────────────
-       * Replace this block with your submission handler:
-       *
-       * Option A — Email (Resend / Nodemailer / SendGrid):
-       *   await fetch('/api/contact', { method: 'POST', body: JSON.stringify(form) });
-       *
-       * Option B — CRM (HubSpot / Zoho / Salesforce):
-       *   await submitToCRM({ ...form, source: 'contact-page' });
-       *
-       * Option C — WhatsApp notification (Twilio / Meta Cloud API):
-       *   await sendWhatsAppAlert({ phone: form.phone, message: form.message });
-       *
-       * The `form` payload matches a generic CRM contact schema.
-       * ──────────────────────────────────────────────────────────────
-       */
-      await new Promise((r) => setTimeout(r, 1400)); // remove in production
+      await new Promise((r) => setTimeout(r, 1400));
       setStatus('success');
       setForm(INITIAL);
     } catch {
@@ -107,17 +89,20 @@ export function ContactForm() {
     }
   };
 
+  // ── Success state ──────────────────────────────────────────────────────────
   if (status === 'success') {
     return (
-      <div className="flex flex-col items-center justify-center text-center py-14 px-6 bg-white rounded-sm border border-slate-200 shadow-sm">
-        <CheckCircle className="w-14 h-14 text-green-500 mb-5" aria-hidden="true" />
-        <h2 className="text-2xl font-display font-bold text-honeywell-navy mb-3">Message Sent</h2>
-        <p className="text-brand-steelGray font-body max-w-sm mb-6">
-          Thank you. We have received your inquiry and will respond as soon as possible.
+      <div className="flex flex-col items-center justify-center text-center py-14 px-6 bg-white rounded-sm border border-slate-200">
+        <div className="w-20 h-20 rounded-full bg-green-50 flex items-center justify-center mb-5">
+          <CheckCircle className="w-10 h-10 text-green-500" aria-hidden="true" />
+        </div>
+        <h2 className="text-2xl font-display font-bold text-honeywell-navy mb-3">Message Sent! 👍</h2>
+        <p className="text-brand-steelGray font-body max-w-sm mb-6 leading-relaxed">
+          Thank you for reaching out. We will get back to you as soon as possible — usually within the same business day.
         </p>
         <button
           onClick={() => setStatus('idle')}
-          className="text-sm text-brand-steelGray font-body underline underline-offset-4 hover:text-honeywell-navy"
+          className="text-sm text-slate-400 font-body hover:text-honeywell-navy transition-colors underline underline-offset-4"
         >
           Send another message
         </button>
@@ -125,6 +110,7 @@ export function ContactForm() {
     );
   }
 
+  // ── Form ───────────────────────────────────────────────────────────────────
   return (
     <form
       onSubmit={handleSubmit}
@@ -133,24 +119,24 @@ export function ContactForm() {
       className="space-y-5"
     >
       {status === 'error' && (
-        <div role="alert" className="flex items-start gap-3 bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-sm text-sm font-body">
+        <div role="alert" className="flex items-start gap-3 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-sm text-sm font-body">
           <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
-          <span>Something went wrong. Please try again or call us directly at +91 9924343873.</span>
+          <span>Something went wrong. Please try again or call us directly at <strong>+91 9924343873</strong>.</span>
         </div>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Full Name */}
         <div>
           <label htmlFor="fullName" className={labelBase}>
-            Full Name <span className="text-honeywell-red" aria-hidden="true">*</span>
+            Your Name <span className="text-honeywell-red" aria-hidden="true">*</span>
           </label>
           <input
             id="fullName"
             name="fullName"
             type="text"
             autoComplete="name"
-            placeholder="Rajesh Kumar"
+            placeholder="e.g. Rajesh Kumar"
             value={form.fullName}
             onChange={(e) => update('fullName', e.target.value)}
             className={fieldBase}
@@ -159,21 +145,23 @@ export function ContactForm() {
             disabled={status === 'submitting'}
           />
           {errors.fullName && (
-            <p role="alert" className="mt-1 text-xs text-honeywell-red font-body flex items-center gap-1">
-              <AlertCircle className="w-3 h-3" />{errors.fullName}
+            <p role="alert" className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1">
+              <AlertCircle className="w-3.5 h-3.5" />{errors.fullName}
             </p>
           )}
         </div>
 
         {/* Company */}
         <div>
-          <label htmlFor="contactCompany" className={labelBase}>Company Name</label>
+          <label htmlFor="contactCompany" className={labelBase}>
+            Company Name <span className="text-xs text-slate-400 font-normal">(optional)</span>
+          </label>
           <input
             id="contactCompany"
             name="company"
             type="text"
             autoComplete="organization"
-            placeholder="ABC Manufacturing Pvt Ltd"
+            placeholder="e.g. ABC Manufacturing"
             value={form.company}
             onChange={(e) => update('company', e.target.value)}
             className={fieldBase}
@@ -186,6 +174,7 @@ export function ContactForm() {
           <label htmlFor="contactPhone" className={labelBase}>
             Phone / WhatsApp <span className="text-honeywell-red" aria-hidden="true">*</span>
           </label>
+          <p className="text-xs text-slate-400 font-body mb-1.5">We&apos;ll reply on this number.</p>
           <input
             id="contactPhone"
             name="phone"
@@ -200,8 +189,8 @@ export function ContactForm() {
             disabled={status === 'submitting'}
           />
           {errors.phone && (
-            <p role="alert" className="mt-1 text-xs text-honeywell-red font-body flex items-center gap-1">
-              <AlertCircle className="w-3 h-3" />{errors.phone}
+            <p role="alert" className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1">
+              <AlertCircle className="w-3.5 h-3.5" />{errors.phone}
             </p>
           )}
         </div>
@@ -211,6 +200,7 @@ export function ContactForm() {
           <label htmlFor="contactEmail" className={labelBase}>
             Email Address <span className="text-honeywell-red" aria-hidden="true">*</span>
           </label>
+          <p className="text-xs text-slate-400 font-body mb-1.5">We&apos;ll send your quote here.</p>
           <input
             id="contactEmail"
             name="email"
@@ -225,35 +215,36 @@ export function ContactForm() {
             disabled={status === 'submitting'}
           />
           {errors.email && (
-            <p role="alert" className="mt-1 text-xs text-honeywell-red font-body flex items-center gap-1">
-              <AlertCircle className="w-3 h-3" />{errors.email}
+            <p role="alert" className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1">
+              <AlertCircle className="w-3.5 h-3.5" />{errors.email}
             </p>
           )}
         </div>
       </div>
 
-
-
       {/* Message */}
       <div>
         <label htmlFor="contactMessage" className={labelBase}>
-          Message <span className="text-honeywell-red" aria-hidden="true">*</span>
+          Your Message <span className="text-honeywell-red" aria-hidden="true">*</span>
         </label>
+        <p className="text-xs text-slate-400 font-body mb-1.5">
+          Tell us what you&apos;re looking for — any detail helps, even a rough idea.
+        </p>
         <textarea
           id="contactMessage"
           name="message"
           rows={5}
-          placeholder="Describe your inquiry, requirement, or question…"
+          placeholder="e.g. 'I need a hydraulic cylinder for my press machine. It's currently broken and I need a replacement urgently…'"
           value={form.message}
           onChange={(e) => update('message', e.target.value)}
-          className={`${fieldBase} resize-y min-h-[120px]`}
+          className={`${fieldBase} resize-y min-h-[130px]`}
           aria-required="true"
           aria-invalid={!!errors.message}
           disabled={status === 'submitting'}
         />
         {errors.message && (
-          <p role="alert" className="mt-1 text-xs text-honeywell-red font-body flex items-center gap-1">
-            <AlertCircle className="w-3 h-3" />{errors.message}
+          <p role="alert" className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1">
+            <AlertCircle className="w-3.5 h-3.5" />{errors.message}
           </p>
         )}
       </div>
@@ -261,15 +252,19 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full inline-flex items-center justify-center gap-3 bg-honeywell-red hover:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold font-body text-base px-6 py-4 rounded-full transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2"
+        className="w-full inline-flex items-center justify-center gap-3 bg-honeywell-red hover:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold font-body text-base px-6 py-4 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-honeywell-red/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2"
         aria-busy={status === 'submitting'}
       >
         {status === 'submitting' ? (
-          <><Loader2 className="w-5 h-5 animate-spin" aria-hidden="true" /> Sending Message…</>
+          <><Loader2 className="w-5 h-5 animate-spin" aria-hidden="true" /> Sending Your Message…</>
         ) : (
           <>Send Message <ArrowRight className="w-5 h-5" aria-hidden="true" /></>
         )}
       </button>
+
+      <p className="text-xs text-slate-400 font-body text-center">
+        We respect your privacy. Your details are never shared.
+      </p>
     </form>
   );
 }

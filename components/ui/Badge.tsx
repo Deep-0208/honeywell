@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '@/lib/utils';
 
 export type BadgeVariant = 'iso' | 'years' | 'clients' | 'madeInIndia' | 'custom' | 'default';
 
@@ -24,14 +25,11 @@ export function Badge({ variant = 'default', className = '', children, ...props 
     default: 'bg-honeywell-navy text-white',
   };
 
-  const classes = `
-    ${baseStyles}
-    ${variants[variant]}
-    ${className}
-  `.trim().replace(/\s+/g, ' ');
-
   return (
-    <span className={classes} {...props}>
+    <span 
+      className={cn(baseStyles, variants[variant], className)} 
+      {...props}
+    >
       {children}
     </span>
   );

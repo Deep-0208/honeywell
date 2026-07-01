@@ -18,10 +18,10 @@ export function CertificationsSection() {
     <Section bg="gray" aria-labelledby="certifications-heading">
       <Container>
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
-          <Heading variant="section" as="h2" id="certifications-heading" className="text-honeywell-navy mb-4">
+          <Heading variant="section" underline="center" as="h2" id="certifications-heading" className="text-honeywell-navy mb-4">
             Quality Certifications & Compliance
           </Heading>
-          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
+
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -36,7 +36,7 @@ export function CertificationsSection() {
               <Heading variant="card" as="h3" className="mb-2">
                 {cert.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
                 {cert.description}
               </p>
             </div>

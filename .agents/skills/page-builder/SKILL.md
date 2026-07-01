@@ -63,6 +63,20 @@ Ask the user for:
 4. **Primary keyword** (auto-suggest based on page name)
 5. **Section overrides** (optional — add/remove from default section list)
 
+### Step 3 — Homepage Design Validation (MANDATORY)
+
+Before generating ANY new component, require the AI to:
+- Search the homepage
+- Reuse the existing component
+- Copy the same styling
+- Reuse the same animations
+- Reuse spacing
+- Reuse typography
+- Reuse button variants
+- Reuse card variants
+
+Only create a new component if none exists.
+
 ---
 
 ## File Generation
@@ -74,8 +88,9 @@ For each page, generate these files:
 
 Must include:
 - `import type { Metadata } from 'next'`
-- SEO metadata via `buildMetadata()` from `@/lib/seo`
-- JSON-LD schemas (Breadcrumb + WebPage minimum, plus page-type-specific schemas)
+- **Completely data-driven structure**: The page should be almost entirely presentation-only, passing data to section components (e.g., `<LocationHero data={locationData.hero} />`).
+- SEO metadata via `buildMetadata()` from `@/lib/seo` powered by the data layer.
+- JSON-LD schemas (Breadcrumb + WebPage minimum, plus page-type-specific schemas) powered by the data layer.
 - Server Component (no `'use client'` unless section requires interactivity)
 - All section components imported and rendered in correct order
 - Comments with section numbering: `{/* 01 — Hero */}`
@@ -84,9 +99,11 @@ Must include:
 `data/<page-name>.ts`
 
 Must include:
-- All static content (FAQs, features, specs, stats)
-- TypeScript interfaces for data structures
-- Export named constants (not default exports)
+- **A single strongly typed object** (e.g., `export const gujaratFacility = { ... }`) that centralizes all page content.
+- **Centralized SEO metadata**: SEO Title, Meta Description, OpenGraph, Twitter Card, Canonical, Keywords, Breadcrumb data, and Schema data MUST be in this object.
+- All static content structured by section (e.g., hero, benefits, industries, products, faqs).
+- TypeScript interfaces for data structures.
+- Export the single named constant object.
 
 ### 3. Section Components (if new patterns needed)
 `components/<page-category>/<SectionName>.tsx`
@@ -99,13 +116,15 @@ Must follow:
 - Red divider under headings: `<div className="w-16 h-1 bg-honeywell-red rounded-full" />`
 
 ### 4. Image Requirements
-Append to `REQUIRED_IMAGES.md`:
+Append to `REQUIRED_IMAGES.md`. For every required image, specify:
+Filename, Alt text, Caption, Title attribute, Recommended size, Aspect ratio, WebP format, Lazy loading, Priority (Hero only).
+
 ```markdown
 ## <Page Name> Page
 
-| Asset | Status | Source | Path | Alt Text | Priority |
-|---|---|---|---|---|---|
-| <image name> | ❌ REQUIRED | Legacy or generate | `/images/<path>` | <SEO alt text> | High/Medium/Low |
+| Asset | Path | Alt Text | Caption | Title | Size | Ratio | Format | Loading | Priority |
+|---|---|---|---|---|---|---|---|---|---|
+| <name> | `/images/<path>` | <alt text> | <caption> | <title> | <size> | <ratio> | WebP | lazy/eager | High/Medium/Low |
 ```
 
 ---
@@ -199,10 +218,18 @@ See `references/section-library.md` for the complete catalog of 30+ reusable sec
 - `Article` — resource pages only
 
 ### Internal Linking
-- Breadcrumb navigation in hero
-- 3+ internal links to related pages
-- Section CTAs linking to conversion pages (`/request-quote`, `/contact-us`)
-- Related product/industry cross-links
+Every location (and other) page must include contextual links to:
+- Homepage
+- Product Hub
+- Hydraulic Cylinders
+- Hydraulic Power Packs
+- Industry Pages
+- Application Pages
+- About
+- Contact
+- Resources
+- Blogs
+This improves crawlability and topical authority.
 
 ### Heading Hierarchy
 ```
@@ -211,6 +238,27 @@ h1 — Page title (Hero section only, ONE per page)
     h3 — Sub-items (feature titles, card titles)
       h4 — Rarely needed
 ```
+
+---
+
+## Performance Requirements
+Specify that the page must:
+- Use Server Components where possible
+- Avoid unnecessary client components
+- Optimize images
+- Minimize bundle size
+- Prevent layout shift (CLS)
+- Maintain homepage performance standards
+
+## Accessibility Requirements
+Ensure:
+- Semantic HTML
+- Single H1
+- Proper heading hierarchy
+- Keyboard-accessible interactive elements
+- ARIA labels where needed
+- Sufficient color contrast
+- Decorative images marked appropriately
 
 ---
 
@@ -253,18 +301,21 @@ Never two adjacent sections with the same background.
 
 After generating all files, verify:
 
-- [ ] `page.tsx` compiles without TypeScript errors
-- [ ] All imports resolve to existing components
+- [ ] `npm run type-check` passes and `page.tsx` compiles without errors
+- [ ] No hydration warnings and no console errors
+- [ ] Mobile responsiveness is verified
+- [ ] Lighthouse scores meet standards
+- [ ] Schema validation passes
+- [ ] Internal link integrity is confirmed
+- [ ] Metadata rendering is correct
+- [ ] Design consistency with homepage is maintained
 - [ ] Single H1 in Hero section
-- [ ] Metadata title is 50-60 characters
-- [ ] Metadata description is 150-160 characters
 - [ ] JSON-LD includes BreadcrumbList + WebPage
 - [ ] All sections use `<Section>` + `<Container>` + `<Heading>`
 - [ ] Backgrounds alternate white/gray
-- [ ] Data file exports named constants
-- [ ] Image requirements appended to REQUIRED_IMAGES.md
-- [ ] 3+ internal links present
-- [ ] Mobile-first classes on all elements
+- [ ] Data file exports a single centralized object with SEO + content
+- [ ] Image requirements appended to `REQUIRED_IMAGES.md` with all new columns
+- [ ] Comprehensive contextual internal links present
 - [ ] No `'use client'` unless required for interactivity
 
 ---

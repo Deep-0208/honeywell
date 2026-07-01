@@ -8,6 +8,7 @@ import {
   ArrowRight,
   CheckCircle2,
   Globe,
+  Cog,
 } from 'lucide-react';
 
 /* ─────────────────────────────────────────────
@@ -74,11 +75,21 @@ export function HeroSection() {
     >
       {/* ═══ Subtle background accent — engineering grid feel ═══ */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none overflow-hidden"
         aria-hidden="true"
       >
+        <div className="absolute inset-0 bg-[url('/images/noise.webp')] opacity-[0.03] mix-blend-overlay" />
         {/* Diagonal accent stripe */}
-        <div className="absolute -top-20 -right-40 w-[800px] h-[800px] rounded-full bg-brand-surfaceGray opacity-70" />
+        <div className="absolute -top-20 -right-40 w-[800px] h-[800px] rounded-full bg-brand-surfaceGray opacity-70 blur-[80px]" />
+        
+        {/* Floating Cog */}
+        <div className="absolute top-1/4 left-10 opacity-5 mix-blend-multiply">
+          <Cog className="w-64 h-64 animate-[spin_40s_linear_infinite]" />
+        </div>
+        <div className="absolute bottom-10 right-1/3 opacity-[0.03] mix-blend-multiply">
+          <Cog className="w-96 h-96 animate-[spin_60s_linear_infinite_reverse]" />
+        </div>
+
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
       </div>
 
@@ -102,7 +113,7 @@ export function HeroSection() {
             {/* H1 — single per page, keyword-optimized */}
             <div>
               <Heading
-                variant="section"
+                variant="section" underline="center"
                 as="h1"
                 id="hero-heading"
                 className="text-honeywell-navy mb-4 sm:mb-5 leading-[1.1]"
@@ -157,17 +168,18 @@ export function HeroSection() {
             >
               <div>
                 <Button
-                  href="/request-quote/"
+                  href="/request-quote"
                   variant="primary"
                   size="lg"
-                  rightIcon={<ArrowRight className="w-5 h-5" />}
+                  rightIcon={<ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />}
+                  className="shadow-lg shadow-honeywell-red/20 hover:shadow-honeywell-red/40 transition-all duration-300 group"
                 >
                   Request Quote
                 </Button>
               </div>
               <div>
                 <Button
-                  href="/products/"
+                  href="/products"
                   variant="outline"
                   size="lg"
                 >
@@ -185,18 +197,18 @@ export function HeroSection() {
           <div
             className="order-2 relative"
           >
-            {/* Light surface background for product showcase */}
-            <div className="relative aspect-[3/2] sm:aspect-[4/3] lg:aspect-square rounded-2xl bg-white border border-slate-200/80 overflow-hidden shadow-sm">
+            {/* Light surface background for product showcase with Glassmorphism */}
+            <div className="relative aspect-[3/2] sm:aspect-[4/3] lg:aspect-square rounded-2xl bg-white/40 backdrop-blur-md border border-white/60 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] z-10 group transition-all duration-500 ease-premium hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)]">
               <HeroCarousel images={heroCarouselImages} />
             </div>
 
             {/* Decorative accents — engineering precision feel */}
             <div
-              className="hidden lg:block absolute -bottom-5 -right-5 w-28 h-28 border-[1.5px] border-slate-200 rounded-2xl -z-10"
+              className="hidden lg:block absolute -bottom-5 -right-5 w-28 h-28 border-[1.5px] border-slate-200 rounded-2xl -z-10 group-hover:border-honeywell-red/30 transition-colors duration-500 ease-premium"
               aria-hidden="true"
             />
             <div
-              className="hidden lg:block absolute -top-5 -left-5 w-20 h-20 border-[1.5px] border-honeywell-red/20 rounded-2xl -z-10"
+              className="hidden lg:block absolute -top-5 -left-5 w-20 h-20 border-[1.5px] border-honeywell-red/20 rounded-2xl -z-10 bg-white/20 backdrop-blur-sm shadow-sm"
               aria-hidden="true"
             />
           </div>

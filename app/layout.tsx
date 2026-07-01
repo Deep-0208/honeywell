@@ -6,6 +6,7 @@ import { COMPANY_INFO, SEO_DEFAULTS } from '@/lib/constants';
 import './globals.css';
 import { Agentation } from 'agentation';
 import { ElevenLabsWidget } from '@/components/ElevenLabsWidget';
+import JsonLd from '@/components/seo/JsonLd';
 import { Poppins, Roboto } from 'next/font/google';
 
 const poppins = Poppins({
@@ -106,6 +107,36 @@ export default function RootLayout({
         {/* Fonts are now handled by next/font/google */}
       </head>
       <body className="antialiased flex min-h-screen flex-col bg-white selection:bg-[#B2D4FF] selection:text-black">
+        {/* Global JSON-LD Schema */}
+        <JsonLd
+          data={[
+            {
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: COMPANY_INFO.name,
+              url: COMPANY_INFO.websiteUrl,
+              logo: `${COMPANY_INFO.websiteUrl}/images/logos/long-size-logohydralics-logo.png`,
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: COMPANY_INFO.phone,
+                contactType: 'sales',
+                areaServed: 'IN',
+                availableLanguage: ['English', 'Hindi'],
+              },
+              address: {
+                '@type': 'PostalAddress',
+                ...COMPANY_INFO.address,
+              },
+              sameAs: Object.values(COMPANY_INFO.socialUrls),
+            },
+            {
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: COMPANY_INFO.name,
+              url: COMPANY_INFO.websiteUrl,
+            },
+          ]}
+        />
         {children}
         <Analytics />
         <SpeedInsights />

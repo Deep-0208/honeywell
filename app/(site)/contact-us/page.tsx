@@ -4,55 +4,42 @@ import { Metadata } from 'next';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
-import { IconBox } from '@/components/ui/IconBox';
 import { Button } from '@/components/ui/Button';
 import { ContactForm } from '@/components/forms/ContactForm';
-import { FAQAccordion } from '@/components/faq/FAQAccordion';
+import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
+import { LocationCard } from '@/components/cards/LocationCard';
 import JsonLd from '@/components/seo/JsonLd';
 import { COMPANY_INFO } from '@/lib/constants';
+import { homepageLocations } from '@/data/homepage';
 import {
   Phone,
   Mail,
   MapPin,
   MessageCircle,
   Clock,
-  Wrench,
-  Settings2,
-  Users,
-  FileText,
-  LifeBuoy,
   ArrowRight,
+  CheckCircle,
+  Shield,
+  Zap,
+  HeartHandshake,
 } from 'lucide-react';
+
+import { buildMetadata } from '@/lib/seo';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // SEO Metadata
 // ─────────────────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Contact Honeywell Hydraulics Ahmedabad | Contact Us',
-  description:
-    'Contact Honeywell Hydraulics in Kathwada GIDC, Ahmedabad for custom hydraulic cylinders, power packs, and engineering support. Call, WhatsApp, or email our team.',
-  alternates: {
+  ...buildMetadata({
+    title: 'Contact Us | Honeywell Hydraulics Ahmedabad',
+    description:
+      'Get in touch with Honeywell Hydraulics in Kathwada GIDC, Ahmedabad. Call, WhatsApp, or email for hydraulic cylinders, power packs, and accessories.',
     canonical: '/contact-us',
-  },
-  openGraph: {
-    title: 'Contact Honeywell Hydraulics Ahmedabad | Contact Us',
-    description:
-      'Contact Honeywell Hydraulics in Kathwada GIDC, Ahmedabad for custom hydraulic cylinders, power packs, and engineering support.',
-    url: '/contact-us',
-    siteName: COMPANY_INFO.name,
-    locale: 'en_IN',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Contact Honeywell Hydraulics Ahmedabad | Contact Us',
-    description:
-      'Contact Honeywell Hydraulics in Kathwada GIDC, Ahmedabad for custom hydraulic cylinders, power packs, and hydraulic accessories.',
-  },
+  }),
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Canonical NAP — sourced from lib/constants.ts (single source of truth)
+// Canonical NAP
 // ─────────────────────────────────────────────────────────────────────────────
 const NAP = {
   name: COMPANY_INFO.name,
@@ -64,7 +51,7 @@ const NAP = {
   addressFormatted:
     'B-18, Suryam Plaza Estate, Near Nilkanth Estate, Road no. 15, Kathwada GIDC, Ahmedabad, Gujarat 382430, India',
   hours: 'Monday – Saturday: 09:00 AM – 07:00 PM',
-  hoursClosed: 'Sunday: Closed (Emergency breakdown support available for existing clients)',
+  hoursClosed: 'Closed on Sundays',
   geo: COMPANY_INFO.geo,
 };
 
@@ -95,7 +82,12 @@ const contactPageSchema = {
       email: COMPANY_INFO.email,
       areaServed: 'IN',
       availableLanguage: ['English', 'Hindi', 'Gujarati'],
-      hoursAvailable: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '09:00', closes: '19:00' },
+      hoursAvailable: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '09:00',
+        closes: '19:00',
+      },
     },
   ],
 };
@@ -151,68 +143,28 @@ const webPageSchema = {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Static content
+// Content
 // ─────────────────────────────────────────────────────────────────────────────
-const WHY_CONTACT = [
-  {
-    icon: <Wrench className="w-5 h-5" />,
-    title: 'Engineering Support',
-    body: 'Speak directly with our fluid power engineers about your project specifications, operating conditions, and selection criteria.',
-  },
-  {
-    icon: <Settings2 className="w-5 h-5" />,
-    title: 'Custom Design Consultation',
-    body: 'Our team reviews your bore size, stroke, pressure rating, and mounting configuration requirements to recommend the right solution.',
-  },
-  {
-    icon: <FileText className="w-5 h-5" />,
-    title: 'Project Discussion',
-    body: 'Whether you are in the early design phase or need an urgent replacement, we work with you to define the complete project scope.',
-  },
-  {
-    icon: <LifeBuoy className="w-5 h-5" />,
-    title: 'Technical Assistance',
-    body: 'Existing clients can reach our maintenance support team for breakdown diagnostics, seal kit identification, or retrofit guidance.',
-  },
-  {
-    icon: <Users className="w-5 h-5" />,
-    title: 'Direct Manufacturer',
-    body: 'You communicate directly with the Ahmedabad factory — no middlemen, no resellers, no delays in technical communication.',
-  },
-];
-
-const SERVICE_AREAS = [
-  { city: 'Ahmedabad', note: 'HQ — Kathwada GIDC' },
-  { city: 'Surat', note: 'Sachin GIDC, Pandesara, Hazira' },
-  { city: 'Vadodara', note: 'Makarpura GIDC, Savli' },
-  { city: 'Rajkot', note: 'Shapar, Aji GIDC, Metoda GIDC' },
-  { city: 'Bhavnagar', note: 'Bhavnagar GIDC' },
-  { city: 'Gandhinagar', note: 'Indroda, Khatraj' },
-  { city: 'Vapi', note: 'Vapi GIDC, Silvassa' },
-  { city: 'Jamnagar', note: 'Digvijay Port Road, Sikka GIDC' },
-];
-
 const CONTACT_FAQS = [
   {
     question: 'What are your business hours?',
     answer:
-      'Our manufacturing facility in Kathwada GIDC, Ahmedabad is open Monday to Saturday, 09:00 AM to 07:00 PM. We are closed on Sundays, however emergency breakdown support is available for existing clients outside of business hours.',
-  },
-
-  {
-    question: 'Where is the Honeywell Hydraulics factory located?',
-    answer:
-      'Our manufacturing facility is located at B-18, Suryam Plaza Estate, Near Nilkanth Estate, Road no. 15, Kathwada GIDC, Ahmedabad, Gujarat 382430, India. All products are designed, machined, assembled, and pressure-tested at this single facility.',
+      'Our factory in Kathwada GIDC, Ahmedabad is open Monday to Saturday, 09:00 AM to 07:00 PM. We are closed on Sundays. Existing clients can still reach us for emergency breakdown support outside business hours.',
   },
   {
-    question: 'I need a custom hydraulic cylinder or power pack — how do I get a quote?',
+    question: 'Where is your factory located?',
     answer:
-      'For a detailed engineering quote, use our Request Quote page to specify technical requirements including bore size, stroke length, operating pressure, and quantity. Alternatively, call +91 9924343873 or email sales@honeywellhydraulics.com and our team will guide you.',
+      'We are at B-18, Suryam Plaza Estate, Near Nilkanth Estate, Road no. 15, Kathwada GIDC, Ahmedabad, Gujarat 382430. All our products are designed, machined, and tested here.',
   },
   {
-    question: 'Do you manufacture hydraulic accessories?',
+    question: 'How do I get a price quote?',
     answer:
-      'Yes. In addition to hydraulic cylinders and power packs, we manufacture and supply a range of hydraulic accessories including valves, fittings, hoses, and related components. Contact us for specific accessory requirements.',
+      'For a detailed quote, use our Request a Quote page and describe what you need. You can also call us at +91 9924343873 or send a WhatsApp message — our team will guide you step by step.',
+  },
+  {
+    question: 'Do you supply hydraulic accessories?',
+    answer:
+      'Yes. Beyond hydraulic cylinders and power packs, we supply valves, fittings, hoses, and other hydraulic accessories. Contact us with your specific requirement.',
   },
 ];
 
@@ -229,8 +181,31 @@ const faqSchema = {
   })),
 };
 
+const WHY_CONTACT = [
+  {
+    icon: <Zap className="w-5 h-5" />,
+    title: 'Fast Response',
+    body: 'We respond to every inquiry personally — usually within the same business day.',
+  },
+  {
+    icon: <Shield className="w-5 h-5" />,
+    title: 'Direct from Factory',
+    body: 'No agents, no middlemen. You speak directly with our Ahmedabad manufacturing team.',
+  },
+  {
+    icon: <HeartHandshake className="w-5 h-5" />,
+    title: 'Free Consultation',
+    body: 'Not sure what you need? Our engineers will help you figure out the right solution.',
+  },
+  {
+    icon: <CheckCircle className="w-5 h-5" />,
+    title: 'No Pressure',
+    body: 'Ask questions, get a quote, take your time. We\'re here to help, not to push you.',
+  },
+];
+
 // ─────────────────────────────────────────────────────────────────────────────
-// Page (Server Component)
+// Page
 // ─────────────────────────────────────────────────────────────────────────────
 export default function ContactUsPage() {
   return (
@@ -241,151 +216,185 @@ export default function ContactUsPage() {
       <JsonLd data={webPageSchema} />
       <JsonLd data={faqSchema} />
 
-      {/* ── Section 1: Hero ──────────────────────────────────────────────── */}
-      <section className="bg-honeywell-navy text-white pt-12 pb-16 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
+      {/* ── Hero ──────────────────────────────────────────────────────────── */}
+      <section className="bg-honeywell-navy text-white pt-6 md:pt-8 pb-20 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-[0.06] -skew-x-12 translate-x-1/4" aria-hidden="true" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" aria-hidden="true" />
+
         <Container className="relative z-10">
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="text-sm font-body text-brand-borderGray mb-6">
+          <nav aria-label="Breadcrumb" className="text-sm font-body text-brand-borderGray mb-8">
             <ol className="flex items-center gap-2">
-              <li>
-                <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              </li>
+              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
               <li aria-hidden="true">&rsaquo;</li>
               <li className="text-white font-semibold" aria-current="page">Contact Us</li>
             </ol>
           </nav>
 
-          <div className="max-w-3xl">
-            <span className="inline-block py-1 px-3 rounded-sm bg-honeywell-red text-white text-xs font-bold uppercase tracking-wider mb-6">
-              Ahmedabad, Gujarat
-            </span>
-            <Heading variant="hero" as="h1" className="text-white mb-5">
-              Contact Honeywell Hydraulics
-            </Heading>
-            <p className="text-brand-borderGray text-lg font-body leading-relaxed max-w-2xl mb-8">
-              Whether you need a custom cylinder prototype, a complete power pack system, or hydraulic accessories, our engineering team in Ahmedabad is ready to assist.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left — Headline */}
+            <div>
+              <span className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-honeywell-red/20 border border-honeywell-red/40 text-honeywell-red text-xs font-bold uppercase tracking-wider mb-6">
+                Ahmedabad, Gujarat — Made in India 🇮🇳
+              </span>
+              <Heading variant="hero" as="h1" className="text-white mb-5 leading-tight">
+                We&apos;re Here to Help — Just Reach Out
+              </Heading>
+              <p className="text-[#CBD5E1] text-lg font-body leading-relaxed mb-8 max-w-lg">
+                Call us, send a WhatsApp, or fill the form below. Our team responds to every inquiry and will help you find the right hydraulic solution.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href={NAP.phoneHref}
+                  className="inline-flex items-center justify-center gap-2 bg-honeywell-red hover:bg-red-700 text-white font-semibold font-body text-sm px-6 py-3 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-honeywell-red/30"
+                >
+                  <Phone className="w-4 h-4" aria-hidden="true" />
+                  Call Us Now
+                </a>
+                <a
+                  href={NAP.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold font-body text-sm px-6 py-3 rounded-full transition-all duration-200"
+                >
+                  <MessageCircle className="w-4 h-4" aria-hidden="true" />
+                  WhatsApp Us
+                </a>
+                <Link
+                  href="/request-quote"
+                  className="inline-flex items-center justify-center gap-2 bg-transparent border border-white/20 text-white hover:bg-white/10 font-semibold font-body text-sm px-6 py-3 rounded-full transition-all duration-200"
+                >
+                  Request a Quote
+                </Link>
+              </div>
+            </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href={NAP.phoneHref}
-                className="inline-flex items-center justify-center gap-2 bg-honeywell-red hover:bg-red-700 text-white font-semibold font-body text-base px-6 py-3 rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2"
-              >
-                <Phone className="w-4 h-4" aria-hidden="true" />
-                Call Now
-              </a>
-              <a
-                href="/request-quote"
-                className="inline-flex items-center justify-center gap-2 bg-transparent border border-white text-white hover:bg-white hover:text-honeywell-navy font-semibold font-body text-base px-6 py-3 rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
-              >
-                Request Quote
-              </a>
+            {/* Right — Why contact us — rounded-sm to match design system */}
+            <div className="grid grid-cols-2 gap-4">
+              {WHY_CONTACT.map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-white/5 border border-white/10 rounded-xl p-5 transition-all duration-350 ease-premium hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red hover:bg-white/10 hover:shadow-float"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-honeywell-red/20 flex items-center justify-center text-honeywell-red mb-3">
+                    {item.icon}
+                  </div>
+                  <p className="font-display font-bold text-white text-sm mb-1">{item.title}</p>
+                  <p className="text-[#94A3B8] text-xs font-body leading-relaxed">{item.body}</p>
+                </div>
+              ))}
             </div>
           </div>
         </Container>
       </section>
 
-      {/* ── Section 2: Contact Information + Form ────────────────────────── */}
+      {/* ── Contact Info + Form ──────────────────────────────────────────── */}
       <Section bg="gray">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-10 items-start">
 
-            {/* Contact Information Sidebar */}
-            <aside aria-label="Contact information" className="space-y-6">
+            {/* Left — Contact details sidebar */}
+            <aside aria-label="Contact information" className="space-y-5">
 
-              {/* Direct Lines */}
-              <div className="bg-white rounded-sm border border-slate-200 shadow-sm p-6 space-y-5">
-                <h2 className="text-lg font-display font-bold text-honeywell-navy border-b border-slate-200 pb-3">
-                  Direct Lines
+              {/* Quick contact — rounded-sm to match design system */}
+              <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 transition-all duration-350 ease-premium hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red hover:shadow-float">
+                <h2 className="text-base font-display font-bold text-honeywell-navy mb-5 pb-3 border-b border-slate-100">
+                  Reach Us Directly
                 </h2>
+                <div className="space-y-3">
+                  <a
+                    href={NAP.phoneHref}
+                    className="flex items-center gap-3 group p-3 rounded-xl hover:bg-slate-50 transition-colors"
+                    aria-label={`Call ${NAP.phone}`}
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-honeywell-red/10 flex items-center justify-center shrink-0 group-hover:bg-honeywell-red/20 transition-colors">
+                      <Phone className="w-4 h-4 text-honeywell-red" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] text-slate-400 font-body uppercase tracking-wider">Phone / WhatsApp</p>
+                      <p className="text-sm font-semibold font-body text-honeywell-navy group-hover:text-honeywell-red transition-colors">
+                        {NAP.phone}
+                      </p>
+                    </div>
+                  </a>
 
-                <a
-                  href={NAP.phoneHref}
-                  className="flex items-center gap-3 group"
-                  aria-label={`Call ${NAP.phone}`}
-                >
-                  <IconBox icon={<Phone className="w-4 h-4" />} variant="primary" size="sm" className="shrink-0" />
-                  <div>
-                    <p className="text-xs text-[#94A3B8] font-body">Phone / WhatsApp</p>
-                    <p className="text-sm font-semibold font-body text-honeywell-navy group-hover:text-honeywell-red transition-colors">
-                      {NAP.phone}
-                    </p>
-                  </div>
-                </a>
+                  <a
+                    href={NAP.whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 group p-3 rounded-sm hover:bg-green-50 transition-colors"
+                    aria-label="Message engineering team on WhatsApp"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center shrink-0 group-hover:bg-green-200 transition-colors">
+                      <MessageCircle className="w-4 h-4 text-green-600" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] text-slate-400 font-body uppercase tracking-wider">WhatsApp</p>
+                      <p className="text-sm font-semibold font-body text-honeywell-navy group-hover:text-green-600 transition-colors">
+                        Message Our Engineers
+                      </p>
+                    </div>
+                  </a>
 
-                <a
-                  href={NAP.whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 group"
-                  aria-label="Message engineering team on WhatsApp"
-                >
-                  <IconBox icon={<MessageCircle className="w-4 h-4" />} variant="primary" size="sm" className="shrink-0" />
-                  <div>
-                    <p className="text-xs text-[#94A3B8] font-body">WhatsApp</p>
-                    <p className="text-sm font-semibold font-body text-honeywell-navy group-hover:text-honeywell-red transition-colors">
-                      Message Engineering Team
-                    </p>
-                  </div>
-                </a>
-
-                <a
-                  href={`mailto:${NAP.emailSales}`}
-                  className="flex items-center gap-3 group"
-                  aria-label={`Email ${NAP.emailSales}`}
-                >
-                  <IconBox icon={<Mail className="w-4 h-4" />} variant="primary" size="sm" className="shrink-0" />
-                  <div>
-                    <p className="text-xs text-[#94A3B8] font-body">Sales &amp; Inquiries</p>
-                    <p className="text-sm font-semibold font-body text-honeywell-navy group-hover:text-honeywell-red transition-colors break-all">
-                      {NAP.emailSales}
-                    </p>
-                  </div>
-                </a>
+                  <a
+                    href={`mailto:${NAP.emailSales}`}
+                    className="flex items-center gap-3 group p-3 rounded-xl hover:bg-slate-50 transition-colors"
+                    aria-label={`Email ${NAP.emailSales}`}
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0 group-hover:bg-slate-200 transition-colors">
+                      <Mail className="w-4 h-4 text-slate-500" aria-hidden="true" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-[10px] text-slate-400 font-body uppercase tracking-wider">Email Us</p>
+                      <p className="text-sm font-semibold font-body text-honeywell-navy group-hover:text-honeywell-red transition-colors truncate">
+                        {NAP.emailSales}
+                      </p>
+                    </div>
+                  </a>
+                </div>
               </div>
 
-              {/* Manufacturing Facility */}
-              <div className="bg-white rounded-sm border border-slate-200 shadow-sm p-6 space-y-4">
-                <h2 className="text-lg font-display font-bold text-honeywell-navy border-b border-slate-200 pb-3">
-                  Manufacturing Facility
+              {/* Factory location — rounded-sm to match design system */}
+              <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 transition-all duration-350 ease-premium hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red hover:shadow-float">
+                <h2 className="text-base font-display font-bold text-honeywell-navy mb-5 pb-3 border-b border-slate-100">
+                  Our Factory
                 </h2>
-
-                <address
-                  className="not-italic"
-                  itemScope
-                  itemType="https://schema.org/PostalAddress"
-                >
+                <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <IconBox icon={<MapPin className="w-4 h-4" />} variant="primary" size="sm" className="shrink-0 mt-0.5" />
-                    <div className="text-sm font-body text-brand-darkSlate leading-relaxed">
-                      <strong className="text-honeywell-navy">{NAP.name}</strong><br />
-                      <span itemProp="streetAddress">B-18, Suryam Plaza Estate,<br />Near Nilkanth Estate, Road no. 15,<br />Kathwada GIDC,</span><br />
+                    <div className="w-10 h-10 rounded-xl bg-honeywell-red/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <MapPin className="w-4 h-4 text-honeywell-red" aria-hidden="true" />
+                    </div>
+                    <address className="not-italic text-sm font-body text-brand-steelGray leading-relaxed" itemScope itemType="https://schema.org/PostalAddress">
+                      <strong className="text-honeywell-navy block mb-0.5">{NAP.name}</strong>
+                      <span itemProp="streetAddress">B-18, Suryam Plaza Estate,<br />Near Nilkanth Estate, Road no. 15,<br />Kathwada GIDC,</span>{' '}
                       <span itemProp="addressLocality">Ahmedabad</span>,{' '}
                       <span itemProp="addressRegion">Gujarat</span>{' '}
                       <span itemProp="postalCode">382430</span>,{' '}
                       <span itemProp="addressCountry">India</span>
-                    </div>
+                    </address>
                   </div>
-                </address>
 
-                <div className="flex items-start gap-3">
-                  <IconBox icon={<Clock className="w-4 h-4" />} variant="secondary" size="sm" className="shrink-0 mt-0.5" />
-                  <div className="text-sm font-body text-brand-darkSlate leading-relaxed">
-                    <strong className="text-honeywell-navy">Business Hours</strong><br />
-                    {NAP.hours}
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0 mt-0.5">
+                      <Clock className="w-4 h-4 text-slate-500" aria-hidden="true" />
+                    </div>
+                    <div className="text-sm font-body text-brand-steelGray leading-relaxed">
+                      <strong className="text-honeywell-navy block mb-0.5">Business Hours</strong>
+                      {NAP.hours}<br />
+                      <span className="text-xs text-slate-400">{NAP.hoursClosed}</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Google Maps Section */}
-              <div className="bg-white rounded-sm border border-slate-200 shadow-sm overflow-hidden">
-                <h2 className="text-lg font-display font-bold text-honeywell-navy px-6 pt-6 pb-3 border-b border-slate-200">
-                  Our Location
-                </h2>
-                <div className="relative w-full" style={{ height: '250px' }}>
+              {/* Google Maps — rounded-sm to match design system */}
+              <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-350 ease-premium hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red hover:shadow-float">
+                <div className="px-5 pt-5 pb-3 border-b border-slate-100">
+                  <h2 className="text-base font-display font-bold text-honeywell-navy">Find Us on Map</h2>
+                </div>
+                <div className="relative w-full" style={{ height: '220px' }}>
                   <iframe
-                    src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.0!2d${NAP.geo.longitude}!3d${NAP.geo.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKathwada+GIDC!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin`}
+                    src={`https://maps.google.com/maps?q=Honeywell+Hydraulics,+Ahmedabad,+Gujarat&t=&z=15&ie=UTF8&iwloc=&output=embed`}
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -396,7 +405,7 @@ export default function ContactUsPage() {
                     className="absolute inset-0"
                   />
                 </div>
-                <div className="px-6 py-3 bg-brand-surfaceGray">
+                <div className="px-5 py-3">
                   <a
                     href={COMPANY_INFO.googleMapsUrl}
                     target="_blank"
@@ -410,144 +419,74 @@ export default function ContactUsPage() {
               </div>
             </aside>
 
-            {/* Contact Form Panel */}
-            <div className="bg-white rounded-sm border border-slate-200 shadow-sm p-6 sm:p-10">
-              <Heading as="h2" variant="subsection" className="mb-2">
-                General Inquiry Form
-              </Heading>
-              <p className="text-sm text-brand-steelGray font-body mb-8">
-                Fields marked <span className="text-honeywell-red font-bold">*</span> are required.
-                For urgent breakdown support, call{' '}
-                <a href={NAP.phoneHref} className="text-honeywell-red font-semibold hover:underline underline-offset-4">
-                  {NAP.phone}
-                </a>{' '}
-                directly.
-              </p>
-              <ContactForm />
+            {/* Contact Form Panel — rounded-sm to match design system */}
+            <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all duration-350 ease-premium hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red hover:shadow-float">
+              <div className="px-6 sm:px-10 pt-8 pb-6 border-b border-slate-100">
+                <Heading as="h2" variant="subsection" className="mb-2">
+                  Send Us a Message
+                </Heading>
+                <p className="text-sm text-brand-steelGray font-body">
+                  Not sure what to say? Just tell us what you need — our team will take it from there. For urgent needs, call{' '}
+                  <a href={NAP.phoneHref} className="text-honeywell-red font-semibold hover:underline underline-offset-4">
+                    {NAP.phone}
+                  </a>.
+                </p>
+              </div>
+              <div className="px-6 sm:px-10 py-8">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </Container>
       </Section>
 
-      {/* ── Section 3: Why Contact Honeywell ─────────────────────────────── */}
+      {/* ── Service Areas — rounded-sm to match design system ── */}
       <Section bg="white">
         <Container>
           <div className="text-center mb-12">
             <Heading as="h2" variant="section" className="mb-4">
-              Why Contact Honeywell Hydraulics?
+              We Serve All of Gujarat &amp; Across India
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
-              Every inquiry is handled by a qualified fluid power engineer — not a generic call centre agent.
+              Our hydraulic products are delivered from our Ahmedabad factory to manufacturing plants across Gujarat and all major Indian cities.
             </p>
           </div>
 
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
-            {WHY_CONTACT.map((item) => (
-              <li
-                key={item.title}
-                className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6 hover:border-honeywell-red transition-colors"
-              >
-                <IconBox icon={item.icon} variant="primary" className="mb-4" />
-                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">{item.title}</h3>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed">{item.body}</p>
-              </li>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {homepageLocations.map((loc, index) => (
+              <div key={`${loc.city}-${index}`}>
+                <LocationCard
+                  city={loc.city}
+                  description={loc.description}
+                  industries={loc.industries}
+                  href={loc.href}
+                  ctaText={loc.ctaText}
+                />
+              </div>
             ))}
-          </ul>
-        </Container>
-      </Section>
-
-      {/* ── Section 4: Service Areas ─────────────────────────────────────── */}
-      <Section bg="gray">
-        <Container>
-          <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4">
-              Gujarat Service Areas
-            </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
-              We manufacture and deliver precision hydraulic equipment across Gujarat and pan-India from our Kathwada GIDC facility in Ahmedabad.
-            </p>
           </div>
-
-          <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" role="list">
-            {SERVICE_AREAS.map((area) => (
-              <li
-                key={area.city}
-                className="bg-white border border-slate-200 rounded-sm p-4 text-center hover:border-honeywell-red transition-colors"
-              >
-                <p className="font-display font-bold text-honeywell-navy mb-1">{area.city}</p>
-                <p className="text-xs text-[#94A3B8] font-body">{area.note}</p>
-              </li>
-            ))}
-          </ul>
         </Container>
       </Section>
 
-      {/* ── Lead Generation CTA ────────────────────────────────────────── */}
-      <section className="bg-honeywell-navy py-16 md:py-20 relative overflow-hidden">
+      {/* ── FAQ ─────────────────────────────────────────────────────────────── */}
+      <SiteFAQSection faqs={CONTACT_FAQS} />
+
+      {/* ── Final CTA Banner — rounded-full buttons ── */}
+      <section className="bg-honeywell-navy py-14 relative overflow-hidden" aria-label="Final contact strip">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 w-1/3 h-full bg-honeywell-red opacity-[0.03] skew-x-12 -translate-x-1/4" aria-hidden="true" />
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-honeywell-red/40 to-transparent" aria-hidden="true" />
-        <Container className="relative z-10 text-center">
-          <Heading variant="section" className="text-white mb-4">
-            Need a Custom Hydraulic Solution?
-          </Heading>
-          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-4 text-lg leading-relaxed">
-            We design and manufacture precision hydraulic equipment tailored to your exact specifications.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-sm font-body">Hydraulic Cylinders</span>
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-sm font-body">Hydraulic Power Packs</span>
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-sm font-body">Hydraulic Accessories</span>
-          </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button
-              href="/products/"
-              variant="primary"
-              size="lg"
-              rightIcon={<ArrowRight className="w-5 h-5" />}
-            >
-              View Products
-            </Button>
-            <a
-              href={NAP.phoneHref}
-              className="inline-flex items-center gap-2 bg-transparent border border-white text-white hover:bg-white hover:text-honeywell-navy font-semibold font-body text-sm px-6 py-3 rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
-            >
-              <Phone className="w-4 h-4" aria-hidden="true" />
-              Talk to an Engineer
-            </a>
-          </div>
-        </Container>
-      </section>
-
-      {/* ── Section 5: FAQ ────────────────────────────────────────────────── */}
-      <Section bg="white">
-        <Container>
-          <div className="max-w-3xl mx-auto">
-            <Heading as="h2" variant="section" className="mb-4 text-center">
-              Frequently Asked Questions
-            </Heading>
-            <p className="text-brand-steelGray font-body text-center mb-10">
-              Common questions about reaching us, our facility, hours, and the inquiry process.
-            </p>
-            <FAQAccordion faqs={CONTACT_FAQS} />
-          </div>
-        </Container>
-      </Section>
-
-      {/* ── Contact Strip ─────────────────────────────────────────────────── */}
-      <section className="bg-honeywell-navy py-12" aria-label="Final contact strip">
-        <Container>
+        <Container className="relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-white text-center md:text-left">
               <p className="text-xl font-display font-bold mb-1">Ready to discuss your project?</p>
-              <p className="text-brand-borderGray font-body text-sm">
-                Reach us by phone, WhatsApp, or email — our team responds to every inquiry.
+              <p className="text-[#CBD5E1] font-body text-sm max-w-md">
+                Our engineers are happy to help — whether you have a full specification or just a rough idea.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
               <a
                 href={NAP.phoneHref}
-                className="inline-flex items-center gap-2 bg-honeywell-red hover:bg-red-700 text-white font-semibold font-body text-sm px-6 py-3 rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2"
+                className="inline-flex items-center gap-2 bg-honeywell-red hover:bg-red-700 text-white font-semibold font-body text-sm px-6 py-3 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-honeywell-red/30"
               >
                 <Phone className="w-4 h-4" aria-hidden="true" />
                 Call {NAP.phone}
@@ -556,11 +495,19 @@ export default function ContactUsPage() {
                 href={NAP.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-transparent border border-white text-white hover:bg-white hover:text-honeywell-navy font-semibold font-body text-sm px-6 py-3 rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
+                className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white hover:bg-white hover:text-honeywell-navy font-semibold font-body text-sm px-6 py-3 rounded-full transition-all duration-200"
               >
                 <MessageCircle className="w-4 h-4" aria-hidden="true" />
                 WhatsApp Us
               </a>
+              <Button
+                href="/request-quote"
+                variant="secondary"
+                size="md"
+                rightIcon={<ArrowRight className="w-4 h-4" />}
+              >
+                Get a Quote
+              </Button>
             </div>
           </div>
         </Container>

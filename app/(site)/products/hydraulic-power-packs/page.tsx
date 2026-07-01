@@ -19,9 +19,9 @@ import { PowerPackFAQs } from '@/components/products/hydraulic-power-packs/Power
    SEO METADATA
    ═══════════════════════════════════════════════ */
 
-const PAGE_TITLE = 'Hydraulic Power Pack Manufacturer in Gujarat, India | Honeywell';
-const PAGE_DESCRIPTION = 'Leading hydraulic power pack manufacturer in Ahmedabad, Gujarat. Custom industrial hydraulic power packs and units. ISO certified engineering and manufacturing.';
-const PAGE_URL = '/products/hydraulic-power-packs/';
+const PAGE_TITLE = 'Hydraulic Power Pack Manufacturer in India | Honeywell';
+const PAGE_DESCRIPTION = 'Leading hydraulic power pack manufacturer in Ahmedabad. Custom industrial hydraulic power packs and units. ISO certified engineering and manufacturing.';
+const PAGE_URL = '/products/hydraulic-power-packs';
 const PAGE_IMAGE = '/images/products/hydraulic-power-packs/hydraulic-power-pack-manufacturer.webp';
 
 export const metadata: Metadata = {
@@ -185,10 +185,10 @@ export default function HydraulicPowerPacksHubPage() {
 
       {/* 10 — CTA Section */}
       <CTA 
-        title="Request a Custom Quote Today"
-        description="Don't compromise the efficiency of your machinery with an undersized or overheating power pack."
-        primaryCtaText="CONTACT US"
-        primaryCtaHref="/contact-us/"
+        title="Ready to Discuss Your Power Unit Needs?"
+        description="Connect with our engineering team today. Provide your system requirements, and we'll design a customized power pack optimized for your application."
+        primaryCtaText="REQUEST QUOTE"
+        primaryCtaHref="/request-quote"
         secondaryCtaText="Call Now"
         secondaryCtaHref="tel:+919924343873"
       />

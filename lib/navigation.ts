@@ -29,9 +29,9 @@ export const MAIN_NAVIGATION: NavigationItem[] = [
     label: 'Industries',
     href: '/industries',
     children: [
-      { label: 'Injection Moulding', href: '/industries/injection-moulding' },
-      { label: 'Automotive', href: '/industries/automotive' },
-      { label: 'Steel & Metallurgy', href: '/industries/steel-metallurgy' },
+      { label: 'Injection Moulding', href: '#' },
+      { label: 'Automotive', href: '#' },
+      { label: 'Steel & Metallurgy', href: '#' },
     ]
   },
   {

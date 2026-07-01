@@ -69,7 +69,7 @@ export function MobileConversionBar() {
 
         {/* Request Quote */}
         <a
-          href="/request-quote/"
+          href="/request-quote"
           className="
             flex flex-col items-center justify-center gap-1
             py-3 min-h-[56px]

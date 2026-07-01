@@ -29,29 +29,29 @@ export function SpecTable({ title, rows, className = '' }: SpecTableProps) {
           </h3>
         </div>
       )}
-      
+
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="border-b border-slate-200 bg-brand-surfaceGray">
-              <th scope="col" className="px-6 py-4 text-sm font-semibold text-honeywell-navy uppercase tracking-wider font-body w-1/3">
+              <th scope="col" className="px-6 py-4 text-sm font-semibold text-honeywell-navy uppercase tracking-wider font-body w-1/3 text-justify">
                 Parameter
               </th>
-              <th scope="col" className="px-6 py-4 text-sm font-semibold text-honeywell-navy uppercase tracking-wider font-body">
+              <th scope="col" className="px-6 py-4 text-sm font-semibold text-honeywell-navy uppercase tracking-wider font-body text-justify">
                 Value
               </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-200">
             {rows.map((row, index) => (
-              <tr 
-                key={index} 
+              <tr
+                key={index}
                 className="hover:bg-brand-surfaceGray/50 transition-colors"
               >
-                <td className="px-6 py-4 text-sm font-semibold text-brand-darkSlate font-body">
+                <td className="px-6 py-4 text-sm font-semibold text-brand-darkSlate font-body text-justify">
                   {row.parameter}
                 </td>
-                <td className="px-6 py-4 text-sm text-honeywell-navy font-mono tracking-tight">
+                <td className="px-6 py-4 text-sm text-honeywell-navy font-mono tracking-tight text-justify">
                   {row.value}
                 </td>
               </tr>

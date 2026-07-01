@@ -19,16 +19,16 @@ import { CylinderFAQs } from '@/components/products/hydraulic-cylinders/Cylinder
    SEO METADATA
    ═══════════════════════════════════════════════ */
 
-const PAGE_TITLE = 'Custom Industrial Hydraulic Cylinders Manufacturer in India | Honeywell';
-const PAGE_DESCRIPTION = 'Leading custom industrial hydraulic cylinders manufacturer in India. Engineering high-pressure cylinders from 40-300mm bore. Factory-direct pricing and 7-15 day delivery.';
-const PAGE_URL = '/products/hydraulic-cylinders/';
+const PAGE_TITLE = 'Hydraulic Cylinder Manufacturer India | Honeywell';
+const PAGE_DESCRIPTION = 'Custom industrial hydraulic cylinders manufacturer in India. We engineer high-pressure cylinders (40-300mm bore) with factory-direct pricing & fast delivery.';
+const PAGE_URL = '/products/hydraulic-cylinders';
 const PAGE_IMAGE = '/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    
+
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 function buildPageSchema() {
   const siteUrl = COMPANY_INFO.websiteUrl;
-  
+
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -176,11 +176,11 @@ export default function HydraulicCylindersHubPage() {
       <CylinderFAQs />
 
       {/* 10 — CTA Section */}
-      <CTA 
+      <CTA
         title="Request a Custom Quote Today"
         description="Don't compromise the efficiency of your machinery with subpar hydraulic components."
-        primaryCtaText="CONTACT US"
-        primaryCtaHref="/contact-us/"
+        primaryCtaText="REQUEST QUOTE"
+        primaryCtaHref="/request-quote"
         secondaryCtaText="Call Now"
         secondaryCtaHref="tel:+919924343873"
       />

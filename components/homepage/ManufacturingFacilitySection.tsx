@@ -11,7 +11,6 @@ import {
   ShieldCheck,
   Gauge,
   Users,
-  Factory,
 } from 'lucide-react';
 import { manufacturingHighlights } from '@/data/homepage';
 
@@ -76,11 +75,10 @@ export function ManufacturingFacilitySection() {
 
           {/* ─── Right Column — Manufacturing Capabilities ─── */}
           <div className="order-1 lg:order-2">
-            <Heading variant="section" as="h2" id="facility-heading" className="text-honeywell-navy mb-4">
+            <Heading variant="section" underline="left" as="h2" id="facility-heading" className="text-honeywell-navy mb-4">
               Our Manufacturing Facility
             </Heading>
-            <div className="w-16 h-1 bg-honeywell-red rounded-full mb-6 sm:mb-8" aria-hidden="true"></div>
-            <p className="text-brand-steelGray font-body text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xl">
+            <p className="text-brand-steelGray font-body text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xl text-justify">
               Every hydraulic cylinder and power pack is engineered and manufactured
               in-house at our Kathwada facility. Factory-direct production ensures
               quality control at every stage — from raw material to final dispatch.
@@ -96,10 +94,10 @@ export function ManufacturingFacilitySection() {
                     </span>
                   </div>
                   <div>
-                    <Heading variant="card" as="h3" className="mb-0.5">
+                    <Heading variant="card" as="h3" className="mb-0.5 text-justify">
                       {highlight.title}
                     </Heading>
-                    <p className="text-brand-steelGray font-body text-sm leading-relaxed">
+                    <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
                       {highlight.description}
                     </p>
                   </div>
@@ -109,7 +107,7 @@ export function ManufacturingFacilitySection() {
 
             {/* CTA */}
             <Button
-              href="/manufacturing-facility/"
+              href="/manufacturing-facility"
               variant="outline"
               size="lg"
               rightIcon={<ArrowRight className="w-5 h-5" />}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/Card';
 import { IconBox } from '@/components/ui/IconBox';
+import { Heading } from '@/components/ui/Heading';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export interface IndustryCardProps {
@@ -24,7 +26,7 @@ export function IndustryCard({
   ctaText = 'Explore Industry Solutions',
 }: IndustryCardProps) {
   return (
-    <Card variant="interactive" className="flex flex-col h-full group relative overflow-hidden">
+    <Card variant="interactive" className="flex flex-col h-full group relative overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-premium">
       {/* Subtle gradient overlay on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-honeywell-navy/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true" />
       
@@ -36,14 +38,14 @@ export function IndustryCard({
           className="mb-6 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-350 ease-premium"
         />
         
-        <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">
-          <a href={href} className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:rounded-sm">
+        <Heading variant="card" as="h3" className="mb-3">
+          <Link href={href} className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:rounded-sm">
             <span className="absolute inset-0" aria-hidden="true" />
             {industryName}
-          </a>
-        </h3>
+          </Link>
+        </Heading>
         
-        <p className="text-brand-steelGray font-body text-sm mb-8 line-clamp-3 flex-1">
+        <p className="text-brand-steelGray font-body text-sm mb-8 line-clamp-3 flex-1 text-justify">
           {description}
         </p>
 

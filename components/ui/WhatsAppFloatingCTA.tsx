@@ -7,13 +7,13 @@ interface WhatsAppFloatingCTAProps {
   href: string;
 }
 
-export function WhatsAppFloatingCTA({ href }: WhatsAppFloatingCTAProps) {
+export function WhatsAppFloatingCTA({}: WhatsAppFloatingCTAProps) {
 
   return (
     <div className="fixed bottom-8 left-8 z-50 flex flex-col items-start gap-3">
       {/* Request Quote Button */}
       <a
-        href="/request-quote/"
+        href="/request-quote"
         className="
           flex items-center gap-2 px-6 py-4 rounded-full
           bg-honeywell-red text-white font-bold text-[15px] tracking-wide

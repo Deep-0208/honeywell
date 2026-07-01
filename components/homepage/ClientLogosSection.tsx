@@ -22,10 +22,10 @@ export function ClientLogosSection() {
 
         {/* Layer 1 — Trust Headline */}
         <div className="text-center flex flex-col items-center">
-          <Heading variant="section" as="h2" id="trust-heading" className="text-honeywell-navy mb-4">
+          <Heading variant="section" underline="center" as="h2" id="trust-heading" className="text-honeywell-navy mb-4">
             Trusted by Manufacturers Across India
           </Heading>
-          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
+
         </div>
 
         {/* Layer 2 — Premium Logo Marquee */}

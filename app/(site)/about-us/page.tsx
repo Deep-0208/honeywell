@@ -1,19 +1,20 @@
 import React from 'react';
 import { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
 import { IconBox } from '@/components/ui/IconBox';
 import { Button } from '@/components/ui/Button';
-import { FAQAccordion } from '@/components/faq/FAQAccordion';
+import { CTA } from '@/components/ui/CTA';
+import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
 import JsonLd from '@/components/seo/JsonLd';
 import { COMPANY_INFO } from '@/lib/constants';
 import Image from 'next/image';
 import { clientLogos } from '@/data/homepage';
 import {
   ArrowRight,
-  Phone,
   Shield,
   Target,
   Eye,
@@ -36,28 +37,12 @@ import {
 // SEO Metadata
 // ─────────────────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'About Us | Hydraulic Cylinder & Power Pack Manufacturer Ahmedabad',
-  description:
-    'Learn about Honeywell Hydraulics — a leading hydraulic cylinder and power pack manufacturer in Ahmedabad, Gujarat. ISO-compliant manufacturing since 2018. Visit our facility.',
-  alternates: {
+  ...buildMetadata({
+    title: 'About Us | Hydraulic Manufacturer Ahmedabad',
+    description: 'Learn about Honeywell Hydraulics — a leading hydraulic cylinder and power pack manufacturer in Ahmedabad, Gujarat. ISO-compliant manufacturing since 2018.',
     canonical: '/about-us',
-  },
+  }),
   keywords: 'about honeywell hydraulics, hydraulic manufacturer ahmedabad, hydraulic cylinder manufacturer gujarat, about us hydraulic company, hydraulic power pack manufacturer',
-  openGraph: {
-    title: 'About Honeywell Hydraulics | Hydraulic Manufacturer Since 2018',
-    description:
-      'Precision hydraulic cylinder and power pack manufacturer in Ahmedabad, Gujarat. Engineering-led manufacturing with 100% pressure testing.',
-    url: '/about-us',
-    siteName: COMPANY_INFO.name,
-    locale: 'en_IN',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'About Honeywell Hydraulics | Hydraulic Manufacturer Since 2018',
-    description:
-      'Precision hydraulic cylinder and power pack manufacturer in Ahmedabad, Gujarat. Engineering-led manufacturing with 100% pressure testing.',
-  },
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -70,6 +55,17 @@ const breadcrumbSchema = {
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${COMPANY_INFO.websiteUrl}/` },
     { '@type': 'ListItem', position: 2, name: 'About Us', item: `${COMPANY_INFO.websiteUrl}/about-us` },
   ],
+};
+
+const aboutPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  url: `${COMPANY_INFO.websiteUrl}/about-us`,
+  name: 'About Honeywell Hydraulics',
+  description: 'Precision hydraulic cylinder and power pack manufacturer in Ahmedabad, Gujarat. Engineering-led manufacturing with 100% pressure testing.',
+  mainEntity: {
+    '@id': `${COMPANY_INFO.websiteUrl}/#organization`
+  }
 };
 
 const organizationSchema = {
@@ -177,14 +173,14 @@ const WHY_CHOOSE = [
 ];
 
 const INDUSTRIES = [
-  { name: 'Injection Moulding', href: '/industries/injection-moulding/' },
-  { name: 'Automotive', href: '/industries/automotive/' },
-  { name: 'Steel & Metallurgy', href: '/industries/steel-metallurgy/' },
-  { name: 'Construction Equipment', href: '/industries/construction-equipment/' },
-  { name: 'Agriculture', href: '/industries/agriculture/' },
-  { name: 'Material Handling', href: '/industries/material-handling/' },
-  { name: 'Plastic Processing', href: '/industries/plastic-processing/' },
-  { name: 'Special Purpose Machines', href: '/industries/special-purpose-machines/' },
+  { name: 'Injection Moulding', href: '#' },
+  { name: 'Automotive', href: '#' },
+  { name: 'Steel & Metallurgy', href: '#' },
+  { name: 'Construction Equipment', href: '#' },
+  { name: 'Agriculture', href: '#' },
+  { name: 'Material Handling', href: '#' },
+  { name: 'Plastic Processing', href: '#' },
+  { name: 'Special Purpose Machines', href: '#' },
 ];
 
 const PRODUCTS = [
@@ -200,7 +196,7 @@ const PRODUCTS = [
   },
   {
     name: 'Hydraulic Accessories',
-    href: '/products/hydraulic-accessories/',
+    href: '#',
     desc: 'Complete range of hydraulic valves, fittings, hoses, and components to support your hydraulic system requirements.',
   },
 ];
@@ -269,6 +265,7 @@ export default function AboutUsPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={aboutPageSchema} />
       <JsonLd data={organizationSchema} />
       <JsonLd data={webPageSchema} />
       <JsonLd data={faqSchema} />
@@ -276,7 +273,7 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 1: HERO
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="bg-honeywell-navy text-white pt-8 md:pt-12 pb-12 md:pb-16 relative overflow-hidden">
+      <section className="bg-honeywell-navy text-white pt-6 md:pt-8 pb-12 md:pb-16 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
         <Container className="relative z-10">
           <nav aria-label="Breadcrumb" className="text-sm font-body text-brand-borderGray mb-6">
@@ -303,11 +300,11 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 2: COMPANY OVERVIEW
           ═══════════════════════════════════════════════════════════════════ */}
-      <Section bg="white">
+      <Section bg="white" aria-labelledby="overview-heading">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Heading as="h2" variant="section" className="mb-6 text-honeywell-red">
+              <Heading as="h2" variant="section" id="overview-heading" className="mb-3 text-honeywell-red">
                 Precision Engineering, Proven Performance
               </Heading>
               <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
@@ -320,16 +317,22 @@ export default function AboutUsPage() {
                 Our engineering team applies rigorous fluid power physics to every project — calculating forces, flows, velocities, and thermal outputs before manufacturing a single component. This discipline is what separates engineered hydraulic solutions from catalogue-copied ones.
               </p>
             </div>
-            <div className="bg-honeywell-red text-white rounded-sm p-8">
+            <div className="aspect-[4/3] relative rounded-xl shadow-md overflow-hidden bg-brand-surfaceGray group">
               {/* IMAGE REQUIREMENT: /images/about/about-us-hero.webp
                   Alt: Honeywell Hydraulics manufacturing facility — precision hydraulic production in Ahmedabad
                   Priority: High */}
-              <div className="aspect-[4/3] bg-black/10 rounded-sm flex items-center justify-center">
-                <div className="text-center px-6">
-                  <Factory className="w-12 h-12 text-white/80 mx-auto mb-3" aria-hidden="true" />
-                  <p className="text-sm font-semibold text-white font-body">Manufacturing Facility</p>
-                  <p className="text-xs text-white/80 font-body">Ahmedabad</p>
-                </div>
+              <Image
+                src="/images/facility/cnc-machining-center-hydraulic-cylinder.webp"
+                alt="Honeywell Hydraulics manufacturing facility — precision hydraulic production in Ahmedabad"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-premium"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              
+              {/* Floating Banner */}
+              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-md p-4 shadow-lg border border-slate-100 z-10">
+                <p className="text-[10px] sm:text-xs font-bold text-honeywell-red uppercase tracking-widest mb-1 font-body">Manufacturing Headquarters</p>
+                <p className="text-sm sm:text-base font-display font-bold text-honeywell-navy">Kathwada GIDC, Ahmedabad, Gujarat</p>
               </div>
             </div>
           </div>
@@ -339,10 +342,10 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 3: OUR STORY
           ═══════════════════════════════════════════════════════════════════ */}
-      <Section bg="gray">
+      <Section bg="gray" aria-labelledby="story-heading">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
-            <Heading as="h2" variant="section" className="mb-6 text-honeywell-red">
+            <Heading as="h2" variant="section" id="story-heading" className="mb-3 text-honeywell-red">
               Our Story
             </Heading>
             <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
@@ -371,7 +374,7 @@ export default function AboutUsPage() {
                 <div className="w-12 h-12 rounded-full bg-honeywell-red flex items-center justify-center mb-5">
                   <Target className="w-6 h-6 text-white" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-display font-bold text-white mb-4">Our Mission</h3>
+                <Heading as="h3" variant="card" className="text-white mb-4">Our Mission</Heading>
                 <p className="text-brand-borderGray font-body leading-relaxed">
                   To deliver zero-defect hydraulic components and systems that perform to their rated specification throughout their design service life — consistently, verifiably, and without exception. We achieve this through physics-based engineering, traceable raw materials, and 100% hydrostatic pressure testing.
                 </p>
@@ -383,7 +386,7 @@ export default function AboutUsPage() {
               <div className="w-12 h-12 rounded-full bg-honeywell-navy flex items-center justify-center mb-5">
                 <Eye className="w-6 h-6 text-white" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-display font-bold text-honeywell-navy mb-4">Our Vision</h3>
+              <Heading as="h3" variant="card" className="text-honeywell-navy mb-4">Our Vision</Heading>
               <p className="text-brand-darkSlate font-body leading-relaxed">
                 To be recognised as India&apos;s most trusted hydraulic equipment manufacturer — the first call for OEMs, SPM builders, and maintenance engineers who need reliable, correctly specified, and fully documented hydraulic solutions for critical industrial applications.
               </p>
@@ -395,10 +398,10 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 6: CORE VALUES
           ═══════════════════════════════════════════════════════════════════ */}
-      <Section bg="gray">
+      <Section bg="gray" aria-labelledby="values-heading">
         <Container>
-          <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4 text-honeywell-red">
+          <div className="text-center mb-12 flex flex-col items-center">
+            <Heading as="h2" variant="section" id="values-heading" className="mb-3 text-honeywell-red">
               Core Values
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -409,10 +412,10 @@ export default function AboutUsPage() {
             {CORE_VALUES.map((value) => (
               <li
                 key={value.title}
-                className="bg-white border border-slate-200 rounded-sm p-6 hover:border-honeywell-red transition-colors"
+                className="bg-white border border-slate-200 rounded-sm p-6 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
               >
-                <IconBox icon={value.icon} variant="primary" className="mb-4" />
-                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">{value.title}</h3>
+                <IconBox icon={value.icon} variant="primary" className="mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <Heading as="h3" variant="card" className="mb-2">{value.title}</Heading>
                 <p className="text-sm text-brand-steelGray font-body leading-relaxed">{value.body}</p>
               </li>
             ))}
@@ -423,10 +426,10 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 7: WHY CHOOSE HONEYWELL HYDRAULICS
           ═══════════════════════════════════════════════════════════════════ */}
-      <Section bg="white">
+      <Section bg="white" aria-labelledby="why-heading">
         <Container>
-          <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4 text-honeywell-red">
+          <div className="text-center mb-12 flex flex-col items-center">
+            <Heading as="h2" variant="section" id="why-heading" className="mb-3 text-honeywell-red">
               Why Choose Honeywell Hydraulics
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -437,12 +440,12 @@ export default function AboutUsPage() {
             {WHY_CHOOSE.map((item) => (
               <li
                 key={item.title}
-                className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6 hover:border-honeywell-red hover:shadow-md transition-all duration-200"
+                className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
               >
-                <div className="w-14 h-14 rounded-full bg-honeywell-navy flex items-center justify-center mb-5 text-white">
+                <div className="w-14 h-14 rounded-full bg-honeywell-navy flex items-center justify-center mb-5 text-white group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
-                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">{item.title}</h3>
+                <Heading as="h3" variant="card" className="mb-2">{item.title}</Heading>
                 <p className="text-sm text-brand-steelGray font-body leading-relaxed">{item.body}</p>
               </li>
             ))}
@@ -453,10 +456,10 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 8: INDUSTRIES WE SERVE
           ═══════════════════════════════════════════════════════════════════ */}
-      <Section bg="gray">
+      <Section bg="gray" aria-labelledby="industries-heading">
         <Container>
-          <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4 text-honeywell-red">
+          <div className="text-center mb-12 flex flex-col items-center">
+            <Heading as="h2" variant="section" id="industries-heading" className="mb-3 text-honeywell-red">
               Industries We Serve
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -468,7 +471,7 @@ export default function AboutUsPage() {
               <li key={industry.name}>
                 <Link
                   href={industry.href}
-                  className="block bg-white border border-slate-200 rounded-sm p-5 text-center hover:border-honeywell-red hover:shadow-md transition-all duration-200 group"
+                  className="block bg-white border border-slate-200 rounded-sm p-5 text-center transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
                 >
                   <p className="font-display font-bold text-honeywell-navy group-hover:text-honeywell-red transition-colors">{industry.name}</p>
                   <ChevronRight className="w-4 h-4 text-[#94A3B8] mx-auto mt-2 group-hover:text-honeywell-red transition-colors" aria-hidden="true" />
@@ -482,10 +485,10 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 9: OUR PRODUCTS
           ═══════════════════════════════════════════════════════════════════ */}
-      <Section bg="white">
+      <Section bg="white" aria-labelledby="products-heading">
         <Container>
-          <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4 text-honeywell-red">
+          <div className="text-center mb-12 flex flex-col items-center">
+            <Heading as="h2" variant="section" id="products-heading" className="mb-3 text-honeywell-red">
               Our Products
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -497,9 +500,9 @@ export default function AboutUsPage() {
               <Link
                 key={product.name}
                 href={product.href}
-                className="block bg-brand-surfaceGray border border-slate-200 rounded-sm p-6 hover:border-honeywell-red hover:shadow-md transition-all duration-200 group"
+                className="block bg-brand-surfaceGray border border-slate-200 rounded-sm p-6 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
               >
-                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">{product.name}</h3>
+                <Heading as="h3" variant="card" className="mb-3 group-hover:text-honeywell-red transition-colors">{product.name}</Heading>
                 <p className="text-sm text-brand-steelGray font-body leading-relaxed mb-4">{product.desc}</p>
                 <span className="inline-flex items-center gap-1 text-sm font-semibold text-honeywell-red font-body">
                   View Products <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
@@ -513,11 +516,11 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 10: MANUFACTURING CAPABILITIES
           ═══════════════════════════════════════════════════════════════════ */}
-      <Section bg="gray">
+      <Section bg="gray" aria-labelledby="capabilities-heading">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Heading as="h2" variant="section" className="mb-6 text-honeywell-red">
+              <Heading as="h2" variant="section" id="capabilities-heading" className="mb-3 text-honeywell-red">
                 Manufacturing Capabilities
               </Heading>
               <p className="text-brand-darkSlate font-body leading-relaxed mb-6">
@@ -544,12 +547,14 @@ export default function AboutUsPage() {
               {/* IMAGE REQUIREMENT: /images/about/manufacturing-capabilities.webp
                   Alt: CNC machining centre at Honeywell Hydraulics manufacturing facility Ahmedabad
                   Priority: Medium */}
-              <div className="aspect-[4/3] bg-brand-surfaceGray rounded-sm flex items-center justify-center">
-                <div className="text-center px-6">
-                  <Cog className="w-12 h-12 text-[#94A3B8] mx-auto mb-3" aria-hidden="true" />
-                  <p className="text-sm font-semibold text-brand-darkSlate font-body">CNC Machining Centre</p>
-                  <p className="text-xs text-[#94A3B8] font-body">Precision hydraulic component manufacturing</p>
-                </div>
+              <div className="aspect-[4/3] relative rounded-sm overflow-hidden bg-brand-surfaceGray">
+                <Image
+                  src="/images/facility/cnc-machining-center-hydraulic-cylinder.webp"
+                  alt="CNC machining centre at Honeywell Hydraulics manufacturing facility Ahmedabad"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
@@ -559,10 +564,10 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 11: TEAM / EXPERTISE
           ═══════════════════════════════════════════════════════════════════ */}
-      <Section bg="white">
+      <Section bg="white" aria-labelledby="team-heading">
         <Container>
-          <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4 text-honeywell-red">
+          <div className="text-center mb-12 flex flex-col items-center">
+            <Heading as="h2" variant="section" id="team-heading" className="mb-3 text-honeywell-red">
               Our Engineering Team
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -572,21 +577,21 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6">
               <Users className="w-8 h-8 text-honeywell-navy mb-4" aria-hidden="true" />
-              <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">Qualified Engineers</h3>
+              <Heading as="h3" variant="card" className="mb-2">Qualified Engineers</Heading>
               <p className="text-sm text-brand-steelGray font-body leading-relaxed">
                 Our engineering team holds B.Tech qualifications in Mechanical Engineering with specialisation in fluid power systems and hydraulic design.
               </p>
             </div>
             <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6">
               <Wrench className="w-8 h-8 text-honeywell-navy mb-4" aria-hidden="true" />
-              <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">Skilled Machinists</h3>
+              <Heading as="h3" variant="card" className="mb-2">Skilled Machinists</Heading>
               <p className="text-sm text-brand-steelGray font-body leading-relaxed">
                 Experienced CNC machine operators handle precision turning, boring, honing, and welding operations with documented competency certifications.
               </p>
             </div>
             <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6">
               <FlaskConical className="w-8 h-8 text-honeywell-navy mb-4" aria-hidden="true" />
-              <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">Quality Inspectors</h3>
+              <Heading as="h3" variant="card" className="mb-2">Quality Inspectors</Heading>
               <p className="text-sm text-brand-steelGray font-body leading-relaxed">
                 Dedicated quality team performs incoming material inspection, in-process checks, and final hydrostatic pressure testing on every component.
               </p>
@@ -598,13 +603,13 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 12: QUALITY COMMITMENT
           ═══════════════════════════════════════════════════════════════════ */}
-      <Section bg="gray">
+      <Section bg="gray" aria-labelledby="quality-heading">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 bg-honeywell-navy text-white rounded-sm p-8 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
               <div className="relative z-10">
-                <h3 className="text-2xl font-display font-bold text-white mb-6">The Five Pillars of Quality</h3>
+                <Heading as="h3" variant="card" className="text-white mb-6">The Five Pillars of Quality</Heading>
                 <ul className="space-y-4">
                   {[
                     'Physics-based design — not catalogue copying',
@@ -629,7 +634,7 @@ export default function AboutUsPage() {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <Heading as="h2" variant="section" className="mb-6 text-honeywell-red">
+              <Heading as="h2" variant="section" id="quality-heading" className="mb-3 text-honeywell-red">
                 Quality Commitment
               </Heading>
               <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
@@ -649,15 +654,25 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 13: STATISTICS
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="bg-honeywell-navy py-12 md:py-16">
-        <Container>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <section className="bg-white py-16 sm:py-20 border-t border-b border-slate-200 relative overflow-hidden">
+        {/* Subtle grid background pattern */}
+        <div
+          className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-grid-pattern"
+          aria-hidden="true"
+        />
+        <Container className="relative z-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full max-w-7xl mx-auto">
             {STATS.map((stat) => (
-              <div key={stat.label}>
-                <p className="text-3xl md:text-4xl font-display font-extrabold text-white mb-1">
+              <div
+                key={stat.label}
+                className="flex flex-col items-center justify-center text-center p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="font-display text-[28px] sm:text-[36px] md:text-[40px] leading-tight font-bold text-honeywell-navy mb-1">
                   {stat.value}
+                </div>
+                <p className="text-[11px] sm:text-[12px] text-honeywell-red font-display font-bold uppercase tracking-[0.1em]">
+                  {stat.label}
                 </p>
-                <p className="text-sm text-[#94A3B8] font-body uppercase tracking-wider">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -667,10 +682,10 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 14: CLIENT TRUST
           ═══════════════════════════════════════════════════════════════════ */}
-      <Section bg="white">
+      <Section bg="white" aria-labelledby="trust-heading">
         <Container>
-          <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4 text-honeywell-red">
+          <div className="text-center mb-12 flex flex-col items-center">
+            <Heading as="h2" variant="section" id="trust-heading" className="mb-3 text-honeywell-red">
               Trusted by Industry Leaders
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -740,58 +755,19 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 15: LEAD GENERATION CTA
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="bg-honeywell-navy py-16 md:py-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 w-1/3 h-full bg-honeywell-red opacity-[0.03] skew-x-12 -translate-x-1/4" aria-hidden="true" />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-honeywell-red/40 to-transparent" aria-hidden="true" />
-        <Container className="relative z-10 text-center">
-          <Heading variant="section" className="text-white mb-4">
-            Need a Custom Hydraulic Solution?
-          </Heading>
-          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-4 text-lg leading-relaxed">
-            We design and manufacture precision hydraulic equipment tailored to your exact specifications.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-sm font-body">Hydraulic Cylinders</span>
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-sm font-body">Hydraulic Power Packs</span>
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-sm font-body">Hydraulic Accessories</span>
-          </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button
-              href="/contact-us"
-              variant="primary"
-              size="lg"
-              rightIcon={<ArrowRight className="w-5 h-5" />}
-            >
-              Contact Us
-            </Button>
-            <a
-              href="tel:+91-9924343873"
-              className="inline-flex items-center gap-2 bg-transparent border border-white text-white hover:bg-white hover:text-honeywell-navy font-semibold font-body text-sm px-6 py-3 rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
-            >
-              <Phone className="w-4 h-4" aria-hidden="true" />
-              Talk to an Engineer
-            </a>
-          </div>
-        </Container>
-      </section>
+      <CTA
+        title="Need a Custom Hydraulic Solution?"
+        description="We design and manufacture precision hydraulic cylinders, power packs, and accessories tailored to your exact specifications. Factory-direct pricing from Ahmedabad."
+        primaryCtaText="Request a Quote"
+        primaryCtaHref="/request-quote/"
+        secondaryCtaText="Call +91 99243 43873"
+        secondaryCtaHref="tel:+91-9924343873"
+      />
 
       {/* ═══════════════════════════════════════════════════════════════════
           FAQ SECTION
           ═══════════════════════════════════════════════════════════════════ */}
-      <Section bg="gray">
-        <Container>
-          <div className="max-w-3xl mx-auto">
-            <Heading as="h2" variant="section" className="mb-4 text-center text-honeywell-red">
-              Frequently Asked Questions
-            </Heading>
-            <p className="text-brand-steelGray font-body text-center mb-10">
-              Common questions about Honeywell Hydraulics, our capabilities, and how to work with us.
-            </p>
-            <FAQAccordion faqs={ABOUT_FAQS} />
-          </div>
-        </Container>
-      </Section>
+      <SiteFAQSection faqs={ABOUT_FAQS} />
     </>
   );
 }

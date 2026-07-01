@@ -24,11 +24,23 @@ const securityHeaders = [
   {
     key: 'Permissions-Policy',
     value: 'camera=(), geolocation=(), browsing-topics=()'
-  }
+  },
+  // HSTS — signals HTTPS trust to Google and browsers
+  {
+    key: 'Strict-Transport-Security',
+    value: 'max-age=63072000; includeSubDomains; preload'
+  },
+  // CSP — prevents XSS, clickjacking, and data injection attacks
+  {
+    key: 'Content-Security-Policy',
+    value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://vercel.live https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://*.elevenlabs.io wss://*.elevenlabs.io; frame-src 'self' https://www.google.com https://maps.google.com; media-src 'self' https://*.elevenlabs.io; object-src 'none'; base-uri 'self'; form-action 'self';"
+  },
 ];
 
 const nextConfig: NextConfig = {
   compress: true,
+  // Enforce trailing slash on all URLs for canonical consistency
+  trailingSlash: true,
   images: {
     formats: ['image/avif', 'image/webp'],
     qualities: [75, 85, 100],
@@ -49,7 +61,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/contact',
-        destination: '/contact-us',
+        destination: '/contact-us/',
         permanent: true,
       },
       {
@@ -59,7 +71,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/about',
-        destination: '/about-us',
+        destination: '/about-us/',
         permanent: true,
       },
       {
@@ -69,9 +81,12 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // TODO: Remove ignoreBuildErrors after fixing all TypeScript errors
+  // Keeping for now during dev phase to prevent build failures
   typescript: {
     ignoreBuildErrors: true,
   },
 };
 
 export default nextConfig;
+

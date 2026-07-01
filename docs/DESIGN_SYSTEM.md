@@ -310,7 +310,7 @@ Every section follows this standard template:
         className="text-honeywell-navy mb-4">
         Section Title
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
       <p className="text-brand-steelGray text-base sm:text-lg max-w-2xl mx-auto mt-4">
         Optional description.
       </p>

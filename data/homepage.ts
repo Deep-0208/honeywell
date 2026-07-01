@@ -214,7 +214,7 @@ export const homepageIndustries: HomepageIndustry[] = [
     description:
       'High-speed hydraulic cylinders and robust power packs for continuous plastic injection moulding operations.',
     iconName: 'Cog',
-    href: '/industries/injection-moulding/',
+    href: '#',
   },
   {
     industryName: 'Construction & Earthmoving',
@@ -235,7 +235,7 @@ export const homepageIndustries: HomepageIndustry[] = [
     description:
       'Judder-free hydraulic lifting power for warehouse automation, scissor lifts, dock levelers, and conveyors.',
     iconName: 'Package',
-    href: '/industries/material-handling/',
+    href: '#',
   },
   {
     industryName: 'Rolling Mill',
@@ -521,7 +521,7 @@ export const actionCards: ActionCard[] = [
     title: 'Download Product Catalog',
     description: 'Browse our complete range of cylinders and power packs.',
     iconName: 'Download',
-    href: '/resources/catalog/',
+    href: '#',
     ctaText: 'Download PDF',
   },
   {

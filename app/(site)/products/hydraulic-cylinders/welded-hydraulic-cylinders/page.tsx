@@ -12,13 +12,13 @@ import { Badge } from '@/components/ui/Badge';
 import { IconBox } from '@/components/ui/IconBox';
 import { CTA } from '@/components/ui/CTA';
 import { SpecTable } from '@/components/tables/SpecTable';
-import { FAQAccordion } from '@/components/faq/FAQAccordion';
+import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
 import { ProductCard } from '@/components/cards/ProductCard';
-import { LocationCard } from '@/components/cards/LocationCard';
+import { SiteLocationsSection } from '@/components/locations/SiteLocationsSection';
+import { IndustryCard } from '@/components/cards/IndustryCard';
+import { Heading } from '@/components/ui/Heading';
 import {
   ArrowRight,
-  Phone,
-  MessageCircle,
   ShieldAlert,
   Minimize2,
   CloudRain,
@@ -39,17 +39,17 @@ import {
    ═══════════════════════════════════════════════ */
 
 const PAGE_TITLE =
-  'Welded Hydraulic Cylinder Manufacturer in Gujarat | High Pressure Actuators';
+  'Welded Hydraulic Cylinder Manufacturer | Honeywell';
 const PAGE_DESCRIPTION =
-  'Leading welded hydraulic cylinder manufacturer in India. We supply heavy-duty, high-pressure welded cylinders for forging presses, construction, and marine environments.';
-const PAGE_URL = '/products/hydraulic-cylinders/welded-hydraulic-cylinders/';
-const PAGE_IMAGE = '/images/products/welded-hydraulic-cylinder-manufacturer.webp';
+  'Leading welded hydraulic cylinder manufacturer in India. Supplying heavy-duty, high-pressure welded cylinders for presses, construction, and marine.';
+const PAGE_URL = '/products/hydraulic-cylinders/welded-hydraulic-cylinders';
+const PAGE_IMAGE = '/images/products/welded-hydraulic-cylinder.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    
+
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),
@@ -259,12 +259,12 @@ export default function WeldedHydraulicCylindersPage() {
       <RelatedServices />
 
       {/* ─── 13 Local Service Areas ─── */}
-      <LocalServiceAreas />
+      <SiteLocationsSection
+        title="Direct Delivery Across Gujarat"
+        description="As a premier welded cylinder manufacturer in Gujarat, we provide direct engineering support and heavy-freight delivery to steel plants, forging hubs, and OEMs across the state."
+      />
 
-      {/* ─── 14 Resources ─── */}
-      <ResourcesSection />
-
-      {/* ─── 15 FAQs ─── */}
+      {/* ─── 14 FAQs ─── */}
       <FAQSection />
 
       {/* ─── 16 CTA Section ─── */}
@@ -288,61 +288,42 @@ export default function WeldedHydraulicCylindersPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200"
+      className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200"
       id="hero"
     >
-      <div
-        className="absolute top-0 right-0 w-1/2 h-full bg-brand-surfaceGray skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block"
-        aria-hidden="true"
-      />
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
+      <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red/5 skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block" />
+      <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
       <Container>
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="mb-8">
-          <ol className="flex flex-wrap items-center text-sm text-brand-steelGray font-body gap-1.5">
-            <li>
-              <Link href="/" className="hover:text-honeywell-red transition-colors">
-                Home
-              </Link>
-            </li>
-            <li aria-hidden="true">/</li>
-            <li>
-              <Link href="/products/" className="hover:text-honeywell-red transition-colors">
-                Products
-              </Link>
-            </li>
-            <li aria-hidden="true">/</li>
-            <li>
-              <Link href="/products/hydraulic-cylinders/" className="hover:text-honeywell-red transition-colors">
-                Hydraulic Cylinders
-              </Link>
-            </li>
-            <li aria-hidden="true">/</li>
-            <li className="text-honeywell-navy font-semibold" aria-current="page">
-              Welded Hydraulic Cylinders
-            </li>
-          </ol>
-        </nav>
+
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content Column */}
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <Badge variant="custom">UNYIELDING STRUCTURAL INTEGRITY</Badge>
+              <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm">
+                UNYIELDING STRUCTURAL INTEGRITY
+              </span>
+              <div className="h-4 w-px bg-slate-300" />
+              <span className="text-brand-steelGray text-sm font-medium">Welded Hydraulic Cylinders</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
+            <Heading variant="hero" as="h1" className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               Welded Hydraulic Cylinder Manufacturer
-            </h1>
+            </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed text-justify">
               Engineered for extreme pressure and brutal operating environments. Honeywell Hydraulics is a premier custom welded hydraulic cylinder manufacturer in Gujarat, supplying heavy-duty actuators designed specifically for massive shock loads. Unlike tie rod designs, our welded cylinders provide a highly compact footprint capable of sustaining 350+ Bar pressures in the harshest outdoor construction, heavy forging, and marine applications across India.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
               <Button
-                href="/resources/downloads/"
+                href="#"
                 size="lg"
                 variant="primary"
                 className="w-full sm:w-auto font-bold tracking-wide"
@@ -350,7 +331,7 @@ function HeroSection() {
                 DOWNLOAD ENGINEERING SPECS <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
-                href="/contact-us/"
+                href="/contact-us"
                 size="lg"
                 variant="outline"
                 className="w-full sm:w-auto bg-white hover:bg-brand-surfaceGray"
@@ -359,55 +340,20 @@ function HeroSection() {
               </Button>
             </div>
 
-            {/* Contact Bar */}
-            <div className="flex flex-wrap items-center gap-6 py-4 border-t border-slate-200 w-full">
-              <a
-                href="tel:+919924343873"
-                className="flex items-center text-honeywell-navy hover:text-honeywell-red font-medium transition-colors font-body"
-                aria-label="Call Honeywell Hydraulics"
-              >
-                <div className="w-10 h-10 rounded-full bg-brand-lightSurface flex items-center justify-center mr-3">
-                  <Phone className="w-5 h-5" />
-                </div>
-                +91 99243 43873
-              </a>
-              <a
-                href="https://wa.me/919924343873"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-honeywell-navy hover:text-[#25D366] font-medium transition-colors font-body"
-                aria-label="WhatsApp Honeywell Hydraulics"
-              >
-                <div className="w-10 h-10 rounded-full bg-brand-lightSurface flex items-center justify-center mr-3">
-                  <MessageCircle className="w-5 h-5" />
-                </div>
-                WhatsApp Engineering Team
-              </a>
-            </div>
-            
-            {/* Trust Badges */}
-            <div className="flex flex-wrap items-center gap-3 mt-6">
-              <Badge variant="iso" className="bg-white">
-                ISO 9001:2015
-              </Badge>
-              <Badge variant="madeInIndia" className="bg-white border border-orange-200">
-                Made in India
-              </Badge>
-              <Badge variant="default" className="bg-white border border-gray-200">
-                1.5x Pressure Tested
-              </Badge>
-            </div>
+
+
+
           </div>
 
           {/* Image Column */}
-          <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm p-4 overflow-hidden group">
+          <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
             <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
             <Image
-              src="/images/products/welded-hydraulic-cylinder-manufacturer.webp"
+              src="/images/products/welded-hydraulic-cylinder.webp"
               alt="Welded Hydraulic Cylinder Manufacturer in Ahmedabad - Heavy-duty welded cylinder by Honeywell Hydraulics"
               fill
               priority
-              className="object-contain p-8 group-hover:scale-105 transition-transform duration-700 ease-out"
+              className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
@@ -415,35 +361,35 @@ function HeroSection() {
       </Container>
 
       {/* Key Specs Strip */}
-      <div className="absolute bottom-0 left-0 w-full border-t border-slate-200 bg-white hidden md:block">
+      <div className="absolute bottom-0 left-0 w-full bg-white/80 backdrop-blur-md border-t border-slate-200/50 hidden md:block shadow-[0_-4px_24px_-12px_rgba(0,0,0,0.05)] z-20">
         <Container>
-          <div className="flex flex-wrap divide-x divide-slate-200 py-4">
-            <div className="px-6 flex-1 text-center first:pl-0 last:pr-0">
-              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
+          <div className="flex flex-wrap divide-x divide-slate-200/50 py-4">
+            <div className="px-6 flex-1 text-center first:pl-0 last:pr-0 group cursor-default">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1 group-hover:text-honeywell-red transition-colors duration-300">
                 Max Pressure
               </span>
               <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 350+ Bar
               </span>
             </div>
-            <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
+            <div className="px-6 flex-1 text-center group cursor-default">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1 group-hover:text-honeywell-red transition-colors duration-300">
                 Bore Size
               </span>
               <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 Up to 400+ mm
               </span>
             </div>
-            <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
+            <div className="px-6 flex-1 text-center group cursor-default">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1 group-hover:text-honeywell-red transition-colors duration-300">
                 Mounting
               </span>
               <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 Barrel-Welded Custom
               </span>
             </div>
-            <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
+            <div className="px-6 flex-1 text-center group cursor-default">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1 group-hover:text-honeywell-red transition-colors duration-300">
                 Applications
               </span>
               <span className="block text-sm font-mono text-honeywell-navy font-semibold">
@@ -460,13 +406,13 @@ function HeroSection() {
 /* ─── 02 Product Overview ─── */
 function ProductOverview() {
   return (
-    <Section bg="white" id="overview">
+    <Section aria-labelledby="overview-heading" bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+          <Heading id="overview-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
             What Are Welded Hydraulic Cylinders?
-          </h2>
-          <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
+          </Heading>
+          <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed text-justify">
             <p>
               When standard industrial cylinders fail under extreme shock loads, machine builders turn to{' '}
               <strong className="text-honeywell-navy">Welded Hydraulic Cylinders</strong>.
@@ -474,7 +420,7 @@ function ProductOverview() {
             <p>
               Unlike{' '}
               <Link
-                href="/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/"
+                href="/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders"
                 className="text-honeywell-red font-semibold hover:underline"
               >
                 Tie Rod Hydraulic Cylinders
@@ -522,12 +468,12 @@ function ConstructionExplained() {
   ];
 
   return (
-    <Section bg="gray" id="construction">
+    <Section aria-labelledby="construction-heading" bg="gray" id="construction">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="construction-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Welded Cylinder Construction Explained
-          </h2>
+          </Heading>
           <p className="text-lg text-brand-steelGray font-body">
             The reliability of a welded cylinder relies entirely on the metallurgical integrity of its fused components.
           </p>
@@ -537,15 +483,15 @@ function ConstructionExplained() {
           {components.map((comp, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-slate-200 p-8 hover:shadow-md transition-shadow duration-300 group"
+              className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
             >
               <div className="flex items-center gap-4 mb-5">
                 <IconBox icon={comp.icon} variant="primary" size="md" />
               </div>
-              <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
+              <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {comp.title}
-              </h3>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed">
+              </Heading>
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
                 {comp.desc}
               </p>
             </div>
@@ -582,12 +528,12 @@ function Advantages() {
   ];
 
   return (
-    <Section bg="white" id="advantages">
+    <Section aria-labelledby="advantages-heading" bg="white" id="advantages">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="advantages-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Advantages of Welded Cylinders
-          </h2>
+          </Heading>
           <p className="text-lg text-brand-steelGray font-body">
             Why do heavy equipment OEMs and forging plant managers specifically demand welded construction over standard bolted cylinders?
           </p>
@@ -597,15 +543,15 @@ function Advantages() {
           {advantages.map((adv, idx) => (
             <div
               key={idx}
-              className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8 hover:shadow-md transition-shadow duration-300 flex flex-col"
+              className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red flex flex-col"
             >
               <div className="mb-6">
                 <IconBox icon={adv.icon} variant="secondary" size="lg" />
               </div>
-              <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">
+              <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3">
                 {adv.title}
-              </h3>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed flex-grow">
+              </Heading>
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed flex-grow text-justify">
                 {adv.description}
               </p>
             </div>
@@ -619,12 +565,12 @@ function Advantages() {
 /* ─── 05 Welded vs Tie Rod Comparison ─── */
 function ComparisonSection() {
   return (
-    <Section bg="gray" id="comparison">
+    <Section aria-labelledby="comparison-heading" bg="gray" id="comparison">
       <Container>
         <div className="max-w-4xl mx-auto mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="comparison-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Welded vs. Tie Rod Cylinders
-          </h2>
+          </Heading>
           <p className="text-lg text-brand-steelGray font-body">
             Choosing the correct cylinder construction dictates the lifespan of your machinery.
           </p>
@@ -637,7 +583,7 @@ function ComparisonSection() {
                 <th className="px-6 py-4 font-display font-bold text-lg w-1/4">Engineering Feature</th>
                 <th className="px-6 py-4 font-display font-bold text-lg w-[37.5%] border-l border-white/20">Welded Hydraulic Cylinders</th>
                 <th className="px-6 py-4 font-display font-bold text-lg w-[37.5%] border-l border-white/20">
-                  <Link href="/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/" className="hover:text-red-200 transition-colors underline decoration-white/30 underline-offset-4">
+                  <Link href="/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders" className="hover:text-red-200 transition-colors underline decoration-white/30 underline-offset-4">
                     Tie Rod Hydraulic Cylinders
                   </Link>
                 </th>
@@ -691,21 +637,21 @@ function ComparisonSection() {
 /* ─── 06 Technical Specifications ─── */
 function TechnicalSpecifications() {
   return (
-    <Section bg="white" id="technical-specifications">
+    <Section aria-labelledby="technical-specifications-heading" bg="white" id="technical-specifications">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+            <Heading id="technical-specifications-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Technical Specifications
-            </h2>
+            </Heading>
             <p className="text-lg text-brand-steelGray font-body mb-8">
               Our welded cylinders are engineered from the ground up for extreme durability and long-term reliability.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button href="/request-quote/" variant="primary" size="md" className="font-bold">
+              <Button href="/request-quote" variant="primary" size="md" className="font-bold">
                 DISCUSS YOUR SPECS <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
-              <Button href="/resources/downloads/" variant="outline" size="md">
+              <Button href="#" variant="outline" size="md">
                 DOWNLOAD CAD MODELS
               </Button>
             </div>
@@ -748,30 +694,26 @@ function IndustriesSection() {
   ];
 
   return (
-    <Section bg="gray" id="industries">
+    <Section aria-labelledby="industries-heading" bg="gray" id="industries">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="industries-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Industries Served
-          </h2>
+          </Heading>
           <p className="text-lg text-brand-steelGray font-body">
             Our custom welded cylinders are the primary actuators for heavy manufacturing and outdoor sectors:
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {industries.map((ind, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl border border-slate-200 p-6 flex items-start gap-4 hover:shadow-md transition-shadow duration-300"
-            >
-              <div className="mt-1">
-                <IconBox icon={ind.icon} variant="primary" size="sm" />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-honeywell-navy mb-2">{ind.name}</h3>
-                <p className="text-brand-steelGray text-sm leading-relaxed">{ind.desc}</p>
-              </div>
+            <div key={idx}>
+              <IndustryCard
+                industryName={ind.name}
+                description={ind.desc}
+                icon={ind.icon}
+                href={'/industries'}
+              />
             </div>
           ))}
         </div>
@@ -783,15 +725,15 @@ function IndustriesSection() {
 /* ─── 08 Engineering Considerations ─── */
 function EngineeringConsiderations() {
   return (
-    <Section bg="white" id="engineering-considerations">
+    <Section aria-labelledby="engineering-considerations-heading" bg="white" id="engineering-considerations">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+          <Heading id="engineering-considerations-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
             Engineering Considerations (Specifying Welded Cylinders)
-          </h2>
+          </Heading>
           <p className="text-brand-darkSlate font-body text-lg mb-8">
             Our{' '}
-            <Link href="/services/custom-hydraulic-system-design/" className="text-honeywell-red font-semibold hover:underline">
+            <Link href="#" className="text-honeywell-red font-semibold hover:underline">
               Custom Hydraulic System Design
             </Link>{' '}
             team analyzes critical environmental and operational factors before engineering a welded cylinder for your heavy machinery.
@@ -799,31 +741,31 @@ function EngineeringConsiderations() {
 
           <div className="space-y-8">
             <div className="bg-brand-surfaceGray p-8 rounded-xl border border-slate-200">
-              <h3 className="text-xl font-bold text-honeywell-navy mb-3 flex items-center gap-3">
+              <Heading variant="subsection" as="h3" className="text-xl font-bold text-honeywell-navy mb-3 flex items-center gap-3">
                 <span className="bg-honeywell-navy text-white w-8 h-8 rounded flex items-center justify-center text-sm font-bold">A</span>
                 Pressure Ratings & Wall Thickness
-              </h3>
-              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11">
+              </Heading>
+              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11 text-justify">
                 We perform rigorous hoop-stress calculations. If your hydraulic press generates extreme internal pressures, we specify thicker seamless steel tubing for the barrel to guarantee the cylinder will not bulge or burst under maximum tonnage.
               </p>
             </div>
 
             <div className="bg-brand-surfaceGray p-8 rounded-xl border border-slate-200">
-              <h3 className="text-xl font-bold text-honeywell-navy mb-3 flex items-center gap-3">
+              <Heading variant="subsection" as="h3" className="text-xl font-bold text-honeywell-navy mb-3 flex items-center gap-3">
                 <span className="bg-honeywell-navy text-white w-8 h-8 rounded flex items-center justify-center text-sm font-bold">B</span>
                 Shock Loads & Vibration
-              </h3>
-              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11">
+              </Heading>
+              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11 text-justify">
                 In environments like Rajkot's forging industry, the cylinder experiences violent shock when the die hits the metal. We utilize specialized sub-arc welding techniques for the end caps to ensure the welds never crack under high-frequency vibration.
               </p>
             </div>
 
             <div className="bg-brand-surfaceGray p-8 rounded-xl border border-slate-200">
-              <h3 className="text-xl font-bold text-honeywell-navy mb-3 flex items-center gap-3">
+              <Heading variant="subsection" as="h3" className="text-xl font-bold text-honeywell-navy mb-3 flex items-center gap-3">
                 <span className="bg-honeywell-navy text-white w-8 h-8 rounded flex items-center justify-center text-sm font-bold">C</span>
                 Corrosion Resistance & Outdoor Operation
-              </h3>
-              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11">
+              </Heading>
+              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11 text-justify">
                 For cylinders exposed to mud, rain, or the saline air of Bhavnagar's shipyards, we upgrade the exterior protection. We apply multi-layer marine-grade epoxy coatings, utilize stainless steel piston rods, and install heavy-duty metallic scrapers to physically clear abrasive rust from the rod before it destroys the internal seals.
               </p>
             </div>
@@ -837,34 +779,34 @@ function EngineeringConsiderations() {
 /* ─── 09 Manufacturing Process ─── */
 function ManufacturingProcess() {
   return (
-    <Section bg="gray" id="manufacturing">
+    <Section aria-labelledby="manufacturing-heading" bg="gray" id="manufacturing">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+            <Heading id="manufacturing-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
               Manufacturing & Quality Process
-            </h2>
-            
+            </Heading>
+
             <div className="space-y-6 mb-8">
               <div className="flex items-start gap-4">
                 <div className="mt-1">
                   <IconBox icon={<Flame className="w-5 h-5" />} variant="primary" size="sm" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-honeywell-navy">Advanced Welding</h4>
-                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed">
+                  <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Advanced Welding</Heading>
+                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed text-justify">
                     Utilizing automated rotary friction and sub-arc welding systems to ensure deep, slag-free weld penetration between the end caps and the high-tensile barrel.
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-4">
                 <div className="mt-1">
                   <IconBox icon={<Cog className="w-5 h-5" />} variant="primary" size="sm" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-honeywell-navy">Post-Weld Machining</h4>
-                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed">
+                  <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Post-Weld Machining</Heading>
+                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed text-justify">
                     Unlike inferior manufacturers, we hone the internal barrel <em>after</em> the welding process is complete. This completely removes any heat-induced metal distortion, ensuring perfect internal cylindricity and vastly extending seal life.
                   </p>
                 </div>
@@ -875,8 +817,8 @@ function ManufacturingProcess() {
                   <IconBox icon={<Zap className="w-5 h-5" />} variant="primary" size="sm" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-honeywell-navy">Shock-Load Validation</h4>
-                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed">
+                  <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Shock-Load Validation</Heading>
+                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed text-justify">
                     100% of our welded cylinders undergo extreme 1.5x working pressure hydrostatic testing to verify weld integrity and seal performance under simulated field conditions.
                   </p>
                 </div>
@@ -884,21 +826,21 @@ function ManufacturingProcess() {
             </div>
 
             <div className="bg-white p-6 rounded-xl border border-slate-200 mb-6">
-              <h4 className="font-bold text-honeywell-navy flex items-center gap-2 mb-2">
+              <Heading variant="card" as="h4" className="font-bold text-honeywell-navy flex items-center gap-2 mb-2">
                 <FileCheck className="w-5 h-5 text-honeywell-red" />
                 Technical Validation Guarantee
-              </h4>
-              <p className="text-brand-darkSlate text-sm">
+              </Heading>
+              <p className="text-brand-darkSlate text-sm text-justify">
                 Every welded cylinder is delivered with complete material traceability documentation (MTC) and dimensional reports, ensuring the actuator meets all specified OEM tolerances.
               </p>
             </div>
 
             <div className="bg-honeywell-navy p-6 rounded-xl border border-slate-200">
-              <h4 className="font-bold text-white flex items-center gap-2 mb-2">
+              <Heading variant="card" as="h4" className="font-bold text-white flex items-center gap-2 mb-2">
                 <ShieldAlert className="w-5 h-5 text-honeywell-red" />
                 The Honeywell Guarantee
-              </h4>
-              <p className="text-white/80 text-sm">
+              </Heading>
+              <p className="text-white/80 text-sm text-justify">
                 Our extreme-duty welded cylinders are backed by a strict <strong>12-Month Defect Warranty</strong>. Should your heavy equipment face catastrophic failure, our Hydraulic Cylinder Repair division can rapidly rebuild or re-machine the unit.
               </p>
             </div>
@@ -921,40 +863,40 @@ function ManufacturingProcess() {
 /* ─── 10 Project Spotlight ─── */
 function ProjectSpotlight() {
   return (
-    <Section bg="white" id="project-spotlight">
+    <Section aria-labelledby="project-spotlight-heading" bg="white" id="project-spotlight">
       <Container>
         <div className="bg-brand-surfaceGray rounded-2xl border border-slate-200 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8 lg:p-12 flex flex-col justify-center">
               <Badge variant="custom" className="w-fit mb-4">PROJECT SPOTLIGHT</Badge>
-              <h2 className="text-2xl md:text-3xl font-display font-bold text-honeywell-navy mb-6">
+              <Heading id="project-spotlight-heading" variant="section" as="h2" underline="center" className="text-2xl md:text-3xl font-display font-bold text-honeywell-navy mb-6">
                 Heavy-Duty Welded Cylinder Retrofit for a Steel Forging Press
-              </h2>
-              
+              </Heading>
+
               <div className="space-y-6">
                 <div>
-                  <h4 className="font-bold text-honeywell-navy uppercase text-xs tracking-wider mb-2">The Challenge:</h4>
-                  <p className="text-brand-darkSlate text-sm leading-relaxed">
+                  <Heading variant="card" as="h4" className="font-bold text-honeywell-navy uppercase text-xs tracking-wider mb-2">The Challenge:</Heading>
+                  <p className="text-brand-darkSlate text-sm leading-relaxed text-justify">
                     The OEM's 800-ton forging press was previously equipped with large tie-rod cylinders. Due to the violent shock loads generated during the stamping cycle, the tie rods were continually stretching, causing the O-rings to blow out. The press was experiencing hydraulic fluid leaks every two weeks.
                   </p>
                 </div>
-                
+
                 <div>
-                  <h4 className="font-bold text-honeywell-navy uppercase text-xs tracking-wider mb-2">The Solution:</h4>
-                  <p className="text-brand-darkSlate text-sm leading-relaxed">
+                  <Heading variant="card" as="h4" className="font-bold text-honeywell-navy uppercase text-xs tracking-wider mb-2">The Solution:</Heading>
+                  <p className="text-brand-darkSlate text-sm leading-relaxed text-justify">
                     Honeywell Hydraulics completely redesigned the actuators. We manufactured four massive, custom <strong>Welded Hydraulic Cylinders</strong> utilizing ultra-thick ST52 barrels. By permanently welding the heavy flange mounts directly to the barrel, we created a single, unyielding structural unit capable of absorbing the extreme shock vibration.
                   </p>
                 </div>
-                
+
                 <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-                  <h4 className="font-bold text-honeywell-red uppercase text-xs tracking-wider mb-2">The Outcome:</h4>
-                  <p className="text-honeywell-navy font-semibold text-sm leading-relaxed">
+                  <Heading variant="card" as="h4" className="font-bold text-honeywell-red uppercase text-xs tracking-wider mb-2">The Outcome:</Heading>
+                  <p className="text-honeywell-navy font-semibold text-sm leading-relaxed text-justify">
                     The fluid leaks were entirely eliminated. The welded cylinders safely absorbed the brutal 350 Bar shock spikes without yielding, allowing the forging plant to operate continuously for 18 months without requiring a single seal replacement.
                   </p>
                 </div>
               </div>
             </div>
-            
+
             <div className="relative h-64 lg:h-auto bg-honeywell-navy">
               <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
               <div className="absolute inset-0 flex items-center justify-center p-8">
@@ -985,23 +927,23 @@ function RelatedProducts() {
       title: 'Custom Hydraulic Cylinders',
       description: 'Bespoke fluid power for when standard catalogs fail. We engineer large-bore cylinders and provide reverse-engineering services.',
       href: '/products/hydraulic-cylinders/custom-hydraulic-cylinders/',
-      image: '/images/products/custom-hydraulic-cylinder-manufacturer.webp',
+      image: '/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp',
     },
     {
       title: 'Telescopic Hydraulic Cylinders',
       description: 'Multi-stage cylinders designed to provide a long stroke from a highly compact retracted length. Ideal for tipper trucks.',
       href: '/products/hydraulic-cylinders/telescopic-hydraulic-cylinders/',
-      image: '/images/products/telescopic-hydraulic-cylinder-manufacturer.webp',
+      image: '/images/products/hydraulic-cylinders/telescopic-hydraulic-cylinders-manufacturer.webp',
     },
   ];
 
   return (
-    <Section bg="gray" id="related-products">
+    <Section aria-labelledby="related-products-heading" bg="gray" id="related-products">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="related-products-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Related Products
-          </h2>
+          </Heading>
           <p className="text-lg text-brand-steelGray font-body">
             Welded cylinders require extreme, reliable pressure. Power and control them with our heavy-duty fluid generation systems:
           </p>
@@ -1030,27 +972,27 @@ function RelatedServices() {
     {
       title: 'OEM Hydraulic Manufacturing',
       desc: 'High-volume, repeatable production of custom welded cylinders specifically for tractor, crane, and heavy equipment manufacturers.',
-      href: '/services/oem-hydraulic-manufacturing/',
+      href: '#',
     },
     {
       title: 'Hydraulic Cylinder Repair',
       desc: 'Welded cylinders are difficult to service in the field. Send damaged units to our Gujarat facility for complete lathe-cutting, re-sealing, re-welding, and hydrostatic testing.',
-      href: '/services/hydraulic-cylinder-repair/',
+      href: '#',
     },
     {
       title: 'Hydraulic Maintenance Services',
       desc: 'AMC contracts covering the entire fluid power health of your heavy fabrication plant.',
-      href: '/services/hydraulic-maintenance-services/',
+      href: '#',
     },
   ];
 
   return (
-    <Section bg="white" id="related-services">
+    <Section aria-labelledby="related-services-heading" bg="white" id="related-services">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="related-services-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             The Heavy Engineering Advantage
-          </h2>
+          </Heading>
           <p className="text-lg text-brand-steelGray font-body">
             Purchasing a welded cylinder is a long-term investment in your machine's structural integrity. Leverage our heavy engineering services:
           </p>
@@ -1059,8 +1001,8 @@ function RelatedServices() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, idx) => (
             <div key={idx} className="bg-brand-surfaceGray p-8 rounded-xl border border-slate-200 hover:border-honeywell-navy transition-colors group">
-              <h3 className="text-xl font-bold text-honeywell-navy mb-3">{service.title}</h3>
-              <p className="text-brand-steelGray text-sm leading-relaxed mb-6">
+              <Heading variant="subsection" as="h3" className="text-xl font-bold text-honeywell-navy mb-3">{service.title}</Heading>
+              <p className="text-brand-steelGray text-sm leading-relaxed mb-6 text-justify">
                 {service.desc}
               </p>
               <Link href={service.href} className="inline-flex items-center text-honeywell-red font-bold text-sm group-hover:underline">
@@ -1074,105 +1016,18 @@ function RelatedServices() {
   );
 }
 
-/* ─── 13 Local Service Areas ─── */
-function LocalServiceAreas() {
-  const LOCATIONS = [
-    { city: 'Ahmedabad', href: '/locations/ahmedabad/' },
-    { city: 'Surat', href: '/locations/surat/' },
-    { city: 'Rajkot', href: '/locations/rajkot/' },
-    { city: 'Vadodara', href: '/locations/vadodara/' },
-    { city: 'Gandhinagar', href: '/locations/gandhinagar/' },
-    { city: 'Jamnagar', href: '/locations/jamnagar/' },
-    { city: 'Bhavnagar', href: '/locations/bhavnagar/' },
-    { city: 'Vapi', href: '/locations/vapi/' },
-  ];
 
-  return (
-    <Section bg="gray" id="local-areas">
-      <Container>
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
-            Direct Delivery Across Gujarat
-          </h2>
-          <p className="text-lg text-brand-steelGray font-body">
-            As a premier welded cylinder manufacturer in Gujarat, we provide direct engineering support and heavy-freight delivery to steel plants, forging hubs, and OEMs across the state.
-          </p>
-        </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {LOCATIONS.map((loc, idx) => (
-            <LocationCard
-              key={idx}
-              city={loc.city}
-              description={`Heavy-duty welded cylinder manufacturing and supply in ${loc.city}.`}
-              industries={['Steel', 'Forging', 'Construction']}
-              href={loc.href}
-            />
-          ))}
-        </div>
-      </Container>
-    </Section>
-  );
-}
 
-/* ─── 14 Resources ─── */
-function ResourcesSection() {
-  return (
-    <Section bg="white" id="resources">
-      <Container>
-        <div className="bg-honeywell-navy rounded-2xl p-8 md:p-12 text-white overflow-hidden relative">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3 blur-3xl pointer-events-none" />
-          
-          <div className="relative z-10 max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Engineering Resources
-            </h2>
-            <p className="text-white/80 text-lg mb-8">
-              Equip your design and maintenance engineers with vital high-pressure technical data.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <a href="/resources/downloads/" className="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-                <Box className="w-8 h-8 text-white mb-4" />
-                <h3 className="font-bold text-lg mb-2">3D CAD Models</h3>
-                <p className="text-white/70 text-sm">Access STEP and IGES files of our welded cylinders to integrate into your heavy machinery blueprints.</p>
-              </a>
-              <a href="/resources/guides/" className="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-                <Wrench className="w-8 h-8 text-white mb-4" />
-                <h3 className="font-bold text-lg mb-2">Maintenance Guide</h3>
-                <p className="text-white/70 text-sm">Learn the correct procedures for diagnosing bent rods and blown seals in high-pressure environments.</p>
-              </a>
-              <a href="/resources/calculators/" className="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-                <Cog className="w-8 h-8 text-white mb-4" />
-                <h3 className="font-bold text-lg mb-2">Fluid Power Calculators</h3>
-                <p className="text-white/70 text-sm">Instantly determine the required barrel wall thickness based on your machine's maximum shock-load pressures.</p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </Container>
-    </Section>
-  );
-}
-
-/* ─── 15 FAQs ─── */
+/* ─── 15 FAQ Section ─── */
 function FAQSection() {
   return (
-    <Section bg="gray" id="faq">
-      <Container>
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-lg text-brand-steelGray font-body">
-            Technical answers regarding welded cylinder repair, application, and custom manufacturing.
-          </p>
-        </div>
-
-        <div className="max-w-3xl mx-auto">
-          <FAQAccordion faqs={FAQS} />
-        </div>
-      </Container>
-    </Section>
+    <SiteFAQSection
+      faqs={FAQS}
+      title="Frequently Asked Questions"
+      description="Technical answers regarding welded cylinder repair, application, and custom manufacturing."
+      injectSchema={false}
+    />
   );
 }
+

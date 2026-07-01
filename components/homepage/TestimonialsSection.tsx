@@ -23,10 +23,10 @@ export function TestimonialsSection() {
       <Container>
         {/* Section header */}
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
-          <Heading variant="section" as="h2" id="testimonials-heading" className="text-honeywell-navy mb-4">
+          <Heading variant="section" underline="center" as="h2" id="testimonials-heading" className="text-honeywell-navy mb-4">
             Trusted by Manufacturers Across Gujarat
           </Heading>
-          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
+
         </div>
 
         {/* Testimonial cards */}

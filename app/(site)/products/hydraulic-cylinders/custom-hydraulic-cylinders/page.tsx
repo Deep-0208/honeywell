@@ -11,12 +11,13 @@ import { Badge } from '@/components/ui/Badge';
 import { IconBox } from '@/components/ui/IconBox';
 import { CTA } from '@/components/ui/CTA';
 import { SpecTable } from '@/components/tables/SpecTable';
-import { FAQAccordion } from '@/components/faq/FAQAccordion';
+import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
 import { ProductCard } from '@/components/cards/ProductCard';
-import { LocationCard } from '@/components/cards/LocationCard';
+import { SiteLocationsSection } from '@/components/locations/SiteLocationsSection';
+import { IndustryCard } from '@/components/cards/IndustryCard';
+import { Heading } from '@/components/ui/Heading';
 import {
   ArrowRight,
-  Phone,
   MessageCircle,
   PenTool,
   Calculator,
@@ -25,20 +26,16 @@ import {
   Wrench,
   FlaskConical,
   Cog,
-  Factory,
   Anchor,
   Building2,
   Settings,
-  Hammer,
   Shield,
-  Droplets,
   Thermometer,
   RefreshCw,
   FileCheck,
   CheckCircle2,
   Lightbulb,
   BookOpen,
-  MapPin,
   Package,
   Cpu,
 } from 'lucide-react';
@@ -48,11 +45,11 @@ import {
    ═══════════════════════════════════════════════ */
 
 const PAGE_TITLE =
-  'Custom Hydraulic Cylinder Manufacturer Ahmedabad | Bespoke & Large Bore | Honeywell Hydraulics';
+  'Custom Hydraulic Cylinder Manufacturer | Honeywell';
 const PAGE_DESCRIPTION =
-  'Expert custom hydraulic cylinder manufacturer in Ahmedabad, Gujarat. Specializing in bespoke CAD engineering, large bore cylinders (400mm+), and reverse engineering obsolete actuators for heavy industry.';
-const PAGE_URL = '/products/hydraulic-cylinders/custom-hydraulic-cylinders/';
-const PAGE_IMAGE = '/images/products/custom-hydraulic-cylinder-manufacturer.webp';
+  'Custom hydraulic cylinder manufacturer in Ahmedabad. Bespoke CAD engineering, large bore cylinders (400mm+), and reverse engineering for heavy industry.';
+const PAGE_URL = '/products/hydraulic-cylinders/custom-hydraulic-cylinders';
+const PAGE_IMAGE = '/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -291,12 +288,12 @@ export default function CustomHydraulicCylindersPage() {
       <EngineeringAdvantage />
 
       {/* ─── 12 Local Service Areas ─── */}
-      <LocalServiceAreas />
+      <SiteLocationsSection
+        title="Custom Hydraulic Cylinder Manufacturer in Gujarat"
+        description="As the premier custom hydraulic cylinder manufacturer in Gujarat, we provide rapid reverse-engineering and bespoke manufacturing services to heavy industries across the state."
+      />
 
-      {/* ─── 13 Resources ─── */}
-      <ResourcesSection />
-
-      {/* ─── 14 FAQs ─── */}
+      {/* ─── 13 FAQs ─── */}
       <FAQSection />
 
       {/* ─── 15 CTA Section ─── */}
@@ -320,67 +317,35 @@ export default function CustomHydraulicCylindersPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200"
+      className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200"
       id="hero"
     >
-      {/* Background Decorative Element */}
-      <div
-        className="absolute top-0 right-0 w-1/2 h-full bg-brand-surfaceGray skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block"
-        aria-hidden="true"
-      />
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
+      <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red/5 skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block" />
+      <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
       <Container>
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="mb-8">
-          <ol className="flex flex-wrap items-center text-sm text-brand-steelGray font-body gap-1.5">
-            <li>
-              <Link
-                href="/"
-                className="hover:text-honeywell-red transition-colors"
-              >
-                Home
-              </Link>
-            </li>
-            <li aria-hidden="true">/</li>
-            <li>
-              <Link
-                href="/products/"
-                className="hover:text-honeywell-red transition-colors"
-              >
-                Products
-              </Link>
-            </li>
-            <li aria-hidden="true">/</li>
-            <li>
-              <Link
-                href="/products/hydraulic-cylinders/"
-                className="hover:text-honeywell-red transition-colors"
-              >
-                Hydraulic Cylinders
-              </Link>
-            </li>
-            <li aria-hidden="true">/</li>
-            <li
-              className="text-honeywell-navy font-semibold"
-              aria-current="page"
-            >
-              Custom Hydraulic Cylinders
-            </li>
-          </ol>
-        </nav>
+        
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content Column */}
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <Badge variant="custom">UNRESTRICTED ENGINEERING</Badge>
+              <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm">
+                UNRESTRICTED ENGINEERING
+              </span>
+              <div className="h-4 w-px bg-slate-300" />
+              <span className="text-brand-steelGray text-sm font-medium">Custom Hydraulic Cylinders</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
+            <Heading variant="hero" as="h1" className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               Custom Hydraulic Cylinder Manufacturer
-            </h1>
+            </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed text-justify">
               Bespoke fluid power for when standard catalogs fail. Honeywell
               Hydraulics is a premier custom hydraulic cylinder manufacturer in
               Gujarat, specializing in extreme large bore actuators,
@@ -391,7 +356,7 @@ function HeroSection() {
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
               <Button
-                href="/request-quote/"
+                href="/request-quote"
                 size="lg"
                 variant="primary"
                 className="w-full sm:w-auto font-bold tracking-wide"
@@ -400,7 +365,7 @@ function HeroSection() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
-                href="/contact-us/"
+                href="/contact-us"
                 size="lg"
                 variant="outline"
                 className="w-full sm:w-auto bg-white hover:bg-brand-surfaceGray"
@@ -410,61 +375,20 @@ function HeroSection() {
               </Button>
             </div>
 
-            {/* Contact Bar */}
-            <div className="flex flex-wrap items-center gap-6 py-4 border-t border-slate-200 w-full">
-              <a
-                href="tel:+919924343873"
-                className="flex items-center text-honeywell-navy hover:text-honeywell-red font-medium transition-colors font-body"
-                aria-label="Call Honeywell Hydraulics"
-              >
-                <div className="w-10 h-10 rounded-full bg-brand-lightSurface flex items-center justify-center mr-3">
-                  <Phone className="w-5 h-5" />
-                </div>
-                +91 99243 43873
-              </a>
-              <a
-                href="https://wa.me/919924343873"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-honeywell-navy hover:text-[#25D366] font-medium transition-colors font-body"
-                aria-label="WhatsApp Honeywell Hydraulics"
-              >
-                <div className="w-10 h-10 rounded-full bg-brand-lightSurface flex items-center justify-center mr-3">
-                  <MessageCircle className="w-5 h-5" />
-                </div>
-                WhatsApp Engineering Team
-              </a>
-            </div>
+            
 
-            {/* Trust Badges */}
-            <div className="flex flex-wrap items-center gap-3 mt-6">
-              <Badge variant="iso" className="bg-white">
-                ISO 9001:2015
-              </Badge>
-              <Badge
-                variant="madeInIndia"
-                className="bg-white border border-orange-200"
-              >
-                Made in India
-              </Badge>
-              <Badge
-                variant="default"
-                className="bg-white border border-gray-200"
-              >
-                100% Tested
-              </Badge>
-            </div>
+            
           </div>
 
           {/* Image Column */}
-          <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm p-4 overflow-hidden group">
+          <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
             <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
             <Image
-              src="/images/products/custom-hydraulic-cylinder-manufacturer.webp"
+              src="/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp"
               alt="Custom Hydraulic Cylinder Manufacturer in Ahmedabad - Bespoke large bore cylinder by Honeywell Hydraulics"
               fill
               priority
-              className="object-contain p-8 group-hover:scale-105 transition-transform duration-700 ease-out"
+              className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
@@ -472,35 +396,35 @@ function HeroSection() {
       </Container>
 
       {/* Key Specs Strip */}
-      <div className="absolute bottom-0 left-0 w-full border-t border-slate-200 bg-white hidden md:block">
+      <div className="absolute bottom-0 left-0 w-full bg-white/80 backdrop-blur-md border-t border-slate-200/50 hidden md:block shadow-[0_-4px_24px_-12px_rgba(0,0,0,0.05)] z-20">
         <Container>
-          <div className="flex flex-wrap divide-x divide-slate-200 py-4">
-            <div className="px-6 flex-1 text-center first:pl-0 last:pr-0">
-              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
+          <div className="flex flex-wrap divide-x divide-slate-200/50 py-4">
+            <div className="px-6 flex-1 text-center first:pl-0 last:pr-0 group cursor-default">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1 group-hover:text-honeywell-red transition-colors duration-300">
                 Bore
               </span>
               <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 Up to 400mm+
               </span>
             </div>
-            <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
+            <div className="px-6 flex-1 text-center group cursor-default">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1 group-hover:text-honeywell-red transition-colors duration-300">
                 Stroke
               </span>
               <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 Up to 8,000+ mm
               </span>
             </div>
-            <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
+            <div className="px-6 flex-1 text-center group cursor-default">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1 group-hover:text-honeywell-red transition-colors duration-300">
                 Pressure
               </span>
               <span className="block text-sm font-mono text-honeywell-navy font-semibold">
                 Up to 500+ Bar
               </span>
             </div>
-            <div className="px-6 flex-1 text-center">
-              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1">
+            <div className="px-6 flex-1 text-center group cursor-default">
+              <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1 group-hover:text-honeywell-red transition-colors duration-300">
                 Mounting
               </span>
               <span className="block text-sm font-mono text-honeywell-navy font-semibold">
@@ -517,17 +441,17 @@ function HeroSection() {
 /* ─── 02 Product Overview ─── */
 function ProductOverview() {
   return (
-    <Section bg="white" id="overview">
+    <Section aria-labelledby="overview-heading" bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+          <Heading id="overview-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
             What Are Custom Hydraulic Cylinders?
-          </h2>
-          <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
+          </Heading>
+          <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed text-justify">
             <p>
               Standard catalog cylinders—like{' '}
               <Link
-                href="/products/hydraulic-cylinders/"
+                href="/products/hydraulic-cylinders"
                 className="text-honeywell-red font-semibold hover:underline"
               >
                 Tie Rod Cylinders
@@ -598,13 +522,13 @@ function KeyFeatures() {
   ];
 
   return (
-    <Section bg="gray" id="engineering-process">
+    <Section aria-labelledby="engineering-process-heading" bg="gray" id="engineering-process">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="engineering-process-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             The Engineering Design Process
-          </h2>
-          <p className="text-lg text-brand-steelGray font-body">
+          </Heading>
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Designing a bespoke hydraulic cylinder requires rigorous fluid
             mechanics calculations and strict adherence to mechanical physics.
           </p>
@@ -614,7 +538,7 @@ function KeyFeatures() {
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-slate-200 p-8 hover:shadow-md transition-shadow duration-300 group"
+              className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
             >
               <div className="flex items-center gap-4 mb-5">
                 <IconBox
@@ -626,10 +550,10 @@ function KeyFeatures() {
                   Step {String(idx + 1).padStart(2, '0')}
                 </span>
               </div>
-              <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
+              <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors text-justify">
                 {step.title}
-              </h3>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed">
+              </Heading>
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
                 {step.desc}
               </p>
             </div>
@@ -643,21 +567,21 @@ function KeyFeatures() {
 /* ─── 04 Technical Specifications ─── */
 function TechnicalSpecifications() {
   return (
-    <Section bg="white" id="technical-specifications">
+    <Section aria-labelledby="technical-specifications-heading" bg="white" id="technical-specifications">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+            <Heading id="technical-specifications-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Technical Specifications
-            </h2>
-            <p className="text-lg text-brand-steelGray font-body mb-8">
+            </Heading>
+            <p className="text-lg text-brand-steelGray font-body mb-8 text-justify">
               Our custom manufacturing capabilities extend far beyond standard
               catalog parameters. Every specification is engineered to your exact
               requirements.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button
-                href="/request-quote/"
+                href="/request-quote"
                 variant="primary"
                 size="md"
                 className="font-bold"
@@ -665,7 +589,7 @@ function TechnicalSpecifications() {
                 DISCUSS YOUR SPECS <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
               <Button
-                href="/products/hydraulic-cylinders/"
+                href="/products/hydraulic-cylinders"
                 variant="outline"
                 size="md"
               >
@@ -722,13 +646,13 @@ function ProductVariants() {
   ];
 
   return (
-    <Section bg="gray" id="product-variants">
+    <Section aria-labelledby="product-variants-heading" bg="gray" id="product-variants">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="product-variants-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Custom Cylinder Capabilities
-          </h2>
-          <p className="text-lg text-brand-steelGray font-body">
+          </Heading>
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             From reverse-engineering obsolete imports to manufacturing extreme
             large-bore actuators, our capabilities cover the full spectrum of
             bespoke hydraulic engineering.
@@ -739,7 +663,7 @@ function ProductVariants() {
           {variants.map((variant, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-slate-200 p-8 hover:shadow-md transition-shadow duration-300 flex flex-col"
+              className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red flex flex-col"
             >
               <div className="mb-6">
                 <IconBox
@@ -748,10 +672,10 @@ function ProductVariants() {
                   size="lg"
                 />
               </div>
-              <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">
+              <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3">
                 {variant.title}
-              </h3>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed mb-6 flex-grow">
+              </Heading>
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed mb-6 flex-grow text-justify">
                 {variant.description}
               </p>
               <ul className="space-y-2.5 border-t border-slate-200 pt-5">
@@ -799,38 +723,27 @@ function IndustriesSection() {
   ];
 
   return (
-    <Section bg="gray" id="industries">
+    <Section aria-labelledby="industries-heading" bg="gray" id="industries">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="industries-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Industries We Serve
-          </h2>
-          <p className="text-lg text-brand-steelGray font-body">
+          </Heading>
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Our custom engineering division serves the most demanding sectors in
             the Indian economy.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {industries.map((ind, idx) => (
-            <div
-              key={idx}
-              className="flex gap-5 bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition-shadow duration-300"
-            >
-              <IconBox
+            <div key={idx}>
+              <IndustryCard
+                industryName={ind.name}
+                description={ind.desc}
                 icon={ind.icon}
-                variant="secondary"
-                size="md"
-                className="shrink-0"
+                href={'/industries'}
               />
-              <div>
-                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">
-                  {ind.name}
-                </h3>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed">
-                  {ind.desc}
-                </p>
-              </div>
             </div>
           ))}
         </div>
@@ -842,57 +755,64 @@ function IndustriesSection() {
 /* ─── 08 Manufacturing Process ─── */
 function ManufacturingProcess() {
   return (
-    <Section bg="white" id="manufacturing-process">
+    <Section aria-labelledby="manufacturing-process-heading" bg="white" id="manufacturing-process">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="manufacturing-process-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Manufacturing & Quality Process
-          </h2>
-          <p className="text-lg text-brand-steelGray font-body">
+          </Heading>
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Every custom cylinder is delivered with a comprehensive Engineering
             Dossier, including 3D CAD files, material test certificates (MTC),
             seal compound specs, and hydrostatic pressure testing reports.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8">
-            <div className="flex items-center gap-3 mb-4">
-              <Cog className="w-6 h-6 text-honeywell-red" />
-              <h3 className="text-lg font-display font-bold text-honeywell-navy">
-                Heavy Machining Centers
-              </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 relative mb-16 w-full">
+          {/* Connecting line for desktop */}
+          <div className="hidden lg:block absolute top-[32px] left-[10%] right-[10%] h-0.5 bg-slate-200 z-0" aria-hidden="true" />
+
+          <div className="flex flex-col items-center text-center group cursor-default">
+            <div className="bg-white rounded-lg mb-6 relative z-10 transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110">
+              <IconBox icon={<Cog className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
-            <p className="text-sm text-brand-steelGray font-body leading-relaxed">
+            <Heading variant="card" as="h3" className="mb-3">Heavy Machining Centers</Heading>
+            <p className="text-brand-steelGray font-body text-sm text-justify">
               Equipped with massive CNC boring and honing machines capable of
               processing large-bore seamless steel tubes up to immense lengths.
             </p>
           </div>
 
-          <div className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8">
-            <div className="flex items-center gap-3 mb-4">
-              <FlaskConical className="w-6 h-6 text-honeywell-red" />
-              <h3 className="text-lg font-display font-bold text-honeywell-navy">
-                Metallurgical Verification
-              </h3>
+          <div className="flex flex-col items-center text-center group cursor-default">
+            <div className="bg-white rounded-lg mb-6 relative z-10 transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110">
+              <IconBox icon={<FlaskConical className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
-            <p className="text-sm text-brand-steelGray font-body leading-relaxed">
+            <Heading variant="card" as="h3" className="mb-3">Metallurgical Verification</Heading>
+            <p className="text-brand-steelGray font-body text-sm text-justify">
               We rigorously verify the chemical composition and yield strength
               of all custom-ordered alloys before machining begins.
             </p>
           </div>
 
-          <div className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8">
-            <div className="flex items-center gap-3 mb-4">
-              <FileCheck className="w-6 h-6 text-honeywell-red" />
-              <h3 className="text-lg font-display font-bold text-honeywell-navy">
-                Extreme Pressure Validation
-              </h3>
+          <div className="flex flex-col items-center text-center group cursor-default">
+            <div className="bg-white rounded-lg mb-6 relative z-10 transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110">
+              <IconBox icon={<FileCheck className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
-            <p className="text-sm text-brand-steelGray font-body leading-relaxed">
+            <Heading variant="card" as="h3" className="mb-3">Extreme Pressure Validation</Heading>
+            <p className="text-brand-steelGray font-body text-sm text-justify">
               100% of our bespoke cylinders undergo rigorous hydrostatic and
               shock-load testing to verify the integrity of custom-welded
               trunnions and flanges.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center group cursor-default">
+            <div className="bg-white rounded-lg mb-6 relative z-10 transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110">
+              <IconBox icon={<Package className="w-6 h-6" />} variant="primary" size="lg" />
+            </div>
+            <Heading variant="card" as="h3" className="mb-3">Secure Delivery</Heading>
+            <p className="text-brand-steelGray font-body text-sm text-justify">
+              Cylinders are thoroughly cleaned, painted, safely packaged, and dispatched to your facility PAN-India.
             </p>
           </div>
         </div>
@@ -903,16 +823,16 @@ function ManufacturingProcess() {
             className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4"
             aria-hidden="true"
           />
-          <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-4 relative z-10">
+          <Heading variant="subsection" as="h3" className="text-2xl md:text-3xl font-display font-bold text-white mb-4 relative z-10">
             Need to Reverse-Engineer a Damaged Imported Cylinder?
-          </h3>
-          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-6 relative z-10">
+          </Heading>
+          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-6 relative z-10 text-justify">
             Our engineering team can dismantle, measure, and replicate any
             cylinder — even without documentation or part numbers.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
             <Button
-              href="/request-quote/"
+              href="/request-quote"
               variant="primary"
               size="lg"
               className="font-bold"
@@ -939,101 +859,100 @@ function ManufacturingProcess() {
 /* ─── 09 FAQ Section ─── */
 function FAQSection() {
   return (
-    <Section bg="gray" id="faqs">
-      <Container>
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-brand-steelGray font-body">
-              Common questions about our custom hydraulic cylinder manufacturing
-              capabilities.
-            </p>
-          </div>
-          <FAQAccordion faqs={FAQS} injectSchema={false} />
-        </div>
-      </Container>
-    </Section>
+    <SiteFAQSection
+      faqs={FAQS}
+      title="Frequently Asked Questions"
+      description="Common questions about our custom hydraulic cylinder manufacturing capabilities."
+      injectSchema={false}
+    />
   );
 }
 
 /* ─── 09 Project Spotlight ─── */
 function ProjectSpotlight() {
   return (
-    <Section bg="white" id="project-spotlight">
+    <Section aria-labelledby="project-spotlight-heading" bg="white" id="project-spotlight">
       <Container>
-        <div className="max-w-4xl mx-auto">
-          {/* Section label */}
-          <div className="flex items-center gap-3 mb-6">
+        <div className="max-w-5xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-12">
             <Badge variant="years">CASE STUDY</Badge>
-            <span className="text-sm text-brand-steelGray font-body font-medium">
-              Reverse Engineering — Heavy Industry
-            </span>
+            <Heading id="project-spotlight-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mt-4 mb-3">
+              Reverse Engineering a 600-Ton Forging Press Cylinder
+            </Heading>
+            <p className="text-brand-steelGray font-body text-lg text-justify">
+              Heavy Metal Forging Plant &mdash; GIDC, Rajkot
+            </p>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-3">
-            Project Spotlight: Reverse Engineering a 600-Ton Forging Press Cylinder
-          </h2>
-          <p className="text-brand-steelGray font-body mb-10">
-            Client: Heavy Metal Forging Plant &mdash; GIDC, Rajkot
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
-            {/* Challenge */}
-            <div className="bg-brand-surfaceGray p-8 border-b md:border-b-0 md:border-r border-slate-200">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-8 rounded-full bg-honeywell-red/10 flex items-center justify-center shrink-0">
-                  <span className="text-honeywell-red font-bold text-sm">01</span>
-                </div>
-                <h3 className="text-lg font-display font-bold text-honeywell-navy">The Challenge</h3>
-              </div>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed">
-                The client&apos;s primary 600-ton forging press — an imported German machine from the
-                1990s — experienced a catastrophic cylinder failure. The OEM no longer existed, and
-                the massive cylinder was completely undocumented. The plant was losing production
-                revenue every day the press remained offline.
-              </p>
+          {/* Stats Strip */}
+          <div className="grid grid-cols-3 gap-4 mb-10">
+            <div className="bg-brand-surfaceGray rounded-xl p-5 text-center border border-slate-200">
+              <span className="block text-2xl md:text-3xl font-display font-bold text-honeywell-red">12</span>
+              <span className="text-xs font-body text-brand-steelGray uppercase tracking-wider mt-1">Days to Deliver</span>
             </div>
-
-            {/* Engineering Process */}
-            <div className="bg-white p-8 border-b md:border-b-0 md:border-r border-slate-200">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-8 rounded-full bg-honeywell-navy/10 flex items-center justify-center shrink-0">
-                  <span className="text-honeywell-navy font-bold text-sm">02</span>
-                </div>
-                <h3 className="text-lg font-display font-bold text-honeywell-navy">The Engineering</h3>
-              </div>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed">
-                Honeywell&apos;s team extracted the massive, broken cylinder. In our facility, we
-                completely dismantled it, utilizing advanced metrology to reverse-engineer the exact
-                bore dimensions, port locations, and mounting flanges. We generated a new 3D CAD
-                model and machined a completely new Custom Large Bore Cylinder to exacting tolerances.
-              </p>
+            <div className="bg-brand-surfaceGray rounded-xl p-5 text-center border border-slate-200">
+              <span className="block text-2xl md:text-3xl font-display font-bold text-honeywell-red">600</span>
+              <span className="text-xs font-body text-brand-steelGray uppercase tracking-wider mt-1">Ton Press</span>
             </div>
+            <div className="bg-brand-surfaceGray rounded-xl p-5 text-center border border-slate-200">
+              <span className="block text-2xl md:text-3xl font-display font-bold text-honeywell-red">100%</span>
+              <span className="text-xs font-body text-brand-steelGray uppercase tracking-wider mt-1">Drop-in Fit</span>
+            </div>
+          </div>
 
-            {/* Result */}
-            <div className="bg-honeywell-navy p-8">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                  <span className="text-white font-bold text-sm">03</span>
+          {/* Timeline Cards */}
+          <div className="relative">
+            {/* Connector line (desktop) */}
+            <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-slate-200" aria-hidden="true" />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Challenge */}
+              <div className="relative bg-white rounded-xl border border-slate-200 p-7 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red">
+                <div className="w-10 h-10 rounded-full bg-honeywell-red text-white flex items-center justify-center font-bold text-sm mb-5 relative z-10">
+                  01
                 </div>
-                <h3 className="text-lg font-display font-bold text-white">The Outcome</h3>
+                <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy mb-3">The Challenge</Heading>
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+                  The client&apos;s primary 600-ton forging press — an imported German machine from the
+                  1990s — experienced a catastrophic cylinder failure. The OEM no longer existed, and
+                  the massive cylinder was completely undocumented.
+                </p>
               </div>
-              <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6">
-                Manufactured, tested, and delivered within <strong className="text-white">12 days</strong>.
-                The new actuator dropped perfectly into the old German press. We also upgraded the
-                outdated seal design to modern polyurethane V-packing, extending the new
-                cylinder&apos;s lifespan well beyond the original OEM specifications.
-              </p>
-              <Button
-                href="/request-quote/"
-                variant="primary"
-                size="md"
-                className="font-bold w-full text-center justify-center"
-              >
-                GET SIMILAR RESULTS <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+
+              {/* Engineering */}
+              <div className="relative bg-white rounded-xl border border-slate-200 p-7 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red">
+                <div className="w-10 h-10 rounded-full bg-honeywell-navy text-white flex items-center justify-center font-bold text-sm mb-5 relative z-10">
+                  02
+                </div>
+                <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy mb-3">The Engineering</Heading>
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+                  Our team completely dismantled the broken cylinder, utilizing advanced metrology to
+                  reverse-engineer exact bore dimensions, port locations, and mounting flanges. A new 3D CAD
+                  model was generated and machined to exacting tolerances.
+                </p>
+              </div>
+
+              {/* Outcome */}
+              <div className="relative bg-honeywell-navy rounded-xl p-7 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red">
+                <div className="w-10 h-10 rounded-full bg-honeywell-red text-white flex items-center justify-center font-bold text-sm mb-5 relative z-10">
+                  03
+                </div>
+                <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-white mb-3">The Outcome</Heading>
+                <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6 text-justify">
+                  Manufactured, tested, and delivered within <strong className="text-white">12 days</strong>.
+                  The new actuator was a perfect drop-in fit. We also upgraded the seal design to modern
+                  polyurethane V-packing, extending lifespan beyond OEM specifications.
+                </p>
+                <Button
+                  href="/request-quote"
+                  variant="primary"
+                  size="md"
+                  className="font-bold w-full text-center justify-center"
+                >
+                  GET SIMILAR RESULTS <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -1061,8 +980,8 @@ function RelatedProducts() {
       description:
         'Custom CNC-machined logic blocks designed specifically to sequence the movement of your bespoke actuators with precision valve control.',
       category: 'Fluid Control',
-      imageSrc: '/images/products/hydraulic-manifold-block-manufacturer.webp',
-      href: '/products/manifold-blocks/',  // existing route
+      imageSrc: '/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp',
+      href: '#',  // existing route
       ctaText: 'View Manifold Blocks',
     },
     {
@@ -1070,28 +989,28 @@ function RelatedProducts() {
       description:
         'Complete integrated hydraulic system solutions — from reservoir to custom cylinder — engineered and commissioned as a single turnkey unit.',
       category: 'Complete Systems',
-      imageSrc: '/images/products/complete-hydraulic-system-gujarat.webp',
-      href: '/products/hydraulic-systems/',  // existing route
+      imageSrc: '/images/products/hero/custom-hydraulic-systems-ahmedabad.webp',
+      href: '#',  // existing route
       ctaText: 'View Complete Systems',
     },
   ];
 
   return (
-    <Section bg="gray" id="related-products">
+    <Section aria-labelledby="related-products-heading" bg="gray" id="related-products">
       <Container>
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+            <Heading id="related-products-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Integrate Your Custom Cylinder
-            </h2>
-            <p className="text-lg text-brand-steelGray font-body">
+            </Heading>
+            <p className="text-lg text-brand-steelGray font-body text-justify">
               Custom cylinders require sophisticated fluid generation and precision control.
               Combine your bespoke actuator with our power systems for a complete solution.
             </p>
           </div>
           <div className="mt-6 md:mt-0 shrink-0">
             <Link
-              href="/products/"
+              href="/products"
               className="text-honeywell-red font-bold hover:underline font-body"
             >
               Browse all products →
@@ -1151,13 +1070,13 @@ function EngineeringAdvantage() {
   ];
 
   return (
-    <Section bg="white" id="engineering-advantage">
+    <Section aria-labelledby="engineering-advantage-heading" bg="white" id="engineering-advantage">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="engineering-advantage-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             The Engineering Advantage
-          </h2>
-          <p className="text-lg text-brand-steelGray font-body">
+          </Heading>
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             We do not just sell parts. We are a complete hydraulic engineering firm. Leverage our
             full suite of technical services alongside your custom cylinder project.
           </p>
@@ -1167,7 +1086,7 @@ function EngineeringAdvantage() {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="flex gap-5 bg-brand-surfaceGray rounded-xl border border-slate-200 p-7 hover:shadow-md transition-shadow duration-300"
+              className="flex gap-5 bg-brand-surfaceGray rounded-xl border border-slate-200 p-7 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red"
             >
               <IconBox
                 icon={service.icon}
@@ -1176,10 +1095,10 @@ function EngineeringAdvantage() {
                 className="shrink-0 mt-1"
               />
               <div>
-                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">
+                <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy mb-2">
                   {service.title}
-                </h3>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed">
+                </Heading>
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
                   {service.description}
                 </p>
               </div>
@@ -1189,7 +1108,7 @@ function EngineeringAdvantage() {
 
         <div className="mt-10 text-center">
           <Button
-            href="/contact-us/"
+            href="/contact-us"
             variant="secondary"
             size="lg"
             className="font-bold"
@@ -1202,169 +1121,6 @@ function EngineeringAdvantage() {
   );
 }
 
-/* ─── 12 Local Service Areas ─── */
-function LocalServiceAreas() {
-  // NOTE: Location detail pages (/locations/*) do not yet exist.
-  // These cards are rendered as informational (non-clickable links) until location pages
-  // are built in a future Phase. href points to /contact/ as a safe existing fallback.
-  const locations = [
-    {
-      city: 'Ahmedabad',
-      description:
-        'Our headquarters. Immediate dispatch capability for custom and reverse-engineered cylinders to all Ahmedabad GIDC industrial zones.',
-      industries: ['Steel & Metallurgy', 'Automotive', 'Pharmaceuticals'],
-    },
-    {
-      city: 'Surat',
-      description:
-        'Rapid supply of bespoke hydraulic cylinders to Surat\'s textile machinery, diamond cutting equipment, and chemical plant sectors.',
-      industries: ['Textile Machinery', 'Chemical Plants', 'Diamond Industry'],
-    },
-    {
-      city: 'Rajkot',
-      description:
-        'Serving Rajkot\'s heavy engineering and forging clusters with large bore and reverse-engineered actuators for forging presses.',
-      industries: ['Heavy Forging', 'Engineering Works', 'Castings'],
-    },
-    {
-      city: 'Vadodara',
-      description:
-        'Supplying custom hydraulic solutions to Vadodara\'s petrochemical, fertilizer, and heavy fabrication industries.',
-      industries: ['Petrochemicals', 'Fertilizers', 'Heavy Fabrication'],
-    },
-    {
-      city: 'Bhavnagar',
-      description:
-        'Marine-grade and corrosion-resistant custom cylinders for Bhavnagar\'s ship recycling yards and offshore support vessels.',
-      industries: ['Ship Recycling', 'Marine Engineering', 'Port Handling'],
-    },
-    {
-      city: 'Jamnagar',
-      description:
-        'High-pressure bespoke cylinders for Jamnagar\'s refinery, brass parts, and heavy industrial manufacturing base.',
-      industries: ['Refineries', 'Brass Industry', 'Heavy Industry'],
-    },
-    {
-      city: 'Gandhinagar',
-      description:
-        'Custom actuators for special purpose machinery, government infrastructure projects, and electronics manufacturing in Gandhinagar.',
-      industries: ['SPM', 'Infrastructure', 'Electronics Mfg'],
-    },
-    {
-      city: 'Vapi',
-      description:
-        'Stainless steel and chemical-resistant cylinders for Vapi\'s GIDC chemical processing and pharmaceutical manufacturing companies.',
-      industries: ['Chemical Processing', 'Pharmaceuticals', 'GIDC Industries'],
-    },
-  ];
 
-  return (
-    <Section bg="gray" id="local-service-areas">
-      <Container>
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
-            Custom Hydraulic Cylinder Manufacturer in Gujarat
-          </h2>
-          <p className="text-lg text-brand-steelGray font-body">
-            As the premier custom hydraulic cylinder manufacturer in Gujarat, we provide rapid
-            reverse-engineering and bespoke manufacturing services to heavy industries across the state.
-          </p>
-        </div>
 
-        {/* 8-card grid — location detail pages to be created in future Phase */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Future route per card: /locations/{city-slug}/ — to be enabled in Phase 5.x */}
-          {locations.map((loc, idx) => (
-            <LocationCard
-              key={idx}
-              city={loc.city}
-              description={loc.description}
-              industries={loc.industries}
-              href="/contact-us/"
-              ctaText="Enquire Now"
-            />
-          ))}
-        </div>
-      </Container>
-    </Section>
-  );
-}
 
-/* ─── 13 Resources Section ─── */
-function ResourcesSection() {
-  // NOTE: /resources/* sub-routes do not yet exist.
-  // Cards are rendered as informational. CTAs route to /contact/ or /request-quote/ (existing routes).
-  const resources = [
-    {
-      icon: <Package className="w-6 h-6" />,
-      title: 'Submit CAD Drawings',
-      description:
-        'Securely upload your SolidWorks or AutoCAD blueprints for an immediate manufacturing consultation. Our engineers respond within one business day.',
-      ctaText: 'Upload & Request Quote',
-      ctaHref: '/request-quote/',  // existing route
-    },
-    {
-      icon: <BookOpen className="w-6 h-6" />,
-      title: 'Reverse Engineering Guide',
-      description:
-        'Learn how to accurately measure and document your obsolete cylinders for faster replication. Covers dimensional capturing, port identification, and seal specification.',
-      ctaText: 'Contact for Guide',
-      ctaHref: '/contact-us/',  // existing route
-    },
-    {
-      icon: <Calculator className="w-6 h-6" />,
-      title: 'Cylinder Force Calculator',
-      description:
-        'Determine the exact bore size required for your extreme-tonnage press applications. Our engineers use this data to specify the minimum safe barrel wall thickness.',
-      ctaText: 'Request Calculation',
-      ctaHref: '/contact-us/',  // existing route
-    },
-  ];
-
-  return (
-    <Section bg="white" id="resources">
-      <Container>
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
-            Resources & Engineering Guides
-          </h2>
-          <p className="text-lg text-brand-steelGray font-body">
-            Equip your plant engineers with vital data on custom hydraulic design.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {resources.map((resource, idx) => (
-            <div
-              key={idx}
-              className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8 flex flex-col hover:shadow-md transition-shadow duration-300"
-            >
-              <IconBox
-                icon={resource.icon}
-                variant="secondary"
-                size="lg"
-                className="mb-6"
-              />
-              <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">
-                {resource.title}
-              </h3>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed mb-6 flex-grow">
-                {resource.description}
-              </p>
-              <div className="mt-auto">
-                <Button
-                  href={resource.ctaHref}
-                  variant="outline"
-                  size="md"
-                  className="w-full justify-center font-semibold"
-                >
-                  {resource.ctaText} <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </Section>
-  );
-}

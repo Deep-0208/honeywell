@@ -1,17 +1,19 @@
 import React from 'react';
 import { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
 import { IconBox } from '@/components/ui/IconBox';
 import { Button } from '@/components/ui/Button';
-import { FAQAccordion } from '@/components/faq/FAQAccordion';
+import { CTA } from '@/components/ui/CTA';
+import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
 import JsonLd from '@/components/seo/JsonLd';
 import { COMPANY_INFO } from '@/lib/constants';
 import {
   ArrowRight,
-  Phone,
   Factory,
   Cog,
   Microscope,
@@ -28,28 +30,13 @@ import {
 // SEO Metadata
 // ─────────────────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Manufacturing Infrastructure | CNC Machining & Hydraulic Testing Facility',
-  description:
-    'Explore Honeywell Hydraulics manufacturing infrastructure in Ahmedabad — CNC machining centres, deep-hole drilling, honing machines, hydrostatic test rigs, and quality inspection equipment.',
-  alternates: {
+  ...buildMetadata({
+    title: 'Manufacturing Infrastructure | Honeywell Hydraulics',
+    description:
+      'Explore Honeywell Hydraulics manufacturing infrastructure — CNC machining, deep-hole drilling, honing machines, and hydrostatic test rigs in Ahmedabad.',
     canonical: '/infrastructure',
-  },
+  }),
   keywords: 'hydraulic manufacturing infrastructure, CNC machining facility ahmedabad, hydraulic testing equipment, manufacturing plant gujarat',
-  openGraph: {
-    title: 'Manufacturing Infrastructure | Honeywell Hydraulics Ahmedabad',
-    description:
-      'CNC machining centres, hydrostatic test rigs, and quality inspection equipment at our Ahmedabad manufacturing facility.',
-    url: '/infrastructure',
-    siteName: COMPANY_INFO.name,
-    locale: 'en_IN',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Manufacturing Infrastructure | Honeywell Hydraulics Ahmedabad',
-    description:
-      'CNC machining centres, hydrostatic test rigs, and quality inspection equipment at our Ahmedabad manufacturing facility.',
-  },
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -129,7 +116,7 @@ const CAPACITY_ITEMS = [
 ];
 
 const GALLERY_ITEMS = [
-  { name: 'CNC Machining Centre', file: '/images/infrastructure/cnc-machining-centre.webp', alt: 'CNC turning centre for hydraulic cylinder barrel machining' },
+  { name: 'CNC Machining Centre', file: '/images/facility/cnc-machining-center-hydraulic-cylinder.webp', alt: 'CNC turning centre for hydraulic cylinder barrel machining', isReady: true },
   { name: 'Hydrostatic Test Rig', file: '/images/infrastructure/hydrostatic-test-rig.webp', alt: 'Hydrostatic pressure testing rig for hydraulic cylinders' },
   { name: 'Assembly Bay', file: '/images/infrastructure/assembly-bay.webp', alt: 'Hydraulic power pack assembly bay' },
   { name: 'Quality Inspection', file: '/images/infrastructure/quality-inspection.webp', alt: 'Quality inspection equipment — CMM and bore gauges' },
@@ -182,17 +169,13 @@ export default function InfrastructurePage() {
       <JsonLd data={faqSchema} />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="bg-honeywell-navy text-white pt-12 pb-16 relative overflow-hidden">
+      <section className="bg-honeywell-navy text-white pt-6 md:pt-8 pb-16 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
         <Container className="relative z-10">
           <nav aria-label="Breadcrumb" className="text-sm font-body text-brand-borderGray mb-6">
             <ol className="flex items-center gap-2">
               <li>
                 <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              </li>
-              <li aria-hidden="true">&rsaquo;</li>
-              <li>
-                <Link href="/about-us" className="hover:text-white transition-colors">About Us</Link>
               </li>
               <li aria-hidden="true">&rsaquo;</li>
               <li className="text-white font-semibold" aria-current="page">Infrastructure</li>
@@ -212,11 +195,11 @@ export default function InfrastructurePage() {
         </Container>
       </section>
 
-      {/* ── Manufacturing Infrastructure Overview ────────────────────────── */}
-      <Section bg="white">
+      {/* ── Manufacturing Infrastructure Overview ──────────────────── */}
+      <Section bg="white" aria-labelledby="infra-overview-heading">
         <Container>
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4">
+          <div className="max-w-3xl mx-auto text-center mb-12 flex flex-col items-center">
+            <Heading as="h2" variant="section" id="infra-overview-heading" className="mb-3">
               Manufacturing Infrastructure Overview
             </Heading>
             <p className="text-lg text-brand-steelGray font-body">
@@ -239,11 +222,11 @@ export default function InfrastructurePage() {
         </Container>
       </Section>
 
-      {/* ── Machining Facilities ──────────────────────────────────────────── */}
-      <Section bg="gray">
+      {/* ── Machining Facilities ──────────────────── */}
+      <Section bg="gray" aria-labelledby="cnc-heading">
         <Container>
-          <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4">
+          <div className="text-center mb-12 flex flex-col items-center">
+            <Heading as="h2" variant="section" id="cnc-heading" className="mb-3">
               CNC Machining Centres
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -252,11 +235,11 @@ export default function InfrastructurePage() {
           </div>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-8" role="list">
             {MACHINING_EQUIPMENT.map((eq) => (
-              <li key={eq.name} className="bg-white border border-slate-200 rounded-sm p-6 hover:border-honeywell-red transition-colors">
+              <li key={eq.name} className="group bg-white border border-slate-200 rounded-sm p-6 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red">
                 <div className="w-12 h-12 rounded-full bg-honeywell-navy flex items-center justify-center text-white mb-4">
                   {eq.icon}
                 </div>
-                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">{eq.name}</h3>
+                <Heading as="h3" variant="card" className="mb-2 group-hover:text-honeywell-red transition-colors">{eq.name}</Heading>
                 <p className="text-sm text-brand-steelGray font-body leading-relaxed">{eq.desc}</p>
               </li>
             ))}
@@ -264,12 +247,12 @@ export default function InfrastructurePage() {
         </Container>
       </Section>
 
-      {/* ── Assembly Facilities ───────────────────────────────────────────── */}
-      <Section bg="white">
+      {/* ── Assembly Facilities ──────────────────── */}
+      <Section bg="white" aria-labelledby="assembly-heading">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Heading as="h2" variant="section" className="mb-6">
+              <Heading as="h2" variant="section" id="assembly-heading" className="mb-3">
                 Assembly &amp; Integration Bay
               </Heading>
               <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
@@ -303,11 +286,11 @@ export default function InfrastructurePage() {
         </Container>
       </Section>
 
-      {/* ── Testing Facilities ────────────────────────────────────────────── */}
-      <Section bg="gray">
+      {/* ── Testing Facilities ──────────────────── */}
+      <Section bg="gray" aria-labelledby="testing-heading">
         <Container>
-          <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4">
+          <div className="text-center mb-12 flex flex-col items-center">
+            <Heading as="h2" variant="section" id="testing-heading" className="mb-3">
               Hydrostatic Testing Facility
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -316,9 +299,9 @@ export default function InfrastructurePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {TESTING_EQUIPMENT.map((eq) => (
-              <div key={eq.name} className="bg-white border border-slate-200 rounded-sm p-6 hover:border-honeywell-red transition-colors">
+              <div key={eq.name} className="group bg-white border border-slate-200 rounded-sm p-6 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red">
                 <Microscope className="w-8 h-8 text-honeywell-navy mb-4" aria-hidden="true" />
-                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">{eq.name}</h3>
+                <Heading as="h3" variant="card" className="mb-2 group-hover:text-honeywell-red transition-colors">{eq.name}</Heading>
                 <p className="text-sm text-brand-steelGray font-body leading-relaxed">{eq.desc}</p>
               </div>
             ))}
@@ -326,14 +309,14 @@ export default function InfrastructurePage() {
         </Container>
       </Section>
 
-      {/* ── Quality Inspection Equipment ──────────────────────────────────── */}
-      <Section bg="white">
+      {/* ── Quality Inspection Equipment ──────────────────── */}
+      <Section bg="white" aria-labelledby="metrology-heading">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="bg-honeywell-navy text-white rounded-sm p-8 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
               <div className="relative z-10">
-                <h3 className="text-xl font-display font-bold mb-6">Metrology Equipment</h3>
+                <Heading as="h3" variant="card" className="text-white mb-6">Metrology Equipment</Heading>
                 <ul className="space-y-3">
                   {QUALITY_EQUIPMENT.map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-brand-borderGray font-body">
@@ -345,7 +328,7 @@ export default function InfrastructurePage() {
               </div>
             </div>
             <div>
-              <Heading as="h2" variant="section" className="mb-6">
+              <Heading as="h2" variant="section" id="metrology-heading" className="mb-3">
                 Quality Inspection Equipment
               </Heading>
               <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
@@ -364,12 +347,12 @@ export default function InfrastructurePage() {
         </Container>
       </Section>
 
-      {/* ── Storage & Logistics ───────────────────────────────────────────── */}
-      <Section bg="gray">
+      {/* ── Storage & Logistics ──────────────────── */}
+      <Section bg="gray" aria-labelledby="dispatch-heading">
         <Container>
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-8">
-              <Heading as="h2" variant="section" className="mb-4">
+            <div className="text-center mb-8 flex flex-col items-center">
+              <Heading as="h2" variant="section" id="dispatch-heading" className="mb-3">
                 Storage &amp; Dispatch
               </Heading>
               <p className="text-lg text-brand-steelGray font-body">
@@ -382,9 +365,9 @@ export default function InfrastructurePage() {
                 { icon: <ShieldCheck className="w-6 h-6" />, title: 'Finished Goods', desc: 'Protective packaging for hydraulic components prior to dispatch' },
                 { icon: <Factory className="w-6 h-6" />, title: 'Dispatch', desc: 'Documented dispatch with test certificates and material traceability records' },
               ].map((item) => (
-                <div key={item.title} className="bg-white border border-slate-200 rounded-sm p-5 text-center">
+                <div key={item.title} className="bg-white border border-slate-200 rounded-sm p-5 text-center transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group">
                   <IconBox icon={item.icon} variant="primary" className="mx-auto mb-3" />
-                  <h3 className="text-sm font-display font-bold text-honeywell-navy mb-2">{item.title}</h3>
+                  <Heading as="h3" variant="card" className="mb-2">{item.title}</Heading>
                   <p className="text-xs text-brand-steelGray font-body">{item.desc}</p>
                 </div>
               ))}
@@ -393,11 +376,11 @@ export default function InfrastructurePage() {
         </Container>
       </Section>
 
-      {/* ── Safety Standards ───────────────────────────────────────────────── */}
-      <Section bg="white">
+      {/* ── Safety Standards ──────────────────── */}
+      <Section bg="white" aria-labelledby="safety-heading">
         <Container>
-          <div className="max-w-3xl mx-auto text-center">
-            <Heading as="h2" variant="section" className="mb-4">
+          <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
+            <Heading as="h2" variant="section" id="safety-heading" className="mb-3">
               Safety &amp; Compliance
             </Heading>
             <p className="text-lg text-brand-steelGray font-body mb-8">
@@ -439,11 +422,11 @@ export default function InfrastructurePage() {
         </Container>
       </section>
 
-      {/* ── Infrastructure Gallery ────────────────────────────────────────── */}
-      <Section bg="gray">
+      {/* ── Infrastructure Gallery ──────────────────── */}
+      <Section bg="gray" aria-labelledby="gallery-heading">
         <Container>
-          <div className="text-center mb-12">
-            <Heading as="h2" variant="section" className="mb-4">
+          <div className="text-center mb-12 flex flex-col items-center">
+            <Heading as="h2" variant="section" id="gallery-heading" className="mb-3">
               Facility Gallery
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
@@ -452,13 +435,23 @@ export default function InfrastructurePage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {GALLERY_ITEMS.map((item) => (
-              <div key={item.name} className="bg-white border border-slate-200 rounded-sm overflow-hidden hover:border-honeywell-red transition-colors">
+              <div key={item.name} className="bg-white border border-slate-200 rounded-sm overflow-hidden transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group">
                 {/* IMAGE REQUIREMENT: {item.file} — Alt: {item.alt} — Priority: Medium/Low */}
-                <div className="aspect-square bg-brand-lightSurface flex items-center justify-center">
-                  <div className="text-center px-4">
-                    <Camera className="w-8 h-8 text-brand-borderGray mx-auto mb-2" aria-hidden="true" />
-                    <p className="text-xs text-[#94A3B8] font-body">{item.name}</p>
-                  </div>
+                <div className="aspect-square bg-brand-lightSurface flex items-center justify-center relative">
+                  {('isReady' in item) ? (
+                    <Image
+                      src={item.file}
+                      alt={item.alt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-premium"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                  ) : (
+                    <div className="text-center px-4">
+                      <Camera className="w-8 h-8 text-brand-borderGray mx-auto mb-2" aria-hidden="true" />
+                      <p className="text-xs text-[#94A3B8] font-body">{item.name}</p>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -467,51 +460,17 @@ export default function InfrastructurePage() {
       </Section>
 
       {/* ── Lead Generation CTA ──────────────────────────────────────────── */}
-      <section className="bg-honeywell-navy py-16 md:py-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 w-1/3 h-full bg-honeywell-red opacity-[0.03] skew-x-12 -translate-x-1/4" aria-hidden="true" />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-honeywell-red/40 to-transparent" aria-hidden="true" />
-        <Container className="relative z-10 text-center">
-          <Heading variant="section" className="text-white mb-4">
-            Need a Custom Hydraulic Solution?
-          </Heading>
-          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-4 text-lg leading-relaxed">
-            We design and manufacture precision hydraulic equipment tailored to your exact specifications.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-sm font-body">Hydraulic Cylinders</span>
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-sm font-body">Hydraulic Power Packs</span>
-            <span className="px-3 py-1 rounded-full bg-white/10 text-white text-sm font-body">Hydraulic Accessories</span>
-          </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button href="/contact-us" variant="primary" size="lg" rightIcon={<ArrowRight className="w-5 h-5" />}>
-              Contact Us
-            </Button>
-            <a
-              href="tel:+91-9924343873"
-              className="inline-flex items-center gap-2 bg-transparent border border-white text-white hover:bg-white hover:text-honeywell-navy font-semibold font-body text-sm px-6 py-3 rounded-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
-            >
-              <Phone className="w-4 h-4" aria-hidden="true" />
-              Talk to an Engineer
-            </a>
-          </div>
-        </Container>
-      </section>
+      <CTA
+        title="Need a Custom Hydraulic Solution?"
+        description="We design and manufacture precision hydraulic equipment tailored to your exact specifications. Factory-direct pricing from Ahmedabad."
+        primaryCtaText="Request a Quote"
+        primaryCtaHref="/request-quote/"
+        secondaryCtaText="Call +91 99243 43873"
+        secondaryCtaHref="tel:+91-9924343873"
+      />
 
       {/* ── FAQ ───────────────────────────────────────────────────────────── */}
-      <Section bg="white">
-        <Container>
-          <div className="max-w-3xl mx-auto">
-            <Heading as="h2" variant="section" className="mb-4 text-center">
-              Frequently Asked Questions
-            </Heading>
-            <p className="text-brand-steelGray font-body text-center mb-10">
-              Common questions about our manufacturing infrastructure and capabilities.
-            </p>
-            <FAQAccordion faqs={INFRA_FAQS} />
-          </div>
-        </Container>
-      </Section>
+      <SiteFAQSection faqs={INFRA_FAQS} />
     </>
   );
 }

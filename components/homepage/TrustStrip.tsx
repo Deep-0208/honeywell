@@ -1,8 +1,7 @@
 import React from 'react';
 import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
-import { Badge } from '@/components/ui/Badge';
-import { trustMetrics, trustBadges } from '@/data/homepage';
+import { trustMetrics } from '@/data/homepage';
 
 /**
  * TrustStrip — Section 02
@@ -10,7 +9,7 @@ import { trustMetrics, trustBadges } from '@/data/homepage';
  * Establishes credibility immediately below the hero with
  * factual metrics and verified trust badges.
  *
- * Components: Badge, Section, Container
+ * Components:  Section, Container
  * @see HOMEPAGE_ARCHITECTURE.md § Section 02
  */
 export function TrustStrip() {

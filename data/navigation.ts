@@ -68,11 +68,12 @@ export const siteNavigation: SiteNavigation = {
                 description:
                   'Custom industrial hydraulic cylinders with bore sizes from 40–300 mm. Engineered for precision and endurance.',
                 subcategories: [
-                  { label: 'Double Acting Cylinders', href: '/products/hydraulic-cylinders/' },
-                  { label: 'Single Acting Cylinders', href: '/products/hydraulic-cylinders/' },
-                  { label: 'Tie Rod Cylinders', href: '/products/hydraulic-cylinders/' },
-                  { label: 'Welded Cylinders', href: '/products/hydraulic-cylinders/' },
-                  { label: 'Telescopic Cylinders', href: '/products/hydraulic-cylinders/' },
+                  { label: 'Single Acting Cylinders', href: '/products/hydraulic-cylinders/single-acting-hydraulic-cylinders/' },
+                  { label: 'Double Acting Cylinders', href: '/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/' },
+                  { label: 'Custom Cylinders', href: '/products/hydraulic-cylinders/custom-hydraulic-cylinders/' },
+                  { label: 'Tie Rod Cylinders', href: '/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/' },
+                  { label: 'Welded Cylinders', href: '/products/hydraulic-cylinders/welded-hydraulic-cylinders/' },
+                  { label: 'Telescopic Cylinders', href: '/products/hydraulic-cylinders/telescopic-hydraulic-cylinders/' },
                 ],
               },
               {
@@ -81,10 +82,9 @@ export const siteNavigation: SiteNavigation = {
                 description:
                   'Custom-engineered hydraulic power units delivering precise flow rates for automated machinery and heavy presses.',
                 subcategories: [
-                  { label: 'Custom Power Units', href: '/products/hydraulic-power-packs/' },
-                  { label: 'Standard Power Packs', href: '/products/hydraulic-power-packs/' },
-                  { label: 'Mini Power Packs', href: '/products/hydraulic-power-packs/' },
-                  { label: 'High Pressure Units', href: '/products/hydraulic-power-packs/' },
+                  { label: '3-Phase Power Packs', href: '/products/hydraulic-power-packs/3-phase-hydraulic-power-packs/' },
+                  { label: 'DC Mini Power Packs', href: '/products/hydraulic-power-packs/dc-mini-power-packs/' },
+                  { label: 'High/Low Power Packs', href: '/products/hydraulic-power-packs/high-low-hydraulic-power-packs/' },
                 ],
               },
             ],
@@ -113,42 +113,42 @@ export const siteNavigation: SiteNavigation = {
             links: [
               {
                 label: 'Injection Moulding',
-                href: '/industries/injection-moulding/',
+                href: '#',
                 description: 'High-speed core pulls and high-pressure clamping solutions.',
               },
               {
                 label: 'Automotive',
-                href: '/industries/automotive/',
+                href: '#',
                 description: 'Synchronized robotic welding and assembly station hydraulics.',
               },
               {
                 label: 'Steel & Metallurgy',
-                href: '/industries/steel-metallurgy/',
+                href: '#',
                 description: 'Extreme-pressure fluid power for rolling mills and forging.',
               },
               {
                 label: 'Construction Equipment',
-                href: '/industries/construction-equipment/',
+                href: '#',
                 description: 'Rugged hydraulic cylinders and components for earthmoving and heavy machinery.',
               },
               {
                 label: 'Agriculture',
-                href: '/industries/agriculture/',
+                href: '#',
                 description: 'Reliable hydraulic solutions for farming and agri-equipment.',
               },
               {
                 label: 'Material Handling',
-                href: '/industries/material-handling/',
+                href: '#',
                 description: 'Judder-free lifting power for warehouse and logistics automation.',
               },
               {
                 label: 'Plastic Processing',
-                href: '/industries/plastic-processing/',
+                href: '#',
                 description: 'Precision hydraulics for extrusion, blow moulding, and thermoforming.',
               },
               {
                 label: 'Special Purpose Machines',
-                href: '/industries/special-purpose-machines/',
+                href: '#',
                 description: 'Custom fluid power for unique, one-off manufacturing equipment.',
               },
             ],

@@ -20,14 +20,21 @@ import { homepageProducts } from '@/data/homepage';
  */
 export function ProductsSection() {
   return (
-    <Section bg="gray" aria-labelledby="products-heading">
-      <Container>
+    <Section bg="gray" aria-labelledby="products-heading" className="relative overflow-hidden">
+      {/* Dynamic Background Elements */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div className="absolute inset-0 bg-[url('/images/noise.webp')] opacity-[0.02] mix-blend-overlay" />
+        <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-bl from-white to-transparent opacity-60" />
+        <div className="absolute -left-1/4 top-1/4 w-1/2 h-[150%] bg-white/40 skew-x-[20deg]" />
+      </div>
+
+      <Container className="relative z-10">
         {/* Section header */}
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
-          <Heading variant="section" as="h2" id="products-heading" className="text-honeywell-navy mb-4">
+          <Heading variant="section" underline="center" as="h2" id="products-heading" className="text-honeywell-navy mb-4 ">
             Our Products
+            
           </Heading>
-          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
         </div>
 
         {/* Product cards grid */}
@@ -49,7 +56,7 @@ export function ProductsSection() {
         {/* Section CTA */}
         <div className="text-center mt-10">
           <Button
-            href="/products/"
+            href="/products"
             variant="primary"
             size="lg"
             rightIcon={<ArrowRight className="w-5 h-5" />}

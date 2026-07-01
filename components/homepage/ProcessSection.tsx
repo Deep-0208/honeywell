@@ -36,10 +36,9 @@ export function ProcessSection() {
       <Container>
         {/* Section header */}
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
-          <Heading variant="section" as="h2" id="process-heading" className="text-honeywell-navy mb-4">
+          <Heading variant="section" underline="center" as="h2" id="process-heading" className="text-honeywell-navy mb-4">
             From Design to Dispatch
           </Heading>
-          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
         </div>
 
         {/* Process steps */}
@@ -79,7 +78,7 @@ export function ProcessSection() {
                 <Heading variant="card" as="h3" className="mb-2">
                   {step.title}
                 </Heading>
-                <p className="text-brand-steelGray font-body text-sm leading-relaxed max-w-[240px]">
+                <p className="text-brand-steelGray font-body text-sm leading-relaxed max-w-[240px] text-justify">
                   {step.body}
                 </p>
               </div>
@@ -90,7 +89,7 @@ export function ProcessSection() {
         {/* CTA */}
         <div className="text-center mt-10 md:mt-12">
           <Button
-            href="/request-quote/"
+            href="/request-quote"
             variant="primary"
             size="lg"
             rightIcon={<ArrowRight className="w-5 h-5" />}

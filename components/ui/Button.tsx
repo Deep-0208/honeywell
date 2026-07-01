@@ -39,7 +39,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
-    const baseStyles = 'inline-flex items-center justify-center font-body font-medium transition-all duration-200 ease-premium rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.97]';
+    const baseStyles = 'inline-flex items-center justify-center min-h-[44px] font-body font-medium transition-all duration-200 ease-premium rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.97]';
     
     const variants = {
       primary: 'bg-honeywell-red text-white hover:bg-[#C41220] focus-visible:ring-honeywell-red shadow-[0_2px_8px_-2px_rgba(227,27,35,0.3)] hover:shadow-[0_6px_20px_-4px_rgba(227,27,35,0.4)]',
@@ -72,7 +72,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           </svg>
         )}
         {!isLoading && leftIcon && <span className="mr-2 shrink-0">{leftIcon}</span>}
-        <span>{children}</span>
+        <span className="inline-flex items-center">{children}</span>
         {!isLoading && rightIcon && <span className="ml-2 shrink-0">{rightIcon}</span>}
       </>
     );

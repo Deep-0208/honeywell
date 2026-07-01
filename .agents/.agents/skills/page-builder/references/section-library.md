@@ -17,7 +17,7 @@ Every section follows this structure:
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         Section Title
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
       <p className="text-brand-steelGray font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
         Description text.
       </p>
@@ -56,7 +56,7 @@ Two-column layout: text left, image/placeholder right.
           className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
           What is <Product Name>?
         </Heading>
-        <div className="w-16 h-1 bg-honeywell-red rounded-full mb-6" aria-hidden="true" />
+
         <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
           First paragraph — define the product, primary keyword in first 100 words.
         </p>
@@ -90,7 +90,7 @@ Two-column layout: text left, image/placeholder right.
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         Key Features
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
     </div>
     <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
       {FEATURES.map((feature) => (
@@ -122,7 +122,7 @@ Uses the SpecTable component.
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         Technical Specifications
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
     </div>
     <div className="max-w-4xl mx-auto">
       <SpecTable specs={PRODUCT_SPECS} />
@@ -151,7 +151,7 @@ Step-by-step numbered process.
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         How It Works
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
     </div>
     <div className="max-w-3xl mx-auto space-y-8">
       {STEPS.map((step, i) => (
@@ -182,7 +182,7 @@ Card grid linking to application pages.
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         Applications
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
       <p className="text-brand-steelGray font-body text-base sm:text-lg max-w-2xl mx-auto mt-4">
         Where this product is used across industrial applications.
       </p>
@@ -221,7 +221,7 @@ Linked industry cards.
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         Industries Served
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
     </div>
     <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" role="list">
       {INDUSTRIES.map((industry) => (
@@ -251,7 +251,7 @@ Side-by-side comparison table.
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         Product Comparison
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
     </div>
     <div className="overflow-x-auto">
       <table className="w-full text-left border-collapse">
@@ -319,7 +319,7 @@ Badge-style certification display.
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         Certifications & Compliance
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {CERTIFICATIONS.map((cert) => (
@@ -349,7 +349,7 @@ Numbered process steps with timeline feel.
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         Our Manufacturing Process
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
     </div>
     <div className="max-w-4xl mx-auto">
       {PROCESS_STEPS.map((step, i) => (
@@ -386,7 +386,7 @@ Checklist-style quality assurance section.
           className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
           Quality Assurance
         </Heading>
-        <div className="w-16 h-1 bg-honeywell-red rounded-full mb-6" aria-hidden="true" />
+
         <ul className="space-y-3" role="list">
           {QUALITY_CHECKS.map((check) => (
             <li key={check} className="flex items-start gap-3 text-sm text-brand-darkSlate font-body">
@@ -429,7 +429,7 @@ Checklist-style quality assurance section.
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         Why Choose Honeywell Hydraulics
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
     </div>
     <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
       {WHY_CHOOSE.map((item) => (
@@ -463,7 +463,7 @@ Featured case study with results.
           className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
           {CASE_STUDY.title}
         </Heading>
-        <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <div className="bg-brand-surfaceGray rounded-sm p-6 text-center">
@@ -506,7 +506,7 @@ Map-adjacent list of service coverage areas.
           className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
           Service Areas
         </Heading>
-        <div className="w-16 h-1 bg-honeywell-red rounded-full mb-6" aria-hidden="true" />
+
         <p className="text-brand-darkSlate font-body leading-relaxed mb-6">
           We deliver hydraulic equipment across <Region> and pan-India.
         </p>
@@ -542,7 +542,7 @@ Why this location is strategic for hydraulic manufacturing.
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         Why <Location> for Hydraulic Manufacturing
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
     </div>
     <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
       {LOCATION_ADVANTAGES.map((adv) => (
@@ -603,7 +603,7 @@ Uses `FAQAccordion` component.
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         Frequently Asked Questions
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
     </div>
     <div className="max-w-3xl mx-auto">
       <FAQAccordion faqs={FAQS} />
@@ -639,7 +639,7 @@ Grid of testimonial cards.
         className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
         What Our Clients Say
       </Heading>
-      <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
     </div>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {TESTIMONIALS.map((testimonial) => (

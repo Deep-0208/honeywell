@@ -177,7 +177,7 @@ export default function ProductPage() {
             <Heading variant="section" as="h2" className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
               Key Features
             </Heading>
-            <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
           </div>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
             {PRODUCT_FEATURES.map((feature) => (
@@ -226,7 +226,7 @@ export default function ProductPage() {
             <Heading variant="section" as="h2" className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
               Frequently Asked Questions
             </Heading>
-            <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
+
           </div>
           <div className="max-w-3xl mx-auto">
             <FAQAccordion faqs={PRODUCT_FAQS} />

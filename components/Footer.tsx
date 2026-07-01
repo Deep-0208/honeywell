@@ -6,7 +6,6 @@ import {
   Mail,
   MapPin,
   ArrowRight,
-  MessageCircle,
 } from 'lucide-react';
 import { WhatsAppFloatingCTA } from '@/components/ui/WhatsAppFloatingCTA';
 import { COMPANY_INFO } from '@/lib/constants';
@@ -31,19 +30,19 @@ const footerColumns = [
     links: [
       { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders/' },
       { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs/' },
-      { label: 'Hydraulic Accessories', href: '/products/hydraulic-accessories/' },
+      { label: 'Hydraulic Accessories', href: '#' },
     ],
   },
 
   {
     heading: 'Industries',
     links: [
-      { label: 'Injection Moulding', href: '/industries/injection-moulding/' },
-      { label: 'Automotive', href: '/industries/automotive/' },
-      { label: 'Steel & Metallurgy', href: '/industries/steel-metallurgy/' },
-      { label: 'Construction Equipment', href: '/industries/construction-equipment/' },
-      { label: 'Material Handling', href: '/industries/material-handling/' },
-      { label: 'Special Purpose Machines', href: '/industries/special-purpose-machines/' },
+      { label: 'Injection Moulding', href: '#' },
+      { label: 'Automotive', href: '#' },
+      { label: 'Steel & Metallurgy', href: '#' },
+      { label: 'Construction Equipment', href: '#' },
+      { label: 'Material Handling', href: '#' },
+      { label: 'Special Purpose Machines', href: '#' },
     ],
   },
   {
@@ -193,7 +192,7 @@ export default function Footer() {
 
               {/* Contact Us CTA */}
               <Link
-                href="/contact-us/"
+                href="/contact-us"
                 className="
                   inline-flex items-center gap-2 mt-6
                   px-5 py-2.5 rounded-sm
@@ -210,14 +209,14 @@ export default function Footer() {
             </div>
 
             {/* NAVIGATION COLUMNS */}
-            {footerColumns.map((col, colIdx) => (
+            {footerColumns.map((col) => (
               <div key={col.heading} className="lg:mt-[108px]">
                 <h3 className="text-xs font-bold uppercase tracking-[0.12em] text-honeywell-navy font-body mb-4">
                   {col.heading}
                 </h3>
                 <ul className="space-y-2.5" role="list">
                   {col.links.map((link) => (
-                    <li key={link.href}>
+                    <li key={link.label}>
                       <Link
                         href={link.href}
                         className="
@@ -225,6 +224,7 @@ export default function Footer() {
                           transition-colors duration-150 font-body
                           focus-visible:outline-none focus-visible:underline
                           inline-block hover:translate-x-0.5 transition-transform
+                          py-1.5
                         "
                       >
                         {link.label}
@@ -283,13 +283,13 @@ export default function Footer() {
               <div className="flex items-center gap-6">
                 <nav aria-label="Legal navigation" className="flex items-center gap-4">
                   <Link
-                    href="/privacy-policy/"
+                    href="/privacy-policy"
                     className="text-xs text-[#94A3B8] hover:text-white transition-colors font-body focus-visible:outline-none focus-visible:underline"
                   >
                     Privacy Policy
                   </Link>
                   <Link
-                    href="/terms/"
+                    href="/terms"
                     className="text-xs text-[#94A3B8] hover:text-white transition-colors font-body focus-visible:outline-none focus-visible:underline"
                   >
                     Terms

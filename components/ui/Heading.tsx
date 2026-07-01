@@ -5,6 +5,7 @@ export type HeadingVariant = 'hero' | 'section' | 'subsection' | 'card';
 export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   variant?: HeadingVariant;
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  underline?: 'none' | 'left' | 'center';
   children: React.ReactNode;
 }
 
@@ -16,6 +17,7 @@ export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
 export function Heading({ 
   variant = 'section', 
   as, 
+  underline = 'none',
   className = '', 
   children, 
   ...props 
@@ -36,11 +38,18 @@ export function Heading({
     card: 'h4',
   } as const;
 
+  const underlineStyles = {
+    none: '',
+    center: 'relative inline-block pb-6 mb-8 after:content-[""] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-1 after:bg-honeywell-red after:rounded-full after:shadow-[0_0_10px_rgba(224,58,62,0.4)]',
+    left: 'relative inline-block pb-6 mb-8 after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1 after:bg-honeywell-red after:rounded-full after:shadow-[0_0_10px_rgba(224,58,62,0.4)]',
+  };
+
   const Component = as || defaultTags[variant];
 
   const classes = `
     ${baseStyles}
     ${variants[variant]}
+    ${underlineStyles[underline]}
     ${className}
   `.trim().replace(/\s+/g, ' ');
 

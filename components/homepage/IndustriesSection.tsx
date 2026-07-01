@@ -34,16 +34,15 @@ export function IndustriesSection() {
       <Container>
         {/* Section header */}
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
-          <Heading variant="section" as="h2" id="industries-heading" className="text-honeywell-navy mb-4">
+          <Heading variant="section" underline="center" as="h2" id="industries-heading" className="text-honeywell-navy mb-4">
             Industries We Serve
           </Heading>
-          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
         </div>
 
         {/* Industry cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {homepageIndustries.map((industry) => (
-            <div key={industry.href}>
+            <div key={industry.industryName}>
               <IndustryCard
                 industryName={industry.industryName}
                 description={industry.description}
@@ -56,7 +55,7 @@ export function IndustriesSection() {
 
         {/* Hub page link */}
         <div className="text-center mt-10">
-          <Button href="/industries/" variant="outline" size="lg">
+          <Button href="/industries" variant="outline" size="lg">
             View All Industries
           </Button>
         </div>

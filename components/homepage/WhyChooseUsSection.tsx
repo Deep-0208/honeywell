@@ -29,31 +29,34 @@ const iconMap: Record<string, React.ReactNode> = {
  */
 export function WhyChooseUsSection() {
   return (
-    <Section bg="gray" aria-labelledby="why-heading">
-      <Container>
+    <Section bg="gray" aria-labelledby="why-heading" className="relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div className="absolute inset-0 bg-[url('/images/noise.webp')] opacity-[0.02] mix-blend-overlay" />
+      </div>
+      <Container className="relative z-10">
         {/* Section header */}
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
-          <Heading variant="section" as="h2" id="why-heading" className="text-honeywell-navy mb-4">
+          <Heading variant="section" underline="center" as="h2" id="why-heading" className="text-honeywell-navy mb-4 ">
             Why Top Manufacturers Trust Us
+            
           </Heading>
-          <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true"></div>
         </div>
 
         {/* USP grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {usps.map((usp) => (
             <div key={usp.title}>
-              <div className="text-center group">
+              <div className="text-center group bg-white p-8 rounded-2xl shadow-sm border border-slate-200/50 hover:shadow-xl hover:border-honeywell-red/20 hover:-translate-y-1 transition-all duration-300 ease-premium h-full flex flex-col items-center">
                 <IconBox
                   icon={iconMap[usp.iconName] || <FaCogs className="w-6 h-6" />}
                   size="lg"
                   variant="primary"
-                  className="mx-auto mb-5 group-hover:scale-110 transition-transform duration-300"
+                  className="mx-auto mb-6 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-300 ease-premium"
                 />
-                <Heading variant="card" as="h3" className="mb-2">
+                <Heading variant="card" as="h3" className="mb-3 text-honeywell-navy">
                   {usp.title}
                 </Heading>
-                <p className="text-brand-steelGray font-body text-sm leading-relaxed">
+                <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
                   {usp.body}
                 </p>
               </div>
@@ -64,7 +67,7 @@ export function WhyChooseUsSection() {
         {/* CTA group */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 md:mt-12">
           <Button
-            href="/contact-us/"
+            href="/contact-us"
             variant="primary"
             size="lg"
             rightIcon={<ArrowRight className="w-5 h-5" />}
@@ -72,7 +75,7 @@ export function WhyChooseUsSection() {
             Contact Us
           </Button>
           <Button
-            href="/contact-us/"
+            href="/contact-us"
             variant="ghost"
             size="lg"
           >

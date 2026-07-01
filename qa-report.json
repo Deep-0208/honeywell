@@ -1,0 +1,236 @@
+[
+  {
+    "route": "/",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/about-us",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/contact-us",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/infrastructure",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/manufacturing-facility",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/products",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/products/hydraulic-cylinders",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/products/hydraulic-cylinders/custom-hydraulic-cylinders",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/products/hydraulic-cylinders/double-acting-hydraulic-cylinders",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/products/hydraulic-cylinders/telescopic-hydraulic-cylinders",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/products/hydraulic-cylinders/welded-hydraulic-cylinders",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/products/hydraulic-power-packs",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/products/hydraulic-power-packs/3-phase-hydraulic-power-packs",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/products/hydraulic-power-packs/dc-mini-power-packs",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/products/hydraulic-power-packs/high-low-hydraulic-power-packs",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/quality",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  },
+  {
+    "route": "/request-quote",
+    "total": 100,
+    "scores": {
+      "seo": 20,
+      "perf": 20,
+      "a11y": 20,
+      "ui": 20,
+      "conv": 20
+    },
+    "grade": "🟢 Production Ready",
+    "issues": []
+  }
+]

@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ChevronRight, ArrowRight, Layers } from 'lucide-react';
+import { ArrowRight, Layers } from 'lucide-react';
 
 import type { NavItem, NavLink } from '@/types/navigation';
 
@@ -39,10 +39,11 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
   useEffect(() => {
     if (isOpen && isProductsMega && item.megaMenu) {
       const firstWithSub = item.megaMenu.columns.flatMap(c => c.links).find(l => l.subcategories?.length);
+
       // eslint-disable-next-line react-hooks/set-state-in-effect
       if (firstWithSub) setActiveLink(firstWithSub);
     } else {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
+
       setActiveLink(null);
     }
   }, [isOpen, isProductsMega, item]);
@@ -58,19 +59,18 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
           role="navigation"
           aria-label={`${item.label} submenu`}
           className={`
-            absolute top-full left-0 z-50
+            absolute top-full z-50
             bg-white border border-slate-200 rounded-b-lg
             shadow-[0_20px_60px_-15px_rgba(13,27,92,0.12)]
-            ${isProductsMega ? 'w-[820px]' : 'w-[380px]'}
+            ${isProductsMega ? 'w-[700px] xl:w-[820px] right-0 lg:right-[-2rem] xl:right-auto xl:left-1/2 xl:-translate-x-1/2' : 'w-[320px] xl:w-[380px] left-0'}
           `}
-          style={isProductsMega ? { left: 'max(-25%, calc(100vw - 850px) * -1)' } : undefined}
         >
           {/* Top accent line */}
           <div
             className="h-[2px] bg-gradient-to-r from-honeywell-red via-honeywell-navy to-honeywell-red rounded-t-lg"
           />
 
-          <div className={`p-6 ${isProductsMega ? 'flex gap-8' : ''}`}>
+          <div className={`p-5 xl:p-6 ${isProductsMega ? 'flex gap-5 xl:gap-8' : ''}`}>
             {/* ── Link columns ── */}
             <div
               className={isProductsMega ? 'flex-1' : ''}
@@ -95,8 +95,8 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
                             group relative flex items-start gap-3 p-3 rounded-xl
                             transition-all duration-300 ease-premium border border-transparent
                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy
-                            ${activeLink === link 
-                              ? 'bg-white shadow-[0_8px_24px_-6px_rgba(13,27,92,0.08)] border-slate-100' 
+                            ${activeLink === link
+                              ? 'bg-white shadow-[0_8px_24px_-6px_rgba(13,27,92,0.08)] border-slate-100'
                               : 'hover:bg-white hover:shadow-[0_8px_24px_-6px_rgba(13,27,92,0.08)] hover:border-slate-100'}
                           `}
                         >
@@ -126,7 +126,7 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
                               </span>
                             )}
                           </div>
-                          
+
                           <ArrowRight className={`
                             w-4 h-4 mt-0.5 shrink-0 transition-all duration-300 ease-premium
                             ${activeLink === link ? 'opacity-100 translate-x-0 text-honeywell-red' : 'opacity-0 -translate-x-3 text-brand-borderGray group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-honeywell-red'}
@@ -142,11 +142,11 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
             {/* ── Dynamic Subcategories or Featured CTA (Products only) ── */}
             {isProductsMega && (
               <div
-                className="w-[340px] shrink-0 bg-brand-surfaceGray/60 rounded-xl p-6 border border-slate-100 flex flex-col justify-between relative overflow-hidden"
+                className="w-[300px] xl:w-[340px] shrink-0 bg-brand-surfaceGray/60 rounded-xl p-5 xl:p-6 border border-slate-100 flex flex-col justify-between relative overflow-hidden"
               >
                 {/* Subtle radial gradient background effect for premium feel */}
                 <div className="absolute top-0 right-0 w-48 h-48 bg-white/40 blur-2xl rounded-full -z-10 pointer-events-none" aria-hidden="true" />
-                
+
                 {activeLink?.subcategories ? (
                   <div className="w-full flex flex-col h-full relative z-10">
                     <div className="mb-5">
@@ -154,7 +154,7 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
                         {activeLink.label}
                       </span>
                     </div>
-                    
+
                     <ul className="space-y-2 mb-6 flex-1">
                       {activeLink.subcategories.map((sub, idx) => (
                         <li key={idx}>
@@ -170,21 +170,21 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
                           >
                             {/* Left subtle red accent bar on hover */}
                             <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-honeywell-red rounded-r-full opacity-0 group-hover:h-3/5 group-hover:opacity-100 transition-all duration-300 ease-premium" aria-hidden="true" />
-                            
+
                             <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-slate-100 text-brand-steelGray group-hover:bg-red-50 group-hover:text-honeywell-red transition-colors duration-300 shrink-0">
                               <Layers className="w-4 h-4" aria-hidden="true" />
                             </div>
-                            
+
                             <span className="text-[13px] font-semibold text-honeywell-navy font-display flex-1 group-hover:text-brand-deepNavy transition-colors">
                               {sub.label}
                             </span>
-                            
+
                             <ArrowRight className="w-4 h-4 text-brand-borderGray opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-honeywell-red transition-all duration-300 ease-premium shrink-0" aria-hidden="true" />
                           </Link>
                         </li>
                       ))}
                     </ul>
-                    
+
                     <Link
                       href={activeLink.href}
                       onClick={onClose}
