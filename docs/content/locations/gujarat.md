@@ -168,23 +168,80 @@ By partnering with Honeywell Hydraulics in Gujarat, you gain:
 # 10. Frequently Asked Questions (FAQ)
 
 **Q: Do you deliver hydraulic cylinders to all GIDC estates in Gujarat?**
-**A:** Yes, we supply our hydraulic equipment to every single recognized GIDC and private industrial estate across Gujarat.
+**A:** Yes, we supply our hydraulic equipment to every single recognized GIDC and private industrial estate across Gujarat — including Kathwada, Odhav, Vatva, Naroda, Changodar, Sanand, and Bavla in Ahmedabad; Makarpura, Waghodia, and Savli in Vadodara; Sachin, Pandesara, and Hazira in Surat; Aji, Lodhika, and Metoda in Rajkot; and all other GIDC zones statewide.
 
 **Q: Can I visit your factory in Ahmedabad before placing a large order?**
-**A:** Absolutely. We highly encourage factory visits, especially for OEMs and bulk buyers. 
+**A:** Absolutely. We highly encourage factory visits, especially for OEMs and bulk buyers. You can audit our CNC machining centres, inspect our hydrostatic testing rigs, and meet the engineers who will design your equipment. Our facility is at B-18, Suryam Plaza Estate, Kathwada GIDC, Ahmedabad. Call +91 9924343873 to schedule a visit.
 
 **Q: How fast can you deliver a custom hydraulic cylinder to Surat or Rajkot?**
-**A:** Once manufactured, standard transit time to Surat, Rajkot, or Vadodara is just 1 to 2 days. 
+**A:** Once manufactured, standard transit time to Surat, Rajkot, or Vadodara is just 1 to 2 days. Within Ahmedabad, we offer same-day delivery for stock items and emergency components. Custom-manufactured cylinders are produced in 7–15 working days at our Kathwada facility.
+
+**Q: What certifications does Honeywell Hydraulics hold?**
+**A:** We are ISO 9001:2015 certified. All hydraulic cylinders are 100% hydrostatic pressure tested at 1.5x rated working pressure before dispatch. We also provide EN 10204 Type 3.1 material certificates for all critical components, which is essential for procurement compliance in steel plants and government projects.
+
+**Q: Do you offer emergency hydraulic cylinder repair in Gujarat?**
+**A:** Yes. If you experience a hydraulic cylinder failure in any Gujarat GIDC, you can bring the unit to our Kathwada facility for immediate assessment. Our [Hydraulic Cylinder Repair](/services/hydraulic-cylinder-repair/) team performs teardown, re-boring, re-sealing, or complete re-machining to get you back online with minimal downtime.
+
+**Q: How does your pricing compare to other Gujarat hydraulic manufacturers?**
+**A:** As a direct manufacturer (not a trader or dealer), we offer factory-direct pricing without intermediary markups. Our integrated manufacturing facility — where we machine, assemble, and test everything under one roof — gives us a significant cost advantage over companies that outsource individual processes. We welcome competitive quote comparisons.
+
+**Q: Can you manufacture hydraulic cylinders for extreme-pressure applications?**
+**A:** Yes. We manufacture heavy-duty cylinders rated for working pressures up to 350 Bar (5,000 PSI). These are used in steel plant rolling mills, heavy forging presses, and deep-draw forming operations across Gujarat. Our engineering team can size cylinders for your specific load and pressure requirements.
+
+**Q: Do you supply complete hydraulic systems, or only individual components?**
+**A:** We supply both. In addition to individual hydraulic cylinders, power packs, and manifold blocks, we design and deliver [complete turnkey hydraulic systems](/hydraulic-systems/) — including circuit design, component selection, manifold machining, piping, wiring, and factory acceptance testing. This makes us a single-source hydraulic partner for Gujarat's OEMs and SPM builders.
 
 ---
 
 # 11. Request a Quote — Delivered to Your Gujarat Facility
 
-Stop relying on generic trading houses for your critical machinery. Upgrade to precision-engineered hydraulic equipment manufactured right here in Gujarat. 
+Stop relying on generic trading houses for your critical machinery. Upgrade to precision-engineered hydraulic equipment manufactured right here in Gujarat — with same-day availability in Ahmedabad and 1–2 day delivery across the state.
 
-**[ REQUEST A FREE QUOTE → ](/request-quote/)**
+**[REQUEST A FREE QUOTE →](/request-quote/)**
 
 **Speak to our Engineering Team:**
 📞 **Call Us:** +91 9924343873
 💬 **WhatsApp:** [Message us for a quick response](https://wa.me/919924343873)
-[VIEW ENGINEERING RESOURCES →](/resources/engineering-guides/)
+📧 **Email:** sales@honeywellhydraulics.com
+
+---
+
+## Service Area Schema Content
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Hydraulic Cylinder Manufacturing & Supply",
+  "provider": {
+    "@type": "ManufacturingBusiness",
+    "name": "Honeywell Hydraulics",
+    "telephone": "+91-9924343873",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "B-18, Suryam Plaza Estate, Near Nilkanth Estate, Road no. 15, Kathwada GIDC",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "postalCode": "382430",
+      "addressCountry": "IN"
+    }
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Gujarat",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "India"
+    }
+  },
+  "description": "Custom hydraulic cylinder, power pack, and system manufacturing and supply across all Gujarat GIDC estates. Same-day delivery in Ahmedabad, 1-2 day delivery statewide."
+}
+```
+
+**HONEYWELL HYDRAULICS**
+*Gujarat's Trusted Hydraulic Manufacturer*
+📞 **Call Us:** +91 9924343873
+💬 **WhatsApp:** [Message our Team](https://wa.me/919924343873)
+📧 **Email:** sales@honeywellhydraulics.com
+📍 **Manufacturing HQ:** B-18, Suryam Plaza Estate, Near Nilkanth Estate, Road no. 15, Kathwada GIDC, Ahmedabad, Gujarat 382430
+

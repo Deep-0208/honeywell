@@ -171,6 +171,58 @@ export const siteNavigation: SiteNavigation = {
     },
 
     /* ──────────────────────────────────────────────
+       AREAS WE SERVE — Mega Menu
+       ────────────────────────────────────────────── */
+    {
+      label: 'Areas We Serve',
+      href: '/locations/',
+      megaMenu: {
+        columns: [
+          {
+            heading: 'Regions',
+            links: [
+              {
+                label: 'Gujarat',
+                href: '/locations/gujarat/',
+                description: 'Our primary manufacturing and supply hub.',
+                subcategories: [
+                  { label: 'Ahmedabad', href: '/locations/ahmedabad/' },
+                  { label: 'Surat', href: '/locations/surat/' },
+                  { label: 'Vadodara', href: '/locations/vadodara/' },
+                  { label: 'Rajkot', href: '/locations/rajkot/' },
+                  { label: 'Bhavnagar', href: '/locations/bhavnagar/' },
+                  { label: 'Gandhinagar', href: '/locations/gandhinagar/' },
+                  { label: 'Vapi', href: '/locations/vapi-valsad/' },
+                  { label: 'Jamnagar', href: '/locations/jamnagar/' },
+                ],
+              },
+              {
+                label: 'Maharashtra',
+                href: '/locations/maharashtra/',
+                description: 'Serving Pune, Mumbai, and major MIDC zones.',
+              },
+              {
+                label: 'Rajasthan',
+                href: '/locations/rajasthan/',
+                description: 'Supplying to RIICO industrial areas like Bhiwadi.',
+              },
+              {
+                label: 'West Bengal',
+                href: '/locations/west-bengal/',
+                description: 'Solutions for heavy engineering in Kolkata and Durgapur.',
+              },
+              {
+                label: 'Pan India',
+                href: '/locations/india/',
+                description: 'Nationwide delivery across all major industrial cities.',
+              },
+            ],
+          },
+        ],
+      },
+    },
+
+    /* ──────────────────────────────────────────────
        GALLERY — Direct Link
        ────────────────────────────────────────────── */
     {

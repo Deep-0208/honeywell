@@ -33,11 +33,11 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
-  const isProductsMega = item.label === 'Products';
+  const isLargeMega = item.label === 'Products' || item.label === 'Areas We Serve';
   const [activeLink, setActiveLink] = useState<NavLink | null>(null);
 
   useEffect(() => {
-    if (isOpen && isProductsMega && item.megaMenu) {
+    if (isOpen && isLargeMega && item.megaMenu) {
       const firstWithSub = item.megaMenu.columns.flatMap(c => c.links).find(l => l.subcategories?.length);
 
       // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -46,7 +46,7 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
 
       setActiveLink(null);
     }
-  }, [isOpen, isProductsMega, item]);
+  }, [isOpen, isLargeMega, item]);
 
   if (!item.megaMenu) return null;
 
@@ -62,7 +62,7 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
             absolute top-full z-50
             bg-white border border-slate-200 rounded-b-lg
             shadow-[0_20px_60px_-15px_rgba(13,27,92,0.12)]
-            ${isProductsMega ? 'w-[700px] xl:w-[820px] right-0 lg:right-[-2rem] xl:right-auto xl:left-1/2 xl:-translate-x-1/2' : 'w-[320px] xl:w-[380px] left-0'}
+            ${isLargeMega ? 'w-[700px] xl:w-[820px] right-0 lg:right-[-2rem] xl:right-auto xl:left-1/2 xl:-translate-x-1/2' : 'w-[320px] xl:w-[380px] left-0'}
           `}
         >
           {/* Top accent line */}
@@ -70,10 +70,10 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
             className="h-[2px] bg-gradient-to-r from-honeywell-red via-honeywell-navy to-honeywell-red rounded-t-lg"
           />
 
-          <div className={`p-5 xl:p-6 ${isProductsMega ? 'flex gap-5 xl:gap-8' : ''}`}>
+          <div className={`p-5 xl:p-6 ${isLargeMega ? 'flex gap-5 xl:gap-8' : ''}`}>
             {/* ── Link columns ── */}
             <div
-              className={isProductsMega ? 'flex-1' : ''}
+              className={isLargeMega ? 'flex-1' : ''}
             >
               {item.megaMenu.columns.map((column, colIdx) => (
                 <div key={colIdx}>
@@ -140,7 +140,7 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
             </div>
 
             {/* ── Dynamic Subcategories or Featured CTA (Products only) ── */}
-            {isProductsMega && (
+            {isLargeMega && (
               <div
                 className="w-[300px] xl:w-[340px] shrink-0 bg-brand-surfaceGray/60 rounded-xl p-5 xl:p-6 border border-slate-100 flex flex-col justify-between relative overflow-hidden"
               >
