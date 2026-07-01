@@ -32,7 +32,7 @@ export function SiteFAQSection({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column */}
           <div className="lg:col-span-4 lg:sticky lg:top-32">
-            <Heading variant="section" underline="center" as="h2" id="faqs-heading" className="text-honeywell-navy mb-4">
+            <Heading variant="section" as="h2" id="faqs-heading" className="text-honeywell-navy mb-4">
               {title}
             </Heading>
             <p className="text-brand-steelGray font-body text-lg mb-8 leading-relaxed">

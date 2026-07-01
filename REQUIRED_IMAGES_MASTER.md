@@ -68,6 +68,12 @@ All files in `/images/clients/*.webp`:
 | Manufacturing: Welding Bay | `/manufacturing-facility/` | `/images/manufacturing/welding-bay.webp` | Heavy-duty welding bay for cylinder barrel construction | Medium | ❌ Pending |
 | Manufacturing: Assembly Area | `/manufacturing-facility/` | `/images/manufacturing/assembly-area.webp` | Hydraulic power pack assembly area | Medium | ❌ Pending |
 | Manufacturing: Test Rig | `/manufacturing-facility/` | `/images/manufacturing/test-rig.webp` | Hydrostatic pressure test rig | Medium | ❌ Pending |
+| Pillar: Manifold Blocks | `/products/manifold-blocks/` | `/images/products/manifold-blocks/hydraulic-manifold-blocks-manufacturer.webp` | Hydraulic manifold blocks manufacturer in Ahmedabad | High | ❌ Pending |
+| CETOP Manifold Blocks | `/products/manifold-blocks/cetop-manifold-blocks/` | `/images/products/manifold-blocks/cetop-manifold-block-iso-4401.webp` | CETOP manifold blocks manufacturer in Ahmedabad — Honeywell Hydraulics | High | ❌ Pending |
+| Custom Manifold Blocks | `/products/manifold-blocks/custom-manifold-blocks/` | `/images/products/manifold-blocks/custom-manifold-block-cnc-machined.webp` | Custom manifold block manufacturer in Ahmedabad — Honeywell Hydraulics | High | ❌ Pending |
+| Multi-Station Blocks | `/products/manifold-blocks/multi-station-manifold-blocks/` | `/images/products/manifold-blocks/multi-station-manifold-block.webp` | Multi-station manifold blocks manufacturer in Ahmedabad — Honeywell Hydraulics | High | ❌ Pending |
+| 06-Size Manifold Blocks | `/products/manifold-blocks/06-size-manifold-blocks/` | `/images/products/manifold-blocks/06-size-manifold-block-ng10.webp` | NG10 06-size manifold blocks manufacturer in Ahmedabad — Honeywell Hydraulics | High | ❌ Pending |
+| 10-Size Manifold Blocks | `/products/manifold-blocks/10-size-manifold-blocks/` | `/images/products/manifold-blocks/10-size-manifold-block-ng16.webp` | NG16 10-size manifold blocks manufacturer in Ahmedabad — Honeywell Hydraulics | High | ❌ Pending |
 
 ---
 

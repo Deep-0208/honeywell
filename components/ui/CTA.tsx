@@ -50,7 +50,7 @@ export function CTA({
       />
       
       <Container className="relative z-10 text-center">
-        <Heading variant="section" underline="left" id="cta-heading" className="text-white mb-4">
+        <Heading variant="section" id="cta-heading" className="text-white mb-4">
           {title}
         </Heading>
         

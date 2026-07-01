@@ -47,6 +47,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/products/hydraulic-power-packs/dc-mini-power-packs/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/products/hydraulic-power-packs/high-low-hydraulic-power-packs/', changeFrequency: 'monthly', priority: 0.8 },
 
+    // ── Hydraulic Manifold Blocks Product Pages ──
+    { path: '/products/manifold-blocks/', changeFrequency: 'weekly', priority: 0.9 },
+    { path: '/products/manifold-blocks/cetop-manifold-blocks/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/manifold-blocks/custom-manifold-blocks/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/manifold-blocks/multi-station-manifold-blocks/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/manifold-blocks/06-size-manifold-blocks/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/manifold-blocks/10-size-manifold-blocks/', changeFrequency: 'monthly', priority: 0.8 },
+
     // ── Company Pages ──
     { path: '/about-us/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/contact-us/', changeFrequency: 'monthly', priority: 0.8 },

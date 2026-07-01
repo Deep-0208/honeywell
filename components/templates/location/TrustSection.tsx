@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';

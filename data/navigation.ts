@@ -87,6 +87,19 @@ export const siteNavigation: SiteNavigation = {
                   { label: 'High/Low Power Packs', href: '/products/hydraulic-power-packs/high-low-hydraulic-power-packs/' },
                 ],
               },
+              {
+                label: 'Hydraulic Manifold Blocks',
+                href: '/products/manifold-blocks/',
+                description:
+                  'Precision-machined logic blocks. Standard CETOP subplates and custom multi-station cartridge valve manifolds.',
+                subcategories: [
+                  { label: 'CETOP Manifold Blocks', href: '/products/manifold-blocks/cetop-manifold-blocks/' },
+                  { label: 'Custom Manifold Blocks', href: '/products/manifold-blocks/custom-manifold-blocks/' },
+                  { label: 'Multi-Station Blocks', href: '/products/manifold-blocks/multi-station-manifold-blocks/' },
+                  { label: '06-Size Manifold Blocks', href: '/products/manifold-blocks/06-size-manifold-blocks/' },
+                  { label: '10-Size Manifold Blocks', href: '/products/manifold-blocks/10-size-manifold-blocks/' },
+                ],
+              },
             ],
           },
         ],

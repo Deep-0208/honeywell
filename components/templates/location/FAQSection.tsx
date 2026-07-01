@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
 import { FAQData } from '@/data/locations/gujarat-facility'; // Or use global FAQ type

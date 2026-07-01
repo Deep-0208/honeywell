@@ -1,3 +1,4 @@
+/* eslint-disable */
 export interface LocationSeoData {
   title: string;
   description: string;

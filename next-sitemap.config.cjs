@@ -70,6 +70,7 @@ module.exports = {
     const productPillars = [
       '/products/hydraulic-cylinders',
       '/products/hydraulic-power-packs',
+      '/products/manifold-blocks',
       '/products/hydraulic-accessories',
     ];
     if (productPillars.some((p) => path === p || path === `${p}/`)) {
