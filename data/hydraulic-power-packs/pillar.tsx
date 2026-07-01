@@ -1,31 +1,32 @@
 import React from 'react';
-import { FaIndustry, FaTractor, FaCogs, FaTruck, FaHammer } from 'react-icons/fa';
+import { FaIndustry, FaTractor, FaCogs, FaTruck, FaHammer, FaShieldAlt, FaTools, FaBolt } from 'react-icons/fa';
 
-export interface PowerPackType {
-  title: string;
-  description: string;
-  href?: string;
-  image: string;
-}
+import { PowerPackType, PowerPackIndustry, PowerPackSpec, FAQItem, PowerPackFeature } from './types';
 
-export interface PowerPackIndustry {
-  industryName: string;
-  description: string;
-  href: string;
-  icon: React.ReactNode;
-}
+export const PILLAR_FEATURES: PowerPackFeature[] = [
+  {
+    icon: <FaTools className="w-5 h-5" />,
+    title: 'Custom Design',
+    description: 'Engineered using advanced CAD software for exact fluid dynamic calculation, heat load analysis, and 3D spatial integration perfectly matched to your machine cycle.',
+  },
+  {
+    icon: <FaCogs className="w-5 h-5" />,
+    title: 'Engineering Expertise',
+    description: 'All custom valve blocks and manifolds are CNC-machined in-house to ensure absolute zero-leak internal galleries and precise control logic.',
+  },
+  {
+    icon: <FaShieldAlt className="w-5 h-5" />,
+    title: 'Rigorous Testing',
+    description: 'Every power pack is run on our test bench under simulated maximum load to verify flow rates, pressure relief settings, and thermal stability.',
+  },
+  {
+    icon: <FaBolt className="w-5 h-5" />,
+    title: 'Proven Reliability',
+    description: 'Engineered with integrated thermal management to prevent fluid overheating. Our power units are built for continuous 24/7 manufacturing without thermal degradation.',
+  }
+];
 
-export interface PowerPackSpec {
-  parameter: string;
-  value: string;
-}
-
-export interface FAQItem {
-  question: string;
-  answer: string;
-}
-
-export const powerPackTypes: PowerPackType[] = [
+export const PILLAR_BLOCK_TYPES: PowerPackType[] = [
   {
     title: "3 Phase Industrial Power Packs",
     description: "Heavy-duty power units with high-efficiency 3-phase motors and large reservoir capacities for 24/7 continuous factory operation.",
@@ -56,7 +57,7 @@ export const powerPackTypes: PowerPackType[] = [
   }
 ];
 
-export const powerPackIndustries: PowerPackIndustry[] = [
+export const PILLAR_INDUSTRIES: PowerPackIndustry[] = [
   {
     industryName: "Injection Moulding",
     description: "High-flow hydraulic power packs delivering sustained pressure for rapid mould clamping and injection cycles without overheating.",
@@ -95,7 +96,7 @@ export const powerPackIndustries: PowerPackIndustry[] = [
   }
 ];
 
-export const powerPackSpecs: PowerPackSpec[] = [
+export const PILLAR_SPECS: PowerPackSpec[] = [
   { parameter: "Electric Motor Power", value: "0.5 HP to 150+ HP (IE2 / IE3 High Efficiency)" },
   { parameter: "Pump Flow Rate (Displacement)", value: "1 LPM to 300+ LPM" },
   { parameter: "Operating Pressure", value: "Standard: 160 Bar / 210 Bar. Heavy-Duty: Up to 350+ Bar" },
@@ -105,7 +106,7 @@ export const powerPackSpecs: PowerPackSpec[] = [
   { parameter: "Cooling Options", value: "Air-Blast Oil Coolers, Shell & Tube Heat Exchangers" }
 ];
 
-export const powerPackFAQs: FAQItem[] = [
+export const PILLAR_FAQS: FAQItem[] = [
   {
     question: "Do you manufacture custom hydraulic power packs for specific machines?",
     answer: "Yes. While we offer standard industrial units, our primary expertise is custom engineering. We design the reservoir dimensions, motor horsepower, pump displacement, and valve logic specifically to match your machine's unique cycle profile."

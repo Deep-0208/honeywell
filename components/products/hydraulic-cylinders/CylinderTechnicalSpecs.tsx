@@ -5,24 +5,8 @@ import { Heading } from '@/components/ui/Heading';
 import { SpecTable } from '@/components/tables/SpecTable';
 import { Button } from '@/components/ui/Button';
 import { Download } from 'lucide-react';
-
+import { PILLAR_SPECS } from '@/data/hydraulic-cylinders/pillar';
 export function CylinderTechnicalSpecs() {
-  const specs = [
-    { parameter: "Bore Diameter", value: "40mm to 300mm (Custom sizes available)" },
-    { parameter: "Rod Diameter", value: "20mm to 200mm" },
-    { parameter: "Stroke Length", value: "Up to 3000mm" },
-    { parameter: "Working Pressure", value: "160 Bar / 210 Bar / up to 350 Bar" },
-    { parameter: "Test Pressure", value: "1.5x Working Pressure" },
-    { parameter: "Barrel Material", value: "ST52 / E355 grade cold-drawn seamless" },
-    { parameter: "Barrel Finish", value: "Internal micro-honed to Ra 0.2 - 0.4 µm" },
-    { parameter: "Rod Material", value: "EN8 / EN19 / EN24 alloy steel" },
-    { parameter: "Rod Finish", value: "Hard Chrome Plated (20-25 microns), h8" },
-    { parameter: "Seal Kits", value: "Parker / Hallite equivalent PU/PTFE" },
-    { parameter: "Mounting Options", value: "Flange, Clevis, Trunnion, Foot, Tie-Rod" },
-    { parameter: "Operating Temp", value: "-20°C to +80°C (High-temp available)" },
-    { parameter: "Testing Standard", value: "100% hydrostatically tested" },
-    { parameter: "Custom Sizes", value: "Fully available on request" }
-  ];
 
   return (
     <Section bg="white" id="specifications" aria-labelledby="specs-heading">
@@ -50,7 +34,7 @@ export function CylinderTechnicalSpecs() {
           </div>
 
           <div className="lg:col-span-7">
-            <SpecTable rows={specs} title="Standard Specification Range" />
+            <SpecTable rows={PILLAR_SPECS} title="Standard Specification Range" />
           </div>
 
         </div>

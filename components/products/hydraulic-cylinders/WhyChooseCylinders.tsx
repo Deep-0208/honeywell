@@ -3,7 +3,7 @@ import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { IconBox } from '@/components/ui/IconBox';
-import { FaShieldAlt, FaBolt, FaCogs, FaTruck } from 'react-icons/fa';
+import { PILLAR_FEATURES } from '@/data/hydraulic-cylinders/pillar';
 
 export function WhyChooseCylinders() {
   return (
@@ -22,59 +22,20 @@ export function WhyChooseCylinders() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          
-          <div className="text-center group bg-white p-8 rounded-2xl shadow-sm border border-slate-200/50 hover:shadow-xl hover:border-honeywell-red/20 hover:-translate-y-1 transition-all duration-300 ease-premium h-full flex flex-col items-center">
-            <IconBox 
-              icon={<FaCogs className="w-6 h-6" />} 
-              size="lg" 
-              variant="primary" 
-              className="mx-auto mb-6 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-300 ease-premium" 
-            />
-            <Heading variant="card" as="h3" className="mb-3 text-honeywell-navy">Engineering Expertise</Heading>
-            <p className="text-brand-steelGray font-body text-sm leading-relaxed">
-              Our engineers analyze your load calculations, cycle rates, and environmental factors to design the perfect custom cylinder for your exact application.
-            </p>
-          </div>
-
-          <div className="text-center group bg-white p-8 rounded-2xl shadow-sm border border-slate-200/50 hover:shadow-xl hover:border-honeywell-red/20 hover:-translate-y-1 transition-all duration-300 ease-premium h-full flex flex-col items-center">
-            <IconBox 
-              icon={<FaShieldAlt className="w-6 h-6" />} 
-              size="lg" 
-              variant="primary" 
-              className="mx-auto mb-6 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-300 ease-premium" 
-            />
-            <Heading variant="card" as="h3" className="mb-3 text-honeywell-navy">1.5x Pressure Testing</Heading>
-            <p className="text-brand-steelGray font-body text-sm leading-relaxed">
-              Every cylinder is hydrostatically pressure-tested at 1.5 times its rated working pressure before dispatch. Out-of-the-box leaks are non-existent.
-            </p>
-          </div>
-
-          <div className="text-center group bg-white p-8 rounded-2xl shadow-sm border border-slate-200/50 hover:shadow-xl hover:border-honeywell-red/20 hover:-translate-y-1 transition-all duration-300 ease-premium h-full flex flex-col items-center">
-            <IconBox 
-              icon={<FaBolt className="w-6 h-6" />} 
-              size="lg" 
-              variant="primary" 
-              className="mx-auto mb-6 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-300 ease-premium" 
-            />
-            <Heading variant="card" as="h3" className="mb-3 text-honeywell-navy">Custom Manufacturing</Heading>
-            <p className="text-brand-steelGray font-body text-sm leading-relaxed">
-              Drawing-to-delivery service. We can manufacture exactly to your existing CAD drawings or reverse-engineer a replacement for an obsolete part.
-            </p>
-          </div>
-
-          <div className="text-center group bg-white p-8 rounded-2xl shadow-sm border border-slate-200/50 hover:shadow-xl hover:border-honeywell-red/20 hover:-translate-y-1 transition-all duration-300 ease-premium h-full flex flex-col items-center">
-            <IconBox 
-              icon={<FaTruck className="w-6 h-6" />} 
-              size="lg" 
-              variant="primary" 
-              className="mx-auto mb-6 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-300 ease-premium" 
-            />
-            <Heading variant="card" as="h3" className="mb-3 text-honeywell-navy">Fast Delivery</Heading>
-            <p className="text-brand-steelGray font-body text-sm leading-relaxed">
-              With our streamlined manufacturing processes in Ahmedabad, we offer some of the fastest turnaround times in the industry for custom components.
-            </p>
-          </div>
-
+          {PILLAR_FEATURES.map((feature, idx) => (
+            <div key={idx} className="text-center group bg-white p-8 rounded-2xl shadow-sm border border-slate-200/50 hover:shadow-xl hover:border-honeywell-red/20 hover:-translate-y-1 transition-all duration-300 ease-premium h-full flex flex-col items-center">
+              <IconBox 
+                icon={feature.icon} 
+                size="lg" 
+                variant="primary" 
+                className="mx-auto mb-6 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-300 ease-premium" 
+              />
+              <Heading variant="card" as="h3" className="mb-3 text-honeywell-navy">{feature.title}</Heading>
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
         </div>
       </Container>
     </Section>

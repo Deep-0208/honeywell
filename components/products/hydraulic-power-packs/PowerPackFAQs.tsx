@@ -3,7 +3,7 @@ import { Section } from '@/components/ui/Section';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { FAQAccordion } from '@/components/faq/FAQAccordion';
-import { powerPackFAQs } from '@/data/hydraulic-power-packs';
+import { PILLAR_FAQS } from '@/data/hydraulic-power-packs/pillar';
 
 export function PowerPackFAQs() {
   return (
@@ -12,14 +12,14 @@ export function PowerPackFAQs() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           <div className="lg:col-span-4">
-            <Heading variant="section" underline="center" as="h2" id="faqs-heading" className="mb-6">
+            <Heading variant="section" underline="center" as="h2" id="faqs-heading" className="mb-4">
               Frequently Asked Questions
             </Heading>
             <p className="text-lg text-brand-steelGray font-body mb-6">
               Find answers to common questions about our custom hydraulic power pack manufacturing process and capabilities.
             </p>
             <div className="bg-brand-surfaceGray p-6 rounded-xl border border-slate-200">
-              <Heading variant="card" as="h3">Still have questions?</Heading>
+              <Heading variant="card" as="h3" className="mb-2">Still have questions?</Heading>
               <p className="text-sm text-brand-steelGray mb-4">
                 Our engineering team is ready to discuss your specific hydraulic requirements.
               </p>
@@ -34,7 +34,7 @@ export function PowerPackFAQs() {
 
           <div className="lg:col-span-8">
             <FAQAccordion 
-              faqs={powerPackFAQs} 
+              faqs={PILLAR_FAQS} 
               injectSchema={false} 
             />
           </div>
