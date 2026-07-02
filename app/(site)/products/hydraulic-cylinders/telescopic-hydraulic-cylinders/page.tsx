@@ -67,61 +67,12 @@ export const metadata: Metadata = {
    PAGE DATA
    ═══════════════════════════════════════════════ */
 
-const FAQS = [
-  {
-    question: 'Why does a telescopic cylinder get faster as it extends?',
-    answer:
-      'This is due to fluid dynamics. The hydraulic pump provides a constant flow of fluid (Liters Per Minute). As each smaller stage engages, it requires less fluid volume to fill. Therefore, the constant fluid flow fills the smaller volume faster, causing the extension speed to increase.',
-  },
-  {
-    question: 'Can you build double-acting telescopic cylinders?',
-    answer:
-      'Yes. While single-acting (gravity return) is standard for dump trucks, we engineer double-acting telescopic cylinders for horizontal applications like refuse packer blades, where hydraulic pressure is required to both extend and retract the stages.',
-  },
-  {
-    question: 'What causes a telescopic cylinder to bend or buckle?',
-    answer:
-      'Buckling is usually caused by extreme side-loading. This occurs if a dump truck attempts to tip its load while parked on uneven ground, or if the load gets stuck in the top of the dump bed. We engineer our cylinders with extended stage overlap to resist these bending forces, but operators must ensure safe tipping practices.',
-  },
-  {
-    question: 'Do you manufacture both front-end and underbody tipper cylinders?',
-    answer:
-      'Yes. We manufacture long-stroke trunnion-mounted cylinders for front-end tipping, as well as highly compact, high-pressure cross-tube mounted cylinders designed specifically for tight underbody chassis spaces.',
-  },
-];
-
-const TECHNICAL_SPECS = [
-  { parameter: 'Number of Stages', value: '2-Stage to 6-Stage Configurations' },
-  {
-    parameter: 'Maximum Stroke Length',
-    value: 'Up to 8,000+ mm (Custom long-stroke available)',
-  },
-  {
-    parameter: 'Maximum Operating Pressure',
-    value: 'Up to 250 Bar (3600 PSI)',
-  },
-  {
-    parameter: 'Action Type',
-    value: 'Single-Acting (Gravity Return), Double-Acting (Powered Return)',
-  },
-  {
-    parameter: 'Mounting Options',
-    value: 'Outer Trunnion (Front End), Cross-Tube (Underbody), Clevis',
-  },
-  {
-    parameter: 'Stage Material',
-    value:
-      'ST52 / EN8 Seamless Honed Tube (OD and ID)',
-  },
-  {
-    parameter: 'Surface Protection',
-    value: 'Hard Chrome Plated (All Stages)',
-  },
-  {
-    parameter: 'Sealing System',
-    value: 'High-pressure V-packing, heavy-duty rod wipers, bronze-filled guide rings',
-  },
-];
+import {
+  TELESCOPIC_FAQS,
+  TELESCOPIC_SPECS,
+  TELESCOPIC_STEPS,
+  TELESCOPIC_INDUSTRIES,
+} from '@/data/hydraulic-cylinders/telescopic-hydraulic-cylinders';
 
 /* ═══════════════════════════════════════════════
    SCHEMA — @graph structure
@@ -231,7 +182,7 @@ function buildPageSchema() {
       {
         '@type': 'FAQPage',
         '@id': `${siteUrl}${PAGE_URL}#faq`,
-        mainEntity: FAQS.map((faq) => ({
+        mainEntity: TELESCOPIC_FAQS.map((faq) => ({
           '@type': 'Question',
           name: faq.question,
           acceptedAnswer: {
@@ -317,7 +268,7 @@ export default function TelescopicHydraulicCylindersPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200"
       id="hero"
     >
       {/* Background Decorative Elements */}
@@ -345,7 +296,7 @@ function HeroSection() {
               Telescopic Hydraulic Cylinder Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed text-justify">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed ">
               Engineered for massive lifting heights from a minimal footprint. Honeywell Hydraulics is a premier custom telescopic hydraulic cylinder manufacturer in Gujarat, supplying highly robust, multi-stage cylinders exclusively for tipper bodies, dump trucks, and mobile lifting equipment.
             </p>
 
@@ -443,7 +394,7 @@ function ProductOverview() {
           <Heading id="overview-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
             What Are Telescopic Hydraulic Cylinders?
           </Heading>
-          <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed text-justify">
+          <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed ">
             <p>
               When a machine requires a massive lifting stroke but has virtually no physical space to house a fully retracted cylinder, engineers turn to <strong className="text-honeywell-navy">Telescopic Hydraulic Cylinders</strong>.
             </p>
@@ -462,39 +413,6 @@ function ProductOverview() {
 
 /* ─── 03 Key Features (How They Work & Advantages) ─── */
 function KeyFeatures() {
-  const steps = [
-    {
-      icon: <ArrowUpToLine className="w-6 h-6" />,
-      title: 'Sequential Extension',
-      desc: 'Fluid pressure first acts on the largest diameter sleeve. Once fully extended, pressure forces the next smaller sleeve to extend. This continues until the final plunger is fully extended.',
-    },
-    {
-      icon: <RefreshCw className="w-6 h-6" />,
-      title: 'Gravity Retraction',
-      desc: 'In single-acting tipper applications, the cylinder relies on gravity. Opening the directional valve allows the immense weight of the dump bed to force fluid out and retract the sleeves.',
-    },
-    {
-      icon: <Layers className="w-6 h-6" />,
-      title: 'Stroke Multiplication',
-      desc: 'Achieves massive extended heights. A 5-stage cylinder with a closed length of just 1 meter can extend to provide a massive 4.5-meter lifting stroke.',
-    },
-    {
-      icon: <Package className="w-6 h-6" />,
-      title: 'Extreme Space Saving',
-      desc: 'A telescopic cylinder collapses into a fraction of its total stroke length (20% to 40%), allowing it to fit vertically under short truck chassis.',
-    },
-    {
-      icon: <Activity className="w-6 h-6" />,
-      title: 'Optimal Lifting Angles',
-      desc: 'Placing a compact cylinder directly at the front of a dump body (trunnion mount) allows the tipper to achieve maximum mechanical leverage and tipping stability.',
-    },
-    {
-      icon: <ShieldCheck className="w-6 h-6" />,
-      title: 'Specialized Load Handling',
-      desc: 'The sequential extension exerts maximum force at the beginning of the stroke (when the dump bed is heaviest) and faster speed at the end of the stroke.',
-    },
-  ];
-
   return (
     <Section aria-labelledby="how-they-work-heading" bg="gray" id="how-they-work">
       <Container>
@@ -508,7 +426,7 @@ function KeyFeatures() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {steps.map((step, idx) => (
+          {TELESCOPIC_STEPS.map((step, idx) => (
             <div
               key={idx}
               className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
@@ -523,7 +441,7 @@ function KeyFeatures() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {step.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
                 {step.desc}
               </p>
             </div>
@@ -567,7 +485,7 @@ function TechnicalSpecifications() {
           </div>
           <SpecTable
             title="Standard Capability Range"
-            rows={TECHNICAL_SPECS}
+            rows={TELESCOPIC_SPECS}
           />
         </div>
       </Container>
@@ -642,29 +560,6 @@ function ProductVariants() {
 
 /* ─── 07 Industries Served ─── */
 function IndustriesSection() {
-  const industries = [
-    {
-      icon: <Truck className="w-6 h-6" />,
-      name: 'Transportation & Logistics',
-      desc: 'Supplying high-volume, multi-stage cylinders for heavy commercial tipper trucks and bulk transport trailers.',
-    },
-    {
-      icon: <HardHat className="w-6 h-6" />,
-      name: 'Construction',
-      desc: 'Delivering robust lifting cylinders for massive earth-moving dump trucks and off-highway haulers operating in harsh environments.',
-    },
-    {
-      icon: <Trash2 className="w-6 h-6" />,
-      name: 'Waste Management',
-      desc: 'Engineering compact, double-acting telescopic cylinders for refuse collection vehicles and garbage packer blades.',
-    },
-    {
-      icon: <Building2 className="w-6 h-6" />,
-      name: 'Municipal Equipment',
-      desc: 'Manufacturing highly reliable actuators for municipal road sweepers, snowplows, and specialized utility trucks.',
-    },
-  ];
-
   return (
     <Section aria-labelledby="industries-heading" bg="gray" id="industries">
       <Container>
@@ -678,13 +573,13 @@ function IndustriesSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {industries.map((ind, idx) => (
+          {TELESCOPIC_INDUSTRIES.map((ind, idx) => (
             <div key={idx}>
               <IndustryCard
-                industryName={ind.name}
-                description={ind.desc}
+                industryName={ind.industryName}
+                description={ind.description}
                 icon={ind.icon}
-                href={'/industries'}
+                href={ind.href}
               />
             </div>
           ))}
@@ -717,7 +612,7 @@ function ManufacturingProcess() {
               <IconBox icon={<Cog className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">Precision Stage Honing</Heading>
-            <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
+            <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
               Every tubular stage is CNC-machined, skived, and roller-burnished internally and externally to ensure absolute concentricity. This prevents the stages from binding or galling.
             </p>
           </div>
@@ -727,7 +622,7 @@ function ManufacturingProcess() {
               <IconBox icon={<ShieldCheck className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">Hard Chrome Plating</Heading>
-            <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
+            <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
               Because the exterior of every stage acts as a rod, all stages are heavily hard-chrome plated to resist scoring and environmental corrosion from road salt and mud.
             </p>
           </div>
@@ -737,7 +632,7 @@ function ManufacturingProcess() {
               <IconBox icon={<FileCheck className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">Sequential Validation</Heading>
-            <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
+            <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
               100% of our telescopic cylinders undergo rigorous vertical hydrostatic testing to verify smooth stage sequencing and test the integrity of the mechanical stop rings.
             </p>
           </div>
@@ -802,7 +697,7 @@ function ProjectSpotlight() {
                 </div>
                 <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy">The Challenge</Heading>
               </div>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
                 The OEM was designing a massive new dump truck specifically for heavy iron-ore mining. Standard 4-stage cylinders could not provide the required tipping angle without raising the truck&apos;s center of gravity dangerously high during transit.
               </p>
             </div>
@@ -814,7 +709,7 @@ function ProjectSpotlight() {
                 </div>
                 <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy">The Solution</Heading>
               </div>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
                 We engineered a custom 5-Stage Telescopic Cylinder. By adding an extra stage, we reduced the collapsed length by 15%, allowing the OEM to lower the dump bed. We also integrated heavy-duty metallic scrapers onto every stage to clear abrasive ore dust.
               </p>
             </div>
@@ -826,7 +721,7 @@ function ProjectSpotlight() {
                 </div>
                 <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-white">The Outcome</Heading>
               </div>
-              <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6 text-justify">
+              <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6 ">
                 The truck achieved a perfect 50-degree tipping angle from an ultra-low chassis profile. The specialized wiper seals prevented dust ingress, extending the cylinder&apos;s operational lifespan in the mining environment by over <strong className="text-white">200%</strong>.
               </p>
               <Button
@@ -973,7 +868,7 @@ function EngineeringAdvantage() {
                 <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy mb-2">
                   {service.title}
                 </Heading>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
                   {service.description}
                 </p>
               </div>
@@ -992,7 +887,7 @@ function EngineeringAdvantage() {
 function FAQSection() {
   return (
     <SiteFAQSection
-      faqs={FAQS}
+      faqs={TELESCOPIC_FAQS}
       title="Frequently Asked Questions"
       description="Common questions about our telescopic hydraulic cylinder capabilities."
       injectSchema={false}

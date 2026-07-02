@@ -113,7 +113,7 @@ export function HeroSection() {
             {/* H1 — single per page, keyword-optimized */}
             <div>
               <Heading
-                variant="section" underline="center"
+                variant="section"
                 as="h1"
                 id="hero-heading"
                 className="text-honeywell-navy mb-4 sm:mb-5 leading-[1.1]"

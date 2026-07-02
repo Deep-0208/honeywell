@@ -20,20 +20,18 @@ export function CaseStudySection({ data, bg = 'white' }: { data: CaseStudyData; 
             <span className="text-xs uppercase tracking-[0.12em] text-honeywell-red font-body font-semibold mb-2">
               Case Study
             </span>
-            <Heading variant="section" as="h2" id="case-study-heading"
-              className="text-3xl sm:text-4xl text-honeywell-navy mb-4">
+            <Heading variant="section" underline="center" as="h2" id="case-study-heading" className="mb-6">
               {data.title}
             </Heading>
-            <div className="w-16 h-1 bg-honeywell-red rounded-full" aria-hidden="true" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6 text-center">
-              <p className="text-xs uppercase tracking-wider text-brand-steelGray font-body mb-2">Challenge</p>
-              <p className="text-sm text-brand-darkSlate font-body leading-relaxed">{data.challenge}</p>
+            <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6 flex flex-col">
+              <p className="text-xs uppercase tracking-wider text-brand-steelGray font-body mb-2 text-center">Challenge</p>
+              <p className="text-sm text-brand-darkSlate font-body leading-relaxed flex-grow">{data.challenge}</p>
             </div>
-            <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6 text-center">
-              <p className="text-xs uppercase tracking-wider text-brand-steelGray font-body mb-2">Solution</p>
-              <p className="text-sm text-brand-darkSlate font-body leading-relaxed">{data.solution}</p>
+            <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6 flex flex-col">
+              <p className="text-xs uppercase tracking-wider text-brand-steelGray font-body mb-2 text-center">Solution</p>
+              <p className="text-sm text-brand-darkSlate font-body leading-relaxed flex-grow">{data.solution}</p>
             </div>
             <div className="bg-honeywell-navy rounded-sm p-6 text-center text-white flex flex-col items-center justify-center">
               <p className="text-xs uppercase tracking-wider text-brand-borderGray font-body mb-2">Result</p>

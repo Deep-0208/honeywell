@@ -168,7 +168,7 @@ export default function MultiStationManifoldBlocksPage() {
 /* ─── 01 Hero ─── */
 function HeroSection() {
   return (
-    <div className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200" id="hero">
+    <div className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200" id="hero">
       <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
       
@@ -187,7 +187,7 @@ function HeroSection() {
               Multi-Station Manifold Blocks Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed text-justify">
+            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed ">
               One block. Multiple cylinders. Total synchronized control. We manufacture single monolithic valve bodies housing 2 to 10 directional control valves in a shared P and T gallery circuit for complex Special Purpose Machines.
             </p>
 
@@ -229,17 +229,17 @@ function OverviewSection() {
             What Is a Multi-Station Manifold Block?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate text-lg leading-relaxed">
-            <p className="text-justify">
+            <p className="">
               A <strong className="text-honeywell-navy">multi-station manifold block</strong> (also called a parallel manifold rail or gang block) is a single elongated block of machined metal that accommodates multiple directional control valves — each valve occupying one "station" on the block's top face.
             </p>
-            <p className="text-justify">
+            <p className="">
               Internally, the block contains two shared longitudinal galleries running the full length of the block:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-justify">
+            <ul className="list-disc pl-6 space-y-2 ">
               <li><strong>The P Gallery:</strong> Connects to the hydraulic power pack and distributes system pressure to all valve stations simultaneously.</li>
               <li><strong>The T Gallery:</strong> Collects the return oil from all valve stations and routes it back to the tank.</li>
             </ul>
-            <p className="text-justify">
+            <p className="">
               Each valve station has its own independent <strong>A and B work port pair</strong> exiting the block body, allowing each valve to control an independent actuator. This architecture allows one power pack to serve multiple cylinders from a single, centralized, completely leak-proof block.
             </p>
           </div>
@@ -258,7 +258,7 @@ function CircuitConfigurationSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             Parallel vs. Series Circuit Configuration
           </Heading>
-          <p className="text-lg text-brand-steelGray text-justify">
+          <p className="text-lg text-brand-steelGray ">
             The internal gallery design dictates the operational logic of the multi-station block. The majority of industrial SPM applications use parallel centre configuration, allowing any valve to be operated independently or simultaneously.
           </p>
         </div>
@@ -298,7 +298,7 @@ function StationCountSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             Station Count Selection Guide
           </Heading>
-          <p className="text-lg text-brand-steelGray text-justify">
+          <p className="text-lg text-brand-steelGray ">
             Selecting the correct number of stations is determined by the number of independent actuators in your circuit. Our engineers will analyse your hydraulic schematic and recommend the optimal station count.
           </p>
         </div>
@@ -345,7 +345,7 @@ function CetopSizesSection() {
           {MULTI_STATION_CETOP_SIZES.map((size, idx) => (
             <div key={idx} className="bg-white rounded-xl border border-slate-200 p-6 hover:border-honeywell-red/50 transition-colors">
               <h3 className="text-lg font-bold text-honeywell-navy mb-3">{size.title}</h3>
-              <p className="text-brand-steelGray text-sm leading-relaxed text-justify">{size.description}</p>
+              <p className="text-brand-steelGray text-sm leading-relaxed ">{size.description}</p>
             </div>
           ))}
         </div>
@@ -363,7 +363,7 @@ function SafetyFeaturesSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             Integrated Safety Features
           </Heading>
-          <p className="text-lg text-brand-steelGray text-justify">
+          <p className="text-lg text-brand-steelGray ">
             Multi-station blocks can incorporate optional integrated safety logic, eliminating additional external valve installations.
           </p>
         </div>
@@ -376,7 +376,7 @@ function SafetyFeaturesSection() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-honeywell-navy mb-3">{feature.title}</h3>
-                <p className="text-brand-steelGray leading-relaxed text-justify">{feature.description}</p>
+                <p className="text-brand-steelGray leading-relaxed ">{feature.description}</p>
               </div>
             </div>
           ))}
@@ -410,19 +410,19 @@ function ProjectSpotlightSection() {
             <div className="space-y-6">
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Challenge:</h4>
-                <p className="text-brand-steelGray text-justify leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed">
                   An automotive supplier was building a robotic MIG welding SPM that required 8 hydraulic clamps. Their original design used 8 individual CETOP 5 subplates connected by 16 steel pipes, which occupied excessive space and developed 3 leaks during prototyping.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Solution:</h4>
-                <p className="text-brand-steelGray text-justify leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed">
                   We designed a single 8-station CETOP 5 parallel manifold block with integrated POCV cartridges at each A port for clamp load-holding. All 16 pilot connections were internalized, leaving only 8 external A-port connections.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Outcome:</h4>
-                <p className="text-brand-steelGray text-justify leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed">
                   The block replaced all 16 pipes and 32 fittings. No leaks were recorded during commissioning, and the robot cell footprint was reduced by 220mm, allowing for an optimized robot reach envelope.
                 </p>
               </div>

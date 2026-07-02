@@ -11,11 +11,12 @@ export interface CylinderFeature {
   description: string;
 }
 
-export interface CylinderBlockType {
+export interface CylinderType {
   title: string;
   description: string;
   href: string;
-  image?: string;
+  category: string;
+  imageSrc: string;
 }
 
 export interface CylinderIndustry {
@@ -33,4 +34,16 @@ export interface ComparisonRow {
 export interface FAQ {
   question: string;
   answer: string;
+}
+export interface ProcessStep {
+  icon: React.ReactElement;
+  title: string;
+  desc: string;
+}
+
+export interface ProductVariant {
+  icon: React.ReactElement;
+  title: string;
+  description: string;
+  highlights: string[];
 }

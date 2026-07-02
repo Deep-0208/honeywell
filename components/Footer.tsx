@@ -58,7 +58,7 @@ const footerColumns = [
 ];
 
 const locationLinks = [
-  { label: 'Gujarat', href: '/locations/gujarat-facility/' },
+  { label: 'Gujarat', href: '/locations/gujarat/' },
   { label: 'Maharashtra', href: '/locations/maharashtra/' },
   { label: 'Indore', href: '/locations/indore/' },
   { label: 'West Bengal', href: '/locations/west-bengal/' },

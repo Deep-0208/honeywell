@@ -166,7 +166,7 @@ export default function NG10ManifoldBlocksPage() {
 /* ─── 01 Hero ─── */
 function HeroSection() {
   return (
-    <div className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200" id="hero">
+    <div className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200" id="hero">
       <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
       
@@ -185,7 +185,7 @@ function HeroSection() {
               NG10 / 06-Size Manifold Blocks Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed text-justify">
+            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed ">
               The most widely used hydraulic valve interface size in industrial manufacturing. We manufacture high-precision NG10 (CETOP 5 / 06-Size) manifold blocks — the universally adopted standard for medium-duty industrial automation up to 120 LPM.
             </p>
 
@@ -227,15 +227,15 @@ function OverviewSection() {
             Understanding the NG10 / 06 Designation
           </Heading>
           <div className="space-y-5 text-brand-darkSlate text-lg leading-relaxed">
-            <p className="text-justify">
+            <p className="">
               The <strong>NG10</strong> and <strong>06-Size</strong> designations both refer to the same physical valve interface, governed by <strong>ISO 4401</strong> (CETOP 5). The dual naming convention exists because different regions use different terminology:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-justify">
+            <ul className="list-disc pl-6 space-y-2 ">
               <li><strong>NG10:</strong> European designation used by Rexroth, Atos, and Wandfluh. "NG" = Nenngröße (Nominal Size in German).</li>
               <li><strong>CETOP 5:</strong> French standards body designation. Numerically refers to the standardized mounting interface.</li>
               <li><strong>06-Size:</strong> North American designation used by Parker, Vickers, and Eaton/Danfoss.</li>
             </ul>
-            <p className="text-justify font-bold text-honeywell-navy">
+            <p className="font-bold text-honeywell-navy">
               All three designations are physically identical. A Parker D3W "06-size" directional valve will mount directly onto a Honeywell CETOP 5 (NG10) manifold block — same bolt pattern, same port locations, same O-ring groove sizes.
             </p>
           </div>
@@ -254,7 +254,7 @@ function PerformanceEnvelopeSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             NG10 Performance Envelope
           </Heading>
-          <p className="text-lg text-brand-steelGray text-justify">
+          <p className="text-lg text-brand-steelGray ">
             Understanding the operating limits of the NG10 interface prevents undersizing (which causes dangerous heat generation) or oversizing (which wastes capital). Attempting to run 200 LPM through an NG10 block will create fluid velocity exceeding 6 m/s in the internal galleries, generating severe heat and turbulence that destroys the directional valve internals.
           </p>
         </div>
@@ -284,7 +284,7 @@ function ProductRangeSection() {
           {NG10_PRODUCT_RANGE.map((product, idx) => (
             <div key={idx} className="bg-brand-lightSurface rounded-xl border border-slate-200 p-8 hover:border-honeywell-red/50 transition-colors">
               <h3 className="text-xl font-bold text-honeywell-navy mb-4">{product.title}</h3>
-              <p className="text-brand-steelGray text-justify leading-relaxed">{product.description}</p>
+              <p className="text-brand-steelGray leading-relaxed">{product.description}</p>
             </div>
           ))}
         </div>
@@ -302,7 +302,7 @@ function SizeComparisonSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             NG10 vs. NG6 and NG16: Choosing the Right Size
           </Heading>
-          <p className="text-lg text-brand-steelGray text-justify">
+          <p className="text-lg text-brand-steelGray ">
             If you are in doubt between NG10 and NG16, calculate your actual circuit flow: Cylinder Bore² × π/4 × Piston Speed = Flow Rate (LPM). Match this to the NG size capacity.
           </p>
         </div>
@@ -357,19 +357,19 @@ function ProjectSpotlightSection() {
             <div className="space-y-6">
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Challenge:</h4>
-                <p className="text-brand-steelGray text-justify leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed">
                   A mould manufacturer building an 8-cavity injection mould needed to integrate a 4-axis hydraulic core-pull system inside the mould base itself. Four individual NG10 subplates connected by external piping would not fit.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Solution:</h4>
-                <p className="text-brand-steelGray text-justify leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed">
                   We designed a compact 4-station NG10 parallel manifold block with all four valve stations on one face. All P and T connections were internalized, and block height was minimized by using low-profile solenoid valves.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Outcome:</h4>
-                <p className="text-brand-steelGray text-justify leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed">
                   The assembly fit within the mould base with 12mm to spare. The mould achieved a 6.2-second cycle time — 0.8 seconds faster than the competitor's external-pipework solution due to reduced fluid dead-volume.
                 </p>
               </div>

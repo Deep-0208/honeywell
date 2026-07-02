@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Ruler, Wrench, Settings2, Shield, Factory, Truck, Cogs, Hammer, Tractor } from 'lucide-react';
+import { ShieldCheck, Ruler, Wrench, Settings2, Shield, Factory, Truck, Hammer, Tractor } from 'lucide-react';
 import { FaIndustry, FaTruck, FaCogs, FaHammer, FaTractor } from 'react-icons/fa';
 
 import type {

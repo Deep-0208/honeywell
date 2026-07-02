@@ -30,7 +30,7 @@ export function TestimonialCard({
         <Quote className="w-6 h-6 sm:w-10 sm:h-10 text-slate-200 group-hover:text-honeywell-red/20 transition-colors duration-300 mb-4 sm:mb-6 shrink-0" aria-hidden="true" />
         
         <blockquote className="flex-1">
-          <p className="text-brand-darkSlate font-body text-sm sm:text-base leading-relaxed italic mb-6 sm:mb-8 text-justify">
+          <p className="text-brand-darkSlate font-body text-sm sm:text-base leading-relaxed italic mb-6 sm:mb-8 ">
             &ldquo;{quote}&rdquo;
           </p>
         </blockquote>

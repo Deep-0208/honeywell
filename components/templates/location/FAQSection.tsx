@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
-import { FAQData } from '@/data/locations/gujarat-facility'; // Or use global FAQ type
+import { FAQData } from '@/data/locations/gujarat'; // Or use global FAQ type
 
 export function FAQSection({ data, bg = 'white' }: { data: any; bg?: 'white' | 'gray' }) {
   // We can pass the bg through if we modify SiteFAQSection, or we just let SiteFAQSection handle it (it defaults to white).

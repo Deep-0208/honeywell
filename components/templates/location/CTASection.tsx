@@ -4,25 +4,25 @@ import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { Section } from '@/components/ui/Section';
 import { Button } from '@/components/ui/Button';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 
 export function CTASection({ data }: { data: any }) {
   return (
-    <Section bg="navy" className="py-20">
+    <Section bg="navy" className="py-20" aria-labelledby="cta-heading">
       <Container>
         <div className="max-w-4xl mx-auto text-center">
-          <Heading as="h2" className="text-white mb-6 leading-tight">
+          <Heading variant="section" underline="center" as="h2" id="cta-heading" className="text-white mb-6 leading-tight">
             {data.title}
           </Heading>
-          <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl mx-auto md:text-center">
             {data.description}
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
-            <Button href="/request-quote" variant="primary" size="lg" className="w-full sm:w-auto">
+            <Button href="/request-quote" variant="primary" size="lg" className="w-full sm:w-auto" rightIcon={<ArrowRight className="w-5 h-5" />}>
               Request a Quote
             </Button>
-            <Button href="/contact-us" variant="outline" size="lg" className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-honeywell-navy">
+            <Button href="/contact-us" variant="outline" size="lg" className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-honeywell-navy" rightIcon={<ArrowRight className="w-5 h-5" />}>
               Speak with Engineers
             </Button>
           </div>

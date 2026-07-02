@@ -16,6 +16,7 @@ import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
 import { SiteLocationsSection } from '@/components/locations/SiteLocationsSection';
 import { IndustryCard } from '@/components/cards/IndustryCard';
 import { Heading } from '@/components/ui/Heading';
+import { THREE_PHASE_FAQS, THREE_PHASE_SPECS, THREE_PHASE_INDUSTRIES } from '@/data/hydraulic-power-packs/3-phase-hydraulic-power-packs';
 import {
   ArrowRight,
   MessageCircle,
@@ -61,39 +62,9 @@ export const metadata: Metadata = {
    PAGE DATA
    ═══════════════════════════════════════════════ */
 
-const FAQS = [
-  {
-    question: 'Can I run a 3-phase hydraulic power pack on a single-phase power supply?',
-    answer:
-      'No. A 3-phase motor requires three alternating current legs (415V/440V). To run it on a single-phase grid (220V), you must install a Variable Frequency Drive (VFD) or a phase converter to artificially generate the third phase, though this is generally only recommended for smaller horsepower units.',
-  },
-  {
-    question: 'Why does my current single-phase power pack overheat so quickly?',
-    answer:
-      'Single-phase motors are generally designed for intermittent duty (e.g., running for 5 minutes to lift a car, then resting). They lack the smooth torque delivery of a 3-phase motor and draw massive amperage, generating extreme heat. For continuous automation, you must upgrade to a 3-phase system.',
-  },
-  {
-    question: 'Do you custom-build the reservoirs for your industrial power packs?',
-    answer:
-      'Yes. We do not rely on standard, flimsy plastic tanks. We laser-cut and weld robust steel reservoirs in-house, sizing them specifically to provide adequate heat dissipation and fluid de-aeration for your machine\'s exact duty cycle.',
-  },
-  {
-    question: 'Can you integrate variable displacement pumps into your 3-phase power packs?',
-    answer:
-      'Absolutely. For maximum energy efficiency, we frequently couple our IE3 3-phase motors with variable displacement piston or vane pumps. The pump automatically destrokes (stops pumping fluid) when the system reaches maximum pressure, drastically reducing the motor\'s electrical load.',
-  },
-];
 
-const TECHNICAL_SPECS = [
-  { parameter: 'Electric Motor Inputs', value: '3-Phase AC (380V / 415V / 440V, 50Hz/60Hz)' },
-  { parameter: 'Motor Efficiency Ratings', value: 'IE2, IE3 (Premium Efficiency), IE4 (Super Premium)' },
-  { parameter: 'Horsepower Ratings', value: '1 HP to 200+ HP' },
-  { parameter: 'Pump Architecture', value: 'Gear Pumps, Vane Pumps, Axial Piston Pumps (Fixed or Variable)' },
-  { parameter: 'Maximum Operating Pressure', value: 'Up to 350 Bar (5000+ PSI)' },
-  { parameter: 'Reservoir Capacity', value: '20 Liters to 5000+ Liters (Custom Steel or Stainless Steel)' },
-  { parameter: 'Cooling Integration', value: 'Integrated Air-Cooled or Water-Cooled heat exchangers' },
-  { parameter: 'Control Logic', value: 'Custom CNC Manifold Blocks integrated directly onto power unit' },
-];
+
+
 
 /* ═══════════════════════════════════════════════
    SCHEMA — @graph structure
@@ -198,7 +169,7 @@ function buildPageSchema() {
       {
         '@type': 'FAQPage',
         '@id': `${siteUrl}${PAGE_URL}#faq`,
-        mainEntity: FAQS.map((faq) => ({
+        mainEntity: THREE_PHASE_FAQS.map((faq) => ({
           '@type': 'Question',
           name: faq.question,
           acceptedAnswer: {
@@ -262,7 +233,7 @@ export default function ThreePhasePowerPacksPage() {
       />
 
       {/* ─── 13 FAQs ─── */}
-      <FAQSection />
+      <SiteFAQSection faqs={THREE_PHASE_FAQS} />
 
       {/* ─── 15 CTA Section ─── */}
       <CTA
@@ -285,7 +256,7 @@ export default function ThreePhasePowerPacksPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200"
       id="hero"
     >
       {/* Background Decorative Elements */}
@@ -406,7 +377,7 @@ function ProductOverview() {
     <Section aria-labelledby="overview-heading" bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <Heading id="overview-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+          <Heading id="overview-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
             What Is A 3 Phase Hydraulic Power Pack?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
@@ -439,22 +410,22 @@ function WhyThreePhase() {
     {
       icon: <Activity className="w-6 h-6" />,
       title: 'A. Stable Power Delivery',
-      desc: 'A 3-phase electrical supply provides three alternating currents that peak at sequential times. This means power delivery to the hydraulic pump is constant and smooth, unlike single-phase motors which experience "dead spots" in torque. This smooth torque prevents hydraulic pulsation and ensures stable pressure output to your machine.',
+      description: 'A 3-phase electrical supply provides three alternating currents that peak at sequential times. This means power delivery to the hydraulic pump is constant and smooth, unlike single-phase motors which experience "dead spots" in torque. This smooth torque prevents hydraulic pulsation and ensures stable pressure output to your machine.',
     },
     {
       icon: <Thermometer className="w-6 h-6" />,
       title: 'B. Continuous Operation & Thermal Stability',
-      desc: 'Because 3-phase motors run much cooler than equivalent single-phase motors, they are capable of a 100% duty cycle. A 3-phase hydraulic power pack can run 24 hours a day, 365 days a year without the motor burning out, making them mandatory for continuous-process industries.',
+      description: 'Because 3-phase motors run much cooler than equivalent single-phase motors, they are capable of a 100% duty cycle. A 3-phase hydraulic power pack can run 24 hours a day, 365 days a year without the motor burning out, making them mandatory for continuous-process industries.',
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: 'C. Superior Motor Efficiency',
-      desc: '3-phase motors do not require failure-prone start capacitors or run capacitors. They draw significantly lower amperage per phase compared to single-phase motors of the same horsepower, resulting in massive long-term reductions in the factory\'s electricity consumption.',
+      description: '3-phase motors do not require failure-prone start capacitors or run capacitors. They draw significantly lower amperage per phase compared to single-phase motors of the same horsepower, resulting in massive long-term reductions in the factory\'s electricity consumption.',
     },
     {
       icon: <CheckCircle2 className="w-6 h-6" />,
       title: 'D. Lower Operating Cost',
-      desc: 'The initial capital investment in a 3-phase motor is often lower than a massive single-phase motor, and the electrical infrastructure required (smaller wire gauges, smaller breakers) is much cheaper to install. Combined with the energy savings, the Total Cost of Ownership (TCO) is incredibly low.',
+      description: 'The initial capital investment in a 3-phase motor is often lower than a massive single-phase motor, and the electrical infrastructure required (smaller wire gauges, smaller breakers) is much cheaper to install. Combined with the energy savings, the Total Cost of Ownership (TCO) is incredibly low.',
     },
   ];
 
@@ -462,7 +433,7 @@ function WhyThreePhase() {
     <Section aria-labelledby="why-3-phase-heading" bg="gray" id="why-3-phase">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Heading id="why-3-phase-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="why-3-phase-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Why Industrial Plants Prefer 3 Phase Systems
           </Heading>
           <p className="text-lg text-brand-steelGray font-body">
@@ -483,7 +454,7 @@ function WhyThreePhase() {
                 {comp.title}
               </Heading>
               <p className="text-brand-steelGray font-body text-sm leading-relaxed">
-                {comp.desc}
+                {comp.description}
               </p>
             </div>
           ))}
@@ -499,7 +470,7 @@ function ComparisonSection() {
     <Section aria-labelledby="comparison-heading" bg="white" id="comparison">
       <Container>
         <div className="max-w-4xl mx-auto mb-12 text-center">
-          <Heading id="comparison-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="comparison-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             3 Phase vs. Single Phase Power Packs
           </Heading>
           <p className="text-lg text-brand-steelGray font-body">
@@ -568,7 +539,7 @@ function TechnicalSpecifications() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <Heading id="technical-specifications-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+            <Heading id="technical-specifications-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
               Technical Specifications Framework
             </Heading>
             <p className="text-lg text-brand-steelGray font-body mb-8">
@@ -583,7 +554,7 @@ function TechnicalSpecifications() {
               </Button>
             </div>
           </div>
-          <SpecTable title="Standard Capabilities" rows={TECHNICAL_SPECS} />
+          <SpecTable title="Standard Capabilities" rows={THREE_PHASE_SPECS} />
         </div>
       </Container>
     </Section>
@@ -592,38 +563,13 @@ function TechnicalSpecifications() {
 
 /* ─── 06 Industries Served ─── */
 function IndustriesSection() {
-  const industries = [
-    {
-      icon: <Settings className="w-6 h-6" />,
-      name: 'Manufacturing & Heavy Fabrication',
-      desc: 'Supplying continuous, high-volume flow for heavy steel processing, shearing, and metal bending machinery.',
-      link: '#'
-    },
-    {
-      icon: <Cog className="w-6 h-6" />,
-      name: 'Industrial Automation',
-      desc: 'Designing highly compact, vibration-free 3-phase units for automated robotic clamping and CNC loading cells.',
-      link: '#'
-    },
-    {
-      icon: <Droplets className="w-6 h-6" />,
-      name: 'Process Industries',
-      desc: 'Delivering robust, thermally stable power units for continuous chemical mixing and plastic extrusion environments.',
-      link: '#'
-    },
-    {
-      icon: <Truck className="w-6 h-6" />,
-      name: 'Material Handling',
-      desc: 'Providing fail-safe AC power packs for massive factory gantry cranes and continuous conveyor routing systems.',
-      link: '#'
-    },
-  ];
+  
 
   return (
     <Section aria-labelledby="industries-heading" bg="white" id="industries">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Heading id="industries-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="industries-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Industries Served
           </Heading>
           <p className="text-lg text-brand-steelGray font-body">
@@ -632,13 +578,13 @@ function IndustriesSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {industries.map((ind, idx) => (
+            {THREE_PHASE_INDUSTRIES.map((ind, idx) => (
               <div key={idx}>
                 <IndustryCard
-                  industryName={ind.name}
-                  description={ind.desc}
+                  industryName={ind.industryName}
+                  description={ind.description}
                   icon={ind.icon}
-                  href={ind.link || '/industries'}
+                  href={ind.href}
                 />
               </div>
             ))}
@@ -654,7 +600,7 @@ function EngineeringConsiderations() {
     <Section aria-labelledby="engineering-considerations-heading" bg="gray" id="engineering-considerations">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <Heading id="engineering-considerations-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+          <Heading id="engineering-considerations-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
             Engineering Considerations (Specifying AC Systems)
           </Heading>
           <p className="text-brand-darkSlate font-body text-lg mb-8">
@@ -709,7 +655,7 @@ function ManufacturingProcess() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <Heading id="manufacturing-process-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+            <Heading id="manufacturing-process-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
               Manufacturing & Testing Process
             </Heading>
             <p className="text-brand-darkSlate font-body text-lg mb-8 leading-relaxed">
@@ -788,7 +734,7 @@ function ProjectSpotlight() {
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
               <Badge variant="custom" className="w-fit mb-6">PROJECT SPOTLIGHT</Badge>
-              <Heading id="project-spotlight-heading" variant="section" as="h2" className="text-3xl font-display font-bold text-honeywell-navy mb-6">
+              <Heading id="project-spotlight-heading" variant="section" as="h2" className="text-3xl font-display font-bold text-honeywell-navy mb-6" underline="center">
                 Continuous-Duty 3-Phase Power Pack for an Automated Textile Calendering Machine
               </Heading>
               
@@ -835,25 +781,25 @@ function RelatedProducts() {
   const products = [
     {
       title: 'Hydraulic Power Packs Hub',
-      desc: 'Explore our master category of power packs.',
+      description: 'Explore our master category of power packs.',
       link: '/products/hydraulic-power-packs/',
       icon: <Zap className="w-6 h-6 text-honeywell-red" />
     },
     {
       title: 'High-Low Logic Power Packs',
-      desc: 'Specialized power units for press machinery.',
+      description: 'Specialized power units for press machinery.',
       link: '#',
       icon: <Activity className="w-6 h-6 text-honeywell-red" />
     },
     {
       title: 'Hydraulic Cylinders Hub',
-      desc: 'Explore our master category of hydraulic cylinders.',
+      description: 'Explore our master category of hydraulic cylinders.',
       link: '/products/hydraulic-cylinders/',
       icon: <Box className="w-6 h-6 text-honeywell-red" />
     },
     {
       title: 'Complete Hydraulic Systems',
-      desc: 'Turnkey automated systems with PLC integration.',
+      description: 'Turnkey automated systems with PLC integration.',
       link: '#',
       icon: <Settings className="w-6 h-6 text-honeywell-red" />
     }
@@ -863,7 +809,7 @@ function RelatedProducts() {
     <Section aria-labelledby="related-products-heading" bg="white" id="related-products">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Heading id="related-products-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="related-products-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Related Products
           </Heading>
           <p className="text-lg text-brand-steelGray font-body">
@@ -882,7 +828,7 @@ function RelatedProducts() {
                   {product.title}
                 </Heading>
                 <p className="text-brand-steelGray text-sm leading-relaxed mb-4 flex-grow">
-                  {product.desc}
+                  {product.description}
                 </p>
                 <div className="flex items-center text-honeywell-red font-semibold text-sm mt-auto">
                   View Category <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -901,19 +847,19 @@ function RelatedServices() {
   const services = [
     {
       title: 'Custom Hydraulic System Design',
-      desc: 'We design the entire factory circuit, calculating the exact motor horsepower and cooling tonnage required for continuous operation.',
+      description: 'We design the entire factory circuit, calculating the exact motor horsepower and cooling tonnage required for continuous operation.',
       link: '#',
       icon: <FileCheck className="w-6 h-6 text-honeywell-navy" />
     },
     {
       title: 'OEM Hydraulic Manufacturing',
-      desc: 'High-volume, repeatable production of standard 3-phase power units specifically for CNC and SPM machine builders.',
+      description: 'High-volume, repeatable production of standard 3-phase power units specifically for CNC and SPM machine builders.',
       link: '#',
       icon: <Settings className="w-6 h-6 text-honeywell-navy" />
     },
     {
       title: 'Hydraulic Consulting',
-      desc: 'Hire our systems architects to audit your factory\'s electrical efficiency and recommend power unit upgrades to lower your grid consumption.',
+      description: 'Hire our systems architects to audit your factory\'s electrical efficiency and recommend power unit upgrades to lower your grid consumption.',
       link: '#',
       icon: <MessageCircle className="w-6 h-6 text-honeywell-navy" />
     }
@@ -923,7 +869,7 @@ function RelatedServices() {
     <Section aria-labelledby="related-services-heading" bg="gray" id="related-services">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Heading id="related-services-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="related-services-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Related Services
           </Heading>
           <p className="text-lg text-brand-steelGray font-body">
@@ -939,7 +885,7 @@ function RelatedServices() {
               </div>
               <Heading variant="subsection" as="h3" className="text-xl font-bold text-honeywell-navy mb-3">{service.title}</Heading>
               <p className="text-brand-steelGray font-body leading-relaxed mb-6">
-                {service.desc}
+                {service.description}
               </p>
               <Link href={service.link} className="inline-flex items-center text-honeywell-red font-bold hover:underline">
                 Explore Service <ArrowRight className="w-4 h-4 ml-2" />
@@ -954,16 +900,4 @@ function RelatedServices() {
 
 
 
-
-/* ─── 14 FAQ Section ─── */
-function FAQSection() {
-  return (
-    <SiteFAQSection
-      faqs={FAQS}
-      title="Frequently Asked Questions"
-      description="Technical answers from our AC systems engineering team."
-      injectSchema={false}
-    />
-  );
-}
 

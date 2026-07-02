@@ -66,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/request-quote/', changeFrequency: 'monthly', priority: 0.9 },
 
     // ── Location Pages ──
-    { path: '/locations/gujarat-facility/', changeFrequency: 'monthly', priority: 0.9 },
+    { path: '/locations/gujarat/', changeFrequency: 'monthly', priority: 0.9 },
 
     // ── Future pages — uncomment as they are built ──
     // { path: '/locations/ahmedabad/', changeFrequency: 'monthly', priority: 0.9 },

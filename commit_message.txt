@@ -1,0 +1,8 @@
+feat(pages): build location and power pack product pages, update UI styling
+
+- Built comprehensive Location pages (Gujarat, Ahmedabad, Surat, Rajkot, Vadodara) and their subpages.
+- Added detailed product pages for 3-Phase, DC Mini, and High-Low Hydraulic Power Packs.
+- Updated global FAQ component (`SiteFAQSection`) across all product pages.
+- Standardized the "Industries Served" sections using the `IndustryCard` component.
+- Removed underline from the Homepage Hero H1 and global FAQ headers.
+- Fixed TypeScript `any` types and linter errors to ensure a clean build.

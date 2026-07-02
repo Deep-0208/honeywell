@@ -45,7 +45,7 @@ export function IndustryCard({
           </Link>
         </Heading>
         
-        <p className="text-brand-steelGray font-body text-sm mb-8 line-clamp-3 flex-1 text-justify">
+        <p className="text-brand-steelGray font-body text-sm mb-8 line-clamp-3 flex-1 ">
           {description}
         </p>
 

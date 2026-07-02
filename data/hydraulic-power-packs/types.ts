@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 export interface PowerPackType {
   title: string;
@@ -28,4 +28,16 @@ export interface PowerPackFeature {
   icon: React.ReactElement;
   title: string;
   description: string;
+}
+export interface ProcessStep {
+  icon: React.ReactElement;
+  title: string;
+  desc: string;
+}
+
+export interface ProductVariant {
+  icon: React.ReactElement;
+  title: string;
+  description: string;
+  highlights: string[];
 }

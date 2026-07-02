@@ -56,7 +56,7 @@ export function WhyChooseUsSection() {
                 <Heading variant="card" as="h3" className="mb-3 text-honeywell-navy">
                   {usp.title}
                 </Heading>
-                <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
+                <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
                   {usp.body}
                 </p>
               </div>

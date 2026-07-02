@@ -36,7 +36,7 @@ export function CertificationsSection() {
               <Heading variant="card" as="h3" className="mb-2">
                 {cert.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
                 {cert.description}
               </p>
             </div>

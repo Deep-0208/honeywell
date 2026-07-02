@@ -78,7 +78,7 @@ export function ManufacturingFacilitySection() {
             <Heading variant="section" underline="left" as="h2" id="facility-heading" className="text-honeywell-navy mb-4">
               Our Manufacturing Facility
             </Heading>
-            <p className="text-brand-steelGray font-body text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xl text-justify">
+            <p className="text-brand-steelGray font-body text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xl ">
               Every hydraulic cylinder and power pack is engineered and manufactured
               in-house at our Kathwada facility. Factory-direct production ensures
               quality control at every stage — from raw material to final dispatch.
@@ -94,10 +94,10 @@ export function ManufacturingFacilitySection() {
                     </span>
                   </div>
                   <div>
-                    <Heading variant="card" as="h3" className="mb-0.5 text-justify">
+                    <Heading variant="card" as="h3" className="mb-0.5 ">
                       {highlight.title}
                     </Heading>
-                    <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
+                    <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
                       {highlight.description}
                     </p>
                   </div>

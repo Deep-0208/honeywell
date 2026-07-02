@@ -88,7 +88,7 @@ export interface LocationCTAData {
 
 export interface LocationPageData {
   seo: LocationSeoData;
-  schema: any;
+  schema: Record<string, unknown>;
   hero: LocationHeroData;
   benefits: { title: string; description: string; items: BenefitData[] };
   products: { title: string; description: string; items: ProductData[] };
@@ -102,12 +102,12 @@ export interface LocationPageData {
 
 export const gujaratData: LocationPageData = {
   seo: {
-    title: 'Hydraulic Cylinder Manufacturer in Gujarat | Honeywell Hydraulics',
-    description: 'Leading hydraulic cylinder & power pack manufacturer in Gujarat. Supplying Ahmedabad, Surat, Rajkot & Vadodara. Custom manufacturing at factory-direct pricing.',
+    title: 'Hydraulic Cylinder Manufacturer Gujarat | Honeywell',
+    description: 'Leading hydraulic cylinder & power pack manufacturer in Gujarat. Supplying Ahmedabad, Surat & Rajkot at factory-direct pricing. Get a free quote today.',
     canonical: 'https://www.honeywellhydraulics.com/locations/gujarat/',
     openGraph: {
-      title: 'Hydraulic Cylinder Manufacturer in Gujarat | Honeywell Hydraulics',
-      description: 'Leading hydraulic cylinder & power pack manufacturer in Gujarat. Supplying Ahmedabad, Surat, Rajkot & Vadodara. Custom manufacturing at factory-direct pricing.',
+      title: 'Hydraulic Cylinder Manufacturer Gujarat | Honeywell',
+      description: 'Leading hydraulic cylinder & power pack manufacturer in Gujarat. Supplying Ahmedabad, Surat & Rajkot at factory-direct pricing. Get a free quote today.',
       url: 'https://www.honeywellhydraulics.com/locations/gujarat/',
       images: [
         {
@@ -120,8 +120,8 @@ export const gujaratData: LocationPageData = {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Hydraulic Cylinder Manufacturer in Gujarat | Honeywell Hydraulics',
-      description: 'Leading hydraulic cylinder & power pack manufacturer in Gujarat. Supplying Ahmedabad, Surat, Rajkot & Vadodara. Custom manufacturing at factory-direct pricing.',
+      title: 'Hydraulic Cylinder Manufacturer Gujarat | Honeywell',
+      description: 'Leading hydraulic cylinder & power pack manufacturer in Gujarat. Supplying Ahmedabad, Surat & Rajkot at factory-direct pricing. Get a free quote today.',
       images: ['/images/locations/honeywell-hydraulics-manufacturing-facility-ahmedabad.jpg'],
     },
     keywords: [
@@ -131,6 +131,12 @@ export const gujaratData: LocationPageData = {
       'hydraulic power pack manufacturer Gujarat',
       'industrial hydraulic cylinders Gujarat',
       'hydraulic cylinder manufacturer Ahmedabad',
+      'top hydraulic cylinder manufacturers in gujarat',
+      'list of hydraulic cylinder manufacturers in gujarat',
+      'hydraulic cylinder manufacturers in rajkot',
+      'top 10 hydraulic cylinder manufacturers in gujarat',
+      'small hydraulic cylinder manufacturers in gujarat',
+      'hydraulic cylinder manufacturers in gujarat ahmedabad',
     ],
   },
   schema: {

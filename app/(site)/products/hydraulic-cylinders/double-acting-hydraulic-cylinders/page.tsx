@@ -33,7 +33,7 @@ import {
   PRODUCT_INDUSTRIES,
   PRODUCT_FAQS,
   PRODUCT_ADVANTAGES,
-} from '@/data/double-acting-hydraulic-cylinders';
+} from '@/data/hydraulic-cylinders/double-acting-hydraulic-cylinders';
 
 /* ═══════════════════════════════════════════════
    SEO METADATA
@@ -260,7 +260,7 @@ export default function DoubleActingHydraulicCylindersPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200"
       id="hero"
     >
       {/* Background Decorative Elements */}
@@ -288,7 +288,7 @@ function HeroSection() {
               Double Acting Hydraulic Cylinder Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed text-justify">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed ">
               Full bi-directional hydraulic force for precision industrial
               applications. Manufactured in-house at our Ahmedabad facility with
               bore sizes from 40mm to 500mm, stroke lengths up to 6,000mm, and
@@ -382,7 +382,7 @@ function ProductOverview() {
             What Is a Double Acting Hydraulic Cylinder?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
-            <p className="text-justify">
+            <p className="">
               A <strong className="text-honeywell-navy">double acting hydraulic cylinder</strong> generates
               force in both the extend and retract strokes, making it the most
               versatile and widely used cylinder type in industrial applications.
@@ -398,7 +398,7 @@ function ProductOverview() {
               press machines, injection moulding, goods lifts, and material
               handling systems.
             </p>
-            <p className="text-justify">
+            <p className="">
               The cylinder operates through two ports, typically located at the
               bottom and top of the barrel. Hydraulic fluid is pumped into the
               bottom port to extend the piston, and through the top port to push
@@ -407,7 +407,7 @@ function ProductOverview() {
               making double acting cylinders the better choice for projects
               needing repeatable accuracy and controlled motion profiles.
             </p>
-            <p className="text-justify">
+            <p className="">
               At Honeywell Hydraulics, we manufacture double acting hydraulic
               cylinders in custom bore sizes from 40mm to 500mm and stroke
               lengths up to 6,000mm at our{' '}
@@ -437,7 +437,7 @@ function KeyFeatures() {
           <Heading variant="section" as="h2" underline="center" id="key-features-heading" className="text-honeywell-navy mb-4">
             Key Features
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body text-justify">
+          <p className="text-lg text-brand-steelGray font-body ">
             Every double acting cylinder we manufacture is engineered for
             durability, precision, and zero-leakage performance.
           </p>
@@ -459,7 +459,7 @@ function KeyFeatures() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {feature.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
                 {feature.description}
               </p>
             </div>
@@ -480,7 +480,7 @@ function TechnicalSpecifications() {
             <Heading variant="section" as="h2" underline="center" id="technical-specifications-heading">
               Technical Specifications
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body mb-8 text-justify">
+            <p className="text-lg text-brand-steelGray font-body mb-8 ">
               Our double acting cylinders are manufactured with precision-grade
               materials and machined to exacting tolerances. Every specification
               listed below can be customized to your exact requirements.
@@ -522,7 +522,7 @@ function MountingTypesSection() {
           <Heading variant="section" as="h2" underline="center" id="mounting-types-heading" className="text-honeywell-navy mb-4">
             Available Mounting Configurations
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body text-justify">
+          <p className="text-lg text-brand-steelGray font-body ">
             Choose from four standard mounting types, or request a custom
             mounting interface designed to integrate with your specific machine
             frame.
@@ -538,7 +538,7 @@ function MountingTypesSection() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3">
                 {mount.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed mb-6 flex-grow text-justify">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed mb-6 flex-grow ">
                 {mount.description}
               </p>
               {mount.applications && mount.applications.length > 0 && (
@@ -571,7 +571,7 @@ function ApplicationsSection() {
           <Heading variant="section" as="h2" underline="center" id="applications-heading" className="text-honeywell-navy mb-4">
             Applications
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body text-justify">
+          <p className="text-lg text-brand-steelGray font-body ">
             Double acting hydraulic cylinders are the preferred choice across a
             wide range of industrial applications where controlled
             bi-directional force is essential.
@@ -587,7 +587,7 @@ function ApplicationsSection() {
               <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy mb-2">
                 {app.name}
               </Heading>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
                 {app.description}
               </p>
             </div>
@@ -607,7 +607,7 @@ function IndustriesSection() {
           <Heading variant="section" as="h2" underline="center" id="industries-heading" className="text-honeywell-navy mb-4">
             Industries We Serve
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body text-justify">
+          <p className="text-lg text-brand-steelGray font-body ">
             Our double acting hydraulic cylinders power critical machinery
             across India&apos;s most demanding industrial sectors.
           </p>
@@ -639,7 +639,7 @@ function ManufacturingProcess() {
           <Heading variant="section" as="h2" underline="center" id="manufacturing-process-heading" className="text-honeywell-navy mb-4">
             Manufacturing &amp; Quality Process
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body text-justify">
+          <p className="text-lg text-brand-steelGray font-body ">
             Every double acting cylinder is manufactured in-house at our
             Ahmedabad GIDC facility. Zero outsourcing of critical machining
             operations ensures complete quality control.
@@ -657,7 +657,7 @@ function ManufacturingProcess() {
                   CNC Honing &amp; Machining
                 </Heading>
               </div>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
                 ST 52.3 seamless steel tubes are CNC-honed in-house to H8/H9
                 tolerance. Piston rods are precision-ground and hard chrome plated
                 from EN 8/EN 9/EN 19/EN 31 grade steel.
@@ -675,7 +675,7 @@ function ManufacturingProcess() {
                   Imported Sealing Systems
                 </Heading>
               </div>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
                 We exclusively use Hallite and Parker imported seals. These
                 premium sealing compounds ensure zero internal leakage and are
                 rated for extended service life in harsh industrial environments.
@@ -693,7 +693,7 @@ function ManufacturingProcess() {
                   Pressure Validation
                 </Heading>
               </div>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
                 100% of our double acting cylinders undergo rigorous hydrostatic
                 testing at 1.5× working pressure. A detailed test certificate is
                 provided with every cylinder dispatched.
@@ -781,7 +781,7 @@ function ProjectSpotlight() {
                 </div>
                 <Heading variant="card" as="h3">The Challenge</Heading>
               </div>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
                 The client&apos;s existing imported cylinders across their 500-ton press
                 line were failing prematurely due to seal degradation. The OEM&apos;s
                 lead time was 12+ weeks, and every day of press downtime was costing
@@ -798,7 +798,7 @@ function ProjectSpotlight() {
                 </div>
                 <Heading variant="card" as="h3">The Engineering</Heading>
               </div>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
                 We measured the existing cylinders, matched bore, rod, and port
                 dimensions exactly, and upgraded the sealing system from the
                 OEM&apos;s outdated rubber O-rings to premium Parker polyurethane
@@ -815,7 +815,7 @@ function ProjectSpotlight() {
                 </div>
                 <Heading variant="card" as="h3">The Outcome</Heading>
               </div>
-              <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6 text-justify">
+              <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6 ">
                 All 24 double acting cylinders manufactured, tested at 1.5× working
                 pressure, and delivered within{' '}
                 <strong className="text-white">10 working days</strong>. The upgraded
@@ -879,7 +879,7 @@ function RelatedProducts() {
             <Heading variant="section" as="h2" underline="center" id="related-products-heading">
               Complete Your Hydraulic System
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body text-justify">
+            <p className="text-lg text-brand-steelGray font-body ">
               A double acting cylinder needs the right power source and flow
               control. Pair your cylinder with our power packs and manifold
               blocks for a complete hydraulic solution.

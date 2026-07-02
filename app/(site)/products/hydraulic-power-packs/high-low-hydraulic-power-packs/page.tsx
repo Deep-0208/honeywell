@@ -16,6 +16,7 @@ import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
 import { SiteLocationsSection } from '@/components/locations/SiteLocationsSection';
 import { IndustryCard } from '@/components/cards/IndustryCard';
 import { Heading } from '@/components/ui/Heading';
+import { HIGH_LOW_FAQS, HIGH_LOW_SPECS, HIGH_LOW_FEATURES, HIGH_LOW_INDUSTRIES } from '@/data/hydraulic-power-packs/high-low-hydraulic-power-packs';
 import {
   ArrowRight,
   MessageCircle,
@@ -60,38 +61,9 @@ export const metadata: Metadata = {
    PAGE DATA
    ═══════════════════════════════════════════════ */
 
-const FAQS = [
-  {
-    question: 'Can I upgrade my existing press machine to a High-Low power pack?',
-    answer:
-      'Yes. This is one of our most popular services. We will remove your inefficient single-pump system and replace it with a dual-pump unit, drastically reducing your factory\'s electrical consumption.',
-  },
-  {
-    question: 'Why does a single-pump system overheat a press machine?',
-    answer:
-      'In a single-pump system, the pump must be large enough to provide high speed, and capable of high pressure. When the press crushes the metal, that massive volume of fluid has nowhere to go, so it violently bypasses over a relief valve at high pressure, instantly converting electrical horsepower into severe heat. High-Low systems prevent this by unloading the volume before the pressure spikes.',
-  },
-  {
-    question: 'Are High-Low power packs more expensive?',
-    answer:
-      'The upfront capital cost is slightly higher because it requires two pumps and a specialized manifold block. However, the ROI is usually achieved within 6 to 8 months solely through massive reductions in your monthly electricity bill.',
-  },
-  {
-    question: 'Do you manufacture the custom manifold blocks for the unloading logic in-house?',
-    answer:
-      'Absolutely. We CNC-machine all of our logic manifolds from solid aluminum or steel blocks in our Gujarat facility, ensuring absolute control over the sequencing valve tolerances.',
-  },
-];
 
-const TECHNICAL_SPECS = [
-  { parameter: 'Pump Architecture', value: 'Tandem (Gear Pump + Radial/Axial Piston Pump)' },
-  { parameter: 'High Flow Stage (Low Pressure)', value: 'Up to 300+ LPM @ 30 to 70 Bar' },
-  { parameter: 'Low Flow Stage (High Pressure)', value: 'Up to 50 LPM @ 350 to 500 Bar' },
-  { parameter: 'Electric Motor Ratings', value: '3 HP to 150+ HP (3-Phase AC)' },
-  { parameter: 'Reservoir Capacity', value: '50 Liters to 2000+ Liters (Custom Fabricated)' },
-  { parameter: 'Logic Control', value: 'Pilot-operated unloading valves, solenoid override available' },
-  { parameter: 'Cooling Integration', value: 'Air-cooled, Water-cooled, or standalone offline cooling circuits' },
-];
+
+
 
 /* ═══════════════════════════════════════════════
    SCHEMA — @graph structure
@@ -196,7 +168,7 @@ function buildPageSchema() {
       {
         '@type': 'FAQPage',
         '@id': `${siteUrl}${PAGE_URL}#faq`,
-        mainEntity: FAQS.map((faq) => ({
+        mainEntity: HIGH_LOW_FAQS.map((faq) => ({
           '@type': 'Question',
           name: faq.question,
           acceptedAnswer: {
@@ -263,7 +235,7 @@ export default function HighLowPowerPacksPage() {
       />
 
       {/* ─── 14 FAQs ─── */}
-      <FAQSection />
+      <SiteFAQSection faqs={HIGH_LOW_FAQS} />
 
       {/* ─── 16 CTA Section ─── */}
       <CTA
@@ -286,7 +258,7 @@ export default function HighLowPowerPacksPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200"
       id="hero"
     >
       {/* Background Decorative Elements */}
@@ -407,7 +379,7 @@ function ProductOverview() {
     <Section aria-labelledby="overview-heading" bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <Heading id="overview-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+          <Heading id="overview-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
             What Is A High Low Hydraulic Power Pack?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
@@ -429,29 +401,13 @@ function ProductOverview() {
 
 /* ─── 03 How It Works ─── */
 function HowItWorks() {
-  const points = [
-    {
-      icon: <Activity className="w-6 h-6" />,
-      title: 'A. High Flow Stage (Rapid Approach)',
-      desc: 'When the operator triggers the press to close, the cylinder needs to travel a long distance very quickly. During this "approach phase," the required pressure is very low, but the required fluid volume is massive. Both the large high-flow pump and the small high-pressure pump send fluid to the cylinder simultaneously, moving the ram downward at maximum speed.',
-    },
-    {
-      icon: <Hammer className="w-6 h-6" />,
-      title: 'B. Low Flow Stage (The Press Cycle)',
-      desc: 'The moment the press ram contacts the metal workpiece, resistance spikes. The fluid pressure inside the system immediately rises, triggering the transition to the crushing phase of the cycle.',
-    },
-    {
-      icon: <Cog className="w-6 h-6" />,
-      title: 'C. Unloading Valve Logic',
-      desc: 'When pressure reaches a set-point, the Unloading Valve automatically triggers. It "unloads" the large high-flow pump, dumping its volume back to the tank at near-zero pressure. Now, only the small high-pressure pump is driving the cylinder, generating 350+ Bar to crush the metal using minimal electrical horsepower.',
-    },
-  ];
+  
 
   return (
     <Section aria-labelledby="how-it-works-heading" bg="gray" id="how-it-works">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Heading id="how-it-works-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="how-it-works-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             How High-Low Circuits Work
           </Heading>
           <p className="text-lg text-brand-steelGray font-body">
@@ -460,7 +416,7 @@ function HowItWorks() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
-          {points.map((comp, idx) => (
+          {HIGH_LOW_FEATURES.map((comp, idx) => (
             <div
               key={idx}
               className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
@@ -472,7 +428,7 @@ function HowItWorks() {
                 {comp.title}
               </Heading>
               <p className="text-brand-steelGray font-body text-sm leading-relaxed">
-                {comp.desc}
+                {comp.description}
               </p>
             </div>
           ))}
@@ -489,7 +445,7 @@ function PressMachineNecessity() {
       <Container>
         <div className="max-w-4xl mx-auto text-center">
           <TrendingDown className="w-12 h-12 text-honeywell-red mx-auto mb-6" />
-          <Heading id="necessity-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+          <Heading id="necessity-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
             Why Press Machines Demand High-Low Systems
           </Heading>
           <p className="text-lg text-brand-darkSlate font-body mb-6 leading-relaxed">
@@ -515,7 +471,7 @@ function ComparisonSection() {
     <Section aria-labelledby="comparison-heading" bg="gray" id="comparison">
       <Container>
         <div className="max-w-4xl mx-auto mb-12 text-center">
-          <Heading id="comparison-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="comparison-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             High-Low vs. Conventional Power Packs
           </Heading>
           <p className="text-lg text-brand-steelGray font-body">
@@ -584,7 +540,7 @@ function TechnicalSpecifications() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <Heading id="technical-specifications-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+            <Heading id="technical-specifications-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
               Technical Specifications Framework
             </Heading>
             <p className="text-lg text-brand-steelGray font-body mb-8">
@@ -599,7 +555,7 @@ function TechnicalSpecifications() {
               </Button>
             </div>
           </div>
-          <SpecTable title="Standard Capabilities" rows={TECHNICAL_SPECS} />
+          <SpecTable title="Standard Capabilities" rows={HIGH_LOW_SPECS} />
         </div>
       </Container>
     </Section>
@@ -608,38 +564,13 @@ function TechnicalSpecifications() {
 
 /* ─── 07 Industries Served ─── */
 function IndustriesSection() {
-  const industries = [
-    {
-      icon: <Hammer className="w-6 h-6" />,
-      name: 'Heavy Forging',
-      desc: 'Providing extreme high-pressure/low-flow logic to generate the massive tonnages required to shape red-hot steel.',
-      link: '#'
-    },
-    {
-      icon: <Settings className="w-6 h-6" />,
-      name: 'Sheet Metal & Stamping',
-      desc: 'Supplying rapid-approach power packs to decrease machine cycle times and dramatically increase parts-per-hour output.',
-      link: '#'
-    },
-    {
-      icon: <Box className="w-6 h-6" />,
-      name: 'Steel Industry',
-      desc: 'Delivering robust, continuous-duty power units for heavy-duty metal shearing and bending operations.',
-      link: '#'
-    },
-    {
-      icon: <Cog className="w-6 h-6" />,
-      name: 'Industrial Automation',
-      desc: 'Designing highly compact, energy-efficient power units for automated robotic clamping and pressing cells.',
-      link: '#'
-    },
-  ];
+  
 
   return (
     <Section aria-labelledby="industries-heading" bg="gray" id="industries">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Heading id="industries-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="industries-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Industries Served
           </Heading>
           <p className="text-lg text-brand-steelGray font-body">
@@ -648,13 +579,13 @@ function IndustriesSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {industries.map((ind, idx) => (
+            {HIGH_LOW_INDUSTRIES.map((ind, idx) => (
               <div key={idx}>
                 <IndustryCard
-                  industryName={ind.name}
-                  description={ind.desc}
+                  industryName={ind.industryName}
+                  description={ind.description}
                   icon={ind.icon}
-                  href={ind.link || '/industries'}
+                  href={ind.href}
                 />
               </div>
             ))}
@@ -670,7 +601,7 @@ function EngineeringConsiderations() {
     <Section aria-labelledby="engineering-considerations-heading" bg="white" id="engineering-considerations">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <Heading id="engineering-considerations-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+          <Heading id="engineering-considerations-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
             Engineering Considerations (Specifying High-Low Systems)
           </Heading>
           <p className="text-brand-darkSlate font-body text-lg mb-8">
@@ -725,7 +656,7 @@ function ManufacturingProcess() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <Heading id="manufacturing-process-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+            <Heading id="manufacturing-process-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
               Manufacturing & Quality Process
             </Heading>
             <p className="text-brand-darkSlate font-body text-lg mb-8 leading-relaxed">
@@ -804,7 +735,7 @@ function ProjectSpotlight() {
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
               <Badge variant="custom" className="w-fit mb-6">PROJECT SPOTLIGHT</Badge>
-              <Heading id="project-spotlight-heading" variant="section" as="h2" className="text-3xl font-display font-bold text-honeywell-navy mb-6">
+              <Heading id="project-spotlight-heading" variant="section" as="h2" className="text-3xl font-display font-bold text-honeywell-navy mb-6" underline="center">
                 Energy Efficiency Retrofit for a 400-Ton Sheet Metal Deep Drawing Press
               </Heading>
               
@@ -851,25 +782,25 @@ function RelatedProducts() {
   const products = [
     {
       title: 'Hydraulic Power Packs Hub',
-      desc: 'Explore our master category of power packs.',
+      description: 'Explore our master category of power packs.',
       link: '/products/hydraulic-power-packs/',
       icon: <Zap className="w-6 h-6 text-honeywell-red" />
     },
     {
       title: '3 Phase AC Power Packs',
-      desc: 'Standard continuous-duty fluid generation units.',
+      description: 'Standard continuous-duty fluid generation units.',
       link: '/products/hydraulic-power-packs/3-phase-hydraulic-power-packs/',
       icon: <Activity className="w-6 h-6 text-honeywell-red" />
     },
     {
       title: 'Welded Hydraulic Cylinders',
-      desc: 'Extreme-pressure 350+ Bar cylinders for pressing.',
+      description: 'Extreme-pressure 350+ Bar cylinders for pressing.',
       link: '/products/hydraulic-cylinders/welded-hydraulic-cylinders/',
       icon: <Box className="w-6 h-6 text-honeywell-red" />
     },
     {
       title: 'DC Mini Power Packs',
-      desc: 'Compact battery-powered mobile units.',
+      description: 'Compact battery-powered mobile units.',
       link: '/products/hydraulic-power-packs/dc-mini-power-packs/',
       icon: <Settings className="w-6 h-6 text-honeywell-red" />
     }
@@ -879,7 +810,7 @@ function RelatedProducts() {
     <Section aria-labelledby="related-products-heading" bg="gray" id="related-products">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Heading id="related-products-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="related-products-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Related Products
           </Heading>
           <p className="text-lg text-brand-steelGray font-body">
@@ -898,7 +829,7 @@ function RelatedProducts() {
                   {product.title}
                 </Heading>
                 <p className="text-brand-steelGray text-sm leading-relaxed mb-4 flex-grow">
-                  {product.desc}
+                  {product.description}
                 </p>
                 <div className="flex items-center text-honeywell-red font-semibold text-sm mt-auto">
                   View Category <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -917,19 +848,19 @@ function RelatedServices() {
   const services = [
     {
       title: 'Hydraulic Consulting',
-      desc: 'Hire our systems architects to audit your factory floor and calculate exactly how much electricity you can save by upgrading aging presses.',
+      description: 'Hire our systems architects to audit your factory floor and calculate exactly how much electricity you can save by upgrading aging presses.',
       link: '#',
       icon: <MessageCircle className="w-6 h-6 text-honeywell-navy" />
     },
     {
       title: 'OEM Hydraulic Manufacturing',
-      desc: 'High-volume, repeatable production of custom High-Low power units specifically for press machine builders.',
+      description: 'High-volume, repeatable production of custom High-Low power units specifically for press machine builders.',
       link: '#',
       icon: <Settings className="w-6 h-6 text-honeywell-navy" />
     },
     {
       title: 'Custom Hydraulic System Design',
-      desc: 'We will design the entire press circuit, calculating the exact unloading pressures and cylinder bore sizes required.',
+      description: 'We will design the entire press circuit, calculating the exact unloading pressures and cylinder bore sizes required.',
       link: '#',
       icon: <FileCheck className="w-6 h-6 text-honeywell-navy" />
     }
@@ -939,7 +870,7 @@ function RelatedServices() {
     <Section aria-labelledby="related-services-heading" bg="white" id="related-services">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Heading id="related-services-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+          <Heading id="related-services-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Related Services
           </Heading>
           <p className="text-lg text-brand-steelGray font-body">
@@ -955,7 +886,7 @@ function RelatedServices() {
               </div>
               <Heading variant="subsection" as="h3" className="text-xl font-bold text-honeywell-navy mb-3">{service.title}</Heading>
               <p className="text-brand-steelGray font-body leading-relaxed mb-6">
-                {service.desc}
+                {service.description}
               </p>
               <Link href={service.link} className="inline-flex items-center text-honeywell-red font-bold hover:underline">
                 Explore Service <ArrowRight className="w-4 h-4 ml-2" />
@@ -970,16 +901,4 @@ function RelatedServices() {
 
 
 
-
-/* ─── 15 FAQ Section ─── */
-function FAQSection() {
-  return (
-    <SiteFAQSection
-      faqs={FAQS}
-      title="Frequently Asked Questions"
-      description="Technical answers regarding press machinery retrofits and energy efficiency."
-      injectSchema={false}
-    />
-  );
-}
 

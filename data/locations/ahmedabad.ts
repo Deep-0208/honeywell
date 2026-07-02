@@ -2,12 +2,12 @@ import { LocationPageData } from './gujarat';
 
 export const ahmedabadData: LocationPageData = {
   seo: {
-    title: 'Hydraulic Cylinder Manufacturer in Ahmedabad | Honeywell Hydraulics',
-    description: 'Top-rated hydraulic cylinder & power pack manufacturer in Ahmedabad. Supplying Kathwada, Odhav, Vatva, Sanand & Changodar GIDC. Factory-direct pricing.',
+    title: 'Hydraulic Cylinder Manufacturer Ahmedabad | Honeywell',
+    description: 'Top hydraulic cylinder manufacturer in Ahmedabad. Supplying Kathwada, Odhav, Sanand & Vatva GIDC at factory-direct pricing. Get a free quote today.',
     canonical: 'https://www.honeywellhydraulics.com/locations/ahmedabad/',
     openGraph: {
-      title: 'Hydraulic Cylinder Manufacturer in Ahmedabad | Honeywell Hydraulics',
-      description: 'Top-rated hydraulic cylinder & power pack manufacturer in Ahmedabad. Supplying Kathwada, Odhav, Vatva, Sanand & Changodar GIDC. Factory-direct pricing.',
+      title: 'Hydraulic Cylinder Manufacturer Ahmedabad | Honeywell',
+      description: 'Top hydraulic cylinder manufacturer in Ahmedabad. Supplying Kathwada, Odhav, Sanand & Vatva GIDC at factory-direct pricing. Get a free quote today.',
       url: 'https://www.honeywellhydraulics.com/locations/ahmedabad/',
       images: [
         {
@@ -20,12 +20,13 @@ export const ahmedabadData: LocationPageData = {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Hydraulic Cylinder Manufacturer in Ahmedabad | Honeywell Hydraulics',
-      description: 'Top-rated hydraulic cylinder & power pack manufacturer in Ahmedabad. Supplying Kathwada, Odhav, Vatva, Sanand & Changodar GIDC. Factory-direct pricing.',
+      title: 'Hydraulic Cylinder Manufacturer Ahmedabad | Honeywell',
+      description: 'Top hydraulic cylinder manufacturer in Ahmedabad. Supplying Kathwada, Odhav, Sanand & Vatva GIDC at factory-direct pricing. Get a free quote today.',
       images: ['/images/locations/ahmedabad-hero.webp'],
     },
     keywords: [
       'hydraulic cylinder manufacturer in Ahmedabad',
+      'hydraulic cylinder manufacturer in ahmedabad india',
       'hydraulic cylinder supplier Ahmedabad',
       'custom hydraulic cylinders Kathwada GIDC',
       'hydraulic power pack manufacturer Ahmedabad',
@@ -221,7 +222,7 @@ export const ahmedabadData: LocationPageData = {
     title: 'The Advantage of a Local Ahmedabad Partner',
     description: '"When our main hydraulic press went down at 10 AM, we took the cylinder straight to Honeywell\'s factory in Kathwada. They repacked the seals and honed the barrel by 4 PM. We were back online for the night shift. You simply cannot get that level of service from an out-of-state supplier." — Production Head, Auto Components Manufacturer, Sanand.',
     items: [
-      { id: 'tf1', title: 'Face-to-Face Engineering', description: 'Discuss complex hydraulic circuits and custom cylinder designs in person with our engineers at our Ahmedabad facility.' },
+      { id: 'tf1', title: 'ISO 9001:2015 Certified Engineering', description: 'Discuss complex circuits face-to-face at our facility. All cylinders undergo 1.5x hydrostatic testing, and we provide EN 10204 Type 3.1 material certificates.' },
       { id: 'tf2', title: 'Immediate Spares Availability', description: 'We stock a wide range of standard seals, hydraulic valves, and manifold accessories for immediate local pickup.' },
       { id: 'tf3', title: 'Local Accountability', description: 'We stand by our work. If there is ever an issue on your shop floor, our technicians are just a short drive away.' },
     ],

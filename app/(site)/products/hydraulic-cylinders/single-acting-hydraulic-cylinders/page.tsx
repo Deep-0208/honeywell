@@ -61,38 +61,13 @@ export const metadata: Metadata = {
    PAGE DATA
    ═══════════════════════════════════════════════ */
 
-const FAQS = [
-  {
-    question: 'How does a single acting hydraulic cylinder retract?',
-    answer:
-      'A single acting hydraulic cylinder must rely on an external force to expunge the fluid inside and retract. This can be left to gravity if there is no immediate need to retract the piston, but a second piston or mechanical load can also be used to forcefully push the piston back into the cylinder. Strong internal springs can also be utilized for retraction.',
-  },
-  {
-    question: 'What is the main advantage of a single acting cylinder?',
-    answer:
-      'Single acting cylinders are simpler in design and often more cost-effective because they require only one hydraulic line. They are highly reliable in applications where the return stroke can be accomplished by gravity, mechanical weight, or a spring.',
-  },
-  {
-    question: 'Can single acting cylinders be used in horizontal applications?',
-    answer:
-      'Yes, they can be used horizontally, provided there is an external force (like a spring mechanism or opposing load) to retract the rod. If relying purely on gravity, they are typically mounted vertically.',
-  },
-  {
-    question: 'Do you manufacture custom single acting cylinders?',
-    answer:
-      'Yes. We engineer custom single acting cylinders with bore sizes up to 250mm and stroke lengths up to 6000mm. We can customize mounting options, port locations, and material specifications according to your exact requirements.',
-  },
-];
-
-const TECHNICAL_SPECS = [
-  { parameter: 'Bore Size', value: '40 to 250 mm (Custom sizes available)' },
-  { parameter: 'Rod Dia', value: '16 to 200 mm' },
-  { parameter: 'Stroke Length', value: 'Up to 6000 mm' },
-  { parameter: 'Working Pressure', value: 'Up to 450 Bar' },
-  { parameter: 'Honed Tube Material', value: 'ST 52.3 (Tolerance H8, H9)' },
-  { parameter: 'Piston Rod Material', value: 'EN 8 / EN 9 / EN 19 / EN 31 (Tolerance f7)' },
-  { parameter: 'Piston and Gland', value: 'EN 8' },
-];
+import {
+  SINGLE_ACTING_FAQS,
+  SINGLE_ACTING_SPECS,
+  SINGLE_ACTING_COMPONENTS,
+  SINGLE_ACTING_ADVANTAGES,
+  SINGLE_ACTING_INDUSTRIES,
+} from '@/data/hydraulic-cylinders/single-acting-hydraulic-cylinders';
 
 /* ═══════════════════════════════════════════════
    SCHEMA — @graph structure
@@ -197,7 +172,7 @@ function buildPageSchema() {
       {
         '@type': 'FAQPage',
         '@id': `${siteUrl}${PAGE_URL}#faq`,
-        mainEntity: FAQS.map((faq) => ({
+        mainEntity: SINGLE_ACTING_FAQS.map((faq) => ({
           '@type': 'Question',
           name: faq.question,
           acceptedAnswer: {
@@ -287,7 +262,7 @@ export default function SingleActingHydraulicCylindersPage() {
 function HeroSection() {
   return (
     <div
-      className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200"
+      className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200"
       id="hero"
     >
       {/* Background Decorative Elements */}
@@ -312,7 +287,7 @@ function HeroSection() {
               Single Acting Hydraulic Cylinder Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed text-justify">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed ">
               Engineered for efficiency and robust performance. Honeywell Hydraulics is a premier custom single acting hydraulic cylinder manufacturer in Gujarat. Our single acting cylinders are designed to apply unidirectional force for lifting, pushing, or pressing applications, offering a highly reliable and cost-effective fluid power solution capable of sustaining up to 450 Bar working pressures.
             </p>
 
@@ -405,13 +380,13 @@ function ProductOverview() {
             What Are Single Acting Hydraulic Cylinders?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
-            <p className="text-justify">
+            <p className="">
               Hydraulic cylinders are used as linear actuators to apply mechanical force in a linear motion. A <strong className="text-honeywell-navy">single acting hydraulic cylinder</strong>, also known as a single acting hydraulic ram, operates in a single direction.
             </p>
-            <p className="text-justify">
+            <p className="">
               It typically has a single port at the bottom of the cylinder where pressurised fluid is pumped into the system. As the fluid enters the system, it fills the cylinder and extends the piston inside, creating mechanical force to lift, push, or press heavy loads.
             </p>
-            <p className="text-justify">
+            <p className="">
               To retract the piston, a single acting hydraulic cylinder must rely on an external force to expunge the fluid inside. This can be left to gravity if there is no immediate need to retract the piston rapidly. A second piston, mechanical weight, or strong internal springs can also be used to forcefully push the piston back into the cylinder.
             </p>
           </div>
@@ -423,24 +398,6 @@ function ProductOverview() {
 
 /* ─── 03 Mechanics Explained ─── */
 function ConstructionExplained() {
-  const components = [
-    {
-      icon: <Box className="w-6 h-6" />,
-      title: 'A. Single Port Operation',
-      desc: 'Fluid enters through a single port to extend the cylinder. The simplicity of a single hydraulic line reduces plumbing complexity, potential leak points, and overall system cost.',
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: 'B. Piston and Rod Assembly',
-      desc: 'The hard-chrome plated piston rod (EN 8 / EN 9 / EN 19) transmits the mechanical force to the heavy load. Precision honing of the ST 52.3 tube ensures extremely low friction during extension and retraction.',
-    },
-    {
-      icon: <Settings className="w-6 h-6" />,
-      title: 'C. Retraction Mechanism',
-      desc: 'Unlike double acting cylinders, single acting variants rely on gravity, weight of the load, or internal springs for the return stroke. This makes them perfect for lifting applications like scissor lifts or jacks.',
-    },
-  ];
-
   return (
     <Section aria-labelledby="construction-heading" bg="gray" id="construction">
       <Container>
@@ -454,7 +411,7 @@ function ConstructionExplained() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
-          {components.map((comp, idx) => (
+          {SINGLE_ACTING_COMPONENTS.map((comp, idx) => (
             <div
               key={idx}
               className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
@@ -465,7 +422,7 @@ function ConstructionExplained() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {comp.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
                 {comp.desc}
               </p>
             </div>
@@ -478,29 +435,6 @@ function ConstructionExplained() {
 
 /* ─── 04 Advantages ─── */
 function Advantages() {
-  const advantages = [
-    {
-      icon: <Minimize2 className="w-7 h-7" />,
-      title: 'Cost-Effective Design',
-      description: 'With only one hydraulic port and line, single acting cylinders reduce the complexity of the hydraulic circuit, saving on hoses, fittings, and valving.',
-    },
-    {
-      icon: <ShieldAlert className="w-7 h-7" />,
-      title: 'High Reliability',
-      description: 'Fewer moving parts and a simpler sealing mechanism mean fewer points of potential failure, leading to a highly reliable actuator with lower maintenance needs.',
-    },
-    {
-      icon: <CloudRain className="w-7 h-7" />,
-      title: 'Reduced Fluid Requirement',
-      description: 'Because fluid is only used for the extension stroke, single acting systems require smaller reservoirs and smaller pumps compared to double acting setups.',
-    },
-    {
-      icon: <Settings className="w-7 h-7" />,
-      title: 'Fail-Safe Retraction',
-      description: 'In gravity-return applications, the cylinder will safely retract if hydraulic power is lost, providing an inherent fail-safe mechanism for lifting equipment.',
-    },
-  ];
-
   return (
     <Section aria-labelledby="advantages-heading" bg="white" id="advantages">
       <Container>
@@ -514,7 +448,7 @@ function Advantages() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {advantages.map((adv, idx) => (
+          {SINGLE_ACTING_ADVANTAGES.map((adv, idx) => (
             <div
               key={idx}
               className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red flex flex-col"
@@ -525,7 +459,7 @@ function Advantages() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3">
                 {adv.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed flex-grow text-justify">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed flex-grow ">
                 {adv.description}
               </p>
             </div>
@@ -619,7 +553,7 @@ function TechnicalSpecifications() {
               </Button>
             </div>
           </div>
-          <SpecTable title="Standard Spec Framework" rows={TECHNICAL_SPECS} />
+          <SpecTable title="Standard Spec Framework" rows={SINGLE_ACTING_SPECS} />
         </div>
       </Container>
     </Section>
@@ -628,24 +562,6 @@ function TechnicalSpecifications() {
 
 /* ─── 07 Industries Served ─── */
 function IndustriesSection() {
-  const industries = [
-    {
-      icon: <HardHat className="w-6 h-6" />,
-      name: 'Material Handling',
-      desc: 'Used extensively in scissor lifts, goods elevators, and platform lifts where gravity handles the return stroke.',
-    },
-    {
-      icon: <Hammer className="w-6 h-6" />,
-      name: 'Heavy Forging & Presses',
-      desc: 'Ideal for hydraulic presses where massive unidirectional downward force is required to stamp or bend metal.',
-    },
-    {
-      icon: <Box className="w-6 h-6" />,
-      name: 'Automotive & Parking',
-      desc: 'Reliable actuators for car parking systems and hydraulic jacks.',
-    },
-  ];
-
   return (
     <Section aria-labelledby="industries-heading" bg="gray" id="industries">
       <Container>
@@ -659,13 +575,13 @@ function IndustriesSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {industries.map((ind, idx) => (
+          {SINGLE_ACTING_INDUSTRIES.map((ind, idx) => (
             <div key={idx}>
               <IndustryCard
-                industryName={ind.name}
-                description={ind.desc}
+                industryName={ind.industryName}
+                description={ind.description}
                 icon={ind.icon}
-                href={'/industries'}
+                href={ind.href}
               />
             </div>
           ))}
@@ -733,7 +649,7 @@ function ManufacturingProcess() {
                 </div>
                 <div>
                   <Heading variant="card" as="h3" className="text-lg font-bold text-honeywell-navy">Premium Materials</Heading>
-                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed text-justify">
+                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed ">
                     We exclusively use ST 52.3 seamless honed tubes and EN 8 / EN 19 piston rods. This guarantees superior wear resistance and structural integrity under high pressure.
                   </p>
                 </div>
@@ -745,7 +661,7 @@ function ManufacturingProcess() {
                 </div>
                 <div>
                   <Heading variant="card" as="h3" className="text-lg font-bold text-honeywell-navy">Precision Machining</Heading>
-                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed text-justify">
+                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed ">
                     Our CNC machining processes ensure strict H8/H9 tolerances for the honed tubes and f7 tolerances for the piston rods, providing an ultra-smooth surface finish for extended seal life.
                   </p>
                 </div>
@@ -757,7 +673,7 @@ function ManufacturingProcess() {
                 </div>
                 <div>
                   <Heading variant="card" as="h3" className="text-lg font-bold text-honeywell-navy">Pressure Validation</Heading>
-                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed text-justify">
+                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed ">
                     Every cylinder undergoes rigorous hydrostatic testing at pressures well beyond their rated working capacity to guarantee leak-free performance and structural safety.
                   </p>
                 </div>
@@ -806,14 +722,14 @@ function ProjectSpotlight() {
               <div className="space-y-6">
                 <div>
                   <Heading variant="card" as="h3" className="font-bold text-honeywell-navy uppercase text-xs tracking-wider mb-2">The Challenge:</Heading>
-                  <p className="text-brand-darkSlate text-sm leading-relaxed text-justify">
+                  <p className="text-brand-darkSlate text-sm leading-relaxed ">
                     A material handling OEM required highly reliable, long-stroke lifting cylinders for their 5-ton industrial goods elevators. The cylinders needed to lift the platform efficiently and return safely using only the weight of the platform.
                   </p>
                 </div>
 
                 <div>
                   <Heading variant="card" as="h3" className="font-bold text-honeywell-navy uppercase text-xs tracking-wider mb-2">The Solution:</Heading>
-                  <p className="text-brand-darkSlate text-sm leading-relaxed text-justify">
+                  <p className="text-brand-darkSlate text-sm leading-relaxed ">
                     We engineered custom <strong>Single Acting Hydraulic Cylinders</strong> with a 6000mm stroke and specialized velocity fuses built into the base port. We used ultra-smooth honed tubes and premium rod seals to minimize friction during the gravity-assisted return stroke.
                   </p>
                 </div>
@@ -925,7 +841,7 @@ function RelatedServices() {
           {services.map((service, idx) => (
             <div key={idx} className="bg-brand-surfaceGray p-8 rounded-xl border border-slate-200 hover:border-honeywell-navy transition-colors group">
               <Heading variant="subsection" as="h3" className="text-xl font-bold text-honeywell-navy mb-3">{service.title}</Heading>
-              <p className="text-brand-steelGray text-sm leading-relaxed mb-6 text-justify">
+              <p className="text-brand-steelGray text-sm leading-relaxed mb-6 ">
                 {service.desc}
               </p>
               <Link href={service.href} className="inline-flex items-center text-honeywell-red font-bold text-sm group-hover:underline">
@@ -943,7 +859,7 @@ function RelatedServices() {
 function FAQSection() {
   return (
     <SiteFAQSection
-      faqs={FAQS}
+      faqs={SINGLE_ACTING_FAQS}
       title="Frequently Asked Questions"
       description="Technical answers regarding single acting cylinder applications and custom manufacturing."
       injectSchema={false}

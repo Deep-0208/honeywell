@@ -13,9 +13,10 @@ import { Badge } from '@/components/ui/Badge';
 import { IconBox } from '@/components/ui/IconBox';
 import { CTA } from '@/components/ui/CTA';
 import { SpecTable } from '@/components/tables/SpecTable';
-import { FAQAccordion } from '@/components/faq/FAQAccordion';
+import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
 import { ProductCard } from '@/components/cards/ProductCard';
 import { LocationCard } from '@/components/cards/LocationCard';
+import { IndustryCard } from '@/components/cards/IndustryCard';
 import {
   ArrowRight,
   Phone,
@@ -76,57 +77,12 @@ export const metadata: Metadata = {
    PAGE DATA
    ═══════════════════════════════════════════════ */
 
-const FAQS = [
-  {
-    question: 'Why should I choose a tie rod cylinder instead of a welded cylinder?',
-    answer:
-      'If your machine operates indoors and requires rapid maintenance to prevent costly downtime, tie rod cylinders are superior because they can be disassembled and rebuilt on the factory floor with standard wrenches.',
-  },
-  {
-    question: 'Are your tie rod cylinders interchangeable with other NFPA brands?',
-    answer:
-      'Yes. We manufacture our tie rod cylinders to strict NFPA and ISO 6020/2 dimensional standards. The mounting dimensions, port locations, and pin-to-pin lengths will perfectly match major international brands, allowing for easy drop-in replacements.',
-  },
-  {
-    question: 'Can a tie rod cylinder handle high pressures?',
-    answer:
-      'Tie rod cylinders are generally rated for low to medium pressure (up to 210 Bar / 3000 PSI). For extreme high-pressure applications (350+ Bar) where shock loads could cause the tie rods to stretch, we recommend our Welded Hydraulic Cylinders.',
-  },
-  {
-    question: 'Do you offer adjustable cushioning on your tie rod cylinders?',
-    answer:
-      'Yes. We can integrate adjustable internal fluid cushions on both the head and cap ends to safely decelerate the piston at the end of the stroke, preventing mechanical slamming in high-speed automation.',
-  },
-];
-
-const TECHNICAL_SPECS = [
-  { parameter: 'Bore Sizes', value: '40mm to 250mm (1.5" to 10" NFPA standard)' },
-  {
-    parameter: 'Maximum Operating Pressure',
-    value: 'Up to 210 Bar (3000 PSI)',
-  },
-  {
-    parameter: 'Mounting Standards',
-    value: 'NFPA, ISO 6020/2, Custom',
-  },
-  {
-    parameter: 'Tie Rod Material',
-    value: 'High-Tensile Alloy Steel',
-  },
-  {
-    parameter: 'Barrel Material',
-    value: 'ST52 Seamless Honed Tube (Ra 0.2 µm finish)',
-  },
-  {
-    parameter: 'Sealing Options',
-    value:
-      'Polyurethane (Standard), Viton (High-Temp), PTFE (Low-Friction)',
-  },
-  {
-    parameter: 'Cushioning',
-    value: 'Adjustable internal cushioning available on both head and cap ends',
-  },
-];
+import {
+  TIE_ROD_FAQS,
+  TIE_ROD_SPECS,
+  TIE_ROD_COMPONENTS,
+  TIE_ROD_INDUSTRIES,
+} from '@/data/hydraulic-cylinders/tie-rod-hydraulic-cylinders';
 
 /* ═══════════════════════════════════════════════
    SCHEMA — @graph structure
@@ -237,7 +193,7 @@ function buildPageSchema() {
       {
         '@type': 'FAQPage',
         '@id': `${siteUrl}${PAGE_URL}#faq`,
-        mainEntity: FAQS.map((faq) => ({
+        mainEntity: TIE_ROD_FAQS.map((faq) => ({
           '@type': 'Question',
           name: faq.question,
           acceptedAnswer: {
@@ -382,7 +338,7 @@ function HeroSection() {
               Tie Rod Hydraulic Cylinder Manufacturer
             </h1>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed text-justify">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed ">
               Engineered for absolute precision and rapid field maintenance. Honeywell Hydraulics is a premier tie rod hydraulic cylinder manufacturer in Gujarat, supplying highly standardized, heavy-duty NFPA tie rod cylinders to OEMs, machine builders, and automated factories.
             </p>
 
@@ -521,7 +477,7 @@ function ProductOverview() {
           <Heading variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
             What Are Tie Rod Hydraulic Cylinders?
           </Heading>
-          <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed text-justify">
+          <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed ">
             <p>
               In the world of industrial linear actuation, the{' '}
               <strong className="text-honeywell-navy">Tie Rod Hydraulic Cylinder</strong> is the undisputed standard for automated manufacturing. According to industry reliability studies, implementing standardized tie rod cylinders can reduce maintenance-related downtime by up to 80% compared to custom-welded alternatives in high-cycle environments.
@@ -541,39 +497,6 @@ function ProductOverview() {
 
 /* ─── 03 Key Features (Construction & Advantages) ─── */
 function KeyFeatures() {
-  const steps = [
-    {
-      icon: <Box className="w-6 h-6" />,
-      title: 'The End Caps',
-      desc: 'CNC-machined from solid steel blocks. The head cap and the rear cap feature deep grooves designed to perfectly seat the barrel. These caps house the fluid ports and the crucial rod wiper and gland seals.',
-    },
-    {
-      icon: <WrenchIcon className="w-6 h-6" />,
-      title: 'The Tie Rods',
-      desc: 'High-yield-strength alloy steel rods. Torqued to exact mathematical specifications to provide massive clamping force, ensuring the O-ring static seals never blow out under pressure.',
-    },
-    {
-      icon: <Layers className="w-6 h-6" />,
-      title: 'The Barrel',
-      desc: 'Precision-honed ST52 seamless steel tubing. Honed to a mirror-like Ra 0.2 µm finish. Zero heat-induced distortion maintains perfect internal cylindricity.',
-    },
-    {
-      icon: <Settings className="w-6 h-6" />,
-      title: 'The Piston & Rod',
-      desc: 'Internal piston utilizes premium polyurethane U-cups. The hard-chrome plated piston rod transmits mechanical force and resists wear.',
-    },
-    {
-      icon: <ShieldCheck className="w-6 h-6" />,
-      title: 'Sealing System',
-      desc: 'Premium low-friction seals designed specifically to minimize heat generation during rapid, continuous-cycle stroking.',
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: 'Rapid Serviceability',
-      desc: 'Loosen the tie rod nuts, slide the end cap off, replace the seal, and re-bolt the cylinder together using standard hand tools within 30 minutes.',
-    },
-  ];
-
   return (
     <Section bg="gray" id="construction">
       <Container>
@@ -587,7 +510,7 @@ function KeyFeatures() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {steps.map((step, idx) => (
+          {TIE_ROD_COMPONENTS.map((step, idx) => (
             <div
               key={idx}
               className="bg-white rounded-xl border border-slate-200 p-8 hover:shadow-md transition-shadow duration-300 group"
@@ -602,7 +525,7 @@ function KeyFeatures() {
               <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {step.title}
               </h3>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
                 {step.desc}
               </p>
             </div>
@@ -646,7 +569,7 @@ function TechnicalSpecifications() {
           </div>
           <SpecTable
             title="Standard Capability Range"
-            rows={TECHNICAL_SPECS}
+            rows={TIE_ROD_SPECS}
           />
         </div>
       </Container>
@@ -716,62 +639,27 @@ function ProductVariants() {
 
 /* ─── 07 Industries Served ─── */
 function IndustriesSection() {
-  const industries = [
-    {
-      icon: <Factory className="w-6 h-6" />,
-      name: 'Automotive OEM',
-      desc: 'Providing high-speed, highly serviceable clamping cylinders for robotic welding stations and assembly lines.',
-    },
-    {
-      icon: <Box className="w-6 h-6" />,
-      name: 'Plastic Processing',
-      desc: 'Supplying standardized core-pull and ejector cylinders for injection moulding machines.',
-    },
-    {
-      icon: <Wrench className="w-6 h-6" />,
-      name: 'Machine Tool Builders',
-      desc: 'Delivering zero-distortion, low-friction actuation for automated CNC loading and unloading gantries.',
-    },
-    {
-      icon: <Package className="w-6 h-6" />,
-      name: 'Packaging & Automation',
-      desc: 'Engineering rapid-cycle cylinders for high-speed corrugated box manufacturing and palletizing robots.',
-    },
-  ];
-
   return (
     <Section bg="gray" id="industries">
       <Container>
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <Heading variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+        <div className="text-center mb-8 md:mb-12 flex flex-col items-center">
+          <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             Industries Served
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body max-w-3xl text-center">
             Our custom tie rod hydraulic cylinders are the standard actuators for continuous manufacturing sectors.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {industries.map((ind, idx) => (
-            <div
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {TIE_ROD_INDUSTRIES.map((ind, idx) => (
+            <IndustryCard
               key={idx}
-              className="flex gap-5 bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md transition-shadow duration-300"
-            >
-              <IconBox
-                icon={ind.icon}
-                variant="secondary"
-                size="md"
-                className="shrink-0"
-              />
-              <div>
-                <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">
-                  {ind.name}
-                </h3>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
-                  {ind.desc}
-                </p>
-              </div>
-            </div>
+              industryName={ind.industryName}
+              description={ind.description}
+              icon={ind.icon}
+              href={ind.href}
+            />
           ))}
         </div>
       </Container>
@@ -801,7 +689,7 @@ function ManufacturingProcess() {
                 Precision Machining
               </h3>
             </div>
-            <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+            <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
               Advanced CNC milling centers utilized to machine perfectly square end caps, ensuring exact tie-rod alignment.
             </p>
           </div>
@@ -813,7 +701,7 @@ function ManufacturingProcess() {
                 Torque Calibration
               </h3>
             </div>
-            <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+            <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
               Pneumatic torque-yield wrenches used during assembly to guarantee uniform clamping force across all four tie rods, preventing asymmetrical barrel stress.
             </p>
           </div>
@@ -825,7 +713,7 @@ function ManufacturingProcess() {
                 System Validation
               </h3>
             </div>
-            <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+            <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
               100% of our tie rod cylinders undergo rigorous 1.5x working pressure hydrostatic testing to verify rod seal integrity and ensure zero static O-ring extrusion.
             </p>
           </div>
@@ -890,7 +778,7 @@ function ProjectSpotlight() {
                 </div>
                 <h3 className="text-lg font-display font-bold text-honeywell-navy">The Challenge</h3>
               </div>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
                 The OEM built a multi-station robotic welding cell using custom-welded cylinders for part clamping. When a seal failed due to weld-spatter damage, the maintenance team had to cut the cylinder apart, causing 14 hours of assembly line downtime.
               </p>
             </div>
@@ -902,7 +790,7 @@ function ProjectSpotlight() {
                 </div>
                 <h3 className="text-lg font-display font-bold text-honeywell-navy">The Solution</h3>
               </div>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
                 Honeywell Hydraulics replaced the entire clamping network with standardized NFPA Tie Rod Cylinders. We equipped the cylinders with heavy-duty rod wipers to clear weld spatter and standardized the mounting footprint across all 12 stations.
               </p>
             </div>
@@ -914,7 +802,7 @@ function ProjectSpotlight() {
                 </div>
                 <h3 className="text-lg font-display font-bold text-white">The Outcome</h3>
               </div>
-              <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6 text-justify">
+              <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6 ">
                 When future seal replacements were required, the automotive maintenance crew simply unbolted the tie rods and replaced the seals directly on the jig without removing the cylinder body. Downtime was reduced from 14 hours to <strong className="text-white">45 minutes</strong>.
               </p>
               <Button
@@ -941,7 +829,7 @@ function RelatedProducts() {
       description:
         'Need beyond standard NFPA? Explore our bespoke manufacturing capabilities for extreme large bore and reverse-engineered actuators.',
       category: 'Cylinders',
-      imageSrc: '/images/products/custom-hydraulic-cylinder-manufacturer.webp',
+      imageSrc: '/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp',
       href: '/products/hydraulic-cylinders/custom-hydraulic-cylinders/',
       ctaText: 'View Custom Cylinders',
     },
@@ -1062,7 +950,7 @@ function EngineeringAdvantage() {
                 <h3 className="text-lg font-display font-bold text-honeywell-navy mb-2">
                   {service.title}
                 </h3>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
                   {service.description}
                 </p>
               </div>
@@ -1111,20 +999,11 @@ function LocalServiceAreas() {
 /* ─── 14 FAQ Section ─── */
 function FAQSection() {
   return (
-    <Section bg="gray" id="faqs">
-      <Container>
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <Heading variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
-              Frequently Asked Questions
-            </Heading>
-            <p className="text-lg text-brand-steelGray font-body">
-              Common questions about our tie rod hydraulic cylinder capabilities.
-            </p>
-          </div>
-          <FAQAccordion faqs={FAQS} injectSchema={false} />
-        </div>
-      </Container>
-    </Section>
+    <SiteFAQSection 
+      faqs={TIE_ROD_FAQS} 
+      title="Frequently Asked Questions"
+      description="Common questions about our tie rod hydraulic cylinder capabilities."
+      injectSchema={false}
+    />
   );
 }

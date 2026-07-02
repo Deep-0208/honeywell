@@ -78,7 +78,7 @@ export function ProcessSection() {
                 <Heading variant="card" as="h3" className="mb-2">
                   {step.title}
                 </Heading>
-                <p className="text-brand-steelGray font-body text-sm leading-relaxed max-w-[240px] text-justify">
+                <p className="text-brand-steelGray font-body text-sm leading-relaxed max-w-[240px] ">
                   {step.body}
                 </p>
               </div>

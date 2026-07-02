@@ -167,7 +167,7 @@ export default function CustomManifoldBlocksPage() {
 /* ─── 01 Hero ─── */
 function HeroSection() {
   return (
-    <div className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200" id="hero">
+    <div className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200" id="hero">
       <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
       
@@ -186,7 +186,7 @@ function HeroSection() {
               Custom Manifold Blocks Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed text-justify">
+            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed ">
               When standard CETOP blocks cannot solve the problem, we design the solution from scratch. We engineer completely bespoke hydraulic logic blocks for Special Purpose Machines, complex OEM automation circuits, and high-performance test rigs.
             </p>
 
@@ -228,10 +228,10 @@ function OverviewSection() {
             Consolidate Your Circuit. Eliminate Every Leak.
           </Heading>
           <div className="space-y-5 text-brand-darkSlate text-lg leading-relaxed">
-            <p className="text-justify">
+            <p className="">
               We take your hydraulic schematic and transform it into a single, precision-machined monolithic block — eliminating every external fitting, every hose, and every potential leak point from your machine's logic centre.
             </p>
-            <p className="text-justify">
+            <p className="">
               Standard <Link href="/products/manifold-blocks/cetop-manifold-blocks/" className="text-honeywell-red font-semibold hover:underline">CETOP subplates</Link> and <Link href="/products/manifold-blocks/multi-station-manifold-blocks/" className="text-honeywell-red font-semibold hover:underline">multi-station blocks</Link> solve the majority of industrial automation challenges. However, for specialized OEMs requiring absolute logic density, highly specific internal cross-porting, or the integration of advanced screw-in cartridge valves, a custom manifold block is the only viable engineering path.
             </p>
           </div>
@@ -257,7 +257,7 @@ function WhyCustomSection() {
             <div key={idx} className="bg-white rounded-xl border border-slate-200 p-8 transition-all hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group">
               <IconBox icon={reason.icon} size="lg" variant="navy" className="mb-6 group-hover:bg-honeywell-red group-hover:text-white transition-colors" />
               <h3 className="text-xl font-bold text-honeywell-navy mb-3">{reason.title}</h3>
-              <p className="text-brand-steelGray leading-relaxed text-justify">{reason.description}</p>
+              <p className="text-brand-steelGray leading-relaxed ">{reason.description}</p>
             </div>
           ))}
         </div>
@@ -275,7 +275,7 @@ function DesignProcessSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             The Custom Manifold Design Process
           </Heading>
-          <p className="text-lg text-brand-steelGray text-justify">
+          <p className="text-lg text-brand-steelGray ">
             Our Custom Hydraulic System Design division follows a rigorous, stage-gated design process to guarantee first-time success.
           </p>
         </div>
@@ -293,7 +293,7 @@ function DesignProcessSection() {
                 <div className="pl-12 md:pl-0 w-full md:w-1/2">
                   <div className={`bg-brand-lightSurface p-6 md:p-8 rounded-xl border border-slate-200 ${idx % 2 === 0 ? 'md:ml-12' : 'md:mr-12'}`}>
                     <h3 className="text-xl font-bold text-honeywell-navy mb-3">Stage {idx + 1}: {step.title}</h3>
-                    <p className="text-brand-steelGray leading-relaxed text-justify">{step.description}</p>
+                    <p className="text-brand-steelGray leading-relaxed ">{step.description}</p>
                   </div>
                 </div>
               </div>
@@ -315,7 +315,7 @@ function CartridgeValveSection() {
             <Heading variant="section" as="h2" className="text-honeywell-navy mb-6">
               Cartridge Valve Integration
             </Heading>
-            <div className="space-y-4 text-brand-darkSlate text-lg leading-relaxed text-justify">
+            <div className="space-y-4 text-brand-darkSlate text-lg leading-relaxed ">
               <p>
                 Our primary specialty within custom manifold design is the integration of <strong>screw-in cartridge valves</strong>. Unlike CETOP valves, cartridges screw directly into a machined cavity within the block body, making them completely internal and invisible from the outside.
               </p>
@@ -404,19 +404,19 @@ function ProjectSpotlightSection() {
             <div className="space-y-6">
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Challenge:</h4>
-                <p className="text-brand-steelGray text-justify leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed">
                   An automotive manufacturer was building a custom SPM requiring 12 independent clamping circuits with sequence valves and pilot-operated check valves. The machine frame allowed only 180mm × 280mm of vertical space for the entire logic assembly.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Solution:</h4>
-                <p className="text-brand-steelGray text-justify leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed">
                   Standard CETOP blocks would have required 900mm of rail length. We designed a single custom block measuring 165mm × 270mm × 310mm, integrating 12 Sun Hydraulics sequence/check cartridge sets entirely internally.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Outcome:</h4>
-                <p className="text-brand-steelGray text-justify leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed">
                   The block fit the tight dimensions perfectly, eliminated 48 external fittings, and achieved zero leaks on the first hydrostatic test, allowing the SPM to meet its 8-second cycle time specification immediately.
                 </p>
               </div>
