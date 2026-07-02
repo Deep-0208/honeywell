@@ -36,7 +36,7 @@ export function TestimonialsSection() {
               <TestimonialCard
                 name={testimonial.name}
                 company={testimonial.company}
-                role={testimonial.role}
+                role={(testimonial as any).role}
                 quote={testimonial.quote}
                 imageSrc={testimonial.imageSrc}
               />
