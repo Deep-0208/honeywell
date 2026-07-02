@@ -11,6 +11,7 @@ export interface SiteFAQSectionProps {
   title?: string;
   description?: string;
   injectSchema?: boolean;
+  bg?: 'white' | 'gray' | 'navy';
 }
 
 /**
@@ -25,9 +26,10 @@ export function SiteFAQSection({
   title = "Frequently Asked Questions",
   description = "Find answers to common questions about our custom hydraulic cylinder manufacturing process and capabilities.",
   injectSchema = true,
+  bg = "white",
 }: SiteFAQSectionProps) {
   return (
-    <Section bg="white" id="faqs" aria-labelledby="faqs-heading">
+    <Section bg={bg} id="faqs" aria-labelledby="faqs-heading">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column */}
@@ -35,13 +37,13 @@ export function SiteFAQSection({
             <Heading variant="section" as="h2" id="faqs-heading" className="text-honeywell-navy mb-4">
               {title}
             </Heading>
-            <p className="text-brand-steelGray font-body text-lg mb-8 leading-relaxed ">
+            <p className="text-brand-steelGray font-body text-lg mb-8 leading-relaxed  text-justify">
               {description}
             </p>
             
             <div className="bg-brand-surfaceGray rounded-xl border border-slate-200 p-6">
               <h3 className="text-xl font-display font-bold text-honeywell-navy mb-2">Still have questions?</h3>
-              <p className="text-sm text-brand-steelGray font-body mb-6 ">
+              <p className="text-sm text-brand-steelGray font-body mb-6  text-justify">
                 Our engineering team is ready to discuss your specific hydraulic requirements.
               </p>
               <div className="space-y-4">

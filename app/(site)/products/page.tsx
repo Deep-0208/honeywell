@@ -95,39 +95,34 @@ export default function ProductsHubPage() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={productListSchema} />
       {/* Hero Section */}
-      <section className="relative bg-honeywell-navy text-white pt-6 md:pt-8 lg:pt-10 pb-16 lg:pb-24 overflow-hidden border-b border-honeywell-navy">
+      <section className="relative bg-slate-50 text-honeywell-navy pt-6 md:pt-8 lg:pt-10 pb-16 lg:pb-24 overflow-hidden border-b border-slate-200">
         {/* Background Decorative Elements */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-honeywell-red/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-honeywell-red/5 to-transparent skew-x-12 pointer-events-none" aria-hidden="true" />
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.02] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
         <Container className="relative z-10">
-          <nav aria-label="Breadcrumb" className="text-sm font-body text-brand-borderGray mb-8">
+          <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
             <ol className="flex items-center space-x-2">
               <li>
-                <Link href="/" className="hover:text-white transition-colors duration-200">Home</Link>
+                <Link href="/" className="hover:text-honeywell-red transition-colors duration-200">Home</Link>
               </li>
-              <li aria-hidden="true" className="text-brand-borderGray/50">/</li>
-              <li className="text-white font-semibold tracking-wide" aria-current="page">Products</li>
+              <li aria-hidden="true" className="text-slate-300">/</li>
+              <li className="text-honeywell-navy font-semibold tracking-wide" aria-current="page">Products</li>
             </ol>
           </nav>
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center lg:items-start lg:pt-4">
             <div className="lg:col-span-7">
-              <span className="inline-block py-1.5 px-4 rounded-full bg-honeywell-red/20 text-honeywell-red border border-honeywell-red/30 text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-sm shadow-sm">
-                PRODUCTS HUB
-              </span>
-              <Heading variant="hero" as="h1" className="text-white mb-6 leading-tight text-4xl md:text-5xl lg:text-6xl drop-shadow-sm">
-                Industrial Hydraulic Products Manufacturer
+              <Heading variant="section" as="h1" className="text-honeywell-navy mb-6 leading-tight drop-shadow-sm">
+                Industrial Hydraulic System Manufacturer
               </Heading>
-              <p className="text-brand-borderGray text-lg sm:text-xl font-body mb-8 leading-relaxed max-w-2xl font-light">
+              <p className="text-brand-steelGray text-lg sm:text-xl font-body mb-8 leading-relaxed max-w-2xl font-light text-justify">
                 Precision-engineered fluid power solutions for heavy industry. As a leading hydraulic products manufacturer, we design, machine, and test highly reliable hydraulic cylinders and power packs. Built for continuous operation in the most demanding manufacturing environments.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="primary" size="lg" href="/request-quote" rightIcon={<ArrowRight className="w-5 h-5" />} className="shadow-lg shadow-honeywell-red/20">
                   REQUEST A CUSTOM QUOTE
                 </Button>
-                <Button variant="outline" size="lg" href="/contact-us" className="border-white/30 text-white hover:bg-white hover:text-honeywell-navy backdrop-blur-sm">
+                <Button variant="outline" size="lg" href="/contact-us" className="border-honeywell-navy text-honeywell-navy hover:bg-honeywell-navy hover:text-white backdrop-blur-sm">
                   CONTACT ENGINEERING TEAM
                 </Button>
               </div>
@@ -136,26 +131,23 @@ export default function ProductsHubPage() {
             <div className="lg:col-span-5 relative hidden lg:block">
               {/* Abstract fluid power graphic or engineered layout */}
               <div className="relative aspect-square max-w-md mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-tr from-honeywell-red/20 to-transparent rounded-full animate-pulse-slow blur-2xl" />
-                <div className="absolute inset-4 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden flex items-center justify-center p-8 shadow-2xl">
+                <div className="absolute inset-4 rounded-3xl border border-slate-200 bg-slate-100/70 backdrop-blur-md overflow-hidden flex items-center justify-center p-4 shadow-2xl">
                    <div className="grid grid-cols-2 gap-4 w-full h-full">
-                      <div className="bg-white/5 rounded-xl border border-white/10 relative overflow-hidden group">
+                      <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
                         <Image src="/images/products/hero/hydraulic-cylinders-ahmedabad.webp" alt="Hydraulic Cylinders" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
-                      <div className="bg-white/5 rounded-xl border border-white/10 relative overflow-hidden group">
+                      <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
                         <Image src="/images/products/hero/hydraulic-power-pack.webp" alt="Hydraulic Power Packs" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
-                      <div className="bg-white/5 rounded-xl border border-white/10 relative overflow-hidden group">
+                      <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
                         <Image src="/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp" alt="Hydraulic Manifold Blocks" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
-                      <div className="bg-white/5 rounded-xl border border-white/10 relative overflow-hidden group">
+                      <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
                         <Image src="/images/products/hero/custom-hydraulic-systems-ahmedabad.webp" alt="Custom Hydraulic Systems" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
                    </div>
-                   <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="bg-honeywell-navy rounded-full p-6 shadow-xl border border-white/10">
-                        <Cog className="w-12 h-12 text-honeywell-red animate-[spin_10s_linear_infinite]" />
-                      </div>
+                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <Cog className="w-16 h-16 text-honeywell-red drop-shadow-lg animate-[spin_10s_linear_infinite]" />
                    </div>
                 </div>
               </div>
@@ -166,82 +158,15 @@ export default function ProductsHubPage() {
       {/* M6: EEAT Reviewer Block hidden — reviewer data not yet documented.
            Re-enable with real name, role, image when data is available.
            Tracked in REQUIRED_IMAGES_MASTER.md */}
-      {/* The Honeywell Fluid Power Ecosystem */}
-      <Section bg="white" id="ecosystem" aria-labelledby="ecosystem-heading">
-        <Container>
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-            <div className="max-w-3xl">
-              <Heading variant="section" as="h2" id="ecosystem-heading" className="mb-4">
-                The Honeywell Fluid Power Ecosystem
-              </Heading>
-              <p className="text-lg text-brand-steelGray font-body">
-                Industrial automation requires more than just individual components; it requires a synchronized fluid power ecosystem. At Honeywell Hydraulics, we manufacture every critical node of that ecosystem under one roof, ensuring absolute compatibility, minimal pressure drops, and maximum mechanical efficiency.
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card variant="interactive" className="flex flex-col h-full group relative hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-premium overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-honeywell-navy/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true" />
-              <CardContent className="flex flex-col flex-1 p-6 z-10">
-                <IconBox icon={<Activity className="w-6 h-6" />} variant="primary" className="mb-4 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-350 ease-premium" />
-                <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Heart: Power Packs</h3>
-                <p className="text-sm text-brand-steelGray font-body mb-6 flex-1">Converting electrical energy into pressurized hydrostatic energy.</p>
-                <Link href="/products/hydraulic-power-packs" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
-                  <span className="relative z-10 flex items-center">
-                  Explore <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
-                </Link>
-              </CardContent>
-            </Card>
-            
-            <Card variant="interactive" className="flex flex-col h-full group relative hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-premium overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-honeywell-navy/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true" />
-              <CardContent className="flex flex-col flex-1 p-6 z-10">
-                <IconBox icon={<Cpu className="w-6 h-6" />} variant="primary" className="mb-4 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-350 ease-premium" />
-                <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Muscle: Hydraulic Cylinders</h3>
-                <p className="text-sm text-brand-steelGray font-body mb-6 flex-1">Transforming fluid pressure into precise linear mechanical force.</p>
-                <Link href="/products/hydraulic-cylinders" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
-                  <span className="relative z-10 flex items-center">
-                  Explore <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
-                </Link>
-              </CardContent>
-            </Card>
-            
-            <Card variant="interactive" className="flex flex-col h-full group relative hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-premium overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-honeywell-navy/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true" />
-              <CardContent className="flex flex-col flex-1 p-6 z-10">
-                <IconBox icon={<Layers className="w-6 h-6" />} variant="primary" className="mb-4 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-350 ease-premium" />
-                <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Brain: Manifold Blocks</h3>
-                <p className="text-sm text-brand-steelGray font-body mb-6 flex-1">Directing fluid logic with zero-leak cartridge valve integration.</p>
-                <Link href="/products/manifold-blocks" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
-                  <span className="relative z-10 flex items-center">
-                  Explore <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
-                </Link>
-              </CardContent>
-            </Card>
-            
-            <Card variant="interactive" className="flex flex-col h-full group relative hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-premium overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-honeywell-navy/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true" />
-              <CardContent className="flex flex-col flex-1 p-6 z-10">
-                <IconBox icon={<Wrench className="w-6 h-6" />} variant="primary" className="mb-4 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-350 ease-premium" />
-                <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Nervous System: Turnkey Systems</h3>
-                <p className="text-sm text-brand-steelGray font-body mb-6 flex-1">Integrated PLC-controlled hydraulic power units with remote monitoring.</p>
-                <Link href="/products/turnkey-systems" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
-                  <span className="relative z-10 flex items-center">
-                  Explore <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
-        </Container>
-      </Section>
+
       {/* Product Categories Grid */}
-      <Section bg="gray" id="categories" aria-labelledby="categories-heading">
+      <Section bg="white" id="categories" aria-labelledby="categories-heading">
         <Container>
-          <div className="max-w-3xl mb-12">
-            <Heading variant="section" as="h2" id="categories-heading" className="mb-6">
+          <div className="max-w-3xl mb-12 mx-auto text-center">
+            <Heading variant="section" as="h2" id="categories-heading" underline="center">
               Product Categories
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body">
+            <p className="text-lg text-brand-steelGray font-body text-center">
               We manufacture two core families of industrial hydraulic equipment. Select a category below to explore technical specifications, mounting configurations, and variant options.
             </p>
           </div>
@@ -266,15 +191,15 @@ export default function ProductsHubPage() {
         </Container>
       </Section>
       {/* Product Selection Guide */}
-      <Section bg="white" id="selection-guide" aria-labelledby="selection-heading">
+      <Section bg="gray" id="selection-guide" aria-labelledby="selection-heading">
         <Container>
           <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-              <div>
-                <Heading variant="section" as="h2" id="selection-heading" className="mb-4">
+            <div className="flex flex-col items-center justify-center mb-12 text-center">
+              <div className="max-w-3xl">
+                <Heading variant="section" as="h2" id="selection-heading" underline="center">
                   Product Selection Guide
                 </Heading>
-                <p className="text-lg text-brand-steelGray font-body">
+                <p className="text-lg text-brand-steelGray font-body text-center">
                   Not sure which hydraulic product you need? Follow this quick decision framework to identify the right solution for your application.
                 </p>
               </div>
@@ -289,8 +214,8 @@ export default function ProductsHubPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Do you need to generate physical motion or force?</h3>
-                    <p className="text-brand-steelGray font-body mb-3">If you need linear push/pull force to move, clamp, lift, or press — you need a <strong>Hydraulic Cylinder</strong>.</p>
-                    <p className="text-sm text-brand-darkSlate font-body bg-brand-lightSurface p-4 rounded-xl border-l-4 border-honeywell-red">
+                    <p className="text-brand-steelGray font-body mb-3 text-justify">If you need linear push/pull force to move, clamp, lift, or press — you need a <strong>Hydraulic Cylinder</strong>.</p>
+                    <p className="text-sm text-brand-darkSlate font-body bg-brand-lightSurface p-4 rounded-xl border-l-4 border-honeywell-red text-justify">
                       <em>Key consideration:</em> Determine your required tonnage (Force = Pressure × Piston Area) to select the correct bore size.
                     </p>
                   </div>
@@ -311,8 +236,8 @@ export default function ProductsHubPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Do you need to generate pressurized fluid flow?</h3>
-                    <p className="text-brand-steelGray font-body mb-3">If you are building a new machine or replacing a failing pump system, you need a <strong>Hydraulic Power Pack</strong>.</p>
-                    <p className="text-sm text-brand-darkSlate font-body bg-brand-lightSurface p-4 rounded-xl border-l-4 border-honeywell-red">
+                    <p className="text-brand-steelGray font-body mb-3 text-justify">If you are building a new machine or replacing a failing pump system, you need a <strong>Hydraulic Power Pack</strong>.</p>
+                    <p className="text-sm text-brand-darkSlate font-body bg-brand-lightSurface p-4 rounded-xl border-l-4 border-honeywell-red text-justify">
                       <em>Key consideration:</em> Determine your required cycle speed (Flow Rate/LPM) and system pressure (Bar) to size the motor and pump correctly.
                     </p>
                   </div>
@@ -333,8 +258,8 @@ export default function ProductsHubPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Do you need both + control logic integrated?</h3>
-                    <p className="text-brand-steelGray font-body mb-3">For complex machines requiring synchronized motion, proportional control, and PLC integration — you need a <strong>Turnkey Hydraulic System</strong>.</p>
-                    <p className="text-sm text-brand-darkSlate font-body bg-brand-lightSurface p-4 rounded-xl border-l-4 border-honeywell-red">
+                    <p className="text-brand-steelGray font-body mb-3 text-justify">For complex machines requiring synchronized motion, proportional control, and PLC integration — you need a <strong>Turnkey Hydraulic System</strong>.</p>
+                    <p className="text-sm text-brand-darkSlate font-body bg-brand-lightSurface p-4 rounded-xl border-l-4 border-honeywell-red text-justify">
                       <em>Key consideration:</em> Share your machine cycle diagram and we'll engineer the complete fluid power package: cylinders, power pack, manifold, and controls.
                     </p>
                   </div>
@@ -351,19 +276,17 @@ export default function ProductsHubPage() {
         </Container>
       </Section>
 {/* Industries Overview */}
-      <Section bg="gray" id="industries" aria-labelledby="industries-heading">
+      <Section bg="white" id="industries" aria-labelledby="industries-heading">
         <Container>
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div className="flex flex-col items-center justify-center mb-12 text-center">
             <div className="max-w-2xl">
-              <Heading variant="section" as="h2" id="industries-heading" className="mb-4">
+              <Heading variant="section" as="h2" id="industries-heading" underline="center">
                 Industries Served Across India
               </Heading>
-              <p className="text-lg text-brand-steelGray font-body">
+              <p className="text-lg text-brand-steelGray font-body text-center mb-6">
                 We supply premium fluid power components to over 20 distinct industrial sectors PAN-India.
               </p>
-            </div>
-            <div className="mt-6 md:mt-0">
-              <Link href="/request-quote" className="text-honeywell-red font-bold hover:underline flex items-center gap-1">
+              <Link href="/request-quote" className="text-honeywell-red font-bold hover:underline inline-flex items-center gap-1">
                 Don&apos;t see your industry? Contact us
                 <ArrowRight className="w-4 h-4" />
               </Link>
@@ -428,15 +351,15 @@ export default function ProductsHubPage() {
         </Container>
       </Section>
       {/* Engineering & Manufacturing Capabilities */}
-      <Section bg="white" id="capabilities" aria-labelledby="capabilities-heading">
+      <Section bg="gray" id="capabilities" aria-labelledby="capabilities-heading">
         <Container>
           <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div className="flex flex-col items-center justify-center mb-12 text-center">
               <div>
-                <Heading variant="section" as="h2" id="capabilities-heading" className="mb-4 text-center md:text-left">
+                <Heading variant="section" as="h2" id="capabilities-heading" underline="center">
                   Engineering & Manufacturing Capabilities
                 </Heading>
-                <p className="text-lg text-brand-steelGray font-body text-center md:text-left">
+                <p className="text-lg text-brand-steelGray font-body text-center">
                   As an end-to-end hydraulic products manufacturer, we do not outsource our core competencies. By controlling the entire manufacturing lifecycle, we guarantee the structural integrity and performance of every product.
                 </p>
               </div>
@@ -470,7 +393,7 @@ export default function ProductsHubPage() {
                   <h4 className="text-xl font-display font-bold text-honeywell-navy mb-6 flex items-center gap-3">
                     The Honeywell Guarantee
                   </h4>
-                  <p className="text-brand-darkSlate font-body leading-relaxed mb-4 flex-1">
+                  <p className="text-brand-darkSlate font-body leading-relaxed mb-4 flex-1 text-justify">
                     Every hydraulic product we manufacture is backed by our strict Defect Warranty. In the event of an operational anomaly, our emergency engineering team dispatches replacement components or seal kits to minimize your production downtime.
                   </p>
                   <div className="mt-auto flex items-center text-honeywell-red font-medium font-body text-sm">
@@ -570,6 +493,7 @@ export default function ProductsHubPage() {
         faqs={faqs}
         title="Frequently Asked Questions"
         description="Find answers to common questions about our hydraulic products, manufacturing capabilities, and custom engineering services."
+        bg="gray"
       />
       {/* Conversion CTA — M2: replaced dead # href */}
       <CTA 

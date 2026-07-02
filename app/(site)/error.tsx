@@ -45,13 +45,13 @@ export default function Error({
         Something Went Wrong
       </h1>
 
-      <p className="text-brand-steelGray font-body max-w-md mb-2">
+      <p className="text-brand-steelGray font-body max-w-md mb-2 text-justify">
         An unexpected error occurred. Our team has been notified.
       </p>
 
       {/* Error digest for support reference */}
       {error.digest && (
-        <p className="text-xs font-mono text-[#94A3B8] mb-8 bg-brand-surfaceGray px-3 py-1 rounded-sm border border-slate-200">
+        <p className="text-xs font-mono text-[#94A3B8] mb-8 bg-brand-surfaceGray px-3 py-1 rounded-sm border border-slate-200 text-justify">
           Reference: {error.digest}
         </p>
       )}
@@ -103,7 +103,7 @@ export default function Error({
       </div>
 
       {/* Support contact */}
-      <p className="mt-10 text-sm text-[#94A3B8] font-body">
+      <p className="mt-10 text-sm text-[#94A3B8] font-body text-justify">
         Need immediate help?{' '}
         <a
           href="tel:+91-9924343873"

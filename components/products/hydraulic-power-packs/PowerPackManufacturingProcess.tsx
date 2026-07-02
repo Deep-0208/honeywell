@@ -13,7 +13,7 @@ export function PowerPackManufacturingProcess() {
           <Heading variant="section" underline="center" as="h2" id="manufacturing-process-heading" className="mb-4">
             The Honeywell Manufacturing Process
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             What makes us a leading hydraulic power pack manufacturer? Our uncompromising approach to the 4-step manufacturing lifecycle. Every unit is engineered, fabricated, piped, wired, and load-tested at our Ahmedabad facility.
           </p>
         </div>
@@ -27,7 +27,7 @@ export function PowerPackManufacturingProcess() {
               <IconBox icon={<FaTools className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">1. Custom Design</Heading>
-            <p className="text-brand-steelGray font-body text-sm">
+            <p className="text-brand-steelGray font-body text-sm text-justify">
               Our engineers calculate flow rates, pressure drops, and heat dissipation to create a 3D CAD schematic tailored to your exact cycle requirements.
             </p>
           </div>
@@ -37,7 +37,7 @@ export function PowerPackManufacturingProcess() {
               <IconBox icon={<FaCogs className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">2. Precision Assembly</Heading>
-            <p className="text-brand-steelGray font-body text-sm">
+            <p className="text-brand-steelGray font-body text-sm text-justify">
               Heavy-duty reservoirs are fabricated and coated, manifolds are CNC machined, and premium IE3 motors and pumps are perfectly aligned.
             </p>
           </div>
@@ -47,7 +47,7 @@ export function PowerPackManufacturingProcess() {
               <IconBox icon={<FaVial className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">3. Rigorous Testing</Heading>
-            <p className="text-brand-steelGray font-body text-sm">
+            <p className="text-brand-steelGray font-body text-sm text-justify">
               Every power pack is hooked to our simulated test bench to verify maximum load capacity, flow rates, pressure relief settings, and leak-free operation.
             </p>
           </div>
@@ -57,7 +57,7 @@ export function PowerPackManufacturingProcess() {
               <IconBox icon={<FaTruck className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">4. Secure Delivery</Heading>
-            <p className="text-brand-steelGray font-body text-sm">
+            <p className="text-brand-steelGray font-body text-sm text-justify">
               Power units are thoroughly cleaned, painted, securely crated with all electrical diagrams and BOMs, and dispatched PAN-India.
             </p>
           </div>

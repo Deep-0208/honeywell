@@ -15,13 +15,13 @@ export function HeroSection({ data }: { data: LocationHeroData }) {
       <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center pt-12 lg:pt-20">
           <div className="order-1">
-            <p className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm mb-4">
+            <p className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm mb-4 text-justify">
               {data.overline}
             </p>
             <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               {data.title}
             </h1>
-            <p className="text-lg text-brand-darkSlate mb-8 max-w-2xl leading-relaxed ">
+            <p className="text-lg text-brand-darkSlate mb-8 max-w-2xl leading-relaxed  text-justify">
               {data.subtitle}
             </p>
             <ul className="flex flex-wrap gap-4 mb-10">

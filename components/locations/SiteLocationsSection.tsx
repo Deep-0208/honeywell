@@ -27,7 +27,7 @@ export function SiteLocationsSection({
           <Heading variant="section" underline="center" as="h2" id="local-service-areas-heading" className="text-honeywell-navy mb-4">
             {title}
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             {description}
           </p>
         </div>

@@ -285,18 +285,14 @@ function HeroSection() {
           {/* Content Column */}
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-block py-1 px-3 rounded-full bg-honeywell-red/10 border-none text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm">
-                EXTREME STROKE IN COMPACT SPACES
-              </span>
-              <div className="h-4 w-px bg-slate-300" />
               <span className="text-brand-steelGray text-sm font-medium">Telescopic Cylinders</span>
             </div>
 
-            <Heading variant="hero" as="h1" className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
+            <Heading variant="section" as="h1" className=" lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               Telescopic Hydraulic Cylinder Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed ">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed  text-justify">
               Engineered for massive lifting heights from a minimal footprint. Honeywell Hydraulics is a premier custom telescopic hydraulic cylinder manufacturer in Gujarat, supplying highly robust, multi-stage cylinders exclusively for tipper bodies, dump trucks, and mobile lifting equipment.
             </p>
 
@@ -334,7 +330,7 @@ function HeroSection() {
               src="/images/products/hydraulic-cylinders/telescopic-hydraulic-cylinders-manufacturer.webp"
               alt="Telescopic Hydraulic Cylinder Manufacturer in Ahmedabad - Multi-stage tipper cylinder by Honeywell Hydraulics"
               fill
-              priority
+              priority fetchPriority="high" decoding="sync" quality={85}
               className="object-cover scale-[1.05] group-hover:scale-110 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
@@ -420,7 +416,7 @@ function KeyFeatures() {
           <Heading id="how-they-work-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             How Multi-Stage Cylinders Work
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             The internal fluid dynamics of a telescopic cylinder are vastly more complex than a standard single-rod actuator, offering unique engineering advantages.
           </p>
         </div>
@@ -441,7 +437,7 @@ function KeyFeatures() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {step.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed  text-justify">
                 {step.desc}
               </p>
             </div>
@@ -462,7 +458,7 @@ function TechnicalSpecifications() {
             <Heading id="technical-specifications-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Technical Specifications
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body mb-8">
+            <p className="text-lg text-brand-steelGray font-body mb-8 text-justify">
               Engineered to support immense tipping loads with precise stage sequencing and robust column strength.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -502,7 +498,7 @@ function ProductVariants() {
           <Heading id="telescopic-vs-standard-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Telescopic vs. Standard Cylinders
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Choosing between a multi-stage cylinder and a standard actuator dictates the entire chassis design of your mobile equipment.
           </p>
         </div>
@@ -567,7 +563,7 @@ function IndustriesSection() {
           <Heading id="industries-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Industries Served
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Our custom telescopic cylinders are the backbone of the heavy transportation and mobile infrastructure sectors.
           </p>
         </div>
@@ -598,7 +594,7 @@ function ManufacturingProcess() {
           <Heading id="manufacturing-process-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Manufacturing & Quality Process
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Every multi-stage cylinder is delivered with complete stroke-multiplication reports and certified column-load limits, ensuring the actuator meets all safety factors required for heavy mobile equipment.
           </p>
         </div>
@@ -612,7 +608,7 @@ function ManufacturingProcess() {
               <IconBox icon={<Cog className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">Precision Stage Honing</Heading>
-            <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
+            <p className="text-brand-steelGray font-body text-sm leading-relaxed  text-justify">
               Every tubular stage is CNC-machined, skived, and roller-burnished internally and externally to ensure absolute concentricity. This prevents the stages from binding or galling.
             </p>
           </div>
@@ -622,7 +618,7 @@ function ManufacturingProcess() {
               <IconBox icon={<ShieldCheck className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">Hard Chrome Plating</Heading>
-            <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
+            <p className="text-brand-steelGray font-body text-sm leading-relaxed  text-justify">
               Because the exterior of every stage acts as a rod, all stages are heavily hard-chrome plated to resist scoring and environmental corrosion from road salt and mud.
             </p>
           </div>
@@ -632,7 +628,7 @@ function ManufacturingProcess() {
               <IconBox icon={<FileCheck className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">Sequential Validation</Heading>
-            <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
+            <p className="text-brand-steelGray font-body text-sm leading-relaxed  text-justify">
               100% of our telescopic cylinders undergo rigorous vertical hydrostatic testing to verify smooth stage sequencing and test the integrity of the mechanical stop rings.
             </p>
           </div>
@@ -647,7 +643,7 @@ function ManufacturingProcess() {
           <Heading variant="subsection" as="h3" className="text-2xl md:text-3xl font-display font-bold text-white mb-4 relative z-10">
             The Honeywell Guarantee
           </Heading>
-          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-6 relative z-10">
+          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-6 relative z-10 text-justify">
             Our heavy-duty telescopic cylinders are backed by a strict Defect Warranty. Should your mobile equipment experience seal failure due to harsh environmental debris, our Cylinder Repair division can completely rebuild the unit.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
@@ -676,7 +672,6 @@ function ProjectSpotlight() {
       <Container>
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
-            <span className="inline-block py-1 px-3 rounded-full bg-honeywell-red/10 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm">CASE STUDY</span>
             <span className="text-sm text-brand-steelGray font-body font-medium">
               Earth-Moving Equipment
             </span>
@@ -685,7 +680,7 @@ function ProjectSpotlight() {
           <Heading id="project-spotlight-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-3">
             Project Spotlight: Custom 5-Stage Mining Tipper Cylinder
           </Heading>
-          <p className="text-brand-steelGray font-body mb-10">
+          <p className="text-brand-steelGray font-body mb-10 text-justify">
             Client: Heavy Mining Tipper OEM &mdash; Metoda GIDC, Rajkot
           </p>
 
@@ -697,7 +692,7 @@ function ProjectSpotlight() {
                 </div>
                 <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy">The Challenge</Heading>
               </div>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed  text-justify">
                 The OEM was designing a massive new dump truck specifically for heavy iron-ore mining. Standard 4-stage cylinders could not provide the required tipping angle without raising the truck&apos;s center of gravity dangerously high during transit.
               </p>
             </div>
@@ -709,7 +704,7 @@ function ProjectSpotlight() {
                 </div>
                 <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy">The Solution</Heading>
               </div>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed  text-justify">
                 We engineered a custom 5-Stage Telescopic Cylinder. By adding an extra stage, we reduced the collapsed length by 15%, allowing the OEM to lower the dump bed. We also integrated heavy-duty metallic scrapers onto every stage to clear abrasive ore dust.
               </p>
             </div>
@@ -721,7 +716,7 @@ function ProjectSpotlight() {
                 </div>
                 <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-white">The Outcome</Heading>
               </div>
-              <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6 ">
+              <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6  text-justify">
                 The truck achieved a perfect 50-degree tipping angle from an ultra-low chassis profile. The specialized wiper seals prevented dust ingress, extending the cylinder&apos;s operational lifespan in the mining environment by over <strong className="text-white">200%</strong>.
               </p>
               <Button
@@ -779,7 +774,7 @@ function RelatedProducts() {
             <Heading id="related-products-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Integrate Your Telescopic Cylinder
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body">
+            <p className="text-lg text-brand-steelGray font-body text-justify">
               Telescopic cylinders power mobile equipment. Control them with our robust mobile fluid power systems.
             </p>
           </div>
@@ -847,7 +842,7 @@ function EngineeringAdvantage() {
           <Heading id="engineering-advantage-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             The Mobile OEM Advantage
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Purchasing a telescopic cylinder is an investment in your vehicle&apos;s safety. Leverage our heavy engineering services.
           </p>
         </div>
@@ -868,7 +863,7 @@ function EngineeringAdvantage() {
                 <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy mb-2">
                   {service.title}
                 </Heading>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed  text-justify">
                   {service.description}
                 </p>
               </div>

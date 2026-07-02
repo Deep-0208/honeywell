@@ -7,9 +7,9 @@ import {
   Box
 } from 'lucide-react';
 
-import type { FAQ, PowerPackSpec, PowerPackFeature, PowerPackIndustry } from './types';
+import type { FAQItem, PowerPackSpec, PowerPackFeature, PowerPackIndustry } from './types';
 
-export const HIGH_LOW_FAQS: FAQ[] = [
+export const HIGH_LOW_FAQS: FAQItem[] = [
   {
     question: 'Can I upgrade my existing press machine to a High-Low power pack?',
     answer: 'Yes. This is one of our most popular services. We will remove your inefficient single-pump system and replace it with a dual-pump unit, drastically reducing your factory\'s electrical consumption.',

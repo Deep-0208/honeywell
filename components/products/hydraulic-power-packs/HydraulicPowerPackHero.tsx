@@ -31,7 +31,7 @@ export function HydraulicPowerPackHero() {
               Hydraulic Power Pack Manufacturer in Gujarat, India
             </h1>
             
-            <p className="text-lg md:text-xl text-brand-steelGray font-body mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg md:text-xl text-brand-steelGray font-body mb-8 max-w-xl leading-relaxed text-justify">
               Generating reliable, continuous fluid power for heavy industry. Custom-engineered hydraulic power units delivering precise flow rates and exact operating pressures to drive automated machinery and commercial lifting equipment without fluctuation or heat degradation.
             </p>
 
@@ -63,7 +63,7 @@ export function HydraulicPowerPackHero() {
                 src="/images/products/hydraulic-power-packs/hydraulic-power-pack-manufacturer.webp"
                 alt="Industrial Hydraulic Power Pack Manufacturer in Ahmedabad"
                 fill
-                priority
+                priority fetchPriority="high" decoding="sync" quality={85}
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />

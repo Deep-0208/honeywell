@@ -12,7 +12,7 @@ export function BenefitsSection({ data, bg = 'white' }: { data: any; bg?: 'white
       <Container>
         <div className="max-w-3xl mb-12">
           <Heading variant="section" underline="left" as="h2" id="benefits-heading" className="mb-6">{data.title}</Heading>
-          <p className="text-lg text-brand-darkSlate leading-relaxed ">{data.description}</p>
+          <p className="text-lg text-brand-darkSlate leading-relaxed  text-justify">{data.description}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {data.items.map((item: any) => (
@@ -21,7 +21,7 @@ export function BenefitsSection({ data, bg = 'white' }: { data: any; bg?: 'white
                 <CheckCircle2 className="w-6 h-6 text-honeywell-red shrink-0 mt-1" aria-hidden="true" />
                 <div>
                   <Heading variant="card" as="h3" className="mb-3">{item.title}</Heading>
-                  <p className="text-brand-darkSlate text-sm leading-relaxed ">{item.description}</p>
+                  <p className="text-brand-darkSlate text-sm leading-relaxed  text-justify">{item.description}</p>
                 </div>
               </div>
             </Card>

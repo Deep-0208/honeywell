@@ -79,6 +79,16 @@ const nextConfig: NextConfig = {
         destination: '/about-us/',
         permanent: true,
       },
+      {
+        source: '/infrastructure',
+        destination: '/manufacturing-facility/',
+        permanent: true,
+      },
+      {
+        source: '/infrastructure/',
+        destination: '/manufacturing-facility/',
+        permanent: true,
+      },
     ];
   },
   // TODO: Remove ignoreBuildErrors after fixing all TypeScript errors

@@ -174,18 +174,14 @@ function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase shadow-sm">
-                THE INDUSTRIAL WORKHORSE SIZE
-              </span>
-              <div className="h-4 w-px bg-slate-300" />
               <span className="text-brand-steelGray text-sm font-medium">NG10 / 06-Size Manifolds</span>
             </div>
 
-            <Heading variant="hero" as="h1" className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-honeywell-navy leading-[1.1] mb-6">
+            <Heading variant="section" as="h1" className=" lg:text-[3.25rem] font-bold text-honeywell-navy leading-[1.1] mb-6">
               NG10 / 06-Size Manifold Blocks Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed ">
+            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed  text-justify">
               The most widely used hydraulic valve interface size in industrial manufacturing. We manufacture high-precision NG10 (CETOP 5 / 06-Size) manifold blocks — the universally adopted standard for medium-duty industrial automation up to 120 LPM.
             </p>
 
@@ -206,7 +202,7 @@ function HeroSection() {
               src={PAGE_IMAGE} 
               alt="NG10 06-size manifold blocks manufacturer in Ahmedabad — Honeywell Hydraulics" 
               fill 
-              priority 
+              priority fetchPriority="high" decoding="sync" quality={85} 
               className="object-cover p-8 group-hover:scale-105 transition-transform duration-700" 
               sizes="(max-width: 1024px) 100vw, 50vw" 
             />
@@ -227,7 +223,7 @@ function OverviewSection() {
             Understanding the NG10 / 06 Designation
           </Heading>
           <div className="space-y-5 text-brand-darkSlate text-lg leading-relaxed">
-            <p className="">
+            <p className=" text-justify">
               The <strong>NG10</strong> and <strong>06-Size</strong> designations both refer to the same physical valve interface, governed by <strong>ISO 4401</strong> (CETOP 5). The dual naming convention exists because different regions use different terminology:
             </p>
             <ul className="list-disc pl-6 space-y-2 ">
@@ -235,7 +231,7 @@ function OverviewSection() {
               <li><strong>CETOP 5:</strong> French standards body designation. Numerically refers to the standardized mounting interface.</li>
               <li><strong>06-Size:</strong> North American designation used by Parker, Vickers, and Eaton/Danfoss.</li>
             </ul>
-            <p className="font-bold text-honeywell-navy">
+            <p className="font-bold text-honeywell-navy text-justify">
               All three designations are physically identical. A Parker D3W "06-size" directional valve will mount directly onto a Honeywell CETOP 5 (NG10) manifold block — same bolt pattern, same port locations, same O-ring groove sizes.
             </p>
           </div>
@@ -254,12 +250,12 @@ function PerformanceEnvelopeSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             NG10 Performance Envelope
           </Heading>
-          <p className="text-lg text-brand-steelGray ">
+          <p className="text-lg text-brand-steelGray  text-justify">
             Understanding the operating limits of the NG10 interface prevents undersizing (which causes dangerous heat generation) or oversizing (which wastes capital). Attempting to run 200 LPM through an NG10 block will create fluid velocity exceeding 6 m/s in the internal galleries, generating severe heat and turbulence that destroys the directional valve internals.
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
-          <SpecTable specs={NG10_PERFORMANCE} />
+          <SpecTable rows={NG10_PERFORMANCE} />
         </div>
       </Container>
     </Section>
@@ -275,7 +271,7 @@ function ProductRangeSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             NG10 Block Product Range
           </Heading>
-          <p className="text-lg text-brand-steelGray">
+          <p className="text-lg text-brand-steelGray text-justify">
             We manufacture the full NG10 product family.
           </p>
         </div>
@@ -284,7 +280,7 @@ function ProductRangeSection() {
           {NG10_PRODUCT_RANGE.map((product, idx) => (
             <div key={idx} className="bg-brand-lightSurface rounded-xl border border-slate-200 p-8 hover:border-honeywell-red/50 transition-colors">
               <h3 className="text-xl font-bold text-honeywell-navy mb-4">{product.title}</h3>
-              <p className="text-brand-steelGray leading-relaxed">{product.description}</p>
+              <p className="text-brand-steelGray leading-relaxed text-justify">{product.description}</p>
             </div>
           ))}
         </div>
@@ -302,7 +298,7 @@ function SizeComparisonSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             NG10 vs. NG6 and NG16: Choosing the Right Size
           </Heading>
-          <p className="text-lg text-brand-steelGray ">
+          <p className="text-lg text-brand-steelGray  text-justify">
             If you are in doubt between NG10 and NG16, calculate your actual circuit flow: Cylinder Bore² × π/4 × Piston Speed = Flow Rate (LPM). Match this to the NG size capacity.
           </p>
         </div>
@@ -352,24 +348,24 @@ function ProjectSpotlightSection() {
           </div>
           <div className="md:w-3/5 p-8 md:p-12">
             <h3 className="text-2xl font-bold text-honeywell-navy mb-2">NG10 4-Station Manifold Block for Injection Moulding Core-Pull</h3>
-            <p className="text-sm font-bold text-honeywell-red tracking-wide uppercase mb-6">Plastic Injection Mould Manufacturer — Sachin GIDC, Surat</p>
+            <p className="text-sm font-bold text-honeywell-red tracking-wide uppercase mb-6 text-justify">Plastic Injection Mould Manufacturer — Sachin GIDC, Surat</p>
             
             <div className="space-y-6">
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Challenge:</h4>
-                <p className="text-brand-steelGray leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed text-justify">
                   A mould manufacturer building an 8-cavity injection mould needed to integrate a 4-axis hydraulic core-pull system inside the mould base itself. Four individual NG10 subplates connected by external piping would not fit.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Solution:</h4>
-                <p className="text-brand-steelGray leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed text-justify">
                   We designed a compact 4-station NG10 parallel manifold block with all four valve stations on one face. All P and T connections were internalized, and block height was minimized by using low-profile solenoid valves.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Outcome:</h4>
-                <p className="text-brand-steelGray leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed text-justify">
                   The assembly fit within the mould base with 12mm to spare. The mould achieved a 6.2-second cycle time — 0.8 seconds faster than the competitor's external-pipework solution due to reduced fluid dead-volume.
                 </p>
               </div>
@@ -392,7 +388,7 @@ function TechnicalSpecsSection() {
           </Heading>
         </div>
         <div className="max-w-4xl mx-auto">
-          <SpecTable specs={NG10_SPECS} />
+          <SpecTable rows={NG10_SPECS} />
         </div>
       </Container>
     </Section>

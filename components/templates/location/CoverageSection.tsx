@@ -28,7 +28,7 @@ export function CoverageSection({ data, bg = 'gray' }: { data: any; bg?: 'white'
                     </Heading>
                   </div>
                 </div>
-                <p className="text-brand-steelGray font-body text-sm leading-relaxed flex-1">
+                <p className="text-brand-steelGray font-body text-sm leading-relaxed flex-1 text-justify">
                   {area.description}
                 </p>
               </div>

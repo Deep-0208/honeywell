@@ -13,7 +13,7 @@ export function PowerPackTypesGrid() {
           <Heading variant="section" underline="center" as="h2" id="power-pack-types-heading" className="mb-4">
             Industrial Hydraulic Power Packs
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             From miniature DC units to massive 3-phase plant installations, we engineer power packs for every industrial application.
           </p>
         </div>

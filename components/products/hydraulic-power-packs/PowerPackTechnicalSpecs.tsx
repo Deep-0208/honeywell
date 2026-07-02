@@ -15,7 +15,7 @@ export function PowerPackTechnicalSpecs() {
             <Heading variant="section" underline="left" as="h2" id="tech-specs-heading" className="mb-4">
               Technical Capabilities
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body mb-6">
+            <p className="text-lg text-brand-steelGray font-body mb-6 text-justify">
               As a full-capability hydraulic power pack manufacturer, we can engineer systems ranging from 0.5 HP micro units to massive 150+ HP centralized factory installations.
             </p>
             <ul className="space-y-4 mb-8">

@@ -69,7 +69,7 @@ function ElevenLabsWidgetInner() {
             {isConnecting && (
               <div className="flex flex-col items-center gap-5 text-honeywell-navy">
                 <Loader2 className="w-8 h-8 animate-spin text-honeywell-navy" />
-                <p className="text-sm font-medium text-gray-500 tracking-wide uppercase text-[11px] letter-spacing-widest">Connecting securely...</p>
+                <p className="text-sm font-medium text-gray-500 tracking-wide uppercase text-[11px] letter-spacing-widest text-justify">Connecting securely...</p>
               </div>
             )}
             
@@ -102,10 +102,10 @@ function ElevenLabsWidgetInner() {
                 </div>
 
                 <div className="text-center space-y-1.5">
-                  <p className="text-lg font-semibold text-honeywell-navy tracking-tight">
+                  <p className="text-lg font-semibold text-honeywell-navy tracking-tight text-justify">
                     {conversation.isSpeaking ? 'Assistant is speaking' : 'Listening...'}
                   </p>
-                  <p className="text-sm text-gray-500 font-medium">
+                  <p className="text-sm text-gray-500 font-medium text-justify">
                     {conversation.isSpeaking ? 'Please wait a moment' : 'Go ahead, ask a question'}
                   </p>
                 </div>
@@ -121,7 +121,7 @@ function ElevenLabsWidgetInner() {
 
             {!isConnected && !isConnecting && (
               <div className="text-center animate-in fade-in duration-500">
-                <p className="text-gray-500 text-[15px] mb-8 leading-relaxed px-2 font-medium">
+                <p className="text-gray-500 text-[15px] mb-8 leading-relaxed px-2 font-medium text-justify">
                   Experience our intelligent AI assistant. Ask questions about our hydraulic solutions and get real-time answers.
                 </p>
                 <button
@@ -133,7 +133,7 @@ function ElevenLabsWidgetInner() {
                   <span className="relative z-10 tracking-wide">Start Conversation</span>
                 </button>
                 {hasPermission === false && (
-                  <p className="text-red-500 text-xs mt-5 font-medium bg-red-50 py-2 px-3 rounded-lg border border-red-100">
+                  <p className="text-red-500 text-xs mt-5 font-medium bg-red-50 py-2 px-3 rounded-lg border border-red-100 text-justify">
                     Microphone access is required.
                   </p>
                 )}

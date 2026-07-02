@@ -53,7 +53,7 @@ export function IndustriesSection({ data, bg = 'gray' }: { data: any; bg?: 'whit
                     <Heading variant="card" as="h3" className="mb-4 group-hover:text-honeywell-red transition-colors duration-200">
                       {industry.title}
                     </Heading>
-                    <p className="text-brand-darkSlate text-sm leading-relaxed mb-6 flex-grow ">{industry.description}</p>
+                    <p className="text-brand-darkSlate text-sm leading-relaxed mb-6 flex-grow  text-justify">{industry.description}</p>
                     <div className="flex items-center text-honeywell-navy group-hover:text-honeywell-red font-medium text-sm transition-colors duration-200 mt-auto pt-4 border-t border-slate-200/60">
                       View Industry <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" />
                     </div>

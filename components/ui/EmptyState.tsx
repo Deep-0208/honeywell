@@ -33,7 +33,7 @@ export function EmptyState({
         {title}
       </h3>
       {description && (
-        <p className="text-brand-steelGray font-body max-w-md mb-6">
+        <p className="text-brand-steelGray font-body max-w-md mb-6 text-justify">
           {description}
         </p>
       )}

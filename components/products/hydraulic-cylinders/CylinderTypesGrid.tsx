@@ -14,7 +14,7 @@ export function CylinderTypesGrid() {
           <Heading variant="section" underline="center" as="h2" id="cylinder-types-heading" className="mb-4">
             Types of Hydraulic Cylinders
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             We manufacture a comprehensive range of hydraulic cylinder types, each engineered for specific industrial applications and mounting requirements.
           </p>
         </div>

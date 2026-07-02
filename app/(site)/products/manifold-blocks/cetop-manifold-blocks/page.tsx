@@ -173,18 +173,14 @@ function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase shadow-sm">
-                ISO 4401 PRECISION SUBPLATES
-              </span>
-              <div className="h-4 w-px bg-slate-300" />
               <span className="text-brand-steelGray text-sm font-medium">CETOP Manifold Blocks</span>
             </div>
 
-            <Heading variant="hero" as="h1" className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-honeywell-navy leading-[1.1] mb-6">
+            <Heading variant="section" as="h1" className=" lg:text-[3.25rem] font-bold text-honeywell-navy leading-[1.1] mb-6">
               CETOP Manifold Blocks Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed ">
+            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed  text-justify">
               Standardized, zero-tolerance valve interfaces for universal compatibility. We machine ISO 4401-compliant subplates in CETOP 3, 5, 7, and 8 sizes to guarantee bolt-pattern and port compatibility with all major directional control valves.
             </p>
 
@@ -205,7 +201,7 @@ function HeroSection() {
               src={PAGE_IMAGE} 
               alt="CETOP manifold blocks manufacturer in Ahmedabad — Honeywell Hydraulics" 
               fill 
-              priority 
+              priority fetchPriority="high" decoding="sync" quality={85} 
               className="object-cover p-8 group-hover:scale-105 transition-transform duration-700" 
               sizes="(max-width: 1024px) 100vw, 50vw" 
             />
@@ -226,10 +222,10 @@ function OverviewSection() {
             What Are CETOP Manifold Blocks?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate text-lg leading-relaxed">
-            <p className="">
+            <p className=" text-justify">
               <strong className="text-honeywell-navy">CETOP</strong> (Comité Européen des Transmissions Oléohydrauliques et Pneumatiques) is the European standards body that established the ISO 4401 mounting interface for hydraulic directional control valves.
             </p>
-            <p className="">
+            <p className=" text-justify">
               A <strong>CETOP manifold block</strong> — also called a subplate or valve base — is a precision-machined mounting platform that provides:
             </p>
             <ul className="list-disc pl-6 space-y-2 ">
@@ -237,7 +233,7 @@ function OverviewSection() {
               <li>Internal fluid galleries connecting the P (Pressure), T (Tank), A, and B work ports of the valve to the external system ports on the subplate body</li>
               <li>Port threads (BSPP, NPT, or SAE) for connecting the subplate to the wider hydraulic circuit</li>
             </ul>
-            <p className="">
+            <p className=" text-justify">
               Because the mounting pattern is internationally standardized, an OEM can specify a Honeywell-manufactured CETOP 5 subplate and mount any CETOP 5 valve from any brand onto it without modification — a critical advantage for procurement flexibility and long-term spares availability.
             </p>
           </div>
@@ -256,7 +252,7 @@ function SizeComparisonSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             CETOP Size Comparison Table
           </Heading>
-          <p className="text-lg text-brand-steelGray ">
+          <p className="text-lg text-brand-steelGray  text-justify">
             Understanding the correct CETOP size for your system flow requirement is fundamental to avoiding pressure drops. A mismatched CETOP size causes catastrophic fluid velocity in the internal galleries, generating heat and destroying the valve. Always size by flow rate, not by convenience.
           </p>
         </div>
@@ -306,7 +302,7 @@ function ConfigurationsSection() {
           {CETOP_CONFIGURATIONS.map((config, idx) => (
             <div key={idx} className="bg-brand-lightSurface rounded-xl border border-slate-200 p-8 hover:border-honeywell-red/50 transition-colors">
               <h3 className="text-xl font-bold text-honeywell-navy mb-4">{config.title}</h3>
-              <p className="text-brand-steelGray leading-relaxed">{config.description}</p>
+              <p className="text-brand-steelGray leading-relaxed text-justify">{config.description}</p>
             </div>
           ))}
         </div>
@@ -324,12 +320,12 @@ function MaterialSpecsSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             Material & Machining Specifications
           </Heading>
-          <p className="text-lg text-brand-steelGray ">
+          <p className="text-lg text-brand-steelGray  text-justify">
             Our CETOP subplates are manufactured to guarantee zero-leak valve seating under cyclic operating conditions.
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
-          <SpecTable specs={CETOP_SPECS} />
+          <SpecTable rows={CETOP_SPECS} />
         </div>
       </Container>
     </Section>
@@ -346,7 +342,7 @@ function BrandCompatibilitySection() {
             <Heading variant="section" as="h2" className="text-honeywell-navy mb-4">
               Brand Compatibility Matrix
             </Heading>
-            <p className="text-lg text-brand-steelGray mb-6 leading-relaxed">
+            <p className="text-lg text-brand-steelGray mb-6 leading-relaxed text-justify">
               ISO 4401 is a global standard. Any valve from any manufacturer labelled "CETOP 3", "CETOP 5", "NG6", or "NG10" will bolt directly to our corresponding subplate without modification.
             </p>
           </div>
@@ -385,24 +381,24 @@ function ProjectSpotlightSection() {
           </div>
           <div className="md:w-3/5 p-8 md:p-12">
             <h3 className="text-2xl font-bold text-honeywell-navy mb-2">CETOP 5 Subplate OEM Supply for Hydraulic Press Automation</h3>
-            <p className="text-sm font-bold text-honeywell-red tracking-wide uppercase mb-6">Press Machine Builder — Vatva GIDC, Ahmedabad</p>
+            <p className="text-sm font-bold text-honeywell-red tracking-wide uppercase mb-6 text-justify">Press Machine Builder — Vatva GIDC, Ahmedabad</p>
             
             <div className="space-y-6">
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Challenge:</h4>
-                <p className="text-brand-steelGray leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed text-justify">
                   A press machine builder needed a reliable local source for high-quality CETOP 5 subplates compatible with their Parker D1VW valves, requiring consistent quality, short lead times, and custom-drilled pilot ports.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Solution:</h4>
-                <p className="text-brand-steelGray leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed text-justify">
                   We became their sole-source supplier, producing ST52 steel subplates with zinc plating and custom pilot ports. We perform 100% hydrostatic testing and maintain a 2-week buffer stock at our facility.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Outcome:</h4>
-                <p className="text-brand-steelGray leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed text-justify">
                   The builder eliminated import dependency, reduced lead times from 8 weeks to 5 days, and achieved a significant cost reduction. Zero leaks reported across their entire fleet.
                 </p>
               </div>

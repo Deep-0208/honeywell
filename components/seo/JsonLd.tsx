@@ -4,7 +4,7 @@ type SchemaValue = string | number | boolean | null | undefined | SchemaObject |
 type SchemaObject = { [key: string]: SchemaValue };
 
 interface JsonLdProps {
-  data: SchemaObject | SchemaObject[];
+  data: SchemaObject | SchemaObject[] | Record<string, unknown> | Record<string, unknown>[];
 }
 
 /**

@@ -13,7 +13,7 @@ export function ProductsSection({ data, bg = 'white' }: { data: any; bg?: 'white
       <Container>
         <div className="max-w-3xl mb-12">
           <Heading variant="section" underline="left" as="h2" id="products-heading" className="mb-6">{data.title}</Heading>
-          <p className="text-lg text-brand-darkSlate leading-relaxed ">{data.description}</p>
+          <p className="text-lg text-brand-darkSlate leading-relaxed  text-justify">{data.description}</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {data.items.map((product: any) => (
@@ -23,7 +23,7 @@ export function ProductsSection({ data, bg = 'white' }: { data: any; bg?: 'white
                   <Heading variant="card" as="h3" className="mb-3 text-honeywell-navy">
                     {product.title}
                   </Heading>
-                  <p className="text-brand-darkSlate text-sm leading-relaxed mb-6 flex-grow ">{product.description}</p>
+                  <p className="text-brand-darkSlate text-sm leading-relaxed mb-6 flex-grow  text-justify">{product.description}</p>
                   
                   <div className="flex items-center justify-between text-honeywell-navy group-hover:text-honeywell-red font-medium text-sm transition-colors duration-200 mt-auto pt-4 border-t border-slate-200/60">
                     <span>View Product</span>

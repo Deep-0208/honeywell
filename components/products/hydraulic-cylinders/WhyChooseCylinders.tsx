@@ -16,7 +16,7 @@ export function WhyChooseCylinders() {
           <Heading variant="section" underline="center" as="h2" id="why-choose-heading" className="text-honeywell-navy mb-4 ">
             Why Choose Honeywell&apos;s Hydraulic Cylinders?
                       </Heading>
-          <p className="text-lg text-brand-steelGray font-body max-w-3xl mx-auto mt-4">
+          <p className="text-lg text-brand-steelGray font-body max-w-3xl mx-auto mt-4 text-justify">
             We don&apos;t just build cylinders; we engineer fluid power solutions that eliminate downtime and increase operational efficiency.
           </p>
         </div>
@@ -31,7 +31,7 @@ export function WhyChooseCylinders() {
                 className="mx-auto mb-6 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-300 ease-premium" 
               />
               <Heading variant="card" as="h3" className="mb-3 text-honeywell-navy">{feature.title}</Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
                 {feature.description}
               </p>
             </div>

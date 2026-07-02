@@ -273,18 +273,14 @@ function HeroSection() {
           {/* Content Column */}
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm">
-                CONTINUOUS DUTY FLUID POWER
-              </span>
-              <div className="h-4 w-px bg-slate-300" />
               <span className="text-brand-steelGray text-sm font-medium">3 Phase Hydraulic Power Packs</span>
             </div>
 
-            <Heading variant="hero" as="h1" className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
+            <Heading variant="section" as="h1" className=" lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               3 Phase Hydraulic Power Pack Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed text-justify">
               Unyielding, continuous fluid power for automated factories. Honeywell Hydraulics is a premier 3 phase hydraulic power pack manufacturer in Gujarat, engineering heavy-duty, industrial AC power units for manufacturing plants running 24/7. Designed specifically to leverage three-phase grid electricity, our systems provide the absolute thermal stability, electrical efficiency, and mechanical reliability required to power your critical production line machinery without interruption.
             </p>
 
@@ -320,7 +316,7 @@ function HeroSection() {
               src="/images/products/3-phase-hydraulic-power-pack-manufacturer.webp"
               alt="3 Phase Hydraulic Power Pack Manufacturer in Ahmedabad - Continuous duty AC power unit by Honeywell Hydraulics"
               fill
-              priority
+              priority fetchPriority="high" decoding="sync" quality={85}
               className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
@@ -436,7 +432,7 @@ function WhyThreePhase() {
           <Heading id="why-3-phase-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Why Industrial Plants Prefer 3 Phase Systems
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Plant engineers and automation integrators exclusively specify 3-phase hydraulic power units for continuous-duty manufacturing for several critical physics-based reasons:
           </p>
         </div>
@@ -453,7 +449,7 @@ function WhyThreePhase() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {comp.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
                 {comp.description}
               </p>
             </div>
@@ -473,7 +469,7 @@ function ComparisonSection() {
           <Heading id="comparison-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             3 Phase vs. Single Phase Power Packs
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Understanding when to specify a 3-phase unit versus a standard single-phase unit is critical for plant electrical planning.
           </p>
         </div>
@@ -523,7 +519,7 @@ function ComparisonSection() {
         </div>
 
         <div className="max-w-4xl mx-auto mt-8 bg-brand-lightSurface p-6 rounded-lg border-l-4 border-honeywell-navy">
-          <p className="text-brand-darkSlate font-body italic">
+          <p className="text-brand-darkSlate font-body italic text-justify">
             *If you are operating a small car lift in a residential garage, a single-phase unit is sufficient. If you are operating an automated production line, a CNC machine, or a massive material handling system inside a GIDC, the <strong>3 Phase Hydraulic Power Pack</strong> is the only safe and efficient choice.*
           </p>
         </div>
@@ -542,7 +538,7 @@ function TechnicalSpecifications() {
             <Heading id="technical-specifications-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
               Technical Specifications Framework
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body mb-8">
+            <p className="text-lg text-brand-steelGray font-body mb-8 text-justify">
               Our 3-phase industrial power packs are engineered for absolute fluid consistency and thermal stability in continuous manufacturing.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -572,7 +568,7 @@ function IndustriesSection() {
           <Heading id="industries-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Industries Served
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Our custom AC industrial power units are the central fluid generation engines for continuous-manufacturing sectors:
           </p>
         </div>
@@ -603,7 +599,7 @@ function EngineeringConsiderations() {
           <Heading id="engineering-considerations-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
             Engineering Considerations (Specifying AC Systems)
           </Heading>
-          <p className="text-brand-darkSlate font-body text-lg mb-8">
+          <p className="text-brand-darkSlate font-body text-lg mb-8 text-justify">
             Our{' '}
             <Link href="#" className="text-honeywell-red font-semibold hover:underline">
               Custom Hydraulic System Design
@@ -617,7 +613,7 @@ function EngineeringConsiderations() {
                 <Zap className="w-5 h-5 mr-3 text-honeywell-red" />
                 A. Motor Selection & Efficiency Ratings
               </Heading>
-              <p className="text-brand-steelGray font-body leading-relaxed">
+              <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                 We specify highly efficient IE2, IE3, or IE4 rated 3-phase induction motors. By accurately calculating the exact fluid volume (LPM) and system pressure (Bar) required by your machine, we select the smallest possible motor horsepower that can handle the peak load, drastically lowering your factory's reactive power consumption.
               </p>
             </div>
@@ -627,7 +623,7 @@ function EngineeringConsiderations() {
                 <Thermometer className="w-5 h-5 mr-3 text-honeywell-red" />
                 B. Duty Cycles & Heat Management
               </Heading>
-              <p className="text-brand-steelGray font-body leading-relaxed">
+              <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                 Even with an efficient 3-phase motor, pushing oil through a circuit 24 hours a day generates fluid heat. We engineer massive fabricated steel reservoirs to act as massive heat sinks, allowing the fluid to cool naturally and aerate properly. For high-cycle automated machinery, we integrate automated shell-and-tube water coolers or thermostatically controlled air-blast heat exchangers to maintain the oil at an optimal 45°C.
               </p>
             </div>
@@ -637,7 +633,7 @@ function EngineeringConsiderations() {
                 <ShieldAlert className="w-5 h-5 mr-3 text-honeywell-red" />
                 C. Reliability Planning & Filtration
               </Heading>
-              <p className="text-brand-steelGray font-body leading-relaxed">
+              <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                 In continuous-duty operations, fluid contamination causes catastrophic downtime. We equip our 3-phase power packs with oversized, 10-micron absolute return line filters, offline kidney-loop filtration systems, and electronic clogging indicators that alert your PLC <em>before</em> dirt destroys the hydraulic pump.
               </p>
             </div>
@@ -658,7 +654,7 @@ function ManufacturingProcess() {
             <Heading id="manufacturing-process-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
               Manufacturing & Testing Process
             </Heading>
-            <p className="text-brand-darkSlate font-body text-lg mb-8 leading-relaxed">
+            <p className="text-brand-darkSlate font-body text-lg mb-8 leading-relaxed text-justify">
               Every 3-phase power unit is built in-house and validated rigorously for thermal and pressure stability.
             </p>
 
@@ -669,7 +665,7 @@ function ManufacturingProcess() {
                 </div>
                 <div className="ml-4">
                   <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Laser Motor Alignment</Heading>
-                  <p className="text-brand-steelGray font-body mt-1">
+                  <p className="text-brand-steelGray font-body mt-1 text-justify">
                     The 3-phase electric motor and hydraulic pump are mounted on a precision-machined bell housing and coupled using laser alignment. This guarantees absolute concentricity, eliminating vibration and preventing pump shaft seal failures.
                   </p>
                 </div>
@@ -680,7 +676,7 @@ function ManufacturingProcess() {
                 </div>
                 <div className="ml-4">
                   <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Custom Reservoir Fabrication</Heading>
-                  <p className="text-brand-steelGray font-body mt-1">
+                  <p className="text-brand-steelGray font-body mt-1 text-justify">
                     We laser-cut and seam-weld custom steel reservoirs in-house, integrating internal baffle plates to prevent oil foaming and ensure complete fluid de-aeration during continuous pumping.
                   </p>
                 </div>
@@ -691,7 +687,7 @@ function ManufacturingProcess() {
                 </div>
                 <div className="ml-4">
                   <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Continuous Run Validation</Heading>
-                  <p className="text-brand-steelGray font-body mt-1">
+                  <p className="text-brand-steelGray font-body mt-1 text-justify">
                     100% of our industrial power packs undergo rigorous 24-hour continuous-run testing on our dynamometer rigs. We monitor motor amperage draw, fluid temperature rise, and pressure stability before authorizing shipment.
                   </p>
                 </div>
@@ -699,7 +695,7 @@ function ManufacturingProcess() {
             </ul>
             
             <div className="mt-8 bg-brand-surfaceGray p-4 rounded-lg border border-slate-200">
-              <p className="text-sm text-honeywell-navy font-semibold flex items-center">
+              <p className="text-sm text-honeywell-navy font-semibold flex items-center text-justify">
                 <ShieldAlert className="w-4 h-4 mr-2 text-honeywell-red" />
                 Backed by a strict [WARRANTY_MONTHS]-Month Defect Warranty.
               </p>
@@ -741,21 +737,21 @@ function ProjectSpotlight() {
               <div className="space-y-6">
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Challenge</Heading>
-                  <p className="text-brand-steelGray font-body leading-relaxed">
+                  <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                     The client's automated calendering machine in Surat was operating on an under-sized, single-phase power unit. Running 24 hours a day to meet export demands, the single-phase motor constantly overheated and tripped thermal breakers. The pulsating pressure also caused microscopic variations in textile fabric tension.
                   </p>
                 </div>
                 
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Solution</Heading>
-                  <p className="text-brand-steelGray font-body leading-relaxed">
+                  <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                     Honeywell redesigned the fluid generation system entirely, manufacturing a custom 3-Phase Hydraulic Power Pack utilizing a premium-efficiency IE3 motor and a variable displacement vane pump. We integrated a massive 200-liter baffled reservoir with a dedicated offline cooling circuit.
                   </p>
                 </div>
                 
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Outcome</Heading>
-                  <p className="text-honeywell-navy font-body font-semibold leading-relaxed">
+                  <p className="text-honeywell-navy font-body font-semibold leading-relaxed text-justify">
                     The 3-phase motor delivered flawlessly smooth torque, completely stabilizing hydraulic pressure and eliminating fabric tensioning issues. The new power pack has run continuously for 14 months without a single thermal shutdown, saving the plant over ₹45,000 in monthly electricity costs.
                   </p>
                 </div>
@@ -812,7 +808,7 @@ function RelatedProducts() {
           <Heading id="related-products-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Related Products
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             A continuous-duty 3-phase power pack provides the heartbeat of your factory. Connect it to our extreme-duty industrial components:
           </p>
         </div>
@@ -827,7 +823,7 @@ function RelatedProducts() {
                 <Heading variant="subsection" as="h3" className="text-lg font-bold text-honeywell-navy mb-2 group-hover:text-honeywell-red transition-colors">
                   {product.title}
                 </Heading>
-                <p className="text-brand-steelGray text-sm leading-relaxed mb-4 flex-grow">
+                <p className="text-brand-steelGray text-sm leading-relaxed mb-4 flex-grow text-justify">
                   {product.description}
                 </p>
                 <div className="flex items-center text-honeywell-red font-semibold text-sm mt-auto">
@@ -872,7 +868,7 @@ function RelatedServices() {
           <Heading id="related-services-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Related Services
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Purchasing an industrial AC power unit is an investment in factory uptime. Leverage our heavy engineering services:
           </p>
         </div>
@@ -884,7 +880,7 @@ function RelatedServices() {
                 {service.icon}
               </div>
               <Heading variant="subsection" as="h3" className="text-xl font-bold text-honeywell-navy mb-3">{service.title}</Heading>
-              <p className="text-brand-steelGray font-body leading-relaxed mb-6">
+              <p className="text-brand-steelGray font-body leading-relaxed mb-6 text-justify">
                 {service.description}
               </p>
               <Link href={service.link} className="inline-flex items-center text-honeywell-red font-bold hover:underline">

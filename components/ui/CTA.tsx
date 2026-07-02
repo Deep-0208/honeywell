@@ -55,7 +55,7 @@ export function CTA({
         </Heading>
         
         {description && (
-          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
+          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed text-justify">
             {description}
           </p>
         )}

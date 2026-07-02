@@ -168,18 +168,14 @@ function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase shadow-sm">
-                PRECISION FLUID LOGIC
-              </span>
-              <div className="h-4 w-px bg-slate-300" />
               <span className="text-brand-steelGray text-sm font-medium">OEM Manifold Blocks</span>
             </div>
 
-            <Heading variant="hero" as="h1" className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-honeywell-navy leading-[1.1] mb-6">
+            <Heading variant="section" as="h1" className=" lg:text-[3.25rem] font-bold text-honeywell-navy leading-[1.1] mb-6">
               Hydraulic Manifold Block Manufacturer in Gujarat
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed ">
+            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed  text-justify">
               Engineering zero-leak fluid power control. We design, CNC-machine, and test high-precision CETOP, modular, and custom valve manifold blocks that consolidate complex hydraulic logic into a single, highly efficient footprint.
             </p>
 
@@ -200,7 +196,7 @@ function HeroSection() {
               src={PAGE_IMAGE} 
               alt="Hydraulic manifold block manufacturer in Ahmedabad — Honeywell Hydraulics" 
               fill 
-              priority 
+              priority fetchPriority="high" decoding="sync" quality={85} 
               className="object-cover p-8 group-hover:scale-105 transition-transform duration-700" 
               sizes="(max-width: 1024px) 100vw, 50vw" 
             />
@@ -221,13 +217,13 @@ function OverviewSection() {
             What is a Hydraulic Manifold Block?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate text-lg leading-relaxed">
-            <p className="">
+            <p className=" text-justify">
               A <strong className="text-honeywell-navy">hydraulic manifold block</strong> is the central "brain" of any advanced fluid power circuit. It is a solid block of metal (typically Aluminum or ST52 Carbon Steel) into which complex internal galleries, ports, and cavities have been precisely machined.
             </p>
-            <p className="">
+            <p className=" text-justify">
               Instead of routing hydraulic fluid through dozens of separate hoses, steel pipes, and individual inline valves, a manifold block consolidates all pressure, directional, and flow-control valves into one central hub. The fluid enters the block from the pump, navigates through the internal machined pathways based on the logic of the attached valves (such as solenoid-operated CETOP valves or screw-in logic cartridges), and exits the block directly to the <Link href="/products/hydraulic-cylinders/" className="text-honeywell-red font-semibold hover:underline">Hydraulic Cylinders</Link> or motors.
             </p>
-            <p className="">
+            <p className=" text-justify">
               As a specialized <strong>hydraulic manifold block supplier and manufacturer</strong>, we cater directly to OEM engineering teams and automation integrators who require absolute precision. A poorly machined manifold will suffer from internal fluid bypass (cross-talk), ruining machine performance. We guarantee h8 tolerances and Ra 0.2 µm surface finishes to ensure absolute zero-leak operation.
             </p>
           </div>
@@ -246,7 +242,7 @@ function KeyFeaturesSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             Why Manifold Blocks Are Critical
           </Heading>
-          <p className="text-lg text-brand-steelGray ">
+          <p className="text-lg text-brand-steelGray  text-justify">
             In the past, hydraulic logic was achieved through "plumbing"—connecting separate valves using a chaotic web of steel tubing and fittings. For modern machine builders, this outdated method is unacceptable.
           </p>
         </div>
@@ -254,9 +250,9 @@ function KeyFeaturesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {PILLAR_FEATURES.map((feature, idx) => (
             <div key={idx} className="bg-white rounded-xl border border-slate-200 p-8 transition-all hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group">
-              <IconBox icon={feature.icon} size="lg" variant="navy" className="mb-6 group-hover:bg-honeywell-red group-hover:text-white transition-colors" />
+              <IconBox icon={feature.icon} size="lg" variant="primary" className="mb-6 group-hover:bg-honeywell-red group-hover:text-white transition-colors" />
               <h3 className="text-xl font-bold text-honeywell-navy mb-3">{feature.title}</h3>
-              <p className="text-brand-steelGray leading-relaxed ">{feature.description}</p>
+              <p className="text-brand-steelGray leading-relaxed  text-justify">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -274,7 +270,7 @@ function BlockTypesSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             Types of Manifold Blocks We Manufacture
           </Heading>
-          <p className="text-lg text-brand-steelGray ">
+          <p className="text-lg text-brand-steelGray  text-justify">
             We machine several distinct categories of hydraulic control blocks based on the complexity of the OEM circuit.
           </p>
         </div>
@@ -289,7 +285,7 @@ function BlockTypesSection() {
                 <h3 className="text-xl font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                   {type.title}
                 </h3>
-                <p className="text-brand-steelGray leading-relaxed mb-4 ">
+                <p className="text-brand-steelGray leading-relaxed mb-4  text-justify">
                   {type.description}
                 </p>
                 <div className="mt-auto flex items-center text-honeywell-red font-bold text-sm">
@@ -315,7 +311,7 @@ function TechnicalSpecsSection() {
           </Heading>
         </div>
         <div className="max-w-4xl mx-auto">
-          <SpecTable specs={PILLAR_SPECS} />
+          <SpecTable rows={PILLAR_SPECS} />
         </div>
       </Container>
     </Section>
@@ -331,7 +327,7 @@ function IndustriesSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             Industries Served
           </Heading>
-          <p className="text-lg text-brand-steelGray ">
+          <p className="text-lg text-brand-steelGray  text-justify">
             Our custom manifold blocks are the trusted logic centers for heavy industries, delivering precision control where standard piping fails.
           </p>
         </div>
@@ -343,7 +339,7 @@ function IndustriesSection() {
                 {industry.icon}
               </div>
               <h3 className="text-xl font-bold text-honeywell-navy mb-3">{industry.name}</h3>
-              <p className="text-brand-steelGray leading-relaxed">{industry.description}</p>
+              <p className="text-brand-steelGray leading-relaxed text-justify">{industry.description}</p>
             </div>
           ))}
         </div>
@@ -362,7 +358,7 @@ function ManufacturingProcessSection() {
             The Manufacturing Process (From CAD to CNC)
           </Heading>
           <div className="space-y-6 text-brand-darkSlate text-lg leading-relaxed">
-            <p className="">
+            <p className=" text-justify">
               As a premier <strong>manifold block manufacturer in Gujarat</strong>, we maintain absolute control over the production process to guarantee zero-leak performance.
             </p>
             <ul className="space-y-4">
@@ -370,28 +366,28 @@ function ManufacturingProcessSection() {
                 <div className="w-8 h-8 rounded-full bg-honeywell-red/10 text-honeywell-red flex items-center justify-center font-bold flex-shrink-0 mt-1">1</div>
                 <div>
                   <strong className="text-honeywell-navy block mb-1">Material Selection</strong>
-                  <p className="text-brand-steelGray ">We source high-grade Aluminum (for systems up to 210 Bar) and dense, porosity-free ST52 Carbon Steel or Ductile Iron (for systems operating at 315–500 Bar).</p>
+                  <p className="text-brand-steelGray  text-justify">We source high-grade Aluminum (for systems up to 210 Bar) and dense, porosity-free ST52 Carbon Steel or Ductile Iron (for systems operating at 315–500 Bar).</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <div className="w-8 h-8 rounded-full bg-honeywell-red/10 text-honeywell-red flex items-center justify-center font-bold flex-shrink-0 mt-1">2</div>
                 <div>
                   <strong className="text-honeywell-navy block mb-1">CNC Machining</strong>
-                  <p className="text-brand-steelGray ">The 3D CAD design is fed into our 5-axis CNC machines. The galleries are deep-hole drilled, and the valve cavities are form-machined to exact ISO/SAE tolerances to ensure O-rings seal perfectly.</p>
+                  <p className="text-brand-steelGray  text-justify">The 3D CAD design is fed into our 5-axis CNC machines. The galleries are deep-hole drilled, and the valve cavities are form-machined to exact ISO/SAE tolerances to ensure O-rings seal perfectly.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <div className="w-8 h-8 rounded-full bg-honeywell-red/10 text-honeywell-red flex items-center justify-center font-bold flex-shrink-0 mt-1">3</div>
                 <div>
                   <strong className="text-honeywell-navy block mb-1">Surface Finishing & Deburring</strong>
-                  <p className="text-brand-steelGray ">Internal galleries are thoroughly deburred using specialized tooling and high-pressure flushing to ensure no metal chips remain to destroy the hydraulic pump.</p>
+                  <p className="text-brand-steelGray  text-justify">Internal galleries are thoroughly deburred using specialized tooling and high-pressure flushing to ensure no metal chips remain to destroy the hydraulic pump.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <div className="w-8 h-8 rounded-full bg-honeywell-red/10 text-honeywell-red flex items-center justify-center font-bold flex-shrink-0 mt-1">4</div>
                 <div>
                   <strong className="text-honeywell-navy block mb-1">Hydrostatic Leak Testing</strong>
-                  <p className="text-brand-steelGray ">The final block is sealed and pressurized to 1.5x its maximum working pressure to verify the integrity of the internal wall thicknesses before dispatch.</p>
+                  <p className="text-brand-steelGray  text-justify">The final block is sealed and pressurized to 1.5x its maximum working pressure to verify the integrity of the internal wall thicknesses before dispatch.</p>
                 </div>
               </li>
             </ul>

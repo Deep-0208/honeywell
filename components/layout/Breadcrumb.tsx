@@ -38,7 +38,7 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
       <JsonLd data={schema} />
 
       <nav aria-label="Breadcrumb" className={`py-4 ${className}`}>
-        <ol className="flex items-center space-x-2 text-sm font-body text-brand-steelGray flex-wrap">
+        <ol className="flex items-center space-x-2 text-base font-body text-brand-steelGray flex-wrap">
           {items.map((item, index) => {
             const isLast = index === items.length - 1;
 

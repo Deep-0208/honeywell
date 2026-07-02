@@ -223,7 +223,7 @@ export default function ContactUsPage() {
 
         <Container className="relative z-10">
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="text-sm font-body text-brand-borderGray mb-8">
+          <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
             <ol className="flex items-center gap-2">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
               <li aria-hidden="true">&rsaquo;</li>
@@ -234,13 +234,11 @@ export default function ContactUsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left — Headline */}
             <div>
-              <span className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-honeywell-red/20 border border-honeywell-red/40 text-honeywell-red text-xs font-bold uppercase tracking-wider mb-6">
-                Ahmedabad, Gujarat — Made in India 🇮🇳
-              </span>
-              <Heading variant="hero" as="h1" className="text-white mb-5 leading-tight">
+
+              <Heading variant="section" as="h1" className="text-white mb-5 leading-tight">
                 We&apos;re Here to Help — Just Reach Out
               </Heading>
-              <p className="text-[#CBD5E1] text-lg font-body leading-relaxed mb-8 max-w-lg">
+              <p className="text-[#CBD5E1] text-lg font-body leading-relaxed mb-8 max-w-lg text-justify">
                 Call us, send a WhatsApp, or fill the form below. Our team responds to every inquiry and will help you find the right hydraulic solution.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -279,8 +277,8 @@ export default function ContactUsPage() {
                   <div className="w-10 h-10 rounded-xl bg-honeywell-red/20 flex items-center justify-center text-honeywell-red mb-3">
                     {item.icon}
                   </div>
-                  <p className="font-display font-bold text-white text-sm mb-1">{item.title}</p>
-                  <p className="text-[#94A3B8] text-xs font-body leading-relaxed">{item.body}</p>
+                  <p className="font-display font-bold text-white text-sm mb-1 text-justify">{item.title}</p>
+                  <p className="text-[#94A3B8] text-xs font-body leading-relaxed text-justify">{item.body}</p>
                 </div>
               ))}
             </div>
@@ -311,8 +309,8 @@ export default function ContactUsPage() {
                       <Phone className="w-4 h-4 text-honeywell-red" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="text-[10px] text-slate-400 font-body uppercase tracking-wider">Phone / WhatsApp</p>
-                      <p className="text-sm font-semibold font-body text-honeywell-navy group-hover:text-honeywell-red transition-colors">
+                      <p className="text-[10px] text-slate-400 font-body uppercase tracking-wider text-justify">Phone / WhatsApp</p>
+                      <p className="text-sm font-semibold font-body text-honeywell-navy group-hover:text-honeywell-red transition-colors text-justify">
                         {NAP.phone}
                       </p>
                     </div>
@@ -329,8 +327,8 @@ export default function ContactUsPage() {
                       <MessageCircle className="w-4 h-4 text-green-600" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="text-[10px] text-slate-400 font-body uppercase tracking-wider">WhatsApp</p>
-                      <p className="text-sm font-semibold font-body text-honeywell-navy group-hover:text-green-600 transition-colors">
+                      <p className="text-[10px] text-slate-400 font-body uppercase tracking-wider text-justify">WhatsApp</p>
+                      <p className="text-sm font-semibold font-body text-honeywell-navy group-hover:text-green-600 transition-colors text-justify">
                         Message Our Engineers
                       </p>
                     </div>
@@ -345,8 +343,8 @@ export default function ContactUsPage() {
                       <Mail className="w-4 h-4 text-slate-500" aria-hidden="true" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="text-[10px] text-slate-400 font-body uppercase tracking-wider">Email Us</p>
-                      <p className="text-sm font-semibold font-body text-honeywell-navy group-hover:text-honeywell-red transition-colors truncate">
+                      <p className="text-[10px] text-slate-400 font-body uppercase tracking-wider text-justify">Email Us</p>
+                      <p className="text-sm font-semibold font-body text-honeywell-navy group-hover:text-honeywell-red transition-colors truncate text-justify">
                         {NAP.emailSales}
                       </p>
                     </div>
@@ -425,7 +423,7 @@ export default function ContactUsPage() {
                 <Heading as="h2" variant="subsection" className="mb-2">
                   Send Us a Message
                 </Heading>
-                <p className="text-sm text-brand-steelGray font-body">
+                <p className="text-sm text-brand-steelGray font-body text-justify">
                   Not sure what to say? Just tell us what you need — our team will take it from there. For urgent needs, call{' '}
                   <a href={NAP.phoneHref} className="text-honeywell-red font-semibold hover:underline underline-offset-4">
                     {NAP.phone}
@@ -447,7 +445,7 @@ export default function ContactUsPage() {
             <Heading as="h2" variant="section" className="mb-4">
               We Serve All of Gujarat &amp; Across India
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
               Our hydraulic products are delivered from our Ahmedabad factory to manufacturing plants across Gujarat and all major Indian cities.
             </p>
           </div>
@@ -478,8 +476,8 @@ export default function ContactUsPage() {
         <Container className="relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-white text-center md:text-left">
-              <p className="text-xl font-display font-bold mb-1">Ready to discuss your project?</p>
-              <p className="text-[#CBD5E1] font-body text-sm max-w-md">
+              <p className="text-xl font-display font-bold mb-1 text-justify">Ready to discuss your project?</p>
+              <p className="text-[#CBD5E1] font-body text-sm max-w-md text-justify">
                 Our engineers are happy to help — whether you have a full specification or just a rough idea.
               </p>
             </div>

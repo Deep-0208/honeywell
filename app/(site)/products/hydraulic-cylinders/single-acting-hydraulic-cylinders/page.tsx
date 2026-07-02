@@ -276,18 +276,14 @@ function HeroSection() {
           {/* Content Column */}
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm">
-                PRECISION LINEAR ACTUATORS
-              </span>
-              <div className="h-4 w-px bg-slate-300" />
               <span className="text-brand-steelGray text-sm font-medium">Single Acting Hydraulic Cylinders</span>
             </div>
 
-            <Heading variant="hero" as="h1" className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
+            <Heading variant="section" as="h1" className=" lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               Single Acting Hydraulic Cylinder Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed ">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed  text-justify">
               Engineered for efficiency and robust performance. Honeywell Hydraulics is a premier custom single acting hydraulic cylinder manufacturer in Gujarat. Our single acting cylinders are designed to apply unidirectional force for lifting, pushing, or pressing applications, offering a highly reliable and cost-effective fluid power solution capable of sustaining up to 450 Bar working pressures.
             </p>
 
@@ -319,7 +315,7 @@ function HeroSection() {
               src="/images/products/welded-hydraulic-cylinder.webp"
               alt="Single Acting Hydraulic Cylinder Manufacturer in Ahmedabad"
               fill
-              priority
+              priority fetchPriority="high" decoding="sync" quality={85}
               className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
@@ -380,13 +376,13 @@ function ProductOverview() {
             What Are Single Acting Hydraulic Cylinders?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
-            <p className="">
+            <p className=" text-justify">
               Hydraulic cylinders are used as linear actuators to apply mechanical force in a linear motion. A <strong className="text-honeywell-navy">single acting hydraulic cylinder</strong>, also known as a single acting hydraulic ram, operates in a single direction.
             </p>
-            <p className="">
+            <p className=" text-justify">
               It typically has a single port at the bottom of the cylinder where pressurised fluid is pumped into the system. As the fluid enters the system, it fills the cylinder and extends the piston inside, creating mechanical force to lift, push, or press heavy loads.
             </p>
-            <p className="">
+            <p className=" text-justify">
               To retract the piston, a single acting hydraulic cylinder must rely on an external force to expunge the fluid inside. This can be left to gravity if there is no immediate need to retract the piston rapidly. A second piston, mechanical weight, or strong internal springs can also be used to forcefully push the piston back into the cylinder.
             </p>
           </div>
@@ -405,7 +401,7 @@ function ConstructionExplained() {
           <Heading id="construction-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Single Acting Cylinder Mechanics
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Simplicity meets extreme performance. A look inside our single acting actuators.
           </p>
         </div>
@@ -422,7 +418,7 @@ function ConstructionExplained() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {comp.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed  text-justify">
                 {comp.desc}
               </p>
             </div>
@@ -442,7 +438,7 @@ function Advantages() {
           <Heading id="advantages-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Advantages of Single Acting Cylinders
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Why engineers specify single acting cylinders for lifting and pressing applications.
           </p>
         </div>
@@ -459,7 +455,7 @@ function Advantages() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3">
                 {adv.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed flex-grow ">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed flex-grow  text-justify">
                 {adv.description}
               </p>
             </div>
@@ -479,7 +475,7 @@ function ComparisonSection() {
           <Heading id="comparison-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Single Acting vs. Double Acting Cylinders
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Choosing the right actuator type for your machine's cycle profile.
           </p>
         </div>
@@ -541,7 +537,7 @@ function TechnicalSpecifications() {
             <Heading id="technical-specifications-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Technical Specifications
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body mb-8">
+            <p className="text-lg text-brand-steelGray font-body mb-8 text-justify">
               Our single acting cylinders are manufactured using premium ST 52.3 honed tubes and high-grade alloy steel rods for maximum strength and endurance.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -569,7 +565,7 @@ function IndustriesSection() {
           <Heading id="industries-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Industries Served
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Single acting cylinders are the workhorses of vertical lifting and pressing.
           </p>
         </div>
@@ -600,7 +596,7 @@ function EngineeringConsiderations() {
           <Heading id="engineering-considerations-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
             Engineering Considerations
           </Heading>
-          <p className="text-brand-darkSlate font-body text-lg mb-8">
+          <p className="text-brand-darkSlate font-body text-lg mb-8 text-justify">
             When specifying a single acting cylinder, several key operational factors must be addressed to ensure reliable performance.
           </p>
 
@@ -610,7 +606,7 @@ function EngineeringConsiderations() {
                 <span className="bg-honeywell-navy text-white w-8 h-8 rounded flex items-center justify-center text-sm font-bold">A</span>
                 Retraction Method
               </Heading>
-              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11">
+              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11 text-justify">
                 Because there is no hydraulic pressure to retract the rod, you must determine if the load's weight is sufficient to overcome seal friction and push the fluid back into the reservoir quickly enough for your cycle times. If not, an internal return spring may be necessary.
               </p>
             </div>
@@ -620,7 +616,7 @@ function EngineeringConsiderations() {
                 <span className="bg-honeywell-navy text-white w-8 h-8 rounded flex items-center justify-center text-sm font-bold">B</span>
                 Breather Ports
               </Heading>
-              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11">
+              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11 text-justify">
                 The non-pressurized side of a single acting cylinder must be vented to the atmosphere to allow air to enter and exit as the cylinder strokes. We equip our breather ports with high-quality sintered bronze filters to prevent dust and moisture from being sucked into the cylinder during extension.
               </p>
             </div>
@@ -649,7 +645,7 @@ function ManufacturingProcess() {
                 </div>
                 <div>
                   <Heading variant="card" as="h3" className="text-lg font-bold text-honeywell-navy">Premium Materials</Heading>
-                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed ">
+                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed  text-justify">
                     We exclusively use ST 52.3 seamless honed tubes and EN 8 / EN 19 piston rods. This guarantees superior wear resistance and structural integrity under high pressure.
                   </p>
                 </div>
@@ -661,7 +657,7 @@ function ManufacturingProcess() {
                 </div>
                 <div>
                   <Heading variant="card" as="h3" className="text-lg font-bold text-honeywell-navy">Precision Machining</Heading>
-                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed ">
+                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed  text-justify">
                     Our CNC machining processes ensure strict H8/H9 tolerances for the honed tubes and f7 tolerances for the piston rods, providing an ultra-smooth surface finish for extended seal life.
                   </p>
                 </div>
@@ -673,7 +669,7 @@ function ManufacturingProcess() {
                 </div>
                 <div>
                   <Heading variant="card" as="h3" className="text-lg font-bold text-honeywell-navy">Pressure Validation</Heading>
-                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed ">
+                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed  text-justify">
                     Every cylinder undergoes rigorous hydrostatic testing at pressures well beyond their rated working capacity to guarantee leak-free performance and structural safety.
                   </p>
                 </div>
@@ -685,7 +681,7 @@ function ManufacturingProcess() {
                 <ShieldAlert className="w-5 h-5 text-honeywell-red" />
                 The Honeywell Guarantee
               </Heading>
-              <p className="text-white/80 text-sm">
+              <p className="text-white/80 text-sm text-justify">
                 Our heavy-duty single acting cylinders are backed by our strict quality guarantee. Every unit is dispatched with complete material test certificates and dimensional reports.
               </p>
             </div>
@@ -722,14 +718,14 @@ function ProjectSpotlight() {
               <div className="space-y-6">
                 <div>
                   <Heading variant="card" as="h3" className="font-bold text-honeywell-navy uppercase text-xs tracking-wider mb-2">The Challenge:</Heading>
-                  <p className="text-brand-darkSlate text-sm leading-relaxed ">
+                  <p className="text-brand-darkSlate text-sm leading-relaxed  text-justify">
                     A material handling OEM required highly reliable, long-stroke lifting cylinders for their 5-ton industrial goods elevators. The cylinders needed to lift the platform efficiently and return safely using only the weight of the platform.
                   </p>
                 </div>
 
                 <div>
                   <Heading variant="card" as="h3" className="font-bold text-honeywell-navy uppercase text-xs tracking-wider mb-2">The Solution:</Heading>
-                  <p className="text-brand-darkSlate text-sm leading-relaxed ">
+                  <p className="text-brand-darkSlate text-sm leading-relaxed  text-justify">
                     We engineered custom <strong>Single Acting Hydraulic Cylinders</strong> with a 6000mm stroke and specialized velocity fuses built into the base port. We used ultra-smooth honed tubes and premium rod seals to minimize friction during the gravity-assisted return stroke.
                   </p>
                 </div>
@@ -783,7 +779,7 @@ function RelatedProducts() {
           <Heading id="related-products-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Related Products
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Explore our complete range of hydraulic actuators and power generation systems.
           </p>
         </div>
@@ -832,7 +828,7 @@ function RelatedServices() {
           <Heading id="related-services-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             The Heavy Engineering Advantage
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Leverage our fluid power expertise to optimize your manufacturing processes.
           </p>
         </div>
@@ -841,7 +837,7 @@ function RelatedServices() {
           {services.map((service, idx) => (
             <div key={idx} className="bg-brand-surfaceGray p-8 rounded-xl border border-slate-200 hover:border-honeywell-navy transition-colors group">
               <Heading variant="subsection" as="h3" className="text-xl font-bold text-honeywell-navy mb-3">{service.title}</Heading>
-              <p className="text-brand-steelGray text-sm leading-relaxed mb-6 ">
+              <p className="text-brand-steelGray text-sm leading-relaxed mb-6  text-justify">
                 {service.desc}
               </p>
               <Link href={service.href} className="inline-flex items-center text-honeywell-red font-bold text-sm group-hover:underline">

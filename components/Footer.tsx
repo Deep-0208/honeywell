@@ -49,7 +49,6 @@ const footerColumns = [
     heading: 'Company',
     links: [
       { label: 'About Us', href: '/about-us/' },
-      { label: 'Infrastructure', href: '/infrastructure/' },
       { label: 'Quality', href: '/quality/' },
       { label: 'Manufacturing Facility', href: '/manufacturing-facility/' },
       { label: 'Contact Us', href: '/contact-us/' },
@@ -147,7 +146,7 @@ export default function Footer() {
                 />
               </Link>
 
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed mb-6 max-w-xs">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed mb-6 max-w-xs text-justify">
                 Precision hydraulic cylinder and power pack manufacturer in Ahmedabad, Gujarat.
                 Custom-engineered solutions for 25+ industries across India.
               </p>
@@ -238,7 +237,7 @@ export default function Footer() {
 
           {/* LOCATIONS ROW — Local SEO internal links */}
           <div className="mt-10 pt-8 border-t border-slate-200">
-            <p className="text-xs font-bold uppercase tracking-[0.12em] text-honeywell-navy font-body mb-4">
+            <p className="text-xs font-bold uppercase tracking-[0.12em] text-honeywell-navy font-body mb-4 text-justify">
               Serving Locations
             </p>
             <ul className="flex flex-wrap gap-x-4 gap-y-2" role="list" aria-label="Service locations">

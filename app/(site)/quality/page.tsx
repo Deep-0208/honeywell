@@ -199,26 +199,31 @@ export default function QualityPage() {
       <JsonLd data={faqSchema} />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="bg-honeywell-navy text-white pt-6 md:pt-8 pb-16 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
+      <section className="bg-white pt-12 md:pt-20 pb-8 md:pb-12 relative overflow-hidden border-b border-slate-200">
+        {/* Subtle engineering grid background */}
+        <div 
+          className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_10%_0%,#000_70%,transparent_100%)]" 
+          aria-hidden="true" 
+        />
+        
         <Container className="relative z-10">
-          <nav aria-label="Breadcrumb" className="text-sm font-body text-brand-borderGray mb-6">
+          <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
             <ol className="flex items-center gap-2">
               <li>
-                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
               </li>
               <li aria-hidden="true">&rsaquo;</li>
-              <li className="text-white font-semibold" aria-current="page">Quality</li>
+              <li className="text-honeywell-red font-semibold" aria-current="page">Quality</li>
             </ol>
           </nav>
-          <div className="max-w-3xl">
-            <span className="inline-block py-1 px-3 rounded-sm bg-honeywell-red text-white text-xs font-bold uppercase tracking-wider mb-6">
-              Zero Defect. Zero Compromise.
-            </span>
-            <Heading variant="hero" as="h1" className="text-white mb-6">
-              Quality Assurance — Zero Defect, Zero Compromise
+
+          <div className="w-full">
+            <Heading variant="section" as="h1" className=" font-display font-extrabold tracking-tight text-honeywell-navy leading-[1.15] mb-6">
+              Quality Assurance —<br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-honeywell-navy via-honeywell-navy to-honeywell-red"> Zero Defect, Zero Compromise</span>
             </Heading>
-            <p className="text-brand-borderGray text-lg font-body leading-relaxed max-w-2xl">
+            
+            <p className="text-brand-steelGray text-lg md:text-xl font-body leading-relaxed text-justify">
               At Honeywell Hydraulics, quality is not a department. It is the engineering discipline that governs every decision — from how we calculate a cylinder wall thickness to how we test a component before dispatch.
             </p>
           </div>
@@ -233,7 +238,7 @@ export default function QualityPage() {
               Our Quality Policy Statement
             </Heading>
             <blockquote className="bg-brand-surfaceGray border-l-4 border-honeywell-red p-6 rounded-r-sm">
-              <p className="text-honeywell-navy font-body text-lg leading-relaxed font-medium italic">
+              <p className="text-honeywell-navy font-body text-lg leading-relaxed font-medium italic text-justify">
                 &ldquo;Honeywell Hydraulics commits to manufacturing hydraulic cylinders, power packs, and accessories that conform to agreed engineering specifications, applicable Indian and international standards, and our clients&apos; dimensional and performance requirements — consistently, verifiably, and without exception.&rdquo;
               </p>
             </blockquote>
@@ -248,7 +253,7 @@ export default function QualityPage() {
             <Heading as="h2" variant="section" id="qa-process-heading" className="mb-3">
               Quality Assurance Process
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
               Five rigorous quality gates — from raw material receipt to final dispatch. Every component passes every gate.
             </p>
           </div>
@@ -265,7 +270,7 @@ export default function QualityPage() {
                 </div>
                 <div>
                   <Heading as="h3" variant="card" className="mb-2">{step.title}</Heading>
-                  <p className="text-sm text-brand-steelGray font-body leading-relaxed">{step.body}</p>
+                  <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">{step.body}</p>
                 </div>
               </li>
             ))}
@@ -281,7 +286,7 @@ export default function QualityPage() {
               <Heading as="h2" variant="section" id="testing-eq-heading" className="mb-3">
                 Testing &amp; Metrology Equipment
               </Heading>
-              <p className="text-brand-darkSlate font-body leading-relaxed mb-6">
+              <p className="text-brand-darkSlate font-body leading-relaxed mb-6 text-justify">
                 Our quality laboratory houses dedicated testing rigs and precision metrology equipment to verify every critical dimension and pressure rating.
               </p>
               <ul className="space-y-3" role="list">
@@ -293,8 +298,8 @@ export default function QualityPage() {
                 ))}
               </ul>
               <div className="mt-6">
-                <Button href="/infrastructure" variant="outline" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>
-                  View Full Infrastructure
+                <Button href="/manufacturing-facility/" variant="outline" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>
+                  View Manufacturing Facility
                 </Button>
               </div>
             </div>
@@ -302,8 +307,8 @@ export default function QualityPage() {
               <div className="aspect-[4/3] bg-slate-200 rounded-sm flex items-center justify-center">
                 <div className="text-center px-6">
                   <FlaskConical className="w-12 h-12 text-[#94A3B8] mx-auto mb-3" aria-hidden="true" />
-                  <p className="text-sm font-semibold text-brand-darkSlate font-body">Pressure Test Rig</p>
-                  <p className="text-xs text-[#94A3B8] font-body">0–700 Bar testing capability</p>
+                  <p className="text-sm font-semibold text-brand-darkSlate font-body text-justify">Pressure Test Rig</p>
+                  <p className="text-xs text-[#94A3B8] font-body text-justify">0–700 Bar testing capability</p>
                 </div>
               </div>
             </div>
@@ -318,7 +323,7 @@ export default function QualityPage() {
             <Heading as="h2" variant="section" id="standards-heading" className="mb-3">
               Certifications &amp; Standards
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
               We design and manufacture to recognised Indian and international hydraulic standards.
             </p>
           </div>
@@ -352,7 +357,7 @@ export default function QualityPage() {
             <Heading as="h2" variant="section" id="pillars-heading" className="mb-3">
               The Five Pillars of Quality
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
               Our quality commitment is built on five engineering pillars — each one a non-negotiable requirement for every component we manufacture.
             </p>
           </div>
@@ -364,7 +369,7 @@ export default function QualityPage() {
                 </span>
                 <IconBox icon={pillar.icon} variant="primary" className="mb-4" />
                 <Heading as="h3" variant="card" className="mb-2">{pillar.title}</Heading>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed">{pillar.body}</p>
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">{pillar.body}</p>
               </li>
             ))}
           </ul>
@@ -377,8 +382,8 @@ export default function QualityPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {QUALITY_STATS.map((stat) => (
               <div key={stat.label}>
-                <p className="text-3xl md:text-4xl font-display font-extrabold text-white mb-1">{stat.value}</p>
-                <p className="text-sm text-[#94A3B8] font-body uppercase tracking-wider">{stat.label}</p>
+                <p className="text-3xl md:text-4xl font-display font-extrabold text-white mb-1 text-justify">{stat.value}</p>
+                <p className="text-sm text-[#94A3B8] font-body uppercase tracking-wider text-justify">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -393,7 +398,7 @@ export default function QualityPage() {
               <Heading as="h2" variant="section" id="warranty-heading" className="mb-3">
                 Customer Warranty &amp; Support
               </Heading>
-              <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
+              <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-justify">
                 All Honeywell Hydraulics products carry a manufacturing defect warranty from date of dispatch. Our warranty process is designed to be straightforward and fair.
               </p>
               <Heading as="h3" variant="card" className="mb-3">Claiming a Warranty</Heading>

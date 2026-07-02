@@ -17,13 +17,13 @@ export function CylinderTechnicalSpecs() {
             <Heading variant="section" underline="center" as="h2" id="specs-heading" className="mb-6">
               Technical Specifications & Capabilities
             </Heading>
-            <p className="text-lg text-brand-darkSlate font-body mb-6">
+            <p className="text-lg text-brand-darkSlate font-body mb-6 text-justify">
               As a leading hydraulic cylinder manufacturer, we offer a vast range of technical specifications to meet the exact demands of your industry. Our engineering team can work with your existing CAD drawings or design a completely new cylinder based on your load calculations.
             </p>
             
             <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm mb-8">
               <Heading variant="card" as="h3" className="mb-2">Need a custom dimension?</Heading>
-              <p className="text-sm text-brand-steelGray mb-4">
+              <p className="text-sm text-brand-steelGray mb-4 text-justify">
                 We specialize in drawing-to-delivery services for non-standard requirements.
               </p>
               <Button href="/request-quote" variant="primary">

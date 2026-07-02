@@ -15,12 +15,12 @@ export function PowerPackFAQs() {
             <Heading variant="section" underline="center" as="h2" id="faqs-heading" className="mb-4">
               Frequently Asked Questions
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body mb-6">
+            <p className="text-lg text-brand-steelGray font-body mb-6 text-justify">
               Find answers to common questions about our custom hydraulic power pack manufacturing process and capabilities.
             </p>
             <div className="bg-brand-surfaceGray p-6 rounded-xl border border-slate-200">
               <Heading variant="card" as="h3" className="mb-2">Still have questions?</Heading>
-              <p className="text-sm text-brand-steelGray mb-4">
+              <p className="text-sm text-brand-steelGray mb-4 text-justify">
                 Our engineering team is ready to discuss your specific hydraulic requirements.
               </p>
               <a href="tel:+919924343873" className="block text-honeywell-red font-bold hover:underline mb-2">

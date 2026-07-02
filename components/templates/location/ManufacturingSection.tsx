@@ -12,7 +12,7 @@ export function ManufacturingSection({ data, bg = 'white' }: { data: any; bg?: '
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <Heading variant="section" underline="left" as="h2" id="manufacturing-heading" className="mb-6">{data.title}</Heading>
-            <p className="text-lg text-brand-darkSlate mb-10 leading-relaxed ">{data.description}</p>
+            <p className="text-lg text-brand-darkSlate mb-10 leading-relaxed  text-justify">{data.description}</p>
             
             <div className="space-y-8">
               {data.processes.map((process: any, idx: number) => (
@@ -22,7 +22,7 @@ export function ManufacturingSection({ data, bg = 'white' }: { data: any; bg?: '
                   </div>
                   <div>
                     <Heading variant="subsection" as="h3" className="mb-2 text-xl">{process.title}</Heading>
-                    <p className="text-brand-darkSlate leading-relaxed ">{process.description}</p>
+                    <p className="text-brand-darkSlate leading-relaxed  text-justify">{process.description}</p>
                   </div>
                 </div>
               ))}

@@ -36,10 +36,10 @@ export function ActionCardsSection() {
                 variant="outline"
                 className="mb-4 group-hover:bg-honeywell-navy group-hover:text-white group-hover:border-honeywell-navy transition-colors duration-300"
               />
-              <Heading variant="card" as="h3" className="mb-2">
+              <Heading variant="card" as="h3" className="mb-2 min-h-[4rem] flex items-center justify-center">
                 {card.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed mb-4 flex-grow">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed mb-4 flex-grow text-justify">
                 {card.description}
               </p>
               <div className="text-sm font-bold text-honeywell-red flex items-center gap-2 group-hover:text-honeywell-navy transition-colors mt-auto">

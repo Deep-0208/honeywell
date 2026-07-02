@@ -19,7 +19,7 @@ export function TrustSection({ data, bg = 'gray' }: { data: any; bg?: 'white' | 
               <ShieldCheck className="w-6 h-6 text-honeywell-navy shrink-0 mt-1" />
               <div>
                 <Heading variant="card" as="h3" className="mb-2 font-bold">{item.title}</Heading>
-                <p className="text-brand-darkSlate text-sm leading-relaxed ">{item.description}</p>
+                <p className="text-brand-darkSlate text-sm leading-relaxed  text-justify">{item.description}</p>
               </div>
             </div>
           ))}

@@ -287,18 +287,14 @@ function HeroSection() {
           {/* Content Column */}
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm">
-                UNRESTRICTED ENGINEERING
-              </span>
-              <div className="h-4 w-px bg-slate-300" />
               <span className="text-brand-steelGray text-sm font-medium">Custom Hydraulic Cylinders</span>
             </div>
 
-            <Heading variant="hero" as="h1" className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
+            <Heading variant="section" as="h1" className=" lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               Custom Hydraulic Cylinder Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed ">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed  text-justify">
               Bespoke fluid power for when standard catalogs fail. Honeywell
               Hydraulics is a premier custom hydraulic cylinder manufacturer in
               Gujarat, specializing in extreme large bore actuators,
@@ -340,7 +336,7 @@ function HeroSection() {
               src="/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp"
               alt="Custom Hydraulic Cylinder Manufacturer in Ahmedabad - Bespoke large bore cylinder by Honeywell Hydraulics"
               fill
-              priority
+              priority fetchPriority="high" decoding="sync" quality={85}
               className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
@@ -448,7 +444,7 @@ function KeyFeatures() {
           <Heading id="engineering-process-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             The Engineering Design Process
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body ">
+          <p className="text-lg text-brand-steelGray font-body  text-justify">
             Designing a bespoke hydraulic cylinder requires rigorous fluid
             mechanics calculations and strict adherence to mechanical physics.
           </p>
@@ -473,7 +469,7 @@ function KeyFeatures() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors ">
                 {step.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed  text-justify">
                 {step.desc}
               </p>
             </div>
@@ -494,7 +490,7 @@ function TechnicalSpecifications() {
             <Heading id="technical-specifications-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Technical Specifications
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body mb-8 ">
+            <p className="text-lg text-brand-steelGray font-body mb-8  text-justify">
               Our custom manufacturing capabilities extend far beyond standard
               catalog parameters. Every specification is engineered to your exact
               requirements.
@@ -536,7 +532,7 @@ function ProductVariants() {
           <Heading id="product-variants-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Custom Cylinder Capabilities
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body ">
+          <p className="text-lg text-brand-steelGray font-body  text-justify">
             From reverse-engineering obsolete imports to manufacturing extreme
             large-bore actuators, our capabilities cover the full spectrum of
             bespoke hydraulic engineering.
@@ -559,7 +555,7 @@ function ProductVariants() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3">
                 {variant.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed mb-6 flex-grow ">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed mb-6 flex-grow  text-justify">
                 {variant.description}
               </p>
               <ul className="space-y-2.5 border-t border-slate-200 pt-5">
@@ -590,7 +586,7 @@ function IndustriesSection() {
           <Heading id="industries-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Industries We Serve
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body ">
+          <p className="text-lg text-brand-steelGray font-body  text-justify">
             Our custom engineering division serves the most demanding sectors in
             the Indian economy.
           </p>
@@ -622,7 +618,7 @@ function ManufacturingProcess() {
           <Heading id="manufacturing-process-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Manufacturing & Quality Process
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body ">
+          <p className="text-lg text-brand-steelGray font-body  text-justify">
             Every custom cylinder is delivered with a comprehensive Engineering
             Dossier, including 3D CAD files, material test certificates (MTC),
             seal compound specs, and hydrostatic pressure testing reports.
@@ -638,7 +634,7 @@ function ManufacturingProcess() {
               <IconBox icon={<Cog className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">Heavy Machining Centers</Heading>
-            <p className="text-brand-steelGray font-body text-sm ">
+            <p className="text-brand-steelGray font-body text-sm  text-justify">
               Equipped with massive CNC boring and honing machines capable of
               processing large-bore seamless steel tubes up to immense lengths.
             </p>
@@ -649,7 +645,7 @@ function ManufacturingProcess() {
               <IconBox icon={<FlaskConical className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">Metallurgical Verification</Heading>
-            <p className="text-brand-steelGray font-body text-sm ">
+            <p className="text-brand-steelGray font-body text-sm  text-justify">
               We rigorously verify the chemical composition and yield strength
               of all custom-ordered alloys before machining begins.
             </p>
@@ -660,7 +656,7 @@ function ManufacturingProcess() {
               <IconBox icon={<FileCheck className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">Extreme Pressure Validation</Heading>
-            <p className="text-brand-steelGray font-body text-sm ">
+            <p className="text-brand-steelGray font-body text-sm  text-justify">
               100% of our bespoke cylinders undergo rigorous hydrostatic and
               shock-load testing to verify the integrity of custom-welded
               trunnions and flanges.
@@ -672,7 +668,7 @@ function ManufacturingProcess() {
               <IconBox icon={<Package className="w-6 h-6" />} variant="primary" size="lg" />
             </div>
             <Heading variant="card" as="h3" className="mb-3">Secure Delivery</Heading>
-            <p className="text-brand-steelGray font-body text-sm ">
+            <p className="text-brand-steelGray font-body text-sm  text-justify">
               Cylinders are thoroughly cleaned, painted, safely packaged, and dispatched to your facility PAN-India.
             </p>
           </div>
@@ -687,7 +683,7 @@ function ManufacturingProcess() {
           <Heading variant="subsection" as="h3" className="text-2xl md:text-3xl font-display font-bold text-white mb-4 relative z-10">
             Need to Reverse-Engineer a Damaged Imported Cylinder?
           </Heading>
-          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-6 relative z-10 ">
+          <p className="text-brand-borderGray font-body max-w-2xl mx-auto mb-6 relative z-10  text-justify">
             Our engineering team can dismantle, measure, and replicate any
             cylinder — even without documentation or part numbers.
           </p>
@@ -741,7 +737,7 @@ function ProjectSpotlight() {
             <Heading id="project-spotlight-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mt-4 mb-3">
               Reverse Engineering a 600-Ton Forging Press Cylinder
             </Heading>
-            <p className="text-brand-steelGray font-body text-lg ">
+            <p className="text-brand-steelGray font-body text-lg  text-justify">
               Heavy Metal Forging Plant &mdash; GIDC, Rajkot
             </p>
           </div>
@@ -774,7 +770,7 @@ function ProjectSpotlight() {
                   01
                 </div>
                 <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy mb-3">The Challenge</Heading>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed  text-justify">
                   The client&apos;s primary 600-ton forging press — an imported German machine from the
                   1990s — experienced a catastrophic cylinder failure. The OEM no longer existed, and
                   the massive cylinder was completely undocumented.
@@ -787,7 +783,7 @@ function ProjectSpotlight() {
                   02
                 </div>
                 <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy mb-3">The Engineering</Heading>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed  text-justify">
                   Our team completely dismantled the broken cylinder, utilizing advanced metrology to
                   reverse-engineer exact bore dimensions, port locations, and mounting flanges. A new 3D CAD
                   model was generated and machined to exacting tolerances.
@@ -800,7 +796,7 @@ function ProjectSpotlight() {
                   03
                 </div>
                 <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-white mb-3">The Outcome</Heading>
-                <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6 ">
+                <p className="text-sm text-brand-borderGray font-body leading-relaxed mb-6  text-justify">
                   Manufactured, tested, and delivered within <strong className="text-white">12 days</strong>.
                   The new actuator was a perfect drop-in fit. We also upgraded the seal design to modern
                   polyurethane V-packing, extending lifespan beyond OEM specifications.
@@ -864,7 +860,7 @@ function RelatedProducts() {
             <Heading id="related-products-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Integrate Your Custom Cylinder
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body ">
+            <p className="text-lg text-brand-steelGray font-body  text-justify">
               Custom cylinders require sophisticated fluid generation and precision control.
               Combine your bespoke actuator with our power systems for a complete solution.
             </p>
@@ -937,7 +933,7 @@ function EngineeringAdvantage() {
           <Heading id="engineering-advantage-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             The Engineering Advantage
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body ">
+          <p className="text-lg text-brand-steelGray font-body  text-justify">
             We do not just sell parts. We are a complete hydraulic engineering firm. Leverage our
             full suite of technical services alongside your custom cylinder project.
           </p>
@@ -959,7 +955,7 @@ function EngineeringAdvantage() {
                 <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy mb-2">
                   {service.title}
                 </Heading>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed ">
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed  text-justify">
                   {service.description}
                 </p>
               </div>

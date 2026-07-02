@@ -280,18 +280,14 @@ function HeroSection() {
           {/* Content Column */}
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm">
-                UNYIELDING STRUCTURAL INTEGRITY
-              </span>
-              <div className="h-4 w-px bg-slate-300" />
               <span className="text-brand-steelGray text-sm font-medium">Welded Hydraulic Cylinders</span>
             </div>
 
-            <Heading variant="hero" as="h1" className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
+            <Heading variant="section" as="h1" className=" lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               Welded Hydraulic Cylinder Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed ">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed  text-justify">
               Engineered for extreme pressure and brutal operating environments. Honeywell Hydraulics is a premier custom welded hydraulic cylinder manufacturer in Gujarat, supplying heavy-duty actuators designed specifically for massive shock loads. Unlike tie rod designs, our welded cylinders provide a highly compact footprint capable of sustaining 350+ Bar pressures in the harshest outdoor construction, heavy forging, and marine applications across India.
             </p>
 
@@ -327,7 +323,7 @@ function HeroSection() {
               src="/images/products/welded-hydraulic-cylinder.webp"
               alt="Welded Hydraulic Cylinder Manufacturer in Ahmedabad - Heavy-duty welded cylinder by Honeywell Hydraulics"
               fill
-              priority
+              priority fetchPriority="high" decoding="sync" quality={85}
               className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
@@ -421,7 +417,7 @@ function ConstructionExplained() {
           <Heading id="construction-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Welded Cylinder Construction Explained
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             The reliability of a welded cylinder relies entirely on the metallurgical integrity of its fused components.
           </p>
         </div>
@@ -438,7 +434,7 @@ function ConstructionExplained() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {comp.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed  text-justify">
                 {comp.desc}
               </p>
             </div>
@@ -458,7 +454,7 @@ function Advantages() {
           <Heading id="advantages-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Advantages of Welded Cylinders
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Why do heavy equipment OEMs and forging plant managers specifically demand welded construction over standard bolted cylinders?
           </p>
         </div>
@@ -475,7 +471,7 @@ function Advantages() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3">
                 {adv.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed flex-grow ">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed flex-grow  text-justify">
                 {adv.description}
               </p>
             </div>
@@ -495,7 +491,7 @@ function ComparisonSection() {
           <Heading id="comparison-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Welded vs. Tie Rod Cylinders
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Choosing the correct cylinder construction dictates the lifespan of your machinery.
           </p>
         </div>
@@ -549,7 +545,7 @@ function ComparisonSection() {
         </div>
 
         <div className="max-w-4xl mx-auto mt-8 bg-brand-lightSurface p-6 rounded-lg border-l-4 border-honeywell-navy">
-          <p className="text-brand-darkSlate font-body italic">
+          <p className="text-brand-darkSlate font-body italic text-justify">
             *If you are building an automated indoor packaging line that requires rapid maintenance, specify a Tie Rod Cylinder. If you are building a heavy forging press, a massive goods lift, or outdoor construction equipment, the <strong>Welded Hydraulic Cylinder</strong> is the only safe engineering choice.*
           </p>
         </div>
@@ -568,7 +564,7 @@ function TechnicalSpecifications() {
             <Heading id="technical-specifications-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
               Technical Specifications
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body mb-8">
+            <p className="text-lg text-brand-steelGray font-body mb-8 text-justify">
               Our welded cylinders are engineered from the ground up for extreme durability and long-term reliability.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -596,7 +592,7 @@ function IndustriesSection() {
           <Heading id="industries-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Industries Served
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Our custom welded cylinders are the primary actuators for heavy manufacturing and outdoor sectors:
           </p>
         </div>
@@ -627,7 +623,7 @@ function EngineeringConsiderations() {
           <Heading id="engineering-considerations-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
             Engineering Considerations (Specifying Welded Cylinders)
           </Heading>
-          <p className="text-brand-darkSlate font-body text-lg mb-8">
+          <p className="text-brand-darkSlate font-body text-lg mb-8 text-justify">
             Our{' '}
             <Link href="#" className="text-honeywell-red font-semibold hover:underline">
               Custom Hydraulic System Design
@@ -641,7 +637,7 @@ function EngineeringConsiderations() {
                 <span className="bg-honeywell-navy text-white w-8 h-8 rounded flex items-center justify-center text-sm font-bold">A</span>
                 Pressure Ratings & Wall Thickness
               </Heading>
-              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11 ">
+              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11  text-justify">
                 We perform rigorous hoop-stress calculations. If your hydraulic press generates extreme internal pressures, we specify thicker seamless steel tubing for the barrel to guarantee the cylinder will not bulge or burst under maximum tonnage.
               </p>
             </div>
@@ -651,7 +647,7 @@ function EngineeringConsiderations() {
                 <span className="bg-honeywell-navy text-white w-8 h-8 rounded flex items-center justify-center text-sm font-bold">B</span>
                 Shock Loads & Vibration
               </Heading>
-              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11 ">
+              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11  text-justify">
                 In environments like Rajkot's forging industry, the cylinder experiences violent shock when the die hits the metal. We utilize specialized sub-arc welding techniques for the end caps to ensure the welds never crack under high-frequency vibration.
               </p>
             </div>
@@ -661,7 +657,7 @@ function EngineeringConsiderations() {
                 <span className="bg-honeywell-navy text-white w-8 h-8 rounded flex items-center justify-center text-sm font-bold">C</span>
                 Corrosion Resistance & Outdoor Operation
               </Heading>
-              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11 ">
+              <p className="text-brand-darkSlate text-sm leading-relaxed pl-11  text-justify">
                 For cylinders exposed to mud, rain, or the saline air of Bhavnagar's shipyards, we upgrade the exterior protection. We apply multi-layer marine-grade epoxy coatings, utilize stainless steel piston rods, and install heavy-duty metallic scrapers to physically clear abrasive rust from the rod before it destroys the internal seals.
               </p>
             </div>
@@ -690,7 +686,7 @@ function ManufacturingProcess() {
                 </div>
                 <div>
                   <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Advanced Welding</Heading>
-                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed ">
+                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed  text-justify">
                     Utilizing automated rotary friction and sub-arc welding systems to ensure deep, slag-free weld penetration between the end caps and the high-tensile barrel.
                   </p>
                 </div>
@@ -702,7 +698,7 @@ function ManufacturingProcess() {
                 </div>
                 <div>
                   <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Post-Weld Machining</Heading>
-                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed ">
+                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed  text-justify">
                     Unlike inferior manufacturers, we hone the internal barrel <em>after</em> the welding process is complete. This completely removes any heat-induced metal distortion, ensuring perfect internal cylindricity and vastly extending seal life.
                   </p>
                 </div>
@@ -714,7 +710,7 @@ function ManufacturingProcess() {
                 </div>
                 <div>
                   <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Shock-Load Validation</Heading>
-                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed ">
+                  <p className="text-brand-steelGray text-sm mt-1 leading-relaxed  text-justify">
                     100% of our welded cylinders undergo extreme 1.5x working pressure hydrostatic testing to verify weld integrity and seal performance under simulated field conditions.
                   </p>
                 </div>
@@ -726,7 +722,7 @@ function ManufacturingProcess() {
                 <FileCheck className="w-5 h-5 text-honeywell-red" />
                 Technical Validation Guarantee
               </Heading>
-              <p className="text-brand-darkSlate text-sm ">
+              <p className="text-brand-darkSlate text-sm  text-justify">
                 Every welded cylinder is delivered with complete material traceability documentation (MTC) and dimensional reports, ensuring the actuator meets all specified OEM tolerances.
               </p>
             </div>
@@ -736,7 +732,7 @@ function ManufacturingProcess() {
                 <ShieldAlert className="w-5 h-5 text-honeywell-red" />
                 The Honeywell Guarantee
               </Heading>
-              <p className="text-white/80 text-sm ">
+              <p className="text-white/80 text-sm  text-justify">
                 Our extreme-duty welded cylinders are backed by a strict <strong>12-Month Defect Warranty</strong>. Should your heavy equipment face catastrophic failure, our Hydraulic Cylinder Repair division can rapidly rebuild or re-machine the unit.
               </p>
             </div>
@@ -772,21 +768,21 @@ function ProjectSpotlight() {
               <div className="space-y-6">
                 <div>
                   <Heading variant="card" as="h4" className="font-bold text-honeywell-navy uppercase text-xs tracking-wider mb-2">The Challenge:</Heading>
-                  <p className="text-brand-darkSlate text-sm leading-relaxed ">
+                  <p className="text-brand-darkSlate text-sm leading-relaxed  text-justify">
                     The OEM's 800-ton forging press was previously equipped with large tie-rod cylinders. Due to the violent shock loads generated during the stamping cycle, the tie rods were continually stretching, causing the O-rings to blow out. The press was experiencing hydraulic fluid leaks every two weeks.
                   </p>
                 </div>
 
                 <div>
                   <Heading variant="card" as="h4" className="font-bold text-honeywell-navy uppercase text-xs tracking-wider mb-2">The Solution:</Heading>
-                  <p className="text-brand-darkSlate text-sm leading-relaxed ">
+                  <p className="text-brand-darkSlate text-sm leading-relaxed  text-justify">
                     Honeywell Hydraulics completely redesigned the actuators. We manufactured four massive, custom <strong>Welded Hydraulic Cylinders</strong> utilizing ultra-thick ST52 barrels. By permanently welding the heavy flange mounts directly to the barrel, we created a single, unyielding structural unit capable of absorbing the extreme shock vibration.
                   </p>
                 </div>
 
                 <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
                   <Heading variant="card" as="h4" className="font-bold text-honeywell-red uppercase text-xs tracking-wider mb-2">The Outcome:</Heading>
-                  <p className="text-honeywell-navy font-semibold text-sm leading-relaxed ">
+                  <p className="text-honeywell-navy font-semibold text-sm leading-relaxed  text-justify">
                     The fluid leaks were entirely eliminated. The welded cylinders safely absorbed the brutal 350 Bar shock spikes without yielding, allowing the forging plant to operate continuously for 18 months without requiring a single seal replacement.
                   </p>
                 </div>
@@ -840,7 +836,7 @@ function RelatedProducts() {
           <Heading id="related-products-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             Related Products
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Welded cylinders require extreme, reliable pressure. Power and control them with our heavy-duty fluid generation systems:
           </p>
         </div>
@@ -889,7 +885,7 @@ function RelatedServices() {
           <Heading id="related-services-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
             The Heavy Engineering Advantage
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Purchasing a welded cylinder is a long-term investment in your machine's structural integrity. Leverage our heavy engineering services:
           </p>
         </div>
@@ -898,7 +894,7 @@ function RelatedServices() {
           {services.map((service, idx) => (
             <div key={idx} className="bg-brand-surfaceGray p-8 rounded-xl border border-slate-200 hover:border-honeywell-navy transition-colors group">
               <Heading variant="subsection" as="h3" className="text-xl font-bold text-honeywell-navy mb-3">{service.title}</Heading>
-              <p className="text-brand-steelGray text-sm leading-relaxed mb-6 ">
+              <p className="text-brand-steelGray text-sm leading-relaxed mb-6  text-justify">
                 {service.desc}
               </p>
               <Link href={service.href} className="inline-flex items-center text-honeywell-red font-bold text-sm group-hover:underline">

@@ -68,7 +68,7 @@ export interface HomepageTestimonial {
   quote: string;
   name: string;
   company: string;
-  role: string;
+  role?: string;
   imageSrc?: string;
 }
 
@@ -284,34 +284,26 @@ export const processSteps: ProcessStep[] = [
 /* ═══════════════════════════════════════════════
    SECTION 08 — TESTIMONIALS
    Source: homepage-copy.md § Section 08
-
-   ⚠️ PLACEHOLDER-SAFE:
-   The quote text is from homepage-copy.md.
-   Client names and companies are placeholder until
-   real testimonials are provided.
    ═══════════════════════════════════════════════ */
 
 export const homepageTestimonials: HomepageTestimonial[] = [
   {
     quote:
       'We replaced our standard single-pump units with Honeywell\'s High-Low power packs for our 500-ton deep drawing presses. The cycle speed increased by 15% and we\'ve seen a massive drop in hydraulic oil temperatures.',
-    name: 'Rajesh Desai',
-    company: 'Gujarat Metal Stamping Pvt Ltd',
-    role: 'Maintenance Head',
+    name: 'Mr Chintan Patel',
+    company: 'J K Engei Tech',
   },
   {
     quote:
       'Finding a reliable supplier for custom telescopic cylinders was a challenge until we partnered with Honeywell. Their engineering team designed a 4-stage cylinder that perfectly handles the extreme radial loads of our tipping trailers.',
-    name: 'Sandeep Sharma',
-    company: 'Apex Heavy Haulers',
-    role: 'OEM Procurement Team',
+    name: 'Mr Vivek Jadav',
+    company: 'Mechtech Enginnering CO.',
   },
   {
     quote:
       'The 100% hydrostatic testing gave us the confidence to standardize our entire assembly line on Honeywell cylinders. Zero leaks and zero failures after 8 months of continuous 3-shift operations.',
-    name: 'Amit Patel',
-    company: 'Precision Auto Components',
-    role: 'Plant Engineering Department',
+    name: 'Mr Bharat Panchal',
+    company: 'Super mech machinery pvt ltd.',
   },
 ];
 
@@ -385,7 +377,7 @@ export const homepageFAQs: HomepageFAQ[] = [
   {
     question: 'What bore sizes do you manufacture for hydraulic cylinders?',
     answer:
-      'We manufacture standard bore sizes ranging from 40mm up to 300mm. Custom bore sizes beyond this range are also available on request, depending on your application requirements.',
+      'We manufacture standard bore sizes ranging from 40mm up to 600mm. Custom bore sizes beyond this range are also available on request, depending on your application requirements.',
   },
   {
     question:

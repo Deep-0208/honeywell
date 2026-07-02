@@ -16,7 +16,7 @@ export function WhyChoosePowerPacks() {
           <Heading variant="section" underline="center" as="h2" id="why-choose-us-heading" className="text-honeywell-navy mb-4 ">
             Why Choose Honeywell&apos;s Power Packs?
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body max-w-3xl mx-auto mt-4">
+          <p className="text-lg text-brand-steelGray font-body max-w-3xl mx-auto mt-4 text-justify">
             We are a primary hydraulic power pack manufacturer, not an assembler. By machining and testing in-house, we guarantee the reliability of every unit.
           </p>
         </div>
@@ -32,7 +32,7 @@ export function WhyChoosePowerPacks() {
                 className="mx-auto mb-6 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-300 ease-premium" 
               />
               <Heading variant="card" as="h3" className="mb-3 text-honeywell-navy">{feature.title}</Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
                 {feature.description}
               </p>
             </div>

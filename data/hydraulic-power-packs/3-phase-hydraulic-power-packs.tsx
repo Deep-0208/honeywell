@@ -10,9 +10,9 @@ import {
   Truck
 } from 'lucide-react';
 
-import type { FAQ, PowerPackSpec, PowerPackFeature, PowerPackIndustry } from './types';
+import type { FAQItem, PowerPackSpec, PowerPackFeature, PowerPackIndustry } from './types';
 
-export const THREE_PHASE_FAQS: FAQ[] = [
+export const THREE_PHASE_FAQS: FAQItem[] = [
   {
     question: 'Can I run a 3-phase hydraulic power pack on a single-phase power supply?',
     answer: 'No. A 3-phase motor requires three alternating current legs (415V/440V). To run it on a single-phase grid (220V), you must install a Variable Frequency Drive (VFD) or a phase converter to artificially generate the third phase, though this is generally only recommended for smaller horsepower units.',

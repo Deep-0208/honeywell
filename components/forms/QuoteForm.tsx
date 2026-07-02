@@ -58,7 +58,7 @@ const labelBase = 'block text-sm font-semibold font-body text-honeywell-navy mb-
 function FieldError({ message }: { message?: string }) {
   if (!message) return null;
   return (
-    <p className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1" role="alert" aria-live="polite">
+    <p className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1 text-justify" role="alert" aria-live="polite">
       <AlertCircle className="w-3.5 h-3.5 shrink-0" />
       {message}
     </p>
@@ -81,7 +81,7 @@ function LabelledField({ id, label, required, error, hint, children }: LabelledF
         {label}
         {required && <span className="text-honeywell-red ml-0.5" aria-hidden="true">*</span>}
       </label>
-      {hint && <p className="text-xs text-slate-400 font-body mb-1.5">{hint}</p>}
+      {hint && <p className="text-xs text-slate-400 font-body mb-1.5 text-justify">{hint}</p>}
       {children}
       <FieldError message={error} />
     </div>
@@ -188,10 +188,10 @@ export function QuoteForm() {
         <h2 className="text-2xl font-display font-bold text-honeywell-navy mb-3">
           Request Sent! 🎉
         </h2>
-        <p className="text-brand-steelGray font-body max-w-sm mb-2 leading-relaxed">
+        <p className="text-brand-steelGray font-body max-w-sm mb-2 leading-relaxed text-justify">
           Thank you! Our team will review your request and get back to you shortly.
         </p>
-        <p className="text-sm text-slate-400 font-body mb-8">
+        <p className="text-sm text-slate-400 font-body mb-8 text-justify">
           For urgent requirements, call us directly.
         </p>
         <a
@@ -418,7 +418,7 @@ export function QuoteForm() {
             : <ChevronDown className="w-4 h-4 text-slate-400" />
           }
         </button>
-        <p className="text-xs text-slate-400 font-body mt-2 px-1">
+        <p className="text-xs text-slate-400 font-body mt-2 px-1 text-justify">
           Know the specs? Add them here. If not, skip this — our engineers will ask.
         </p>
 

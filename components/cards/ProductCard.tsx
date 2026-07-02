@@ -56,7 +56,7 @@ export function ProductCard({
           )}
         </Heading>
         
-        <p className="text-brand-steelGray font-body text-sm mb-6 line-clamp-2 flex-1">
+        <p className="text-brand-steelGray font-body text-sm mb-6 line-clamp-2 flex-1 text-justify">
           {description}
         </p>
 

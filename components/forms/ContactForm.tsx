@@ -97,7 +97,7 @@ export function ContactForm() {
           <CheckCircle className="w-10 h-10 text-green-500" aria-hidden="true" />
         </div>
         <h2 className="text-2xl font-display font-bold text-honeywell-navy mb-3">Message Sent! 👍</h2>
-        <p className="text-brand-steelGray font-body max-w-sm mb-6 leading-relaxed">
+        <p className="text-brand-steelGray font-body max-w-sm mb-6 leading-relaxed text-justify">
           Thank you for reaching out. We will get back to you as soon as possible — usually within the same business day.
         </p>
         <button
@@ -145,7 +145,7 @@ export function ContactForm() {
             disabled={status === 'submitting'}
           />
           {errors.fullName && (
-            <p role="alert" className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1">
+            <p role="alert" className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1 text-justify">
               <AlertCircle className="w-3.5 h-3.5" />{errors.fullName}
             </p>
           )}
@@ -174,7 +174,7 @@ export function ContactForm() {
           <label htmlFor="contactPhone" className={labelBase}>
             Phone / WhatsApp <span className="text-honeywell-red" aria-hidden="true">*</span>
           </label>
-          <p className="text-xs text-slate-400 font-body mb-1.5">We&apos;ll reply on this number.</p>
+          <p className="text-xs text-slate-400 font-body mb-1.5 text-justify">We&apos;ll reply on this number.</p>
           <input
             id="contactPhone"
             name="phone"
@@ -189,7 +189,7 @@ export function ContactForm() {
             disabled={status === 'submitting'}
           />
           {errors.phone && (
-            <p role="alert" className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1">
+            <p role="alert" className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1 text-justify">
               <AlertCircle className="w-3.5 h-3.5" />{errors.phone}
             </p>
           )}
@@ -200,7 +200,7 @@ export function ContactForm() {
           <label htmlFor="contactEmail" className={labelBase}>
             Email Address <span className="text-honeywell-red" aria-hidden="true">*</span>
           </label>
-          <p className="text-xs text-slate-400 font-body mb-1.5">We&apos;ll send your quote here.</p>
+          <p className="text-xs text-slate-400 font-body mb-1.5 text-justify">We&apos;ll send your quote here.</p>
           <input
             id="contactEmail"
             name="email"
@@ -215,7 +215,7 @@ export function ContactForm() {
             disabled={status === 'submitting'}
           />
           {errors.email && (
-            <p role="alert" className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1">
+            <p role="alert" className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1 text-justify">
               <AlertCircle className="w-3.5 h-3.5" />{errors.email}
             </p>
           )}
@@ -227,7 +227,7 @@ export function ContactForm() {
         <label htmlFor="contactMessage" className={labelBase}>
           Your Message <span className="text-honeywell-red" aria-hidden="true">*</span>
         </label>
-        <p className="text-xs text-slate-400 font-body mb-1.5">
+        <p className="text-xs text-slate-400 font-body mb-1.5 text-justify">
           Tell us what you&apos;re looking for — any detail helps, even a rough idea.
         </p>
         <textarea
@@ -243,7 +243,7 @@ export function ContactForm() {
           disabled={status === 'submitting'}
         />
         {errors.message && (
-          <p role="alert" className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1">
+          <p role="alert" className="mt-1.5 text-xs text-honeywell-red font-body flex items-center gap-1 text-justify">
             <AlertCircle className="w-3.5 h-3.5" />{errors.message}
           </p>
         )}

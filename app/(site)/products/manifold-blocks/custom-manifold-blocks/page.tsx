@@ -175,18 +175,14 @@ function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase shadow-sm">
-                BESPOKE FLUID LOGIC ARCHITECTURE
-              </span>
-              <div className="h-4 w-px bg-slate-300" />
               <span className="text-brand-steelGray text-sm font-medium">Custom Manifold Blocks</span>
             </div>
 
-            <Heading variant="hero" as="h1" className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-honeywell-navy leading-[1.1] mb-6">
+            <Heading variant="section" as="h1" className=" lg:text-[3.25rem] font-bold text-honeywell-navy leading-[1.1] mb-6">
               Custom Manifold Blocks Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed ">
+            <p className="text-lg text-brand-darkSlate mb-8 max-w-xl leading-relaxed  text-justify">
               When standard CETOP blocks cannot solve the problem, we design the solution from scratch. We engineer completely bespoke hydraulic logic blocks for Special Purpose Machines, complex OEM automation circuits, and high-performance test rigs.
             </p>
 
@@ -207,7 +203,7 @@ function HeroSection() {
               src={PAGE_IMAGE} 
               alt="Custom manifold block manufacturer in Ahmedabad — Honeywell Hydraulics" 
               fill 
-              priority 
+              priority fetchPriority="high" decoding="sync" quality={85} 
               className="object-cover p-8 group-hover:scale-105 transition-transform duration-700" 
               sizes="(max-width: 1024px) 100vw, 50vw" 
             />
@@ -228,10 +224,10 @@ function OverviewSection() {
             Consolidate Your Circuit. Eliminate Every Leak.
           </Heading>
           <div className="space-y-5 text-brand-darkSlate text-lg leading-relaxed">
-            <p className="">
+            <p className=" text-justify">
               We take your hydraulic schematic and transform it into a single, precision-machined monolithic block — eliminating every external fitting, every hose, and every potential leak point from your machine's logic centre.
             </p>
-            <p className="">
+            <p className=" text-justify">
               Standard <Link href="/products/manifold-blocks/cetop-manifold-blocks/" className="text-honeywell-red font-semibold hover:underline">CETOP subplates</Link> and <Link href="/products/manifold-blocks/multi-station-manifold-blocks/" className="text-honeywell-red font-semibold hover:underline">multi-station blocks</Link> solve the majority of industrial automation challenges. However, for specialized OEMs requiring absolute logic density, highly specific internal cross-porting, or the integration of advanced screw-in cartridge valves, a custom manifold block is the only viable engineering path.
             </p>
           </div>
@@ -255,9 +251,9 @@ function WhyCustomSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {CUSTOM_REASONS.map((reason, idx) => (
             <div key={idx} className="bg-white rounded-xl border border-slate-200 p-8 transition-all hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group">
-              <IconBox icon={reason.icon} size="lg" variant="navy" className="mb-6 group-hover:bg-honeywell-red group-hover:text-white transition-colors" />
+              <IconBox icon={reason.icon} size="lg" variant="primary" className="mb-6 group-hover:bg-honeywell-red group-hover:text-white transition-colors" />
               <h3 className="text-xl font-bold text-honeywell-navy mb-3">{reason.title}</h3>
-              <p className="text-brand-steelGray leading-relaxed ">{reason.description}</p>
+              <p className="text-brand-steelGray leading-relaxed  text-justify">{reason.description}</p>
             </div>
           ))}
         </div>
@@ -275,7 +271,7 @@ function DesignProcessSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             The Custom Manifold Design Process
           </Heading>
-          <p className="text-lg text-brand-steelGray ">
+          <p className="text-lg text-brand-steelGray  text-justify">
             Our Custom Hydraulic System Design division follows a rigorous, stage-gated design process to guarantee first-time success.
           </p>
         </div>
@@ -293,7 +289,7 @@ function DesignProcessSection() {
                 <div className="pl-12 md:pl-0 w-full md:w-1/2">
                   <div className={`bg-brand-lightSurface p-6 md:p-8 rounded-xl border border-slate-200 ${idx % 2 === 0 ? 'md:ml-12' : 'md:mr-12'}`}>
                     <h3 className="text-xl font-bold text-honeywell-navy mb-3">Stage {idx + 1}: {step.title}</h3>
-                    <p className="text-brand-steelGray leading-relaxed ">{step.description}</p>
+                    <p className="text-brand-steelGray leading-relaxed  text-justify">{step.description}</p>
                   </div>
                 </div>
               </div>
@@ -353,7 +349,7 @@ function ComparisonSection() {
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
             Custom Block vs. Standard Block
           </Heading>
-          <p className="text-lg text-brand-steelGray">Decision Matrix</p>
+          <p className="text-lg text-brand-steelGray text-justify">Decision Matrix</p>
         </div>
         <div className="max-w-5xl mx-auto overflow-x-auto">
           <table className="w-full text-left border-collapse bg-white shadow-sm rounded-lg overflow-hidden border border-slate-200">
@@ -399,24 +395,24 @@ function ProjectSpotlightSection() {
           </div>
           <div className="md:w-3/5 p-8 md:p-12">
             <h3 className="text-2xl font-bold text-honeywell-navy mb-2">Custom Cartridge Manifold for 12-Axis SPM Automation</h3>
-            <p className="text-sm font-bold text-honeywell-red tracking-wide uppercase mb-6">Automotive Component Manufacturer — Sanand GIDC, Ahmedabad</p>
+            <p className="text-sm font-bold text-honeywell-red tracking-wide uppercase mb-6 text-justify">Automotive Component Manufacturer — Sanand GIDC, Ahmedabad</p>
             
             <div className="space-y-6">
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Challenge:</h4>
-                <p className="text-brand-steelGray leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed text-justify">
                   An automotive manufacturer was building a custom SPM requiring 12 independent clamping circuits with sequence valves and pilot-operated check valves. The machine frame allowed only 180mm × 280mm of vertical space for the entire logic assembly.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Solution:</h4>
-                <p className="text-brand-steelGray leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed text-justify">
                   Standard CETOP blocks would have required 900mm of rail length. We designed a single custom block measuring 165mm × 270mm × 310mm, integrating 12 Sun Hydraulics sequence/check cartridge sets entirely internally.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-brand-darkSlate mb-2">The Outcome:</h4>
-                <p className="text-brand-steelGray leading-relaxed">
+                <p className="text-brand-steelGray leading-relaxed text-justify">
                   The block fit the tight dimensions perfectly, eliminated 48 external fittings, and achieved zero leaks on the first hydrostatic test, allowing the SPM to meet its 8-second cycle time specification immediately.
                 </p>
               </div>
@@ -439,7 +435,7 @@ function TechnicalSpecsSection() {
           </Heading>
         </div>
         <div className="max-w-4xl mx-auto">
-          <SpecTable specs={CUSTOM_SPECS} />
+          <SpecTable rows={CUSTOM_SPECS} />
         </div>
       </Container>
     </Section>

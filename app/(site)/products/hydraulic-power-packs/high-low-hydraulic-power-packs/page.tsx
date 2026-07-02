@@ -275,18 +275,14 @@ function HeroSection() {
           {/* Content Column */}
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm">
-                ENERGY-EFFICIENT FLUID GENERATION
-              </span>
-              <div className="h-4 w-px bg-slate-300" />
               <span className="text-brand-steelGray text-sm font-medium">High Low Hydraulic Power Packs</span>
             </div>
 
-            <Heading variant="hero" as="h1" className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
+            <Heading variant="section" as="h1" className=" lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               High Low Hydraulic Power Pack Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed text-justify">
               Maximize cycle speed while slashing electrical consumption. Honeywell Hydraulics is a premier high low hydraulic power pack manufacturer in Gujarat, engineering dual-pump power units specifically for the heavy pressing and forging industries. We design advanced unloading valve logic that provides rapid cylinder approach speeds at low pressure, followed by extreme high-pressure tonnage during the actual pressing phase—drastically reducing your machine's motor size, heat generation, and electricity costs.
             </p>
 
@@ -322,7 +318,7 @@ function HeroSection() {
               src="/images/products/high-low-hydraulic-power-pack-manufacturer.webp"
               alt="High Low Hydraulic Power Pack Manufacturer in Ahmedabad - Dual pump press unit by Honeywell Hydraulics"
               fill
-              priority
+              priority fetchPriority="high" decoding="sync" quality={85}
               className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
@@ -410,7 +406,7 @@ function HowItWorks() {
           <Heading id="how-it-works-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             How High-Low Circuits Work
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             The intelligence of a High-Low power pack relies on a specialized hydraulic component called the <strong>Unloading Valve</strong>, which dictates the behavior of the two pumps.
           </p>
         </div>
@@ -427,7 +423,7 @@ function HowItWorks() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {comp.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
                 {comp.description}
               </p>
             </div>
@@ -448,14 +444,14 @@ function PressMachineNecessity() {
           <Heading id="necessity-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
             Why Press Machines Demand High-Low Systems
           </Heading>
-          <p className="text-lg text-brand-darkSlate font-body mb-6 leading-relaxed">
+          <p className="text-lg text-brand-darkSlate font-body mb-6 leading-relaxed text-justify">
             Machine builders who try to build a 500-ton press using a standard single-pump power unit face catastrophic engineering failures. To get the press to close fast, they need a huge pump. To get the press to crush metal, they need huge pressure.
           </p>
-          <p className="text-lg text-brand-darkSlate font-body mb-8 leading-relaxed">
+          <p className="text-lg text-brand-darkSlate font-body mb-8 leading-relaxed text-justify">
             If they use a single huge pump at huge pressure, they must install a massive 150 HP electric motor. This motor will consume incredible amounts of electricity, generate enough heat to boil the hydraulic oil, and destroy the fluid viscosity in days.
           </p>
           <div className="bg-brand-surfaceGray border-l-4 border-honeywell-red p-6 rounded-r-lg text-left inline-block w-full">
-            <p className="text-honeywell-navy font-semibold text-lg">
+            <p className="text-honeywell-navy font-semibold text-lg text-justify">
               By installing a High-Low Power Pack, that same 500-ton press can operate at the exact same cycle speed using a tiny 30 HP electric motor. The heat generation drops by 70%, electrical bills plummet, and the fluid remains thermally stable for months.
             </p>
           </div>
@@ -474,7 +470,7 @@ function ComparisonSection() {
           <Heading id="comparison-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             High-Low vs. Conventional Power Packs
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Understanding the mechanical advantage of dual-pump logic is critical for plant profitability.
           </p>
         </div>
@@ -524,7 +520,7 @@ function ComparisonSection() {
         </div>
 
         <div className="max-w-4xl mx-auto mt-8 bg-white p-6 rounded-lg border-l-4 border-honeywell-red">
-          <p className="text-brand-darkSlate font-body italic">
+          <p className="text-brand-darkSlate font-body italic text-justify">
             *If you are building an automated press machine, a deep drawing press, or a heavy scrap baler, a <strong>High-Low Power Pack</strong> is the only financially viable engineering choice.*
           </p>
         </div>
@@ -543,7 +539,7 @@ function TechnicalSpecifications() {
             <Heading id="technical-specifications-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
               Technical Specifications Framework
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body mb-8">
+            <p className="text-lg text-brand-steelGray font-body mb-8 text-justify">
               Our high-low systems are mathematically calibrated to provide exact unloading sequencing for maximum efficiency.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -573,7 +569,7 @@ function IndustriesSection() {
           <Heading id="industries-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Industries Served
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Our custom dual-pump power units are the primary fluid generation engines for heavy fabrication and metal forming:
           </p>
         </div>
@@ -604,7 +600,7 @@ function EngineeringConsiderations() {
           <Heading id="engineering-considerations-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
             Engineering Considerations (Specifying High-Low Systems)
           </Heading>
-          <p className="text-brand-darkSlate font-body text-lg mb-8">
+          <p className="text-brand-darkSlate font-body text-lg mb-8 text-justify">
             Our{' '}
             <Link href="#" className="text-honeywell-red font-semibold hover:underline">
               Custom Hydraulic System Design
@@ -618,7 +614,7 @@ function EngineeringConsiderations() {
                 <Activity className="w-5 h-5 mr-3 text-honeywell-red" />
                 A. Pump & Motor Sizing
               </Heading>
-              <p className="text-brand-steelGray font-body leading-relaxed">
+              <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                 This is a delicate mathematical balance. We calculate the exact volume required for your desired "fast approach" time to size the low-pressure gear pump. Then, we calculate the exact fluid volume required to maintain the pressing speed at maximum tonnage to size the high-pressure radial piston pump. Finally, we calculate the combined horsepower draw exactly at the unloading point to specify the smallest possible electric motor.
               </p>
             </div>
@@ -628,7 +624,7 @@ function EngineeringConsiderations() {
                 <Settings className="w-5 h-5 mr-3 text-honeywell-red" />
                 B. Unloading Pressure Management
               </Heading>
-              <p className="text-brand-steelGray font-body leading-relaxed">
+              <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                 If the unloading valve is set too low, the large pump will dump to the tank before the press reaches the workpiece, causing the cylinder to crawl slowly. If set too high, the electric motor will stall and trip the breaker. We utilize highly precise, pilot-operated unloading valves integrated into custom Manifold Blocks to ensure exact sequence timing.
               </p>
             </div>
@@ -638,7 +634,7 @@ function EngineeringConsiderations() {
                 <Thermometer className="w-5 h-5 mr-3 text-honeywell-red" />
                 C. Heat Generation & Cooling
               </Heading>
-              <p className="text-brand-steelGray font-body leading-relaxed">
+              <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                 Because the large pump unloads its fluid directly to the tank at near-zero pressure, the oil does not shear across a high-pressure relief valve. This inherently prevents heat generation. However, for continuous 24/7 pressing operations, we still integrate highly efficient shell-and-tube water coolers or air-blast heat exchangers to guarantee absolute thermal stability.
               </p>
             </div>
@@ -659,7 +655,7 @@ function ManufacturingProcess() {
             <Heading id="manufacturing-process-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
               Manufacturing & Quality Process
             </Heading>
-            <p className="text-brand-darkSlate font-body text-lg mb-8 leading-relaxed">
+            <p className="text-brand-darkSlate font-body text-lg mb-8 leading-relaxed text-justify">
               Precision machining and rigorous testing ensure your unloading logic works perfectly every single cycle.
             </p>
 
@@ -670,7 +666,7 @@ function ManufacturingProcess() {
                 </div>
                 <div className="ml-4">
                   <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Precision Valve Assembly</Heading>
-                  <p className="text-brand-steelGray font-body mt-1">
+                  <p className="text-brand-steelGray font-body mt-1 text-justify">
                     High-Low logic relies entirely on the rapid shifting of the unloading valve. We CNC-machine custom aluminum and steel manifolds to house these cartridge valves, eliminating exterior pipework and preventing pressure drops.
                   </p>
                 </div>
@@ -681,7 +677,7 @@ function ManufacturingProcess() {
                 </div>
                 <div className="ml-4">
                   <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Laser Alignment</Heading>
-                  <p className="text-brand-steelGray font-body mt-1">
+                  <p className="text-brand-steelGray font-body mt-1 text-justify">
                     The electric motor is coupled to the tandem dual-pump bracket using laser alignment tools to ensure absolute concentricity, eliminating vibration and preventing shaft seal blowouts.
                   </p>
                 </div>
@@ -692,7 +688,7 @@ function ManufacturingProcess() {
                 </div>
                 <div className="ml-4">
                   <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Simulated Press Testing</Heading>
-                  <p className="text-brand-steelGray font-body mt-1">
+                  <p className="text-brand-steelGray font-body mt-1 text-justify">
                     100% of our High-Low power packs undergo rigorous testing on our simulated press rigs. We verify the exact millisecond the unloading valve triggers, ensuring a seamless transition from high-speed approach to high-pressure pressing.
                   </p>
                 </div>
@@ -700,7 +696,7 @@ function ManufacturingProcess() {
             </ul>
             
             <div className="mt-8 bg-white p-4 rounded-lg border border-slate-200">
-              <p className="text-sm text-honeywell-navy font-semibold flex items-center">
+              <p className="text-sm text-honeywell-navy font-semibold flex items-center text-justify">
                 <ShieldAlert className="w-4 h-4 mr-2 text-honeywell-red" />
                 Backed by a strict [WARRANTY_MONTHS]-Month Defect Warranty.
               </p>
@@ -742,21 +738,21 @@ function ProjectSpotlight() {
               <div className="space-y-6">
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Challenge</Heading>
-                  <p className="text-brand-steelGray font-body leading-relaxed">
+                  <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                     An automotive stamping supplier in Sanand operated a 400-ton press powered by an outdated single-pump system and a massive 80 HP motor. The motor constantly drew peak amperage, the hydraulic oil boiled past 85°C, and massive electricity bills decimated profit margins.
                   </p>
                 </div>
                 
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Solution</Heading>
-                  <p className="text-brand-steelGray font-body leading-relaxed">
+                  <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                     Honeywell performed a complete system teardown and designed a custom High-Low Hydraulic Power Pack. By implementing dual-pump unloading logic, we replaced the 80 HP motor with a tiny 25 HP motor, while perfectly maintaining the exact same 6-second cycle time.
                   </p>
                 </div>
                 
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Outcome</Heading>
-                  <p className="text-honeywell-navy font-body font-semibold leading-relaxed">
+                  <p className="text-honeywell-navy font-body font-semibold leading-relaxed text-justify">
                     Electrical consumption dropped by 65%. Oil temperatures stabilized naturally at 45°C without the use of an industrial chiller, achieving a complete return on investment within 7 months purely from energy savings.
                   </p>
                 </div>
@@ -813,7 +809,7 @@ function RelatedProducts() {
           <Heading id="related-products-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Related Products
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             A High-Low power pack is the brain of a pressing system. Connect it to our extreme-duty actuators:
           </p>
         </div>
@@ -828,7 +824,7 @@ function RelatedProducts() {
                 <Heading variant="subsection" as="h3" className="text-lg font-bold text-honeywell-navy mb-2 group-hover:text-honeywell-red transition-colors">
                   {product.title}
                 </Heading>
-                <p className="text-brand-steelGray text-sm leading-relaxed mb-4 flex-grow">
+                <p className="text-brand-steelGray text-sm leading-relaxed mb-4 flex-grow text-justify">
                   {product.description}
                 </p>
                 <div className="flex items-center text-honeywell-red font-semibold text-sm mt-auto">
@@ -873,7 +869,7 @@ function RelatedServices() {
           <Heading id="related-services-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Related Services
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Purchasing a dual-pump power unit is an investment in energy efficiency. Leverage our heavy engineering services:
           </p>
         </div>
@@ -885,7 +881,7 @@ function RelatedServices() {
                 {service.icon}
               </div>
               <Heading variant="subsection" as="h3" className="text-xl font-bold text-honeywell-navy mb-3">{service.title}</Heading>
-              <p className="text-brand-steelGray font-body leading-relaxed mb-6">
+              <p className="text-brand-steelGray font-body leading-relaxed mb-6 text-justify">
                 {service.description}
               </p>
               <Link href={service.link} className="inline-flex items-center text-honeywell-red font-bold hover:underline">

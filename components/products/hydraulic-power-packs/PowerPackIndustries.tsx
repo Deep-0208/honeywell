@@ -15,7 +15,7 @@ export function PowerPackIndustries() {
           <Heading variant="section" underline="center" as="h2" id="industries-heading" className="mb-4">
             Industries Served Across India
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body mb-6">
+          <p className="text-lg text-brand-steelGray font-body mb-6 text-justify">
             We supply premium fluid power components to over 20 distinct industrial sectors PAN-India.
           </p>
           <Link href="/request-quote" className="text-honeywell-red font-bold hover:underline">

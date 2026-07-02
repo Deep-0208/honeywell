@@ -10,9 +10,11 @@ import { Button } from '@/components/ui/Button';
 import { CTA } from '@/components/ui/CTA';
 import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
 import JsonLd from '@/components/seo/JsonLd';
+import { clientLogos, homepageIndustries } from '@/data/homepage';
 import { COMPANY_INFO } from '@/lib/constants';
+import { IndustryCard } from '@/components/cards/IndustryCard';
 import Image from 'next/image';
-import { clientLogos } from '@/data/homepage';
+import { FaCogs, FaCar, FaIndustry, FaHardHat, FaBox, FaWrench, FaHammer } from 'react-icons/fa';
 import {
   ArrowRight,
   Shield,
@@ -31,7 +33,21 @@ import {
   HeartPulse,
   CheckCircle2,
   ChevronRight,
+  Car,
+  Tractor,
+  Droplet,
 } from 'lucide-react';
+
+/* Icon mapping for industries */
+const iconMap: Record<string, React.ReactNode> = {
+  Cog: <FaCogs className="w-6 h-6" />,
+  Car: <FaCar className="w-6 h-6" />,
+  Factory: <FaIndustry className="w-6 h-6" />,
+  Construction: <FaHardHat className="w-6 h-6" />,
+  Package: <FaBox className="w-6 h-6" />,
+  Wrench: <FaWrench className="w-6 h-6" />,
+  Hammer: <FaHammer className="w-6 h-6" />,
+};
 
 // ─────────────────────────────────────────────────────────────────────────────
 // SEO Metadata
@@ -172,32 +188,26 @@ const WHY_CHOOSE = [
   },
 ];
 
-const INDUSTRIES = [
-  { name: 'Injection Moulding', href: '#' },
-  { name: 'Automotive', href: '#' },
-  { name: 'Steel & Metallurgy', href: '#' },
-  { name: 'Construction Equipment', href: '#' },
-  { name: 'Agriculture', href: '#' },
-  { name: 'Material Handling', href: '#' },
-  { name: 'Plastic Processing', href: '#' },
-  { name: 'Special Purpose Machines', href: '#' },
-];
+
 
 const PRODUCTS = [
   {
     name: 'Hydraulic Cylinders',
     href: '/products/hydraulic-cylinders/',
     desc: 'Custom industrial hydraulic cylinders — double acting, welded, telescopic, tie rod configurations. Bore sizes 25mm to 500mm+.',
+    imageSrc: '/images/products/hero/hydraulic-cylinders-ahmedabad.webp'
   },
   {
     name: 'Hydraulic Power Packs',
     href: '/products/hydraulic-power-packs/',
     desc: 'Custom-engineered AC and DC power units for precise flow and pressure requirements. 3-phase industrial and DC mini units.',
+    imageSrc: '/images/products/hero/hydraulic-power-pack.webp'
   },
   {
     name: 'Hydraulic Accessories',
     href: '#',
     desc: 'Complete range of hydraulic valves, fittings, hoses, and components to support your hydraulic system requirements.',
+    imageSrc: '/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp'
   },
 ];
 
@@ -273,24 +283,31 @@ export default function AboutUsPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 1: HERO
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="bg-honeywell-navy text-white pt-6 md:pt-8 pb-12 md:pb-16 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
+      <section className="bg-white pt-12 md:pt-20 pb-8 md:pb-12 relative overflow-hidden border-b border-slate-200">
+        {/* Subtle engineering grid background */}
+        <div 
+          className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_10%_0%,#000_70%,transparent_100%)]" 
+          aria-hidden="true" 
+        />
+        
         <Container className="relative z-10">
-          <nav aria-label="Breadcrumb" className="text-sm font-body text-brand-borderGray mb-6">
+          <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
             <ol className="flex items-center gap-2">
               <li>
-                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
               </li>
               <li aria-hidden="true">&rsaquo;</li>
-              <li className="text-white font-semibold" aria-current="page">About Us</li>
+              <li className="text-honeywell-red font-semibold" aria-current="page">About Us</li>
             </ol>
           </nav>
 
-          <div className="max-w-3xl">
-            <Heading variant="hero" as="h1" className="text-white mb-6">
-              Honeywell Hydraulics — Precision Hydraulic Manufacturer Since 2018
+          <div className="w-full">
+            <Heading variant="section" as="h1" className=" font-display font-extrabold tracking-tight text-honeywell-navy leading-[1.15] mb-6">
+              Honeywell Hydraulics —<br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-honeywell-navy via-honeywell-navy to-honeywell-red"> Hydraulic System Manufacturer</span>{" "}Since 2018
             </Heading>
-            <p className="text-brand-borderGray text-lg font-body leading-relaxed max-w-2xl">
+            
+            <p className="text-brand-steelGray text-lg md:text-xl font-body leading-relaxed text-justify">
               Honeywell Hydraulics is a premier engineering firm specialising in the design, manufacturing, and supply of industrial hydraulic cylinders and power packs. Based in the Kathwada GIDC industrial zone in Ahmedabad, we deliver precision-engineered fluid power solutions that minimise downtime and maximise operational efficiency.
             </p>
           </div>
@@ -307,13 +324,13 @@ export default function AboutUsPage() {
               <Heading as="h2" variant="section" underline="center" id="overview-heading" className="mb-3 text-honeywell-navy">
                 Precision Engineering, Proven Performance
               </Heading>
-              <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
+              <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-justify">
                 Founded in 2018 in Ahmedabad&apos;s industrial corridor, Honeywell Hydraulics has grown from a focused cylinder manufacturing operation into a comprehensive hydraulic equipment manufacturer serving 25+ industries across India.
               </p>
-              <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
+              <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-justify">
                 We are not a trading company that relabels third-party products. Every hydraulic cylinder, power pack, and accessory that carries our name is designed, machined, assembled, pressure-tested, and certified within our own manufacturing facility. This end-to-end production control is the foundation of our quality consistency.
               </p>
-              <p className="text-brand-darkSlate font-body leading-relaxed">
+              <p className="text-brand-darkSlate font-body leading-relaxed text-justify">
                 Our engineering team applies rigorous fluid power physics to every project — calculating forces, flows, velocities, and thermal outputs before manufacturing a single component. This discipline is what separates engineered hydraulic solutions from catalogue-copied ones.
               </p>
             </div>
@@ -331,8 +348,8 @@ export default function AboutUsPage() {
               
               {/* Floating Banner */}
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-md p-4 shadow-lg border border-slate-100 z-10">
-                <p className="text-[10px] sm:text-xs font-bold text-honeywell-red uppercase tracking-widest mb-1 font-body">Manufacturing Headquarters</p>
-                <p className="text-sm sm:text-base font-display font-bold text-honeywell-navy">Kathwada GIDC, Ahmedabad, Gujarat</p>
+                <p className="text-[10px] sm:text-xs font-bold text-honeywell-red uppercase tracking-widest mb-1 font-body text-justify">Manufacturing Headquarters</p>
+                <p className="text-sm sm:text-base font-display font-bold text-honeywell-navy text-justify">Kathwada GIDC, Ahmedabad, Gujarat</p>
               </div>
             </div>
           </div>
@@ -348,13 +365,13 @@ export default function AboutUsPage() {
             <Heading as="h2" variant="section" underline="center" id="story-heading" className="mb-3 text-honeywell-navy">
               Our Story
             </Heading>
-            <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
+            <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-justify">
               Honeywell Hydraulics was founded by engineers who recognised a fundamental gap in India&apos;s hydraulic manufacturing market: too many suppliers were selling underspecified, catalogue-copied components that failed in severe-duty industrial environments.
             </p>
-            <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
+            <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-justify">
               We started with a clear engineering principle — <strong className="text-honeywell-navy">hydraulic systems are too important to be designed by guesswork</strong>. A hydraulic press with an incorrectly sized cylinder will cycle slowly, overheat, and destroy its seals within months. A goods lift with an incorrectly specified counterbalance valve is a danger to life.
             </p>
-            <p className="text-brand-darkSlate font-body leading-relaxed">
+            <p className="text-brand-darkSlate font-body leading-relaxed text-justify">
               From our first cylinder produced in 2018, we have grown to manufacture hydraulic cylinders, power packs, and accessories for clients across Gujarat and pan-India — always maintaining our core commitment to physics-based engineering and zero-defect manufacturing.
             </p>
           </div>
@@ -375,7 +392,7 @@ export default function AboutUsPage() {
                   <Target className="w-6 h-6 text-white" aria-hidden="true" />
                 </div>
                 <Heading as="h3" variant="card" className="text-white mb-4">Our Mission</Heading>
-                <p className="text-brand-borderGray font-body leading-relaxed">
+                <p className="text-brand-borderGray font-body leading-relaxed text-justify">
                   To deliver zero-defect hydraulic components and systems that perform to their rated specification throughout their design service life — consistently, verifiably, and without exception. We achieve this through physics-based engineering, traceable raw materials, and 100% hydrostatic pressure testing.
                 </p>
               </div>
@@ -387,7 +404,7 @@ export default function AboutUsPage() {
                 <Eye className="w-6 h-6 text-white" aria-hidden="true" />
               </div>
               <Heading as="h3" variant="card" className="text-honeywell-navy mb-4">Our Vision</Heading>
-              <p className="text-brand-darkSlate font-body leading-relaxed">
+              <p className="text-brand-darkSlate font-body leading-relaxed text-justify">
                 To be recognised as India&apos;s most trusted hydraulic equipment manufacturer — the first call for OEMs, SPM builders, and maintenance engineers who need reliable, correctly specified, and fully documented hydraulic solutions for critical industrial applications.
               </p>
             </div>
@@ -404,7 +421,7 @@ export default function AboutUsPage() {
             <Heading as="h2" variant="section" underline="center" id="values-heading" className="mb-3 text-honeywell-navy">
               Core Values
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
               The principles that govern every engineering decision, every manufacturing process, and every client interaction at Honeywell Hydraulics.
             </p>
           </div>
@@ -416,7 +433,7 @@ export default function AboutUsPage() {
               >
                 <IconBox icon={value.icon} variant="primary" className="mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <Heading as="h3" variant="card" className="mb-2">{value.title}</Heading>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed">{value.body}</p>
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">{value.body}</p>
               </li>
             ))}
           </ul>
@@ -432,7 +449,7 @@ export default function AboutUsPage() {
             <Heading as="h2" variant="section" underline="center" id="why-heading" className="mb-3 text-honeywell-navy">
               Why Choose Honeywell Hydraulics
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
               Six reasons why OEMs, SPM builders, and maintenance engineers across India trust us as their hydraulic manufacturing partner.
             </p>
           </div>
@@ -446,7 +463,7 @@ export default function AboutUsPage() {
                   {item.icon}
                 </div>
                 <Heading as="h3" variant="card" className="mb-2">{item.title}</Heading>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed">{item.body}</p>
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">{item.body}</p>
               </li>
             ))}
           </ul>
@@ -462,23 +479,22 @@ export default function AboutUsPage() {
             <Heading as="h2" variant="section" underline="center" id="industries-heading" className="mb-3 text-honeywell-navy">
               Industries We Serve
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
               We have engineered robust hydraulic solutions for severe-duty environments across India.
             </p>
           </div>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" role="list">
-            {INDUSTRIES.map((industry) => (
-              <li key={industry.name}>
-                <Link
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {homepageIndustries.map((industry) => (
+              <div key={industry.industryName}>
+                <IndustryCard
+                  industryName={industry.industryName}
+                  description={industry.description}
+                  icon={iconMap[industry.iconName] || <FaCogs className="w-6 h-6" />}
                   href={industry.href}
-                  className="block bg-white border border-slate-200 rounded-sm p-5 text-center transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
-                >
-                  <p className="font-display font-bold text-honeywell-navy group-hover:text-honeywell-red transition-colors">{industry.name}</p>
-                  <ChevronRight className="w-4 h-4 text-[#94A3B8] mx-auto mt-2 group-hover:text-honeywell-red transition-colors" aria-hidden="true" />
-                </Link>
-              </li>
+                />
+              </div>
             ))}
-          </ul>
+          </div>
         </Container>
       </Section>
 
@@ -491,7 +507,7 @@ export default function AboutUsPage() {
             <Heading as="h2" variant="section" underline="center" id="products-heading" className="mb-3 text-honeywell-navy">
               Our Products
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
               Precision-engineered hydraulic equipment designed and manufactured at our Ahmedabad facility.
             </p>
           </div>
@@ -500,13 +516,24 @@ export default function AboutUsPage() {
               <Link
                 key={product.name}
                 href={product.href}
-                className="block bg-brand-surfaceGray border border-slate-200 rounded-sm p-6 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
+                className="block bg-brand-surfaceGray border border-slate-200 rounded-sm transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group overflow-hidden"
               >
-                <Heading as="h3" variant="card" className="mb-3 group-hover:text-honeywell-red transition-colors">{product.name}</Heading>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed mb-4">{product.desc}</p>
-                <span className="inline-flex items-center gap-1 text-sm font-semibold text-honeywell-red font-body">
-                  View Products <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-                </span>
+                <div className="aspect-[3/2] relative bg-slate-200 border-b border-slate-200">
+                  <Image
+                    src={product.imageSrc}
+                    alt={product.name}
+                    fill
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="p-6">
+                  <Heading as="h3" variant="card" className="mb-3 group-hover:text-honeywell-red transition-colors">{product.name}</Heading>
+                  <p className="text-sm text-brand-steelGray font-body leading-relaxed mb-4 text-justify">{product.desc}</p>
+                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-honeywell-red font-body">
+                    View Products <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
@@ -523,7 +550,7 @@ export default function AboutUsPage() {
               <Heading as="h2" variant="section" underline="center" id="capabilities-heading" className="mb-3 text-honeywell-navy">
                 Manufacturing Capabilities
               </Heading>
-              <p className="text-brand-darkSlate font-body leading-relaxed mb-6">
+              <p className="text-brand-darkSlate font-body leading-relaxed mb-6 text-justify">
                 Our Ahmedabad manufacturing facility houses advanced CNC machining centres, precision testing equipment, and dedicated assembly areas — enabling end-to-end hydraulic component production under one roof.
               </p>
               <ul className="space-y-3" role="list">
@@ -570,7 +597,7 @@ export default function AboutUsPage() {
             <Heading as="h2" variant="section" underline="center" id="team-heading" className="mb-3 text-honeywell-navy">
               Our Engineering Team
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
               Behind every hydraulic solution we design is a team of fluid power engineers who have dedicated their careers to understanding the physics of hydraulic systems.
             </p>
           </div>
@@ -578,21 +605,21 @@ export default function AboutUsPage() {
             <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6">
               <Users className="w-8 h-8 text-honeywell-navy mb-4" aria-hidden="true" />
               <Heading as="h3" variant="card" className="mb-2">Qualified Engineers</Heading>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
                 Our engineering team holds B.Tech qualifications in Mechanical Engineering with specialisation in fluid power systems and hydraulic design.
               </p>
             </div>
             <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6">
               <Wrench className="w-8 h-8 text-honeywell-navy mb-4" aria-hidden="true" />
               <Heading as="h3" variant="card" className="mb-2">Skilled Machinists</Heading>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
                 Experienced CNC machine operators handle precision turning, boring, honing, and welding operations with documented competency certifications.
               </p>
             </div>
             <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6">
               <FlaskConical className="w-8 h-8 text-honeywell-navy mb-4" aria-hidden="true" />
               <Heading as="h3" variant="card" className="mb-2">Quality Inspectors</Heading>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed">
+              <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">
                 Dedicated quality team performs incoming material inspection, in-process checks, and final hydrostatic pressure testing on every component.
               </p>
             </div>
@@ -637,13 +664,13 @@ export default function AboutUsPage() {
               <Heading as="h2" variant="section" underline="center" id="quality-heading" className="mb-3 text-honeywell-navy">
                 Quality Commitment
               </Heading>
-              <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
+              <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-justify">
                 At Honeywell Hydraulics, quality is not a department — it is the engineering discipline that governs every decision. From how we calculate a cylinder wall thickness to how we test a component before dispatch.
               </p>
-              <p className="text-brand-darkSlate font-body leading-relaxed mb-4">
+              <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-justify">
                 Our quality policy is a written commitment that every component we manufacture will perform to its rated specification throughout its design service life, backed by traceable documentation and meaningful warranty terms.
               </p>
-              <p className="text-brand-darkSlate font-body leading-relaxed">
+              <p className="text-brand-darkSlate font-body leading-relaxed text-justify">
                 We do not skip the hydrostatic pressure test because the client is in a hurry. We do not use oversized cylinders to compensate for undertested wall thickness calculations. These shortcuts generate callback warranty costs, field failures, and genuine safety risks.
               </p>
             </div>
@@ -670,7 +697,7 @@ export default function AboutUsPage() {
                 <div className="font-display text-[28px] sm:text-[36px] md:text-[40px] leading-tight font-bold text-honeywell-navy mb-1">
                   {stat.value}
                 </div>
-                <p className="text-[11px] sm:text-[12px] text-honeywell-red font-display font-bold uppercase tracking-[0.1em]">
+                <p className="text-[11px] sm:text-[12px] text-honeywell-red font-display font-bold uppercase tracking-[0.1em] text-justify">
                   {stat.label}
                 </p>
               </div>
@@ -688,7 +715,7 @@ export default function AboutUsPage() {
             <Heading as="h2" variant="section" underline="center" id="trust-heading" className="mb-3 text-honeywell-navy">
               Trusted by Industry Leaders
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
               OEMs, SPM builders, and maintenance engineers across Gujarat and India trust Honeywell Hydraulics for reliable, correctly specified hydraulic equipment.
             </p>
           </div>

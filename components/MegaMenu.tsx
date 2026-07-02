@@ -207,10 +207,10 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
                       <span className="inline-flex items-center justify-center px-2.5 py-1 rounded text-[10px] font-bold tracking-[0.2em] text-honeywell-navy bg-slate-100 uppercase font-body mb-4">
                         Featured
                       </span>
-                      <p className="text-base font-bold text-honeywell-navy font-display leading-snug">
+                      <p className="text-base font-bold text-honeywell-navy font-display leading-snug text-justify">
                         {item.megaMenu.featured.title}
                       </p>
-                      <p className="text-[13px] text-brand-steelGray mt-3 leading-relaxed font-body">
+                      <p className="text-[13px] text-brand-steelGray mt-3 leading-relaxed font-body text-justify">
                         {item.megaMenu.featured.description}
                       </p>
                     </div>

@@ -28,11 +28,11 @@ export function HydraulicCylinderHero() {
               <span className="text-brand-steelGray text-sm font-medium">Hydraulic Cylinders</span>
             </div>
 
-            <Heading variant="hero" as="h1" className="text-3xl md:text-4xl lg:text-[2.5rem] xl:text-[2.75rem] mb-6">
+            <Heading variant="section" as="h1" className=" lg:text-[2.5rem] xl:text-[2.75rem] mb-6">
               Hydraulic Cylinder Manufacturer in Ahmedabad
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed text-justify">
               Engineered for precision and built for endurance. We are a leading manufacturer of custom and industrial hydraulic cylinders, delivering high-performance fluid power solutions to OEMs and heavy industries across India.
             </p>
 
@@ -63,7 +63,7 @@ export function HydraulicCylinderHero() {
               src="/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad.webp"
               alt="Hydraulic Cylinder Manufacturer in Ahmedabad"
               fill
-              priority
+              priority fetchPriority="high" decoding="sync" quality={85}
               className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
@@ -78,7 +78,7 @@ export function HydraulicCylinderHero() {
           <div className="flex flex-wrap divide-x divide-slate-200/50 py-4">
             <div className="px-6 flex-1 text-center first:pl-0 last:pr-0 group cursor-default">
               <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1 group-hover:text-honeywell-red transition-colors duration-300">Bore</span>
-              <span className="block text-sm font-mono text-honeywell-navy font-semibold">40–300mm</span>
+              <span className="block text-sm font-mono text-honeywell-navy font-semibold">40–600mm</span>
             </div>
             <div className="px-6 flex-1 text-center group cursor-default">
               <span className="block text-xs font-bold text-brand-steelGray uppercase tracking-wider mb-1 group-hover:text-honeywell-red transition-colors duration-300">Stroke</span>

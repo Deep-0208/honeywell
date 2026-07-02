@@ -31,11 +31,6 @@ export const siteNavigation: SiteNavigation = {
                 description: 'Our story, vision, and commitment to precision manufacturing.',
               },
               {
-                label: 'Infrastructure',
-                href: '/infrastructure/',
-                description: 'CNC machining centres, testing rigs, and production infrastructure.',
-              },
-              {
                 label: 'Quality',
                 href: '/quality/',
                 description: '100% pressure-tested. Zero-defect manufacturing philosophy.',

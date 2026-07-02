@@ -194,7 +194,7 @@ export default function RequestQuotePage() {
 
         <Container className="relative z-10">
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="text-sm font-body text-brand-borderGray mb-8">
+          <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
             <ol className="flex items-center gap-2">
               <li>
                 <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -207,13 +207,11 @@ export default function RequestQuotePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left — Headline */}
             <div>
-              <span className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-honeywell-red/20 border border-honeywell-red/40 text-honeywell-red text-xs font-bold uppercase tracking-wider mb-6">
-                Free · No Obligation · Fast Response
-              </span>
-              <Heading variant="hero" as="h1" className="text-white mb-5 leading-tight">
+
+              <Heading variant="section" as="h1" className="text-white mb-5 leading-tight">
                 Get a Free Quote for Your Hydraulic Requirement
               </Heading>
-              <p className="text-[#CBD5E1] text-lg font-body leading-relaxed mb-8 max-w-lg">
+              <p className="text-[#CBD5E1] text-lg font-body leading-relaxed mb-8 max-w-lg text-justify">
                 Not sure what you need? That&apos;s okay. Just tell us about your machine or project and our team will guide you to the right solution.
               </p>
 
@@ -248,8 +246,8 @@ export default function RequestQuotePage() {
                   <div className="w-10 h-10 rounded-xl bg-honeywell-red/20 flex items-center justify-center text-honeywell-red mb-3">
                     {p.icon}
                   </div>
-                  <p className="font-display font-bold text-white text-sm mb-1">{p.title}</p>
-                  <p className="text-[#94A3B8] text-xs font-body leading-relaxed">{p.body}</p>
+                  <p className="font-display font-bold text-white text-sm mb-1 text-justify">{p.title}</p>
+                  <p className="text-[#94A3B8] text-xs font-body leading-relaxed text-justify">{p.body}</p>
                 </div>
               ))}
             </div>
@@ -263,8 +261,8 @@ export default function RequestQuotePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {TRUST_STATS.map((stat) => (
               <div key={stat.label}>
-                <p className="text-xl md:text-2xl font-display font-extrabold text-white">{stat.value}</p>
-                <p className="text-xs text-red-100 font-body uppercase tracking-wider mt-0.5">{stat.label}</p>
+                <p className="text-xl md:text-2xl font-display font-extrabold text-white text-justify">{stat.value}</p>
+                <p className="text-xs text-red-100 font-body uppercase tracking-wider mt-0.5 text-justify">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -283,7 +281,7 @@ export default function RequestQuotePage() {
                 <Heading as="h2" variant="subsection" className="mb-2">
                   Tell Us What You Need
                 </Heading>
-                <p className="text-sm text-brand-steelGray font-body">
+                <p className="text-sm text-brand-steelGray font-body text-justify">
                   Fill in what you know. Fields with <span className="text-honeywell-red font-bold">*</span> are required. Everything else is optional.
                 </p>
               </div>
@@ -297,8 +295,8 @@ export default function RequestQuotePage() {
 
               {/* Prefer to talk? — rounded-sm to match design system */}
               <div className="bg-honeywell-navy text-white rounded-xl p-6 transition-all duration-350 ease-premium hover:-translate-y-1.5 hover:shadow-float border-t-2 border-t-transparent hover:border-t-honeywell-red">
-                <p className="font-display font-bold text-lg mb-1">Prefer to talk?</p>
-                <p className="text-[#94A3B8] text-sm font-body mb-5">Reach us directly — we&apos;re happy to answer any questions.</p>
+                <p className="font-display font-bold text-lg mb-1 text-justify">Prefer to talk?</p>
+                <p className="text-[#94A3B8] text-sm font-body mb-5 text-justify">Reach us directly — we&apos;re happy to answer any questions.</p>
 
                 <div className="space-y-3">
                   <a
@@ -309,8 +307,8 @@ export default function RequestQuotePage() {
                       <Phone className="w-4 h-4 text-white" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="text-[10px] text-[#94A3B8] font-body uppercase tracking-wider">Call Us</p>
-                      <p className="text-sm font-semibold text-white group-hover:text-honeywell-red transition-colors">+91 9924343873</p>
+                      <p className="text-[10px] text-[#94A3B8] font-body uppercase tracking-wider text-justify">Call Us</p>
+                      <p className="text-sm font-semibold text-white group-hover:text-honeywell-red transition-colors text-justify">+91 9924343873</p>
                     </div>
                   </a>
 
@@ -324,8 +322,8 @@ export default function RequestQuotePage() {
                       <MessageCircle className="w-4 h-4 text-white" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="text-[10px] text-[#94A3B8] font-body uppercase tracking-wider">WhatsApp</p>
-                      <p className="text-sm font-semibold text-white group-hover:text-green-400 transition-colors">Message Our Engineers</p>
+                      <p className="text-[10px] text-[#94A3B8] font-body uppercase tracking-wider text-justify">WhatsApp</p>
+                      <p className="text-sm font-semibold text-white group-hover:text-green-400 transition-colors text-justify">Message Our Engineers</p>
                     </div>
                   </a>
 
@@ -337,8 +335,8 @@ export default function RequestQuotePage() {
                       <Mail className="w-4 h-4 text-white" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="text-[10px] text-[#94A3B8] font-body uppercase tracking-wider">Email</p>
-                      <p className="text-sm font-semibold text-white group-hover:text-honeywell-red transition-colors break-words">sales@honeywellhydraulics.com</p>
+                      <p className="text-[10px] text-[#94A3B8] font-body uppercase tracking-wider text-justify">Email</p>
+                      <p className="text-sm font-semibold text-white group-hover:text-honeywell-red transition-colors break-words text-justify">sales@honeywellhydraulics.com</p>
                     </div>
                   </a>
 
@@ -347,8 +345,8 @@ export default function RequestQuotePage() {
                       <MapPin className="w-4 h-4 text-[#94A3B8]" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="text-[10px] text-[#94A3B8] font-body uppercase tracking-wider">Location</p>
-                      <p className="text-sm text-[#CBD5E1] font-body">Kathwada GIDC, Ahmedabad</p>
+                      <p className="text-[10px] text-[#94A3B8] font-body uppercase tracking-wider text-justify">Location</p>
+                      <p className="text-sm text-[#CBD5E1] font-body text-justify">Kathwada GIDC, Ahmedabad</p>
                     </div>
                   </div>
                 </div>
@@ -356,7 +354,7 @@ export default function RequestQuotePage() {
 
               {/* What you can ask about — rounded-sm to match design system */}
               <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 transition-all duration-350 ease-premium hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red hover:shadow-float">
-                <p className="font-display font-bold text-honeywell-navy mb-4">What can you ask about?</p>
+                <p className="font-display font-bold text-honeywell-navy mb-4 text-justify">What can you ask about?</p>
                 <ul className="space-y-2.5">
                   {[
                     'Hydraulic Cylinders (all sizes)',
@@ -380,8 +378,8 @@ export default function RequestQuotePage() {
               <div className="bg-gradient-to-br from-orange-50 to-green-50 border border-slate-200 rounded-xl p-5 flex items-center gap-4 transition-all duration-350 ease-premium hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red hover:shadow-float">
                 <span className="text-4xl" role="img" aria-label="Indian Flag">🇮🇳</span>
                 <div>
-                  <p className="font-display font-bold text-honeywell-navy">Made in India</p>
-                  <p className="text-xs text-brand-steelGray font-body mt-0.5">Designed, machined &amp; tested at our Ahmedabad facility.</p>
+                  <p className="font-display font-bold text-honeywell-navy text-justify">Made in India</p>
+                  <p className="text-xs text-brand-steelGray font-body mt-0.5 text-justify">Designed, machined &amp; tested at our Ahmedabad facility.</p>
                 </div>
               </div>
             </aside>
@@ -396,7 +394,7 @@ export default function RequestQuotePage() {
             <Heading as="h2" variant="section" className="mb-4">
               How It Works — 4 Simple Steps
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-xl mx-auto">
+            <p className="text-lg text-brand-steelGray font-body max-w-xl mx-auto text-justify">
               From your first message to your product delivered — here&apos;s exactly what happens.
             </p>
           </div>
@@ -426,7 +424,7 @@ export default function RequestQuotePage() {
                 </div>
 
                 <h3 className="text-base font-display font-bold text-honeywell-navy mb-2">{step.title}</h3>
-                <p className="text-sm text-brand-steelGray font-body leading-relaxed">{step.body}</p>
+                <p className="text-sm text-brand-steelGray font-body leading-relaxed text-justify">{step.body}</p>
               </li>
             ))}
           </ol>
@@ -445,7 +443,7 @@ export default function RequestQuotePage() {
           <Heading variant="section" className="text-white mb-4">
             Still Have Questions?
           </Heading>
-          <p className="text-[#CBD5E1] font-body max-w-xl mx-auto mb-8 text-lg leading-relaxed">
+          <p className="text-[#CBD5E1] font-body max-w-xl mx-auto mb-8 text-lg leading-relaxed text-justify">
             Our team is happy to talk through your requirement before you even fill a form. Just call or WhatsApp us.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

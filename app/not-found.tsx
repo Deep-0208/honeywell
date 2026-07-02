@@ -33,7 +33,7 @@ export default function NotFound() {
         Page Not Found
       </h2>
       
-      <p className="text-brand-steelGray font-body max-w-lg mx-auto mb-10 text-lg">
+      <p className="text-brand-steelGray font-body max-w-lg mx-auto mb-10 text-lg text-justify">
         The industrial hydraulic component or resource you are looking for has been moved, removed, or never existed. Let&apos;s get you back on track.
       </p>
 
@@ -64,7 +64,7 @@ export default function NotFound() {
       </div>
 
       <div className="pt-8 border-t border-brand-borderGray w-full max-w-2xl">
-        <p className="text-brand-steelGray font-body text-sm flex items-center justify-center gap-2 flex-wrap">
+        <p className="text-brand-steelGray font-body text-sm flex items-center justify-center gap-2 flex-wrap text-justify">
           Need immediate assistance? 
           <a 
             href={`tel:${COMPANY_INFO.phone}`} 

@@ -53,10 +53,10 @@ export function WhyChooseUsSection() {
                   variant="primary"
                   className="mx-auto mb-6 group-hover:scale-110 group-hover:shadow-glow/20 transition-all duration-300 ease-premium"
                 />
-                <Heading variant="card" as="h3" className="mb-3 text-honeywell-navy">
+                <Heading variant="card" as="h3" className="mb-3 text-honeywell-navy min-h-[4rem] flex items-center justify-center">
                   {usp.title}
                 </Heading>
-                <p className="text-brand-steelGray font-body text-sm leading-relaxed ">
+                <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
                   {usp.body}
                 </p>
               </div>

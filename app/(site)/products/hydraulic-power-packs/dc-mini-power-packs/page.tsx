@@ -275,18 +275,14 @@ function HeroSection() {
           {/* Content Column */}
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
-              <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm">
-                COMPACT MOBILE FLUID POWER
-              </span>
-              <div className="h-4 w-px bg-slate-300" />
               <span className="text-brand-steelGray text-sm font-medium">DC Mini Power Packs</span>
             </div>
 
-            <Heading variant="hero" as="h1" className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
+            <Heading variant="section" as="h1" className=" lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6">
               DC Hydraulic Power Pack Manufacturer
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed text-justify">
               Extreme hydraulic force for battery-operated machinery. Honeywell Hydraulics is a premier DC hydraulic power pack manufacturer in Gujarat, engineering ultra-compact 12V and 24V mini hydraulic power units for the transportation and material handling sectors. Designed exclusively for intermittent mobile operations, our space-saving DC units deliver massive lifting power directly from standard vehicle batteries, providing the mechanical backbone for tipper trucks, tail lifts, and mobile dock levelers.
             </p>
 
@@ -322,7 +318,7 @@ function HeroSection() {
               src="/images/products/dc-hydraulic-power-pack-manufacturer.webp"
               alt="DC Hydraulic Power Pack Manufacturer in Ahmedabad - 12V and 24V mini power units by Honeywell Hydraulics"
               fill
-              priority
+              priority fetchPriority="high" decoding="sync" quality={85}
               className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
@@ -426,7 +422,7 @@ function HowItWorks() {
           <Heading id="how-it-works-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             How DC Hydraulic Power Packs Work
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             The engineering challenge of a mini DC power pack is generating high pressure from limited electrical amperage and highly constrained physical space.
           </p>
         </div>
@@ -443,7 +439,7 @@ function HowItWorks() {
               <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
                 {comp.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed text-justify">
                 {comp.description}
               </p>
             </div>
@@ -463,7 +459,7 @@ function VoltageComparisonSection() {
           <Heading id="voltage-comparison-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             12V vs 24V Hydraulic Power Packs
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Choosing the correct DC voltage dictates the motor's lifespan and the electrical draw on your vehicle's alternator.
           </p>
         </div>
@@ -508,7 +504,7 @@ function VoltageComparisonSection() {
         </div>
 
         <div className="max-w-4xl mx-auto mt-8 bg-brand-lightSurface p-6 rounded-lg border-l-4 border-honeywell-navy">
-          <p className="text-brand-darkSlate font-body italic">
+          <p className="text-brand-darkSlate font-body italic text-justify">
             *If you are building a small tailgate lift for a delivery van, specify a <strong>12V power pack</strong>. If you are building a 15-ton tipper truck or a massive scissor lift, specify a <strong>24V power pack</strong> to protect the vehicle's electrical harness from extreme amp draw.*
           </p>
         </div>
@@ -526,7 +522,7 @@ function PhaseComparisonSection() {
           <Heading id="phase-comparison-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             DC vs. 3 Phase Hydraulic Power Packs
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             It is critical to understand the stark engineering divide between mobile battery power and continuous factory grid power.
           </p>
         </div>
@@ -588,7 +584,7 @@ function TechnicalSpecifications() {
             <Heading id="technical-specifications-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
               Technical Specifications Framework
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body mb-8">
+            <p className="text-lg text-brand-steelGray font-body mb-8 text-justify">
               Our mini power packs are highly customizable and designed for space-constrained mobile integration.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -618,7 +614,7 @@ function IndustriesSection() {
           <Heading id="industries-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Industries Served
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Our custom DC mobile power units are the primary fluid generation engines for the transportation and logistics sectors:
           </p>
         </div>
@@ -649,7 +645,7 @@ function EngineeringConsiderations() {
           <Heading id="engineering-considerations-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
             Engineering Considerations (Specifying DC Systems)
           </Heading>
-          <p className="text-brand-darkSlate font-body text-lg mb-8">
+          <p className="text-brand-darkSlate font-body text-lg mb-8 text-justify">
             Our{' '}
             <Link href="#" className="text-honeywell-red font-semibold hover:underline">
               Custom Hydraulic System Design
@@ -663,7 +659,7 @@ function EngineeringConsiderations() {
                 <Zap className="w-5 h-5 mr-3 text-honeywell-red" />
                 A. Battery Draw & Wiring Harnesses
               </Heading>
-              <p className="text-brand-steelGray font-body leading-relaxed">
+              <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                 A 12V DC motor generating high pressure can easily draw over 200 Amps. If the wiring harness is too thin, the cables will melt and catch fire. We calculate the exact amp draw required by your load and specify the necessary heavy-gauge wiring and heavy-duty starter solenoids to ensure absolute electrical safety.
               </p>
             </div>
@@ -673,7 +669,7 @@ function EngineeringConsiderations() {
                 <ZapOff className="w-5 h-5 mr-3 text-honeywell-red" />
                 B. Intermittent Duty Cycles (S2 / S3 Ratings)
               </Heading>
-              <p className="text-brand-steelGray font-body leading-relaxed">
+              <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                 DC motors generate extreme internal heat and do not have internal cooling fans. They are strictly rated for short bursts of operation (e.g., S2 - 2 minutes continuous). We carefully calculate your machine's cycle time. If your tipper truck takes 45 seconds to raise, our motor will perform flawlessly. If you attempt to run a DC motor for 15 continuous minutes, it will burn out.
               </p>
             </div>
@@ -683,7 +679,7 @@ function EngineeringConsiderations() {
                 <ShieldAlert className="w-5 h-5 mr-3 text-honeywell-red" />
                 C. Environmental Protection & Packaging
               </Heading>
-              <p className="text-brand-steelGray font-body leading-relaxed">
+              <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                 Mobile units operate under truck chassis, exposed to mud, road salt, and heavy rain. We utilize severe-duty weather-sealed DC electric motors (IP65/IP67 rated), install rubberized protective covers over the solenoids, and specify heavy plastic or epoxy-coated steel reservoirs to completely eliminate rust.
               </p>
             </div>
@@ -704,7 +700,7 @@ function ManufacturingProcess() {
             <Heading id="manufacturing-process-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
               Manufacturing & Testing Process
             </Heading>
-            <p className="text-brand-darkSlate font-body text-lg mb-8 leading-relaxed">
+            <p className="text-brand-darkSlate font-body text-lg mb-8 leading-relaxed text-justify">
               We test every DC motor under simulated heavy battery draw conditions to ensure mobile reliability.
             </p>
 
@@ -715,7 +711,7 @@ function ManufacturingProcess() {
                 </div>
                 <div className="ml-4">
                   <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Central Manifold Machining</Heading>
-                  <p className="text-brand-steelGray font-body mt-1">
+                  <p className="text-brand-steelGray font-body mt-1 text-justify">
                     We utilize advanced 5-axis CNC machining centers to drill the complex internal porting of the central manifold block, ensuring absolute zero-leakage between the pump, valves, and tank.
                   </p>
                 </div>
@@ -726,7 +722,7 @@ function ManufacturingProcess() {
                 </div>
                 <div className="ml-4">
                   <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Electrical Load Simulation</Heading>
-                  <p className="text-brand-steelGray font-body mt-1">
+                  <p className="text-brand-steelGray font-body mt-1 text-justify">
                     We test every DC motor under simulated heavy battery draw conditions, verifying that the starter solenoids and motor windings can handle the extreme amperage spikes required to lift maximum payloads.
                   </p>
                 </div>
@@ -737,7 +733,7 @@ function ManufacturingProcess() {
                 </div>
                 <div className="ml-4">
                   <Heading variant="card" as="h4" className="text-lg font-bold text-honeywell-navy">Pressure & Duty Validation</Heading>
-                  <p className="text-brand-steelGray font-body mt-1">
+                  <p className="text-brand-steelGray font-body mt-1 text-justify">
                     100% of our mini power packs undergo a pressurized run-in test. We cycle the unit repeatedly to verify the thermal limits of the DC motor and the holding integrity of the directional valves.
                   </p>
                 </div>
@@ -745,7 +741,7 @@ function ManufacturingProcess() {
             </ul>
             
             <div className="mt-8 bg-white p-4 rounded-lg border border-slate-200">
-              <p className="text-sm text-honeywell-navy font-semibold flex items-center">
+              <p className="text-sm text-honeywell-navy font-semibold flex items-center text-justify">
                 <ShieldAlert className="w-4 h-4 mr-2 text-honeywell-red" />
                 Backed by a strict [WARRANTY_MONTHS]-Month Defect Warranty.
               </p>
@@ -787,21 +783,21 @@ function ProjectSpotlight() {
               <div className="space-y-6">
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Challenge</Heading>
-                  <p className="text-brand-steelGray font-body leading-relaxed">
+                  <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                     A national logistics fleet utilized 12V tail lifts to load heavy pallets. Used dozens of times per hour, the 12V motors constantly overheated and burned out due to massive amp draw on the delivery trucks' batteries.
                   </p>
                 </div>
                 
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Solution</Heading>
-                  <p className="text-brand-steelGray font-body leading-relaxed">
+                  <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                     We manufactured a highly compact 24V DC Mini Hydraulic Power Pack and upgraded the lifting circuits. We integrated a specialized manifold that lowered the load under gravity—meaning the motor only ran for lifting, cutting the duty cycle in half.
                   </p>
                 </div>
                 
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Outcome</Heading>
-                  <p className="text-honeywell-navy font-body font-semibold leading-relaxed">
+                  <p className="text-honeywell-navy font-body font-semibold leading-relaxed text-justify">
                     By switching to 24V and relying on gravity-down logic, electrical amp draw dropped over 60%. The fleet has operated for 18 months without a single motor burnout, drastically improving route efficiency.
                   </p>
                 </div>
@@ -858,7 +854,7 @@ function RelatedProducts() {
           <Heading id="related-products-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Related Products
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             A DC power pack powers your mobile fleet. Connect it to our extreme-duty mobile actuators:
           </p>
         </div>
@@ -873,7 +869,7 @@ function RelatedProducts() {
                 <Heading variant="subsection" as="h3" className="text-lg font-bold text-honeywell-navy mb-2 group-hover:text-honeywell-red transition-colors">
                   {product.title}
                 </Heading>
-                <p className="text-brand-steelGray text-sm leading-relaxed mb-4 flex-grow">
+                <p className="text-brand-steelGray text-sm leading-relaxed mb-4 flex-grow text-justify">
                   {product.description}
                 </p>
                 <div className="flex items-center text-honeywell-red font-semibold text-sm mt-auto">
@@ -918,7 +914,7 @@ function RelatedServices() {
           <Heading id="related-services-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4" underline="center">
             Related Services
           </Heading>
-          <p className="text-lg text-brand-steelGray font-body">
+          <p className="text-lg text-brand-steelGray font-body text-justify">
             Purchasing a DC power unit requires careful vehicle integration. Leverage our mobile engineering services:
           </p>
         </div>
@@ -930,7 +926,7 @@ function RelatedServices() {
                 {service.icon}
               </div>
               <Heading variant="subsection" as="h3" className="text-xl font-bold text-honeywell-navy mb-3">{service.title}</Heading>
-              <p className="text-brand-steelGray font-body leading-relaxed mb-6">
+              <p className="text-brand-steelGray font-body leading-relaxed mb-6 text-justify">
                 {service.description}
               </p>
               <Link href={service.link} className="inline-flex items-center text-honeywell-red font-bold hover:underline">
