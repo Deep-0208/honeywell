@@ -59,35 +59,35 @@ export const PILLAR_BLOCK_TYPES: CylinderType[] = [
     title: "Double Acting Hydraulic Cylinders",
     description: "Our most versatile cylinders providing hydraulic power in both extension and retraction strokes for precise load control.",
     category: "Hydraulic Cylinders",
-    imageSrc: "/images/home/hero/double-acting-hydraulic-cylinder-manufacturer.webp",
+    imageSrc: "/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinder-manufacturer.webp",
     href: "/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/"
   },
   {
     title: "Single Acting Hydraulic Cylinders",
     description: "Designed for applications where gravity or a mechanical spring returns the cylinder to its original position.",
     category: "Hydraulic Cylinders",
-    imageSrc: "/images/products/hydraulic-cylinders/single-acting-hydraulic-cylinder.webp",
+    imageSrc: "/images/products/hydraulic-cylinders/single-acting-hydraulic-cylinder-manufacturer.webp",
     href: "/products/hydraulic-cylinders/single-acting-hydraulic-cylinders/"
   },
   {
     title: "Tie-Rod Hydraulic Cylinders",
     description: "Industry-standard NFPA cylinders designed for easy maintenance, high cycle rates, and rugged industrial applications.",
     category: "Hydraulic Cylinders",
-    imageSrc: "/images/products/hydraulic-cylinders/tie-rod-hydraulic-cylinder.webp",
+    imageSrc: "/images/products/hydraulic-cylinders/tie-rod-hydraulic-cylinder-manufacturer.webp",
     href: "/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/"
   },
   {
     title: "Welded Hydraulic Cylinders",
     description: "Compact, heavy-duty cylinders engineered for mobile equipment and applications with spatial constraints.",
     category: "Hydraulic Cylinders",
-    imageSrc: "/images/home/hero/welded-hydraulic-cylinder-manufacturer.webp",
+    imageSrc: "/images/products/welded-hydraulic-cylinder.webp",
     href: "/products/hydraulic-cylinders/welded-hydraulic-cylinders/"
   },
   {
     title: "Telescopic Hydraulic Cylinders",
     description: "Multi-stage cylinders offering exceptionally long strokes from a compact retracted length, ideal for tipper trucks.",
     category: "Hydraulic Cylinders",
-    imageSrc: "/images/products/hydraulic-cylinders/telescopic-hydraulic-cylinder.webp",
+    imageSrc: "/images/products/hydraulic-cylinders/telescopic-hydraulic-cylinders-manufacturer.webp",
     href: "/products/hydraulic-cylinders/telescopic-hydraulic-cylinders/"
   },
   {

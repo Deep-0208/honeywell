@@ -2,9 +2,15 @@
 
 import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Layers } from 'lucide-react';
+import { ArrowRight, Layers, Building2, ShieldCheck, Factory } from 'lucide-react';
 
 import type { NavItem, NavLink } from '@/types/navigation';
+
+const ICON_MAP: Record<string, React.ElementType> = {
+  building: Building2,
+  shield: ShieldCheck,
+  factory: Factory,
+};
 
 interface MegaMenuProps {
   item: NavItem;
@@ -110,7 +116,10 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
                             flex items-center justify-center w-10 h-10 rounded-lg shrink-0 transition-colors duration-300
                             ${activeLink === link ? 'bg-red-50 text-honeywell-red' : 'bg-slate-100 text-brand-steelGray group-hover:bg-red-50 group-hover:text-honeywell-red'}
                           `}>
-                            <Layers className="w-5 h-5" aria-hidden="true" />
+                            {(() => {
+                              const IconComp = link.icon && ICON_MAP[link.icon] ? ICON_MAP[link.icon] : Layers;
+                              return <IconComp className="w-5 h-5" aria-hidden="true" />;
+                            })()}
                           </div>
 
                           <div className="min-w-0 flex-1">
@@ -172,7 +181,10 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
                             <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-honeywell-red rounded-r-full opacity-0 group-hover:h-3/5 group-hover:opacity-100 transition-all duration-300 ease-premium" aria-hidden="true" />
 
                             <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-slate-100 text-brand-steelGray group-hover:bg-red-50 group-hover:text-honeywell-red transition-colors duration-300 shrink-0">
-                              <Layers className="w-4 h-4" aria-hidden="true" />
+                              {(() => {
+                                const IconComp = sub.icon && ICON_MAP[sub.icon] ? ICON_MAP[sub.icon] : Layers;
+                                return <IconComp className="w-4 h-4" aria-hidden="true" />;
+                              })()}
                             </div>
 
                             <span className="text-[13px] font-semibold text-honeywell-navy font-display flex-1 group-hover:text-brand-deepNavy transition-colors">
