@@ -13,7 +13,7 @@ export function HydraulicCylinderHero() {
       <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red/5 skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block" aria-hidden="true" />
-      <div className="absolute inset-0 bg-[url('/images/noise.webp')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[url('/images/shared/industrial-texture-background.webp')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
       <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -48,19 +48,14 @@ export function HydraulicCylinderHero() {
 
 
 
-            {/* Trust Badges */}
-            <div className="flex flex-wrap items-center gap-3 mt-6">
-              <Badge variant="iso" className="bg-white text-honeywell-navy border border-slate-200">ISO 9001:2015</Badge>
-              <Badge variant="madeInIndia" className="bg-white text-orange-600 border border-orange-200">Made in India</Badge>
-              <Badge variant="default" className="bg-white text-brand-darkSlate border border-gray-200">100% Tested</Badge>
-            </div>
+
           </div>
 
           {/* Image Column */}
           <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
             <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
             <Image
-              src="/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad.webp"
+              src="/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad-manufacturer.webp"
               alt="Hydraulic Cylinder Manufacturer in Ahmedabad"
               fill
               priority fetchPriority="high" decoding="sync" quality={85}

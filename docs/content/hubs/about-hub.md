@@ -79,7 +79,6 @@ Quality is not an abstract concept; it is quantifiable data. We operate under st
 
 Crucially, we do not rely on random batch testing. **100% of the hydraulic cylinders and power packs we produce are hydrostatically tested at 1.5x their maximum working pressure before dispatch.** If a cylinder is rated for 210 Bar, we test it at 315 Bar to guarantee structural integrity and zero internal bypass.
 
-**[LEARN ABOUT OUR QUALITY STANDARDS →](/about/quality/)**
 
 ---
 

@@ -94,7 +94,7 @@ export const PILLAR_BLOCK_TYPES: CylinderType[] = [
     title: "Custom Hydraulic Cylinders",
     description: "Engineered-to-order cylinders tailored to your exact bore, stroke, pressure, and mounting specifications.",
     category: "Hydraulic Cylinders",
-    imageSrc: "/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp",
+    imageSrc: "/images/home/custom-hydraulic-cylinder-manufacturer.webp",
     href: "/products/hydraulic-cylinders/custom-hydraulic-cylinders/"
   }
 ];

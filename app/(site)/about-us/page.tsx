@@ -89,7 +89,7 @@ const organizationSchema = {
   '@type': 'Organization',
   name: COMPANY_INFO.name,
   url: COMPANY_INFO.websiteUrl,
-  logo: `${COMPANY_INFO.websiteUrl}/images/logos/long-size-logohydralics-logo.png`,
+  logo: `${COMPANY_INFO.websiteUrl}/images/shared/logos/honeywell-hydraulics-logo-full.png`,
   foundingDate: COMPANY_INFO.foundingYear,
   description: 'Leading hydraulic cylinder and power pack manufacturer in Ahmedabad, Gujarat. Custom-engineered hydraulic solutions for 25+ industries across India.',
   address: {
@@ -195,7 +195,7 @@ const PRODUCTS = [
     name: 'Hydraulic Cylinders',
     href: '/products/hydraulic-cylinders/',
     desc: 'Custom industrial hydraulic cylinders — double acting, welded, telescopic, tie rod configurations. Bore sizes 25mm to 500mm+.',
-    imageSrc: '/images/products/hero/hydraulic-cylinders-ahmedabad.webp'
+    imageSrc: '/images/products/hero/hydraulic-cylinders-ahmedabad-manufacturer.webp'
   },
   {
     name: 'Hydraulic Power Packs',
@@ -339,7 +339,7 @@ export default function AboutUsPage() {
                   Alt: Honeywell Hydraulics manufacturing facility — precision hydraulic production in Ahmedabad
                   Priority: High */}
               <Image
-                src="/images/facility/cnc-machining-center-hydraulic-cylinder.webp"
+                src="/images/company/cnc-machining-center-hydraulic-cylinder.webp"
                 alt="Honeywell Hydraulics manufacturing facility — precision hydraulic production in Ahmedabad"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-premium"
@@ -421,7 +421,7 @@ export default function AboutUsPage() {
             <Heading as="h2" variant="section" underline="center" id="values-heading" className="mb-3 text-honeywell-navy">
               Core Values
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-center">
               The principles that govern every engineering decision, every manufacturing process, and every client interaction at Honeywell Hydraulics.
             </p>
           </div>
@@ -449,7 +449,7 @@ export default function AboutUsPage() {
             <Heading as="h2" variant="section" underline="center" id="why-heading" className="mb-3 text-honeywell-navy">
               Why Choose Honeywell Hydraulics
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-center">
               Six reasons why OEMs, SPM builders, and maintenance engineers across India trust us as their hydraulic manufacturing partner.
             </p>
           </div>
@@ -479,7 +479,7 @@ export default function AboutUsPage() {
             <Heading as="h2" variant="section" underline="center" id="industries-heading" className="mb-3 text-honeywell-navy">
               Industries We Serve
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-center">
               We have engineered robust hydraulic solutions for severe-duty environments across India.
             </p>
           </div>
@@ -507,7 +507,7 @@ export default function AboutUsPage() {
             <Heading as="h2" variant="section" underline="center" id="products-heading" className="mb-3 text-honeywell-navy">
               Our Products
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-center">
               Precision-engineered hydraulic equipment designed and manufactured at our Ahmedabad facility.
             </p>
           </div>
@@ -576,7 +576,7 @@ export default function AboutUsPage() {
                   Priority: Medium */}
               <div className="aspect-[4/3] relative rounded-sm overflow-hidden bg-brand-surfaceGray">
                 <Image
-                  src="/images/facility/cnc-machining-center-hydraulic-cylinder.webp"
+                  src="/images/company/cnc-machining-center-hydraulic-cylinder.webp"
                   alt="CNC machining centre at Honeywell Hydraulics manufacturing facility Ahmedabad"
                   fill
                   className="object-cover"
@@ -597,7 +597,7 @@ export default function AboutUsPage() {
             <Heading as="h2" variant="section" underline="center" id="team-heading" className="mb-3 text-honeywell-navy">
               Our Engineering Team
             </Heading>
-            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-center">
               Behind every hydraulic solution we design is a team of fluid power engineers who have dedicated their careers to understanding the physics of hydraulic systems.
             </p>
           </div>
@@ -652,12 +652,6 @@ export default function AboutUsPage() {
                       {pillar}
                     </li>
                   ))}
-                </ul>
-                <div className="mt-6">
-                  <Button href="/quality" variant="primary" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>
-                    View Quality Policy
-                  </Button>
-                </div>
               </div>
             </div>
             <div className="order-1 lg:order-2">

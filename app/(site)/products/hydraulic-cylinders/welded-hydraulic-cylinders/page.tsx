@@ -819,7 +819,7 @@ function RelatedProducts() {
       title: 'Custom Hydraulic Cylinders',
       description: 'Bespoke fluid power for when standard catalogs fail. We engineer large-bore cylinders and provide reverse-engineering services.',
       href: '/products/hydraulic-cylinders/custom-hydraulic-cylinders/',
-      image: '/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp',
+      image: '/images/home/custom-hydraulic-cylinder-manufacturer.webp',
     },
     {
       title: 'Telescopic Hydraulic Cylinders',

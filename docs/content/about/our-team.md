@@ -99,7 +99,6 @@ Have a technical question that requires an expert answer? Our engineering team c
 # 8. Related About Pages
 
 *   [Our Manufacturing Facility](/about/manufacturing-facility/)
-*   [Quality Policy](/about/quality-policy/)
 *   [Certifications](/about/certifications/)
 
 ---

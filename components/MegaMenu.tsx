@@ -92,7 +92,7 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
                   )}
                   <ul className="space-y-2">
                     {column.links.map((link) => (
-                      <li key={link.href}>
+                      <li key={link.label}>
                         <Link
                           href={link.href}
                           onClick={onClose}

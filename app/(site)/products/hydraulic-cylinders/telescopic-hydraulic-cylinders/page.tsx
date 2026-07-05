@@ -48,7 +48,7 @@ const PAGE_TITLE =
 const PAGE_DESCRIPTION =
   'Leading telescopic hydraulic cylinder manufacturer in Gujarat. Engineering extreme-stroke, multi-stage cylinders for dump trucks and material handling.';
 const PAGE_URL = '/products/hydraulic-cylinders/telescopic-hydraulic-cylinders';
-const PAGE_IMAGE = '/images/og/telescopic-hydraulic-cylinders-og.png';
+const PAGE_IMAGE = '/images/seo/telescopic-hydraulic-cylinders-og.png';
 
 export const metadata: Metadata = {
   ...buildMetadata({

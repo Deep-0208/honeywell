@@ -31,7 +31,7 @@ export function CTA({
 }: CTAProps) {
   return (
     <section
-      className={`bg-honeywell-navy py-12 md:py-16 lg:py-20 relative overflow-hidden ${className}`}
+      className={`bg-gradient-to-r from-honeywell-navy to-[#0f172a] shadow-inner py-12 md:py-16 lg:py-20 relative overflow-hidden ${className}`}
       aria-labelledby="cta-heading"
     >
       {/* Background Accents — animated diagonal */}

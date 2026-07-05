@@ -23,7 +23,7 @@ export function ProductsSection() {
     <Section bg="gray" aria-labelledby="products-heading" className="relative overflow-hidden">
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute inset-0 bg-[url('/images/noise.webp')] opacity-[0.02] mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[url('/images/shared/industrial-texture-background.webp')] opacity-[0.02] mix-blend-overlay" />
         <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-bl from-white to-transparent opacity-60" />
         <div className="absolute -left-1/4 top-1/4 w-1/2 h-[150%] bg-white/40 skew-x-[20deg]" />
       </div>

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { X, ChevronDown, Phone, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
 
 import type { SiteNavigation, NavItem } from '@/types/navigation';
 
@@ -139,21 +140,14 @@ export default function MobileMenu({ navigation, isOpen, onClose }: MobileMenuPr
               </a>
 
               {/* Request Quote */}
-              <Link
+              <Button
                 href={navigation.ctaHref}
                 onClick={onClose}
-                className="
-                  flex items-center justify-center gap-2.5
-                  px-4 py-3 rounded-sm
-                  bg-honeywell-red text-white text-sm font-semibold font-body
-                  hover:bg-[#C41220]
-                  transition-colors duration-150
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2
-                "
+                isFullWidth
+                rightIcon={<ArrowRight className="w-4 h-4" aria-hidden="true" />}
               >
                 {navigation.ctaLabel}
-                <ArrowRight className="w-4 h-4" aria-hidden="true" />
-              </Link>
+              </Button>
             </div>
           </div>
         </>
@@ -233,7 +227,7 @@ function MobileNavItem({
             <ul className="pl-4 pr-2 pb-2 space-y-0.5" role="list">
               {item.megaMenu!.columns.flatMap((col) =>
                 col.links.map((link) => (
-                  <li key={link.href} role="listitem">
+                  <li key={link.label} role="listitem">
                     <Link
                       href={link.href}
                       onClick={onClose}

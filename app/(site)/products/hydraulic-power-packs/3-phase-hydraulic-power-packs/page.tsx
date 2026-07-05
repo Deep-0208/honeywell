@@ -704,7 +704,7 @@ function ManufacturingProcess() {
 
           <div className="relative aspect-square lg:aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/images/hero/hydraulic-cylinder-manufacturing-ahmedabad.webp" // Placeholder, will be replaced with power pack validation image later
+              src="/images/home/hydraulic-cylinder-manufacturing-ahmedabad.webp" // Placeholder, will be replaced with power pack validation image later
               alt="Hydraulic Power Pack Testing Facility"
               fill
               className="object-cover"

@@ -53,8 +53,8 @@ export function SEO({
       logo: {
         '@type': 'ImageObject',
         '@id': `${siteUrl}/#logo`,
-        url: `${siteUrl}/images/logos/long-size-logohydralics-logo.png`,
-        contentUrl: `${siteUrl}/images/logos/long-size-logohydralics-logo.png`,
+        url: `${siteUrl}/images/shared/logos/honeywell-hydraulics-logo-full.png`,
+        contentUrl: `${siteUrl}/images/shared/logos/honeywell-hydraulics-logo-full.png`,
         caption: COMPANY_INFO.name,
       },
       image: { '@id': `${siteUrl}/#logo` },
@@ -76,7 +76,7 @@ export function SEO({
       telephone: COMPANY_INFO.phone,
       email: COMPANY_INFO.email,
       priceRange: '₹₹',
-      image: `${siteUrl}/images/hero/hydraulic-cylinder-manufacturing-ahmedabad.webp`,
+      image: `${siteUrl}/images/home/hydraulic-cylinder-manufacturing-ahmedabad.webp`,
       address: {
         '@type': 'PostalAddress',
         streetAddress: COMPANY_INFO.address.streetAddress,

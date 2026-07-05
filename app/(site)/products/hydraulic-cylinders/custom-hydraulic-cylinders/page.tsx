@@ -49,7 +49,7 @@ const PAGE_TITLE =
 const PAGE_DESCRIPTION =
   'Custom hydraulic cylinder manufacturer in Ahmedabad. Bespoke CAD engineering, large bore cylinders (400mm+), and reverse engineering for heavy industry.';
 const PAGE_URL = '/products/hydraulic-cylinders/custom-hydraulic-cylinders';
-const PAGE_IMAGE = '/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp';
+const PAGE_IMAGE = '/images/home/custom-hydraulic-cylinder-manufacturer.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -333,7 +333,7 @@ function HeroSection() {
           <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
             <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
             <Image
-              src="/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp"
+              src="/images/home/custom-hydraulic-cylinder-manufacturer.webp"
               alt="Custom Hydraulic Cylinder Manufacturer in Ahmedabad - Bespoke large bore cylinder by Honeywell Hydraulics"
               fill
               priority fetchPriority="high" decoding="sync" quality={85}
