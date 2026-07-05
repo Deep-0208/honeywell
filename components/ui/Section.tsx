@@ -15,7 +15,7 @@ export function Section({ children, bg = 'white', className = '', ...props }: Se
   const bgStyles = {
     white: 'bg-white',
     gray: 'bg-brand-surfaceGray', // Slate 50
-    navy: 'bg-honeywell-navy text-white',
+    navy: 'bg-gradient-to-r from-honeywell-navy to-[#0f172a] text-white shadow-inner',
   };
 
   const classes = `

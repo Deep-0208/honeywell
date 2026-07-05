@@ -31,7 +31,7 @@ export function WhyChooseUsSection() {
   return (
     <Section bg="gray" aria-labelledby="why-heading" className="relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute inset-0 bg-[url('/images/noise.webp')] opacity-[0.02] mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[url('/images/shared/industrial-texture-background.webp')] opacity-[0.02] mix-blend-overlay" />
       </div>
       <Container className="relative z-10">
         {/* Section header */}

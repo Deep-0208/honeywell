@@ -19,7 +19,10 @@
     --motion-duration: 0;
     --motion-scale: 0;
   }
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -46,13 +49,21 @@
     @apply bg-white text-brand-textDark font-body antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-poppins), sans-serif !important;
     @apply font-display text-honeywell-navy;
   }
 
   /* Ensure Poppins is inherited by form elements (overrides browser defaults) */
-  input, textarea, select, button {
+  input,
+  textarea,
+  select,
+  button {
     font-family: inherit;
   }
 
@@ -68,13 +79,16 @@
     width: 6px;
     height: 6px;
   }
+
   ::-webkit-scrollbar-track {
     background: transparent;
   }
+
   ::-webkit-scrollbar-thumb {
     background-color: rgba(13, 27, 92, 0.15);
     border-radius: 3px;
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background-color: rgba(13, 27, 92, 0.3);
   }
@@ -98,31 +112,32 @@
   .card {
     @apply bg-white border border-brand-borderGray rounded-sm transition-all duration-300;
   }
-  
+
   .card-hover {
     @apply hover:shadow-card-hover hover:-translate-y-1 border-t-2 border-t-transparent hover:border-t-honeywell-red;
   }
-  
+
   /* =========================================
      SECTION DESIGN
      ========================================= */
   .section-white {
     @apply bg-white py-16 md:py-24;
   }
-  
+
   .section-gray {
     @apply bg-brand-surfaceGray py-16 md:py-24;
   }
-  
+
   .section-light {
     @apply bg-brand-lightSurface py-16 md:py-24;
   }
-  
+
   /* =========================================
      HERO DESIGN
      ========================================= */
   .hero-overlay {
-    @apply bg-honeywell-navy/75; /* rgba(13,27,92,0.75) */
+    @apply bg-honeywell-navy/75;
+    /* rgba(13,27,92,0.75) */
   }
 
   /* =========================================
@@ -131,8 +146,15 @@
 
   /* Animated gradient background for CTA sections */
   @keyframes gradient-shift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
   }
 
   .animate-gradient {
@@ -143,9 +165,17 @@
 
   /* Subtle pulse for WhatsApp CTA */
   @keyframes pulse-ring {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+    }
+
+    70% {
+      box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
   }
 
   .animate-pulse-ring {
@@ -155,9 +185,17 @@
 
   /* Red pulse for Quote CTA */
   @keyframes pulse-ring-red {
-    0% { box-shadow: 0 0 0 0 rgba(227, 27, 35, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(227, 27, 35, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(227, 27, 35, 0); }
+    0% {
+      box-shadow: 0 0 0 0 rgba(227, 27, 35, 0.4);
+    }
+
+    70% {
+      box-shadow: 0 0 0 10px rgba(227, 27, 35, 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgba(227, 27, 35, 0);
+    }
   }
 
   .animate-pulse-ring-red {
@@ -167,17 +205,20 @@
 
   /* Skeleton loading shimmer */
   @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    0% {
+      background-position: -200% 0;
+    }
+
+    100% {
+      background-position: 200% 0;
+    }
   }
 
   .animate-shimmer {
-    background: linear-gradient(
-      90deg,
-      #F1F5F9 25%,
-      #E2E8F0 37%,
-      #F1F5F9 63%
-    );
+    background: linear-gradient(90deg,
+        #F1F5F9 25%,
+        #E2E8F0 37%,
+        #F1F5F9 63%);
     background-size: 200% 100%;
     animation: shimmer 1.8s ease-in-out infinite;
   }
@@ -185,19 +226,17 @@
   /* Smooth section dividers */
   .section-divider {
     @apply h-px w-full;
-    background: linear-gradient(
-      to right,
-      transparent,
-      #E2E8F0 20%,
-      #E2E8F0 80%,
-      transparent
-    );
+    background: linear-gradient(to right,
+        transparent,
+        #E2E8F0 20%,
+        #E2E8F0 80%,
+        transparent);
   }
 
   /* Grid background pattern — used by ClientLogosSection */
   .bg-grid-pattern {
     background-image: linear-gradient(#0D1B5C 1px, transparent 1px),
-                      linear-gradient(90deg, #0D1B5C 1px, transparent 1px);
+      linear-gradient(90deg, #0D1B5C 1px, transparent 1px);
     background-size: 32px 32px;
   }
 }
@@ -216,34 +255,182 @@
 /* =========================================
    POPPINS AND ROBOTO FONT CLASSES
    ========================================= */
-.poppins-thin { font-family: var(--font-poppins), sans-serif; font-weight: 100; font-style: normal; }
-.poppins-extralight { font-family: var(--font-poppins), sans-serif; font-weight: 200; font-style: normal; }
-.poppins-light { font-family: var(--font-poppins), sans-serif; font-weight: 300; font-style: normal; }
-.poppins-regular { font-family: var(--font-poppins), sans-serif; font-weight: 400; font-style: normal; }
-.poppins-medium { font-family: var(--font-poppins), sans-serif; font-weight: 500; font-style: normal; }
-.poppins-semibold { font-family: var(--font-poppins), sans-serif; font-weight: 600; font-style: normal; }
-.poppins-bold { font-family: var(--font-poppins), sans-serif; font-weight: 700; font-style: normal; }
-.poppins-extrabold { font-family: var(--font-poppins), sans-serif; font-weight: 800; font-style: normal; }
-.poppins-black { font-family: var(--font-poppins), sans-serif; font-weight: 900; font-style: normal; }
-.poppins-thin-italic { font-family: var(--font-poppins), sans-serif; font-weight: 100; font-style: italic; }
-.poppins-extralight-italic { font-family: var(--font-poppins), sans-serif; font-weight: 200; font-style: italic; }
-.poppins-light-italic { font-family: var(--font-poppins), sans-serif; font-weight: 300; font-style: italic; }
-.poppins-regular-italic { font-family: var(--font-poppins), sans-serif; font-weight: 400; font-style: italic; }
-.poppins-medium-italic { font-family: var(--font-poppins), sans-serif; font-weight: 500; font-style: italic; }
-.poppins-semibold-italic { font-family: var(--font-poppins), sans-serif; font-weight: 600; font-style: italic; }
-.poppins-bold-italic { font-family: var(--font-poppins), sans-serif; font-weight: 700; font-style: italic; }
-.poppins-extrabold-italic { font-family: var(--font-poppins), sans-serif; font-weight: 800; font-style: italic; }
-.poppins-black-italic { font-family: var(--font-poppins), sans-serif; font-weight: 900; font-style: italic; }
+.poppins-thin {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
 
-.roboto-thin { font-family: var(--font-roboto), sans-serif; font-weight: 100; font-style: normal; }
-.roboto-light { font-family: var(--font-roboto), sans-serif; font-weight: 300; font-style: normal; }
-.roboto-regular { font-family: var(--font-roboto), sans-serif; font-weight: 400; font-style: normal; }
-.roboto-medium { font-family: var(--font-roboto), sans-serif; font-weight: 500; font-style: normal; }
-.roboto-bold { font-family: var(--font-roboto), sans-serif; font-weight: 700; font-style: normal; }
-.roboto-black { font-family: var(--font-roboto), sans-serif; font-weight: 900; font-style: normal; }
-.roboto-thin-italic { font-family: var(--font-roboto), sans-serif; font-weight: 100; font-style: italic; }
-.roboto-light-italic { font-family: var(--font-roboto), sans-serif; font-weight: 300; font-style: italic; }
-.roboto-regular-italic { font-family: var(--font-roboto), sans-serif; font-weight: 400; font-style: italic; }
-.roboto-medium-italic { font-family: var(--font-roboto), sans-serif; font-weight: 500; font-style: italic; }
-.roboto-bold-italic { font-family: var(--font-roboto), sans-serif; font-weight: 700; font-style: italic; }
-.roboto-black-italic { font-family: var(--font-roboto), sans-serif; font-weight: 900; font-style: italic; }
+.poppins-extralight {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.roboto-thin {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}

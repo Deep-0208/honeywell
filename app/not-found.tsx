@@ -17,7 +17,7 @@ export default function NotFound() {
   return (
     <PageContainer className="py-24 md:py-32 flex flex-col items-center justify-center min-h-[60vh] text-center">
       <Image
-        src="/images/logos/long-size-logohydralics-logo.png"
+        src="/images/shared/logos/honeywell-hydraulics-logo-full.png"
         alt="Honeywell Hydraulics Logo"
         width={280}
         height={68}

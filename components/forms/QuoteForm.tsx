@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import { ArrowRight, Upload, CheckCircle, AlertCircle, Loader2, ChevronDown, ChevronUp } from 'lucide-react';
+import { ArrowRight, Upload, CheckCircle, AlertCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -496,24 +497,16 @@ export function QuoteForm() {
 
       {/* ── Submit ─────────────────────────────────────────────────────────── */}
       <div className="pt-2">
-        <button
+        <Button
           type="submit"
-          disabled={status === 'submitting'}
-          className="w-full inline-flex items-center justify-center gap-3 bg-honeywell-red hover:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold font-body text-base px-6 py-4 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-honeywell-red/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2"
+          isLoading={status === 'submitting'}
+          isFullWidth
+          size="lg"
+          rightIcon={status !== 'submitting' ? <ArrowRight className="w-5 h-5" aria-hidden="true" /> : undefined}
           aria-busy={status === 'submitting'}
         >
-          {status === 'submitting' ? (
-            <>
-              <Loader2 className="w-5 h-5 animate-spin" aria-hidden="true" />
-              Sending Your Request…
-            </>
-          ) : (
-            <>
-              Send My Quote Request
-              <ArrowRight className="w-5 h-5" aria-hidden="true" />
-            </>
-          )}
-        </button>
+          {status === 'submitting' ? 'Sending Your Request…' : 'Send My Quote Request'}
+        </Button>
         <p className="mt-3 text-xs text-slate-400 font-body text-center">
           By submitting, you agree to be contacted by our team. We never share your data.
         </p>

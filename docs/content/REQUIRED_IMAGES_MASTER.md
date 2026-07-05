@@ -20,7 +20,7 @@
 
 | Page / Component | Final Image Filename | SEO Alt Text | Used In | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| Root Layout OG | `/images/og/default-og.jpg` | Honeywell Hydraulics — Hydraulic Cylinder & Power Pack Manufacturer in Ahmedabad | `layout.tsx` `SEO_DEFAULTS.ogImage` | 🔴 Missing |
+| Root Layout OG | `/images/seo/honeywell-hydraulics-manufacturer-india-og.jpg` | Honeywell Hydraulics — Hydraulic Cylinder & Power Pack Manufacturer in Ahmedabad | `layout.tsx` `SEO_DEFAULTS.ogImage` | 🔴 Missing |
 | Products Hub — Cylinders Card | `/images/products/hydraulic-cylinders-hub.webp` | Heavy-duty hydraulic cylinders for industrial applications — Honeywell Hydraulics Ahmedabad | `app/(site)/products/page.tsx` `ProductCard` | 🔴 Missing |
 | Products Hub — Power Packs Card | `/images/products/hydraulic-power-packs-hub.webp` | Industrial 3-phase hydraulic power pack unit — Honeywell Hydraulics Gujarat | `app/(site)/products/page.tsx` `ProductCard` | 🔴 Missing |
 | Cylinders Hub — Schema & Metadata OG | `/images/products/hydraulic-cylinders-ahmedabad.webp` | Industrial hydraulic cylinder manufacturer Ahmedabad — Honeywell Hydraulics | `app/(site)/products/hydraulic-cylinders/page.tsx` schema + metadata | 🔴 Missing |
@@ -36,12 +36,10 @@
 | Infra Gallery — CNC | `/images/infrastructure/cnc-machining-centre.webp` | CNC turning centre for hydraulic cylinder barrel machining | `app/(site)/infrastructure/page.tsx` | 🔴 Missing |
 | Infra Gallery — Test Rig | `/images/infrastructure/hydrostatic-test-rig.webp` | Hydrostatic pressure testing rig for hydraulic cylinders | `app/(site)/infrastructure/page.tsx` | 🔴 Missing |
 | Infra Gallery — Assembly | `/images/infrastructure/assembly-bay.webp` | Hydraulic power pack assembly bay | `app/(site)/infrastructure/page.tsx` | 🔴 Missing |
-| Infra Gallery — Quality | `/images/infrastructure/quality-inspection.webp` | Quality inspection equipment — CMM and bore gauges | `app/(site)/infrastructure/page.tsx` | 🔴 Missing |
 | Mfg Gallery — CNC | `/images/manufacturing/cnc-turning-centre.webp` | CNC turning centre for piston rod machining | `app/(site)/manufacturing-facility/page.tsx` | 🔴 Missing |
 | Mfg Gallery — Welding | `/images/manufacturing/welding-bay.webp` | Heavy-duty welding bay for cylinder barrel construction | `app/(site)/manufacturing-facility/page.tsx` | 🔴 Missing |
 | Mfg Gallery — Assembly | `/images/manufacturing/assembly-area.webp` | Hydraulic power pack assembly area | `app/(site)/manufacturing-facility/page.tsx` | 🔴 Missing |
 | Mfg Gallery — Test Rig | `/images/manufacturing/test-rig.webp` | Hydrostatic pressure test rig | `app/(site)/manufacturing-facility/page.tsx` | 🔴 Missing |
-| Quality — Test Rig | `/images/quality/pressure-test-rig.webp` | Hydraulic cylinder pressure test rig — 700 Bar capacity | `app/(site)/quality/page.tsx` | 🔴 Missing |
 
 ### Priority: LOW
 

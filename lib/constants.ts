@@ -29,5 +29,5 @@ export const COMPANY_INFO = {
 export const SEO_DEFAULTS = {
   title: 'Honeywell Hydraulics | Custom Hydraulic Cylinder Manufacturer in India',
   description: 'Leading manufacturer of custom hydraulic cylinders and power packs in Ahmedabad, Gujarat. Serving 25+ industries since 2018. Contact us today.',
-  ogImage: '/images/og/default-og.jpg'
+  ogImage: '/images/seo/honeywell-hydraulics-manufacturer-india-og.jpg'
 };

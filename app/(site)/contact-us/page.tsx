@@ -217,17 +217,20 @@ export default function ContactUsPage() {
       <JsonLd data={faqSchema} />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
-      <section className="bg-honeywell-navy text-white pt-6 md:pt-8 pb-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-[0.06] -skew-x-12 translate-x-1/4" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" aria-hidden="true" />
+      <section className="bg-white pt-12 md:pt-20 pb-8 md:pb-12 relative overflow-hidden border-b border-slate-200">
+        {/* Subtle engineering grid background */}
+        <div 
+          className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_10%_0%,#000_70%,transparent_100%)]" 
+          aria-hidden="true" 
+        />
 
         <Container className="relative z-10">
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
             <ol className="flex items-center gap-2">
-              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link></li>
               <li aria-hidden="true">&rsaquo;</li>
-              <li className="text-white font-semibold" aria-current="page">Contact Us</li>
+              <li className="text-honeywell-red font-semibold" aria-current="page">Contact Us</li>
             </ol>
           </nav>
 
@@ -235,10 +238,10 @@ export default function ContactUsPage() {
             {/* Left — Headline */}
             <div>
 
-              <Heading variant="section" as="h1" className="text-white mb-5 leading-tight">
-                We&apos;re Here to Help — Just Reach Out
+              <Heading variant="section" as="h1" className="text-honeywell-navy mb-5 leading-tight font-display font-extrabold tracking-tight">
+                We&apos;re Here to Help —<br className="hidden md:block" /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-honeywell-navy via-honeywell-navy to-honeywell-red">Just Reach Out</span>
               </Heading>
-              <p className="text-[#CBD5E1] text-lg font-body leading-relaxed mb-8 max-w-lg text-justify">
+              <p className="text-brand-steelGray text-lg font-body leading-relaxed mb-8 max-w-lg text-justify">
                 Call us, send a WhatsApp, or fill the form below. Our team responds to every inquiry and will help you find the right hydraulic solution.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -253,32 +256,32 @@ export default function ContactUsPage() {
                   href={NAP.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold font-body text-sm px-6 py-3 rounded-full transition-all duration-200"
+                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 border border-slate-200 text-honeywell-navy font-semibold font-body text-sm px-6 py-3 rounded-full transition-all duration-200 hover:border-honeywell-red/30"
                 >
-                  <MessageCircle className="w-4 h-4" aria-hidden="true" />
+                  <MessageCircle className="w-4 h-4 text-green-600" aria-hidden="true" />
                   WhatsApp Us
                 </a>
                 <Link
                   href="/request-quote"
-                  className="inline-flex items-center justify-center gap-2 bg-transparent border border-white/20 text-white hover:bg-white/10 font-semibold font-body text-sm px-6 py-3 rounded-full transition-all duration-200"
+                  className="inline-flex items-center justify-center gap-2 bg-transparent border border-slate-200 text-honeywell-navy hover:bg-slate-50 font-semibold font-body text-sm px-6 py-3 rounded-full transition-all duration-200 hover:border-honeywell-navy/30"
                 >
                   Request a Quote
                 </Link>
               </div>
             </div>
 
-            {/* Right — Why contact us — rounded-sm to match design system */}
+            {/* Right — Why contact us */}
             <div className="grid grid-cols-2 gap-4">
               {WHY_CONTACT.map((item) => (
                 <div
                   key={item.title}
-                  className="bg-white/5 border border-white/10 rounded-xl p-5 transition-all duration-350 ease-premium hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red hover:bg-white/10 hover:shadow-float"
+                  className="bg-brand-surfaceGray border border-slate-200 rounded-xl p-5 transition-all duration-350 ease-premium hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red hover:shadow-float group"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-honeywell-red/20 flex items-center justify-center text-honeywell-red mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-honeywell-navy flex items-center justify-center text-white mb-3 group-hover:scale-110 transition-transform duration-300">
                     {item.icon}
                   </div>
-                  <p className="font-display font-bold text-white text-sm mb-1 text-justify">{item.title}</p>
-                  <p className="text-[#94A3B8] text-xs font-body leading-relaxed text-justify">{item.body}</p>
+                  <p className="font-display font-bold text-honeywell-navy text-sm mb-1 text-justify">{item.title}</p>
+                  <p className="text-brand-steelGray text-xs font-body leading-relaxed text-justify">{item.body}</p>
                 </div>
               ))}
             </div>
@@ -470,7 +473,7 @@ export default function ContactUsPage() {
       <SiteFAQSection faqs={CONTACT_FAQS} />
 
       {/* ── Final CTA Banner — rounded-full buttons ── */}
-      <section className="bg-honeywell-navy py-14 relative overflow-hidden" aria-label="Final contact strip">
+      <section className="bg-gradient-to-r from-honeywell-navy to-[#0f172a] shadow-inner py-14 relative overflow-hidden" aria-label="Final contact strip">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-honeywell-red/40 to-transparent" aria-hidden="true" />
         <Container className="relative z-10">

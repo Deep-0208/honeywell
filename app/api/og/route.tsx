@@ -11,7 +11,7 @@ export async function GET(req: NextRequest) {
     // DEFENSIVE SEO: We use the PNG logo specifically because next/og has excellent 
     // native support for PNGs compared to WebP. 
     // Absolute URL is required by ImageResponse, which we construct using req.url
-    const logoUrl = new URL('/images/logos/long-size-logohydralics-logo.png', req.url).toString();
+    const logoUrl = new URL('/images/shared/logos/honeywell-hydraulics-logo-full.png', req.url).toString();
 
     return new ImageResponse(
       (

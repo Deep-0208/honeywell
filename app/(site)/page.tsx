@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: HOMEPAGE_TITLE, // used for OG/Twitter fallbacks
     description: HOMEPAGE_DESCRIPTION,
     canonical: '/',
-    image: '/images/og/custom-hydraulic-cylinder-manufacturer-og.jpg',
+    image: '/images/seo/custom-hydraulic-cylinder-manufacturer-og.jpg',
   }),
   title: { absolute: "Hydraulic Cylinder & Powerpack Manufacturer | Honeywell" },
 };

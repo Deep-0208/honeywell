@@ -41,8 +41,12 @@ export function IndustriesSection() {
 
         {/* Industry cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {homepageIndustries.map((industry) => (
-            <div key={industry.industryName}>
+          {homepageIndustries.map((industry, index) => (
+            <div 
+              key={industry.industryName}
+              className="opacity-0 animate-fade-in-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               <IndustryCard
                 industryName={industry.industryName}
                 description={industry.description}

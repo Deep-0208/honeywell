@@ -115,7 +115,6 @@ To schedule a facility visit, contact us at: engineering@honeywellhydraulics.com
 # 7. Related About Pages
 
 *   [Our Team](/about/our-team/)
-*   [Quality Policy](/about/quality-policy/)
 *   [Certifications](/about/certifications/)
 
 ---

@@ -195,7 +195,7 @@ export default function Header({ navigation }: HeaderProps) {
               aria-label="Honeywell Hydraulics — Home"
             >
               <Image
-                src="/images/logos/long-size-logohydralics-logo.png"
+                src="/images/shared/logos/honeywell-hydraulics-logo-full.png"
                 alt="Honeywell Hydraulics — Custom Hydraulic Cylinder & Power Pack Manufacturer"
                 width={350}
                 height={100}
@@ -217,7 +217,7 @@ export default function Header({ navigation }: HeaderProps) {
 
               {/* ─── Desktop Navigation ─── */}
               <nav
-                className="hidden lg:flex items-center justify-end h-full"
+                className="hidden xl:flex items-center justify-end h-full"
                 aria-label="Main navigation"
               >
                 <ul className="flex items-center justify-end h-full pr-3 xl:pr-4">
@@ -292,7 +292,7 @@ export default function Header({ navigation }: HeaderProps) {
 
                         {/* Separator Line */}
                         {index < navigation.mainNav.length - 1 && (
-                          <div className="hidden lg:block w-[1px] h-4 xl:h-5 bg-gray-200 mx-0.5 shrink-0" aria-hidden="true" />
+                          <div className="hidden xl:block w-[1px] h-4 xl:h-5 bg-gray-200 mx-0.5 shrink-0" aria-hidden="true" />
                         )}
                       </li>
                     );
@@ -342,7 +342,7 @@ export default function Header({ navigation }: HeaderProps) {
                   aria-label="Open navigation menu"
                   aria-expanded={isMobileMenuOpen}
                   className="
-                    lg:hidden p-2.5 rounded-full cursor-pointer
+                    xl:hidden p-2.5 rounded-full cursor-pointer
                     text-honeywell-navy hover:bg-slate-100
                     border border-slate-200
                     transition-colors duration-200

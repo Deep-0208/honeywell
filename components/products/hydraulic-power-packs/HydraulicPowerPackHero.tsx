@@ -12,7 +12,7 @@ export function HydraulicPowerPackHero() {
       <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
       <div className="absolute top-0 left-0 w-1/2 h-full bg-honeywell-navy/5 skew-x-[12deg] -translate-x-20 -z-10 hidden lg:block" />
-      <div className="absolute inset-0 bg-[url('/images/noise.webp')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[url('/images/shared/industrial-texture-background.webp')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
       
       <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -47,12 +47,7 @@ export function HydraulicPowerPackHero() {
 
 
 
-            {/* Trust Badges */}
-            <div className="flex flex-wrap items-center gap-3 mt-6">
-              <Badge variant="iso" className="bg-white text-honeywell-navy border border-slate-200">ISO 9001:2015</Badge>
-              <Badge variant="madeInIndia" className="bg-white text-orange-600 border border-orange-200">Made in India</Badge>
-              <Badge variant="default" className="bg-white text-brand-darkSlate border border-gray-200">100% Load Tested</Badge>
-            </div>
+
           </div>
 
           {/* Image */}
