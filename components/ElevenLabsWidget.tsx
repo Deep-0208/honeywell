@@ -42,8 +42,8 @@ function ElevenLabsWidgetInner() {
   return (
     <div className="fixed bottom-8 right-8 z-[9999] flex flex-col items-end gap-4 font-sans">
       {isOpen && (
-        <div className="w-[340px] bg-white/90 backdrop-blur-3xl border border-white/60 rounded-[2rem] p-7 shadow-[0_20px_60px_-15px_rgba(13,27,92,0.15)] ring-1 ring-honeywell-navy/[0.05] text-honeywell-navy overflow-hidden relative transition-all duration-500 ease-out transform origin-bottom-right">
-          
+        <div className="w-[340px] bg-white/90 backdrop-blur-3xl border border-white/60 rounded-[2rem] p-7 shadow-[0_20px_60px_-15px_rgba(13,27,92,0.15)] ring-1 ring-honeywell-navy/[0.05] text-honeywell-navy overflow-hidden relative origin-bottom-right animate-in fade-in zoom-in-95 slide-in-from-bottom-8 duration-500 ease-out fill-mode-both">
+
           {/* Header */}
           <div className="flex justify-between items-center mb-8">
             <div className="flex items-center gap-3">
@@ -52,7 +52,7 @@ function ElevenLabsWidgetInner() {
               </div>
               <h3 className="font-semibold text-lg tracking-tight text-honeywell-navy">AI Assistant</h3>
             </div>
-            <button 
+            <button
               onClick={() => {
                 if (isConnected) stopConversation();
                 setIsOpen(false);
@@ -72,7 +72,7 @@ function ElevenLabsWidgetInner() {
                 <p className="text-sm font-medium text-gray-500 tracking-wide uppercase text-[11px] letter-spacing-widest text-justify">Connecting securely...</p>
               </div>
             )}
-            
+
             {isConnected && (
               <div className="flex flex-col items-center gap-10 w-full animate-in fade-in zoom-in duration-500">
                 {/* Audio visualizer */}
@@ -86,12 +86,12 @@ function ElevenLabsWidgetInner() {
                     "absolute inset-0 rounded-full bg-honeywell-navy/10 transition-all duration-500 ease-out",
                     conversation.isSpeaking ? "scale-[1.4] opacity-100" : "scale-100 opacity-0"
                   )} />
-                  
+
                   {/* Core Orb */}
                   <div className={twMerge(
                     "relative flex items-center justify-center w-20 h-20 rounded-full shadow-xl transition-all duration-300 z-10",
-                    conversation.isSpeaking 
-                      ? "bg-honeywell-navy shadow-honeywell-navy/30 scale-110" 
+                    conversation.isSpeaking
+                      ? "bg-honeywell-navy shadow-honeywell-navy/30 scale-110"
                       : "bg-white border border-gray-100 shadow-[0_8px_24px_-4px_rgba(13,27,92,0.12)] scale-100"
                   )}>
                     <AudioLines className={twMerge(
@@ -147,13 +147,25 @@ function ElevenLabsWidgetInner() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="group relative flex items-center justify-center w-[68px] h-[68px] bg-white border border-gray-100 rounded-[1.5rem] shadow-[0_12px_40px_-10px_rgba(13,27,92,0.2)] hover:shadow-[0_20px_50px_-12px_rgba(13,27,92,0.25)] transition-all duration-500 hover:-translate-y-1"
+          className="group relative outline-none [--sz-btn:68px] [--space:calc(var(--sz-btn)/5.5)] [--gen-sz:calc(var(--space)*2)] [--sz-text:calc(var(--sz-btn)-var(--gen-sz))] h-[var(--sz-btn)] w-[var(--sz-btn)] border border-solid border-transparent rounded-[1.5rem] flex items-center justify-center aspect-square cursor-pointer transition-transform duration-200 hover:-translate-y-1 active:scale-[0.95] bg-[linear-gradient(45deg,#0a154a,#1e3a8a)] shadow-[0_12px_40px_-10px_rgba(10,21,74,0.4),rgba(255,255,255,0.15)_0_2px_6px_0_inset] animate-in fade-in zoom-in slide-in-from-bottom-4 duration-500 ease-out"
         >
-          <div className="absolute inset-0 bg-honeywell-navy/5 rounded-[1.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <Sparkles className="w-7 h-7 text-honeywell-navy transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12 z-10" strokeWidth={2.5} />
-          
+          <svg
+            className="animate-pulse absolute z-10 overflow-visible transition-all duration-300 text-honeywell-red group-hover:text-white top-[calc(var(--sz-text)/7)] left-[calc(var(--sz-text)/7)] h-[var(--gen-sz)] w-[var(--gen-sz)] group-hover:h-[var(--sz-text)] group-hover:w-[var(--sz-text)] group-hover:left-[calc(var(--sz-text)/4)] group-hover:top-[calc(calc(var(--gen-sz))/2)]"
+            stroke="none"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+            />
+          </svg>
+          <span className="[font-size:var(--sz-text)] font-extrabold leading-none text-white transition-all duration-200 group-hover:opacity-0">
+            AI
+          </span>
           {/* Unread indicator dot */}
-          <div className="absolute top-4 right-4 w-2.5 h-2.5 bg-honeywell-red rounded-full border-2 border-white shadow-sm" />
+          <div className="absolute top-[2px] right-[2px] w-3 h-3 bg-honeywell-red rounded-full border-2 border-honeywell-navy shadow-sm z-20" />
         </button>
       )}
     </div>

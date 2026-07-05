@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    
+
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),
@@ -829,7 +829,7 @@ function RelatedProducts() {
       description:
         'Need beyond standard NFPA? Explore our bespoke manufacturing capabilities for extreme large bore and reverse-engineered actuators.',
       category: 'Cylinders',
-      imageSrc: '/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp',
+      imageSrc: '/images/home/custom-hydraulic-cylinder-manufacturer.webp',
       href: '/products/hydraulic-cylinders/custom-hydraulic-cylinders/',
       ctaText: 'View Custom Cylinders',
     },
@@ -999,8 +999,8 @@ function LocalServiceAreas() {
 /* ─── 14 FAQ Section ─── */
 function FAQSection() {
   return (
-    <SiteFAQSection 
-      faqs={TIE_ROD_FAQS} 
+    <SiteFAQSection
+      faqs={TIE_ROD_FAQS}
       title="Frequently Asked Questions"
       description="Common questions about our tie rod hydraulic cylinder capabilities."
       injectSchema={false}

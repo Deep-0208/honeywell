@@ -74,7 +74,6 @@ website/
 │       │   ├── page.tsx         ← Products hub page
 │       │   ├── hydraulic-cylinders/
 │       │   └── hydraulic-power-packs/
-│       ├── quality/             ← /quality/
 │       └── request-quote/       ← /request-quote/
 │
 ├── components/

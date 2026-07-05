@@ -187,20 +187,22 @@ export default function RequestQuotePage() {
       <JsonLd data={faqSchema} />
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
-      <section className="bg-honeywell-navy text-white pt-6 md:pt-8 pb-20 relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-[0.06] -skew-x-12 translate-x-1/4" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" aria-hidden="true" />
+      <section className="bg-white pt-12 md:pt-20 pb-8 md:pb-12 relative overflow-hidden border-b border-slate-200">
+        {/* Subtle engineering grid background */}
+        <div 
+          className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_10%_0%,#000_70%,transparent_100%)]" 
+          aria-hidden="true" 
+        />
 
         <Container className="relative z-10">
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
             <ol className="flex items-center gap-2">
               <li>
-                <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
               </li>
               <li aria-hidden="true">&rsaquo;</li>
-              <li className="text-white font-semibold" aria-current="page">Request Quote</li>
+              <li className="text-honeywell-red font-semibold" aria-current="page">Request Quote</li>
             </ol>
           </nav>
 
@@ -208,10 +210,10 @@ export default function RequestQuotePage() {
             {/* Left — Headline */}
             <div>
 
-              <Heading variant="section" as="h1" className="text-white mb-5 leading-tight">
-                Get a Free Quote for Your Hydraulic Requirement
+              <Heading variant="section" as="h1" className="text-honeywell-navy mb-5 leading-tight font-display font-extrabold tracking-tight">
+                Get a Free Quote for Your<br className="hidden md:block" /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-honeywell-navy via-honeywell-navy to-honeywell-red">Hydraulic Requirement</span>
               </Heading>
-              <p className="text-[#CBD5E1] text-lg font-body leading-relaxed mb-8 max-w-lg text-justify">
+              <p className="text-brand-steelGray text-lg font-body leading-relaxed mb-8 max-w-lg text-justify">
                 Not sure what you need? That&apos;s okay. Just tell us about your machine or project and our team will guide you to the right solution.
               </p>
 
@@ -228,9 +230,9 @@ export default function RequestQuotePage() {
                   href="https://wa.me/919924343873"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold font-body text-sm px-6 py-3 rounded-full transition-all duration-200"
+                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 border border-slate-200 text-honeywell-navy font-semibold font-body text-sm px-6 py-3 rounded-full transition-all duration-200 hover:border-honeywell-red/30"
                 >
-                  <MessageCircle className="w-4 h-4" aria-hidden="true" />
+                  <MessageCircle className="w-4 h-4 text-green-600" aria-hidden="true" />
                   WhatsApp Us
                 </a>
               </div>
@@ -241,13 +243,13 @@ export default function RequestQuotePage() {
               {PROMISES.map((p) => (
                 <div
                   key={p.title}
-                  className="bg-white/5 border border-white/10 rounded-xl p-5 transition-all duration-350 ease-premium hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red hover:bg-white/10 hover:shadow-float"
+                  className="bg-brand-surfaceGray border border-slate-200 rounded-xl p-5 transition-all duration-350 ease-premium hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red hover:shadow-float group"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-honeywell-red/20 flex items-center justify-center text-honeywell-red mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-honeywell-navy flex items-center justify-center text-white mb-3 group-hover:scale-110 transition-transform duration-300">
                     {p.icon}
                   </div>
-                  <p className="font-display font-bold text-white text-sm mb-1 text-justify">{p.title}</p>
-                  <p className="text-[#94A3B8] text-xs font-body leading-relaxed text-justify">{p.body}</p>
+                  <p className="font-display font-bold text-honeywell-navy text-sm mb-1 text-justify">{p.title}</p>
+                  <p className="text-brand-steelGray text-xs font-body leading-relaxed text-justify">{p.body}</p>
                 </div>
               ))}
             </div>
@@ -256,13 +258,15 @@ export default function RequestQuotePage() {
       </section>
 
       {/* ── Trust stats bar ────────────────────────────────────────────────── */}
-      <div className="bg-honeywell-red py-5">
-        <Container>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            {TRUST_STATS.map((stat) => (
-              <div key={stat.label}>
-                <p className="text-xl md:text-2xl font-display font-extrabold text-white text-justify">{stat.value}</p>
-                <p className="text-xs text-red-100 font-body uppercase tracking-wider mt-0.5 text-justify">{stat.label}</p>
+      <div className="bg-gradient-to-r from-honeywell-navy to-[#0f172a] py-8 relative overflow-hidden shadow-inner">
+        {/* Subtle red accent line */}
+        <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-honeywell-red to-transparent opacity-70" aria-hidden="true" />
+        <Container className="relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 md:divide-x md:divide-white/10 text-center">
+            {TRUST_STATS.map((stat, index) => (
+              <div key={stat.label} className={`px-4 ${index % 2 === 1 ? 'border-l border-white/10 md:border-0' : ''}`}>
+                <p className="text-2xl md:text-3xl font-display font-extrabold text-white mb-1.5">{stat.value}</p>
+                <p className="text-[11px] text-[#94A3B8] font-body uppercase tracking-widest">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -435,7 +439,7 @@ export default function RequestQuotePage() {
       <SiteFAQSection faqs={FAQS} />
 
       {/* ── Final CTA — rounded-full buttons ─────────────────────────────── */}
-      <section className="bg-honeywell-navy py-16 md:py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-r from-honeywell-navy to-[#0f172a] shadow-inner py-16 md:py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
         <div className="absolute bottom-0 left-0 w-1/3 h-full bg-honeywell-red opacity-[0.03] skew-x-12 -translate-x-1/4" aria-hidden="true" />
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-honeywell-red/40 to-transparent" aria-hidden="true" />

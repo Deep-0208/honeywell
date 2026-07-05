@@ -1,5 +1,6 @@
 import React, { ButtonHTMLAttributes } from 'react';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'link';
 export type ButtonSize = 'sm' | 'md' | 'lg';
@@ -40,7 +41,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles = 'inline-flex items-center justify-center min-h-[44px] font-body font-medium transition-all duration-200 ease-premium rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.97]';
-    
+
     const variants = {
       primary: 'bg-honeywell-red text-white hover:bg-[#C41220] focus-visible:ring-honeywell-red shadow-[0_2px_8px_-2px_rgba(227,27,35,0.3)] hover:shadow-[0_6px_20px_-4px_rgba(227,27,35,0.4)]',
       secondary: 'bg-honeywell-navy text-white hover:bg-[#0a154a] focus-visible:ring-honeywell-navy shadow-subtle hover:shadow-elevated',
@@ -55,13 +56,13 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       lg: 'text-base px-6 py-3',
     };
 
-    const classes = `
-      ${baseStyles}
-      ${variants[variant]}
-      ${variant !== 'link' ? sizes[size] : ''}
-      ${isFullWidth ? 'w-full' : ''}
-      ${className}
-    `.trim().replace(/\s+/g, ' ');
+    const classes = cn(
+      baseStyles,
+      variants[variant],
+      variant !== 'link' && sizes[size],
+      isFullWidth && 'w-full',
+      className
+    );
 
     const innerContent = (
       <>

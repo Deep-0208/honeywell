@@ -32,12 +32,6 @@ export const siteNavigation: SiteNavigation = {
                 icon: 'building',
               },
               {
-                label: 'Quality',
-                href: '/quality/',
-                description: '100% pressure-tested. Zero-defect manufacturing philosophy.',
-                icon: 'shield',
-              },
-              {
                 label: 'Manufacturing Facility',
                 href: '/manufacturing-facility/',
                 description: 'End-to-end hydraulic manufacturing at our state-of-the-art facility in Gujarat.',
@@ -173,7 +167,7 @@ export const siteNavigation: SiteNavigation = {
        ────────────────────────────────────────────── */
     {
       label: 'Areas We Serve',
-      href: '/locations/',
+      href: '/locations/gujarat/',
       megaMenu: {
         columns: [
           {
@@ -188,30 +182,30 @@ export const siteNavigation: SiteNavigation = {
                   { label: 'Surat', href: '/locations/surat/' },
                   { label: 'Vadodara', href: '/locations/vadodara/' },
                   { label: 'Rajkot', href: '/locations/rajkot/' },
-                  { label: 'Bhavnagar', href: '/locations/bhavnagar/' },
-                  { label: 'Gandhinagar', href: '/locations/gandhinagar/' },
-                  { label: 'Vapi', href: '/locations/vapi-valsad/' },
-                  { label: 'Jamnagar', href: '/locations/jamnagar/' },
+                  { label: 'Bhavnagar', href: '#' },
+                  { label: 'Gandhinagar', href: '#' },
+                  { label: 'Vapi', href: '#' },
+                  { label: 'Jamnagar', href: '#' },
                 ],
               },
               {
                 label: 'Maharashtra',
-                href: '/locations/maharashtra/',
+                href: '#',
                 description: 'Serving Pune, Mumbai, and major MIDC zones.',
               },
               {
                 label: 'Rajasthan',
-                href: '/locations/rajasthan/',
+                href: '#',
                 description: 'Supplying to RIICO industrial areas like Bhiwadi.',
               },
               {
                 label: 'West Bengal',
-                href: '/locations/west-bengal/',
+                href: '#',
                 description: 'Solutions for heavy engineering in Kolkata and Durgapur.',
               },
               {
                 label: 'Pan India',
-                href: '/locations/india/',
+                href: '#',
                 description: 'Nationwide delivery across all major industrial cities.',
               },
             ],
@@ -225,7 +219,7 @@ export const siteNavigation: SiteNavigation = {
        ────────────────────────────────────────────── */
     {
       label: 'Gallery',
-      href: '/gallery/',
+      href: '#',
     },
     /* ──────────────────────────────────────────────
        CONTACT — Direct Link

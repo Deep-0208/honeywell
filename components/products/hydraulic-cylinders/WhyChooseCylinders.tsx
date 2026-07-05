@@ -9,7 +9,7 @@ export function WhyChooseCylinders() {
   return (
     <Section bg="gray" id="why-choose-us" aria-labelledby="why-choose-heading" className="relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute inset-0 bg-[url('/images/noise.webp')] opacity-[0.02] mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[url('/images/shared/industrial-texture-background.webp')] opacity-[0.02] mix-blend-overlay" />
       </div>
       <Container className="relative z-10">
         <div className="text-center mb-8 md:mb-12 flex flex-col items-center">

@@ -115,7 +115,7 @@ export default function RootLayout({
               '@type': 'Organization',
               name: COMPANY_INFO.name,
               url: COMPANY_INFO.websiteUrl,
-              logo: `${COMPANY_INFO.websiteUrl}/images/logos/long-size-logohydralics-logo.png`,
+              logo: `${COMPANY_INFO.websiteUrl}/images/shared/logos/honeywell-hydraulics-logo-full.png`,
               contactPoint: {
                 '@type': 'ContactPoint',
                 telephone: COMPANY_INFO.phone,

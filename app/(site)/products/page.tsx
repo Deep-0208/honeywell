@@ -183,7 +183,7 @@ export default function ProductsHubPage() {
               title="Hydraulic Power Packs"
               description="Pre-assembled, piped, and tested fluid power generation units. Variants: 3-Phase Industrial Units, Single-Phase Units, Dedicated Press Machine High-Low Circuits."
               category="Power Generation"
-              imageSrc="/images/products/hydraulic-power-packs/hydraulic-power-pack-manufacturer.webp"
+              imageSrc="/images/products/hero/multi-station-hydraulic-power-pack.webp"
               href="/products/hydraulic-power-packs"
               ctaText="EXPLORE HYDRAULIC POWER PACKS"
             />

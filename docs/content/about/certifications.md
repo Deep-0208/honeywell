@@ -129,7 +129,6 @@ Contact our export documentation team at exports@honeywellhydraulics.com.
 
 # 9. Related About Pages
 
-*   [Quality Policy](/about/quality-policy/)
 *   [Manufacturing Facility](/about/manufacturing-facility/)
 *   [Our Team](/about/our-team/)
 

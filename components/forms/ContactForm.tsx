@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ArrowRight, AlertCircle, Loader2, CheckCircle } from 'lucide-react';
+import { ArrowRight, AlertCircle, CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -249,18 +250,16 @@ export function ContactForm() {
         )}
       </div>
 
-      <button
+      <Button
         type="submit"
-        disabled={status === 'submitting'}
-        className="w-full inline-flex items-center justify-center gap-3 bg-honeywell-red hover:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold font-body text-base px-6 py-4 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-honeywell-red/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2"
+        isLoading={status === 'submitting'}
+        isFullWidth
+        size="lg"
+        rightIcon={status !== 'submitting' ? <ArrowRight className="w-5 h-5" aria-hidden="true" /> : undefined}
         aria-busy={status === 'submitting'}
       >
-        {status === 'submitting' ? (
-          <><Loader2 className="w-5 h-5 animate-spin" aria-hidden="true" /> Sending Your Message…</>
-        ) : (
-          <>Send Message <ArrowRight className="w-5 h-5" aria-hidden="true" /></>
-        )}
-      </button>
+        {status === 'submitting' ? 'Sending Your Message…' : 'Send Message'}
+      </Button>
 
       <p className="text-xs text-slate-400 font-body text-center">
         We respect your privacy. Your details are never shared.

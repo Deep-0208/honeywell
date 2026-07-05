@@ -843,7 +843,7 @@ function RelatedProducts() {
       description:
         'When standard bore sizes and stroke lengths are insufficient — bespoke engineering for extreme applications, reverse engineering, and large bore actuators.',
       category: 'Custom Engineering',
-      imageSrc: '/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp',
+      imageSrc: '/images/home/custom-hydraulic-cylinder-manufacturer.webp',
       href: '/products/hydraulic-cylinders/custom-hydraulic-cylinders/',
       ctaText: 'View Custom Cylinders',
     },

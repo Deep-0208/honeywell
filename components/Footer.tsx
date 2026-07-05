@@ -49,7 +49,6 @@ const footerColumns = [
     heading: 'Company',
     links: [
       { label: 'About Us', href: '/about-us/' },
-      { label: 'Quality', href: '/quality/' },
       { label: 'Manufacturing Facility', href: '/manufacturing-facility/' },
       { label: 'Contact Us', href: '/contact-us/' },
     ],
@@ -138,7 +137,7 @@ export default function Footer() {
                 aria-label="Honeywell Hydraulics — Home"
               >
                 <Image
-                  src="/images/logos/long-size-logohydralics-logo.png"
+                  src="/images/shared/logos/honeywell-hydraulics-logo-full.png"
                   alt="Honeywell Hydraulics Logo"
                   width={240}
                   height={60}
