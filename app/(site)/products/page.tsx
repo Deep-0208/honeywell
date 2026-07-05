@@ -109,7 +109,7 @@ export default function ProductsHubPage() {
               <li className="text-honeywell-navy font-semibold tracking-wide" aria-current="page">Products</li>
             </ol>
           </nav>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center lg:items-start lg:pt-4">
             <div className="lg:col-span-7">
               <Heading variant="section" as="h1" className="text-honeywell-navy mb-6 leading-tight drop-shadow-sm">
@@ -120,35 +120,35 @@ export default function ProductsHubPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="primary" size="lg" href="/request-quote" rightIcon={<ArrowRight className="w-5 h-5" />} className="shadow-lg shadow-honeywell-red/20">
-                  REQUEST A CUSTOM QUOTE
+                  REQUEST A QUOTE
                 </Button>
                 <Button variant="outline" size="lg" href="/contact-us" className="border-honeywell-navy text-honeywell-navy hover:bg-honeywell-navy hover:text-white backdrop-blur-sm">
                   CONTACT ENGINEERING TEAM
                 </Button>
               </div>
             </div>
-            
+
             <div className="lg:col-span-5 relative hidden lg:block">
               {/* Abstract fluid power graphic or engineered layout */}
               <div className="relative aspect-square max-w-md mx-auto">
-                <div className="absolute inset-4 rounded-3xl border border-slate-200 bg-slate-100/70 backdrop-blur-md overflow-hidden flex items-center justify-center p-4 shadow-2xl">
-                   <div className="grid grid-cols-2 gap-4 w-full h-full">
-                      <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image src="/images/products/hero/hydraulic-cylinders-ahmedabad.webp" alt="Hydraulic Cylinders" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
-                      </div>
-                      <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image src="/images/products/hero/hydraulic-power-pack.webp" alt="Hydraulic Power Packs" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
-                      </div>
-                      <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image src="/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp" alt="Hydraulic Manifold Blocks" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
-                      </div>
-                      <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image src="/images/products/hero/custom-hydraulic-systems-ahmedabad.webp" alt="Custom Hydraulic Systems" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
-                      </div>
-                   </div>
-                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <Cog className="w-16 h-16 text-honeywell-red drop-shadow-lg animate-[spin_10s_linear_infinite]" />
-                   </div>
+                <div className="absolute inset-4 flex items-center justify-center p-4">
+                  <div className="grid grid-cols-2 gap-4 w-full h-full">
+                    <div className="rounded-xl border border-slate-200 relative overflow-hidden group">
+                      <Image src="/images/products/hero/hydraulic-cylinder-for-press-manufacturer.webp" alt="Hydraulic Cylinders" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                    </div>
+                    <div className="rounded-xl border border-slate-200 relative overflow-hidden group">
+                      <Image src="/images/products/hero/hydraulic-power-pack-manufacturer.webp" alt="Hydraulic Power Packs" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                    </div>
+                    <div className="rounded-xl border border-slate-200 relative overflow-hidden group">
+                      <Image src="/images/products/hero/hydraulic-power-pack-with-accumulator-manufacturer.webp" alt="Hydraulic Power Packs" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                    </div>
+                    <div className="rounded-xl border border-slate-200 relative overflow-hidden group">
+                      <Image src="/images/products/hero/tieroad-hydraulic-cylinders-manufacturer.webp" alt="Hydraulic Cylinders" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <Cog className="w-16 h-16 text-honeywell-red drop-shadow-lg animate-[spin_10s_linear_infinite]" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -171,22 +171,22 @@ export default function ProductsHubPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-             <ProductCard 
-                title="Hydraulic Cylinders"
-                description="Heavy-duty linear actuators available in custom bore sizes from 40mm to 300mm. Variants: Double Acting, Single Acting, Flange Mounting, Clevis Mounting, Tie-Rod, Telescopic."
-                category="Actuators"
-                imageSrc="/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad.webp"
-                href="/products/hydraulic-cylinders"
-                ctaText="EXPLORE HYDRAULIC CYLINDERS"
-             />
-             <ProductCard 
-                title="Hydraulic Power Packs"
-                description="Pre-assembled, piped, and tested fluid power generation units. Variants: 3-Phase Industrial Units, Single-Phase Units, Dedicated Press Machine High-Low Circuits."
-                category="Power Generation"
-                imageSrc="/images/products/hydraulic-power-packs/hydraulic-power-pack-manufacturer.webp"
-                href="/products/hydraulic-power-packs"
-                ctaText="EXPLORE HYDRAULIC POWER PACKS"
-             />
+            <ProductCard
+              title="Hydraulic Cylinders"
+              description="Heavy-duty linear actuators available in custom bore sizes from 40mm to 300mm. Variants: Double Acting, Single Acting, Flange Mounting, Clevis Mounting, Tie-Rod, Telescopic."
+              category="Actuators"
+              imageSrc="/images/products/hero/hydraulic-cylinder-for-press-manufacturer.webp"
+              href="/products/hydraulic-cylinders"
+              ctaText="EXPLORE HYDRAULIC CYLINDERS"
+            />
+            <ProductCard
+              title="Hydraulic Power Packs"
+              description="Pre-assembled, piped, and tested fluid power generation units. Variants: 3-Phase Industrial Units, Single-Phase Units, Dedicated Press Machine High-Low Circuits."
+              category="Power Generation"
+              imageSrc="/images/products/hydraulic-power-packs/hydraulic-power-pack-manufacturer.webp"
+              href="/products/hydraulic-power-packs"
+              ctaText="EXPLORE HYDRAULIC POWER PACKS"
+            />
           </div>
         </Container>
       </Section>
@@ -204,7 +204,7 @@ export default function ProductsHubPage() {
                 </p>
               </div>
             </div>
-            
+
             <div className="space-y-8">
               <Card variant="interactive" className="group flex flex-col relative hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-premium overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-honeywell-red/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true" />
@@ -221,13 +221,13 @@ export default function ProductsHubPage() {
                   </div>
                   <div className="flex items-center md:items-end">
                     <Link href="/products/hydraulic-cylinders" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
-                  <span className="relative z-10 flex items-center">
-                      View Cylinders <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
+                      <span className="relative z-10 flex items-center">
+                        View Cylinders <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
                     </Link>
                   </div>
                 </CardContent>
               </Card>
-              
+
               <Card variant="interactive" className="group flex flex-col relative hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-premium overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-honeywell-navy/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true" />
                 <CardContent className="flex flex-col md:flex-row gap-6 p-6 items-center">
@@ -243,13 +243,13 @@ export default function ProductsHubPage() {
                   </div>
                   <div className="flex items-center md:items-end">
                     <Link href="/products/hydraulic-power-packs" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
-                  <span className="relative z-10 flex items-center">
-                      View Power Packs <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
+                      <span className="relative z-10 flex items-center">
+                        View Power Packs <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
                     </Link>
                   </div>
                 </CardContent>
               </Card>
-              
+
               <Card variant="interactive" className="group flex flex-col relative hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-premium overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-honeywell-red/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true" />
                 <CardContent className="flex flex-col md:flex-row gap-6 p-6 items-center">
@@ -265,8 +265,8 @@ export default function ProductsHubPage() {
                   </div>
                   <div className="flex items-center md:items-end">
                     <Link href="/products/turnkey-systems" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
-                  <span className="relative z-10 flex items-center">
-                      View Systems <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
+                      <span className="relative z-10 flex items-center">
+                        View Systems <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
                     </Link>
                   </div>
                 </CardContent>
@@ -275,7 +275,7 @@ export default function ProductsHubPage() {
           </div>
         </Container>
       </Section>
-{/* Industries Overview */}
+      {/* Industries Overview */}
       <Section bg="white" id="industries" aria-labelledby="industries-heading">
         <Container>
           <div className="flex flex-col items-center justify-center mb-12 text-center">
@@ -411,7 +411,7 @@ export default function ProductsHubPage() {
                   <Activity className="w-5 h-5 text-honeywell-red" /> Product Comparison Matrix
                 </h3>
               </div>
-              
+
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse">
                   <thead>
@@ -496,7 +496,7 @@ export default function ProductsHubPage() {
         bg="gray"
       />
       {/* Conversion CTA — M2: replaced dead # href */}
-      <CTA 
+      <CTA
         title="Ready to discuss your exact requirements?"
         description="Whether you are in the initial design phase of a new machine or require an urgent breakdown replacement, Honeywell Hydraulics has the engineering capability to deliver."
         primaryCtaText="REQUEST A CUSTOM ENGINEERING QUOTE"
