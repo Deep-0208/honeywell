@@ -193,7 +193,6 @@ export default function RequestQuotePage() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" aria-hidden="true" />
 
         <Container className="relative z-10">
-          {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
             <ol className="flex items-center gap-2">
               <li>

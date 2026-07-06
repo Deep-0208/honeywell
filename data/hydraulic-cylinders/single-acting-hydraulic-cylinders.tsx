@@ -44,17 +44,17 @@ export const SINGLE_ACTING_SPECS: CylinderSpec[] = [
 export const SINGLE_ACTING_COMPONENTS: ProcessStep[] = [
   {
     icon: <Box className="w-6 h-6" />,
-    title: 'A. Single Port Operation',
+    title: 'Single Port Operation',
     desc: 'Fluid enters through a single port to extend the cylinder. The simplicity of a single hydraulic line reduces plumbing complexity, potential leak points, and overall system cost.',
   },
   {
     icon: <Zap className="w-6 h-6" />,
-    title: 'B. Piston and Rod Assembly',
+    title: 'Piston and Rod Assembly',
     desc: 'The hard-chrome plated piston rod (EN 8 / EN 9 / EN 19) transmits the mechanical force to the heavy load. Precision honing of the ST 52.3 tube ensures extremely low friction during extension and retraction.',
   },
   {
     icon: <Settings className="w-6 h-6" />,
-    title: 'C. Retraction Mechanism',
+    title: 'Retraction Mechanism',
     desc: 'Unlike double acting cylinders, single acting variants rely on gravity, weight of the load, or internal springs for the return stroke. This makes them perfect for lifting applications like scissor lifts or jacks.',
   },
 ];

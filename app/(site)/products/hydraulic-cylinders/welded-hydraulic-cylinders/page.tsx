@@ -43,7 +43,7 @@ const PAGE_TITLE =
 const PAGE_DESCRIPTION =
   'Leading welded hydraulic cylinder manufacturer in India. Supplying heavy-duty, high-pressure welded cylinders for presses, construction, and marine.';
 const PAGE_URL = '/products/hydraulic-cylinders/welded-hydraulic-cylinders';
-const PAGE_IMAGE = '/images/products/welded-hydraulic-cylinder.webp';
+const PAGE_IMAGE = '/images/products/hydraulic-cylinders/welded-hydraulic-cylinders-manufacturer.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -206,14 +206,14 @@ export default function WeldedHydraulicCylindersPage() {
       {/* ─── 03 Welded Cylinder Construction ─── */}
       <ConstructionExplained />
 
-      {/* ─── 04 Advantages ─── */}
+      {/* ─── 04 Technical Specifications ─── */}
+      <TechnicalSpecifications />
+
+      {/* ─── 05 Advantages ─── */}
       <Advantages />
 
-      {/* ─── 05 Welded vs Tie Rod Comparison ─── */}
+      {/* ─── 06 Welded vs Tie Rod Comparison ─── */}
       <ComparisonSection />
-
-      {/* ─── 06 Technical Specifications ─── */}
-      <TechnicalSpecifications />
 
       {/* ─── 07 Industries Served ─── */}
       <IndustriesSection />
@@ -234,10 +234,7 @@ export default function WeldedHydraulicCylindersPage() {
       <RelatedServices />
 
       {/* ─── 13 Local Service Areas ─── */}
-      <SiteLocationsSection
-        title="Direct Delivery Across Gujarat"
-        description="As a premier welded cylinder manufacturer in Gujarat, we provide direct engineering support and heavy-freight delivery to steel plants, forging hubs, and OEMs across the state."
-      />
+      <SiteLocationsSection productName="Welded Hydraulic Cylinders" />
 
       {/* ─── 14 FAQs ─── */}
       <FAQSection />
@@ -273,7 +270,23 @@ function HeroSection() {
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
       <Container>
-        {/* Breadcrumb */}
+                <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
+          <ol className="flex items-center gap-2 flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Products</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products/hydraulic-cylinders" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Hydraulic Cylinders</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li className="text-honeywell-red font-semibold" aria-current="page">Welded Hydraulic Cylinders</li>
+          </ol>
+        </nav>
 
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -320,11 +333,11 @@ function HeroSection() {
           <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
             <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
             <Image
-              src="/images/products/welded-hydraulic-cylinder.webp"
+              src="/images/products/hydraulic-cylinders/welded-hydraulic-cylinders-manufacturer.webp"
               alt="Welded Hydraulic Cylinder Manufacturer in Ahmedabad - Heavy-duty welded cylinder by Honeywell Hydraulics"
               fill
               priority fetchPriority="high" decoding="sync" quality={85}
-              className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              className="object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
@@ -380,7 +393,7 @@ function ProductOverview() {
     <Section aria-labelledby="overview-heading" bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <Heading id="overview-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+          <Heading id="overview-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6 text-center">
             What Are Welded Hydraulic Cylinders?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed ">
@@ -445,7 +458,7 @@ function ConstructionExplained() {
   );
 }
 
-/* ─── 04 Advantages ─── */
+/* ─── 05 Advantages ─── */
 function Advantages() {
   return (
     <Section aria-labelledby="advantages-heading" bg="white" id="advantages">
@@ -482,7 +495,7 @@ function Advantages() {
   );
 }
 
-/* ─── 05 Welded vs Tie Rod Comparison ─── */
+/* ─── 06 Welded vs Tie Rod Comparison ─── */
 function ComparisonSection() {
   return (
     <Section aria-labelledby="comparison-heading" bg="gray" id="comparison">
@@ -554,7 +567,7 @@ function ComparisonSection() {
   );
 }
 
-/* ─── 06 Technical Specifications ─── */
+/* ─── 04 Technical Specifications ─── */
 function TechnicalSpecifications() {
   return (
     <Section aria-labelledby="technical-specifications-heading" bg="white" id="technical-specifications">
@@ -740,7 +753,7 @@ function ManufacturingProcess() {
 
           <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg border border-slate-200">
             <Image
-              src="/images/products/welded-hydraulic-cylinder-manufacturer.webp"
+              src="/images/products/hydraulic-cylinders/welded-hydraulic-cylinders-manufacturer.webp"
               alt="Welded Cylinder Manufacturing Process in Gujarat"
               fill
               className="object-cover"
@@ -911,7 +924,7 @@ function RelatedServices() {
 
 
 
-/* ─── 15 FAQ Section ─── */
+/* ─── 14 FAQ Section ─── */
 function FAQSection() {
   return (
     <SiteFAQSection

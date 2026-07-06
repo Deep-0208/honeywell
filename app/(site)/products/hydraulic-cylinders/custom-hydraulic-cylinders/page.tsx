@@ -49,7 +49,7 @@ const PAGE_TITLE =
 const PAGE_DESCRIPTION =
   'Custom hydraulic cylinder manufacturer in Ahmedabad. Bespoke CAD engineering, large bore cylinders (400mm+), and reverse engineering for heavy industry.';
 const PAGE_URL = '/products/hydraulic-cylinders/custom-hydraulic-cylinders';
-const PAGE_IMAGE = '/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp';
+const PAGE_IMAGE = '/images/products/hydraulic-cylinders/custom-hydraulic-cylinder-manufacturer.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -241,10 +241,7 @@ export default function CustomHydraulicCylindersPage() {
       <EngineeringAdvantage />
 
       {/* ─── 12 Local Service Areas ─── */}
-      <SiteLocationsSection
-        title="Custom Hydraulic Cylinder Manufacturer in Gujarat"
-        description="As the premier custom hydraulic cylinder manufacturer in Gujarat, we provide rapid reverse-engineering and bespoke manufacturing services to heavy industries across the state."
-      />
+      <SiteLocationsSection productName="Custom Hydraulic Cylinders" />
 
       {/* ─── 13 FAQs ─── */}
       <FAQSection />
@@ -253,7 +250,7 @@ export default function CustomHydraulicCylindersPage() {
       <CTA
         title="Ready to Discuss Your Custom Cylinder Project?"
         description="Don't let an obsolete cylinder halt your entire production line. Partner with an engineering firm capable of bespoke design, reverse engineering, and extreme-duty manufacturing."
-        primaryCtaText="REQUEST A CUSTOM QUOTE"
+        primaryCtaText="REQUEST A QUOTE"
         primaryCtaHref="/request-quote/"
         secondaryCtaText="Call Now"
         secondaryCtaHref="tel:+919924343873"
@@ -280,7 +277,23 @@ function HeroSection() {
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
       <Container>
-        {/* Breadcrumb */}
+                <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
+          <ol className="flex items-center gap-2 flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Products</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products/hydraulic-cylinders" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Hydraulic Cylinders</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li className="text-honeywell-red font-semibold" aria-current="page">Custom Hydraulic Cylinders</li>
+          </ol>
+        </nav>
         
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -333,11 +346,11 @@ function HeroSection() {
           <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
             <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
             <Image
-              src="/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp"
+              src="/images/products/hydraulic-cylinders/custom-hydraulic-cylinder-manufacturer.webp"
               alt="Custom Hydraulic Cylinder Manufacturer in Ahmedabad - Bespoke large bore cylinder by Honeywell Hydraulics"
               fill
               priority fetchPriority="high" decoding="sync" quality={85}
-              className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              className="object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
@@ -393,7 +406,7 @@ function ProductOverview() {
     <Section aria-labelledby="overview-heading" bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <Heading id="overview-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+          <Heading id="overview-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6 text-center">
             What Are Custom Hydraulic Cylinders?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed ">
@@ -855,24 +868,20 @@ function RelatedProducts() {
   return (
     <Section aria-labelledby="related-products-heading" bg="gray" id="related-products">
       <Container>
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-          <div className="max-w-2xl">
-            <Heading id="related-products-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
-              Integrate Your Custom Cylinder
-            </Heading>
-            <p className="text-lg text-brand-steelGray font-body  text-justify">
-              Custom cylinders require sophisticated fluid generation and precision control.
-              Combine your bespoke actuator with our power systems for a complete solution.
-            </p>
-          </div>
-          <div className="mt-6 md:mt-0 shrink-0">
-            <Link
-              href="/products"
-              className="text-honeywell-red font-bold hover:underline font-body"
-            >
-              Browse all products →
-            </Link>
-          </div>
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <Heading id="related-products-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
+            Related Products
+          </Heading>
+          <p className="text-lg text-brand-steelGray font-body mb-6">
+            Custom cylinders require sophisticated fluid generation and precision control.
+            Combine your bespoke actuator with our power systems for a complete solution.
+          </p>
+          <Link
+            href="/products"
+            className="text-honeywell-red font-bold hover:underline font-body inline-block"
+          >
+            Browse all products →
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -44,7 +44,7 @@ const PAGE_TITLE =
 const PAGE_DESCRIPTION =
   'Leading double acting hydraulic cylinder manufacturer in Ahmedabad. Bore 40–500mm, stroke up to 6000mm, 450 bar pressure. ISO certified. Get quote.';
 const PAGE_URL = '/products/hydraulic-cylinders/double-acting-hydraulic-cylinders';
-const PAGE_IMAGE = '/images/products/double-acting-hydraulic-cylinder.webp';
+const PAGE_IMAGE = '/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinders-manufacturer.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -231,10 +231,7 @@ export default function DoubleActingHydraulicCylindersPage() {
       <RelatedProducts />
 
       {/* ─── 11 Local Service Areas ─── */}
-      <SiteLocationsSection
-        title="Double Acting Cylinder Manufacturer in Gujarat"
-        description="As a premier double acting hydraulic cylinder manufacturer in Gujarat, we provide rapid manufacturing and dispatch services to industries across the state."
-      />
+      <SiteLocationsSection productName="Double Acting Hydraulic Cylinders" />
 
       {/* ─── 12 FAQs ─── */}
       <FAQSection />
@@ -270,7 +267,23 @@ function HeroSection() {
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
       <Container>
-        {/* Breadcrumb */}
+                <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
+          <ol className="flex items-center gap-2 flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Products</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products/hydraulic-cylinders" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Hydraulic Cylinders</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li className="text-honeywell-red font-semibold" aria-current="page">Double Acting Hydraulic Cylinders</li>
+          </ol>
+        </nav>
         
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -321,7 +334,7 @@ function HeroSection() {
           {/* Image Column */}
           <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
             <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
-            <Image src="/images/products/double-acting-hydraulic-cylinder.webp" alt="Double acting hydraulic cylinder manufacturer in Ahmedabad — Honeywell Hydraulics" fill priority fetchPriority="high" decoding="sync" quality={85} className="object-cover p-8 group-hover:scale-105 transition-transform duration-700 ease-out" sizes="(max-width: 1024px) 100vw, 50vw" />
+            <Image src="/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinders-manufacturer.webp" alt="Double acting hydraulic cylinder manufacturer in Ahmedabad — Honeywell Hydraulics" fill priority fetchPriority="high" decoding="sync" quality={85} className="object-contain group-hover:scale-105 transition-transform duration-700 ease-out" sizes="(max-width: 1024px) 100vw, 50vw" />
         </div>
         </div>
       </Container>
@@ -374,7 +387,7 @@ function ProductOverview() {
     <Section bg="white" id="overview" aria-labelledby="overview-heading">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <Heading variant="section" as="h2" underline="center" id="overview-heading">
+          <Heading className="text-center" variant="section" as="h2" underline="center" id="overview-heading">
             What Is a Double Acting Hydraulic Cylinder?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
@@ -439,23 +452,19 @@ function KeyFeatures() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {PRODUCT_FEATURES.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
+              className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group flex flex-col h-full"
             >
-              <div className="flex items-center gap-4 mb-5">
-                <IconBox
-                  icon={feature.icon}
-                  variant="primary"
-                  size="md"
-                />
+              <div className="flex items-center gap-4 mb-6 relative z-10">
+                <IconBox icon={feature.icon} variant="primary" size="md" />
               </div>
-              <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors">
+              <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-4 relative z-10 group-hover:text-honeywell-red transition-colors duration-300">
                 {feature.title}
               </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed  text-justify">
+              <p className="text-brand-steelGray font-body text-sm leading-relaxed flex-grow relative z-10">
                 {feature.description}
               </p>
             </div>
@@ -525,30 +534,42 @@ function MountingTypesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {MOUNTING_TYPES.map((mount, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red flex flex-col"
+              className="relative group bg-brand-surfaceGray/50 rounded-2xl border border-slate-200/80 p-8 md:p-10 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 hover:bg-white overflow-hidden flex flex-col h-full"
             >
-              <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3">
-                {mount.title}
-              </Heading>
-              <p className="text-brand-steelGray font-body text-sm leading-relaxed mb-6 flex-grow  text-justify">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-honeywell-navy/5 rounded-bl-full -z-10 transition-transform duration-700 group-hover:scale-125 group-hover:bg-honeywell-navy/10" />
+              
+              <div className="flex items-center justify-between mb-6 relative z-10">
+                <Heading variant="subsection" as="h3" className="text-2xl font-display font-bold text-honeywell-navy group-hover:text-honeywell-red transition-colors duration-300">
+                  {mount.title}
+                </Heading>
+                <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 group-hover:border-honeywell-red group-hover:text-honeywell-red transition-all duration-500 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 bg-white shadow-sm">
+                  <ArrowRight className="w-5 h-5" />
+                </div>
+              </div>
+
+              <p className="text-brand-steelGray font-body text-base leading-relaxed mb-8 flex-grow relative z-10">
                 {mount.description}
               </p>
+              
               {mount.applications && mount.applications.length > 0 && (
-                <ul className="space-y-2.5 border-t border-slate-200 pt-5 mt-auto">
-                  {mount.applications.map((app, appIdx) => (
-                    <li
-                      key={appIdx}
-                      className="flex items-start gap-2.5 text-sm text-brand-darkSlate font-body"
-                    >
-                      <CheckCircle2 className="w-4 h-4 text-honeywell-red mt-0.5 shrink-0" />
-                      {app}
-                    </li>
-                  ))}
-                </ul>
+                <div className="mt-auto relative z-10">
+                  <h4 className="text-xs font-bold text-honeywell-navy uppercase tracking-wider mb-4 opacity-70">Common Applications</h4>
+                  <ul className="space-y-3">
+                    {mount.applications.map((app, appIdx) => (
+                      <li
+                        key={appIdx}
+                        className="flex items-center gap-3 text-sm text-brand-darkSlate font-body bg-white group-hover:bg-brand-surfaceGray/50 p-3.5 rounded-xl border border-slate-100 transition-colors duration-300 shadow-sm"
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-honeywell-red shrink-0" />
+                        <span className="leading-snug">{app}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               )}
             </div>
           ))}
@@ -574,18 +595,28 @@ function ApplicationsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {PRODUCT_APPLICATIONS.map((app, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-slate-200 p-6 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red"
+              className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group flex flex-col h-full"
             >
-              <Heading variant="subsection" as="h3" className="text-lg font-display font-bold text-honeywell-navy mb-2">
-                {app.name}
-              </Heading>
-              <p className="text-sm text-brand-steelGray font-body leading-relaxed  text-justify">
-                {app.description}
-              </p>
+              <div className="relative z-10 flex flex-col h-full">
+                <IconBox 
+                  icon={<Cog className="w-6 h-6 opacity-80" />} 
+                  variant="primary" 
+                  size="md" 
+                  className="mb-6 group-hover:scale-110" 
+                />
+                
+                <Heading variant="subsection" as="h3" className="text-xl font-display font-bold text-honeywell-navy mb-3 group-hover:text-honeywell-red transition-colors duration-300">
+                  {app.name}
+                </Heading>
+                
+                <p className="text-brand-steelGray font-body text-sm leading-relaxed relative z-10 flex-grow">
+                  {app.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -843,7 +874,7 @@ function RelatedProducts() {
       description:
         'When standard bore sizes and stroke lengths are insufficient — bespoke engineering for extreme applications, reverse engineering, and large bore actuators.',
       category: 'Custom Engineering',
-      imageSrc: '/images/home/hero/custom-hydraulic-cylinder-manufacturer.webp',
+      imageSrc: '/images/products/hydraulic-cylinders/custom-hydraulic-cylinder-manufacturer.webp',
       href: '/products/hydraulic-cylinders/custom-hydraulic-cylinders/',
       ctaText: 'View Custom Cylinders',
     },
@@ -870,25 +901,21 @@ function RelatedProducts() {
   return (
     <Section bg="white" id="related-products" aria-labelledby="related-products-heading">
       <Container>
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-          <div className="max-w-2xl">
-            <Heading variant="section" as="h2" underline="center" id="related-products-heading">
-              Complete Your Hydraulic System
-            </Heading>
-            <p className="text-lg text-brand-steelGray font-body  text-justify">
-              A double acting cylinder needs the right power source and flow
-              control. Pair your cylinder with our power packs and manifold
-              blocks for a complete hydraulic solution.
-            </p>
-          </div>
-          <div className="mt-6 md:mt-0 shrink-0">
-            <Link
-              href="/products"
-              className="text-honeywell-red font-bold hover:underline font-body"
-            >
-              Browse all products →
-            </Link>
-          </div>
+        <div className="text-center flex flex-col items-center max-w-3xl mx-auto mb-12">
+          <Heading variant="section" as="h2" underline="center" className="text-center" id="related-products-heading">
+            Related Products
+          </Heading>
+          <p className="text-lg text-brand-steelGray font-body text-center mt-4 mb-6">
+            A double acting cylinder needs the right power source and flow
+            control. Pair your cylinder with our power packs and manifold
+            blocks for a complete hydraulic solution.
+          </p>
+          <Link
+            href="/products"
+            className="text-honeywell-red font-bold hover:underline font-body inline-flex items-center"
+          >
+            Browse all products →
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

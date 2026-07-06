@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    
+
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),
@@ -227,10 +227,7 @@ export default function ThreePhasePowerPacksPage() {
       <RelatedServices />
 
       {/* ─── 12 Local Service Areas ─── */}
-      <SiteLocationsSection
-        title="Local Service Areas in Gujarat"
-        description="As a premier industrial hydraulic power pack manufacturer in Gujarat, we provide direct energy-efficiency consulting and heavy-freight delivery to automated factories and GIDCs across the state."
-      />
+      <SiteLocationsSection productName="3-Phase Hydraulic Power Packs" />
 
       {/* ─── 13 FAQs ─── */}
       <SiteFAQSection faqs={THREE_PHASE_FAQS} />
@@ -266,8 +263,24 @@ function HeroSection() {
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
       <Container>
-        {/* Breadcrumb */}
-        
+        <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
+          <ol className="flex items-center gap-2 flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Products</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products/hydraulic-power-packs" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Hydraulic Power Packs</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li className="text-honeywell-red font-semibold" aria-current="page">3-Phase Hydraulic Power Packs</li>
+          </ol>
+        </nav>
+
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content Column */}
@@ -304,9 +317,9 @@ function HeroSection() {
               </Button>
             </div>
 
-            
-            
-            
+
+
+
           </div>
 
           {/* Image Column */}
@@ -373,12 +386,12 @@ function ProductOverview() {
     <Section aria-labelledby="overview-heading" bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <Heading id="overview-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
+          <Heading id="overview-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6 text-center" underline="center">
             What Is A 3 Phase Hydraulic Power Pack?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
             <p>
-              In heavy manufacturing and automated production environments, fluid power must be generated constantly and reliably. 
+              In heavy manufacturing and automated production environments, fluid power must be generated constantly and reliably.
             </p>
             <p>
               A <strong className="text-honeywell-navy">3 Phase Hydraulic Power Pack</strong> is the standard industrial workhorse. Unlike{' '}
@@ -559,7 +572,7 @@ function TechnicalSpecifications() {
 
 /* ─── 06 Industries Served ─── */
 function IndustriesSection() {
-  
+
 
   return (
     <Section aria-labelledby="industries-heading" bg="white" id="industries">
@@ -574,17 +587,17 @@ function IndustriesSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {THREE_PHASE_INDUSTRIES.map((ind, idx) => (
-              <div key={idx}>
-                <IndustryCard
-                  industryName={ind.industryName}
-                  description={ind.description}
-                  icon={ind.icon}
-                  href={ind.href}
-                />
-              </div>
-            ))}
-          </div>
+          {THREE_PHASE_INDUSTRIES.map((ind, idx) => (
+            <div key={idx}>
+              <IndustryCard
+                industryName={ind.industryName}
+                description={ind.description}
+                icon={ind.icon}
+                href={ind.href}
+              />
+            </div>
+          ))}
+        </div>
       </Container>
     </Section>
   );
@@ -693,7 +706,7 @@ function ManufacturingProcess() {
                 </div>
               </li>
             </ul>
-            
+
             <div className="mt-8 bg-brand-surfaceGray p-4 rounded-lg border border-slate-200">
               <p className="text-sm text-honeywell-navy font-semibold flex items-center text-justify">
                 <ShieldAlert className="w-4 h-4 mr-2 text-honeywell-red" />
@@ -733,7 +746,7 @@ function ProjectSpotlight() {
               <Heading id="project-spotlight-heading" variant="section" as="h2" className="text-3xl font-display font-bold text-honeywell-navy mb-6" underline="center">
                 Continuous-Duty 3-Phase Power Pack for an Automated Textile Calendering Machine
               </Heading>
-              
+
               <div className="space-y-6">
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Challenge</Heading>
@@ -741,14 +754,14 @@ function ProjectSpotlight() {
                     The client's automated calendering machine in Surat was operating on an under-sized, single-phase power unit. Running 24 hours a day to meet export demands, the single-phase motor constantly overheated and tripped thermal breakers. The pulsating pressure also caused microscopic variations in textile fabric tension.
                   </p>
                 </div>
-                
+
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Solution</Heading>
                   <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                     Honeywell redesigned the fluid generation system entirely, manufacturing a custom 3-Phase Hydraulic Power Pack utilizing a premium-efficiency IE3 motor and a variable displacement vane pump. We integrated a massive 200-liter baffled reservoir with a dedicated offline cooling circuit.
                   </p>
                 </div>
-                
+
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Outcome</Heading>
                   <p className="text-honeywell-navy font-body font-semibold leading-relaxed text-justify">
@@ -758,12 +771,12 @@ function ProjectSpotlight() {
               </div>
             </div>
             <div className="relative min-h-[300px] bg-honeywell-navy flex flex-col items-center justify-center p-12 text-center text-white">
-               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
-               <Activity className="w-16 h-16 text-honeywell-red mb-6 relative z-10" />
-               <div className="text-5xl font-bold mb-2 relative z-10">₹45,000</div>
-               <div className="text-xl font-medium text-white/80 relative z-10">Monthly Energy Savings</div>
-               <div className="text-5xl font-bold mb-2 relative z-10">100%</div>
-               <div className="text-xl font-medium text-white/80 relative z-10">Duty Cycle Uptime</div>
+              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+              <Activity className="w-16 h-16 text-honeywell-red mb-6 relative z-10" />
+              <div className="text-5xl font-bold mb-2 relative z-10">₹45,000</div>
+              <div className="text-xl font-medium text-white/80 relative z-10">Monthly Energy Savings</div>
+              <div className="text-5xl font-bold mb-2 relative z-10">100%</div>
+              <div className="text-xl font-medium text-white/80 relative z-10">Duty Cycle Uptime</div>
             </div>
           </div>
         </div>

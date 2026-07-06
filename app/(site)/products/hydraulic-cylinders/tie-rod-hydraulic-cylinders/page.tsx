@@ -17,6 +17,7 @@ import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
 import { ProductCard } from '@/components/cards/ProductCard';
 import { LocationCard } from '@/components/cards/LocationCard';
 import { IndustryCard } from '@/components/cards/IndustryCard';
+import { SiteLocationsSection } from '@/components/locations/SiteLocationsSection';
 import {
   ArrowRight,
   Phone,
@@ -250,7 +251,7 @@ export default function TieRodHydraulicCylindersPage() {
       <EngineeringAdvantage />
 
       {/* ─── 12 Local Service Areas ─── */}
-      <LocalServiceAreas />
+      <SiteLocationsSection productName="Tie Rod Hydraulic Cylinders" />
 
 
 
@@ -261,7 +262,7 @@ export default function TieRodHydraulicCylindersPage() {
       <CTA
         title="Ready to discuss high-volume OEM manufacturing pricing?"
         description="Standardize your automated machinery with highly serviceable, NFPA-compliant tie rod hydraulic cylinders. Partner with Honeywell Hydraulics to eliminate prolonged maintenance downtime."
-        primaryCtaText="REQUEST A TIE ROD QUOTE"
+        primaryCtaText="REQUEST A QUOTE"
         primaryCtaHref="/request-quote/"
         secondaryCtaText="Call Now"
         secondaryCtaHref="tel:+919924343873"
@@ -288,7 +289,23 @@ function HeroSection() {
       />
 
       <Container>
-        {/* Breadcrumb */}
+                <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
+          <ol className="flex items-center gap-2 flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Products</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products/hydraulic-cylinders" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Hydraulic Cylinders</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li className="text-honeywell-red font-semibold" aria-current="page">Tie Rod Hydraulic Cylinders</li>
+          </ol>
+        </nav>
         <nav aria-label="Breadcrumb" className="mb-8">
           <ol className="flex flex-wrap items-center text-base text-brand-steelGray font-body gap-1.5">
             <li>
@@ -418,7 +435,7 @@ function HeroSection() {
               alt="Tie Rod Hydraulic Cylinder Manufacturer in Ahmedabad - NFPA tie rod cylinder by Honeywell Hydraulics"
               fill
               priority fetchPriority="high" decoding="sync" quality={85}
-              className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              className="object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
@@ -474,7 +491,7 @@ function ProductOverview() {
     <Section bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <Heading variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+          <Heading variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6 text-center">
             What Are Tie Rod Hydraulic Cylinders?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed ">
@@ -513,7 +530,7 @@ function KeyFeatures() {
           {TIE_ROD_COMPONENTS.map((step, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-slate-200 p-8 hover:shadow-md transition-shadow duration-300 group"
+              className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
             >
               <div className="flex items-center gap-4 mb-5">
                 <IconBox
@@ -859,7 +876,7 @@ function RelatedProducts() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div className="max-w-2xl">
             <Heading variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
-              Integrate Your Tie Rod Cylinder
+              Related Products
             </Heading>
             <p className="text-lg text-brand-steelGray font-body text-justify">
               Tie rod cylinders are the standard actuators for automated environments. Power and control them with our premium fluid generation and logic systems.
@@ -962,37 +979,7 @@ function EngineeringAdvantage() {
   );
 }
 
-/* ─── 12 Local Service Areas ─── */
-function LocalServiceAreas() {
-  return (
-    <Section bg="gray" id="local-service-areas">
-      <Container>
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <Heading variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-4">
-            Tie Rod Cylinder Manufacturer in India
-          </Heading>
-          <p className="text-lg text-brand-steelGray font-body text-justify">
-            Procure NFPA standard cylinders directly in your city with immediate dispatch capability.
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Future route per card: /locations/{city-slug}/ — to be enabled in Phase 5.x */}
-          {homepageLocations.map((loc, idx) => (
-            <LocationCard
-              key={idx}
-              city={loc.city}
-              description={loc.description}
-              industries={loc.industries}
-              href="/contact-us/"
-              ctaText="Enquire Now"
-            />
-          ))}
-        </div>
-      </Container>
-    </Section>
-  );
-}
 
 
 

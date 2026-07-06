@@ -202,17 +202,17 @@ export default function SingleActingHydraulicCylindersPage() {
       {/* ─── 02 Product Overview ─── */}
       <ProductOverview />
 
-      {/* ─── 03 Welded Cylinder Construction ─── */}
+      {/* ─── 03 Mechanics Explained ─── */}
       <ConstructionExplained />
 
-      {/* ─── 04 Advantages ─── */}
+      {/* ─── 04 Technical Specifications ─── */}
+      <TechnicalSpecifications />
+
+      {/* ─── 05 Advantages ─── */}
       <Advantages />
 
-      {/* ─── 05 Welded vs Tie Rod Comparison ─── */}
+      {/* ─── 06 Single vs Double Acting Comparison ─── */}
       <ComparisonSection />
-
-      {/* ─── 06 Technical Specifications ─── */}
-      <TechnicalSpecifications />
 
       {/* ─── 07 Industries Served ─── */}
       <IndustriesSection />
@@ -233,10 +233,7 @@ export default function SingleActingHydraulicCylindersPage() {
       <RelatedServices />
 
       {/* ─── 13 Local Service Areas ─── */}
-      <SiteLocationsSection
-        title="Direct Delivery Across India"
-        description="As a premier hydraulic cylinder manufacturer in Gujarat, we provide direct engineering support and heavy-freight delivery to steel plants, manufacturing hubs, and OEMs across India."
-      />
+      <SiteLocationsSection productName="Single Acting Hydraulic Cylinders" />
 
       {/* ─── 14 FAQs ─── */}
       <FAQSection />
@@ -272,6 +269,23 @@ function HeroSection() {
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
       <Container>
+        <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
+          <ol className="flex items-center gap-2 flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Products</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products/hydraulic-cylinders" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Hydraulic Cylinders</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li className="text-honeywell-red font-semibold" aria-current="page">Single Acting Hydraulic Cylinders</li>
+          </ol>
+        </nav>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content Column */}
           <div className="flex flex-col items-start z-10">
@@ -312,7 +326,7 @@ function HeroSection() {
           <div className="relative w-full aspect-[4/3] lg:aspect-square bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
             <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
             <Image
-              src="/images/products/welded-hydraulic-cylinder.webp"
+              src="/images/products/hydraulic-cylinders/single-acting-hydraulic-cylinder-manufacturer.webp"
               alt="Single Acting Hydraulic Cylinder Manufacturer in Ahmedabad"
               fill
               priority fetchPriority="high" decoding="sync" quality={85}
@@ -372,7 +386,7 @@ function ProductOverview() {
     <Section aria-labelledby="overview-heading" bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <Heading id="overview-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6">
+          <Heading id="overview-heading" variant="section" as="h2" underline="center" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6 text-center">
             What Are Single Acting Hydraulic Cylinders?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
@@ -429,7 +443,7 @@ function ConstructionExplained() {
   );
 }
 
-/* ─── 04 Advantages ─── */
+/* ─── 05 Advantages ─── */
 function Advantages() {
   return (
     <Section aria-labelledby="advantages-heading" bg="white" id="advantages">
@@ -466,7 +480,7 @@ function Advantages() {
   );
 }
 
-/* ─── 05 Comparison ─── */
+/* ─── 06 Comparison ─── */
 function ComparisonSection() {
   return (
     <Section aria-labelledby="comparison-heading" bg="gray" id="comparison">
@@ -527,7 +541,7 @@ function ComparisonSection() {
   );
 }
 
-/* ─── 06 Technical Specifications ─── */
+/* ─── 04 Technical Specifications ─── */
 function TechnicalSpecifications() {
   return (
     <Section aria-labelledby="technical-specifications-heading" bg="white" id="technical-specifications">
@@ -756,13 +770,13 @@ function RelatedProducts() {
       title: 'Double Acting Hydraulic Cylinders',
       description: 'Actuators that provide hydraulic force in both extension and retraction strokes for full motion control.',
       href: '/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/',
-      image: '/images/products/double-acting-hydraulic-cylinder.webp',
+      image: '/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinders-manufacturer.webp',
     },
     {
       title: 'Custom Hydraulic Cylinders',
       description: 'Bespoke fluid power for when standard catalogs fail. We engineer large-bore and special-mount cylinders.',
       href: '/products/hydraulic-cylinders/custom-hydraulic-cylinders/',
-      image: '/images/products/welded-hydraulic-cylinder.webp',
+      image: '/images/products/hydraulic-cylinders/custom-hydraulic-cylinder-manufacturer.webp',
     },
     {
       title: 'Hydraulic Power Packs',
@@ -851,7 +865,7 @@ function RelatedServices() {
   );
 }
 
-/* ─── 15 FAQ Section ─── */
+/* ─── 14 FAQ Section ─── */
 function FAQSection() {
   return (
     <SiteFAQSection

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {
   ShieldAlert,
   Minimize2,
@@ -48,27 +48,27 @@ export const WELDED_SPECS: CylinderSpec[] = [
 export const WELDED_COMPONENTS: ProcessStep[] = [
   {
     icon: <Box className="w-6 h-6" />,
-    title: 'A. The Welded Barrel',
+    title: 'The Welded Barrel',
     desc: 'We utilize heavy-walled ST52 seamless steel tubing. The internal surface is skived and roller-burnished to an Ra 0.2 µm finish. The barrel wall thickness is calculated mathematically to resist bulging or deformation under extreme high-pressure transients.',
   },
   {
     icon: <Zap className="w-6 h-6" />,
-    title: 'B. The End Caps (Base and Head)',
+    title: 'The End Caps (Base and Head)',
     desc: 'The rear base cap is permanently welded to the barrel using advanced rotary friction or sub-arc welding techniques, creating a solid, leak-proof containment vessel. The front head cap (gland) is either welded or threaded securely into the barrel to house the rod seals.',
   },
   {
     icon: <Wrench className="w-6 h-6" />,
-    title: 'C. Mounting Interfaces',
+    title: 'Mounting Interfaces',
     desc: 'Because there are no external tie rods obstructing the barrel, welded cylinders allow for incredibly versatile, heavy-duty mounting options. Trunnions, cross-tubes, and clevis mounts are welded directly to the barrel itself, creating a unified structure capable of absorbing massive shear forces.',
   },
   {
     icon: <Cog className="w-6 h-6" />,
-    title: 'D. The Rod Assembly',
+    title: 'The Rod Assembly',
     desc: 'The hard-chrome plated piston rod transmits the mechanical force to the heavy load. For severe environments like marine engineering or mining, we upgrade the rod material to hardened stainless steel with specialized anti-corrosive epoxy coatings.',
   },
   {
     icon: <ShieldAlert className="w-6 h-6" />,
-    title: 'E. The Sealing System',
+    title: 'The Sealing System',
     desc: 'Welded cylinders must survive extreme shock loads. We utilize heavy-duty, 5-piece piston seals, bronze-filled PTFE wear rings, and double-lip rod wipers designed to prevent dust, mud, and metallic rust from contaminating the high-pressure fluid.',
   },
 ];

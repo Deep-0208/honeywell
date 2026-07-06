@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    
+
     canonical: PAGE_URL,
     image: PAGE_IMAGE,
   }),
@@ -229,10 +229,7 @@ export default function DcMiniPowerPacksPage() {
       <RelatedServices />
 
       {/* ─── 13 Local Service Areas ─── */}
-      <SiteLocationsSection
-        title="Local OEM Support in Gujarat"
-        description="As a premier DC hydraulic power pack manufacturer in Gujarat, we provide high-volume OEM manufacturing and direct engineering support to commercial vehicle builders across the state."
-      />
+      <SiteLocationsSection productName="DC Mini Power Packs" />
 
       {/* ─── 14 FAQs ─── */}
       <SiteFAQSection faqs={DC_MINI_FAQS} />
@@ -268,8 +265,24 @@ function HeroSection() {
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
       <Container>
-        {/* Breadcrumb */}
-        
+        <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
+          <ol className="flex items-center gap-2 flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Products</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products/hydraulic-power-packs" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Hydraulic Power Packs</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li className="text-honeywell-red font-semibold" aria-current="page">DC Mini Power Packs</li>
+          </ol>
+        </nav>
+
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content Column */}
@@ -306,9 +319,9 @@ function HeroSection() {
               </Button>
             </div>
 
-            
-            
-            
+
+
+
           </div>
 
           {/* Image Column */}
@@ -375,7 +388,7 @@ function ProductOverview() {
     <Section aria-labelledby="overview-heading" bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <Heading id="overview-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
+          <Heading id="overview-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6 text-center" underline="center">
             What Is A DC Mini Hydraulic Power Pack?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
@@ -605,7 +618,7 @@ function TechnicalSpecifications() {
 
 /* ─── 07 Industries Served ─── */
 function IndustriesSection() {
-  
+
 
   return (
     <Section aria-labelledby="industries-heading" bg="gray" id="industries">
@@ -620,17 +633,17 @@ function IndustriesSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {DC_MINI_INDUSTRIES.map((ind, idx) => (
-              <div key={idx}>
-                <IndustryCard
-                  industryName={ind.industryName}
-                  description={ind.description}
-                  icon={ind.icon}
-                  href={ind.href}
-                />
-              </div>
-            ))}
-          </div>
+          {DC_MINI_INDUSTRIES.map((ind, idx) => (
+            <div key={idx}>
+              <IndustryCard
+                industryName={ind.industryName}
+                description={ind.description}
+                icon={ind.icon}
+                href={ind.href}
+              />
+            </div>
+          ))}
+        </div>
       </Container>
     </Section>
   );
@@ -739,7 +752,7 @@ function ManufacturingProcess() {
                 </div>
               </li>
             </ul>
-            
+
             <div className="mt-8 bg-white p-4 rounded-lg border border-slate-200">
               <p className="text-sm text-honeywell-navy font-semibold flex items-center text-justify">
                 <ShieldAlert className="w-4 h-4 mr-2 text-honeywell-red" />
@@ -779,7 +792,7 @@ function ProjectSpotlight() {
               <Heading id="project-spotlight-heading" variant="section" as="h2" className="text-3xl font-display font-bold text-honeywell-navy mb-6" underline="center">
                 Custom 24V DC Power Pack for Heavy Commercial Tail Lifts
               </Heading>
-              
+
               <div className="space-y-6">
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Challenge</Heading>
@@ -787,14 +800,14 @@ function ProjectSpotlight() {
                     A national logistics fleet utilized 12V tail lifts to load heavy pallets. Used dozens of times per hour, the 12V motors constantly overheated and burned out due to massive amp draw on the delivery trucks' batteries.
                   </p>
                 </div>
-                
+
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Solution</Heading>
                   <p className="text-brand-steelGray font-body leading-relaxed text-justify">
                     We manufactured a highly compact 24V DC Mini Hydraulic Power Pack and upgraded the lifting circuits. We integrated a specialized manifold that lowered the load under gravity—meaning the motor only ran for lifting, cutting the duty cycle in half.
                   </p>
                 </div>
-                
+
                 <div>
                   <Heading variant="card" as="h4" className="text-honeywell-red font-bold mb-2 uppercase text-sm tracking-wider">The Outcome</Heading>
                   <p className="text-honeywell-navy font-body font-semibold leading-relaxed text-justify">
@@ -804,12 +817,12 @@ function ProjectSpotlight() {
               </div>
             </div>
             <div className="relative min-h-[300px] bg-honeywell-navy flex flex-col items-center justify-center p-12 text-center text-white">
-               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
-               <Activity className="w-16 h-16 text-honeywell-red mb-6 relative z-10" />
-               <div className="text-5xl font-bold mb-2 relative z-10">60%</div>
-               <div className="text-xl font-medium text-white/80 relative z-10">Reduction in Amp Draw</div>
-               <div className="text-5xl font-bold mb-2 relative z-10">18 Months</div>
-               <div className="text-xl font-medium text-white/80 relative z-10">Zero Motor Burnouts</div>
+              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+              <Activity className="w-16 h-16 text-honeywell-red mb-6 relative z-10" />
+              <div className="text-5xl font-bold mb-2 relative z-10">60%</div>
+              <div className="text-xl font-medium text-white/80 relative z-10">Reduction in Amp Draw</div>
+              <div className="text-5xl font-bold mb-2 relative z-10">18 Months</div>
+              <div className="text-xl font-medium text-white/80 relative z-10">Zero Motor Burnouts</div>
             </div>
           </div>
         </div>
