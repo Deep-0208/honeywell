@@ -8,6 +8,7 @@ import { homepageLocations } from '@/data/homepage';
 export interface SiteLocationsSectionProps {
   title?: string;
   description?: string;
+  productName?: string;
 }
 
 /**
@@ -17,18 +18,28 @@ export interface SiteLocationsSectionProps {
  * Pulls the 6 primary regions from homepageLocations.
  */
 export function SiteLocationsSection({
-  title = "Serving Manufacturers Across Gujarat & India",
-  description = "We provide rapid manufacturing and dispatch services to industries across the state and nationwide.",
+  title,
+  description,
+  productName,
 }: SiteLocationsSectionProps) {
+
+  const finalTitle = productName 
+    ? `Factory Direct Supply of ${productName} Across India`
+    : (title || "Serving Manufacturers Across Gujarat & India");
+
+  const finalDescription = productName
+    ? `Honeywell ${productName} are manufactured at our ISO-certified facility in Ahmedabad, Gujarat. We supply directly to OEMs, machine builders, and industries across India with reliable factory-direct delivery and custom engineering support.`
+    : (description || "We provide rapid manufacturing and dispatch services to industries across the state and nationwide.");
+
   return (
     <Section bg="gray" id="local-service-areas" aria-labelledby="local-service-areas-heading">
       <Container>
         <div className="text-center flex flex-col items-center max-w-3xl mx-auto mb-12">
           <Heading variant="section" underline="center" as="h2" id="local-service-areas-heading" className="text-honeywell-navy mb-4">
-            {title}
+            {finalTitle}
           </Heading>
           <p className="text-lg text-brand-steelGray font-body text-justify">
-            {description}
+            {finalDescription}
           </p>
         </div>
 

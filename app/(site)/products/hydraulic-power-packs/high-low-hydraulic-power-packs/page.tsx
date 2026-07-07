@@ -229,10 +229,7 @@ export default function HighLowPowerPacksPage() {
       <RelatedServices />
 
       {/* ─── 13 Local Service Areas ─── */}
-      <SiteLocationsSection
-        title="Local OEM Support in Gujarat"
-        description="As a premier high-low hydraulic power pack manufacturer in Gujarat, we provide direct energy-efficiency consulting and heavy-freight delivery to forging hubs and press OEMs across the state."
-      />
+      <SiteLocationsSection productName="High Low Hydraulic Power Packs" />
 
       {/* ─── 14 FAQs ─── */}
       <SiteFAQSection faqs={HIGH_LOW_FAQS} />
@@ -268,7 +265,23 @@ function HeroSection() {
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
       <Container>
-        {/* Breadcrumb */}
+                <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
+          <ol className="flex items-center gap-2 flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Products</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li>
+              <Link href="/products/hydraulic-power-packs" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Hydraulic Power Packs</Link>
+            </li>
+            <li aria-hidden="true">&rsaquo;</li>
+            <li className="text-honeywell-red font-semibold" aria-current="page">High Low Hydraulic Power Packs</li>
+          </ol>
+        </nav>
         
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -375,7 +388,7 @@ function ProductOverview() {
     <Section aria-labelledby="overview-heading" bg="white" id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <Heading id="overview-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6" underline="center">
+          <Heading id="overview-heading" variant="section" as="h2" className="text-3xl md:text-4xl font-display font-bold text-honeywell-navy mb-6 text-center" underline="center">
             What Is A High Low Hydraulic Power Pack?
           </Heading>
           <div className="space-y-5 text-brand-darkSlate font-body text-lg leading-relaxed">
