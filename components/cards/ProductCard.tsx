@@ -39,7 +39,7 @@ export function ProductCard({
           src={imageSrc}
           alt={`${title} - Honeywell Hydraulics`}
           fill
-          className={`object-cover ${isComingSoon ? '' : 'group-hover:scale-105 transition-transform duration-700 ease-premium'}`}
+          className={`object-contain ${isComingSoon ? '' : 'group-hover:scale-105 transition-transform duration-700 ease-premium'}`}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
 

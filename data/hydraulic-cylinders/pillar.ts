@@ -2,19 +2,12 @@ import React from 'react';
 import { ShieldCheck, Ruler, Wrench, Settings2, Shield, Factory, Truck, Hammer, Tractor } from 'lucide-react';
 import { FaIndustry, FaTruck, FaCogs, FaHammer, FaTractor } from 'react-icons/fa';
 
-import type {
-  CylinderFeature,
-  CylinderSpec,
-  CylinderType,
-  CylinderIndustry,
-  FAQ,
-} from './types';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Key Features / Advantages
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const PILLAR_FEATURES: CylinderFeature[] = [
+export const PILLAR_FEATURES = [
   {
     icon: React.createElement(ShieldCheck, { className: 'w-5 h-5' }),
     title: 'Zero-Leak Assurance',
@@ -41,7 +34,7 @@ export const PILLAR_FEATURES: CylinderFeature[] = [
 // Technical Specifications
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const PILLAR_SPECS: CylinderSpec[] = [
+export const PILLAR_SPECS = [
   { parameter: 'Bore Size Range', value: '40 mm to 300 mm (Custom up to 500mm)' },
   { parameter: 'Stroke Length', value: 'Up to 3000 mm (Standard)' },
   { parameter: 'Working Pressure', value: '160 Bar to 350+ Bar' },
@@ -54,7 +47,7 @@ export const PILLAR_SPECS: CylinderSpec[] = [
 // Cylinder Types
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const PILLAR_BLOCK_TYPES: CylinderType[] = [
+export const PILLAR_BLOCK_TYPES = [
   {
     title: "Double Acting Hydraulic Cylinders",
     description: "Our most versatile cylinders providing hydraulic power in both extension and retraction strokes for precise load control.",
@@ -103,7 +96,7 @@ export const PILLAR_BLOCK_TYPES: CylinderType[] = [
 // Industries Served
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const PILLAR_INDUSTRIES: CylinderIndustry[] = [
+export const PILLAR_INDUSTRIES = [
   {
     icon: React.createElement(FaIndustry, { className: 'w-6 h-6' }),
     industryName: "Injection Moulding",
@@ -146,7 +139,7 @@ export const PILLAR_INDUSTRIES: CylinderIndustry[] = [
 // FAQs
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const PILLAR_FAQS: FAQ[] = [
+export const PILLAR_FAQS = [
   {
     question: "Do you manufacture custom hydraulic cylinders?",
     answer: "Yes, custom manufacturing is our primary focus. We design and build hydraulic cylinders to your exact specifications, analyzing cycle rates, environmental exposure, side-loading possibilities, and fluid compatibility to ensure optimal performance."
