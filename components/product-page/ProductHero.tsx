@@ -86,7 +86,7 @@ export function ProductHero({
                 href={secondaryCta.href}
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto bg-white hover:bg-brand-surfaceGray"
+                className="w-full sm:w-auto bg-white"
               >
                 {secondaryCta.label} <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
