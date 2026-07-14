@@ -141,7 +141,9 @@ const CAPACITY_SPECS = [
   { label: 'Surface Finish', value: 'Ra 0.4 µm (honed barrels)' },
 ];
 
-const GALLERY_ITEMS = [
+type GalleryItem = { name: string; file: string; alt: string; isReady?: boolean };
+
+const GALLERY_ITEMS: GalleryItem[] = [
   { name: 'CNC Turning Centre', file: '/images/company/cnc-machining-center-hydraulic-cylinder.webp', alt: 'CNC turning centre for piston rod machining', isReady: true },
   { name: 'Welding Bay', file: '/images/company/hydraulic-cylinder-welding-fabrication.webp', alt: 'Heavy-duty welding bay for cylinder barrel construction', isReady: true },
   { name: 'Assembly Area', file: '/images/company/hydraulic-cylinder-assembly-area.webp', alt: 'Hydraulic power pack assembly area', isReady: true },
