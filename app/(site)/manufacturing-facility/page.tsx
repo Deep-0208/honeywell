@@ -143,9 +143,9 @@ const CAPACITY_SPECS = [
 
 const GALLERY_ITEMS = [
   { name: 'CNC Turning Centre', file: '/images/facility/cnc-machining-center-hydraulic-cylinder.webp', alt: 'CNC turning centre for piston rod machining', isReady: true },
-  { name: 'Welding Bay', file: '/images/manufacturing/welding-bay.webp', alt: 'Heavy-duty welding bay for cylinder barrel construction' },
+  { name: 'Manufacturing Facility', file: '/images/facility/honeywell-manufacturing-facility-kathwada.webp', alt: 'Honeywell Manufacturing Facility Kathwada', isReady: true },
+  { name: 'Test Rig', file: '/images/facility/hydrostatic-pressure-testing-hydraulic-cylinder.webp', alt: 'Hydrostatic pressure test rig', isReady: true },
   { name: 'Assembly Area', file: '/images/manufacturing/assembly-area.webp', alt: 'Hydraulic power pack assembly area' },
-  { name: 'Test Rig', file: '/images/manufacturing/test-rig.webp', alt: 'Hydrostatic pressure test rig' },
 ];
 
 const MFG_FAQS = [
@@ -261,6 +261,7 @@ export default function ManufacturingFacilityPage() {
                 <div className="aspect-square bg-brand-lightSurface flex items-center justify-center relative">
                   {('isReady' in item) ? (
                     <Image
+                      unoptimized
                       src={item.file}
                       alt={item.alt}
                       fill
