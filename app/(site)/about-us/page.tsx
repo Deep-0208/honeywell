@@ -652,6 +652,7 @@ export default function AboutUsPage() {
                       {pillar}
                     </li>
                   ))}
+                </ul>
               </div>
             </div>
             <div className="order-1 lg:order-2">

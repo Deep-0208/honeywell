@@ -195,7 +195,6 @@ export default function RequestQuotePage() {
         />
 
         <Container className="relative z-10">
-          {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
             <ol className="flex items-center gap-2">
               <li>
