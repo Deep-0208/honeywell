@@ -195,7 +195,7 @@ const PRODUCTS = [
     name: 'Hydraulic Cylinders',
     href: '/products/hydraulic-cylinders/',
     desc: 'Custom industrial hydraulic cylinders — double acting, welded, telescopic, tie rod configurations. Bore sizes 25mm to 500mm+.',
-    imageSrc: '/images/products/hero/hydraulic-cylinders-ahmedabad-manufacturer.webp'
+    imageSrc: '/images/products/hero/hydraulic-cylinders-ahmedabad.webp'
   },
   {
     name: 'Hydraulic Power Packs',
