@@ -137,10 +137,10 @@ const CAPACITY_SPECS = [
 ];
 
 const GALLERY_ITEMS = [
-  { name: 'CNC Turning Centre', file: '/images/facility/cnc-machining-center-hydraulic-cylinder.webp', alt: 'CNC turning centre for piston rod machining', isReady: true },
-  { name: 'Manufacturing Facility', file: '/images/facility/honeywell-manufacturing-facility-kathwada.webp', alt: 'Honeywell Manufacturing Facility Kathwada', isReady: true },
-  { name: 'Test Rig', file: '/images/facility/hydrostatic-pressure-testing-hydraulic-cylinder.webp', alt: 'Hydrostatic pressure test rig', isReady: true },
-  { name: 'Assembly Area', file: '/images/manufacturing/assembly-area.webp', alt: 'Hydraulic power pack assembly area' },
+  { name: 'CNC Turning Centre', file: '/images/company/cnc-machining-center-hydraulic-cylinder.webp', alt: 'CNC turning centre for piston rod machining', isReady: true },
+  { name: 'Welding Bay', file: '/images/company/hydraulic-cylinder-welding-fabrication.webp', alt: 'Hydraulic cylinder welding and fabrication', isReady: true },
+  { name: 'Assembly Area', file: '/images/company/hydraulic-cylinder-assembly-area.webp', alt: 'Hydraulic cylinder assembly area', isReady: true },
+  { name: 'Test Rig', file: '/images/company/hydrostatic-pressure-testing-hydraulic-cylinder.webp', alt: 'Hydrostatic pressure test rig', isReady: true },
 ];
 
 const MFG_FAQS = [
