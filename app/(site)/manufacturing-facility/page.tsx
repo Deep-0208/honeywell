@@ -136,12 +136,11 @@ const CAPACITY_SPECS = [
   { icon: <Layers className="w-5 h-5" />, label: 'Surface Finish', value: 'Ra 0.4 µm (honed)' },
 ];
 
-type GalleryItem = { name: string; file: string; alt: string; isReady?: boolean };
-const GALLERY_ITEMS: GalleryItem[] = [
-  { name: 'CNC Turning Centre', file: '/images/company/cnc-turning-lathe-machining.webp', alt: 'CNC lathe machine operator performing precision turning for hydraulic cylinder components', isReady: true },
-  { name: 'Welding Fabrication', file: '/images/company/hydraulic-cylinder-welding-fabrication.webp', alt: 'Professional welding and fabrication of hydraulic cylinder barrels', isReady: true },
-  { name: 'Assembly Area', file: '/images/company/hydraulic-cylinder-assembly-area.webp', alt: 'Skilled technicians assembling custom hydraulic cylinders', isReady: true },
-  { name: 'Vertical Milling', file: '/images/company/vertical-milling-machine-machining.webp', alt: 'Vertical milling machine operations for precision machining', isReady: true },
+const GALLERY_ITEMS = [
+  { name: 'CNC Turning Centre', file: '/images/facility/cnc-machining-center-hydraulic-cylinder.webp', alt: 'CNC turning centre for piston rod machining', isReady: true },
+  { name: 'Manufacturing Facility', file: '/images/facility/honeywell-manufacturing-facility-kathwada.webp', alt: 'Honeywell Manufacturing Facility Kathwada', isReady: true },
+  { name: 'Test Rig', file: '/images/facility/hydrostatic-pressure-testing-hydraulic-cylinder.webp', alt: 'Hydrostatic pressure test rig', isReady: true },
+  { name: 'Assembly Area', file: '/images/manufacturing/assembly-area.webp', alt: 'Hydraulic power pack assembly area' },
 ];
 
 const MFG_FAQS = [
@@ -246,6 +245,7 @@ export default function ManufacturingFacilityPage() {
                 <div className="aspect-[3/4] bg-brand-lightSurface flex items-center justify-center relative">
                   {('isReady' in item) ? (
                     <Image
+                      unoptimized
                       src={item.file}
                       alt={item.alt}
                       fill
