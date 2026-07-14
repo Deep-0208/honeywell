@@ -42,7 +42,7 @@ export function ProductCard({
       )}
 
       {/* Image Container */}
-      <div className="relative w-full aspect-[4/3] bg-brand-lightSurface overflow-hidden border-b border-slate-100 z-10">
+      <div className="relative w-full aspect-[4/3] bg-white overflow-hidden border-b border-slate-100 z-10 p-4">
         <Image
           src={imageSrc}
           alt={`${title} - Honeywell Hydraulics`}
@@ -53,7 +53,7 @@ export function ProductCard({
       </div>
 
       <CardContent className="flex flex-col flex-1 p-6 relative z-10">
-        <Heading variant="card" as="h3" className={`mb-2 line-clamp-1 ${isComingSoon ? "text-brand-deepNavy" : "text-brand-deepNavy group-hover:text-honeywell-navy transition-colors duration-200"}`}>
+        <Heading variant="card" as="h3" className={`mb-3 ${isComingSoon ? "text-brand-deepNavy" : "text-brand-deepNavy group-hover:text-honeywell-navy transition-colors duration-200"}`}>
           {isComingSoon ? (
             title
           ) : (
@@ -66,7 +66,7 @@ export function ProductCard({
           )}
         </Heading>
 
-        <p className={`font-body text-sm mb-6 line-clamp-2 flex-1 text-justify ${isComingSoon ? "text-brand-steelGray" : "text-brand-steelGray group-hover:text-brand-darkSlate transition-colors duration-200"}`}>
+        <p className={`font-body text-sm mb-6 line-clamp-2 flex-1 ${isComingSoon ? "text-brand-steelGray" : "text-brand-steelGray group-hover:text-brand-darkSlate transition-colors duration-200"}`}>
           {description}
         </p>
 

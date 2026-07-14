@@ -18,8 +18,6 @@ import {
   Cog,
   Wrench,
   Layers,
-  Maximize,
-  Ruler,
   FlaskConical,
   Package,
   CheckCircle2,
@@ -129,17 +127,24 @@ const WORKFLOW_STEPS = [
   },
 ];
 
+const FACILITY_OVERVIEW = [
+  { label: 'Location', value: 'Kathwada GIDC, Ahmedabad, Gujarat' },
+  { label: 'Established', value: '2018' },
+  { label: 'Operations', value: 'Multi-Shift Production' },
+  { label: 'Certifications', value: 'ISO Standards Compliant' },
+];
+
 const CAPACITY_SPECS = [
-  { icon: <Maximize className="w-5 h-5" />, label: 'Cylinder Bore Range', value: '25mm – 500mm+' },
-  { icon: <Ruler className="w-5 h-5" />, label: 'Maximum Stroke', value: '3,000mm (standard)' },
-  { icon: <Gauge className="w-5 h-5" />, label: 'Operating Pressure', value: 'Up to 350 Bar' },
-  { icon: <Layers className="w-5 h-5" />, label: 'Surface Finish', value: 'Ra 0.4 µm (honed)' },
+  { label: 'Cylinder Bore Range', value: '25mm – 500mm+' },
+  { label: 'Maximum Stroke', value: '3,000mm (standard), longer on request' },
+  { label: 'Operating Pressure', value: 'Up to 350 Bar standard' },
+  { label: 'Surface Finish', value: 'Ra 0.4 µm (honed barrels)' },
 ];
 
 const GALLERY_ITEMS = [
   { name: 'CNC Turning Centre', file: '/images/company/cnc-machining-center-hydraulic-cylinder.webp', alt: 'CNC turning centre for piston rod machining', isReady: true },
-  { name: 'Welding Bay', file: '/images/company/hydraulic-cylinder-welding-fabrication.webp', alt: 'Hydraulic cylinder welding and fabrication', isReady: true },
-  { name: 'Assembly Area', file: '/images/company/hydraulic-cylinder-assembly-area.webp', alt: 'Hydraulic cylinder assembly area', isReady: true },
+  { name: 'Welding Bay', file: '/images/company/hydraulic-cylinder-welding-fabrication.webp', alt: 'Heavy-duty welding bay for cylinder barrel construction', isReady: true },
+  { name: 'Assembly Area', file: '/images/company/hydraulic-cylinder-assembly-area.webp', alt: 'Hydraulic power pack assembly area', isReady: true },
   { name: 'Test Rig', file: '/images/company/hydrostatic-pressure-testing-hydraulic-cylinder.webp', alt: 'Hydrostatic pressure test rig', isReady: true },
 ];
 
@@ -198,11 +203,11 @@ export default function ManufacturingFacilityPage() {
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="bg-white pt-12 md:pt-20 pb-20 relative overflow-hidden">
         {/* Subtle engineering grid background */}
-        <div 
-          className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_10%_0%,#000_70%,transparent_100%)]" 
-          aria-hidden="true" 
+        <div
+          className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_10%_0%,#000_70%,transparent_100%)]"
+          aria-hidden="true"
         />
-        
+
         <Container className="relative z-10">
           <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
             <ol className="flex items-center gap-2">
@@ -216,17 +221,26 @@ export default function ManufacturingFacilityPage() {
 
           <div className="w-full">
 
-            
+
             <Heading variant="section" as="h1" className=" font-display font-extrabold tracking-tight text-honeywell-navy leading-[1.15] mb-6">
-              Our Manufacturing Facility —<br className="hidden md:block" /> 
+              Our Manufacturing Facility —<br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-honeywell-navy via-honeywell-navy to-honeywell-red"> Designed, Built, and Tested</span>{" "}in Ahmedabad
             </Heading>
-            
+
             <p className="text-brand-steelGray text-lg md:text-xl font-body leading-relaxed mb-12 text-justify">
               Every hydraulic cylinder, power pack, and accessory that leaves Honeywell Hydraulics is designed, machined, assembled, pressure-tested, and certified within our Ahmedabad facility. We do not source and relabel — we manufacture.
             </p>
           </div>
-            
+
+          {/* Facility Overview Compact Stats */}
+          <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 p-6 md:p-8 bg-white border border-slate-100 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative z-10 transition-transform duration-500 hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1">
+            {FACILITY_OVERVIEW.map((item) => (
+              <div key={item.label} className="text-left flex flex-col justify-center">
+                <p className="text-xs text-brand-steelGray font-body uppercase tracking-widest font-semibold mb-2 text-justify">{item.label}</p>
+                <p className="text-base md:text-lg font-display font-bold text-honeywell-navy leading-tight text-justify">{item.value}</p>
+              </div>
+            ))}
+          </div>
         </Container>
       </section>
 
@@ -234,22 +248,23 @@ export default function ManufacturingFacilityPage() {
       <Section bg="gray" aria-labelledby="gallery-mfg-heading">
         <Container>
           <div className="text-center mb-12 flex flex-col items-center">
-            <Heading as="h2" variant="section" id="gallery-mfg-heading" className="mb-3" underline="center">
+            <Heading as="h2" variant="section" id="gallery-mfg-heading" className="mb-3">
               Facility Gallery
             </Heading>
-
+            <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
+              Inside our Kathwada GIDC manufacturing facility — from CNC machining to final testing and dispatch.
+            </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {GALLERY_ITEMS.map((item) => (
               <div key={item.name} className="bg-white border border-slate-200 rounded-sm overflow-hidden transition-[transform,box-shadow,border-color] duration-300 ease-out hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red active:scale-[0.98] group">
-                <div className="aspect-[3/4] bg-brand-lightSurface flex items-center justify-center relative">
+                <div className="aspect-square bg-brand-lightSurface flex items-center justify-center relative">
                   {('isReady' in item) ? (
                     <Image
-                      unoptimized
                       src={item.file}
                       alt={item.alt}
                       fill
-                      className="object-cover object-[center_15%] transition-transform duration-500 ease-out group-hover:scale-105"
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                       sizes="(max-width: 768px) 50vw, 25vw"
                     />
                   ) : (
@@ -275,7 +290,7 @@ export default function ManufacturingFacilityPage() {
       <Section bg="white" aria-labelledby="workflow-heading">
         <Container>
           <div className="text-center mb-14 flex flex-col items-center">
-            <Heading as="h2" variant="section" id="workflow-heading" className="mb-3" underline="center">
+            <Heading as="h2" variant="section" id="workflow-heading" className="mb-3">
               End-to-End Manufacturing Workflow
             </Heading>
             <p className="text-lg text-brand-steelGray font-body max-w-2xl mx-auto text-justify">
@@ -285,7 +300,9 @@ export default function ManufacturingFacilityPage() {
           <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" aria-label="Manufacturing workflow steps">
             {WORKFLOW_STEPS.map((step) => (
               <li key={step.step} className="bg-white border border-slate-200 rounded-sm p-6 transition-[transform,box-shadow,border-color] duration-300 ease-out hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red active:scale-[0.98] relative group">
-
+                <span className="absolute top-4 right-4 w-7 h-7 rounded-full bg-honeywell-red text-white text-xs font-bold flex items-center justify-center font-body">
+                  {step.step}
+                </span>
                 <div className="w-12 h-12 rounded-full bg-honeywell-navy flex items-center justify-center text-white mb-4 transition-[background-color,transform] duration-200 ease-out group-hover:bg-honeywell-red group-hover:scale-110">
                   {step.icon}
                 </div>
@@ -334,23 +351,66 @@ export default function ManufacturingFacilityPage() {
           </div>
         </Container>
       </Section>
+
+      {/* ── Custom Manufacturing ──────────────────── */}
+      <Section bg="white" aria-labelledby="custom-mfg-heading">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1 bg-honeywell-navy text-white rounded-sm p-8 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
+              <div className="relative z-10">
+                <Users className="w-10 h-10 text-honeywell-red mb-4" aria-hidden="true" />
+                <Heading as="h3" variant="card" className="text-white mb-4">OEM Partnership Benefits</Heading>
+                <ul className="space-y-3">
+                  {[
+                    'No additional design consultation fee for custom work',
+                    'First Article turnaround within 7–15 working days',
+                    'Dedicated capacity allocation for priority orders',
+                    'Direct factory communication — no middlemen',
+                    'Transparent pricing with firm delivery timelines',
+                    'Complete documentation package with every shipment',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm text-brand-borderGray font-body">
+                      <CheckCircle2 className="w-4 h-4 text-honeywell-red shrink-0 mt-0.5" aria-hidden="true" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <Heading as="h2" variant="section" id="custom-mfg-heading" className="mb-3">
+                Custom Manufacturing Capability
+              </Heading>
+              <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-justify">
+                The majority of our work is custom-engineered to specific load, speed, pressure, and spatial requirements. We design and manufacture hydraulic cylinders, power packs, and accessories to your exact specifications.
+              </p>
+              <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-justify">
+                Whether you are an OEM requiring consistent supply of custom-specified components, an SPM builder needing one-off hydraulic solutions, or a maintenance engineer seeking a precise replacement — our facility is equipped to deliver.
+              </p>
+              <div className="mt-6">
+                <Button href="/request-quote" variant="primary" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>
+                  Request Custom Quote
+                </Button>
+        \      </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       {/* ── Production Capacity ───────────────────────────────────────────── */}
-      <section className="bg-gradient-to-r from-honeywell-navy to-[#0f172a] shadow-inner py-12 md:py-16">
+      <section className="bg-honeywell-navy py-12 md:py-16">
         <Container>
           <div className="text-center mb-10">
             <Heading as="h2" variant="section" className="text-white mb-4">
               Production Capacity
             </Heading>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {CAPACITY_SPECS.map((item) => (
-              <div key={item.label} className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 hover:bg-white/10 transition-all duration-300 ease-out overflow-hidden hover:-translate-y-1 hover:shadow-2xl hover:border-honeywell-red/40">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-honeywell-red to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="w-14 h-14 mx-auto rounded-full bg-white/10 flex items-center justify-center text-white mb-6 group-hover:bg-honeywell-red group-hover:scale-110 transition-all duration-300 shadow-sm border border-white/10 group-hover:border-transparent">
-                  {item.icon}
-                </div>
-                <p className="text-2xl font-display font-extrabold text-white mb-2 text-center group-hover:text-honeywell-red transition-colors duration-300 tracking-tight">{item.value}</p>
-                <p className="text-xs text-[#94A3B8] font-body uppercase tracking-widest font-semibold text-center">{item.label}</p>
+              <div key={item.label} className="border border-white/10 rounded-sm p-5">
+                <p className="text-lg md:text-xl font-display font-extrabold text-white mb-1 text-justify">{item.value}</p>
+                <p className="text-xs text-[#94A3B8] font-body uppercase tracking-wider text-justify">{item.label}</p>
               </div>
             ))}
           </div>
@@ -361,25 +421,22 @@ export default function ManufacturingFacilityPage() {
       <Section bg="gray" aria-labelledby="safety-mfg-heading">
         <Container>
           <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
-            <Heading as="h2" variant="section" id="safety-mfg-heading" className="mb-3" underline="center">
+            <Heading as="h2" variant="section" id="safety-mfg-heading" className="mb-3">
               Safety &amp; Compliance Standards
             </Heading>
             <p className="text-lg text-brand-steelGray font-body mb-8 text-justify">
               Manufacturing hydraulic equipment involves high-pressure systems and heavy components. Safety is integral to every operation.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { icon: <HardHat className="w-6 h-6" />, label: 'PPE Compliance' },
                 { icon: <ShieldCheck className="w-6 h-6" />, label: 'Fire Safety Systems' },
                 { icon: <Gauge className="w-6 h-6" />, label: 'Electrical Safety' },
                 { icon: <CheckCircle2 className="w-6 h-6" />, label: 'Regular Training' },
               ].map((item) => (
-                <div key={item.label} className="group bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center transition-all duration-300 ease-out hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] hover:-translate-y-1 hover:border-honeywell-red/30 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-red-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                  <div className="w-16 h-16 rounded-full bg-brand-lightSurface flex items-center justify-center text-honeywell-navy mb-5 group-hover:bg-honeywell-red group-hover:text-white group-hover:scale-110 transition-all duration-300 relative z-10 shadow-sm border border-slate-100 group-hover:border-transparent">
-                    {item.icon}
-                  </div>
-                  <p className="text-base sm:text-lg font-bold text-honeywell-navy font-display text-center relative z-10 group-hover:text-honeywell-red transition-colors duration-300">{item.label}</p>
+                <div key={item.label} className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-6 sm:p-8 flex flex-col items-center justify-center transition-transform hover:-translate-y-1">
+                  <IconBox icon={item.icon} variant="primary" size="md" className="mx-auto mb-3" />
+                  <p className="text-sm sm:text-base font-semibold text-honeywell-navy font-body text-center">{item.label}</p>
                 </div>
               ))}
             </div>
