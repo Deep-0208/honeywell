@@ -276,3 +276,4 @@ export interface ProductPageData {
   faqs?: FAQ[];
   cta?: FinalCtaData;
 }
+  
