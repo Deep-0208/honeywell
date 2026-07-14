@@ -158,19 +158,19 @@ export const homepageProducts: HomepageProduct[] = [
   {
     title: 'Hydraulic Manifold Blocks',
     description:
-      'Custom-machined manifold blocks for integrated hydraulic circuits. Precision-drilled ports with optimized flow paths for your specific valve configurations.',
+      'Custom-machined aluminium and steel manifold blocks to consolidate valving, reduce leak points, and simplify system plumbing.',
     category: 'Fluid Control',
     imageSrc: '/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp',
-    href: '/products/hydraulic-manifold-blocks/',
+    href: '/products/manifold-blocks/',
     ctaText: 'View Manifold Blocks',
   },
   {
     title: 'Custom Hydraulic Systems',
     description:
-      'Complete turnkey hydraulic solutions — from engineering to commissioning. Designed for your specific industrial application and production requirements.',
+      'Complex hydraulic systems tailored for your specific industrial application, including automated test rigs and integrated manifolds.',
     category: 'Engineered Solutions',
     imageSrc: '/images/products/hero/custom-hydraulic-systems-ahmedabad.webp',
-    href: '/products/custom-hydraulic-systems/',
+    href: '#',
     ctaText: 'View Systems',
   },
 ];

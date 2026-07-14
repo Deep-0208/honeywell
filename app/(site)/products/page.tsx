@@ -134,16 +134,16 @@ export default function ProductsHubPage() {
                 <div className="absolute inset-4 rounded-3xl border border-slate-200 bg-slate-100/70 backdrop-blur-md overflow-hidden flex items-center justify-center p-4 shadow-2xl">
                    <div className="grid grid-cols-2 gap-4 w-full h-full">
                       <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image src="/images/products/hero/hydraulic-cylinders-ahmedabad.webp" alt="Hydraulic Cylinders" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image unoptimized src="/images/products/hero/hydraulic-cylinders-ahmedabad.webp" alt="Hydraulic Cylinders" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
                       <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image src="/images/products/hero/hydraulic-power-pack.webp" alt="Hydraulic Power Packs" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image unoptimized src="/images/products/hero/hydraulic-power-pack.webp" alt="Hydraulic Power Packs" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
                       <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image src="/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp" alt="Hydraulic Manifold Blocks" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image unoptimized src="/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp" alt="Hydraulic Manifold Blocks" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
                       <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image src="/images/products/hero/custom-hydraulic-systems-ahmedabad.webp" alt="Custom Hydraulic Systems" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image unoptimized src="/images/products/hero/custom-hydraulic-systems-ahmedabad.webp" alt="Custom Hydraulic Systems" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
                    </div>
                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -302,49 +302,49 @@ export default function ProductsHubPage() {
             <IndustryCard
               industryName="Automotive OEM"
               description="Highly repeatable hydraulic systems for robotic assembly, welding lines, and press automation."
-              href="/industries/automotive-oem"
+              href="#"
               icon={<Shield className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Steel & Metallurgy"
               description="Rugged mill-type hydraulic cylinders built with high-temperature Viton seals to withstand extreme foundry environments."
-              href="/industries/steel-metallurgy"
+              href="#"
               icon={<Activity className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Construction & Earthmoving"
               description="Heavy-duty boom, stick, and bucket hydraulic cylinders engineered for shock resistance in excavators and earthmovers."
-              href="/industries/construction-earthmoving"
+              href="#"
               icon={<Shield className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Material Handling"
               description="Reliable, leak-free telescopic and double-acting cylinders for forklifts, scissor lifts, and AGVs."
-              href="/industries/material-handling"
+              href="#"
               icon={<Activity className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Rolling Mill"
               description="High-force hydraulic cylinders with precision-ground rods for continuous rolling mill operations."
-              href="/industries/rolling-mill"
+              href="#"
               icon={<Shield className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Wooden Industries"
               description="High-tonnage hydraulic press cylinders optimized for plywood pressing, veneer peeling, and timber cutting."
-              href="/industries/wooden-industries"
+              href="#"
               icon={<Activity className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Power Generation"
               description="Custom hydraulic actuators for turbine control, valve actuation, and dam gate operations."
-              href="/industries/power-generation"
+              href="#"
               icon={<Shield className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Defence & Aerospace"
               description="Military-grade hydraulic cylinders meeting stringent defence specifications for launch systems and ground support."
-              href="/industries/defence-aerospace"
+              href="#"
               icon={<Activity className="w-6 h-6" />}
             />
           </div>
