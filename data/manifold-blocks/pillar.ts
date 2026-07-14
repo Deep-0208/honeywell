@@ -10,19 +10,13 @@ import {
   Zap,
 } from 'lucide-react';
 
-import type {
-  ManifoldFeature,
-  ManifoldSpec,
-  ManifoldBlockType,
-  ManifoldIndustry,
-  FAQ,
-} from './types';
+
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Key Features / Advantages
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const PILLAR_FEATURES: ManifoldFeature[] = [
+export const PILLAR_FEATURES = [
   {
     icon: React.createElement(Droplets, { className: 'w-5 h-5' }),
     title: 'Elimination of Leak Points',
@@ -59,7 +53,7 @@ export const PILLAR_FEATURES: ManifoldFeature[] = [
 // Technical Specifications
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const PILLAR_SPECS: ManifoldSpec[] = [
+export const PILLAR_SPECS = [
   { parameter: 'Material Options', value: 'Aluminum (Alloy 6061-T6), Carbon Steel (ST52 / EN8), Ductile Iron, Stainless Steel (SS316)' },
   { parameter: 'Max Operating Pressure', value: 'Aluminum: 210 Bar. Steel/Iron: 350+ Bar. Custom configurations up to 500 Bar.' },
   { parameter: 'Valve Mounting Standards', value: 'ISO 4401 (CETOP 3, 5, 7, 8), SAE Cavities, Sun/HydraForce Cartridge Cavities' },
@@ -72,7 +66,7 @@ export const PILLAR_SPECS: ManifoldSpec[] = [
 // Manifold Block Types
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const PILLAR_BLOCK_TYPES: ManifoldBlockType[] = [
+export const PILLAR_BLOCK_TYPES = [
   {
     title: 'CETOP Manifold Blocks',
     description:
@@ -114,7 +108,7 @@ export const PILLAR_BLOCK_TYPES: ManifoldBlockType[] = [
 // Industries Served
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const PILLAR_INDUSTRIES: ManifoldIndustry[] = [
+export const PILLAR_INDUSTRIES = [
   {
     icon: React.createElement(Factory, { className: 'w-6 h-6' }),
     name: 'Automotive OEM',
@@ -139,7 +133,7 @@ export const PILLAR_INDUSTRIES: ManifoldIndustry[] = [
 // FAQs
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const PILLAR_FAQS: FAQ[] = [
+export const PILLAR_FAQS = [
   {
     question: 'Do you manufacture custom manifold blocks based on our engineering drawings?',
     answer:
