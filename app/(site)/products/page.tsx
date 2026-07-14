@@ -69,6 +69,7 @@ export default function ProductsHubPage() {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Hydraulic Cylinders', url: `${siteUrl}/products/hydraulic-cylinders` },
       { '@type': 'ListItem', position: 2, name: 'Hydraulic Power Packs', url: `${siteUrl}/products/hydraulic-power-packs` },
+      { '@type': 'ListItem', position: 3, name: 'Hydraulic Manifold Blocks', url: `${siteUrl}/products/manifold-blocks` },
     ],
   };
   const faqs = [
@@ -170,7 +171,7 @@ export default function ProductsHubPage() {
               We manufacture two core families of industrial hydraulic equipment. Select a category below to explore technical specifications, mounting configurations, and variant options.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <ProductCard
               title="Hydraulic Cylinders"
               description="Heavy-duty linear actuators available in custom bore sizes from 40mm to 300mm. Variants: Double Acting, Single Acting, Flange Mounting, Clevis Mounting, Tie-Rod, Telescopic."
@@ -186,6 +187,14 @@ export default function ProductsHubPage() {
               imageSrc="/images/products/hero/multi-station-hydraulic-power-pack.webp"
               href="/products/hydraulic-power-packs"
               ctaText="EXPLORE HYDRAULIC POWER PACKS"
+            />
+            <ProductCard
+              title="Hydraulic Manifold Blocks"
+              description="Precision-machined logic blocks. Standard CETOP subplates and custom multi-station cartridge valve manifolds ensuring zero-leak fluid control."
+              category="Fluid Control"
+              imageSrc="/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp"
+              href="/products/manifold-blocks"
+              ctaText="EXPLORE MANIFOLD BLOCKS"
             />
           </div>
         </Container>
