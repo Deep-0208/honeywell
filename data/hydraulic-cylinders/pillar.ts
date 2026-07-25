@@ -49,6 +49,13 @@ export const PILLAR_SPECS = [
 
 export const PILLAR_BLOCK_TYPES = [
   {
+    title: "Welded Hydraulic Cylinders",
+    description: "Compact, heavy-duty cylinders engineered for mobile equipment and applications with spatial constraints.",
+    category: "Hydraulic Cylinders",
+    imageSrc: "/images/products/hydraulic-cylinders/welded-hydraulic-cylinders-manufacturer.webp",
+    href: "/products/hydraulic-cylinders/welded-hydraulic-cylinders/"
+  },
+  {
     title: "Double Acting Hydraulic Cylinders",
     description: "Our most versatile cylinders providing hydraulic power in both extension and retraction strokes for precise load control.",
     category: "Hydraulic Cylinders",
@@ -56,11 +63,25 @@ export const PILLAR_BLOCK_TYPES = [
     href: "/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/"
   },
   {
-    title: "Single Acting Hydraulic Cylinders",
-    description: "Designed for applications where gravity or a mechanical spring returns the cylinder to its original position.",
+    title: "Trunnion Mounted Hydraulic Cylinders",
+    description: "Heavy-duty trunnion mounted hydraulic cylinders engineered for pivoting machinery, rotary motion applications, and heavy industrial equipment.",
     category: "Hydraulic Cylinders",
-    imageSrc: "/images/products/hydraulic-cylinders/single-acting-hydraulic-cylinder-manufacturer.webp",
-    href: "/products/hydraulic-cylinders/single-acting-hydraulic-cylinders/"
+    imageSrc: "/images/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder.webp",
+    href: "/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder/"
+  },
+  {
+    title: "Clevis Mounted Hydraulic Cylinders",
+    description: "Heavy-duty clevis mounted hydraulic cylinders engineered for pivoting applications, oscillating machinery, and articulated equipment.",
+    category: "Hydraulic Cylinders",
+    imageSrc: "/images/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder.webp",
+    href: "/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder/"
+  },
+  {
+    title: "Flange Mounted Hydraulic Cylinders",
+    description: "Heavy-duty flange mounted hydraulic cylinders for industrial machinery and presses. Engineered for rigid mounting and high-force linear motion.",
+    category: "Hydraulic Cylinders",
+    imageSrc: "/images/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder.webp",
+    href: "/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder/"
   },
   {
     title: "Tie-Rod Hydraulic Cylinders",
@@ -68,13 +89,6 @@ export const PILLAR_BLOCK_TYPES = [
     category: "Hydraulic Cylinders",
     imageSrc: "/images/products/hydraulic-cylinders/tie-rod-hydraulic-cylinder-manufacturer.webp",
     href: "/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/"
-  },
-  {
-    title: "Welded Hydraulic Cylinders",
-    description: "Compact, heavy-duty cylinders engineered for mobile equipment and applications with spatial constraints.",
-    category: "Hydraulic Cylinders",
-    imageSrc: "/images/products/hydraulic-cylinders/welded-hydraulic-cylinders-manufacturer.webp",
-    href: "/products/hydraulic-cylinders/welded-hydraulic-cylinders/"
   },
   {
     title: "Telescopic Hydraulic Cylinders",
@@ -91,13 +105,6 @@ export const PILLAR_BLOCK_TYPES = [
     href: "/products/hydraulic-cylinders/custom-hydraulic-cylinders/"
   },
   {
-    title: "Goods Lift Hydraulic Cylinders",
-    description: "Heavy-duty cylinders with integrated safety rupture valves for industrial goods lifts and freight elevators.",
-    category: "Hydraulic Cylinders",
-    imageSrc: "/images/products/hydraulic-cylinders/goods-lift-hydraulic-cylinder-v2.webp",
-    href: "/products/hydraulic-cylinders/goods-lift-hydraulic-cylinders/"
-  },
-  {
     title: "Car Parking Hydraulic Cylinders",
     description: "Reliable hydraulic cylinders engineered for safe, smooth, and vibration-free vertical lifting in car parking systems.",
     category: "Hydraulic Cylinders",
@@ -112,32 +119,25 @@ export const PILLAR_BLOCK_TYPES = [
     href: "/products/hydraulic-cylinders/scissor-lift-table-hydraulic-cylinder/"
   },
   {
-    title: "Flange Mounted Hydraulic Cylinders",
-    description: "Heavy-duty flange mounted hydraulic cylinders for industrial machinery and presses. Engineered for rigid mounting and high-force linear motion.",
-    category: "Hydraulic Cylinders",
-    imageSrc: "/images/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder.webp",
-    href: "/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder/"
-  },
-  {
-    title: "Clevis Mounted Hydraulic Cylinders",
-    description: "Heavy-duty clevis mounted hydraulic cylinders engineered for pivoting applications, oscillating machinery, and articulated equipment.",
-    category: "Hydraulic Cylinders",
-    imageSrc: "/images/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder.webp",
-    href: "/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder/"
-  },
-  {
-    title: "Trunnion Mounted Hydraulic Cylinders",
-    description: "Heavy-duty trunnion mounted hydraulic cylinders engineered for pivoting machinery, rotary motion applications, and heavy industrial equipment.",
-    category: "Hydraulic Cylinders",
-    imageSrc: "/images/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder.webp",
-    href: "/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder/"
-  },
-  {
     title: "Square Body Hydraulic Cylinders",
     description: "Heavy-duty square body hydraulic cylinders engineered for compact high-strength industrial applications, machine tools, and automation systems.",
     category: "Hydraulic Cylinders",
     imageSrc: "/images/products/hydraulic-cylinders/square-body-hydraulic-cylinder.webp",
     href: "/products/hydraulic-cylinders/square-body-hydraulic-cylinder/"
+  },
+  {
+    title: "Goods Lift Hydraulic Cylinders",
+    description: "Heavy-duty cylinders with integrated safety rupture valves for industrial goods lifts and freight elevators.",
+    category: "Hydraulic Cylinders",
+    imageSrc: "/images/products/hydraulic-cylinders/goods-lift-hydraulic-cylinder-v2.webp",
+    href: "/products/hydraulic-cylinders/goods-lift-hydraulic-cylinders/"
+  },
+  {
+    title: "Single Acting Hydraulic Cylinders",
+    description: "Designed for applications where gravity or a mechanical spring returns the cylinder to its original position.",
+    category: "Hydraulic Cylinders",
+    imageSrc: "/images/products/hydraulic-cylinders/single-acting-hydraulic-cylinder-manufacturer.webp",
+    href: "/products/hydraulic-cylinders/single-acting-hydraulic-cylinders/"
   }
 ];
 
