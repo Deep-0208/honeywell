@@ -178,19 +178,19 @@ export const singleActingCylinderData: ProductPageData = {
         icon: <FaHardHat className="w-6 h-6" />,
         name: 'Material Handling',
         description: 'Used extensively in scissor lifts, goods elevators, and platform lifts where gravity handles the return stroke.',
-        href: '/industries'
+        href: '/industries/single-acting-hydraulic-cylinder-manufacturer-honeywell'
       },
       {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Heavy Forging & Presses',
         description: 'Ideal for hydraulic presses where massive unidirectional downward force is required to stamp or bend metal.',
-        href: '/industries'
+        href: '/industries/heavy-forging-presses'
       },
       {
         icon: <FaCar className="w-6 h-6" />,
         name: 'Automotive & Parking',
         description: 'Reliable actuators for car parking systems and hydraulic jacks.',
-        href: '/industries'
+        href: '/industries/automotive-parking'
       },
     ],
   },

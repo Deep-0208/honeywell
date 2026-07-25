@@ -107,10 +107,13 @@ export const weldedCylinderData: ProductPageData = {
     rows: [
       { parameter: 'Bore Sizes', value: '40mm to 400+ mm (Custom large-bore available)' },
       { parameter: 'Maximum Operating Pressure', value: 'Up to 350+ Bar (5000+ PSI)' },
+      { parameter: 'Maximum Side Load', value: 'High resilience (welded joints absorb shear)' },
+      { parameter: 'Operating Speed', value: 'Up to 0.5 m/s (Standard)' },
       { parameter: 'Mounting Options', value: 'Cross-Tube, Clevis, Trunnion, Flange (Welded directly to barrel)' },
-      { parameter: 'Barrel Material', value: 'ST52 / EN8 Seamless Honed Tube' },
+      { parameter: 'Barrel Material', value: 'ST52 / EN8 Seamless Honed Tube (Ra 0.2 µm)' },
       { parameter: 'Piston Rod Options', value: 'Hard Chrome Plated, Stainless Steel, Induction Hardened' },
       { parameter: 'Sealing System', value: 'Heavy-duty 5-piece piston seals, double-lip rod wipers, PTFE wear bands' },
+      { parameter: 'Cushioning Options', value: 'Fixed or adjustable (Front/Rear)' },
       { parameter: 'Exterior Protection', value: 'Standard Polyurethane, Marine-Grade Epoxy, Zinc Plating' },
     ],
     primaryCta: { label: 'DISCUSS YOUR SPECS', href: '/request-quote/' },
@@ -143,39 +146,39 @@ export const weldedCylinderData: ProductPageData = {
         icon: <FaFire className="w-6 h-6" />,
         name: 'Steel & Metallurgy',
         description: 'Supplying extreme-pressure, heat-resistant cylinders for rolling mills and automatic gauge control (AGC).',
-        href: '/industries'
+        href: '/industries/welded-hydraulic-cylinder-manufacturer-honeywell'
       },
       {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Heavy Forging',
         description: 'Delivering massive, thick-walled pressing cylinders designed to survive brutal metal-stamping shock loads.',
-        href: '/industries'
+        href: '/industries/heavy-forging'
       },
       {
         icon: <FaHardHat className="w-6 h-6" />,
         name: 'Construction Equipment',
         description: 'Engineering rugged, weather-resistant boom, stick, and bucket cylinders for excavators and loaders.',
-        href: '/industries'
+        href: '/industries/construction-equipment'
       },
       {
         icon: <FaAnchor className="w-6 h-6" />,
         name: 'Marine Engineering',
         description: 'Manufacturing corrosion-resistant, high-tensile cylinders for ship-breaking shears and marine winches.',
-        href: '/industries'
+        href: '/industries/marine-engineering'
       },
       {
         icon: <FaBox className="w-6 h-6" />,
         name: 'Material Handling',
         description: 'Providing fail-safe, heavy-duty lifting cylinders for multi-ton gantry cranes and goods elevators.',
-        href: '/industries'
+        href: '/industries/material-handling'
       },
     ],
   },
 
   // 10. Engineering
   engineering: {
-    heading: 'Engineering Considerations (Specifying Welded Cylinders)',
-    description: 'Our Custom Hydraulic System Design team analyzes critical environmental and operational factors before engineering a welded cylinder for your heavy machinery.',
+    heading: 'How to Choose the Right Welded Hydraulic Cylinder',
+    description: 'When specifying a welded cylinder for heavy equipment, our design engineers evaluate load, environment, and duty cycle.',
     items: [
       {
         label: 'A',
@@ -202,18 +205,23 @@ export const weldedCylinderData: ProductPageData = {
     steps: [
       {
         icon: <Cog className="w-6 h-6" />,
-        title: 'Advanced Welding',
-        description: 'Utilizing automated rotary friction and sub-arc welding systems to ensure deep, slag-free weld penetration between the end caps and the high-tensile barrel.',
+        title: 'Material Selection & Forging',
+        description: 'We source high-yield ST52 seamless tubes and 42CrMo4 steel for mounts. Every batch undergoes ultrasonic testing to guarantee zero internal material voids before welding begins.',
+      },
+      {
+        icon: <Cog className="w-6 h-6" />,
+        title: 'Automated Sub-Arc Assembly',
+        description: 'End caps and mounting blocks are fused using automated rotary sub-arc welding. This ensures 100% continuous weld penetration, eliminating the micro-cracks common in manual welding.',
       },
       {
         icon: <Wrench className="w-6 h-6" />,
-        title: 'Post-Weld Machining',
-        description: 'Unlike inferior manufacturers, we hone the internal barrel after the welding process is complete. This completely removes any heat-induced metal distortion, ensuring perfect internal cylindricity and vastly extending seal life.',
+        title: 'Post-Weld Precision Honing',
+        description: 'Because welding induces heat distortion, we re-hone the internal barrel only after all exterior welds are complete, guaranteeing absolute cylindricity and maximizing seal longevity.',
       },
       {
         icon: <ShieldAlert className="w-6 h-6" />,
-        title: 'Shock-Load Validation',
-        description: '100% of our welded cylinders undergo extreme 1.5x working pressure hydrostatic testing to verify weld integrity and seal performance under simulated field conditions.',
+        title: 'Dynamic QA & Stress Testing',
+        description: 'Beyond static pressure tests, welded units undergo cyclical shock-load simulations at 1.5x working pressure (up to 525 Bar) to validate the weld sheer strength and seal integrity under extreme stress.',
       },
     ],
     midCta: {
@@ -273,7 +281,7 @@ export const weldedCylinderData: ProductPageData = {
         title: 'Double Acting Hydraulic Cylinders',
         description: 'Precision engineered for powered stroke in both directions.',
         category: 'Hydraulic Cylinders',
-        imageSrc: '/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinder-manufacturer.webp',
+        imageSrc: '/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinders-manufacturer.webp',
         href: '/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/',
         ctaText: 'View Details',
       },

@@ -154,25 +154,48 @@ export const telescopicCylinderData: ProductPageData = {
         icon: <Truck className="w-6 h-6" />,
         name: 'Transportation & Logistics',
         description: 'Supplying high-volume, multi-stage cylinders for heavy commercial tipper trucks and bulk transport trailers.',
-        href: '/industries'
+        href: '/industries/telescopic-hydraulic-cylinder-manufacturer-honeywell'
       },
       {
         icon: <HardHat className="w-6 h-6" />,
         name: 'Construction',
         description: 'Delivering robust lifting cylinders for massive earth-moving dump trucks and off-highway haulers operating in harsh environments.',
-        href: '/industries'
+        href: '/industries/construction'
       },
       {
         icon: <Trash2 className="w-6 h-6" />,
         name: 'Waste Management',
         description: 'Engineering compact, double-acting telescopic cylinders for refuse collection vehicles and garbage packer blades.',
-        href: '/industries'
+        href: '/industries/waste-management'
       },
       {
         icon: <Building2 className="w-6 h-6" />,
         name: 'Municipal Equipment',
         description: 'Manufacturing highly reliable actuators for municipal road sweepers, snowplows, and specialized utility trucks.',
-        href: '/industries'
+        href: '/industries/municipal-equipment'
+      },
+    ],
+  },
+
+  // 10. Engineering / How to Choose
+  engineering: {
+    heading: 'How to Choose the Right Telescopic Hydraulic Cylinder',
+    description: 'Telescopic cylinders are highly specialized. Specifying the correct multi-stage unit prevents catastrophic bending under load.',
+    items: [
+      {
+        label: 'A',
+        title: 'Stroke to Retracted Ratio',
+        description: 'Telescopic cylinders are chosen when space is confined. Ensure the collapsed (retracted) length fits your chassis, while the total extended length provides the full tipping or lift angle required.',
+      },
+      {
+        label: 'B',
+        title: 'Single-Acting vs. Double-Acting',
+        description: 'Most dump trucks use Single-Acting (gravity retract). If your application requires powered pull-down (e.g., horizontal compactors), you must specify a Double-Acting Telescopic cylinder, which has complex internal porting.',
+      },
+      {
+        label: 'C',
+        title: 'Column Load (Buckling Limits)',
+        description: 'Multi-stage cylinders act as long, slender columns when fully extended. We calculate the maximum off-center side load to determine the necessary overlap between stages to prevent bending.',
       },
     ],
   },
@@ -184,18 +207,23 @@ export const telescopicCylinderData: ProductPageData = {
     steps: [
       {
         icon: <Cog className="w-6 h-6" />,
-        title: 'Precision Stage Honing',
-        description: 'Every tubular stage is CNC-machined, skived, and roller-burnished internally and externally to ensure absolute concentricity. This prevents the stages from binding or galling.',
+        title: 'Concentric Tube Selection',
+        description: 'Telescopic stages require exceptionally tight tolerances. We source specialized DOM (Drawn Over Mandrel) tubing to ensure absolute wall thickness consistency, preventing asymmetric bending.',
       },
       {
         icon: <ShieldCheck className="w-6 h-6" />,
-        title: 'Hard Chrome Plating',
-        description: 'Because the exterior of every stage acts as a rod, all stages are heavily hard-chrome plated to resist scoring and environmental corrosion from road salt and mud.',
+        title: 'Multi-Stage Precision Honing',
+        description: 'Every individual tubular stage is CNC-machined, skived, and roller-burnished on both the ID (inside diameter) and OD (outside diameter) to guarantee smooth sequential staging without galling.',
       },
       {
         icon: <Package className="w-6 h-6" />,
-        title: 'Sequential Validation',
-        description: '100% of our telescopic cylinders undergo rigorous vertical hydrostatic testing to verify smooth stage sequencing and test the integrity of the mechanical stop rings.',
+        title: 'Complex Seal Integration',
+        description: 'Because each stage seals against the inner diameter of the previous stage, we install heavy-duty glass-filled nylon wear rings and highly specialized multi-lip V-packing seals to handle high-pressure sequencing.',
+      },
+      {
+        icon: <ShieldCheck className="w-6 h-6" />,
+        title: 'Vertical Staging Verification',
+        description: '100% of our telescopic cylinders are hydrostatically tested vertically. This ensures that each stage extends and retracts smoothly in the correct sequence, and that the mechanical stop-rings can absorb full-pressure impacts.',
       },
     ],
     midCta: {
@@ -257,7 +285,7 @@ export const telescopicCylinderData: ProductPageData = {
         title: 'Double Acting Hydraulic Cylinders',
         description: 'Precision engineered for powered stroke in both directions.',
         category: 'Hydraulic Cylinders',
-        imageSrc: '/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinder-manufacturer.webp',
+        imageSrc: '/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinders-manufacturer.webp',
         href: '/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/',
         ctaText: 'View Details',
       },

@@ -114,8 +114,10 @@ export const tieRodCylinderData: ProductPageData = {
     rows: [
       { parameter: 'Bore Sizes', value: '40mm to 250mm (1.5" to 10" NFPA standard)' },
       { parameter: 'Maximum Operating Pressure', value: 'Up to 210 Bar (3000 PSI)' },
+      { parameter: 'Maximum Side Load', value: 'Low to Moderate (Susceptible to tie-rod stretch)' },
+      { parameter: 'Operating Speed', value: 'Up to 1.0 m/s (High-speed options available)' },
       { parameter: 'Mounting Standards', value: 'NFPA, ISO 6020/2, Custom' },
-      { parameter: 'Tie Rod Material', value: 'High-Tensile Alloy Steel' },
+      { parameter: 'Tie Rod Material', value: 'High-Tensile Alloy Steel (Minimum 100,000 PSI yield)' },
       { parameter: 'Barrel Material', value: 'ST52 Seamless Honed Tube (Ra 0.2 µm finish)' },
       { parameter: 'Sealing Options', value: 'Polyurethane (Standard), Viton (High-Temp), PTFE (Low-Friction)' },
       { parameter: 'Cushioning', value: 'Adjustable internal cushioning available on both head and cap ends' },
@@ -149,48 +151,76 @@ export const tieRodCylinderData: ProductPageData = {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Automotive OEM',
         description: 'Providing high-speed, highly serviceable clamping cylinders for robotic welding stations and assembly lines.',
-        href: '/industries'
+        href: '/industries/tie-rod-hydraulic-cylinder-manufacturer-in-gujarat-nfpa-standard'
       },
       {
         icon: <FaBox className="w-6 h-6" />,
         name: 'Plastic Processing',
         description: 'Supplying standardized core-pull and ejector cylinders for injection moulding machines.',
-        href: '/industries'
+        href: '/industries/plastic-processing'
       },
       {
         icon: <FaWrench className="w-6 h-6" />,
         name: 'Machine Tool Builders',
         description: 'Delivering zero-distortion, low-friction actuation for automated CNC loading and unloading gantries.',
-        href: '/industries'
+        href: '/industries/machine-tool-builders'
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
         name: 'Packaging & Automation',
         description: 'Engineering rapid-cycle cylinders for high-speed corrugated box manufacturing and palletizing robots.',
-        href: '/industries'
+        href: '/industries/packaging-automation'
       },
     ],
   },
 
-  // 10. Manufacturing Process
+  // 10. Engineering / How to Choose
+  engineering: {
+    heading: 'How to Choose the Right Tie-Rod Hydraulic Cylinder',
+    description: 'When specifying an NFPA tie-rod cylinder, evaluating the duty cycle and environment is critical.',
+    items: [
+      {
+        label: 'A',
+        title: 'Duty Cycle & Cycle Rate',
+        description: 'For high-speed automated processes, we specify low-friction PTFE seals and precision-tuned adjustable cushions to prevent end-of-stroke slamming, extending the cylinder life to millions of cycles.',
+      },
+      {
+        label: 'B',
+        title: 'Temperature Limitations',
+        description: 'Standard polyurethane seals operate up to 90°C. For plastic injection molding or steel mills, we upgrade to Fluorocarbon (Viton) seals, allowing continuous operation at 200°C without seal degradation.',
+      },
+      {
+        label: 'C',
+        title: 'NFPA Mounting Style',
+        description: 'Selecting the correct NFPA mount (e.g., MP1 Clevis, MF1 Front Flange, MS2 Side Lug) ensures the cylinder properly absorbs the load without inducing destructive side-loading on the piston rod.',
+      },
+    ],
+  },
+
+  // 11. Manufacturing Process
   manufacturing: {
     heading: 'Manufacturing & Quality Process',
     description: 'Every NFPA tie rod cylinder is delivered with a complete dimensional test certificate, verifying that the pin-to-pin lengths and port orientations exactly match your supplied CAD drawings.',
     steps: [
       {
         icon: 'cog',
-        title: 'Precision Machining',
-        description: 'Advanced CNC milling centers utilized to machine perfectly square end caps, ensuring exact tie-rod alignment.',
+        title: 'Material Verification',
+        description: 'All incoming high-tensile steel tie-rods and ST52 honed tubes undergo strict metallurgical inspection and hardness testing prior to CNC machining.',
       },
       {
         icon: 'wrench',
-        title: 'Torque Calibration',
-        description: 'Pneumatic torque-yield wrenches used during assembly to guarantee uniform clamping force across all four tie rods, preventing asymmetrical barrel stress.',
+        title: 'Precision Assembly & Torquing',
+        description: 'Tie-rods are systematically tensioned using calibrated pneumatic torque-yield wrenches. This guarantees uniform clamping force across all four corners, preventing asymmetrical seal extrusion.',
       },
       {
         icon: 'shield',
-        title: 'System Validation',
-        description: '100% of our tie rod cylinders undergo rigorous 1.5x working pressure hydrostatic testing to verify rod seal integrity and ensure zero static O-ring extrusion.',
+        title: 'Automated Functional Testing',
+        description: '100% of tie-rod units undergo automated cycling and 1.5x working pressure hydrostatic testing to guarantee zero internal bypass and perfect cushion engagement.',
+      },
+      {
+        icon: 'shield',
+        title: 'ISO Dimensional QA',
+        description: 'Final inspection utilizes CMM (Coordinate Measuring Machines) to verify that pin-to-pin mounting dimensions perfectly match the requested NFPA or ISO 6020 specifications.',
       },
     ],
     midCta: {
@@ -250,7 +280,7 @@ export const tieRodCylinderData: ProductPageData = {
         title: 'Double Acting Hydraulic Cylinders',
         description: 'Precision engineered for powered stroke in both directions.',
         category: 'Hydraulic Cylinders',
-        imageSrc: '/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinder-manufacturer.webp',
+        imageSrc: '/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinders-manufacturer.webp',
         href: '/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/',
         ctaText: 'View Details',
       },

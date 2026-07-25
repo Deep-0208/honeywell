@@ -25,9 +25,10 @@ export function buildProductSchema(data: ProductPageData) {
         '@id': `${siteUrl}/#organization`,
       },
       offers: {
-        '@type': 'AggregateOffer',
+        '@type': 'Offer',
         priceCurrency: 'INR',
         availability: 'https://schema.org/InStock',
+        url: `${siteUrl}/request-quote`,
         seller: {
           '@type': 'Organization',
           name: COMPANY_INFO.name,

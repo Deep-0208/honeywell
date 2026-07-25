@@ -52,7 +52,7 @@ export const PILLAR_BLOCK_TYPES = [
     title: "Double Acting Hydraulic Cylinders",
     description: "Our most versatile cylinders providing hydraulic power in both extension and retraction strokes for precise load control.",
     category: "Hydraulic Cylinders",
-    imageSrc: "/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinder-manufacturer.webp",
+    imageSrc: "/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinders-manufacturer.webp",
     href: "/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/"
   },
   {
@@ -73,7 +73,7 @@ export const PILLAR_BLOCK_TYPES = [
     title: "Welded Hydraulic Cylinders",
     description: "Compact, heavy-duty cylinders engineered for mobile equipment and applications with spatial constraints.",
     category: "Hydraulic Cylinders",
-    imageSrc: "/images/products/welded-hydraulic-cylinder.webp",
+    imageSrc: "/images/products/hydraulic-cylinders/welded-hydraulic-cylinders-manufacturer.webp",
     href: "/products/hydraulic-cylinders/welded-hydraulic-cylinders/"
   },
   {
@@ -89,6 +89,55 @@ export const PILLAR_BLOCK_TYPES = [
     category: "Hydraulic Cylinders",
     imageSrc: "/images/home/custom-hydraulic-cylinder-manufacturer.webp",
     href: "/products/hydraulic-cylinders/custom-hydraulic-cylinders/"
+  },
+  {
+    title: "Goods Lift Hydraulic Cylinders",
+    description: "Heavy-duty cylinders with integrated safety rupture valves for industrial goods lifts and freight elevators.",
+    category: "Hydraulic Cylinders",
+    imageSrc: "/images/products/hydraulic-cylinders/goods-lift-hydraulic-cylinder-v2.webp",
+    href: "/products/hydraulic-cylinders/goods-lift-hydraulic-cylinders/"
+  },
+  {
+    title: "Car Parking Hydraulic Cylinders",
+    description: "Reliable hydraulic cylinders engineered for safe, smooth, and vibration-free vertical lifting in car parking systems.",
+    category: "Hydraulic Cylinders",
+    imageSrc: "/images/products/hydraulic-cylinders/car-parking-hydraulic-cylinder-v2.webp",
+    href: "/products/hydraulic-cylinders/car-parking-hydraulic-cylinders/"
+  },
+  {
+    title: "Scissor Lift Table Hydraulic Cylinders",
+    description: "Heavy-duty cylinders up to 500 Tons capacity for synchronized material handling and industrial platforms.",
+    category: "Hydraulic Cylinders",
+    imageSrc: "/images/products/hydraulic-cylinders/scissor-lift-table-hydraulic-cylinder.webp",
+    href: "/products/hydraulic-cylinders/scissor-lift-table-hydraulic-cylinder/"
+  },
+  {
+    title: "Flange Mounted Hydraulic Cylinders",
+    description: "Heavy-duty flange mounted hydraulic cylinders for industrial machinery and presses. Engineered for rigid mounting and high-force linear motion.",
+    category: "Hydraulic Cylinders",
+    imageSrc: "/images/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder.webp",
+    href: "/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder/"
+  },
+  {
+    title: "Clevis Mounted Hydraulic Cylinders",
+    description: "Heavy-duty clevis mounted hydraulic cylinders engineered for pivoting applications, oscillating machinery, and articulated equipment.",
+    category: "Hydraulic Cylinders",
+    imageSrc: "/images/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder.webp",
+    href: "/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder/"
+  },
+  {
+    title: "Trunnion Mounted Hydraulic Cylinders",
+    description: "Heavy-duty trunnion mounted hydraulic cylinders engineered for pivoting machinery, rotary motion applications, and heavy industrial equipment.",
+    category: "Hydraulic Cylinders",
+    imageSrc: "/images/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder.webp",
+    href: "/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder/"
+  },
+  {
+    title: "Square Body Hydraulic Cylinders",
+    description: "Heavy-duty square body hydraulic cylinders engineered for compact high-strength industrial applications, machine tools, and automation systems.",
+    category: "Hydraulic Cylinders",
+    imageSrc: "/images/products/hydraulic-cylinders/square-body-hydraulic-cylinder.webp",
+    href: "/products/hydraulic-cylinders/square-body-hydraulic-cylinder/"
   }
 ];
 
@@ -157,3 +206,48 @@ export const PILLAR_FAQS = [
     answer: "Yes, every single industrial hydraulic cylinder we produce undergoes a rigorous quality assurance process, including 100% hydrostatic pressure testing at 1.5x its rated working pressure before dispatch to ensure zero out-of-the-box leaks."
   }
 ];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Comparisons (Cluster Matrix)
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const PILLAR_COMPARISONS = [
+  {
+    heading: 'Cylinder Type Selection Matrix',
+    description: 'Use this reference guide to match our cylinder technologies to your operational requirements.',
+    columns: [{ heading: 'Cylinder Type' }, { heading: 'Best Application' }, { heading: 'Typical Mounting' }],
+    rows: [
+      { feature: 'Welded Cylinders', values: [{ text: 'Compact mobile equipment, harsh environments', highlight: true }, { text: 'Cross-tube, Trunnion, Clevis' }] },
+      { feature: 'Tie-Rod Cylinders', values: [{ text: 'Industrial automation, easy maintenance required' }, { text: 'Flange, Foot, Clevis' }] },
+      { feature: 'Telescopic Cylinders', values: [{ text: 'Tipper trucks, extreme long-stroke in short spaces' }, { text: 'Trunnion, Cross-tube' }] },
+      { feature: 'Square Body', values: [{ text: 'High-precision tooling, manifold integrations' }, { text: 'Flush-mounted (Direct tapped)' }] },
+      { feature: 'Flange Mounted', values: [{ text: 'Heavy presses, strictly linear high-force loads' }, { text: 'Front (Pull) or Rear (Push) Flange' }] },
+    ],
+  }
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Engineering / How to Choose
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const PILLAR_ENGINEERING = {
+  heading: 'How to Choose the Right Hydraulic Cylinder',
+  description: 'Selecting the correct hydraulic actuator requires evaluating load dynamics, environmental exposure, and spatial constraints.',
+  items: [
+    {
+      label: 'A',
+      title: 'Determine the Load (Tension vs Compression)',
+      description: 'First, calculate the maximum required thrust. If the cylinder is pushing a load (compression), the column strength of the rod must be calculated to prevent buckling. If it is pulling (tension), the rod thread shear strength is the critical factor. We size the bore and rod based on these peak load calculations.',
+    },
+    {
+      label: 'B',
+      title: 'Evaluate the Operating Environment',
+      description: 'Standard ST52 barrels and Polyurethane seals work perfectly for 80% of indoor factory applications. However, if your machine operates in a foundry (high heat) or offshore (corrosive salt), you must specify specialized FKM (Viton) seals, stainless steel metallurgy, or heavy epoxy coatings.',
+    },
+    {
+      label: 'C',
+      title: 'Select the Appropriate Mounting',
+      description: 'Mounting dictates how forces are transferred into your machine frame. If the load travels in a perfectly straight line on rigid guides, use a rigid mount (Flange or Foot). If the load swings or articulates through an arc (like a crane or excavator bucket), you must use a pivot mount (Clevis or Trunnion) to absorb the side-load.',
+    },
+  ],
+};

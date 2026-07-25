@@ -14,6 +14,9 @@ import { WhyChooseCylinders } from '@/components/products/hydraulic-cylinders/Wh
 import { CylinderTechnicalSpecs } from '@/components/products/hydraulic-cylinders/CylinderTechnicalSpecs';
 import { CylinderManufacturingProcess } from '@/components/products/hydraulic-cylinders/CylinderManufacturingProcess';
 import { CylinderFAQs } from '@/components/products/hydraulic-cylinders/CylinderFAQs';
+import { ProductComparison } from '@/components/product-page/ProductComparison';
+import { ProductEngineering } from '@/components/product-page/ProductEngineering';
+import { PILLAR_COMPARISONS, PILLAR_ENGINEERING } from '@/data/hydraulic-cylinders/pillar';
 
 /* ═══════════════════════════════════════════════
    SEO METADATA
@@ -175,7 +178,13 @@ export default function HydraulicCylindersHubPage() {
       {/* 09 — FAQs */}
       <CylinderFAQs />
 
-      {/* 10 — CTA Section */}
+      {/* 10 — Cylinder Selection Matrix */}
+      <ProductComparison {...PILLAR_COMPARISONS[0]} />
+
+      {/* 11 — Engineering Advantage */}
+      <ProductEngineering {...PILLAR_ENGINEERING} />
+
+      {/* 12 — CTA Section */}
       <CTA
         title="Request a Custom Quote Today"
         description="Don't compromise the efficiency of your machinery with subpar hydraulic components."

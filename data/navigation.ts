@@ -66,6 +66,13 @@ export const siteNavigation: SiteNavigation = {
                   { label: 'Tie Rod Cylinders', href: '/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/' },
                   { label: 'Welded Cylinders', href: '/products/hydraulic-cylinders/welded-hydraulic-cylinders/' },
                   { label: 'Telescopic Cylinders', href: '/products/hydraulic-cylinders/telescopic-hydraulic-cylinders/' },
+                  { label: 'Goods Lift Cylinders', href: '/products/hydraulic-cylinders/goods-lift-hydraulic-cylinders/' },
+                  { label: 'Car Parking Cylinders', href: '/products/hydraulic-cylinders/car-parking-hydraulic-cylinders/' },
+                  { label: 'Scissor Lift Table Cylinders', href: '/products/hydraulic-cylinders/scissor-lift-table-hydraulic-cylinder/' },
+                  { label: 'Flange Mounted Cylinders', href: '/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder/' },
+                  { label: 'Clevis Mounted Cylinders', href: '/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder/' },
+                  { label: 'Trunnion Mounted Cylinders', href: '/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder/' },
+                  { label: 'Square Body Cylinders', href: '/products/hydraulic-cylinders/square-body-hydraulic-cylinder/' },
                 ],
               },
               {

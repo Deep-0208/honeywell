@@ -164,7 +164,7 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
                       </span>
                     </div>
 
-                    <ul className="space-y-2 mb-6 flex-1">
+                    <ul className="space-y-2 mb-6 flex-1 overflow-y-auto max-h-[280px] pr-1">
                       {activeLink.subcategories.map((sub, idx) => (
                         <li key={idx}>
                           <Link

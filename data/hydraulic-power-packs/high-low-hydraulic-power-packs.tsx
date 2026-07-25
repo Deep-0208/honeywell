@@ -255,7 +255,7 @@ export const highLowPowerPackData: ProductPageData = {
         title: 'Double Acting Hydraulic Cylinders',
         description: 'High-pressure cylinders for press machines and industrial automation.',
         category: 'Hydraulic Cylinders',
-        imageSrc: '/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinder-manufacturer.webp',
+        imageSrc: '/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinders-manufacturer.webp',
         href: '/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/',
         ctaText: 'View Details',
       },

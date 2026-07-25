@@ -190,6 +190,44 @@ export const customCylinderData: ProductPageData = {
     ],
   },
 
+  // ── Comparisons ──
+  comparisons: [
+    {
+      heading: 'Custom vs. Standard Catalog Cylinders',
+      description: 'Understanding when to bypass standard NFPA/ISO catalogs and engineer a bespoke solution.',
+      columns: [{ heading: 'Engineering Feature' }, { heading: 'Custom Cylinders' }, { heading: 'Standard Cylinders' }],
+      rows: [
+        { feature: 'Dimensional Envelope', values: [{ text: 'Engineered to perfectly fit your existing machine frame', highlight: true }, { text: 'Machine must be designed around the cylinder catalog' }] },
+        { feature: 'Lead Time', values: [{ text: 'Requires engineering and prototyping phase' }, { text: 'Immediate availability' }] },
+        { feature: 'Operating Parameters', values: [{ text: 'Unlimited (Extreme pressures, exotic fluids)' }, { text: 'Constrained by catalog limits (typically 250 Bar)' }] },
+        { feature: 'Cost at Scale', values: [{ text: 'Highly cost-effective for OEM volume runs' }, { text: 'Cheaper for one-off emergency replacements' }] },
+      ],
+    }
+  ],
+
+  // ── Engineering / How to Choose ──
+  engineering: {
+    heading: 'When Do You Need a Custom Hydraulic Cylinder?',
+    description: 'We recommend custom engineering when your application breaches the boundaries of standard fluid power physics.',
+    items: [
+      {
+        label: 'A',
+        title: 'Non-Standard Fluid Compatibility',
+        description: 'If your system runs on fire-resistant fluids (like Water-Glycol or Phosphate Esters) or operates in extreme ambient temperatures, standard Polyurethane seals will disintegrate. We engineer custom cylinders utilizing specific FKM (Viton) or PTFE seal stacks to handle exotic media.',
+      },
+      {
+        label: 'B',
+        title: 'Atypical Mounting and Space Constraints',
+        description: 'When upgrading a legacy machine or designing compact mobile equipment, a standard clevis or flange may interfere with the chassis. We can machine offset trunnions, asymmetrical flanges, or entirely unique mounting interfaces directly into the barrel.',
+      },
+      {
+        label: 'C',
+        title: 'Integrated Logic and Valving',
+        description: 'To minimize leak points and hose failures, we can engineer custom manifold blocks directly welded to the cylinder body. This allows for integrated pilot-operated check valves (load holding) or counterbalance valves immediately at the actuator.',
+      },
+    ],
+  },
+
   // ── Industries ──
   industries: {
     heading: 'Industries We Serve',
@@ -199,25 +237,25 @@ export const customCylinderData: ProductPageData = {
         icon: <FaTemperatureHigh className="w-6 h-6" />,
         name: 'Steel Plants & Foundries',
         description: 'Large bore pressing cylinders and extreme high-temperature actuators for ladle tilting.',
-        href: '/industries',
+        href: '/industries/custom-hydraulic-cylinder-manufacturer-honeywell',
       },
       {
         icon: <FaAnchor className="w-6 h-6" />,
         name: 'Marine & Offshore',
         description: 'Corrosion-resistant, heavy-duty lifting cylinders for winches, ship-cranes, and port material handling.',
-        href: '/industries',
+        href: '/industries/marine-offshore',
       },
       {
         icon: <FaBuilding className="w-6 h-6" />,
         name: 'Infrastructure Projects',
         description: 'Massive bespoke cylinders for dam spillway radial gates and heavy civil engineering projects.',
-        href: '/industries',
+        href: '/industries/infrastructure-projects',
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
         name: 'Special Purpose Machinery',
         description: 'Non-standard actuators with complex logic-valve blocks welded directly to the cylinder barrel for smart factory automation.',
-        href: '/industries',
+        href: '/industries/special-purpose-machinery',
       },
     ],
   },
@@ -229,23 +267,23 @@ export const customCylinderData: ProductPageData = {
     steps: [
       {
         icon: <Cog className="w-6 h-6" />,
-        title: 'Heavy Machining Centers',
-        description: 'Equipped with massive CNC boring and honing machines capable of processing large-bore seamless steel tubes up to immense lengths.',
+        title: 'Application Engineering & CAD',
+        description: 'Every bespoke order begins in our design bureau. We map the exact load dynamics and generate 3D SolidWorks models, ensuring absolute geometric compatibility before a single cut is made.',
       },
       {
         icon: <FlaskConical className="w-6 h-6" />,
-        title: 'Metallurgical Verification',
-        description: 'We rigorously verify the chemical composition and yield strength of all custom-ordered alloys before machining begins.',
+        title: 'Bespoke Material Selection',
+        description: 'Depending on the FEA (Finite Element Analysis) results, we source application-specific metallurgy—such as high-tensile Duplex stainless steel or specialized Monel alloys for corrosive environments.',
       },
       {
         icon: <FileCheck className="w-6 h-6" />,
-        title: 'Extreme Pressure Validation',
-        description: '100% of our bespoke cylinders undergo rigorous hydrostatic and shock-load testing to verify the integrity of custom-welded trunnions and flanges.',
+        title: 'Prototype Machining',
+        description: 'For OEM volume runs, we manufacture and deliver a fully functional prototype. This allows your team to perform physical field testing and interference checking before committing to mass production.',
       },
       {
         icon: <Package className="w-6 h-6" />,
-        title: 'Secure Delivery',
-        description: 'Cylinders are thoroughly cleaned, painted, safely packaged, and dispatched to your facility PAN-India.',
+        title: 'Application-Specific Load Testing',
+        description: 'We do not just perform standard hydrostatic tests. We simulate the unique pressure spikes and holding requirements of your specific machine, certifying the cylinder with a comprehensive Engineering Dossier.',
       },
     ],
     midCta: {

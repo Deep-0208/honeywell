@@ -133,6 +133,22 @@ export const doubleActingCylinderData: ProductPageData = {
     secondaryCta: { label: 'VIEW ALL CYLINDER TYPES', href: '/products/hydraulic-cylinders/' },
   },
 
+  // ── Comparisons ──
+  comparisons: [
+    {
+      heading: 'Double Acting vs. Single Acting Cylinders',
+      description: 'Understanding when to specify a double acting cylinder over a single acting alternative.',
+      columns: [{ heading: 'Engineering Feature' }, { heading: 'Double Acting' }, { heading: 'Single Acting' }],
+      rows: [
+        { feature: 'Power Stroke', values: [{ text: 'Bidirectional (Push & Pull)', highlight: true }, { text: 'Unidirectional (Push only)' }] },
+        { feature: 'Retraction Method', values: [{ text: 'Hydraulic Pressure (Fast, controlled)' }, { text: 'Gravity, Load Weight, or Spring' }] },
+        { feature: 'Hydraulic Ports', values: [{ text: 'Two (Top and Bottom)' }, { text: 'One (Bottom only)' }] },
+        { feature: 'Motion Control', values: [{ text: 'High (Precise positioning in both directions)' }, { text: 'Low (Relies on external forces to return)' }] },
+        { feature: 'System Complexity', values: [{ text: 'Requires directional control valves' }, { text: 'Simpler valving and fewer hoses' }] },
+      ],
+    }
+  ],
+
   engineering: {
     heading: 'Available Mounting Configurations',
     description: 'Choose from four standard mounting types, or request a custom mounting interface designed to integrate with your specific machine frame.',
@@ -171,25 +187,25 @@ export const doubleActingCylinderData: ProductPageData = {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Automotive & Auto Component Manufacturing',
         description: 'Double acting cylinders for stamping presses, body panel forming, and automated assembly lines in automotive plants across Gujarat.',
-        href: '/industries'
+        href: '/industries/double-acting-hydraulic-cylinder-manufacturer-honeywell'
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
         name: 'Injection Moulding & Plastics',
         description: 'Clamping cylinders and injection unit actuators for plastic moulding machines requiring precise, controllable bi-directional force.',
-        href: '/industries'
+        href: '/industries/injection-moulding-plastics'
       },
       {
         icon: <FaBuilding className="w-6 h-6" />,
         name: 'Construction & Infrastructure',
         description: 'Heavy-duty double acting cylinders for concrete batching plants, pile driving rigs, and bridge construction hydraulic systems.',
-        href: '/industries'
+        href: '/industries/construction-infrastructure'
       },
       {
         icon: <FaTemperatureHigh className="w-6 h-6" />,
         name: 'Steel & Metal Fabrication',
         description: 'Forging press cylinders, metal shearing machines, and plate bending equipment in steel plants and heavy fabrication workshops.',
-        href: '/industries'
+        href: '/industries/steel-metal-fabrication'
       },
     ],
   },
