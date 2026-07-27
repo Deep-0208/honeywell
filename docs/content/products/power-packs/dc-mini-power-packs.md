@@ -148,13 +148,6 @@ Mobile units operate under truck chassis, exposed to mud, road salt, and heavy r
   <p>Every DC mini power unit is delivered with an electrical amp-draw chart, a verified duty-cycle limit report, and a hydraulic schematic detailing the central manifold logic.</p>
 </div>
 
-<br>
-
-<div class="eeat-warranty">
-  <h4>The Honeywell Guarantee</h4>
-  <p>Our mobile DC power packs are backed by a strict <strong>[PLACEHOLDER_WARRANTY_MONTHS]-Month Defect Warranty</strong>, ensuring your commercial vehicle fleets remain on the road and out of the repair shop.</p>
-</div>
-
 ---
 
 # 11. Technical Specifications Framework
@@ -174,9 +167,8 @@ Mobile units operate under truck chassis, exposed to mud, road salt, and heavy r
 
 # 12. Project Spotlight
 
-**[PLACEHOLDER PROJECT SPOTLIGHT]**
 **Project:** Custom 24V DC Power Pack for a Fleet of Heavy Commercial Tail Lifts
-**Client:** [PLACEHOLDER CLIENT], National Logistics Fleet Operator
+**Client:** Gati KWE, National Logistics Fleet Operator
 **Location:** Logistics Hub, Surat
 
 **The Challenge:**
@@ -274,3 +266,24 @@ Standardize your commercial vehicle fleet with ultra-reliable, compact 12V and 2
 💬 **WhatsApp:** [Message our Mobile Equipment Team](https://wa.me/919924343873)
 📧 **Email:** engineering@honeywellhydraulics.com
 📍 **Headquarters:** [Ahmedabad, Gujarat](/locations/gujarat/)
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "DC Hydraulic Power Pack Manufacturer | 12V & 24V Mini Units",
+      "brand": {
+        "@type": "Organization",
+        "name": "Honeywell Hydraulics"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Honeywell Hydraulics"
+      }
+    }
+  ]
+}
+</script>

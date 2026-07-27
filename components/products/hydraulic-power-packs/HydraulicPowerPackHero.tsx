@@ -62,15 +62,6 @@ export function HydraulicPowerPackHero() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-honeywell-navy/90 via-honeywell-navy/20 to-transparent flex flex-col justify-end p-6 md:p-8">
-                <div className="flex items-center gap-4 text-white">
-                  <div className="w-1.5 h-12 bg-honeywell-red"></div>
-                  <div>
-                    <div className="text-2xl font-bold font-display">0.5 HP to 150+ HP</div>
-                    <div className="text-sm font-body text-gray-200 uppercase tracking-wider">Heavy-Duty Continuous Operation</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 

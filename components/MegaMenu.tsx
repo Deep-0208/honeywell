@@ -198,7 +198,7 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
                     </ul>
 
                     <Link
-                      href={activeLink.href}
+                      href={`${activeLink.href}#types`}
                       onClick={onClose}
                       className="
                         group relative flex items-center justify-center w-full py-3 rounded-lg overflow-hidden

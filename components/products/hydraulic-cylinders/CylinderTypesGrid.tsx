@@ -8,7 +8,7 @@ import { PILLAR_BLOCK_TYPES } from '@/data/hydraulic-cylinders/pillar';
 export function CylinderTypesGrid() {
 
   return (
-    <Section bg="gray" id="products" aria-labelledby="cylinder-types-heading">
+    <Section bg="gray" id="types" aria-labelledby="cylinder-types-heading">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Heading variant="section" underline="center" as="h2" id="cylinder-types-heading" className="mb-4">

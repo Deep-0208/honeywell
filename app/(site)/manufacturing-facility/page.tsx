@@ -141,13 +141,13 @@ const CAPACITY_SPECS = [
   { label: 'Surface Finish', value: 'Ra 0.4 µm (honed barrels)' },
 ];
 
-type GalleryItem = { name: string; file: string; alt: string; isReady?: boolean };
+type GalleryItem = { name: string; file: string; alt: string; isReady?: boolean; objectPosition?: string };
 
 const GALLERY_ITEMS: GalleryItem[] = [
   { name: 'CNC Turning Centre', file: '/images/company/cnc-machining-center-hydraulic-cylinder.webp', alt: 'CNC turning centre for piston rod machining', isReady: true },
   { name: 'Welding Bay', file: '/images/company/hydraulic-cylinder-welding-fabrication.webp', alt: 'Heavy-duty welding bay for cylinder barrel construction', isReady: true },
-  { name: 'Assembly Area', file: '/images/company/hydraulic-cylinder-assembly-area.webp', alt: 'Hydraulic power pack assembly area', isReady: true },
-  { name: 'Test Rig', file: '/images/company/hydrostatic-pressure-testing-hydraulic-cylinder.webp', alt: 'Hydrostatic pressure test rig', isReady: true },
+  { name: 'Assembly Area', file: '/images/company/hydraulic-cylinder-assembly-area.webp', alt: 'Hydraulic power pack assembly area', isReady: true, objectPosition: 'top' },
+  { name: 'CNC Turning Lathe', file: '/images/company/cnc-turning-lathe-machining.webp', alt: 'CNC turning lathe for hydraulic cylinder machining', isReady: true },
 ];
 
 const MFG_FAQS = [
@@ -267,6 +267,7 @@ export default function ManufacturingFacilityPage() {
                       alt={item.alt}
                       fill
                       className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                      style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
                       sizes="(max-width: 768px) 50vw, 25vw"
                     />
                   ) : (
@@ -302,9 +303,6 @@ export default function ManufacturingFacilityPage() {
           <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" aria-label="Manufacturing workflow steps">
             {WORKFLOW_STEPS.map((step) => (
               <li key={step.step} className="bg-white border border-slate-200 rounded-sm p-6 transition-[transform,box-shadow,border-color] duration-300 ease-out hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red active:scale-[0.98] relative group">
-                <span className="absolute top-4 right-4 w-7 h-7 rounded-full bg-honeywell-red text-white text-xs font-bold flex items-center justify-center font-body">
-                  {step.step}
-                </span>
                 <div className="w-12 h-12 rounded-full bg-honeywell-navy flex items-center justify-center text-white mb-4 transition-[background-color,transform] duration-200 ease-out group-hover:bg-honeywell-red group-hover:scale-110">
                   {step.icon}
                 </div>
@@ -357,45 +355,19 @@ export default function ManufacturingFacilityPage() {
       {/* ── Custom Manufacturing ──────────────────── */}
       <Section bg="white" aria-labelledby="custom-mfg-heading">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-honeywell-navy text-white rounded-sm p-8 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
-              <div className="relative z-10">
-                <Users className="w-10 h-10 text-honeywell-red mb-4" aria-hidden="true" />
-                <Heading as="h3" variant="card" className="text-white mb-4">OEM Partnership Benefits</Heading>
-                <ul className="space-y-3">
-                  {[
-                    'No additional design consultation fee for custom work',
-                    'First Article turnaround within 7–15 working days',
-                    'Dedicated capacity allocation for priority orders',
-                    'Direct factory communication — no middlemen',
-                    'Transparent pricing with firm delivery timelines',
-                    'Complete documentation package with every shipment',
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-brand-borderGray font-body">
-                      <CheckCircle2 className="w-4 h-4 text-honeywell-red shrink-0 mt-0.5" aria-hidden="true" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2">
-              <Heading as="h2" variant="section" id="custom-mfg-heading" className="mb-3">
-                Custom Manufacturing Capability
-              </Heading>
-              <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-justify">
-                The majority of our work is custom-engineered to specific load, speed, pressure, and spatial requirements. We design and manufacture hydraulic cylinders, power packs, and accessories to your exact specifications.
-              </p>
-              <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-justify">
-                Whether you are an OEM requiring consistent supply of custom-specified components, an SPM builder needing one-off hydraulic solutions, or a maintenance engineer seeking a precise replacement — our facility is equipped to deliver.
-              </p>
-              <div className="mt-6">
-                <Button href="/request-quote" variant="primary" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>
-                  Request Custom Quote
-                </Button>
-        \      </div>
-            </div>
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <Heading as="h2" variant="section" id="custom-mfg-heading" className="mb-3">
+              Custom Manufacturing Capability
+            </Heading>
+            <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-center">
+              The majority of our work is custom-engineered to specific load, speed, pressure, and spatial requirements. We design and manufacture hydraulic cylinders, power packs, and accessories to your exact specifications.
+            </p>
+            <p className="text-brand-darkSlate font-body leading-relaxed mb-8 text-center">
+              Whether you are an OEM requiring consistent supply of custom-specified components, an SPM builder needing one-off hydraulic solutions, or a maintenance engineer seeking a precise replacement — our facility is equipped to deliver.
+            </p>
+            <Button href="/request-quote" variant="primary" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>
+              Request Custom Quote
+            </Button>
           </div>
         </Container>
       </Section>

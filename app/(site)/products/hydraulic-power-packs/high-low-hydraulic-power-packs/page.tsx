@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import { buildMetadata } from '@/lib/seo';
-import JsonLd from '@/components/seo/JsonLd';
-import { buildProductSchema } from '@/components/product-page/schema';
-import { ProductPage } from '@/components/product-page/ProductPage';
+import { ProductPage, buildProductSchema } from '@/components/product-page';
 import { highLowPowerPackData } from '@/data/hydraulic-power-packs/high-low-hydraulic-power-packs';
+import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -17,12 +16,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HighLowPowerPacksPage() {
-  const schema = buildProductSchema(highLowPowerPackData);
-
+export default function HighLowPowerPackPage() {
   return (
     <>
-      <JsonLd data={schema} />
+      <JsonLd data={buildProductSchema(highLowPowerPackData)} />
       <ProductPage data={highLowPowerPackData} />
     </>
   );

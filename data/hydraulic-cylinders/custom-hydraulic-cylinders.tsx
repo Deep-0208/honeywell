@@ -195,7 +195,7 @@ export const customCylinderData: ProductPageData = {
     {
       heading: 'Custom vs. Standard Catalog Cylinders',
       description: 'Understanding when to bypass standard NFPA/ISO catalogs and engineer a bespoke solution.',
-      columns: [{ heading: 'Engineering Feature' }, { heading: 'Custom Cylinders' }, { heading: 'Standard Cylinders' }],
+      columns: [{ heading: 'Custom Cylinders' }, { heading: 'Standard Cylinders' }],
       rows: [
         { feature: 'Dimensional Envelope', values: [{ text: 'Engineered to perfectly fit your existing machine frame', highlight: true }, { text: 'Machine must be designed around the cylinder catalog' }] },
         { feature: 'Lead Time', values: [{ text: 'Requires engineering and prototyping phase' }, { text: 'Immediate availability' }] },

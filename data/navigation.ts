@@ -81,9 +81,16 @@ export const siteNavigation: SiteNavigation = {
                 description:
                   'Custom-engineered hydraulic power units delivering precise flow rates for automated machinery and heavy presses.',
                 subcategories: [
-                  { label: '3-Phase Power Packs', href: '/products/hydraulic-power-packs/3-phase-hydraulic-power-packs/' },
-                  { label: 'DC Mini Power Packs', href: '/products/hydraulic-power-packs/dc-mini-power-packs/' },
-                  { label: 'High/Low Power Packs', href: '/products/hydraulic-power-packs/high-low-hydraulic-power-packs/' },
+                  { label: 'Single Phase Power Packs', href: '/products/hydraulic-power-packs/single-phase-hydraulic-power-packs/' },
+                  { label: 'Three Phase Power Packs', href: '/products/hydraulic-power-packs/three-phase-hydraulic-power-packs/' },
+                  { label: 'Customized Power Packs', href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs/' },
+                  { label: 'Power Packs for Press', href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press/' },
+                  { label: 'Multistation Power Packs', href: '/products/hydraulic-power-packs/multistation-hydraulic-power-packs/' },
+                  { label: 'Accumulator Power Packs', href: '/products/hydraulic-power-packs/accumulator-hydraulic-power-packs/' },
+                  { label: 'Hand Lever Power Packs', href: '/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-packs/' },
+                  { label: 'Hand Pump Power Packs', href: '/products/hydraulic-power-packs/hand-pump-operated-hydraulic-power-packs/' },
+                  { label: 'DC Mini Power Packs', href: '/products/hydraulic-power-packs/dc-mini-hydraulic-power-packs/' },
+                  { label: 'High-Low Power Packs', href: '/products/hydraulic-power-packs/high-low-hydraulic-power-packs/' },
                 ],
               },
               {

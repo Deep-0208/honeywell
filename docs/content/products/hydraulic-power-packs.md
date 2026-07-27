@@ -10,8 +10,8 @@ Home > Products > Hydraulic Power Packs
 
 ## INTERNAL LINKING MAP (Silo Blueprint)
 
-- **Product Variants (Children):** `/hydraulic-power-packs/3-phase/`, `/hydraulic-power-packs/high-low/`, `/hydraulic-power-packs/compact/`, `/hydraulic-power-packs/mobile/`, `/hydraulic-power-packs/custom/`
-- **Related Products:** `/hydraulic-cylinders/`, `/hydraulic-systems/`, `/manifold-blocks/`
+- **Product Variants (Children):** `/products/hydraulic-power-packs/three-phase-hydraulic-power-packs`, `/products/hydraulic-power-packs/single-phase-hydraulic-power-packs`, `/products/hydraulic-power-packs/dc-mini-hydraulic-power-packs`, `/products/hydraulic-power-packs/high-low-hydraulic-power-packs`, `/products/hydraulic-power-packs/hydraulic-power-packs-for-press`, `/products/hydraulic-power-packs/multistation-hydraulic-power-packs`, `/products/hydraulic-power-packs/accumulator-hydraulic-power-packs`, `/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-packs`, `/products/hydraulic-power-packs/hand-pump-operated-hydraulic-power-packs`, `/products/hydraulic-power-packs/customized-hydraulic-power-packs`
+- **Related Products:** `/products/hydraulic-cylinders/`, `/products/hydraulic-systems/`, `/products/manifold-blocks/`
 - **Industries:** `/industries/injection-moulding/`, `/industries/steel-metallurgy/`, `/industries/material-handling/`
 - **Services:** `/services/hydraulic-system-retrofitting/`, `/services/custom-hydraulic-system-design/`, `/services/hydraulic-maintenance-services/`
 - **Local Hubs:** `/locations/gujarat/`, `/locations/ahmedabad/`, `/locations/surat/`, `/locations/rajkot/`, `/locations/vadodara/`
@@ -147,13 +147,6 @@ We are a primary **hydraulic power pack manufacturer**, not an assembler. By mac
   <p>Our power packs are engineered in compliance with international fluid power standards. We provide complete hydraulic schematics, Bill of Materials (BOM), and electrical wiring diagrams with every custom unit dispatched to an OEM.</p>
 </div>
 
-<br>
-
-<div class="eeat-warranty">
-  <h4>The Honeywell Guarantee</h4>
-  <p>Every hydraulic power pack is backed by a <strong>[PLACEHOLDER_WARRANTY_MONTHS]-Month Defect Warranty</strong>. Should you require scheduled fluid maintenance or filter replacements, our <a href="/services/hydraulic-maintenance-services/">Hydraulic Maintenance Services</a> team is available for rapid dispatch.</p>
-</div>
-
 ---
 
 # 10. Technical Specifications Overview
@@ -190,9 +183,8 @@ Avoid underpowering your machinery or wasting electrical energy by oversizing yo
 
 # 12. Project Spotlight
 
-**[PLACEHOLDER PROJECT SPOTLIGHT]**
 **Project:** Energy-Efficient Power Pack Retrofit for Extrusion Presses
-**Client:** [PLACEHOLDER CLIENT], Leading Aluminum Extrusion Plant
+**Client:** Jindal Aluminium Supplier, Leading Aluminum Extrusion Plant
 **Location:** Vadodara, Gujarat
 
 **The Challenge:**
