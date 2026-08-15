@@ -1,17 +1,19 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 're_xxxxxxxxx') {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey || apiKey === 're_xxxxxxxxx') {
       return NextResponse.json({
         success: false,
         error: 'Please replace "re_xxxxxxxxx" with your real Resend API Key in .env.local',
       }, { status: 400 });
     }
 
+    const resend = new Resend(apiKey);
     const { data, error } = await resend.emails.send({
       from: 'Honeywell Hydraulics <onboarding@resend.dev>',
       to: process.env.SALES_NOTIFICATION_EMAIL || 'honeywellhydraulics@gmail.com',
