@@ -38,7 +38,7 @@ export function ProductKeyFeatures({
           {items.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
+              className="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 md:p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red group"
             >
               <div className="flex items-center gap-4 mb-5">
                 <IconBox icon={item.icon} variant="primary" size="md" />

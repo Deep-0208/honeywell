@@ -47,7 +47,7 @@ export const customManifoldBlocksData: ProductPageData = {
     },
     secondaryCta: {
       label: 'REQUEST DESIGN QUOTE',
-      href: '/request-quote/',
+      href: '/request-quote/#quote-form',
     },
     image: {
       src: '/images/products/manifold-blocks/custom-manifold-block-cnc-machined.webp',
@@ -229,7 +229,7 @@ export const customManifoldBlocksData: ProductPageData = {
     tableTitle: 'Technical Capabilities',
     primaryCta: {
       label: 'REQUEST DESIGN QUOTE',
-      href: '/request-quote/',
+      href: '/request-quote/#quote-form',
     },
     secondaryCta: {
       label: 'SUBMIT SCHEMATIC',
@@ -322,7 +322,7 @@ export const customManifoldBlocksData: ProductPageData = {
     title: 'Have a hydraulic schematic and space constraints?',
     description: 'If your machine logic outgrows what standard blocks can deliver, Honeywell Hydraulics will design and manufacture the exact custom manifold block your circuit demands — guaranteed to fit, guaranteed to seal.',
     primaryCtaText: 'REQUEST A CUSTOM DESIGN QUOTE',
-    primaryCtaHref: '/request-quote/',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Submit Schematic for Review',
     secondaryCtaHref: '/contact-us/',
   }

@@ -1,20 +1,32 @@
 # Honeywell Hydraulics
 
-> Industrial hydraulic cylinders, power packs, and custom fluid power systems manufactured in India.
+> Industrial hydraulic cylinders, power packs, and custom fluid power systems manufactured in India. Serving 18 major industrial hubs across India.
 
 ## About Us
 Honeywell Hydraulics is an ISO 9001:2015 certified manufacturer of heavy-duty hydraulic solutions. Based in Ahmedabad, Gujarat, we engineer and produce reliable hydraulic equipment for continuous industrial operations, serving over 25 industries globally.
 
 ## Core Products
-- **Hydraulic Cylinders:** Single acting, double acting, telescopic, and tie-rod cylinders. Bore sizes up to 300mm.
+- **Hydraulic Cylinders:** Single acting, double acting, telescopic, and tie-rod cylinders. Bore sizes up to 300mm. Aerospace, machine tool, and heavy-duty mining cylinders.
 - **Hydraulic Power Packs:** Custom multi-station and hand-lever power units for precise fluid control.
+- **Hydraulic Presses:** High-force presses for forging, stamping, and manufacturing.
 - **Hydraulic Manifold Blocks:** Custom-machined blocks for space-efficient hydraulic circuits.
 - **Custom Hydraulic Systems:** Complete turnkey fluid power solutions from engineering to commissioning.
 
-## Trust & Quality
+## Major Industrial Hubs Served
+We provide rapid, factory-direct delivery to 18 major industrial corridors:
+- **Gujarat**: Ahmedabad, Surat, Vadodara, Rajkot, Vapi, Ankleshwar, Morbi, Jamnagar, Bhavnagar, Kutch, Gandhinagar, Halol.
+- **Maharashtra**: Pune, Mumbai, Nashik, Aurangabad.
+- **Tamil Nadu**: Chennai, Coimbatore, Hosur.
+- **Karnataka**: Bengaluru, Hubli, Belgaum.
+- **Madhya Pradesh**: Indore, Pithampur, Bhopal.
+- **Rajasthan**: Jaipur, Bhiwadi, Jodhpur, Udaipur.
+- **West Bengal**: Kolkata, Durgapur, Haldia.
+
+## Trust & Quality (E-E-A-T Signals)
 - **Certification:** ISO 9001:2015
 - **Track Record:** 500+ projects completed, 5,000+ cylinders delivered.
 - **Quality Control:** 100% of units are hydrostatic pressure tested at 1.5x operating pressure before dispatch.
+- **Traceability:** Full EN 10204 Type 3.1 material certificates provided.
 
 ## Links & Machine-Readable Files
 - Main Website: https://honeywellhydraulics.com

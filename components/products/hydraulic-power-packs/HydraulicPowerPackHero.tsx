@@ -7,7 +7,7 @@ import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
 
 export function HydraulicPowerPackHero() {
   return (
-    <section className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200">
+    <section className="relative bg-white pt-6 pb-16 md:pt-8 md:pb-24 overflow-hidden border-b border-slate-200">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
@@ -21,7 +21,7 @@ export function HydraulicPowerPackHero() {
           <div className="flex flex-col items-start z-10">
             <div className="flex items-center gap-3 mb-6">
               <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm">
-                INDUSTRIAL FLUID POWER
+                PRODUCTS
               </span>
               <div className="h-4 w-px bg-slate-300" />
               <span className="text-brand-steelGray text-sm font-medium">Hydraulic Power Packs</span>
@@ -37,7 +37,7 @@ export function HydraulicPowerPackHero() {
 
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
-              <Button href="/request-quote" size="lg" variant="primary" className="w-full sm:w-auto font-bold tracking-wide">
+              <Button href="/request-quote/#quote-form" size="lg" variant="primary" className="w-full sm:w-auto font-bold tracking-wide">
                 REQUEST QUOTE <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button href="#specifications" size="lg" variant="outline" className="w-full sm:w-auto">

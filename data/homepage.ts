@@ -214,42 +214,42 @@ export const homepageIndustries: HomepageIndustry[] = [
     description:
       'High-speed hydraulic cylinders and robust power packs for continuous plastic injection moulding operations.',
     iconName: 'Cog',
-    href: '#',
+    href: '/products/hydraulic-cylinders/',
   },
   {
     industryName: 'Construction & Earthmoving',
     description:
       'Shock-resistant boom and bucket hydraulic cylinders built for excavators, loaders, and extreme outdoor environments.',
     iconName: 'Construction',
-    href: '/industries/construction-earthmoving/',
+    href: '/products/hydraulic-cylinders/welded-hydraulic-cylinders/',
   },
   {
     industryName: 'Manufacturing & Industrial Automation',
     description:
       'Precision-engineered fluid power systems, actuators, and power units for automated assembly lines.',
     iconName: 'Factory',
-    href: '/industries/manufacturing-automation/',
+    href: '/products/hydraulic-power-packs/',
   },
   {
     industryName: 'Material Handling',
     description:
       'Judder-free hydraulic lifting power for warehouse automation, scissor lifts, dock levelers, and conveyors.',
     iconName: 'Package',
-    href: '#',
+    href: '/products/hydraulic-cylinders/scissor-lift-table-hydraulic-cylinder/',
   },
   {
-    industryName: 'Rolling Mill',
+    industryName: 'Rolling Mill & Steel',
     description:
       'Heavy-duty hydraulic cylinders and power units engineered to withstand high temperatures and abrasive steel mill environments.',
     iconName: 'Hammer',
-    href: '/industries/rolling-mill/',
+    href: '/products/hydraulic-cylinders/welded-hydraulic-cylinders/',
   },
   {
-    industryName: 'Wooden Industries',
+    industryName: 'Wood & Hydraulic Presses',
     description:
       'Custom hydraulic presses and high-pressure fluid power solutions for heavy-duty timber processing and plywood manufacturing.',
     iconName: 'Wrench',
-    href: '/industries/wooden-industries/',
+    href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press/',
   },
 ];
 

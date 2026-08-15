@@ -261,7 +261,7 @@ export default function ContactUsPage() {
                   WhatsApp Us
                 </a>
                 <Link
-                  href="/request-quote"
+                  href="/request-quote/#quote-form"
                   className="inline-flex items-center justify-center gap-2 bg-transparent border border-slate-200 text-honeywell-navy hover:bg-slate-50 font-semibold font-body text-sm px-6 py-3 rounded-full transition-all duration-200 hover:border-honeywell-navy/30"
                 >
                   Request a Quote
@@ -501,7 +501,7 @@ export default function ContactUsPage() {
                 WhatsApp Us
               </a>
               <Button
-                href="/request-quote"
+                href="/request-quote/#quote-form"
                 variant="secondary"
                 size="md"
                 rightIcon={<ArrowRight className="w-4 h-4" />}

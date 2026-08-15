@@ -57,10 +57,10 @@ export function IndustriesSection() {
           ))}
         </div>
 
-        {/* Hub page link */}
+        {/* Consultation CTA */}
         <div className="text-center mt-10">
-          <Button href="/industries" variant="outline" size="lg">
-            View All Industries
+          <Button href="/request-quote/#quote-form" variant="outline" size="lg">
+            Request an Industry Consultation
           </Button>
         </div>
       </Container>

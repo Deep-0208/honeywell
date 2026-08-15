@@ -43,13 +43,13 @@ export function ProductSpotlight({
 
           {/* Stats Strip */}
           {stats.length > 0 && (
-            <div className="grid grid-cols-3 gap-4 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-10">
               {stats.map((stat, idx) => (
-                <div key={idx} className="bg-brand-surfaceGray rounded-xl p-5 text-center border border-slate-200">
+                <div key={idx} className="bg-brand-surfaceGray rounded-xl p-4 sm:p-5 text-center border border-slate-200">
                   <span className="block text-2xl md:text-3xl font-display font-bold text-honeywell-red">
                     {stat.value}
                   </span>
-                  <span className="text-xs font-body text-brand-steelGray uppercase tracking-wider mt-1">
+                  <span className="text-xs font-body text-brand-steelGray uppercase tracking-wider mt-1 block">
                     {stat.label}
                   </span>
                 </div>

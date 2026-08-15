@@ -50,7 +50,7 @@ export const doubleActingCylinderData: ProductPageData = {
       src: '/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinders-manufacturer.webp',
       alt: 'Double acting hydraulic cylinder manufacturer in Ahmedabad — Honeywell Hydraulics',
     },
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW TECHNICAL SPECS', href: '#technical-specifications' },
     keySpecs: [
       { label: 'Bore', value: '40 – 500 mm' },
@@ -129,7 +129,7 @@ export const doubleActingCylinderData: ProductPageData = {
       { parameter: 'Ports', value: 'Two ports — bottom (extend) and top (retract)' },
       { parameter: 'Testing', value: 'Hydrostatic testing at 1.5× working pressure' },
     ],
-    primaryCta: { label: 'DISCUSS YOUR SPECS', href: '/request-quote/' },
+    primaryCta: { label: 'DISCUSS YOUR SPECS', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW ALL CYLINDER TYPES', href: '/products/hydraulic-cylinders/' },
   },
 
@@ -325,7 +325,7 @@ export const doubleActingCylinderData: ProductPageData = {
     title: 'Need a double acting hydraulic cylinder engineered to your exact specifications?',
     description: 'From standard bore sizes to fully custom configurations — get a precision-engineered double acting cylinder backed by 100% hydrostatic pressure testing and ISO 9001:2015 certified manufacturing.',
     primaryCtaText: 'REQUEST A QUOTE',
-    primaryCtaHref: '/request-quote/',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Talk to an Engineer',
     secondaryCtaHref: '/contact-us/',
   },

@@ -1,16 +1,5 @@
 import React from 'react';
-import {
-  Settings,
-  ShieldCheck,
-  Zap,
-  Wrench,
-  PenTool,
-  ClipboardList,
-  CheckCircle2,
-  Activity,
-  ArrowRight,
-  HandMetal
-} from 'lucide-react';
+import { Settings, ShieldCheck, Zap, Wrench, CheckCircle2, Activity, ArrowRight, HandMetal } from 'lucide-react';
 import { FaIndustry, FaCogs, FaTractor } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
@@ -46,7 +35,7 @@ export const handLeverPowerPackData: ProductPageData = {
     subtitle: 'MANUAL HYDRAULIC CONTROL',
     h1: 'Hand Lever Operated Hydraulic Power Pack Manufacturer',
     description: 'Complete mechanical control. Maximum reliability. As a premier Hand Lever Operated Hydraulic Power Pack Manufacturer, Honeywell Hydraulics engineers rugged manual fluid power systems that completely eliminate the need for complex PLCs and electrical solenoids. Designed for harsh environments, heavy-duty workshops, and field service equipment.',
-    primaryCta: { label: 'REQUEST MANUAL UNIT QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST MANUAL UNIT QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-pack.webp',
@@ -194,7 +183,7 @@ export const handLeverPowerPackData: ProductPageData = {
     midCta: {
       heading: 'Tired of Replacing Solenoids?',
       description: 'Strip the complex electronics off your aging machinery and replace them with a simple Hand Lever Power Pack.',
-      primaryCta: { label: 'DISCUSS RETROFITTING', href: '/request-quote' },
+      primaryCta: { label: 'DISCUSS RETROFITTING', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Engineering',
     },
   },
@@ -334,7 +323,7 @@ export const handLeverPowerPackData: ProductPageData = {
     title: 'Tired of Replacing Burnt Solenoids?',
     description: "Stop battling electrical failures on simple machinery. Partner with Honeywell Hydraulics to build a rugged, purely mechanical Hand Lever Power Pack that your operators can rely on for decades.",
     primaryCtaText: 'REQUEST MANUAL UNIT QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Engineering',
     secondaryCtaHref: 'tel:+919924343873',
   },

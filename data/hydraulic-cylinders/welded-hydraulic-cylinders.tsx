@@ -44,7 +44,7 @@ export const weldedCylinderData: ProductPageData = {
       src: '/images/products/hydraulic-cylinders/welded-hydraulic-cylinder-manufacturer.webp',
       alt: 'Welded Hydraulic Cylinder Manufacturer in Ahmedabad - Heavy duty welded cylinder by Honeywell Hydraulics',
     },
-    primaryCta: { label: 'REQUEST OEM QUOTE', href: '/request-quote/' },
+    primaryCta: { label: 'REQUEST OEM QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW TECHNICAL SPECS', href: '#technical-specifications' },
     keySpecs: [
       { label: 'Bore', value: '40mm - 400+ mm' },
@@ -116,7 +116,7 @@ export const weldedCylinderData: ProductPageData = {
       { parameter: 'Cushioning Options', value: 'Fixed or adjustable (Front/Rear)' },
       { parameter: 'Exterior Protection', value: 'Standard Polyurethane, Marine-Grade Epoxy, Zinc Plating' },
     ],
-    primaryCta: { label: 'DISCUSS YOUR SPECS', href: '/request-quote/' },
+    primaryCta: { label: 'DISCUSS YOUR SPECS', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'DOWNLOAD CAD MODELS', href: '#' },
   },
 
@@ -311,7 +311,7 @@ export const weldedCylinderData: ProductPageData = {
     title: 'Need a heavy-duty welded hydraulic cylinder for your machinery?',
     description: 'Robust welded construction for construction equipment, presses, and mobile machinery. Every cylinder is 100% hydrostatically tested at 1.5× rated pressure.',
     primaryCtaText: 'REQUEST A QUOTE',
-    primaryCtaHref: '/request-quote/',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Talk to an Engineer',
     secondaryCtaHref: '/contact-us/',
   },

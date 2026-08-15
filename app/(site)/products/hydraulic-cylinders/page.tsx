@@ -189,7 +189,7 @@ export default function HydraulicCylindersHubPage() {
         title="Request a Custom Quote Today"
         description="Don't compromise the efficiency of your machinery with subpar hydraulic components."
         primaryCtaText="REQUEST QUOTE"
-        primaryCtaHref="/request-quote"
+        primaryCtaHref="/request-quote/#quote-form"
         secondaryCtaText="Call Now"
         secondaryCtaHref="tel:+919924343873"
       />

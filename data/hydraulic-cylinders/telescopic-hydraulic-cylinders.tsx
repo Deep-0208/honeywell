@@ -50,7 +50,7 @@ export const telescopicCylinderData: ProductPageData = {
       src: '/images/products/hydraulic-cylinders/telescopic-hydraulic-cylinders-manufacturer.webp',
       alt: 'Telescopic Hydraulic Cylinder Manufacturer in Ahmedabad - Multi-stage tipper cylinder by Honeywell Hydraulics',
     },
-    primaryCta: { label: 'REQUEST OEM QUOTE', href: '/request-quote/' },
+    primaryCta: { label: 'REQUEST OEM QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW TECHNICAL SPECS', href: '#technical-specifications' },
     keySpecs: [
       { label: 'Number of Stages', value: '2 to 5 Stages' },
@@ -124,7 +124,7 @@ export const telescopicCylinderData: ProductPageData = {
       { parameter: 'Surface Protection', value: 'Hard Chrome Plated (All Stages)' },
       { parameter: 'Sealing System', value: 'High-pressure V-packing, heavy-duty rod wipers, bronze-filled guide rings' },
     ],
-    primaryCta: { label: 'REQUEST OEM PRICING', href: '/request-quote/' },
+    primaryCta: { label: 'REQUEST OEM PRICING', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'CALCULATE STROKE', href: '/contact-us/' },
   },
 
@@ -315,7 +315,7 @@ export const telescopicCylinderData: ProductPageData = {
     title: 'Need a multi-stage telescopic cylinder for your mobile equipment?',
     description: 'From 2-stage to 6-stage configurations for dump trucks, tippers, and heavy lifting equipment. Engineered for maximum stroke from minimum retracted length.',
     primaryCtaText: 'REQUEST A QUOTE',
-    primaryCtaHref: '/request-quote/',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Talk to an Engineer',
     secondaryCtaHref: '/contact-us/',
   },

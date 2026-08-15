@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Settings,
-  Box,
-  Layers,
-  Activity,
-  ArrowRight
-} from 'lucide-react';
+
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const ng10ManifoldBlocksData: ProductPageData = {
@@ -37,7 +31,7 @@ export const ng10ManifoldBlocksData: ProductPageData = {
     description: 'The most widely used hydraulic valve interface size in industrial manufacturing. We manufacture high-precision NG10 (CETOP 5 / 06-Size) manifold blocks — the universally adopted standard for medium-duty industrial automation up to 120 LPM.',
     primaryCta: {
       label: 'ORDER NG10 BLOCKS',
-      href: '/request-quote/',
+      href: '/request-quote/#quote-form',
     },
     secondaryCta: {
       label: 'DOWNLOAD LIBRARY',
@@ -158,7 +152,7 @@ export const ng10ManifoldBlocksData: ProductPageData = {
     tableTitle: 'NG10 Performance Envelope',
     primaryCta: {
       label: 'REQUEST QUOTE',
-      href: '/request-quote/',
+      href: '/request-quote/#quote-form',
     },
     secondaryCta: {
       label: 'DOWNLOAD DATASHEET',
@@ -252,7 +246,7 @@ export const ng10ManifoldBlocksData: ProductPageData = {
     title: 'Need standard NG10 subplates with fast delivery?',
     description: 'The most widely used hydraulic valve interface size in industrial manufacturing.',
     primaryCtaText: 'ORDER NG10 BLOCKS',
-    primaryCtaHref: '/request-quote/',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Submit SPM Schematic',
     secondaryCtaHref: '/contact-us/',
   }

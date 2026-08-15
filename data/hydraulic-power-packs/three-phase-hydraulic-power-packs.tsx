@@ -1,18 +1,5 @@
 import React from 'react';
-import {
-  Zap,
-  Activity,
-  Waves,
-  ShieldAlert,
-  Cog,
-  FileCheck,
-  Package,
-  Box,
-  ThermometerSnowflake,
-  RefreshCw,
-  Wrench,
-  CheckCircle2
-} from 'lucide-react';
+import { Zap, Activity, Waves, Cog, FileCheck, Box, ThermometerSnowflake, RefreshCw, CheckCircle2 } from 'lucide-react';
 import { FaIndustry, FaCogs, FaBuilding, FaShip } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
@@ -48,7 +35,7 @@ export const threePhasePowerPackData: ProductPageData = {
     subtitle: 'INDUSTRIAL CONTINUOUS FLUID POWER',
     h1: 'Three Phase Hydraulic Power Pack Manufacturer',
     description: 'Unrelenting hydraulic force for continuous production environments. As a premier Three Phase Hydraulic Power Pack Manufacturer in India, Honeywell Hydraulics engineers heavy-duty 415V/440V industrial hydraulic power units designed for 100% duty cycles. When large-scale automated machinery, massive forging presses, and high-flow manufacturing systems demand flawless reliability, our three-phase systems deliver smooth, high-efficiency, non-pulsating torque 24/7.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-power-packs/three-phase-hydraulic-power-pack.webp',
@@ -203,7 +190,7 @@ export const threePhasePowerPackData: ProductPageData = {
     midCta: {
       heading: 'Need Bespoke Logic for an Automated Production Line?',
       description: 'We supply fully tested, multi-pump 415V systems with proportional valve logic specifically for automated OEM machinery.',
-      primaryCta: { label: 'DISCUSS OEM CONTRACTS', href: '/request-quote' },
+      primaryCta: { label: 'DISCUSS OEM CONTRACTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Engineering Team',
     },
   },
@@ -276,11 +263,11 @@ export const threePhasePowerPackData: ProductPageData = {
         ctaText: 'View Details',
       },
       {
-        title: 'DC Mini Power Packs',
-        description: '12V/24V compact power units for mobile equipment, tipper trucks, and battery-operated stackers.',
+        title: 'High-Low Hydraulic Power Packs',
+        description: 'Dual-stage pumping units with automatic unloading valves for high-speed press cycles and low energy consumption.',
         category: 'Hydraulic Power Packs',
-        imageSrc: '/images/products/hydraulic-power-packs/dc-mini-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/dc-mini-power-packs',
+        imageSrc: '/images/products/hydraulic-power-packs/high-low-hydraulic-power-pack.webp',
+        href: '/products/hydraulic-power-packs/high-low-hydraulic-power-packs',
         ctaText: 'View Details',
       },
     ],
@@ -321,7 +308,7 @@ export const threePhasePowerPackData: ProductPageData = {
     title: 'Ready to Specify Your Heavy Duty System?',
     description: "Do not risk your continuous production line on underspecified power units. Partner with Honeywell Hydraulics to engineer a heavy-duty, thermally stable, three-phase system that powers your factory flawlessly.",
     primaryCtaText: 'REQUEST A QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Engineering',
     secondaryCtaHref: 'tel:+919924343873',
   },

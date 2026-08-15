@@ -142,7 +142,7 @@ export default function ManifoldBlocksPillarPage() {
         title="Ready to discuss OEM manufacturing volumes and pricing?"
         description="Eliminate hydraulic leaks, save space, and optimize your machine's performance with a custom-engineered manifold block. Partner with Honeywell Hydraulics for absolute precision fluid logic."
         primaryCtaText="REQUEST A CUSTOM QUOTE"
-        primaryCtaHref="/request-quote/"
+        primaryCtaHref="/request-quote/#quote-form"
         secondaryCtaText="Consult Engineering"
         secondaryCtaHref="/contact-us/"
       />
@@ -190,7 +190,7 @@ function HeroSection() {
             </p>
 
             <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
-              <Button href="/request-quote/" size="lg" variant="primary" className="w-full sm:w-auto font-bold tracking-wide">
+              <Button href="/request-quote/#quote-form" size="lg" variant="primary" className="w-full sm:w-auto font-bold tracking-wide">
                 REQUEST A QUOTE
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>

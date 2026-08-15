@@ -96,12 +96,12 @@ export default function ProductsHubPage() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={productListSchema} />
       {/* Hero Section */}
-      <section className="relative bg-slate-50 text-honeywell-navy pt-6 md:pt-8 lg:pt-10 pb-16 lg:pb-24 overflow-hidden border-b border-slate-200">
+      <section className="relative bg-slate-50 text-honeywell-navy pt-2 md:pt-3 lg:pt-4 pb-16 lg:pb-24 overflow-hidden border-b border-slate-200">
         {/* Background Decorative Elements */}
         <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.02] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
         <Container className="relative z-10">
-          <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
+          <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-4">
             <ol className="flex items-center space-x-2">
               <li>
                 <Link href="/" className="hover:text-honeywell-red transition-colors duration-200">Home</Link>
@@ -111,7 +111,7 @@ export default function ProductsHubPage() {
             </ol>
           </nav>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center lg:items-start lg:pt-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center lg:items-start">
             <div className="lg:col-span-7">
               <Heading variant="section" as="h1" className="text-honeywell-navy mb-6 leading-tight drop-shadow-sm">
                 Industrial Hydraulic System Manufacturer
@@ -120,7 +120,7 @@ export default function ProductsHubPage() {
                 Precision-engineered fluid power solutions for heavy industry. As a leading hydraulic products manufacturer, we design, machine, and test highly reliable hydraulic cylinders and power packs. Built for continuous operation in the most demanding manufacturing environments.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="primary" size="lg" href="/request-quote" rightIcon={<ArrowRight className="w-5 h-5" />} className="shadow-lg shadow-honeywell-red/20">
+                <Button variant="primary" size="lg" href="/request-quote/#quote-form" rightIcon={<ArrowRight className="w-5 h-5" />} className="shadow-lg shadow-honeywell-red/20">
                   REQUEST A QUOTE
                 </Button>
                 <Button variant="outline" size="lg" href="/contact-us" className="border-honeywell-navy text-honeywell-navy hover:bg-honeywell-navy hover:text-white backdrop-blur-sm">
@@ -295,7 +295,7 @@ export default function ProductsHubPage() {
               <p className="text-lg text-brand-steelGray font-body text-center mb-6">
                 We supply premium fluid power components to over 20 distinct industrial sectors PAN-India.
               </p>
-              <Link href="/request-quote" className="text-honeywell-red font-bold hover:underline inline-flex items-center gap-1">
+              <Link href="/request-quote/#quote-form" className="text-honeywell-red font-bold hover:underline inline-flex items-center gap-1">
                 Don&apos;t see your industry? Contact us
                 <ArrowRight className="w-4 h-4" />
               </Link>
@@ -305,55 +305,55 @@ export default function ProductsHubPage() {
             <IndustryCard
               industryName="Injection Moulding"
               description="High-speed, high-cycle tie-rod hydraulic cylinders designed for rapid core-pulling and mould clamping."
-              href="/industries/injection-moulding"
+              href="/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/"
               icon={<Activity className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Automotive OEM"
               description="Highly repeatable hydraulic systems for robotic assembly, welding lines, and press automation."
-              href="#"
+              href="/products/hydraulic-cylinders/custom-hydraulic-cylinders/"
               icon={<Shield className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Steel & Metallurgy"
               description="Rugged mill-type hydraulic cylinders built with high-temperature Viton seals to withstand extreme foundry environments."
-              href="#"
+              href="/products/hydraulic-cylinders/welded-hydraulic-cylinders/"
               icon={<Activity className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Construction & Earthmoving"
               description="Heavy-duty boom, stick, and bucket hydraulic cylinders engineered for shock resistance in excavators and earthmovers."
-              href="#"
+              href="/products/hydraulic-cylinders/welded-hydraulic-cylinders/"
               icon={<Shield className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Material Handling"
               description="Reliable, leak-free telescopic and double-acting cylinders for forklifts, scissor lifts, and AGVs."
-              href="#"
+              href="/products/hydraulic-cylinders/scissor-lift-table-hydraulic-cylinder/"
               icon={<Activity className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Rolling Mill"
               description="High-force hydraulic cylinders with precision-ground rods for continuous rolling mill operations."
-              href="#"
+              href="/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/"
               icon={<Shield className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Wooden Industries"
               description="High-tonnage hydraulic press cylinders optimized for plywood pressing, veneer peeling, and timber cutting."
-              href="#"
+              href="/products/hydraulic-power-packs/hydraulic-power-packs-for-press/"
               icon={<Activity className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Power Generation"
               description="Custom hydraulic actuators for turbine control, valve actuation, and dam gate operations."
-              href="#"
+              href="/products/manifold-blocks/custom-manifold-blocks/"
               icon={<Shield className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Defence & Aerospace"
               description="Military-grade hydraulic cylinders meeting stringent defence specifications for launch systems and ground support."
-              href="#"
+              href="/products/hydraulic-cylinders/custom-hydraulic-cylinders/"
               icon={<Activity className="w-6 h-6" />}
             />
           </div>
@@ -509,7 +509,7 @@ export default function ProductsHubPage() {
         title="Ready to discuss your exact requirements?"
         description="Whether you are in the initial design phase of a new machine or require an urgent breakdown replacement, Honeywell Hydraulics has the engineering capability to deliver."
         primaryCtaText="REQUEST A CUSTOM ENGINEERING QUOTE"
-        primaryCtaHref="/request-quote"
+        primaryCtaHref="/request-quote/#quote-form"
         secondaryCtaText="Contact Engineering Team"
         secondaryCtaHref="/contact-us/"
       />

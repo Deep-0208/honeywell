@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShieldCheck, ArrowUpToLine, Settings, ShieldAlert, HardHat, Scale, Cog, FlaskConical, Package, FileCheck } from 'lucide-react';
-import { FaIndustry, FaBuilding, FaWarehouse, FaTractor } from 'react-icons/fa';
+import { FaIndustry, FaBuilding, FaWarehouse } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const squareBodyCylinderData: ProductPageData = {
@@ -35,7 +35,7 @@ export const squareBodyCylinderData: ProductPageData = {
     subtitle: 'High Structural Rigidity for Compact Installations',
     h1: 'Square Body Hydraulic Cylinders',
     description: 'Honeywell Hydraulics manufactures heavy-duty square body hydraulic cylinders designed for severe industrial applications where space is limited but high structural rigidity is required. Engineered with a robust welded square profile, these cylinders offer exceptional strength and precise mounting alignment for machine tools, steel plants, and industrial automation.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/square-body-hydraulic-cylinder.webp',
@@ -110,7 +110,7 @@ export const squareBodyCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our square body cylinders are built using premium materials to endure the harsh realities of heavy industrial applications.',
-    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote' },
+    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders' },
     tableTitle: 'Square Body Cylinder Specs',
     rows: [
@@ -264,7 +264,7 @@ export const squareBodyCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need Custom Square Body Cylinders for Your Machinery?',
       description: 'Our engineers can design and manufacture cylinders based on your specific space constraints, mounting hole patterns, and stroke lengths.',
-      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote' },
+      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },

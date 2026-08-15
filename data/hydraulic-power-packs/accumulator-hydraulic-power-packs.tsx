@@ -1,17 +1,6 @@
 import React from 'react';
-import {
-  Settings,
-  ShieldCheck,
-  Zap,
-  BatteryCharging,
-  Wrench,
-  PenTool,
-  ClipboardList,
-  CheckCircle2,
-  Activity,
-  ArrowRight
-} from 'lucide-react';
-import { FaIndustry, FaCogs, FaBoxOpen, FaTractor } from 'react-icons/fa';
+import { Settings, ShieldCheck, Zap, BatteryCharging, Wrench, CheckCircle2, Activity, ArrowRight } from 'lucide-react';
+import { FaIndustry, FaCogs, FaTractor } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const accumulatorPowerPackData: ProductPageData = {
@@ -46,7 +35,7 @@ export const accumulatorPowerPackData: ProductPageData = {
     subtitle: 'STORED HYDRAULIC ENERGY',
     h1: 'Accumulator Hydraulic Power Pack Manufacturer',
     description: 'Instant peak flow and relentless pressure stability. As India\'s leading Accumulator Hydraulic Power Pack Manufacturer, Honeywell Hydraulics engineers advanced fluid power systems integrated with nitrogen-charged accumulators. Designed for applications requiring sudden bursts of extreme flow, prolonged pressure holding without pump engagement, or critical emergency shutdown operations.',
-    primaryCta: { label: 'REQUEST ACCUMULATOR QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST ACCUMULATOR QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-power-packs/accumulator-hydraulic-power-pack.webp',
@@ -185,7 +174,7 @@ export const accumulatorPowerPackData: ProductPageData = {
     midCta: {
       heading: 'Oversizing Your Pumps for Peak Flow?',
       description: 'Stop wasting electrical energy. We engineer accumulator systems that allow tiny pumps to deliver massive momentary power.',
-      primaryCta: { label: 'DISCUSS ACCUMULATOR SIZING', href: '/request-quote' },
+      primaryCta: { label: 'DISCUSS ACCUMULATOR SIZING', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Engineering',
     },
   },
@@ -325,7 +314,7 @@ export const accumulatorPowerPackData: ProductPageData = {
     title: 'Ready to Store Hydraulic Energy?',
     description: "Do not oversize your pumps and waste massive electrical energy. Partner with Honeywell Hydraulics to engineer an accumulator-assisted power pack that delivers violent peak flow and unparalleled efficiency.",
     primaryCtaText: 'REQUEST ACCUMULATOR QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Engineering',
     secondaryCtaHref: 'tel:+919924343873',
   },

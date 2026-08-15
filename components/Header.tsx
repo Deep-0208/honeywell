@@ -173,14 +173,13 @@ export default function Header({ navigation }: HeaderProps) {
             Slides up via translateY on scroll (GPU-composited).
             Layout never changes — only position shifts. */}
         <div
-          className="relative z-10 w-full flex justify-center will-change-transform"
+          className="relative z-10 w-full flex justify-center will-change-transform px-4 sm:px-6 lg:px-8"
           style={{
             transform: isScrolled ? 'translateY(0px)' : 'translateY(16px)',
             transition: `transform 500ms cubic-bezier(0.16, 1, 0.3, 1)`,
-            padding: isScrolled ? '0 16px' : '0 16px',
           }}
         >
-          <div className="w-full max-w-[1360px] flex items-center justify-between h-16 lg:h-20 gap-2 lg:gap-4 xl:gap-8">
+          <div className="w-full max-w-7xl flex items-center justify-between h-16 lg:h-20 gap-2 sm:gap-4 lg:gap-6">
 
             {/* ═══════════════════════════════
                LEFT — Logo (Pill)
@@ -199,7 +198,7 @@ export default function Header({ navigation }: HeaderProps) {
                 alt="Honeywell Hydraulics — Custom Hydraulic Cylinder & Power Pack Manufacturer"
                 width={350}
                 height={100}
-                className="w-auto h-12 lg:h-[50px] xl:h-[60px]"
+                className="w-auto h-10 sm:h-12 lg:h-[48px] xl:h-[54px]"
                 priority
               />
             </Link>
@@ -208,7 +207,7 @@ export default function Header({ navigation }: HeaderProps) {
                RIGHT — Nav + Contact (Pill)
                ═══════════════════════════════ */}
             <div
-              className="flex items-center justify-end h-14 lg:h-[72px] px-3 sm:px-4 lg:px-4 xl:px-8 bg-white rounded-full"
+              className="flex items-center justify-end h-14 lg:h-[72px] px-3 sm:px-4 lg:px-4 xl:px-6 bg-white rounded-full shrink-0"
               style={{
                 boxShadow: isScrolled ? 'none' : '0 4px 20px rgb(0 0 0 / 0.06)',
                 transition: smoothTransition,
@@ -220,7 +219,7 @@ export default function Header({ navigation }: HeaderProps) {
                 className="hidden xl:flex items-center justify-end h-full"
                 aria-label="Main navigation"
               >
-                <ul className="flex items-center justify-end h-full pr-3 xl:pr-4">
+                <ul className="flex items-center justify-end h-full pr-2 xl:pr-3 gap-0.5 xl:gap-1">
                   {navigation.mainNav.map((item, index) => {
                     const hasMega = !!item.megaMenu;
                     const isMenuOpen = openMenu === item.label;
@@ -242,8 +241,8 @@ export default function Header({ navigation }: HeaderProps) {
                             onKeyDown={(e) => handleNavKeyDown(e, item.label, hasMega)}
                             className={`
                               group inline-flex items-center gap-1 xl:gap-1.5
-                              h-[36px] xl:h-[40px] px-1 xl:px-2 rounded-full cursor-pointer
-                              text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-medium tracking-wide whitespace-nowrap
+                              h-[36px] xl:h-[38px] px-2 xl:px-2.5 rounded-full cursor-pointer
+                              text-[13px] lg:text-[14px] xl:text-[15px] font-medium tracking-wide whitespace-nowrap
                               font-body transition-colors duration-200
                               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                               ${isActive || isMenuOpen
@@ -255,7 +254,7 @@ export default function Header({ navigation }: HeaderProps) {
                             <span>{item.label}</span>
                             <span className={`flex items-center transition-transform duration-200 ${isMenuOpen ? 'rotate-180' : ''}`}>
                               <ChevronDown
-                                className={`w-4 h-4 transition-colors duration-200 ${isActive || isMenuOpen ? 'text-honeywell-navy' : 'text-slate-400 group-hover:text-honeywell-navy'
+                                className={`w-3.5 h-3.5 xl:w-4 xl:h-4 transition-colors duration-200 ${isActive || isMenuOpen ? 'text-honeywell-navy' : 'text-slate-400 group-hover:text-honeywell-navy'
                                   }`}
                                 strokeWidth={2}
                                 aria-hidden="true"
@@ -267,8 +266,8 @@ export default function Header({ navigation }: HeaderProps) {
                             href={item.href}
                             className={`
                               group inline-flex items-center
-                              h-[36px] xl:h-[40px] px-1 xl:px-2 rounded-full cursor-pointer
-                              text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-medium tracking-wide whitespace-nowrap
+                              h-[36px] xl:h-[38px] px-2 xl:px-2.5 rounded-full cursor-pointer
+                              text-[13px] lg:text-[14px] xl:text-[15px] font-medium tracking-wide whitespace-nowrap
                               font-body transition-colors duration-200
                               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                               ${isActive
@@ -292,7 +291,7 @@ export default function Header({ navigation }: HeaderProps) {
 
                         {/* Separator Line */}
                         {index < navigation.mainNav.length - 1 && (
-                          <div className="hidden xl:block w-[1px] h-4 xl:h-5 bg-gray-200 mx-0.5 shrink-0" aria-hidden="true" />
+                          <div className="hidden xl:block w-[1px] h-3.5 xl:h-4 bg-gray-200 mx-0.5 shrink-0" aria-hidden="true" />
                         )}
                       </li>
                     );
@@ -301,14 +300,14 @@ export default function Header({ navigation }: HeaderProps) {
               </nav>
 
               {/* ─── Phone + Mobile Toggle ─── */}
-              <div className="flex items-center gap-1 sm:gap-2 lg:gap-1 xl:gap-2 ml-auto lg:ml-0 shrink-0">
+              <div className="flex items-center gap-1.5 sm:gap-2 ml-auto lg:ml-0 shrink-0">
 
-                {/* Phone — Desktop only */}
+                {/* Phone — Tablet & Desktop */}
                 <a
                   href={`tel:${navigation.phone}`}
                   className="
-                    hidden xl:inline-flex items-center gap-2
-                    px-3 xl:px-4 py-2 rounded-full cursor-pointer
+                    hidden sm:inline-flex items-center gap-1.5 xl:gap-2
+                    px-2.5 sm:px-3 xl:px-3.5 py-1.5 xl:py-2 rounded-full cursor-pointer
                     text-honeywell-navy
                     hover:bg-slate-50
                     transition-colors duration-200 font-body
@@ -318,22 +317,20 @@ export default function Header({ navigation }: HeaderProps) {
                   aria-label={`Call us at ${navigation.phoneDisplay}`}
                 >
                   <span className="
-                    flex items-center justify-center w-8 h-8 rounded-full
+                    flex items-center justify-center w-7 h-7 xl:w-8 xl:h-8 rounded-full
                     bg-honeywell-navy/[0.06] group-hover:bg-honeywell-red/10
                     transition-colors duration-200
                   ">
                     <Phone
-                      className="w-[15px] h-[15px] text-honeywell-navy group-hover:text-honeywell-red transition-colors duration-200"
+                      className="w-3.5 h-3.5 xl:w-[15px] xl:h-[15px] text-honeywell-navy group-hover:text-honeywell-red transition-colors duration-200"
                       strokeWidth={2}
                       aria-hidden="true"
                     />
                   </span>
-                  <span className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-medium tracking-[0.01em] font-body text-honeywell-navy group-hover:text-honeywell-navy">
+                  <span className="text-[13px] sm:text-[14px] xl:text-[15px] font-medium tracking-[0.01em] font-body text-honeywell-navy group-hover:text-honeywell-navy whitespace-nowrap">
                     {navigation.phoneDisplay}
                   </span>
                 </a>
-
-                {/* Removed Request Quote CTA from header */}
 
                 {/* Mobile Menu Toggle */}
                 <button
@@ -342,7 +339,7 @@ export default function Header({ navigation }: HeaderProps) {
                   aria-label="Open navigation menu"
                   aria-expanded={isMobileMenuOpen}
                   className="
-                    xl:hidden p-2.5 rounded-full cursor-pointer
+                    xl:hidden p-2 sm:p-2.5 rounded-full cursor-pointer
                     text-honeywell-navy hover:bg-slate-100
                     border border-slate-200
                     transition-colors duration-200

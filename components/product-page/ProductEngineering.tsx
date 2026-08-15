@@ -30,23 +30,23 @@ export function ProductEngineering({ heading, description, items }: EngineeringD
             </div>
           )}
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {items.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-brand-surfaceGray p-8 rounded-xl border border-slate-200"
+                className="bg-brand-surfaceGray p-5 sm:p-8 rounded-xl border border-slate-200"
               >
                 <Heading
                   variant="subsection"
                   as="h3"
-                  className="text-xl font-bold text-honeywell-navy mb-3 flex items-center gap-3"
+                  className="text-lg sm:text-xl font-bold text-honeywell-navy mb-3 flex items-center gap-3"
                 >
-                  <span className="bg-honeywell-navy text-white w-8 h-8 rounded flex items-center justify-center text-sm font-bold">
+                  <span className="bg-honeywell-navy text-white w-8 h-8 rounded flex items-center justify-center text-sm font-bold shrink-0">
                     {item.label}
                   </span>
-                  {item.title}
+                  <span>{item.title}</span>
                 </Heading>
-                <p className="text-brand-darkSlate text-sm leading-relaxed pl-11 text-justify">
+                <p className="text-brand-darkSlate text-sm leading-relaxed pl-0 sm:pl-11 mt-2 sm:mt-0 text-justify">
                   {item.description}
                 </p>
               </div>

@@ -40,9 +40,9 @@ function ElevenLabsWidgetInner() {
   const isConnecting = conversation.status === 'connecting';
 
   return (
-    <div className="fixed bottom-8 right-8 z-[9999] flex flex-col items-end gap-4 font-sans">
+    <div className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 lg:bottom-8 lg:right-8 z-[9999] flex flex-col items-end gap-4 font-sans">
       {isOpen && (
-        <div className="w-[340px] bg-white/90 backdrop-blur-3xl border border-white/60 rounded-[2rem] p-7 shadow-[0_20px_60px_-15px_rgba(13,27,92,0.15)] ring-1 ring-honeywell-navy/[0.05] text-honeywell-navy overflow-hidden relative origin-bottom-right animate-in fade-in zoom-in-95 slide-in-from-bottom-8 duration-500 ease-out fill-mode-both">
+        <div className="w-[calc(100vw-32px)] max-w-[340px] bg-white/90 backdrop-blur-3xl border border-white/60 rounded-[2rem] p-5 sm:p-7 shadow-[0_20px_60px_-15px_rgba(13,27,92,0.15)] ring-1 ring-honeywell-navy/[0.05] text-honeywell-navy overflow-hidden relative origin-bottom-right animate-in fade-in zoom-in-95 slide-in-from-bottom-8 duration-500 ease-out fill-mode-both">
 
           {/* Header */}
           <div className="flex justify-between items-center mb-8">

@@ -18,7 +18,7 @@ export const COMPANY_INFO = {
   geo: { latitude: 23.035, longitude: 72.668 },
   googleMapsUrl: 'https://maps.app.goo.gl/5L5i9qneY4DLmvow9',
   themeColor: '#0D1B5C',
-  websiteUrl: 'https://www.honeywellhydraulics.com',
+  websiteUrl: 'https://honeywellhydraulics.in',
   socialUrls: {
     linkedin: 'https://www.linkedin.com/company/honeywell-hydraulics',
     facebook: 'https://www.facebook.com/honeywellhydraulics',

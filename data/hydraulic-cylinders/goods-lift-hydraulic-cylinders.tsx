@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, ArrowUpToLine, Settings, ShieldAlert, HardHat, Scale, Cog, FlaskConical, Package, FileCheck } from 'lucide-react';
+import { ShieldCheck, ArrowUpToLine, Settings, ShieldAlert, HardHat, Scale, Cog, FlaskConical, FileCheck } from 'lucide-react';
 import { FaIndustry, FaWarehouse, FaBuilding, FaTruckLoading } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
@@ -35,7 +35,7 @@ export const goodsLiftCylinderData: ProductPageData = {
     subtitle: 'Heavy-Duty Vertical Lifting Solutions',
     h1: 'Goods Lift Hydraulic Cylinder Manufacturer',
     description: 'Honeywell Hydraulics is a leading manufacturer of goods lift hydraulic cylinders. A hydraulic cylinder is a mechanical actuator used to give a unidirectional force through a unidirectional stroke, engineered specifically for safe, high-capacity industrial freight elevators.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/goods-lift-hydraulic-cylinder-v2.webp',
@@ -110,7 +110,7 @@ export const goodsLiftCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our goods lift cylinders are manufactured using the finest quality materials to meet the demanding requirements of vertical material handling.',
-    primaryCta: { label: 'DISCUSS YOUR LIFT REQUIREMENTS', href: '/request-quote' },
+    primaryCta: { label: 'DISCUSS YOUR LIFT REQUIREMENTS', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders' },
     tableTitle: 'Goods Lift Cylinder Specs',
     rows: [
@@ -262,7 +262,7 @@ export const goodsLiftCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need a Custom Goods Lift Cylinder?',
       description: 'Our engineers can design a cylinder based on your specific platform size, travel height, and payload capacity.',
-      primaryCta: { label: 'SUBMIT YOUR REQUIREMENTS', href: '/request-quote' },
+      primaryCta: { label: 'SUBMIT YOUR REQUIREMENTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },
@@ -363,7 +363,7 @@ export const goodsLiftCylinderData: ProductPageData = {
     title: 'Need a Reliable Cylinder for Your Goods Lift?',
     description: "Partner with Honeywell Hydraulics for precision-engineered, high-capacity lifting cylinders built for absolute safety and smooth operation.",
     primaryCtaText: 'REQUEST A QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Now',
     secondaryCtaHref: 'tel:+919924343873',
   },

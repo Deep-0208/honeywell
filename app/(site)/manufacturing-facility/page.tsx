@@ -235,11 +235,11 @@ export default function ManufacturingFacilityPage() {
           </div>
 
           {/* Facility Overview Compact Stats */}
-          <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 p-6 md:p-8 bg-white border border-slate-100 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative z-10 transition-transform duration-500 hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 p-4 sm:p-6 md:p-8 bg-white border border-slate-100 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative z-10 transition-transform duration-500 hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1">
             {FACILITY_OVERVIEW.map((item) => (
               <div key={item.label} className="text-left flex flex-col justify-center">
-                <p className="text-xs text-brand-steelGray font-body uppercase tracking-widest font-semibold mb-2 text-justify">{item.label}</p>
-                <p className="text-base md:text-lg font-display font-bold text-honeywell-navy leading-tight text-justify">{item.value}</p>
+                <p className="text-xs text-brand-steelGray font-body uppercase tracking-widest font-semibold mb-1.5">{item.label}</p>
+                <p className="text-base md:text-lg font-display font-bold text-honeywell-navy leading-tight">{item.value}</p>
               </div>
             ))}
           </div>
@@ -365,7 +365,7 @@ export default function ManufacturingFacilityPage() {
             <p className="text-brand-darkSlate font-body leading-relaxed mb-8 text-center">
               Whether you are an OEM requiring consistent supply of custom-specified components, an SPM builder needing one-off hydraulic solutions, or a maintenance engineer seeking a precise replacement — our facility is equipped to deliver.
             </p>
-            <Button href="/request-quote" variant="primary" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>
+            <Button href="/request-quote/#quote-form" variant="primary" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>
               Request Custom Quote
             </Button>
           </div>
@@ -423,7 +423,7 @@ export default function ManufacturingFacilityPage() {
         title="Ready to See Our Factory in Action?"
         description="We welcome facility visits, witnessed pressure tests, and OEM capability audits. Factory-direct hydraulic manufacturing from our Ahmedabad facility."
         primaryCtaText="Request a Quote"
-        primaryCtaHref="/request-quote/"
+        primaryCtaHref="/request-quote/#quote-form"
         secondaryCtaText="Call +91 99243 43873"
         secondaryCtaHref="tel:+91-9924343873"
       />

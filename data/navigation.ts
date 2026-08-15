@@ -11,7 +11,7 @@ export const siteNavigation: SiteNavigation = {
   phone: '+91-9924343873',
   phoneDisplay: '+91 99243 43873',
   ctaLabel: 'Request Quote',
-  ctaHref: '/request-quote/',
+  ctaHref: '/request-quote/#quote-form',
 
   mainNav: [
             /* ──────────────────────────────────────────────
@@ -89,7 +89,6 @@ export const siteNavigation: SiteNavigation = {
                   { label: 'Accumulator Power Packs', href: '/products/hydraulic-power-packs/accumulator-hydraulic-power-packs/' },
                   { label: 'Hand Lever Power Packs', href: '/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-packs/' },
                   { label: 'Hand Pump Power Packs', href: '/products/hydraulic-power-packs/hand-pump-operated-hydraulic-power-packs/' },
-                  { label: 'DC Mini Power Packs', href: '/products/hydraulic-power-packs/dc-mini-hydraulic-power-packs/' },
                   { label: 'High-Low Power Packs', href: '/products/hydraulic-power-packs/high-low-hydraulic-power-packs/' },
                 ],
               },
@@ -119,69 +118,14 @@ export const siteNavigation: SiteNavigation = {
       },
     },
 
-/* ──────────────────────────────────────────────
-       INDUSTRIES — Dropdown
-       ────────────────────────────────────────────── */
-    {
-      label: 'Industries',
-      href: '/industries/',
-      megaMenu: {
-        columns: [
-          {
-            heading: 'Industries We Serve',
-            links: [
-              {
-                label: 'Injection Moulding',
-                href: '#',
-                description: 'High-speed core pulls and high-pressure clamping solutions.',
-              },
-              {
-                label: 'Automotive',
-                href: '#',
-                description: 'Synchronized robotic welding and assembly station hydraulics.',
-              },
-              {
-                label: 'Steel & Metallurgy',
-                href: '#',
-                description: 'Extreme-pressure fluid power for rolling mills and forging.',
-              },
-              {
-                label: 'Construction Equipment',
-                href: '#',
-                description: 'Rugged hydraulic cylinders and components for earthmoving and heavy machinery.',
-              },
-              {
-                label: 'Agriculture',
-                href: '#',
-                description: 'Reliable hydraulic solutions for farming and agri-equipment.',
-              },
-              {
-                label: 'Material Handling',
-                href: '#',
-                description: 'Judder-free lifting power for warehouse and logistics automation.',
-              },
-              {
-                label: 'Plastic Processing',
-                href: '#',
-                description: 'Precision hydraulics for extrusion, blow moulding, and thermoforming.',
-              },
-              {
-                label: 'Special Purpose Machines',
-                href: '#',
-                description: 'Custom fluid power for unique, one-off manufacturing equipment.',
-              },
-            ],
-          },
-        ],
-      },
-    },
+
 
     /* ──────────────────────────────────────────────
        AREAS WE SERVE — Mega Menu
        ────────────────────────────────────────────── */
     {
       label: 'Areas We Serve',
-      href: '/locations/gujarat/',
+      href: '/locations/',
       megaMenu: {
         columns: [
           {
@@ -196,30 +140,45 @@ export const siteNavigation: SiteNavigation = {
                   { label: 'Surat', href: '/locations/surat/' },
                   { label: 'Vadodara', href: '/locations/vadodara/' },
                   { label: 'Rajkot', href: '/locations/rajkot/' },
-                  { label: 'Bhavnagar', href: '#' },
-                  { label: 'Gandhinagar', href: '#' },
-                  { label: 'Vapi', href: '#' },
-                  { label: 'Jamnagar', href: '#' },
+                  { label: 'Bhavnagar', href: '/locations/bhavnagar/' },
+                  { label: 'Gandhinagar', href: '/locations/gandhinagar/' },
+                  { label: 'Vapi', href: '/locations/vapi/' },
+                  { label: 'Jamnagar', href: '/locations/jamnagar/' },
                 ],
               },
               {
                 label: 'Maharashtra',
-                href: '#',
+                href: '/locations/maharashtra/',
                 description: 'Serving Pune, Mumbai, and major MIDC zones.',
               },
               {
                 label: 'Rajasthan',
-                href: '#',
+                href: '/locations/rajasthan/',
                 description: 'Supplying to RIICO industrial areas like Bhiwadi.',
               },
               {
+                label: 'Madhya Pradesh',
+                href: '/locations/madhya-pradesh/',
+                description: 'Automotive and engineering hubs — Indore, Pithampur, Bhopal.',
+              },
+              {
+                label: 'Karnataka',
+                href: '/locations/karnataka/',
+                description: 'Engineering and automation — Bengaluru, Hubli, Belgaum.',
+              },
+              {
+                label: 'Tamil Nadu',
+                href: '/locations/tamil-nadu/',
+                description: 'Automotive and textile machinery — Chennai, Coimbatore.',
+              },
+              {
                 label: 'West Bengal',
-                href: '#',
-                description: 'Solutions for heavy engineering in Kolkata and Durgapur.',
+                href: '/locations/west-bengal/',
+                description: 'Steel and heavy engineering — Kolkata, Durgapur.',
               },
               {
                 label: 'Pan India',
-                href: '#',
+                href: '/locations/',
                 description: 'Nationwide delivery across all major industrial cities.',
               },
             ],

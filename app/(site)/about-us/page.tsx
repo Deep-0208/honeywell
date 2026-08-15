@@ -781,7 +781,7 @@ export default function AboutUsPage() {
         title="Need a Custom Hydraulic Solution?"
         description="We design and manufacture precision hydraulic cylinders, power packs, and accessories tailored to your exact specifications. Factory-direct pricing from Ahmedabad."
         primaryCtaText="Request a Quote"
-        primaryCtaHref="/request-quote/"
+        primaryCtaHref="/request-quote/#quote-form"
         secondaryCtaText="Call +91 99243 43873"
         secondaryCtaHref="tel:+91-9924343873"
       />

@@ -5,6 +5,7 @@ import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
 import { ArrowRight } from 'lucide-react';
 import type { HeroData } from './types';
+import { TechnicalBlueprintCard } from '@/components/products/TechnicalBlueprintCard';
 
 /**
  * ProductHero — Gold-standard hero section.
@@ -25,7 +26,7 @@ export function ProductHero({
 }: HeroData) {
   return (
     <div
-      className="relative bg-white pt-6 pb-16 md:pt-10 md:pb-24 overflow-hidden border-b border-slate-200"
+      className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200"
       id="hero"
     >
       {/* Background Decorative Elements */}
@@ -93,20 +94,29 @@ export function ProductHero({
             </div>
           </div>
 
-          {/* Image Column */}
-          <div className="relative w-full aspect-[4/3] lg:aspect-[4/3] bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
-            <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              priority
-              fetchPriority="high"
-              decoding="sync"
-              quality={85}
-              className="object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
+          {/* Technical Specs Blueprint or Image Column */}
+          <div className="w-full">
+            {image?.src && image.src !== '' ? (
+              <div className="relative w-full aspect-[4/3] lg:aspect-[4/3] bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
+                <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  priority
+                  fetchPriority="high"
+                  decoding="sync"
+                  quality={85}
+                  className="object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            ) : (
+              <TechnicalBlueprintCard
+                title={`${currentPage} TECHNICAL DATA`}
+                badge="PRECISION ENGINEERED"
+              />
+            )}
           </div>
         </div>
       </Container>

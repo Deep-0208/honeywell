@@ -21,25 +21,28 @@ import { COMPANY_INFO } from '@/lib/constants';
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // ── MAINTENANCE MODE: Block all crawlers ──
+      // ── General search engines — ALLOWED for production launch ──
       {
         userAgent: '*',
-        disallow: '/',
+        allow: '/',
+        disallow: ['/search', '/admin/', '/api/'],
       },
-      // ── Search engine crawlers — BLOCKED until production ──
+      // ── Search engine crawlers — explicitly allowed ──
       {
         userAgent: 'Googlebot',
-        disallow: '/',
+        allow: '/',
+        disallow: ['/search', '/admin/', '/api/'],
       },
       {
         userAgent: 'Googlebot-Image',
-        disallow: '/',
+        allow: '/',
       },
       {
         userAgent: 'Bingbot',
-        disallow: '/',
+        allow: '/',
+        disallow: ['/search', '/admin/', '/api/'],
       },
-      // ── AI crawlers — BLOCKED until production ──
+      // ── AI crawlers — BLOCKED until final audit signoff per rules ──
       {
         userAgent: 'GPTBot',
         disallow: '/',

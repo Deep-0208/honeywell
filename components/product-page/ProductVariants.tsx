@@ -34,7 +34,7 @@ export function ProductVariants({ heading, description, items }: VariantsData) {
           {items.map((variant, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red flex flex-col"
+              className="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 md:p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red flex flex-col"
             >
               <div className="mb-6">
                 <IconBox icon={variant.icon} variant="secondary" size="lg" />

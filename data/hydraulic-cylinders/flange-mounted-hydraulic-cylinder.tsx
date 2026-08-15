@@ -35,7 +35,7 @@ export const flangeMountedCylinderData: ProductPageData = {
     subtitle: 'Rigid Mounting for High-Force Linear Motion',
     h1: 'Flange Mounted Hydraulic Cylinders',
     description: 'Honeywell Hydraulics designs and manufactures high-performance flange mounted hydraulic cylinders. Engineered for fixed industrial installations where absolute rigidity and precise alignment are critical, these cylinders deliver reliable high-force motion for heavy machinery, presses, and automation systems.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder.webp',
@@ -110,7 +110,7 @@ export const flangeMountedCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our flange mounted hydraulic cylinders are built to exact tolerances using premium materials for maximum durability.',
-    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote' },
+    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders' },
     tableTitle: 'Flange Mounted Cylinder Specs',
     rows: [
@@ -264,7 +264,7 @@ export const flangeMountedCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need Flange Mounted Cylinders for Your Machinery?',
       description: 'Our engineers can design and manufacture cylinders based on your specific force requirements, mounting constraints, and stroke lengths.',
-      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote' },
+      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },

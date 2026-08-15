@@ -1,18 +1,6 @@
 import React from 'react';
-import {
-  Settings,
-  ShieldCheck,
-  Zap,
-  Network,
-  Wrench,
-  PenTool,
-  ClipboardList,
-  CheckCircle2,
-  Cpu,
-  Layers,
-  ArrowRight
-} from 'lucide-react';
-import { FaIndustry, FaCogs, FaBoxOpen, FaRobot } from 'react-icons/fa';
+import { Settings, ShieldCheck, Zap, Network, CheckCircle2, Cpu, Layers, ArrowRight } from 'lucide-react';
+import { FaCogs, FaBoxOpen, FaRobot } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const multistationPowerPackData: ProductPageData = {
@@ -47,7 +35,7 @@ export const multistationPowerPackData: ProductPageData = {
     subtitle: 'CENTRALIZED MULTI-CIRCUIT AUTOMATION',
     h1: 'Multistation Hydraulic Power Pack Manufacturer',
     description: 'One power source, infinite control. As a specialized Multistation Hydraulic Power Pack Manufacturer, Honeywell Hydraulics engineers centralized fluid power systems capable of driving multiple independent hydraulic circuits simultaneously or sequentially. By utilizing advanced CETOP manifold systems and precise flow sharing logic, we eliminate the need for scattered standalone pumps, streamlining your entire industrial production line.',
-    primaryCta: { label: 'REQUEST MULTISTATION QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST MULTISTATION QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-power-packs/multistation-hydraulic-power-pack.webp',
@@ -196,7 +184,7 @@ export const multistationPowerPackData: ProductPageData = {
     midCta: {
       heading: 'Standardizing Your Automated Machinery?',
       description: 'We supply fully tested, PLC-ready multistation packs for serial OEM assembly lines.',
-      primaryCta: { label: 'REQUEST OEM CONTRACTS', href: '/request-quote' },
+      primaryCta: { label: 'REQUEST OEM CONTRACTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Engineering',
     },
   },
@@ -336,7 +324,7 @@ export const multistationPowerPackData: ProductPageData = {
     title: 'Ready to Centralize Your Fluid Power?',
     description: "Stop scattering poorly integrated standard power packs across your factory floor. Partner with Honeywell Hydraulics to design a centralized, PLC-ready multistation system.",
     primaryCtaText: 'REQUEST MULTISTATION QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Automation Eng.',
     secondaryCtaHref: 'tel:+919924343873',
   },

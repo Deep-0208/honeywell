@@ -273,12 +273,12 @@ export default function RequestQuotePage() {
       </div>
 
       {/* ── Main: Form + Sidebar ──────────────────────────────────────────── */}
-      <Section bg="gray">
+      <Section bg="gray" id="quote-form" className="scroll-mt-24">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-10 items-start">
 
             {/* Form Panel — rounded-sm to match design system */}
-            <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all duration-350 ease-premium hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red hover:shadow-float">
+            <div id="rfq-form" className="scroll-mt-28 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden transition-all duration-350 ease-premium hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red hover:shadow-float">
               {/* Form header */}
               <div className="px-6 sm:px-10 pt-8 pb-6 border-b border-slate-100">
                 <Heading as="h2" variant="subsection" className="mb-2">

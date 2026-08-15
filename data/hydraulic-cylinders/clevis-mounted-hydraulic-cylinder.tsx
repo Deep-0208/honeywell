@@ -7,7 +7,7 @@ import {
   HardHat,
   Scale
 } from 'lucide-react';
-import { FaIndustry, FaBuilding, FaWarehouse, FaTractor } from 'react-icons/fa';
+import { FaIndustry, FaBuilding, FaTractor } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const clevisMountedCylinderData: ProductPageData = {
@@ -42,7 +42,7 @@ export const clevisMountedCylinderData: ProductPageData = {
     subtitle: 'High-Strength Articulation for Oscillating Machinery',
     h1: 'Clevis Mounted Hydraulic Cylinders',
     description: 'Honeywell Hydraulics manufactures rugged clevis mounted hydraulic cylinders designed specifically for pivoting applications. Built with heavy-duty forged steel clevis ends and precision-machined pivot pins, our cylinders provide extremely smooth articulation while absorbing the intense dynamic forces of mobile and agricultural machinery.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder.webp',
@@ -117,7 +117,7 @@ export const clevisMountedCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our clevis mounted cylinders are built using premium materials to endure the harsh realities of mobile and agricultural hydraulics.',
-    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote' },
+    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders' },
     tableTitle: 'Clevis Mounted Cylinder Specs',
     rows: [
@@ -272,7 +272,7 @@ export const clevisMountedCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need Custom Clevis Cylinders for Your Machinery?',
       description: 'Our engineers can design and manufacture cylinders based on your specific pin size, jaw width, and stroke length requirements.',
-      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote' },
+      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },

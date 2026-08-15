@@ -47,7 +47,7 @@ export const customCylinderData: ProductPageData = {
     subtitle: 'Custom Hydraulic Cylinders',
     h1: 'Custom Hydraulic Cylinder Manufacturer',
     description: 'Bespoke fluid power for when standard catalogs fail. Honeywell Hydraulics is a premier custom hydraulic cylinder manufacturer in Gujarat, specializing in extreme large bore actuators, reverse-engineering obsolete imported equipment, and designing one-off cylinders for specialized machinery.',
-    primaryCta: { label: 'SUBMIT DRAWINGS FOR QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'SUBMIT DRAWINGS FOR QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/custom-hydraulic-cylinder-manufacturer.webp',
@@ -138,7 +138,7 @@ export const customCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our custom manufacturing capabilities extend far beyond standard catalog parameters. Every specification is engineered to your exact requirements.',
-    primaryCta: { label: 'DISCUSS YOUR SPECS', href: '/request-quote' },
+    primaryCta: { label: 'DISCUSS YOUR SPECS', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW STANDARD RANGE', href: '/products/hydraulic-cylinders' },
     tableTitle: 'Custom Capability Range',
     rows: [
@@ -289,7 +289,7 @@ export const customCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need to Reverse-Engineer a Damaged Imported Cylinder?',
       description: 'Our engineering team can dismantle, measure, and replicate any cylinder — even without documentation or part numbers.',
-      primaryCta: { label: 'REQUEST REVERSE ENGINEERING QUOTE', href: '/request-quote' },
+      primaryCta: { label: 'REQUEST REVERSE ENGINEERING QUOTE', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },
@@ -394,7 +394,7 @@ export const customCylinderData: ProductPageData = {
     title: 'Ready to Discuss Your Custom Cylinder Project?',
     description: "Don't let an obsolete cylinder halt your entire production line. Partner with an engineering firm capable of bespoke design, reverse engineering, and extreme-duty manufacturing.",
     primaryCtaText: 'REQUEST A QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Now',
     secondaryCtaHref: 'tel:+919924343873',
   },

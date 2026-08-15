@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Settings,
-  Box,
-  Layers,
-  CheckCircle2,
-  ArrowRight
-} from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const multiStationManifoldBlocksData: ProductPageData = {
@@ -37,7 +31,7 @@ export const multiStationManifoldBlocksData: ProductPageData = {
     description: 'One block. Multiple cylinders. Total synchronized control. We manufacture single monolithic valve bodies housing 2 to 10 directional control valves in a shared P and T gallery circuit for complex Special Purpose Machines.',
     primaryCta: {
       label: 'REQUEST A QUOTE',
-      href: '/request-quote/',
+      href: '/request-quote/#quote-form',
     },
     secondaryCta: {
       label: 'SUBMIT SCHEMATIC',
@@ -215,7 +209,7 @@ export const multiStationManifoldBlocksData: ProductPageData = {
     tableTitle: 'Capabilities',
     primaryCta: {
       label: 'REQUEST QUOTE',
-      href: '/request-quote/',
+      href: '/request-quote/#quote-form',
     },
     secondaryCta: {
       label: 'CONSULT ENGINEERING',
@@ -309,7 +303,7 @@ export const multiStationManifoldBlocksData: ProductPageData = {
     title: 'Stop using chaotic pipework to connect multiple valves.',
     description: 'Centralize your circuit logic into a single, precision-machined multi-station manifold block from Honeywell Hydraulics.',
     primaryCtaText: 'REQUEST OEM QUOTE',
-    primaryCtaHref: '/request-quote/',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Submit SPM Schematic',
     secondaryCtaHref: '/contact-us/',
   }

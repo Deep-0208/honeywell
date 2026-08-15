@@ -7,7 +7,7 @@ import {
   HardHat,
   Scale
 } from 'lucide-react';
-import { FaIndustry, FaBuilding, FaWarehouse, FaTractor } from 'react-icons/fa';
+import { FaIndustry, FaBuilding, FaTractor } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const trunnionMountedCylinderData: ProductPageData = {
@@ -42,7 +42,7 @@ export const trunnionMountedCylinderData: ProductPageData = {
     subtitle: 'Precision Alignment for Heavy Oscillating Loads',
     h1: 'Trunnion Mounted Hydraulic Cylinders',
     description: 'Honeywell Hydraulics manufactures heavy-duty trunnion mounted hydraulic cylinders designed for severe industrial applications requiring rotary or pivoting motion. Engineered with centerline trunnion mounts, these cylinders distribute immense forces evenly, providing exceptional stability and extremely long operating life in steel plants, presses, and construction machinery.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder.webp',
@@ -117,7 +117,7 @@ export const trunnionMountedCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our trunnion mounted cylinders are built using premium materials to endure the harsh realities of heavy industrial applications.',
-    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote' },
+    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders' },
     tableTitle: 'Trunnion Mounted Cylinder Specs',
     rows: [
@@ -271,7 +271,7 @@ export const trunnionMountedCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need Custom Trunnion Cylinders for Your Plant?',
       description: 'Our engineers can design and manufacture cylinders based on your specific trunnion placement, pin diameter, and stroke length requirements.',
-      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote' },
+      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },

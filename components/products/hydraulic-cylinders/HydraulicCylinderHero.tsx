@@ -8,7 +8,7 @@ import { Heading } from '@/components/ui/Heading';
 
 export function HydraulicCylinderHero() {
   return (
-    <div className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200">
+    <div className="relative bg-white pt-6 pb-16 md:pt-8 md:pb-24 overflow-hidden border-b border-slate-200">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
@@ -38,7 +38,7 @@ export function HydraulicCylinderHero() {
 
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
-              <Button href="/request-quote" size="lg" variant="primary" className="w-full sm:w-auto font-bold tracking-wide">
+              <Button href="/request-quote/#quote-form" size="lg" variant="primary" className="w-full sm:w-auto font-bold tracking-wide">
                 REQUEST QUOTE <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button href="#types" size="lg" variant="outline" className="w-full sm:w-auto">

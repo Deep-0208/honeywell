@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, ArrowUpToLine, Settings, ShieldAlert, HardHat, Scale, Cog, FlaskConical, Package, FileCheck } from 'lucide-react';
+import { ShieldCheck, ArrowUpToLine, Settings, ShieldAlert, HardHat, Scale, Cog, FlaskConical, Package } from 'lucide-react';
 import { FaIndustry, FaBuilding, FaWarehouse } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
@@ -35,7 +35,7 @@ export const scissorLiftCylinderData: ProductPageData = {
     subtitle: 'Precision-Engineered for Material Handling',
     h1: 'Scissor Lift Table Hydraulic Cylinders',
     description: 'Honeywell Hydraulics designs and manufactures high-performance hydraulic cylinders specifically engineered for scissor lift tables, stackers, and industrial lifting platforms. Built for continuous operation with zero-drift load holding capabilities.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/scissor-lift-table-hydraulic-cylinder.webp',
@@ -110,7 +110,7 @@ export const scissorLiftCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our scissor lift table cylinders are manufactured using the finest quality materials to meet the rigorous demands of industrial material handling.',
-    primaryCta: { label: 'DISCUSS YOUR LIFT TABLE', href: '/request-quote' },
+    primaryCta: { label: 'DISCUSS YOUR LIFT TABLE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders' },
     tableTitle: 'Scissor Lift Cylinder Specs',
     rows: [
@@ -241,7 +241,7 @@ export const scissorLiftCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need Cylinders for Your Scissor Lifts?',
       description: 'Our engineers can design and manufacture cylinders in volume based on your specific platform size and lifting height requirements.',
-      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote' },
+      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },

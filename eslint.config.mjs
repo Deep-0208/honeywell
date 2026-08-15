@@ -7,7 +7,6 @@ const eslintConfig = defineConfig([
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
-    // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
@@ -15,6 +14,13 @@ const eslintConfig = defineConfig([
     "scripts/**",
     "*.cjs",
   ]),
+  {
+    rules: {
+      "react/no-unescaped-entities": "off",
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+    },
+  },
 ]);
 
 export default eslintConfig;

@@ -6,7 +6,7 @@
  * The static files in public/ (sitemap.xml, sitemap-0.xml) are legacy artifacts.
  */
 module.exports = {
-  siteUrl: 'https://www.honeywellhydraulics.com',
+  siteUrl: 'https://honeywellhydraulics.in',
   generateRobotsTxt: false,
   generateIndexSitemap: false, // Disabled — using app/sitemap.ts instead
 

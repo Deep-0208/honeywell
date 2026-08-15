@@ -1,16 +1,5 @@
 import React from 'react';
-import {
-  Settings,
-  ShieldCheck,
-  Zap,
-  Wrench,
-  Activity,
-  CheckCircle2,
-  ArrowRight,
-  Gauge,
-  ZapOff,
-  TrendingDown
-} from 'lucide-react';
+import { Settings, ShieldCheck, Zap, Activity, CheckCircle2, ArrowRight, Gauge, ZapOff, TrendingDown } from 'lucide-react';
 import { FaIndustry, FaCogs, FaCompressArrowsAlt, FaHammer } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
@@ -46,7 +35,7 @@ export const highLowPowerPackData: ProductPageData = {
     subtitle: 'ENERGY EFFICIENT PRODUCTION',
     h1: 'High-Low Hydraulic Power Pack Manufacturer',
     description: 'Dual-stage pumping. Extreme efficiency. As a highly specialized High-Low Hydraulic Power Pack Manufacturer, Honeywell Hydraulics engineers advanced dual-pump fluid power systems designed exclusively to optimize industrial production cycles. By intelligently combining a high-flow approach stage with a high-pressure working stage, our High-Low units drastically reduce cycle times and cut electrical motor requirements by up to 50%.',
-    primaryCta: { label: 'REQUEST HIGH-LOW QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST HIGH-LOW QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-power-packs/high-low-hydraulic-power-pack.webp',
@@ -199,7 +188,7 @@ export const highLowPowerPackData: ProductPageData = {
     midCta: {
       heading: 'Is Your Press Wasting Energy?',
       description: 'Retrofitting a slow, single-pump press with a High-Low unit is the fastest way to double production speed.',
-      primaryCta: { label: 'DISCUSS CYCLE OPTIMIZATION', href: '/request-quote' },
+      primaryCta: { label: 'DISCUSS CYCLE OPTIMIZATION', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Engineering',
     },
   },
@@ -345,7 +334,7 @@ export const highLowPowerPackData: ProductPageData = {
     title: 'Is Your Press Wasting Energy?',
     description: "Stop wasting electrical energy and suffering from slow production cycles. Partner with Honeywell Hydraulics to engineer an advanced High-Low Power Pack that maximizes your machine's output.",
     primaryCtaText: 'REQUEST HIGH-LOW QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Engineering',
     secondaryCtaHref: 'tel:+919924343873',
   },

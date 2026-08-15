@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, ArrowUpToLine, Settings, ShieldAlert, HardHat, Scale, Cog, FlaskConical, Package, FileCheck } from 'lucide-react';
+import { ShieldCheck, ArrowUpToLine, Settings, ShieldAlert, HardHat, Scale, Cog, FlaskConical, Package } from 'lucide-react';
 import { FaIndustry, FaBuilding, FaWarehouse, FaCarSide } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
@@ -35,7 +35,7 @@ export const carParkingCylinderData: ProductPageData = {
     subtitle: 'Smooth & Stable Vehicle Lifting',
     h1: 'Car Parking Hydraulic Cylinder Manufacturer',
     description: 'Honeywell Hydraulics manufactures premium hydraulic cylinders designed specifically for modern car parking systems. Engineered for high-cycle continuous operation, our cylinders provide the reliable, judder-free lifting force required to safely raise and lower vehicles in stack parking, multi-level systems, and automated parking structures.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/car-parking-hydraulic-cylinder-v2.webp',
@@ -110,7 +110,7 @@ export const carParkingCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our car parking cylinders are manufactured using the finest quality materials to meet the rigorous demands of vehicle lifting and storage.',
-    primaryCta: { label: 'DISCUSS YOUR PARKING LIFT', href: '/request-quote' },
+    primaryCta: { label: 'DISCUSS YOUR PARKING LIFT', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders' },
     tableTitle: 'Car Parking Cylinder Specs',
     rows: [
@@ -262,7 +262,7 @@ export const carParkingCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need Cylinders for Your Parking Systems?',
       description: 'Our engineers can design and manufacture cylinders in volume based on your specific platform size and lifting height requirements.',
-      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote' },
+      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },
@@ -363,7 +363,7 @@ export const carParkingCylinderData: ProductPageData = {
     title: 'Require Reliable Cylinders for Your Parking Systems?',
     description: "Partner with Honeywell Hydraulics for OEM-grade, precision-engineered lifting cylinders built for high-cycle operations and absolute safety.",
     primaryCtaText: 'REQUEST OEM QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Now',
     secondaryCtaHref: 'tel:+919924343873',
   },

@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-  Zap,
-  PowerOff,
-  Minimize2,
-  ArrowDownCircle,
-  ShieldAlert,
-  Cog,
-  FileCheck,
-  Package,
-  Box,
-} from 'lucide-react';
+import { Zap, PowerOff, Minimize2, ArrowDownCircle, ShieldAlert, Cog, FileCheck, Box } from 'lucide-react';
 import { FaCar, FaBuilding, FaTools, FaWarehouse } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
@@ -45,7 +35,7 @@ export const singlePhasePowerPackData: ProductPageData = {
     subtitle: 'COMMERCIAL FLUID POWER',
     h1: 'Single Phase Hydraulic Power Pack Manufacturer',
     description: 'Accessible, reliable fluid power for commercial and light-industrial environments. Honeywell Hydraulics is a premier single phase hydraulic power pack manufacturer in Gujarat, engineering high-efficiency 220V/240V AC power units. Designed for facilities lacking industrial 3-phase grid infrastructure, these systems deliver robust hydraulic force for car lifts, scissor lifts, small balers, and intermittent-duty automation using standard commercial electrical supplies.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-power-packs/single-phase-hydraulic-power-pack.webp',
@@ -200,7 +190,7 @@ export const singlePhasePowerPackData: ProductPageData = {
     midCta: {
       heading: 'Need OEM Volume Manufacturing for Your Equipment?',
       description: 'We supply fully tested, plug-and-play single phase units to manufacturers of car lifts and dock levelers.',
-      primaryCta: { label: 'DISCUSS OEM CONTRACTS', href: '/request-quote' },
+      primaryCta: { label: 'DISCUSS OEM CONTRACTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp OEM Team',
     },
   },
@@ -258,11 +248,11 @@ export const singlePhasePowerPackData: ProductPageData = {
         ctaText: 'View Details',
       },
       {
-        title: 'DC Mini Power Packs',
-        description: '12V/24V compact power units for mobile equipment, tipper trucks, and battery-operated stackers.',
+        title: 'Hydraulic Power Packs for Press',
+        description: 'High-tonnage fluid power systems engineered for industrial presses, forging, and metal forming.',
         category: 'Hydraulic Power Packs',
-        imageSrc: '/images/products/hydraulic-power-packs/dc-mini-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/dc-mini-power-packs',
+        imageSrc: '/images/products/hydraulic-power-packs/hydraulic-power-pack-for-press.webp',
+        href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press',
         ctaText: 'View Details',
       },
       {
@@ -311,7 +301,7 @@ export const singlePhasePowerPackData: ProductPageData = {
     title: 'Ready to Specify Your Single Phase System?',
     description: "Standardize your commercial equipment with ultra-reliable, plug-and-play 220V hydraulic power packs. Partner with Honeywell Hydraulics to eliminate motor stalls, capacitor failures, and leaky fittings.",
     primaryCtaText: 'REQUEST A QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Now',
     secondaryCtaHref: 'tel:+919924343873',
   },

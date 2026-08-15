@@ -1,17 +1,6 @@
 import React from 'react';
-import {
-  Settings,
-  ShieldCheck,
-  Zap,
-  Wrench,
-  Activity,
-  CheckCircle2,
-  ArrowRight,
-  RefreshCw,
-  Anchor,
-  Battery
-} from 'lucide-react';
-import { FaIndustry, FaWrench, FaAmbulance, FaTools } from 'react-icons/fa';
+import { Settings, Zap, Wrench, Activity, CheckCircle2, ArrowRight, RefreshCw, Anchor, Battery } from 'lucide-react';
+import { FaWrench, FaAmbulance, FaTools } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const handPumpPowerPackData: ProductPageData = {
@@ -46,7 +35,7 @@ export const handPumpPowerPackData: ProductPageData = {
     subtitle: 'PORTABLE PRESSURE GENERATION',
     h1: 'Hand Pump Operated Hydraulic Power Pack Manufacturer',
     description: 'Extreme high pressure. Zero electricity. As a specialized Hand Pump Operated Hydraulic Power Pack Manufacturer, Honeywell Hydraulics engineers fully portable, purely mechanical fluid power systems. Designed for remote field service, emergency rescue operations, and hazardous environments where electrical power is unavailable or strictly prohibited.',
-    primaryCta: { label: 'REQUEST HAND PUMP QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST HAND PUMP QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-power-packs/hand-pump-operated-hydraulic-power-pack.webp',
@@ -185,7 +174,7 @@ export const handPumpPowerPackData: ProductPageData = {
     midCta: {
       heading: 'Need Portable High Pressure?',
       description: 'We manufacture hand pumps for OEM heavy lifting, bolt tensioning, and emergency rescue equipment.',
-      primaryCta: { label: 'DISCUSS OEM ORDERS', href: '/request-quote' },
+      primaryCta: { label: 'DISCUSS OEM ORDERS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Engineering',
     },
   },
@@ -325,7 +314,7 @@ export const handPumpPowerPackData: ProductPageData = {
     title: 'Require Portable High-Pressure?',
     description: "Stop relying on heavy, tethered electrical equipment for field service. Partner with Honeywell Hydraulics to deploy ultra-reliable, high-pressure manual pump systems.",
     primaryCtaText: 'REQUEST HAND PUMP QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Engineering',
     secondaryCtaHref: 'tel:+919924343873',
   },

@@ -38,12 +38,12 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
       <JsonLd data={schema} />
 
       <nav aria-label="Breadcrumb" className={`py-4 ${className}`}>
-        <ol className="flex items-center space-x-2 text-base font-body text-brand-steelGray flex-wrap">
+        <ol className="flex flex-wrap items-center gap-y-1 gap-x-1.5 text-xs sm:text-sm md:text-base font-body text-brand-steelGray">
           {items.map((item, index) => {
             const isLast = index === items.length - 1;
 
             return (
-              <li key={item.href} className="flex items-center">
+              <li key={item.href} className="flex items-center gap-1.5">
                 {isLast ? (
                   <span
                     className="text-honeywell-navy font-medium"
@@ -60,7 +60,7 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
                       {item.name}
                     </Link>
                     <ChevronRight
-                      className="w-4 h-4 mx-2 text-brand-borderGray shrink-0"
+                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-borderGray shrink-0"
                       aria-hidden="true"
                     />
                   </>

@@ -70,12 +70,6 @@ export const PILLAR_BLOCK_TYPES = [
     image: "/images/products/hydraulic-power-packs/customized-hydraulic-power-pack.webp"
   },
   {
-    title: "DC Mini Hydraulic Power Packs",
-    description: "Ultra-compact 12V and 24V mobile systems designed for vehicle-mounted tail lifts and dump trailers.",
-    href: "/products/hydraulic-power-packs/dc-mini-hydraulic-power-packs",
-    image: "/images/products/hydraulic-power-packs/dc-mini-hydraulic-power-pack.webp"
-  },
-  {
     title: "Hand Pump Hydraulic Power Packs",
     description: "Purely mechanical manual fluid power generation for emergency overrides, field service, and extreme environments.",
     href: "/products/hydraulic-power-packs/hand-pump-operated-hydraulic-power-packs",

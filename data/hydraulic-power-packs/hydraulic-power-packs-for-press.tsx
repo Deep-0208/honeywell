@@ -1,18 +1,6 @@
 import React from 'react';
-import {
-  Settings,
-  ShieldCheck,
-  Zap,
-  Activity,
-  Wrench,
-  PenTool,
-  ThermometerSnowflake,
-  ClipboardList,
-  CheckCircle2,
-  Lock,
-  ArrowRight
-} from 'lucide-react';
-import { FaIndustry, FaCogs, FaTools, FaCheckDouble } from 'react-icons/fa';
+import { Settings, ShieldCheck, Zap, Activity, Wrench, ThermometerSnowflake, CheckCircle2, Lock, ArrowRight } from 'lucide-react';
+import { FaIndustry, FaCogs, FaTools } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const pressPowerPackData: ProductPageData = {
@@ -47,7 +35,7 @@ export const pressPowerPackData: ProductPageData = {
     subtitle: 'HIGH-PRESSURE PRESS POWER UNITS',
     h1: 'Hydraulic Power Pack for Press Manufacturer',
     description: 'Extreme force generation for industrial forming. As India\'s premier Hydraulic Power Pack Manufacturer for press applications, Honeywell Hydraulics engineers heavy-duty power units designed exclusively for metal stamping, deep drawing, compression molding, and forging presses. We deliver uncompromising pressure stability, ultra-fast cycle times, and robust heat dissipation for cyclic production environments.',
-    primaryCta: { label: 'REQUEST PRESS QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST PRESS QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-power-packs/hydraulic-power-pack-for-press.webp',
@@ -188,7 +176,7 @@ export const pressPowerPackData: ProductPageData = {
     midCta: {
       heading: 'Building a New Deep Drawing Press?',
       description: 'We supply fully tested, high-low tandem pump systems specifically built for rapid approach and extreme holding pressure.',
-      primaryCta: { label: 'REQUEST OEM CONTRACTS', href: '/request-quote' },
+      primaryCta: { label: 'REQUEST OEM CONTRACTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Engineering',
     },
   },
@@ -328,7 +316,7 @@ export const pressPowerPackData: ProductPageData = {
     title: 'Ready to Upgrade Your Press Tonnage?',
     description: "Do not risk your press's tonnage accuracy or factory safety on an under-engineered power unit. Partner with Honeywell Hydraulics to design a cyclic, high-pressure system that delivers relentless forming power.",
     primaryCtaText: 'REQUEST PRESS QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Engineering',
     secondaryCtaHref: 'tel:+919924343873',
   },

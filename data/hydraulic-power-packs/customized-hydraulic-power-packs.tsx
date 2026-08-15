@@ -1,19 +1,6 @@
 import React from 'react';
-import {
-  Settings,
-  ShieldCheck,
-  Zap,
-  Layers,
-  Wrench,
-  PenTool,
-  Network,
-  ClipboardList,
-  CheckCircle2,
-  Cpu,
-  ArrowRight,
-  Box
-} from 'lucide-react';
-import { FaIndustry, FaCogs, FaBoxOpen, FaRobot } from 'react-icons/fa';
+import { Settings, ShieldCheck, Zap, Layers, Network, ClipboardList, CheckCircle2, Cpu, ArrowRight, Box } from 'lucide-react';
+import { FaIndustry, FaBoxOpen, FaRobot } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const customizedPowerPackData: ProductPageData = {
@@ -48,7 +35,7 @@ export const customizedPowerPackData: ProductPageData = {
     subtitle: 'BESPOKE OEM HYDRAULIC SYSTEMS',
     h1: 'Customized Hydraulic Power Pack Manufacturer',
     description: 'Engineered fluid power for exact application requirements. As India\'s leading Customized Hydraulic Power Pack Manufacturer, Honeywell Hydraulics designs and builds bespoke power units from the ground up. Whether you require complex multi-actuator synchronization, advanced PLC integration, highly specialized spatial envelopes, or extreme environmental protection, we engineer the hydraulic heart of your OEM machinery.',
-    primaryCta: { label: 'REQUEST CUSTOM DESIGN', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST CUSTOM DESIGN', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-power-packs/customized-hydraulic-power-pack.webp',
@@ -189,7 +176,7 @@ export const customizedPowerPackData: ProductPageData = {
     midCta: {
       heading: 'Standardizing Your Serial Machinery?',
       description: 'We act as the dedicated fluid power department for leading OEMs, providing serial production of approved custom designs.',
-      primaryCta: { label: 'DISCUSS OEM CONTRACTS', href: '/request-quote' },
+      primaryCta: { label: 'DISCUSS OEM CONTRACTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Engineering Team',
     },
   },
@@ -337,7 +324,7 @@ export const customizedPowerPackData: ProductPageData = {
     title: 'Ready to Engineer Your OEM Solution?',
     description: "Do not compromise your machine's performance with an off-the-shelf unit. Partner with Honeywell Hydraulics to engineer a highly optimized, automation-ready custom hydraulic power pack.",
     primaryCtaText: 'REQUEST CUSTOM DESIGN',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Engineering',
     secondaryCtaHref: 'tel:+919924343873',
   },

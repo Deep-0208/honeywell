@@ -82,7 +82,12 @@ export function ContactForm() {
     setStatus('submitting');
     setErrors({});
     try {
-      await new Promise((r) => setTimeout(r, 1400));
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error('Submission failed');
       setStatus('success');
       setForm(INITIAL);
     } catch {

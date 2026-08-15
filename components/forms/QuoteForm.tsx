@@ -170,7 +170,12 @@ export function QuoteForm() {
     setStatus('submitting');
     setErrors({});
     try {
-      await new Promise((res) => setTimeout(res, 1500));
+      const res = await fetch('/api/quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error('Quote submission failed');
       setStatus('success');
       setFormData(INITIAL_STATE);
       if (fileRef.current) fileRef.current.value = '';
