@@ -35,7 +35,6 @@ export const customManifoldBlocksData: ProductPageData = {
       { label: 'Home', href: '/' },
       { label: 'Products', href: '/products' },
       { label: 'Manifold Blocks', href: '/products/manifold-blocks' },
-      { label: 'Custom Manifold Blocks', href: '/products/manifold-blocks/custom-manifold-blocks' },
     ],
     currentPage: 'Custom Manifold Blocks',
     subtitle: 'Custom Manifold Blocks',

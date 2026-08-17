@@ -23,7 +23,6 @@ export const multiStationManifoldBlocksData: ProductPageData = {
       { label: 'Home', href: '/' },
       { label: 'Products', href: '/products' },
       { label: 'Manifold Blocks', href: '/products/manifold-blocks' },
-      { label: 'Multi Station Manifold Blocks', href: '/products/manifold-blocks/multi-station-manifold-blocks' },
     ],
     currentPage: 'Multi Station Manifold Blocks',
     subtitle: 'Multi-Station Manifolds',

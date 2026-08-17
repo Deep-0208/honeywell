@@ -8,7 +8,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export function HeroSection({ data }: { data: LocationHeroData }) {
   return (
-    <section className="bg-white pt-12 md:pt-20 pb-10 md:pb-16 relative overflow-hidden border-b border-slate-200" aria-labelledby="hero-heading">
+    <section className="bg-white pt-6 pb-16 md:pt-8 md:pb-24 relative overflow-hidden border-b border-slate-200" aria-labelledby="hero-heading">
       {/* Subtle engineering grid background — matching /about-us/ */}
       <div 
         className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_10%_0%,#000_70%,transparent_100%)] pointer-events-none" 

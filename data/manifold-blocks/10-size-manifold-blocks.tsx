@@ -23,7 +23,6 @@ export const ng16ManifoldBlocksData: ProductPageData = {
       { label: 'Home', href: '/' },
       { label: 'Products', href: '/products' },
       { label: 'Manifold Blocks', href: '/products/manifold-blocks' },
-      { label: '10 Size Manifold Blocks', href: '/products/manifold-blocks/10-size-manifold-blocks' },
     ],
     currentPage: '10 Size Manifold Blocks',
     subtitle: 'NG16 / 10-Size Manifolds',

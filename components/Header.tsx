@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Phone, ChevronDown, Menu } from 'lucide-react';
+import { ArrowRight, ChevronDown, Menu } from 'lucide-react';
 import MegaMenu from './MegaMenu';
 import MobileMenu from './MobileMenu';
 import type { SiteNavigation } from '@/types/navigation';
@@ -214,12 +214,12 @@ export default function Header({ navigation }: HeaderProps) {
               }}
             >
 
-              {/* ─── Desktop Navigation ─── */}
+              {/* ─── Desktop & Tablet Landscape Navigation ─── */}
               <nav
-                className="hidden xl:flex items-center justify-end h-full"
+                className="hidden lg:flex items-center justify-end h-full"
                 aria-label="Main navigation"
               >
-                <ul className="flex items-center justify-end h-full pr-2 xl:pr-3 gap-0.5 xl:gap-1">
+                <ul className="flex items-center justify-end h-full pr-1.5 lg:pr-2 xl:pr-3 gap-0.5 xl:gap-1">
                   {navigation.mainNav.map((item, index) => {
                     const hasMega = !!item.megaMenu;
                     const isMenuOpen = openMenu === item.label;
@@ -241,8 +241,8 @@ export default function Header({ navigation }: HeaderProps) {
                             onKeyDown={(e) => handleNavKeyDown(e, item.label, hasMega)}
                             className={`
                               group inline-flex items-center gap-1 xl:gap-1.5
-                              h-[36px] xl:h-[38px] px-2 xl:px-2.5 rounded-full cursor-pointer
-                              text-[13px] lg:text-[14px] xl:text-[15px] font-medium tracking-wide whitespace-nowrap
+                              h-[34px] lg:h-[36px] xl:h-[38px] px-1.5 lg:px-2 xl:px-2.5 rounded-full cursor-pointer
+                              text-[12.5px] lg:text-[13.5px] xl:text-[15px] font-medium tracking-wide whitespace-nowrap
                               font-body transition-colors duration-200
                               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                               ${isActive || isMenuOpen
@@ -266,8 +266,8 @@ export default function Header({ navigation }: HeaderProps) {
                             href={item.href}
                             className={`
                               group inline-flex items-center
-                              h-[36px] xl:h-[38px] px-2 xl:px-2.5 rounded-full cursor-pointer
-                              text-[13px] lg:text-[14px] xl:text-[15px] font-medium tracking-wide whitespace-nowrap
+                              h-[34px] lg:h-[36px] xl:h-[38px] px-1.5 lg:px-2 xl:px-2.5 rounded-full cursor-pointer
+                              text-[12.5px] lg:text-[13.5px] xl:text-[15px] font-medium tracking-wide whitespace-nowrap
                               font-body transition-colors duration-200
                               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
                               ${isActive
@@ -291,7 +291,7 @@ export default function Header({ navigation }: HeaderProps) {
 
                         {/* Separator Line */}
                         {index < navigation.mainNav.length - 1 && (
-                          <div className="hidden xl:block w-[1px] h-3.5 xl:h-4 bg-gray-200 mx-0.5 shrink-0" aria-hidden="true" />
+                          <div className="hidden lg:block w-[1px] h-3 lg:h-3.5 xl:h-4 bg-gray-200 mx-0.5 shrink-0" aria-hidden="true" />
                         )}
                       </li>
                     );
@@ -299,47 +299,41 @@ export default function Header({ navigation }: HeaderProps) {
                 </ul>
               </nav>
 
-              {/* ─── Phone + Mobile Toggle ─── */}
+              {/* ─── Request Quote CTA + Mobile Toggle ─── */}
               <div className="flex items-center gap-1.5 sm:gap-2 ml-auto lg:ml-0 shrink-0">
 
-                {/* Phone — Tablet & Desktop */}
-                <a
-                  href={`tel:${navigation.phone}`}
+                {/* Request Quote CTA — Tablet & Desktop */}
+                <Link
+                  href={navigation.ctaHref || '/request-quote/#quote-form'}
                   className="
-                    hidden sm:inline-flex items-center gap-1.5 xl:gap-2
-                    px-2.5 sm:px-3 xl:px-3.5 py-1.5 xl:py-2 rounded-full cursor-pointer
-                    text-honeywell-navy
-                    hover:bg-slate-50
-                    transition-colors duration-200 font-body
-                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:ring-offset-2 focus-visible:rounded-full
-                    group
+                    group hidden sm:inline-flex items-center gap-1.5 lg:gap-2
+                    h-[34px] sm:h-[36px] lg:h-[38px] xl:h-[40px]
+                    px-3.5 sm:px-4 lg:px-4.5 xl:px-5 rounded-full cursor-pointer
+                    text-white bg-honeywell-red hover:bg-[#C41220]
+                    shadow-[0_2px_8px_-2px_rgba(227,27,35,0.35)] hover:shadow-[0_4px_16px_-2px_rgba(227,27,35,0.45)]
+                    transition-all duration-200 active:scale-[0.98] font-body
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2
                   "
-                  aria-label={`Call us at ${navigation.phoneDisplay}`}
+                  aria-label={navigation.ctaLabel || 'Request Quote'}
                 >
-                  <span className="
-                    flex items-center justify-center w-7 h-7 xl:w-8 xl:h-8 rounded-full
-                    bg-honeywell-navy/[0.06] group-hover:bg-honeywell-red/10
-                    transition-colors duration-200
-                  ">
-                    <Phone
-                      className="w-3.5 h-3.5 xl:w-[15px] xl:h-[15px] text-honeywell-navy group-hover:text-honeywell-red transition-colors duration-200"
-                      strokeWidth={2}
-                      aria-hidden="true"
-                    />
+                  <span className="text-[12px] sm:text-[12.5px] lg:text-[13px] xl:text-[14px] font-semibold tracking-wide whitespace-nowrap font-body">
+                    {navigation.ctaLabel || 'Request Quote'}
                   </span>
-                  <span className="text-[13px] sm:text-[14px] xl:text-[15px] font-medium tracking-[0.01em] font-body text-honeywell-navy group-hover:text-honeywell-navy whitespace-nowrap">
-                    {navigation.phoneDisplay}
-                  </span>
-                </a>
+                  <ArrowRight
+                    className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-white transition-transform duration-200 group-hover:translate-x-0.5"
+                    strokeWidth={2.2}
+                    aria-hidden="true"
+                  />
+                </Link>
 
-                {/* Mobile Menu Toggle */}
+                {/* Mobile Menu Toggle (Mobile & Tablet Portrait < 1024px) */}
                 <button
                   type="button"
                   onClick={() => setIsMobileMenuOpen(true)}
                   aria-label="Open navigation menu"
                   aria-expanded={isMobileMenuOpen}
                   className="
-                    xl:hidden p-2 sm:p-2.5 rounded-full cursor-pointer
+                    lg:hidden p-2 sm:p-2.5 rounded-full cursor-pointer
                     text-honeywell-navy hover:bg-slate-100
                     border border-slate-200
                     transition-colors duration-200

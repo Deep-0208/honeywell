@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: 'Hydraulic Products Manufacturer | Honeywell',
     description:
-      'Leading hydraulic products manufacturer in India. Explore precision-engineered hydraulic cylinders, power packs, manifold blocks, and turnkey systems.',
+      'Leading hydraulic products manufacturer in India. Explore precision-engineered hydraulic cylinders, power packs, and manifold blocks.',
     canonical: '/products',
   }),
 };
@@ -96,18 +96,18 @@ export default function ProductsHubPage() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={productListSchema} />
       {/* Hero Section */}
-      <section className="relative bg-slate-50 text-honeywell-navy pt-2 md:pt-3 lg:pt-4 pb-16 lg:pb-24 overflow-hidden border-b border-slate-200">
+      <section className="relative bg-white text-honeywell-navy pt-6 pb-16 md:pt-8 md:pb-24 overflow-hidden border-b border-slate-200">
         {/* Background Decorative Elements */}
         <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.02] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
         <Container className="relative z-10">
-          <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-4">
-            <ol className="flex items-center space-x-2">
+          <nav aria-label="Breadcrumb" className="text-sm md:text-base font-body text-slate-500 mb-6">
+            <ol className="flex items-center gap-2 flex-wrap">
               <li>
-                <Link href="/" className="hover:text-honeywell-red transition-colors duration-200">Home</Link>
+                <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
               </li>
-              <li aria-hidden="true" className="text-slate-300">/</li>
-              <li className="text-honeywell-navy font-semibold tracking-wide" aria-current="page">Products</li>
+              <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>
+              <li className="text-honeywell-red font-semibold" aria-current="page">Products</li>
             </ol>
           </nav>
 
@@ -161,7 +161,7 @@ export default function ProductsHubPage() {
            Tracked in REQUIRED_IMAGES_MASTER.md */}
 
       {/* Product Categories Grid */}
-      <Section bg="white" id="categories" aria-labelledby="categories-heading">
+      <Section bg="gray" id="categories" aria-labelledby="categories-heading">
         <Container>
           <div className="max-w-3xl mb-12 mx-auto text-center">
             <Heading variant="section" as="h2" id="categories-heading" underline="center">
@@ -200,7 +200,7 @@ export default function ProductsHubPage() {
         </Container>
       </Section>
       {/* Product Selection Guide */}
-      <Section bg="gray" id="selection-guide" aria-labelledby="selection-heading">
+      <Section bg="white" id="selection-guide" aria-labelledby="selection-heading">
         <Container>
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col items-center justify-center mb-12 text-center">
@@ -266,16 +266,16 @@ export default function ProductsHubPage() {
                     <span className="text-2xl md:text-3xl font-display font-bold text-honeywell-red group-hover:text-white transition-colors">3</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Do you need both + control logic integrated?</h3>
-                    <p className="text-brand-steelGray font-body mb-3 text-justify">For complex machines requiring synchronized motion, proportional control, and PLC integration — you need a <strong>Turnkey Hydraulic System</strong>.</p>
+                    <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Do you need to consolidate valves and eliminate piping leaks?</h3>
+                    <p className="text-brand-steelGray font-body mb-3 text-justify">If you need to simplify multi-valve circuits, integrate CETOP valves, or eliminate complex hose plumbing — you need a <strong>Hydraulic Manifold Block</strong>.</p>
                     <p className="text-sm text-brand-darkSlate font-body bg-brand-lightSurface p-4 rounded-xl border-l-4 border-honeywell-red text-justify">
-                      <em>Key consideration:</em> Share your machine cycle diagram and we'll engineer the complete fluid power package: cylinders, power pack, manifold, and controls.
+                      <em>Key consideration:</em> Specify your valve pattern (CETOP 03 / NG06, CETOP 05 / NG10) and required number of stations for custom CNC machining.
                     </p>
                   </div>
                   <div className="flex items-center md:items-end">
-                    <Link href="/products/turnkey-systems" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
+                    <Link href="/products/manifold-blocks" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
                       <span className="relative z-10 flex items-center">
-                        View Systems <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
+                        View Manifold Blocks <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
                     </Link>
                   </div>
                 </CardContent>
@@ -285,7 +285,7 @@ export default function ProductsHubPage() {
         </Container>
       </Section>
       {/* Industries Overview */}
-      <Section bg="white" id="industries" aria-labelledby="industries-heading">
+      <Section bg="gray" id="industries" aria-labelledby="industries-heading">
         <Container>
           <div className="flex flex-col items-center justify-center mb-12 text-center">
             <div className="max-w-2xl">
@@ -360,7 +360,7 @@ export default function ProductsHubPage() {
         </Container>
       </Section>
       {/* Engineering & Manufacturing Capabilities */}
-      <Section bg="gray" id="capabilities" aria-labelledby="capabilities-heading">
+      <Section bg="white" id="capabilities" aria-labelledby="capabilities-heading">
         <Container>
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col items-center justify-center mb-12 text-center">

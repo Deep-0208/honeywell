@@ -163,7 +163,7 @@ export default function LocationsHubPage() {
           SECTION 1: HERO
           ═══════════════════════════════════════════════════════════════════ */}
       <section
-        className="bg-white pt-12 md:pt-20 pb-10 md:pb-16 relative overflow-hidden border-b border-slate-200"
+        className="bg-white pt-6 pb-16 md:pt-8 md:pb-24 relative overflow-hidden border-b border-slate-200"
         aria-labelledby="locations-hero-heading"
       >
         <div
@@ -172,16 +172,16 @@ export default function LocationsHubPage() {
         />
 
         <Container className="relative z-10">
-          <nav aria-label="Breadcrumb" className="text-sm font-body text-slate-500 mb-6">
-            <ol className="flex items-center gap-2">
+          <nav aria-label="Breadcrumb" className="text-sm md:text-base font-body text-slate-500 mb-6">
+            <ol className="flex items-center gap-2 flex-wrap">
               <li>
-                <Link href="/" className="hover:text-honeywell-red transition-colors duration-200">
+                <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">
                   Home
                 </Link>
               </li>
               <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>
               <li className="text-honeywell-red font-semibold" aria-current="page">
-                Service Areas
+                Locations
               </li>
             </ol>
           </nav>

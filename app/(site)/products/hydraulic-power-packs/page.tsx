@@ -160,11 +160,11 @@ export default function HydraulicPowerPacksHubPage() {
       {/* 01 — Hero */}
       <HydraulicPowerPackHero />
 
-      {/* 02 — Product Overview */}
-      <PowerPackOverview />
-
-      {/* 03 — Power Pack Types Grid */}
+      {/* 02 — Power Pack Types Grid */}
       <PowerPackTypesGrid />
+
+      {/* 03 — Product Overview */}
+      <PowerPackOverview />
 
 
 

@@ -26,28 +26,27 @@ export function ProductHero({
 }: HeroData) {
   return (
     <div
-      className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200"
+      className="relative bg-white pt-6 pb-16 md:pt-8 md:pb-24 overflow-hidden border-b border-slate-200"
       id="hero"
     >
       {/* Background Decorative Elements */}
-      <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red/5 skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block" />
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
-      <Container>
+      <Container className="relative z-10">
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
+        <nav aria-label="Breadcrumb" className="text-sm md:text-base font-body text-slate-500 mb-6">
           <ol className="flex items-center gap-2 flex-wrap">
             {breadcrumbs.map((bc, idx) => (
-              <li key={idx}>
-                {idx > 0 && <span aria-hidden="true" className="mr-2">&rsaquo;</span>}
+              <li key={idx} className="flex items-center gap-2">
+                {idx > 0 && <span aria-hidden="true" className="text-slate-400">&rsaquo;</span>}
                 <Link href={bc.href} className="hover:text-honeywell-red transition-colors duration-200 ease-out">
                   {bc.label}
                 </Link>
               </li>
             ))}
-            <li aria-hidden="true">&rsaquo;</li>
+            <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>
             <li className="text-honeywell-red font-semibold" aria-current="page">
               {currentPage}
             </li>
@@ -57,9 +56,7 @@ export function ProductHero({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content Column */}
           <div className="flex flex-col items-start z-10">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-brand-steelGray text-sm font-medium">{subtitle}</span>
-            </div>
+
 
             <Heading
               variant="section"

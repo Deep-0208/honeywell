@@ -23,7 +23,6 @@ export const cetopManifoldBlocksData: ProductPageData = {
       { label: 'Home', href: '/' },
       { label: 'Products', href: '/products' },
       { label: 'Manifold Blocks', href: '/products/manifold-blocks' },
-      { label: 'Cetop Manifold Blocks', href: '/products/manifold-blocks/cetop-manifold-blocks' },
     ],
     currentPage: 'Cetop Manifold Blocks',
     subtitle: 'CETOP Manifold Blocks',

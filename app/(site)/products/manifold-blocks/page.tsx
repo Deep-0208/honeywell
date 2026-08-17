@@ -127,9 +127,9 @@ export default function ManifoldBlocksPillarPage() {
       <JsonLd data={schema} />
 
       <HeroSection />
+      <BlockTypesSection />
       <OverviewSection />
       <KeyFeaturesSection />
-      <BlockTypesSection />
       <TechnicalSpecsSection />
       <IndustriesSection />
       <ManufacturingProcessSection />
@@ -157,30 +157,26 @@ export default function ManifoldBlocksPillarPage() {
 /* ─── 01 Hero ─── */
 function HeroSection() {
   return (
-    <div className="relative bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-slate-200" id="hero">
-      <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
+    <div className="relative bg-white pt-6 pb-16 md:pt-8 md:pb-24 overflow-hidden border-b border-slate-200" id="hero">
+      {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
       
-      <Container>
-                <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
+      <Container className="relative z-10">
+                <nav aria-label="Breadcrumb" className="text-sm md:text-base font-body text-slate-500 mb-6">
           <ol className="flex items-center gap-2 flex-wrap">
             <li>
               <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
             </li>
-            <li aria-hidden="true">&rsaquo;</li>
+            <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>
             <li>
-              <Link href="/products" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Products</Link>
+              <Link href="/products/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Products</Link>
             </li>
-            <li aria-hidden="true">&rsaquo;</li>
+            <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>
             <li className="text-honeywell-red font-semibold" aria-current="page">Manifold Blocks</li>
           </ol>
         </nav>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="flex flex-col items-start z-10">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-brand-steelGray text-sm font-medium">OEM Manifold Blocks</span>
-            </div>
-
             <Heading variant="section" as="h1" className=" lg:text-[3.25rem] font-bold text-honeywell-navy leading-[1.1] mb-6">
               Hydraulic Manifold Block Manufacturer in Gujarat
             </Heading>
@@ -271,10 +267,10 @@ function KeyFeaturesSection() {
   );
 }
 
-/* ─── 04 Block Types ─── */
+/* ─── 02 Block Types ─── */
 function BlockTypesSection() {
   return (
-    <Section bg="white" id="types">
+    <Section bg="gray" id="types">
       <Container>
         <div className="text-center flex flex-col items-center max-w-3xl mx-auto mb-16">
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
@@ -313,7 +309,7 @@ function BlockTypesSection() {
 /* ─── 05 Technical Specs ─── */
 function TechnicalSpecsSection() {
   return (
-    <Section bg="gray" id="specs">
+    <Section bg="white" id="specs">
       <Container>
         <div className="text-center flex flex-col items-center max-w-3xl mx-auto mb-12">
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
@@ -331,7 +327,7 @@ function TechnicalSpecsSection() {
 /* ─── 06 Industries ─── */
 function IndustriesSection() {
   return (
-    <Section bg="white" id="industries">
+    <Section bg="gray" id="industries">
       <Container>
         <div className="text-center flex flex-col items-center max-w-3xl mx-auto mb-16">
           <Heading variant="section" as="h2" underline="center" className="text-honeywell-navy mb-4">
@@ -361,7 +357,7 @@ function IndustriesSection() {
 /* ─── 07 Manufacturing Process ─── */
 function ManufacturingProcessSection() {
   return (
-    <Section bg="gray" id="manufacturing">
+    <Section bg="white" id="manufacturing">
       <Container>
         <div className="max-w-4xl mx-auto">
           <Heading variant="section" as="h2" underline="center">

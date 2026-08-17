@@ -7,7 +7,6 @@ import {
   MapPin,
   ArrowRight,
 } from 'lucide-react';
-import { WhatsAppFloatingCTA } from '@/components/ui/WhatsAppFloatingCTA';
 import { COMPANY_INFO } from '@/lib/constants';
 
 /* ─────────────────────────────────────────────
@@ -100,17 +99,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <>
-      {/* ═══════════════════════════════════════
-          WHATSAPP FLOATING CTA
-          ═══════════════════════════════════════ */}
-      <WhatsAppFloatingCTA href={NAP.whatsapp} />
-
-      <footer
-        className="bg-brand-surfaceGray border-t border-slate-200"
-        role="contentinfo"
-        aria-label="Site footer"
-      >
+    <footer
+      className="bg-brand-surfaceGray border-t border-slate-200"
+      role="contentinfo"
+      aria-label="Site footer"
+    >
         {/* ═══════════════════════════════════════
             TRUST STRIP
             ═══════════════════════════════════════ */}
@@ -355,7 +348,6 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-    </>
   );
 }
 

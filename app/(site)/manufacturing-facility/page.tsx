@@ -203,7 +203,7 @@ export default function ManufacturingFacilityPage() {
       <JsonLd data={faqSchema} />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="bg-white pt-12 md:pt-20 pb-20 relative overflow-hidden">
+      <section className="bg-white pt-6 pb-16 md:pt-8 md:pb-24 relative overflow-hidden border-b border-slate-200">
         {/* Subtle engineering grid background */}
         <div
           className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_10%_0%,#000_70%,transparent_100%)]"
@@ -211,12 +211,12 @@ export default function ManufacturingFacilityPage() {
         />
 
         <Container className="relative z-10">
-          <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
-            <ol className="flex items-center gap-2">
+          <nav aria-label="Breadcrumb" className="text-sm md:text-base font-body text-slate-500 mb-6">
+            <ol className="flex items-center gap-2 flex-wrap">
               <li>
                 <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
               </li>
-              <li aria-hidden="true">&rsaquo;</li>
+              <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>
               <li className="text-honeywell-red font-semibold" aria-current="page">Manufacturing Facility</li>
             </ol>
           </nav>

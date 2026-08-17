@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
-import { Badge } from '@/components/ui/Badge';
 import { Container } from '@/components/ui/Container';
 import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
 import { Heading } from '@/components/ui/Heading';
@@ -10,24 +10,36 @@ export function HydraulicCylinderHero() {
   return (
     <div className="relative bg-white pt-6 pb-16 md:pt-8 md:pb-24 overflow-hidden border-b border-slate-200">
       {/* Background Decorative Elements */}
-      <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red/5 skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block" aria-hidden="true" />
       <div className="absolute inset-0 bg-[url('/images/shared/industrial-texture-background.webp')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
       <Container className="relative z-10">
+        {/* Breadcrumb navigation */}
+        <nav aria-label="Breadcrumb" className="text-sm md:text-base font-body text-slate-500 mb-6">
+          <ol className="flex items-center gap-2 flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">
+                Home
+              </Link>
+            </li>
+            <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>
+            <li>
+              <Link href="/products/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">
+                Products
+              </Link>
+            </li>
+            <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>
+            <li className="text-honeywell-red font-semibold" aria-current="page">
+              Hydraulic Cylinders
+            </li>
+          </ol>
+        </nav>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Content Column */}
           <div className="flex flex-col items-start">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm">
-                PRODUCTS
-              </span>
-              <div className="h-4 w-px bg-slate-300" />
-              <span className="text-brand-steelGray text-sm font-medium">Hydraulic Cylinders</span>
-            </div>
-
             <Heading variant="section" as="h1" className=" lg:text-[2.5rem] xl:text-[2.75rem] mb-6">
               Hydraulic Cylinder Manufacturer in Ahmedabad
             </Heading>
@@ -55,7 +67,7 @@ export function HydraulicCylinderHero() {
           <div className="relative w-full aspect-[4/3] bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
             <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
             <Image
-              src="/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad-manufacturer.webp"
+              src="/images/products/hydraulic-cylinders/hydraulic-cylinders-manufacturing-hero.webp"
               alt="Hydraulic Cylinder Manufacturer in Ahmedabad"
               fill
               priority fetchPriority="high" decoding="sync" quality={85}

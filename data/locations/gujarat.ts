@@ -255,12 +255,6 @@ export const gujaratData: LocationPageData = {
         description: 'Precision CNC-machined aluminum and steel manifold blocks to consolidate your hydraulic circuitry.',
         href: '/products/manifold-blocks/',
       },
-      {
-        id: 'systems',
-        title: 'Complete Hydraulic Systems',
-        description: 'Beyond individual components, we provide turnkey hydraulic automation for specialized machinery.',
-        href: '/products/hydraulic-systems/',
-      },
     ],
   },
   industries: {

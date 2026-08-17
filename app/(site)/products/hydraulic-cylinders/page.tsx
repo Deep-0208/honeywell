@@ -25,7 +25,7 @@ import { PILLAR_COMPARISONS, PILLAR_ENGINEERING } from '@/data/hydraulic-cylinde
 const PAGE_TITLE = 'Hydraulic Cylinder Manufacturer India | Honeywell';
 const PAGE_DESCRIPTION = 'Custom industrial hydraulic cylinders manufacturer in India. We engineer high-pressure cylinders (40-300mm bore) with factory-direct pricing & fast delivery.';
 const PAGE_URL = '/products/hydraulic-cylinders';
-const PAGE_IMAGE = '/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad-manufacturer.webp';
+const PAGE_IMAGE = '/images/products/hydraulic-cylinders/hydraulic-cylinders-manufacturing-hero.webp';
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -155,36 +155,34 @@ export default function HydraulicCylindersHubPage() {
       {/* 01 — Hero */}
       <HydraulicCylinderHero />
 
-      {/* 02 — Product Overview */}
-      <CylinderOverview />
-
-      {/* 03 — Cylinder Types Grid */}
+      {/* 02 — Cylinder Types Grid */}
       <CylinderTypesGrid />
 
+      {/* 03 — Product Overview */}
+      <CylinderOverview />
 
-
-      {/* 05 — Industries Served */}
+      {/* 04 — Industries Served */}
       <CylinderIndustries />
 
-      {/* 06 — Why Choose Honeywell */}
+      {/* 05 — Why Choose Honeywell */}
       <WhyChooseCylinders />
 
-      {/* 07 — Technical Capabilities */}
+      {/* 06 — Technical Capabilities */}
       <CylinderTechnicalSpecs />
 
-      {/* 08 — Manufacturing Process */}
+      {/* 07 — Manufacturing Process */}
       <CylinderManufacturingProcess />
 
-      {/* 09 — FAQs */}
+      {/* 08 — FAQs */}
       <CylinderFAQs />
 
-      {/* 10 — Cylinder Selection Matrix */}
+      {/* 09 — Cylinder Selection Matrix */}
       <ProductComparison {...PILLAR_COMPARISONS[0]} />
 
-      {/* 11 — Engineering Advantage */}
+      {/* 10 — Engineering Advantage */}
       <ProductEngineering {...PILLAR_ENGINEERING} />
 
-      {/* 12 — CTA Section */}
+      {/* 11 — CTA Section */}
       <CTA
         title="Request a Custom Quote Today"
         description="Don't compromise the efficiency of your machinery with subpar hydraulic components."
