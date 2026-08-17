@@ -28,8 +28,8 @@ export const multistationPowerPackData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs/' },
     ],
     currentPage: 'Multistation Units',
     subtitle: 'CENTRALIZED MULTI-CIRCUIT AUTOMATION',
@@ -55,10 +55,10 @@ export const multistationPowerPackData: ProductPageData = {
     content: (
       <div className="space-y-6">
         <p>
-          A <strong className="text-honeywell-navy">Multistation Hydraulic Power Pack</strong> (or Centralized Hydraulic Power Unit) is designed to supply pressurized fluid to multiple, independently operated <a href="/products/hydraulic-cylinders" className="text-honeywell-red font-semibold hover:underline">Hydraulic Cylinders</a> or motors from a single central reservoir and pump assembly.
+          A <strong className="text-honeywell-navy">Multistation Hydraulic Power Pack</strong> (or Centralized Hydraulic Power Unit) is designed to supply pressurized fluid to multiple, independently operated <a href="/products/hydraulic-cylinders/" className="text-honeywell-red font-semibold hover:underline">Hydraulic Cylinders</a> or motors from a single central reservoir and pump assembly.
         </p>
         <p>
-          Instead of a simple up/down single-valve circuit, a multistation pack utilizes a large, CNC-machined <a href="/products/manifold-blocks" className="text-honeywell-navy underline hover:text-honeywell-red">Hydraulic Manifold Block</a> stacked with a "bank" of directional control valves.
+          Instead of a simple up/down single-valve circuit, a multistation pack utilizes a large, CNC-machined <a href="/products/manifold-blocks/" className="text-honeywell-navy underline hover:text-honeywell-red">Hydraulic Manifold Block</a> stacked with a "bank" of directional control valves.
         </p>
         <p>
           This centralized architecture is the backbone of automated industrial manufacturing. Whether you need five cylinders to actuate simultaneously with perfectly balanced flow, or sequentially in a strict PLC-timed order, a multistation unit handles the entire machine's logic from one location.
@@ -140,8 +140,8 @@ export const multistationPowerPackData: ProductPageData = {
   technicalSpecs: {
     heading: 'Multistation Capability Parameters',
     description: 'We engineer complex logic manifolds for high-speed industrial automation.',
-    primaryCta: { label: 'VIEW MANIFOLDS', href: '/products/manifold-blocks' },
-    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact' },
+    primaryCta: { label: 'VIEW MANIFOLDS', href: '/products/manifold-blocks/' },
+    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact-us/' },
     tableTitle: 'Automation Specifications',
     rows: [
       { parameter: 'Number of Stations', value: '2 to 20+ independent circuits' },
@@ -249,19 +249,19 @@ export const multistationPowerPackData: ProductPageData = {
         icon: <FaRobot className="w-6 h-6" />,
         name: 'Assembly Line Automation',
         description: 'Coordinated actuator timing driven by a central PLC for flawless sequential manufacturing.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
         name: 'Fixture Clamping Systems',
         description: 'Requires highly stable pressure holding across multiple independent vices via PO check valves.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaBoxOpen className="w-6 h-6" />,
         name: 'Packaging Machinery',
         description: 'Fast, repetitive, sequential cycles (Fold → Press → Seal) operating from a single manifold.',
-        href: '/industries',
+        href: '#',
       },
     ],
   },
@@ -275,7 +275,7 @@ export const multistationPowerPackData: ProductPageData = {
         description: 'Bespoke turnkey fluid power systems engineered specifically for complex OEM machinery.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/customized-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -283,7 +283,7 @@ export const multistationPowerPackData: ProductPageData = {
         description: 'Extreme high-pressure cyclic duty power units engineered for industrial metal forming.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/hydraulic-power-pack-for-press.webp',
-        href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press',
+        href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press/',
         ctaText: 'View Details',
       },
       {
@@ -291,7 +291,7 @@ export const multistationPowerPackData: ProductPageData = {
         description: 'Custom CNC-machined blocks that consolidate complex valve logic into a single unit.',
         category: 'Hydraulic Components',
         imageSrc: '/images/products/manifold-blocks/hydraulic-manifold-block.webp',
-        href: '/products/manifold-blocks',
+        href: '/products/manifold-blocks/',
         ctaText: 'View Details',
       },
     ],

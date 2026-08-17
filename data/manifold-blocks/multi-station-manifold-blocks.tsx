@@ -21,8 +21,8 @@ export const multiStationManifoldBlocksData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Manifold Blocks', href: '/products/manifold-blocks' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Manifold Blocks', href: '/products/manifold-blocks/' },
     ],
     currentPage: 'Multi Station Manifold Blocks',
     subtitle: 'Multi-Station Manifolds',

@@ -95,8 +95,7 @@ export function HeroSection({ data }: { data: LocationHeroData }) {
                 <Button 
                   href={data.ctas.secondary.href} 
                   variant="outline" 
-                  size="lg" 
-                  className="bg-white hover:bg-slate-50"
+                  size="lg"
                 >
                   {data.ctas.secondary.label}
                 </Button>

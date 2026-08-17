@@ -28,8 +28,8 @@ export const customizedPowerPackData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs/' },
     ],
     currentPage: 'Customized Units',
     subtitle: 'BESPOKE OEM HYDRAULIC SYSTEMS',
@@ -61,7 +61,7 @@ export const customizedPowerPackData: ProductPageData = {
           Unlike standard off-the-shelf units that force machine designers to adapt to rigid constraints, a custom hydraulic system is built in total reverse: we analyze the OEM machine's mechanical requirements first, and then build the fluid power circuit to match it flawlessly.
         </p>
         <p>
-          This requires advanced engineering capabilities, including custom <a href="/products/manifold-blocks" className="text-honeywell-red font-semibold hover:underline">Hydraulic Manifold Block</a> design, specialized motor-pump synchronization, bespoke reservoir fabrication to fit unusual spatial footprints, and fully integrated electrical control panels equipped with PLC automation and sensor arrays.
+          This requires advanced engineering capabilities, including custom <a href="/products/manifold-blocks/" className="text-honeywell-red font-semibold hover:underline">Hydraulic Manifold Block</a> design, specialized motor-pump synchronization, bespoke reservoir fabrication to fit unusual spatial footprints, and fully integrated electrical control panels equipped with PLC automation and sensor arrays.
         </p>
 
         {/* Typical System Configuration Flow */}
@@ -132,8 +132,8 @@ export const customizedPowerPackData: ProductPageData = {
   technicalSpecs: {
     heading: 'Custom OEM Engineering Capabilities',
     description: 'We do not assemble parts; we engineer complete solutions. Our bespoke manufacturing capabilities cover the entire fluid power spectrum.',
-    primaryCta: { label: 'VIEW MANUFACTURING', href: '/manufacturing-facility' },
-    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact' },
+    primaryCta: { label: 'VIEW MANUFACTURING', href: '/manufacturing-facility/' },
+    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact-us/' },
     tableTitle: 'Bespoke Design Parameters',
     rows: [
       { parameter: 'Hydraulic Circuitry', value: 'Fully bespoke CAD design and logic simulation' },
@@ -241,19 +241,19 @@ export const customizedPowerPackData: ProductPageData = {
         icon: <FaRobot className="w-6 h-6" />,
         name: 'Automated Manufacturing',
         description: 'Robotic assembly lines requiring precise multi-actuator synchronization and PLC integration.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaBoxOpen className="w-6 h-6" />,
         name: 'Food & Packaging',
         description: 'Stainless steel units using food-grade oil to drive high-speed packaging machinery.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Special Purpose Machines (SPM)',
         description: 'Custom presses and forming machines built with extreme spatial constraints.',
-        href: '/industries',
+        href: '#',
       },
     ],
   },
@@ -267,7 +267,7 @@ export const customizedPowerPackData: ProductPageData = {
         description: 'Heavy-duty 415V continuous duty power units for standard industrial manufacturing.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/three-phase-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/three-phase-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/three-phase-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -275,7 +275,7 @@ export const customizedPowerPackData: ProductPageData = {
         description: 'Centralized power units designed to drive multiple independent hydraulic circuits simultaneously.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/multistation-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/multistation-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/multistation-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -283,7 +283,7 @@ export const customizedPowerPackData: ProductPageData = {
         description: 'Custom CNC-machined blocks that consolidate complex valve logic into a single unit.',
         category: 'Hydraulic Components',
         imageSrc: '/images/products/manifold-blocks/hydraulic-manifold-block.webp',
-        href: '/products/manifold-blocks',
+        href: '/products/manifold-blocks/',
         ctaText: 'View Details',
       },
     ],

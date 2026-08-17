@@ -28,8 +28,8 @@ export const threePhasePowerPackData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs/' },
     ],
     currentPage: 'Three Phase',
     subtitle: 'INDUSTRIAL CONTINUOUS FLUID POWER',
@@ -59,13 +59,13 @@ export const threePhasePowerPackData: ProductPageData = {
         </p>
         <p>
           Unlike{' '}
-          <a href="/products/hydraulic-power-packs/single-phase-hydraulic-power-packs" className="text-honeywell-red font-semibold hover:underline">
+          <a href="/products/hydraulic-power-packs/single-phase-hydraulic-power-packs/" className="text-honeywell-red font-semibold hover:underline">
             Single Phase Hydraulic Power Packs
           </a>{' '}
           which are limited to intermittent duty and low horsepower, a three-phase system distributes its electrical load across three alternating currents. This architecture allows the electric motor to run continuously (100% duty cycle) without overheating, driving massive hydraulic pumps to generate immense flow rates (LPM) and extreme pressures simultaneously.
         </p>
         <p>
-          As a tier-one hydraulic power unit supplier, we engineer these systems as the heart of heavy industrial machinery. They provide the unrelenting mechanical power required to actuate massive <a href="/products/hydraulic-cylinders" className="text-honeywell-navy underline hover:text-honeywell-red">hydraulic cylinders</a> in steel mills, injection molding plants, and automated assembly lines.
+          As a tier-one hydraulic power unit supplier, we engineer these systems as the heart of heavy industrial machinery. They provide the unrelenting mechanical power required to actuate massive <a href="/products/hydraulic-cylinders/" className="text-honeywell-navy underline hover:text-honeywell-red">hydraulic cylinders</a> in steel mills, injection molding plants, and automated assembly lines.
         </p>
       </>
     ),
@@ -114,8 +114,8 @@ export const threePhasePowerPackData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications Framework',
     description: 'As an expert heavy duty hydraulic power pack manufacturer, we customize every parameter to your industrial machinery\'s precise demands.',
-    primaryCta: { label: 'DOWNLOAD CAD SPECS', href: '/resources/downloads' },
-    secondaryCta: { label: 'VIEW CUSTOM UNITS', href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs' },
+    primaryCta: { label: 'DOWNLOAD CAD SPECS', href: '/request-quote/#quote-form' },
+    secondaryCta: { label: 'VIEW CUSTOM UNITS', href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs/' },
     tableTitle: 'Three Phase Industrial Capability Range',
     rows: [
       { parameter: 'Electrical Input', value: '415V / 440V AC (Three Phase, 50Hz/60Hz)' },
@@ -138,25 +138,25 @@ export const threePhasePowerPackData: ProductPageData = {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Steel & Metallurgy',
         description: 'Powering ladle tilters, continuous casters, and heavy forging presses in extreme high-temperature environments.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
         name: 'Automotive Manufacturing',
         description: 'Operating the massive stamping presses that form car chassis components and continuous factory conveyor systems.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaBuilding className="w-6 h-6" />,
         name: 'Infrastructure & Civil',
         description: 'Driving radial spillway gates on hydroelectric dams and operating heavy tunnel boring machinery.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaShip className="w-6 h-6" />,
         name: 'Marine & Offshore',
         description: 'Powering heavy-duty marine winches, offshore drilling rigs, and massive scrap baling facilities.',
-        href: '/industries',
+        href: '#',
       },
     ],
   },
@@ -251,7 +251,7 @@ export const threePhasePowerPackData: ProductPageData = {
         description: '220V intermittent duty cycle power units for commercial garages and light industrial shops.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/single-phase-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/single-phase-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/single-phase-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -259,7 +259,7 @@ export const threePhasePowerPackData: ProductPageData = {
         description: 'Bespoke turnkey fluid power systems engineered specifically for complex OEM machinery.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/custom-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -267,7 +267,7 @@ export const threePhasePowerPackData: ProductPageData = {
         description: 'Dual-stage pumping units with automatic unloading valves for high-speed press cycles and low energy consumption.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/high-low-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/high-low-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/high-low-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
     ],

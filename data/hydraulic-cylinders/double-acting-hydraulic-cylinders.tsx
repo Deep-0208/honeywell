@@ -187,25 +187,25 @@ export const doubleActingCylinderData: ProductPageData = {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Automotive & Auto Component Manufacturing',
         description: 'Double acting cylinders for stamping presses, body panel forming, and automated assembly lines in automotive plants across Gujarat.',
-        href: '/industries/double-acting-hydraulic-cylinder-manufacturer-honeywell'
+        href: '#'
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
         name: 'Injection Moulding & Plastics',
         description: 'Clamping cylinders and injection unit actuators for plastic moulding machines requiring precise, controllable bi-directional force.',
-        href: '/industries/injection-moulding-plastics'
+        href: '#'
       },
       {
         icon: <FaBuilding className="w-6 h-6" />,
         name: 'Construction & Infrastructure',
         description: 'Heavy-duty double acting cylinders for concrete batching plants, pile driving rigs, and bridge construction hydraulic systems.',
-        href: '/industries/construction-infrastructure'
+        href: '#'
       },
       {
         icon: <FaTemperatureHigh className="w-6 h-6" />,
         name: 'Steel & Metal Fabrication',
         description: 'Forging press cylinders, metal shearing machines, and plate bending equipment in steel plants and heavy fabrication workshops.',
-        href: '/industries/steel-metal-fabrication'
+        href: '#'
       },
     ],
   },

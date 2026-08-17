@@ -21,8 +21,8 @@ export const ng10ManifoldBlocksData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Manifold Blocks', href: '/products/manifold-blocks' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Manifold Blocks', href: '/products/manifold-blocks/' },
     ],
     currentPage: '06 Size Manifold Blocks',
     subtitle: 'NG10 / 06-Size Manifolds',
@@ -34,7 +34,7 @@ export const ng10ManifoldBlocksData: ProductPageData = {
     },
     secondaryCta: {
       label: 'DOWNLOAD LIBRARY',
-      href: '/resources/downloads/',
+      href: '/request-quote/#quote-form',
     },
     image: {
       src: '/images/products/manifold-blocks/06-size-manifold-block-ng10.webp',
@@ -155,7 +155,7 @@ export const ng10ManifoldBlocksData: ProductPageData = {
     },
     secondaryCta: {
       label: 'DOWNLOAD DATASHEET',
-      href: '/resources/downloads/',
+      href: '/request-quote/#quote-form',
     },
     rows: [
       { parameter: 'ISO Standard', value: 'ISO 4401-05-05-0-05' },

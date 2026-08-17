@@ -33,8 +33,8 @@ export const customManifoldBlocksData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Manifold Blocks', href: '/products/manifold-blocks' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Manifold Blocks', href: '/products/manifold-blocks/' },
     ],
     currentPage: 'Custom Manifold Blocks',
     subtitle: 'Custom Manifold Blocks',

@@ -151,25 +151,25 @@ export const tieRodCylinderData: ProductPageData = {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Automotive OEM',
         description: 'Providing high-speed, highly serviceable clamping cylinders for robotic welding stations and assembly lines.',
-        href: '/industries/tie-rod-hydraulic-cylinder-manufacturer-in-gujarat-nfpa-standard'
+        href: '#'
       },
       {
         icon: <FaBox className="w-6 h-6" />,
         name: 'Plastic Processing',
         description: 'Supplying standardized core-pull and ejector cylinders for injection moulding machines.',
-        href: '/industries/plastic-processing'
+        href: '#'
       },
       {
         icon: <FaWrench className="w-6 h-6" />,
         name: 'Machine Tool Builders',
         description: 'Delivering zero-distortion, low-friction actuation for automated CNC loading and unloading gantries.',
-        href: '/industries/machine-tool-builders'
+        href: '#'
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
         name: 'Packaging & Automation',
         description: 'Engineering rapid-cycle cylinders for high-speed corrugated box manufacturing and palletizing robots.',
-        href: '/industries/packaging-automation'
+        href: '#'
       },
     ],
   },

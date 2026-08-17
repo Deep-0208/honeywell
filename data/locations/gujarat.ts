@@ -209,7 +209,7 @@ export const gujaratData: LocationPageData = {
     },
     ctas: {
       primary: { label: 'GET A QUOTE — GUJARAT DELIVERY', href: '/request-quote/#quote-form' },
-      secondary: { label: 'DOWNLOAD PRODUCT BROCHURE', href: '/resources/downloads/' },
+      secondary: { label: 'DOWNLOAD PRODUCT BROCHURE', href: '/request-quote/#quote-form' },
     },
   },
   benefits: {

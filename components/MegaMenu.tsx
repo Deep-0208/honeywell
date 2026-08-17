@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Layers, Building2, ShieldCheck, Factory } from 'lucide-react';
+import { ArrowRight, Layers, Building2, ShieldCheck, Factory, MapPin } from 'lucide-react';
 
 import type { NavItem, NavLink } from '@/types/navigation';
 
@@ -10,6 +10,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
   building: Building2,
   shield: ShieldCheck,
   factory: Factory,
+  mappin: MapPin,
 };
 
 interface MegaMenuProps {
@@ -161,43 +162,52 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
 
                 {activeLink?.subcategories && activeLink.subcategories.length > 0 ? (
                   <div className="w-full flex flex-col h-full relative z-10">
-                    <div className="mb-3">
+                    <div className="mb-3 flex items-center justify-between">
                       <span className="inline-flex items-center justify-center px-2.5 py-1 rounded text-[10px] font-bold tracking-[0.2em] text-honeywell-red bg-red-50 uppercase font-body">
                         {activeLink.label}
                       </span>
+                      {item.label === 'Areas We Serve' && (
+                        <span className="text-[10px] font-semibold text-brand-steelGray font-body uppercase tracking-wider">
+                          Supply Coverage
+                        </span>
+                      )}
                     </div>
 
                     <ul className="space-y-1.5 mb-3 flex-1 overflow-y-auto max-h-[min(280px,calc(100vh-18rem))] pr-1.5">
-                      {activeLink.subcategories.map((sub, idx) => (
-                        <li key={idx}>
-                          <Link
-                            href={sub.href}
-                            onClick={onClose}
-                            className="
-                              group relative flex items-center gap-2.5 p-2 rounded-xl
-                              transition-all duration-300 ease-premium
-                              hover:bg-white hover:shadow-[0_4px_16px_-4px_rgba(13,27,92,0.08)] border border-transparent hover:border-slate-100
-                              overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy
-                            "
-                          >
-                            {/* Left subtle red accent bar on hover */}
-                            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-honeywell-red rounded-r-full opacity-0 group-hover:h-3/5 group-hover:opacity-100 transition-all duration-300 ease-premium" aria-hidden="true" />
+                      {activeLink.subcategories.map((sub, idx) => {
+                        const IconComp = sub.icon && ICON_MAP[sub.icon] 
+                          ? ICON_MAP[sub.icon] 
+                          : (item.label === 'Areas We Serve' ? MapPin : Layers);
+                        const targetHref = sub.href || activeLink.href;
 
-                            <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 text-brand-steelGray group-hover:bg-red-50 group-hover:text-honeywell-red transition-colors duration-300 shrink-0">
-                              {(() => {
-                                const IconComp = sub.icon && ICON_MAP[sub.icon] ? ICON_MAP[sub.icon] : Layers;
-                                return <IconComp className="w-3.5 h-3.5" aria-hidden="true" />;
-                              })()}
-                            </div>
+                        return (
+                          <li key={idx}>
+                            <Link
+                              href={targetHref}
+                              onClick={onClose}
+                              className="
+                                group relative flex items-center gap-2.5 p-2 rounded-xl
+                                transition-all duration-300 ease-premium
+                                hover:bg-white hover:shadow-[0_4px_16px_-4px_rgba(13,27,92,0.08)] border border-transparent hover:border-slate-100
+                                overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy
+                              "
+                            >
+                              {/* Left subtle red accent bar on hover */}
+                              <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-honeywell-red rounded-r-full opacity-0 group-hover:h-3/5 group-hover:opacity-100 transition-all duration-300 ease-premium" aria-hidden="true" />
 
-                            <span className="text-[13px] font-semibold text-honeywell-navy font-display flex-1 group-hover:text-brand-deepNavy transition-colors truncate">
-                              {sub.label}
-                            </span>
+                              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 text-brand-steelGray group-hover:bg-red-50 group-hover:text-honeywell-red transition-colors duration-300 shrink-0">
+                                <IconComp className="w-3.5 h-3.5" aria-hidden="true" />
+                              </div>
 
-                            <ArrowRight className="w-3.5 h-3.5 text-brand-borderGray opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-honeywell-red transition-all duration-300 ease-premium shrink-0" aria-hidden="true" />
-                          </Link>
-                        </li>
-                      ))}
+                              <span className="text-[13px] font-semibold text-honeywell-navy font-display flex-1 group-hover:text-brand-deepNavy transition-colors truncate">
+                                {sub.label}
+                              </span>
+
+                              <ArrowRight className="w-3.5 h-3.5 text-brand-borderGray opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-honeywell-red transition-all duration-300 ease-premium shrink-0" aria-hidden="true" />
+                            </Link>
+                          </li>
+                        );
+                      })}
                     </ul>
 
                     <Link
@@ -212,7 +222,7 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
                     >
                       <div className="absolute inset-0 bg-honeywell-navy translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-premium z-0" aria-hidden="true" />
                       <span className="relative z-10 flex items-center gap-2 text-[13px] font-semibold text-honeywell-navy font-body group-hover:text-white transition-colors duration-300">
-                        {item.label === 'Areas We Serve' ? `Explore ${activeLink.label}` : 'Explore All Models'} <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
+                        {item.label === 'Areas We Serve' ? `Explore ${activeLink.label} Hub` : 'Explore All Models'} <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
                       </span>
                     </Link>
                   </div>

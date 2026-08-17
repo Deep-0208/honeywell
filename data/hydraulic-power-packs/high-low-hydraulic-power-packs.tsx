@@ -28,8 +28,8 @@ export const highLowPowerPackData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs/' },
     ],
     currentPage: 'High-Low Units',
     subtitle: 'ENERGY EFFICIENT PRODUCTION',
@@ -144,8 +144,8 @@ export const highLowPowerPackData: ProductPageData = {
   technicalSpecs: {
     heading: 'High-Low System Parameters',
     description: 'We engineer advanced dual-stage power units designed exclusively for high-speed industrial pressing and forming.',
-    primaryCta: { label: 'VIEW HYDRAULIC PRESS PACKS', href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press' },
-    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact' },
+    primaryCta: { label: 'VIEW HYDRAULIC PRESS PACKS', href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press/' },
+    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact-us/' },
     tableTitle: 'Dual-Stage Specifications',
     rows: [
       { parameter: 'Pump Configuration', value: 'Tandem Mounted (High-Flow Vane/Gear + Low-Flow Piston)' },
@@ -253,25 +253,25 @@ export const highLowPowerPackData: ProductPageData = {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Hydraulic Presses',
         description: 'Achieves rapid tooling approach while maintaining immense, energy-efficient high-pressure pressing force.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaCompressArrowsAlt className="w-6 h-6" />,
         name: 'Compression Molding',
         description: 'Significantly reduces cycle times while cutting electrical energy consumption during the long curing phase.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
         name: 'Deep Drawing Machines',
         description: 'Allows for rapid positioning followed by a smooth, highly controlled transition to high-pressure metal forming.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaHammer className="w-6 h-6" />,
         name: 'Heavy Forging Equipment',
         description: 'Delivers extreme high-tonnage squeezing force without overheating the hydraulic oil during continuous production.',
-        href: '/industries',
+        href: '#',
       },
     ],
   },
@@ -285,7 +285,7 @@ export const highLowPowerPackData: ProductPageData = {
         description: 'Heavy-duty hydraulic power units engineered specifically for industrial metal forming machines.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/hydraulic-power-pack-for-press.webp',
-        href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press',
+        href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press/',
         ctaText: 'View Details',
       },
       {
@@ -293,7 +293,7 @@ export const highLowPowerPackData: ProductPageData = {
         description: 'Nitrogen-charged systems that can be paired with High-Low circuits for ultimate energy savings.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/accumulator-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/accumulator-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/accumulator-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -301,7 +301,7 @@ export const highLowPowerPackData: ProductPageData = {
         description: 'Bespoke turnkey fluid power systems engineered specifically for complex OEM machinery.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/customized-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
     ],

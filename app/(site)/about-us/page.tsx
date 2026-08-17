@@ -562,10 +562,10 @@ export default function AboutUsPage() {
                 ))}
               </ul>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Button href="/contact-us" variant="primary" size="lg" rightIcon={<ArrowRight className="w-5 h-5" />}>
+                <Button href="/contact-us/" variant="primary" size="lg" rightIcon={<ArrowRight className="w-5 h-5" />}>
                   Contact Us
                 </Button>
-                <Button href="/manufacturing-facility" variant="outline" size="md">
+                <Button href="/manufacturing-facility/" variant="outline" size="md">
                   Tour Our Facility
                 </Button>
               </div>

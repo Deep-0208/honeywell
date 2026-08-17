@@ -123,7 +123,7 @@ export default function ProductsHubPage() {
                 <Button variant="primary" size="lg" href="/request-quote/#quote-form" rightIcon={<ArrowRight className="w-5 h-5" />} className="shadow-lg shadow-honeywell-red/20">
                   REQUEST A QUOTE
                 </Button>
-                <Button variant="outline" size="lg" href="/contact-us" className="border-honeywell-navy text-honeywell-navy hover:bg-honeywell-navy hover:text-white backdrop-blur-sm">
+                <Button variant="outline" size="lg" href="/contact-us/" className="border-honeywell-navy text-honeywell-navy hover:bg-honeywell-navy hover:text-white backdrop-blur-sm">
                   CONTACT ENGINEERING TEAM
                 </Button>
               </div>
@@ -177,7 +177,7 @@ export default function ProductsHubPage() {
               description="Heavy-duty linear actuators available in custom bore sizes from 40mm to 300mm. Variants: Double Acting, Single Acting, Flange Mounting, Clevis Mounting, Tie-Rod, Telescopic."
               category="Actuators"
               imageSrc="/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad-manufacturer.webp"
-              href="/products/hydraulic-cylinders"
+              href="/products/hydraulic-cylinders/"
               ctaText="EXPLORE HYDRAULIC CYLINDERS"
             />
             <ProductCard
@@ -185,7 +185,7 @@ export default function ProductsHubPage() {
               description="Pre-assembled, piped, and tested fluid power generation units. Variants: 3-Phase Industrial Units, Single-Phase Units, Dedicated Press Machine High-Low Circuits."
               category="Power Generation"
               imageSrc="/images/products/hero/multi-station-hydraulic-power-pack.webp"
-              href="/products/hydraulic-power-packs"
+              href="/products/hydraulic-power-packs/"
               ctaText="EXPLORE HYDRAULIC POWER PACKS"
             />
             <ProductCard
@@ -193,7 +193,7 @@ export default function ProductsHubPage() {
               description="Precision-machined logic blocks. Standard CETOP subplates and custom multi-station cartridge valve manifolds ensuring zero-leak fluid control."
               category="Fluid Control"
               imageSrc="/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp"
-              href="/products/manifold-blocks"
+              href="/products/manifold-blocks/"
               ctaText="EXPLORE MANIFOLD BLOCKS"
             />
           </div>
@@ -229,7 +229,7 @@ export default function ProductsHubPage() {
                     </p>
                   </div>
                   <div className="flex items-center md:items-end">
-                    <Link href="/products/hydraulic-cylinders" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
+                    <Link href="/products/hydraulic-cylinders/" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
                       <span className="relative z-10 flex items-center">
                         View Cylinders <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
                     </Link>
@@ -251,7 +251,7 @@ export default function ProductsHubPage() {
                     </p>
                   </div>
                   <div className="flex items-center md:items-end">
-                    <Link href="/products/hydraulic-power-packs" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
+                    <Link href="/products/hydraulic-power-packs/" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
                       <span className="relative z-10 flex items-center">
                         View Power Packs <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
                     </Link>
@@ -273,7 +273,7 @@ export default function ProductsHubPage() {
                     </p>
                   </div>
                   <div className="flex items-center md:items-end">
-                    <Link href="/products/manifold-blocks" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
+                    <Link href="/products/manifold-blocks/" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
                       <span className="relative z-10 flex items-center">
                         View Manifold Blocks <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
                     </Link>
@@ -406,8 +406,8 @@ export default function ProductsHubPage() {
                     Every hydraulic product we manufacture is backed by our strict Defect Warranty. In the event of an operational anomaly, our emergency engineering team dispatches replacement components or seal kits to minimize your production downtime.
                   </p>
                   <div className="mt-auto flex items-center text-honeywell-red font-medium font-body text-sm">
-                    <Link href="/warranty" className="flex items-center group-hover:gap-2 transition-all">
-                      View Warranty Details <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" />
+                    <Link href="/terms/" className="flex items-center group-hover:gap-2 transition-all">
+                      View Terms  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" />
                     </Link>
                   </div>
                 </CardContent>

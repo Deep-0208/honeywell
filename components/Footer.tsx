@@ -194,7 +194,7 @@ export default function Footer() {
 
               {/* Contact Us CTA */}
               <Link
-                href="/contact-us"
+                href="/contact-us/"
                 className="
                   inline-flex items-center gap-2 mt-6
                   px-5 py-2.5 rounded-sm
@@ -285,13 +285,13 @@ export default function Footer() {
               <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6">
                 <nav aria-label="Legal navigation" className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
                   <Link
-                    href="/privacy-policy"
+                    href="/privacy-policy/"
                     className="text-xs text-[#94A3B8] hover:text-white transition-colors font-body focus-visible:outline-none focus-visible:underline"
                   >
                     Privacy Policy
                   </Link>
                   <Link
-                    href="/terms"
+                    href="/terms/"
                     className="text-xs text-[#94A3B8] hover:text-white transition-colors font-body focus-visible:outline-none focus-visible:underline"
                   >
                     Terms

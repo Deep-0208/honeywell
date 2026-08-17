@@ -30,55 +30,55 @@ export const PILLAR_BLOCK_TYPES = [
   {
     title: "Single Phase Hydraulic Power Packs",
     description: "Compact 220V power units designed for seamless integration into residential workshops and small commercial facilities.",
-    href: "/products/hydraulic-power-packs/single-phase-hydraulic-power-packs",
+    href: "/products/hydraulic-power-packs/single-phase-hydraulic-power-packs/",
     image: "/images/products/hydraulic-power-packs/single-phase-hydraulic-power-pack.webp"
   },
   {
     title: "Three Phase Hydraulic Power Packs",
     description: "Heavy-duty 415V industrial power units engineered for continuous 24/7 factory automation and extreme-duty cycles.",
-    href: "/products/hydraulic-power-packs/three-phase-hydraulic-power-packs",
+    href: "/products/hydraulic-power-packs/three-phase-hydraulic-power-packs/",
     image: "/images/products/hydraulic-power-packs/three-phase-hydraulic-power-pack.webp"
   },
   {
     title: "Hydraulic Power Packs for Press",
     description: "Massive high-tonnage fluid power systems built to drive industrial stamping, forging, and deep drawing machines.",
-    href: "/products/hydraulic-power-packs/hydraulic-power-packs-for-press",
+    href: "/products/hydraulic-power-packs/hydraulic-power-packs-for-press/",
     image: "/images/products/hydraulic-power-packs/hydraulic-power-pack-for-press.webp"
   },
   {
     title: "High-Low Hydraulic Power Packs",
     description: "Advanced dual-pump circuits featuring automatic unloading valves to drastically cut cycle times and energy waste.",
-    href: "/products/hydraulic-power-packs/high-low-hydraulic-power-packs",
+    href: "/products/hydraulic-power-packs/high-low-hydraulic-power-packs/",
     image: "/images/products/hydraulic-power-packs/high-low-hydraulic-power-pack.webp"
   },
   {
     title: "Accumulator Hydraulic Power Packs",
     description: "Nitrogen-charged systems that store hydrostatic energy to assist during extreme peak flow demands without motor stall.",
-    href: "/products/hydraulic-power-packs/accumulator-hydraulic-power-packs",
+    href: "/products/hydraulic-power-packs/accumulator-hydraulic-power-packs/",
     image: "/images/products/hydraulic-power-packs/accumulator-hydraulic-power-pack.webp"
   },
   {
     title: "Multistation Hydraulic Power Packs",
     description: "Centralized power units engineered to independently drive multiple hydraulic circuits from a single massive reservoir.",
-    href: "/products/hydraulic-power-packs/multistation-hydraulic-power-packs",
+    href: "/products/hydraulic-power-packs/multistation-hydraulic-power-packs/",
     image: "/images/products/hydraulic-power-packs/multistation-hydraulic-power-pack.webp"
   },
   {
     title: "Customized Hydraulic Power Packs",
     description: "Turnkey bespoke fluid power solutions tailored to exact dimensional, thermal, and PLC-controlled parameters.",
-    href: "/products/hydraulic-power-packs/customized-hydraulic-power-packs",
+    href: "/products/hydraulic-power-packs/customized-hydraulic-power-packs/",
     image: "/images/products/hydraulic-power-packs/customized-hydraulic-power-pack.webp"
   },
   {
     title: "Hand Pump Hydraulic Power Packs",
     description: "Purely mechanical manual fluid power generation for emergency overrides, field service, and extreme environments.",
-    href: "/products/hydraulic-power-packs/hand-pump-operated-hydraulic-power-packs",
+    href: "/products/hydraulic-power-packs/hand-pump-operated-hydraulic-power-packs/",
     image: "/images/products/hydraulic-power-packs/hand-pump-operated-hydraulic-power-pack.webp"
   },
   {
     title: "Hand Lever Hydraulic Power Packs",
     description: "Motorized power units integrated with manual directional spool valves for precise operator-controlled lifting.",
-    href: "/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-packs",
+    href: "/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-packs/",
     image: "/images/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-pack.webp"
   }
 ];

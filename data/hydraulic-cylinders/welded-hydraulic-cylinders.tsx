@@ -146,31 +146,31 @@ export const weldedCylinderData: ProductPageData = {
         icon: <FaFire className="w-6 h-6" />,
         name: 'Steel & Metallurgy',
         description: 'Supplying extreme-pressure, heat-resistant cylinders for rolling mills and automatic gauge control (AGC).',
-        href: '/industries/welded-hydraulic-cylinder-manufacturer-honeywell'
+        href: '#'
       },
       {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Heavy Forging',
         description: 'Delivering massive, thick-walled pressing cylinders designed to survive brutal metal-stamping shock loads.',
-        href: '/industries/heavy-forging'
+        href: '#'
       },
       {
         icon: <FaHardHat className="w-6 h-6" />,
         name: 'Construction Equipment',
         description: 'Engineering rugged, weather-resistant boom, stick, and bucket cylinders for excavators and loaders.',
-        href: '/industries/construction-equipment'
+        href: '#'
       },
       {
         icon: <FaAnchor className="w-6 h-6" />,
         name: 'Marine Engineering',
         description: 'Manufacturing corrosion-resistant, high-tensile cylinders for ship-breaking shears and marine winches.',
-        href: '/industries/marine-engineering'
+        href: '#'
       },
       {
         icon: <FaBox className="w-6 h-6" />,
         name: 'Material Handling',
         description: 'Providing fail-safe, heavy-duty lifting cylinders for multi-ton gantry cranes and goods elevators.',
-        href: '/industries/material-handling'
+        href: '#'
       },
     ],
   },

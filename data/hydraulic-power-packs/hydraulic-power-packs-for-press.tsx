@@ -28,8 +28,8 @@ export const pressPowerPackData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs/' },
     ],
     currentPage: 'Press Units',
     subtitle: 'HIGH-PRESSURE PRESS POWER UNITS',
@@ -55,13 +55,13 @@ export const pressPowerPackData: ProductPageData = {
     content: (
       <div className="space-y-6">
         <p>
-          A <strong className="text-honeywell-navy">Hydraulic Power Pack for Press</strong> is a highly specialized fluid power system designed to drive the massive <a href="/products/hydraulic-cylinders" className="text-honeywell-red font-semibold hover:underline">Hydraulic Cylinders</a> found on industrial press machines.
+          A <strong className="text-honeywell-navy">Hydraulic Power Pack for Press</strong> is a highly specialized fluid power system designed to drive the massive <a href="/products/hydraulic-cylinders/" className="text-honeywell-red font-semibold hover:underline">Hydraulic Cylinders</a> found on industrial press machines.
         </p>
         <p>
           Unlike standard power units designed for simple lifting or continuous spinning, press power packs must endure extreme, violent cyclic loading. A typical press cycle involves rapid approach (high flow/low pressure), sudden impact and forming (low flow/extreme pressure), pressure holding (zero flow/max pressure), and rapid retraction.
         </p>
         <p>
-          To achieve this without destroying the pump or overheating the fluid, we engineer these units with advanced high-low tandem pumps, pilot-operated check valves for leak-free holding, and specialized heavy-duty <a href="/products/manifold-blocks" className="text-honeywell-navy underline hover:text-honeywell-red">Hydraulic Manifold Blocks</a> built to withstand continuous hydraulic shock.
+          To achieve this without destroying the pump or overheating the fluid, we engineer these units with advanced high-low tandem pumps, pilot-operated check valves for leak-free holding, and specialized heavy-duty <a href="/products/manifold-blocks/" className="text-honeywell-navy underline hover:text-honeywell-red">Hydraulic Manifold Blocks</a> built to withstand continuous hydraulic shock.
         </p>
 
         {/* Typical System Configuration Flow */}
@@ -132,8 +132,8 @@ export const pressPowerPackData: ProductPageData = {
   technicalSpecs: {
     heading: 'Press Capability Parameters',
     description: 'We engineer absolute tonnage stability across all press variants.',
-    primaryCta: { label: 'VIEW CYLINDERS', href: '/products/hydraulic-cylinders' },
-    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact' },
+    primaryCta: { label: 'VIEW CYLINDERS', href: '/products/hydraulic-cylinders/' },
+    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact-us/' },
     tableTitle: 'Industrial Forming Specifications',
     rows: [
       { parameter: 'Target Applications', value: 'Deep Drawing, Compression Molding, Forging, Stamping' },
@@ -241,19 +241,19 @@ export const pressPowerPackData: ProductPageData = {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Deep Drawing Presses',
         description: 'Requiring massive holding forces and cushion circuits for precise metal forming.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
         name: 'Compression Molding',
         description: 'Used for rubber and composites, requiring long pressure-holding durations without pump burnout.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaTools className="w-6 h-6" />,
         name: 'Metal Stamping & Forging',
         description: 'Operating in extreme heat environments requiring rapid cycle times and massive shock resistance.',
-        href: '/industries',
+        href: '#',
       },
     ],
   },
@@ -267,7 +267,7 @@ export const pressPowerPackData: ProductPageData = {
         description: 'Bespoke turnkey fluid power systems engineered specifically for complex OEM machinery.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/customized-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -275,7 +275,7 @@ export const pressPowerPackData: ProductPageData = {
         description: 'Heavy-duty 415V continuous duty power units for standard industrial manufacturing.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/three-phase-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/three-phase-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/three-phase-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -283,7 +283,7 @@ export const pressPowerPackData: ProductPageData = {
         description: 'Heavy-duty bespoke hydraulic actuators designed to handle extreme pressing tonnage.',
         category: 'Hydraulic Components',
         imageSrc: '/images/products/hydraulic-cylinders/custom-hydraulic-cylinder.webp',
-        href: '/products/hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/',
         ctaText: 'View Details',
       },
     ],

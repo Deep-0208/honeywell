@@ -40,7 +40,7 @@ export function HydraulicPowerPackHero() {
           {/* Content */}
           <div className="flex flex-col items-start z-10">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-honeywell-navy leading-tight mb-6">
-              Hydraulic Power Pack Manufacturer in Gujarat, India
+              Hydraulic Power Pack Manufacturer in Gujarat
             </h1>
             
             <p className="text-lg md:text-xl text-brand-steelGray font-body mb-8 max-w-xl leading-relaxed text-justify">
@@ -52,14 +52,10 @@ export function HydraulicPowerPackHero() {
               <Button href="/request-quote/#quote-form" size="lg" variant="primary" className="w-full sm:w-auto font-bold tracking-wide">
                 REQUEST QUOTE <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button href="#specifications" size="lg" variant="outline" className="w-full sm:w-auto">
+              <Button href="#technical-specifications" size="lg" variant="outline" className="w-full sm:w-auto">
                 VIEW SPECIFICATIONS <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
-
-
-
-
           </div>
 
           {/* Image Column */}

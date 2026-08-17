@@ -21,8 +21,8 @@ export const ng16ManifoldBlocksData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Manifold Blocks', href: '/products/manifold-blocks' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Manifold Blocks', href: '/products/manifold-blocks/' },
     ],
     currentPage: '10 Size Manifold Blocks',
     subtitle: 'NG16 / 10-Size Manifolds',
@@ -34,7 +34,7 @@ export const ng16ManifoldBlocksData: ProductPageData = {
     },
     secondaryCta: {
       label: 'DOWNLOAD DATASHEET',
-      href: '/resources/downloads/',
+      href: '/request-quote/#quote-form',
     },
     image: {
       src: '/images/products/manifold-blocks/10-size-manifold-block-ng16.webp',

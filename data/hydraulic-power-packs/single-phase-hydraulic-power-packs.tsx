@@ -28,8 +28,8 @@ export const singlePhasePowerPackData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs/' },
     ],
     currentPage: 'Single Phase',
     subtitle: 'COMMERCIAL FLUID POWER',
@@ -59,13 +59,13 @@ export const singlePhasePowerPackData: ProductPageData = {
         </p>
         <p>
           A <strong className="text-honeywell-navy">Single Phase Hydraulic Power Pack</strong> is a self-contained fluid generation system designed specifically to operate on standard 220V/240V alternating current (AC). Unlike{' '}
-          <a href="/products/hydraulic-power-packs/three-phase-hydraulic-power-packs" className="text-honeywell-red font-semibold hover:underline">
+          <a href="/products/hydraulic-power-packs/three-phase-hydraulic-power-packs/" className="text-honeywell-red font-semibold hover:underline">
             3-phase industrial power packs
           </a>{' '}
           used in continuous heavy manufacturing, single-phase units are engineered for intermittent duty cycles in environments where only standard electrical wall power is accessible.
         </p>
         <p>
-          As a specialized single phase hydraulic power unit supplier, we construct these systems around specialized AC motors featuring run and start capacitors. These components allow the motor to generate sufficient starting torque to rotate the hydraulic gear pump and force oil through the <a href="/products/manifold-blocks" className="text-honeywell-navy underline hover:text-honeywell-red">manifold block</a> under load, utilizing only a single electrical phase.
+          As a specialized single phase hydraulic power unit supplier, we construct these systems around specialized AC motors featuring run and start capacitors. These components allow the motor to generate sufficient starting torque to rotate the hydraulic gear pump and force oil through the <a href="/products/manifold-blocks/" className="text-honeywell-navy underline hover:text-honeywell-red">manifold block</a> under load, utilizing only a single electrical phase.
         </p>
       </>
     ),
@@ -114,8 +114,8 @@ export const singlePhasePowerPackData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications Framework',
     description: 'Designed for robust commercial fluid power without the need for 3-phase grid upgrades.',
-    primaryCta: { label: 'DOWNLOAD CAD SPECS', href: '/resources/downloads' },
-    secondaryCta: { label: 'VIEW 3-PHASE UNITS', href: '/products/hydraulic-power-packs/three-phase-hydraulic-power-packs' },
+    primaryCta: { label: 'DOWNLOAD CAD SPECS', href: '/request-quote/#quote-form' },
+    secondaryCta: { label: 'VIEW 3-PHASE UNITS', href: '/products/hydraulic-power-packs/three-phase-hydraulic-power-packs/' },
     tableTitle: 'Single Phase Capability Range',
     rows: [
       { parameter: 'Electrical Input', value: '220V / 240V AC (Single Phase, 50Hz/60Hz)' },
@@ -138,25 +138,25 @@ export const singlePhasePowerPackData: ProductPageData = {
         icon: <FaCar className="w-6 h-6" />,
         name: 'Automotive Service & Repair',
         description: 'Powering 2-post lifts, 4-post lifts, tire changers, and motorcycle lifts for independent mechanic garages.',
-        href: '/industries/automotive',
+        href: '#',
       },
       {
         icon: <FaWarehouse className="w-6 h-6" />,
         name: 'Retail & Supermarkets',
         description: 'Powering the logistical backend of stores, from dock levelers to small balers and waste compactors.',
-        href: '/industries/material-handling',
+        href: '#',
       },
       {
         icon: <FaBuilding className="w-6 h-6" />,
         name: 'Residential & Accessibility',
         description: 'Driving safe, quiet home elevators and ADA-compliant wheelchair accessibility lifts.',
-        href: '/industries/infrastructure-projects',
+        href: '#',
       },
       {
         icon: <FaTools className="w-6 h-6" />,
         name: 'Light Manufacturing',
         description: 'Serving small fabrication shops operating localized stamping or bearing-pressing machines without 3-phase grid access.',
-        href: '/industries/special-purpose-machinery',
+        href: '#',
       },
     ],
   },
@@ -244,7 +244,7 @@ export const singlePhasePowerPackData: ProductPageData = {
         description: 'Continuous duty cycle 415V industrial power units for heavy manufacturing and automated factories.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/three-phase-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/three-phase-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/three-phase-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -252,7 +252,7 @@ export const singlePhasePowerPackData: ProductPageData = {
         description: 'High-tonnage fluid power systems engineered for industrial presses, forging, and metal forming.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/hydraulic-power-pack-for-press.webp',
-        href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press',
+        href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press/',
         ctaText: 'View Details',
       },
       {
@@ -260,7 +260,7 @@ export const singlePhasePowerPackData: ProductPageData = {
         description: 'Bespoke turnkey fluid power systems engineered specifically for complex OEM machinery.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/custom-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
     ],

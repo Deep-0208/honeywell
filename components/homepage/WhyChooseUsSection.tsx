@@ -76,10 +76,9 @@ export function WhyChooseUsSection() {
             Request A Quote
           </Button>
           <Button
-            href="/contact-us"
+            href="/contact-us/"
             variant="outline"
             size="lg"
-            className="bg-white hover:bg-slate-50"
             rightIcon={<ArrowRight className="w-5 h-5" />}
           >
             Speak With Engineers

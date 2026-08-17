@@ -282,7 +282,7 @@ export default function ManufacturingFacilityPage() {
           </div>
           <p className="mt-8 text-center text-sm text-brand-steelGray font-body">
             Want to see our facility in person?{' '}
-            <Link href="/contact-us" className="inline-block text-honeywell-red font-semibold transition-transform duration-150 ease-out hover:underline underline-offset-4 active:scale-[0.97]">
+            <Link href="/contact-us/" className="inline-block text-honeywell-red font-semibold transition-transform duration-150 ease-out hover:underline underline-offset-4 active:scale-[0.97]">
               Schedule a facility visit →
             </Link>
           </p>

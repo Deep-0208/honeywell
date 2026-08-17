@@ -28,8 +28,8 @@ export const handLeverPowerPackData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs/' },
     ],
     currentPage: 'Hand Lever Units',
     subtitle: 'MANUAL HYDRAULIC CONTROL',
@@ -55,7 +55,7 @@ export const handLeverPowerPackData: ProductPageData = {
     content: (
       <div className="space-y-6">
         <p>
-          Before discussing the power pack itself, we must understand the core of its operation: the manual directional control valve. While the electric motor still spins the pump to generate fluid flow, the actual control of the <a href="/products/hydraulic-cylinders" className="text-honeywell-red font-semibold hover:underline">Hydraulic Cylinders</a> is purely mechanical. Instead of relying on a computer to send an electrical signal to a magnetic solenoid, an operator physically pulls or pushes a steel lever to direct the oil.
+          Before discussing the power pack itself, we must understand the core of its operation: the manual directional control valve. While the electric motor still spins the pump to generate fluid flow, the actual control of the <a href="/products/hydraulic-cylinders/" className="text-honeywell-red font-semibold hover:underline">Hydraulic Cylinders</a> is purely mechanical. Instead of relying on a computer to send an electrical signal to a magnetic solenoid, an operator physically pulls or pushes a steel lever to direct the oil.
         </p>
         <p>
           The hand lever is mechanically linked to an internal steel cylinder called a "spool." When the operator pulls the lever, they are physically sliding the spool inside the valve body. This movement uncovers drilled ports, allowing pressurized oil to flow to either the extend or retract port of the cylinder.
@@ -139,8 +139,8 @@ export const handLeverPowerPackData: ProductPageData = {
   technicalSpecs: {
     heading: 'Manual System Parameters',
     description: 'We engineer robust mechanical power units designed to survive the harshest industrial conditions.',
-    primaryCta: { label: 'VIEW ALL POWER PACKS', href: '/products/hydraulic-power-packs' },
-    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact' },
+    primaryCta: { label: 'VIEW ALL POWER PACKS', href: '/products/hydraulic-power-packs/' },
+    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact-us/' },
     tableTitle: 'Valve & Control Specifications',
     rows: [
       { parameter: 'Valve Construction', value: 'Cast Iron Monoblock or Sectional Slices' },
@@ -248,19 +248,19 @@ export const handLeverPowerPackData: ProductPageData = {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Hydraulic Workshop Presses',
         description: 'Operator can "feel" the pressure and precisely feather the pressing speed during delicate operations.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaTractor className="w-6 h-6" />,
         name: 'Agricultural Implements',
         description: 'Rugged, weather-proof operation without relying on fragile electrical sensors or wiring harnesses.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
         name: 'Heavy Machinery Maintenance',
         description: 'Easy field servicing. If a manual valve breaks, a mechanic can fix it with a wrench, no laptop required.',
-        href: '/industries',
+        href: '#',
       },
     ],
   },
@@ -274,7 +274,7 @@ export const handLeverPowerPackData: ProductPageData = {
         description: 'Compact hydraulic power units designed to operate entirely on standard 220V household electricity.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/single-phase-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/single-phase-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/single-phase-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -282,7 +282,7 @@ export const handLeverPowerPackData: ProductPageData = {
         description: 'Bespoke turnkey fluid power systems engineered specifically for complex OEM machinery.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/customized-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -290,7 +290,7 @@ export const handLeverPowerPackData: ProductPageData = {
         description: 'Heavy-duty actuators that pair perfectly with our manual directional control valves.',
         category: 'Hydraulic Components',
         imageSrc: '/images/products/cylinders/tie-rod-hydraulic-cylinder.webp',
-        href: '/products/hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/',
         ctaText: 'View Details',
       },
     ],

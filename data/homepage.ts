@@ -318,7 +318,7 @@ export const homepageLocations: HomepageLocation[] = [
     description:
       'Our manufacturing headquarters in Gujarat. Factory-direct supply of high-performance hydraulic cylinders and power packs.',
     industries: ['Injection Moulding', 'Automotive', 'Steel', 'Textile'],
-    href: '/locations/gujarat-facility/',
+    href: '/locations/gujarat/',
     ctaText: 'View Gujarat Facility',
   },
   {
@@ -330,12 +330,12 @@ export const homepageLocations: HomepageLocation[] = [
     ctaText: 'Hydraulic Supply in Maharashtra',
   },
   {
-    city: 'Indore',
+    city: 'Madhya Pradesh',
     description:
-      'Serving Pithampur, Sanwer Road, and major industrial hubs with precision hydraulic cylinders and system solutions.',
+      'Serving Indore, Pithampur, Sanwer Road, and major industrial hubs with precision hydraulic cylinders and system solutions.',
     industries: ['Auto Parts', 'Pharmaceuticals', 'Food Processing'],
-    href: '/locations/indore/',
-    ctaText: 'Hydraulic Supply in Indore',
+    href: '/locations/madhya-pradesh/',
+    ctaText: 'Hydraulic Supply in MP',
   },
   {
     city: 'West Bengal',
@@ -358,7 +358,7 @@ export const homepageLocations: HomepageLocation[] = [
     description:
       'Nationwide delivery of hydraulic equipment to all major industrial cities across India.',
     industries: ['OEM Supply', 'Project Orders', 'Export'],
-    href: '/locations/india/',
+    href: '/locations/',
     ctaText: 'India-Wide Supply',
   },
 ];
@@ -462,19 +462,19 @@ export const blogPreviews: BlogPreview[] = [
     title: 'How to Choose the Right Hydraulic Cylinder Mounting Style',
     date: 'March 15, 2026',
     excerpt: 'Explore the different mounting options like clevis, flange, and trunnion, and learn which is best suited for your specific application.',
-    href: '/blog/hydraulic-cylinder-mounting-guide/',
+    href: '/products/hydraulic-cylinders/',
   },
   {
     title: 'Preventive Maintenance for Hydraulic Power Packs',
     date: 'February 28, 2026',
     excerpt: 'Extend the life of your power pack and prevent costly downtime with our comprehensive preventive maintenance checklist.',
-    href: '/blog/power-pack-preventive-maintenance/',
+    href: '/products/hydraulic-power-packs/',
   },
   {
     title: 'Understanding Single vs. Double Acting Cylinders',
     date: 'January 10, 2026',
     excerpt: 'A deep dive into the mechanical differences, typical applications, and selection criteria for single and double acting cylinders.',
-    href: '/blog/single-vs-double-acting-cylinders/',
+    href: '/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/',
   },
 ];
 

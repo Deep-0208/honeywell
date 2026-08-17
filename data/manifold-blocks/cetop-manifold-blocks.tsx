@@ -21,8 +21,8 @@ export const cetopManifoldBlocksData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Manifold Blocks', href: '/products/manifold-blocks' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Manifold Blocks', href: '/products/manifold-blocks/' },
     ],
     currentPage: 'Cetop Manifold Blocks',
     subtitle: 'CETOP Manifold Blocks',
@@ -34,7 +34,7 @@ export const cetopManifoldBlocksData: ProductPageData = {
     },
     secondaryCta: {
       label: 'DOWNLOAD DRAWINGS',
-      href: '/resources/downloads/',
+      href: '/request-quote/#quote-form',
     },
     image: {
       src: '/images/products/manifold-blocks/cetop-manifold-block-iso-4401.webp',

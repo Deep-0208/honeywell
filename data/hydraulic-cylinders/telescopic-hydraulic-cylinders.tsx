@@ -154,25 +154,25 @@ export const telescopicCylinderData: ProductPageData = {
         icon: <Truck className="w-6 h-6" />,
         name: 'Transportation & Logistics',
         description: 'Supplying high-volume, multi-stage cylinders for heavy commercial tipper trucks and bulk transport trailers.',
-        href: '/industries/telescopic-hydraulic-cylinder-manufacturer-honeywell'
+        href: '#'
       },
       {
         icon: <HardHat className="w-6 h-6" />,
         name: 'Construction',
         description: 'Delivering robust lifting cylinders for massive earth-moving dump trucks and off-highway haulers operating in harsh environments.',
-        href: '/industries/construction'
+        href: '#'
       },
       {
         icon: <Trash2 className="w-6 h-6" />,
         name: 'Waste Management',
         description: 'Engineering compact, double-acting telescopic cylinders for refuse collection vehicles and garbage packer blades.',
-        href: '/industries/waste-management'
+        href: '#'
       },
       {
         icon: <Building2 className="w-6 h-6" />,
         name: 'Municipal Equipment',
         description: 'Manufacturing highly reliable actuators for municipal road sweepers, snowplows, and specialized utility trucks.',
-        href: '/industries/municipal-equipment'
+        href: '#'
       },
     ],
   },

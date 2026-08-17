@@ -45,7 +45,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const variants = {
       primary: 'bg-honeywell-red text-white hover:bg-[#C41220] focus-visible:ring-honeywell-red shadow-[0_2px_8px_-2px_rgba(227,27,35,0.3)] hover:shadow-[0_6px_20px_-4px_rgba(227,27,35,0.4)]',
       secondary: 'bg-honeywell-navy text-white hover:bg-[#0a154a] focus-visible:ring-honeywell-navy shadow-subtle hover:shadow-elevated',
-      outline: 'bg-transparent border-2 border-honeywell-navy text-honeywell-navy hover:bg-honeywell-navy hover:text-white focus-visible:ring-honeywell-navy',
+      outline: 'bg-white border-2 border-honeywell-navy text-honeywell-navy hover:bg-honeywell-navy hover:text-white focus-visible:ring-honeywell-navy shadow-xs',
       ghost: 'bg-transparent text-honeywell-navy hover:bg-brand-lightSurface focus-visible:ring-honeywell-navy',
       link: 'bg-transparent text-honeywell-red hover:underline underline-offset-4 focus-visible:ring-honeywell-red px-0 py-0',
     };

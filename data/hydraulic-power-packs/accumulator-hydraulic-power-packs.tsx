@@ -28,8 +28,8 @@ export const accumulatorPowerPackData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs/' },
     ],
     currentPage: 'Accumulator Units',
     subtitle: 'STORED HYDRAULIC ENERGY',
@@ -61,7 +61,7 @@ export const accumulatorPowerPackData: ProductPageData = {
           Inside a steel pressure vessel, a flexible bladder separates the nitrogen gas from the oil. When the pump forces oil into the accumulator, the nitrogen gas compresses, storing kinetic energy like a tightly coiled spring. When the machine demands sudden flow, the compressed nitrogen violently expands, instantly pushing the stored oil back into the circuit.
         </p>
         <p>
-          An <strong className="text-honeywell-navy">Accumulator Hydraulic Power Pack</strong> integrates these pressure vessels directly into the hydraulic unit's <a href="/products/manifold-blocks" className="text-honeywell-red font-semibold hover:underline">Manifold Block</a>. The pump's primary job becomes "charging" the accumulator during idle times. When sudden, massive flow is demanded, the accumulator discharges instantly, providing flow rates far exceeding the pump's physical capacity.
+          An <strong className="text-honeywell-navy">Accumulator Hydraulic Power Pack</strong> integrates these pressure vessels directly into the hydraulic unit's <a href="/products/manifold-blocks/" className="text-honeywell-red font-semibold hover:underline">Manifold Block</a>. The pump's primary job becomes "charging" the accumulator during idle times. When sudden, massive flow is demanded, the accumulator discharges instantly, providing flow rates far exceeding the pump's physical capacity.
         </p>
 
         {/* Typical System Configuration Flow */}
@@ -130,8 +130,8 @@ export const accumulatorPowerPackData: ProductPageData = {
   technicalSpecs: {
     heading: 'Accumulator System Parameters',
     description: 'We engineer complex stored-energy systems with rigorous safety integrations.',
-    primaryCta: { label: 'VIEW MULTISTATION UNITS', href: '/products/hydraulic-power-packs/multistation-hydraulic-power-packs' },
-    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact' },
+    primaryCta: { label: 'VIEW MULTISTATION UNITS', href: '/products/hydraulic-power-packs/multistation-hydraulic-power-packs/' },
+    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact-us/' },
     tableTitle: 'Pressure Vessel Specifications',
     rows: [
       { parameter: 'Accumulator Types', value: 'Bladder (Rapid response) / Piston (High volume)' },
@@ -239,19 +239,19 @@ export const accumulatorPowerPackData: ProductPageData = {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Hydraulic Presses',
         description: 'Maintains absolute holding pressure for hours without the pump running, preventing oil heating.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
         name: 'Injection Molding',
         description: 'Supplies sudden, massive peak flow for ultra-rapid mold closing, drastically reducing cycle times.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaTractor className="w-6 h-6" />,
         name: 'Mobile Hydraulics & Safety',
         description: 'Provides emergency steering or braking operation if the primary engine completely fails.',
-        href: '/industries',
+        href: '#',
       },
     ],
   },
@@ -265,7 +265,7 @@ export const accumulatorPowerPackData: ProductPageData = {
         description: 'Extreme high-pressure cyclic duty power units engineered for industrial metal forming.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/hydraulic-power-pack-for-press.webp',
-        href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press',
+        href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press/',
         ctaText: 'View Details',
       },
       {
@@ -273,7 +273,7 @@ export const accumulatorPowerPackData: ProductPageData = {
         description: 'Centralized power units designed to drive multiple independent hydraulic circuits simultaneously.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/multistation-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/multistation-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/multistation-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -281,7 +281,7 @@ export const accumulatorPowerPackData: ProductPageData = {
         description: 'Custom CNC-machined blocks that consolidate complex valve logic into a single unit.',
         category: 'Hydraulic Components',
         imageSrc: '/images/products/manifold-blocks/hydraulic-manifold-block.webp',
-        href: '/products/manifold-blocks',
+        href: '/products/manifold-blocks/',
         ctaText: 'View Details',
       },
     ],

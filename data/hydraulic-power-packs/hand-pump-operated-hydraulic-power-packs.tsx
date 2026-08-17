@@ -28,8 +28,8 @@ export const handPumpPowerPackData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs/' },
     ],
     currentPage: 'Hand Pump Units',
     subtitle: 'PORTABLE PRESSURE GENERATION',
@@ -58,7 +58,7 @@ export const handPumpPowerPackData: ProductPageData = {
           Unlike standard units that utilize an electric motor spinning a gear pump, a hand pump unit generates flow and pressure strictly through the physical movement of a steel lever (the pump handle). Because the operator acts as both the "motor" and the "pump," these units operate completely independently of any electrical or diesel power source.
         </p>
         <p>
-          At the core of the unit is a precision-machined steel cylinder (the pump body) and a moving plunger (the piston). On the <strong>upstroke</strong>, the piston creates a vacuum, opening the Inlet Check Valve and pulling oil from the reservoir. On the <strong>downstroke</strong>, the Inlet Valve snaps shut, the Outlet Check Valve opens, and pressurized oil is driven into the <a href="/products/hydraulic-cylinders" className="text-honeywell-red font-semibold hover:underline">Hydraulic Cylinder</a>.
+          At the core of the unit is a precision-machined steel cylinder (the pump body) and a moving plunger (the piston). On the <strong>upstroke</strong>, the piston creates a vacuum, opening the Inlet Check Valve and pulling oil from the reservoir. On the <strong>downstroke</strong>, the Inlet Valve snaps shut, the Outlet Check Valve opens, and pressurized oil is driven into the <a href="/products/hydraulic-cylinders/" className="text-honeywell-red font-semibold hover:underline">Hydraulic Cylinder</a>.
         </p>
         <p>
           By utilizing a very small diameter pump piston and a long mechanical handle, an operator exerting only 30 kg of physical force can easily generate over 700 Bar (10,000 PSI) of hydraulic pressure. 
@@ -130,8 +130,8 @@ export const handPumpPowerPackData: ProductPageData = {
   technicalSpecs: {
     heading: 'Hand Pump System Parameters',
     description: 'We engineer precision-machined mechanical pumps built to survive drop-shocks and extreme environments.',
-    primaryCta: { label: 'VIEW HAND LEVER UNITS', href: '/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-packs' },
-    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact' },
+    primaryCta: { label: 'VIEW HAND LEVER UNITS', href: '/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-packs/' },
+    secondaryCta: { label: 'CONTACT ENGINEERING', href: '/contact-us/' },
     tableTitle: 'Pump & Cylinder Specifications',
     rows: [
       { parameter: 'Pump Action', value: 'Single-Acting (Downstroke only) or Double-Acting' },
@@ -239,19 +239,19 @@ export const handPumpPowerPackData: ProductPageData = {
         icon: <FaWrench className="w-6 h-6" />,
         name: 'Hydraulic Bolt Tensioning',
         description: 'Generates ultra-high pressure (up to 1500 Bar) in confined spaces with pinpoint manual accuracy.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaTools className="w-6 h-6" />,
         name: 'Hydraulic Jacks (Heavy Lifting)',
         description: 'Requires absolutely no electrical power; perfect for remote bridge lifting or construction sites.',
-        href: '/industries',
+        href: '#',
       },
       {
         icon: <FaAmbulance className="w-6 h-6" />,
         name: 'Rescue Equipment (Jaws of Life)',
         description: 'Guaranteed emergency operation in remote locations where generators or batteries fail.',
-        href: '/industries',
+        href: '#',
       },
     ],
   },
@@ -265,7 +265,7 @@ export const handPumpPowerPackData: ProductPageData = {
         description: 'Electric pump units featuring rugged mechanical spool valves for reliable operator control.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -273,7 +273,7 @@ export const handPumpPowerPackData: ProductPageData = {
         description: 'Nitrogen-charged systems that allow small electric pumps to deliver massive peak flow.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/accumulator-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/accumulator-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/accumulator-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
       {
@@ -281,7 +281,7 @@ export const handPumpPowerPackData: ProductPageData = {
         description: 'Compact hydraulic power units designed to operate entirely on standard 220V household electricity.',
         category: 'Hydraulic Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/single-phase-hydraulic-power-pack.webp',
-        href: '/products/hydraulic-power-packs/single-phase-hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/single-phase-hydraulic-power-packs/',
         ctaText: 'View Details',
       },
     ],
