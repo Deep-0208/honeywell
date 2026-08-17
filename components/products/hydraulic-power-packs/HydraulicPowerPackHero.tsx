@@ -62,19 +62,17 @@ export function HydraulicPowerPackHero() {
 
           </div>
 
-          {/* Image */}
-          <div className="relative z-10 w-full group">
-            <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-2xl" />
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white group-hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] transition-shadow duration-700">
-              <Image 
-                src="/images/products/hydraulic-power-packs/hydraulic-power-pack-manufacturer.webp"
-                alt="Industrial Hydraulic Power Pack Manufacturer in Ahmedabad"
-                fill
-                priority fetchPriority="high" decoding="sync" quality={85}
-                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
+          {/* Image Column */}
+          <div className="relative w-full aspect-[4/3] bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
+            <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
+            <Image 
+              src="/images/products/hydraulic-power-packs/hydraulic-power-pack.webp"
+              alt="Industrial Hydraulic Power Pack Manufacturer in Ahmedabad"
+              fill
+              priority fetchPriority="high" decoding="sync" quality={85}
+              className="object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
 
         </div>
