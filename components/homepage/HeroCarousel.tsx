@@ -31,11 +31,12 @@ export function HeroCarousel({ images }: HeroCarouselProps) {
             title={item.title}
             fill
             priority={index === 0}
-            fetchPriority={index === 0 ? 'high' : 'auto'}
-            decoding="sync"
+            fetchPriority={index === 0 ? 'high' : 'low'}
+            loading={index === 0 ? 'eager' : 'lazy'}
+            decoding={index === 0 ? 'sync' : 'async'}
             quality={85}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-            className="object-contain p-2 pb-16 sm:p-4 sm:pb-20 lg:p-4 lg:pb-20 w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
+            className="object-contain w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
           />
           {/* Product label overlay */}
           <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md border border-slate-200/80 rounded-xl px-4 py-3 shadow-md">

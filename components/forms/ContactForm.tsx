@@ -51,8 +51,8 @@ function validate(d: ContactFormPayload): Errors {
   } else if (!/^[+\d\s\-()]{7,}$/.test(d.phone)) {
     e.phone = 'Please enter a valid phone number.';
   }
-  if (!d.message.trim() || d.message.trim().length < 10) {
-    e.message = 'Please say a little more — at least a sentence or two.';
+  if (!d.message.trim()) {
+    e.message = 'Please enter your message.';
   }
   return e;
 }

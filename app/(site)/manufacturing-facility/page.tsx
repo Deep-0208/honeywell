@@ -25,7 +25,6 @@ import {
   ShieldCheck,
   Gauge,
   Camera,
-  Users,
 } from 'lucide-react';
 
 // ─────────────────────────────────────────────────────────────────────────────

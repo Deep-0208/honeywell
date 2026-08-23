@@ -11,14 +11,14 @@ import { Poppins, Roboto } from 'next/font/google';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['300', '400', '500', '600', '700', '800'],
   variable: '--font-poppins',
   display: 'swap',
 });
 
 const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '700', '900'],
+  weight: ['400', '500', '700'],
   variable: '--font-roboto',
   display: 'swap',
 });
@@ -99,12 +99,11 @@ export default function RootLayout({
       <html
       lang="en-IN"
       className={`scroll-smooth poppins-regular ${poppins.variable} ${roboto.variable}`}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Fonts are now handled by next/font/google */}
+        {/* Fonts are self-hosted by next/font/google */}
       </head>
       <body className="antialiased flex min-h-screen flex-col bg-white selection:bg-[#B2D4FF] selection:text-black">
         {/* Global JSON-LD Schema */}

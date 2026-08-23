@@ -109,9 +109,7 @@ function validate(data: QuoteFormPayload): Errors {
   }
   if (!data.productInterest) errors.productInterest = 'Please select what you\'re looking for.';
   if (!data.requirementDescription.trim()) {
-    errors.requirementDescription = 'Please describe what you need — even a few words help.';
-  } else if (data.requirementDescription.trim().length < 10) {
-    errors.requirementDescription = 'Please add a bit more detail (at least 10 characters).';
+    errors.requirementDescription = 'Please describe what you need.';
   }
   return errors;
 }

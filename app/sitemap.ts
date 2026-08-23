@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/about-us/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/contact-us/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/manufacturing-facility/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/gallery/', changeFrequency: 'weekly', priority: 0.8 },
     
     // ── Conversion Pages ──
     { path: '/request-quote/', changeFrequency: 'monthly', priority: 0.9 },

@@ -258,7 +258,7 @@ export const threePhasePowerPackData: ProductPageData = {
         title: 'Custom Hydraulic Power Packs',
         description: 'Bespoke turnkey fluid power systems engineered specifically for complex OEM machinery.',
         category: 'Hydraulic Power Packs',
-        imageSrc: '/images/products/hydraulic-power-packs/custom-hydraulic-power-pack.webp',
+        imageSrc: '/images/products/hydraulic-power-packs/customized-hydraulic-power-pack.webp',
         href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs/',
         ctaText: 'View Details',
       },

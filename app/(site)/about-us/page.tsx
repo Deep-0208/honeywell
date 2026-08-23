@@ -32,10 +32,6 @@ import {
   ShieldCheck,
   HeartPulse,
   CheckCircle2,
-  ChevronRight,
-  Car,
-  Tractor,
-  Droplet,
 } from 'lucide-react';
 
 /* Icon mapping for industries */

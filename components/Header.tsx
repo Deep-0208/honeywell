@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef, Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -40,6 +40,8 @@ export default function Header({ navigation }: HeaderProps) {
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
 
+  const isScrolledRef = useRef(false);
+
   /* ── Scroll detection ── */
   useEffect(() => {
     let ticking = false;
@@ -48,11 +50,11 @@ export default function Header({ navigation }: HeaderProps) {
       if (!ticking) {
         window.requestAnimationFrame(() => {
           const currentScrollY = window.scrollY;
-          setIsScrolled((prev) => {
-            if (!prev && currentScrollY > 50) return true;
-            if (prev && currentScrollY < 10) return false;
-            return prev;
-          });
+          const shouldBeScrolled = currentScrollY > 50;
+          if (shouldBeScrolled !== isScrolledRef.current) {
+            isScrolledRef.current = shouldBeScrolled;
+            setIsScrolled(shouldBeScrolled);
+          }
           ticking = false;
         });
         ticking = true;
@@ -219,81 +221,84 @@ export default function Header({ navigation }: HeaderProps) {
                 className="hidden lg:flex items-center justify-end h-full"
                 aria-label="Main navigation"
               >
-                <ul className="flex items-center justify-end h-full pr-1.5 lg:pr-2 xl:pr-3 gap-0.5 xl:gap-1">
+                <ul className="flex items-center justify-end h-full gap-0.5 xl:gap-1 pr-1.5 lg:pr-2">
                   {navigation.mainNav.map((item, index) => {
                     const hasMega = !!item.megaMenu;
                     const isMenuOpen = openMenu === item.label;
                     const isActive = isNavActive(item);
 
                     return (
-                      <li
-                        key={item.label}
-                        className="relative h-full flex items-center"
-                        onMouseEnter={() => hasMega && handleMouseEnter(item.label)}
-                        onMouseLeave={() => hasMega && handleMouseLeave()}
-                      >
-                        {hasMega ? (
-                          <Link
-                            href={item.href}
-                            aria-expanded={isMenuOpen}
-                            aria-haspopup="true"
-                            aria-controls={`nav-menu-${item.label.toLowerCase()}`}
-                            onKeyDown={(e) => handleNavKeyDown(e, item.label, hasMega)}
-                            className={`
-                              group inline-flex items-center gap-1 xl:gap-1.5
-                              h-[34px] lg:h-[36px] xl:h-[38px] px-1.5 lg:px-2 xl:px-2.5 rounded-full cursor-pointer
-                              text-[12.5px] lg:text-[13.5px] xl:text-[15px] font-medium tracking-wide whitespace-nowrap
-                              font-body transition-colors duration-200
-                              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
-                              ${isActive || isMenuOpen
-                                ? 'text-honeywell-navy bg-slate-100'
-                                : 'text-honeywell-navy hover:text-honeywell-red hover:bg-slate-50'
-                              }
-                            `}
-                          >
-                            <span>{item.label}</span>
-                            <span className={`flex items-center transition-transform duration-200 ${isMenuOpen ? 'rotate-180' : ''}`}>
-                              <ChevronDown
-                                className={`w-3.5 h-3.5 xl:w-4 xl:h-4 transition-colors duration-200 ${isActive || isMenuOpen ? 'text-honeywell-navy' : 'text-slate-400 group-hover:text-honeywell-navy'
-                                  }`}
-                                strokeWidth={2}
-                                aria-hidden="true"
-                              />
-                            </span>
-                          </Link>
-                        ) : (
-                          <Link
-                            href={item.href}
-                            className={`
-                              group inline-flex items-center
-                              h-[34px] lg:h-[36px] xl:h-[38px] px-1.5 lg:px-2 xl:px-2.5 rounded-full cursor-pointer
-                              text-[12.5px] lg:text-[13.5px] xl:text-[15px] font-medium tracking-wide whitespace-nowrap
-                              font-body transition-colors duration-200
-                              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
-                              ${isActive
-                                ? 'text-honeywell-navy bg-slate-100'
-                                : 'text-honeywell-navy hover:text-honeywell-red hover:bg-slate-50'
-                              }
-                            `}
-                          >
-                            <span>{item.label}</span>
-                          </Link>
-                        )}
+                      <Fragment key={item.label}>
+                        <li
+                          className="relative h-full flex items-center"
+                          onMouseEnter={() => hasMega && handleMouseEnter(item.label)}
+                          onMouseLeave={() => hasMega && handleMouseLeave()}
+                        >
+                          {hasMega ? (
+                            <Link
+                              href={item.href}
+                              aria-expanded={isMenuOpen}
+                              aria-haspopup="true"
+                              aria-controls={`nav-menu-${item.label.toLowerCase()}`}
+                              onKeyDown={(e) => handleNavKeyDown(e, item.label, hasMega)}
+                              className={`
+                                group inline-flex items-center gap-1 xl:gap-1.5
+                                h-[34px] lg:h-[36px] xl:h-[38px] px-2 lg:px-2.5 xl:px-3 rounded-full cursor-pointer
+                                text-[12.5px] lg:text-[13.5px] xl:text-[14.5px] font-medium tracking-wide whitespace-nowrap
+                                font-body transition-colors duration-200
+                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
+                                ${isActive || isMenuOpen
+                                  ? 'text-honeywell-navy bg-slate-100'
+                                  : 'text-honeywell-navy hover:text-honeywell-red hover:bg-slate-50'
+                                }
+                              `}
+                            >
+                              <span>{item.label}</span>
+                              <span className={`flex items-center transition-transform duration-200 ${isMenuOpen ? 'rotate-180' : ''}`}>
+                                <ChevronDown
+                                  className={`w-3.5 h-3.5 xl:w-4 xl:h-4 transition-colors duration-200 ${isActive || isMenuOpen ? 'text-honeywell-navy' : 'text-slate-400 group-hover:text-honeywell-navy'
+                                    }`}
+                                  strokeWidth={2}
+                                  aria-hidden="true"
+                                />
+                              </span>
+                            </Link>
+                          ) : (
+                            <Link
+                              href={item.href}
+                              className={`
+                                group inline-flex items-center
+                                h-[34px] lg:h-[36px] xl:h-[38px] px-2.5 lg:px-3 xl:px-3.5 rounded-full cursor-pointer
+                                text-[12.5px] lg:text-[13.5px] xl:text-[14.5px] font-medium tracking-wide whitespace-nowrap
+                                font-body transition-colors duration-200
+                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
+                                ${isActive
+                                  ? 'text-honeywell-navy bg-slate-100'
+                                  : 'text-honeywell-navy hover:text-honeywell-red hover:bg-slate-50'
+                                }
+                              `}
+                            >
+                              <span>{item.label}</span>
+                            </Link>
+                          )}
 
-                        {/* Mega/Dropdown Menu */}
-                        {hasMega && (
-                          <MegaMenu
-                            item={item}
-                            isOpen={isMenuOpen}
-                            onClose={handleCloseMega}
-                          />
-                        )}
+                          {/* Mega/Dropdown Menu */}
+                          {hasMega && (
+                            <MegaMenu
+                              item={item}
+                              isOpen={isMenuOpen}
+                              onClose={handleCloseMega}
+                            />
+                          )}
+                        </li>
 
-                        {/* Separator Line */}
+                        {/* Clean Symmetrical Separator Line */}
                         {index < navigation.mainNav.length - 1 && (
-                          <div className="hidden lg:block w-[1px] h-3 lg:h-3.5 xl:h-4 bg-gray-200 mx-0.5 shrink-0" aria-hidden="true" />
+                          <li aria-hidden="true" className="hidden lg:flex items-center">
+                            <span className="w-[1px] h-3.5 bg-slate-200 shrink-0" />
+                          </li>
                         )}
-                      </li>
+                      </Fragment>
                     );
                   })}
                 </ul>

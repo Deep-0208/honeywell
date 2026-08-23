@@ -282,7 +282,7 @@ export const pressPowerPackData: ProductPageData = {
         title: 'Hydraulic Cylinders',
         description: 'Heavy-duty bespoke hydraulic actuators designed to handle extreme pressing tonnage.',
         category: 'Hydraulic Components',
-        imageSrc: '/images/products/hydraulic-cylinders/custom-hydraulic-cylinder.webp',
+        imageSrc: '/images/products/hydraulic-cylinders/custom-hydraulic-cylinder-manufacturer.webp',
         href: '/products/hydraulic-cylinders/',
         ctaText: 'View Details',
       },

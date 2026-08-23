@@ -56,6 +56,7 @@ const footerColumns = [
     links: [
       { label: 'About Us', href: '/about-us/' },
       { label: 'Manufacturing Facility', href: '/manufacturing-facility/' },
+      { label: 'Product & Plant Gallery', href: '/gallery/' },
       { label: 'Request a Quote', href: '/request-quote/#quote-form' },
       { label: 'Contact Us', href: '/contact-us/' },
     ],

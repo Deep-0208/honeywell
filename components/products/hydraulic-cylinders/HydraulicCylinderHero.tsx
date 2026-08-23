@@ -51,10 +51,10 @@ export function HydraulicCylinderHero() {
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
               <Button href="/request-quote/#quote-form" size="lg" variant="primary" className="w-full sm:w-auto font-bold tracking-wide">
-                REQUEST QUOTE <ArrowRight className="w-5 h-5 ml-2" />
+                REQUEST A QUOTE <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button href="#types" size="lg" variant="outline" className="w-full sm:w-auto">
-                VIEW PRODUCTS <ArrowRight className="w-5 h-5 ml-2" />
+              <Button href="#technical-specifications" size="lg" variant="outline" className="w-full sm:w-auto bg-white font-bold tracking-wide">
+                VIEW TECHNICAL SPECS <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
 

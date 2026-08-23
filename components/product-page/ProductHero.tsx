@@ -26,20 +26,19 @@ export function ProductHero({
 }: HeroData) {
   return (
     <div
-      className="relative bg-white pt-6 pb-16 md:pt-8 md:pb-24 overflow-hidden border-b border-slate-200"
+      className="relative bg-white pt-4 pb-12 sm:pt-6 md:pt-6 md:pb-20 overflow-hidden border-b border-slate-200"
       id="hero"
     >
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red/5 skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block" />
-      <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
       <Container className="relative z-10">
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="text-sm md:text-base font-body text-slate-500 mb-6">
-          <ol className="flex items-center gap-2 flex-wrap">
+        <nav aria-label="Breadcrumb" className="text-xs sm:text-sm font-body text-slate-500 mb-3 sm:mb-4">
+          <ol className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
             {breadcrumbs.map((bc, idx) => (
-              <li key={idx} className="flex items-center gap-2">
+              <li key={idx} className="flex items-center gap-1.5 sm:gap-2">
                 {idx > 0 && <span aria-hidden="true" className="text-slate-400">&rsaquo;</span>}
                 <Link href={bc.href} className="hover:text-honeywell-red transition-colors duration-200 ease-out">
                   {bc.label}
@@ -53,40 +52,38 @@ export function ProductHero({
           </ol>
         </nav>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Content Column */}
-          <div className="flex flex-col items-start z-10">
-
-
+          <div className="flex flex-col items-start z-10 pt-1 lg:pt-2">
             <Heading
               variant="section"
               as="h1"
-              className=" lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6"
+              className="text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.12] mb-5"
             >
               {h1}
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed text-justify">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed">
               {description}
             </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
               <Button
-                href={primaryCta.href}
+                href={primaryCta?.href || '/request-quote/#quote-form'}
                 size="lg"
                 variant="primary"
                 className="w-full sm:w-auto font-bold tracking-wide"
               >
-                {primaryCta.label} <ArrowRight className="w-5 h-5 ml-2" />
+                REQUEST A QUOTE <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
-                href={secondaryCta.href}
+                href={secondaryCta?.href?.startsWith('#') ? secondaryCta.href : '#technical-specifications'}
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto bg-white"
+                className="w-full sm:w-auto bg-white font-bold tracking-wide"
               >
-                {secondaryCta.label} <ArrowRight className="w-5 h-5 ml-2" />
+                VIEW TECHNICAL SPECS <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
           </div>

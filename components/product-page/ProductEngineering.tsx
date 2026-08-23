@@ -41,12 +41,12 @@ export function ProductEngineering({ heading, description, items }: EngineeringD
                   as="h3"
                   className="text-lg sm:text-xl font-bold text-honeywell-navy mb-3 flex items-center gap-3"
                 >
-                  <span className="bg-honeywell-navy text-white w-8 h-8 rounded flex items-center justify-center text-sm font-bold shrink-0">
+                  <span className="inline-flex items-center justify-center min-w-[2rem] h-8 px-2.5 rounded-lg bg-honeywell-navy text-white text-xs font-bold uppercase tracking-wide whitespace-nowrap shrink-0 shadow-xs">
                     {item.label}
                   </span>
                   <span>{item.title}</span>
                 </Heading>
-                <p className="text-brand-darkSlate text-sm leading-relaxed pl-0 sm:pl-11 mt-2 sm:mt-0 text-justify">
+                <p className="text-brand-darkSlate text-sm leading-relaxed mt-2 text-justify">
                   {item.description}
                 </p>
               </div>

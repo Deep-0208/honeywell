@@ -289,7 +289,7 @@ export const handLeverPowerPackData: ProductPageData = {
         title: 'Hydraulic Cylinders',
         description: 'Heavy-duty actuators that pair perfectly with our manual directional control valves.',
         category: 'Hydraulic Components',
-        imageSrc: '/images/products/cylinders/tie-rod-hydraulic-cylinder.webp',
+        imageSrc: '/images/products/hydraulic-cylinders/tie-rod-hydraulic-cylinder-manufacturer.webp',
         href: '/products/hydraulic-cylinders/',
         ctaText: 'View Details',
       },

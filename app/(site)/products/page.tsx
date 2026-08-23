@@ -97,9 +97,6 @@ export default function ProductsHubPage() {
       <JsonLd data={productListSchema} />
       {/* Hero Section */}
       <section className="relative bg-white text-honeywell-navy pt-6 pb-16 md:pt-8 md:pb-24 overflow-hidden border-b border-slate-200">
-        {/* Background Decorative Elements */}
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.02] pointer-events-none mix-blend-overlay" aria-hidden="true" />
-
         <Container className="relative z-10">
           <nav aria-label="Breadcrumb" className="text-sm md:text-base font-body text-slate-500 mb-6">
             <ol className="flex items-center gap-2 flex-wrap">
@@ -147,9 +144,6 @@ export default function ProductsHubPage() {
                         <Image unoptimized src="/images/products/hero/custom-hydraulic-systems-ahmedabad.webp" alt="Custom Hydraulic Systems" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
                    </div>
-                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <Cog className="w-16 h-16 text-honeywell-red drop-shadow-lg animate-[spin_10s_linear_infinite]" />
-                   </div>
                 </div>
               </div>
             </div>
@@ -184,7 +178,7 @@ export default function ProductsHubPage() {
               title="Hydraulic Power Packs"
               description="Pre-assembled, piped, and tested fluid power generation units. Variants: 3-Phase Industrial Units, Single-Phase Units, Dedicated Press Machine High-Low Circuits."
               category="Power Generation"
-              imageSrc="/images/products/hero/multi-station-hydraulic-power-pack.webp"
+              imageSrc="/images/products/hero/hydraulic-power-pack.webp"
               href="/products/hydraulic-power-packs/"
               ctaText="EXPLORE HYDRAULIC POWER PACKS"
             />

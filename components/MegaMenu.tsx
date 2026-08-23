@@ -1,8 +1,8 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useMemo } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Layers, Building2, ShieldCheck, Factory, MapPin } from 'lucide-react';
+import { ArrowRight, Layers, Building2, ShieldCheck, Factory, MapPin, Camera } from 'lucide-react';
 
 import type { NavItem, NavLink } from '@/types/navigation';
 
@@ -11,6 +11,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
   shield: ShieldCheck,
   factory: Factory,
   mappin: MapPin,
+  camera: Camera,
 };
 
 interface MegaMenuProps {
@@ -41,18 +42,19 @@ export default function MegaMenu({ item, isOpen, onClose }: MegaMenuProps) {
   }, [isOpen, onClose]);
 
   const isLargeMega = item.label === 'Products' || item.label === 'Areas We Serve';
-  const [activeLink, setActiveLink] = useState<NavLink | null>(null);
-
-  useEffect(() => {
-    if (isOpen && isLargeMega && item.megaMenu) {
-      const firstWithSub = item.megaMenu.columns.flatMap(c => c.links).find(l => l.subcategories?.length) || item.megaMenu.columns.flatMap(c => c.links)[0];
-
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      if (firstWithSub) setActiveLink(firstWithSub);
-    } else {
-      setActiveLink(null);
+  const defaultLink = useMemo(() => {
+    if (isLargeMega && item.megaMenu) {
+      return (
+        item.megaMenu.columns.flatMap((c) => c.links).find((l) => l.subcategories?.length) ||
+        item.megaMenu.columns.flatMap((c) => c.links)[0] ||
+        null
+      );
     }
-  }, [isOpen, isLargeMega, item]);
+    return null;
+  }, [isLargeMega, item.megaMenu]);
+
+  const [activeLinkOverride, setActiveLink] = useState<NavLink | null>(null);
+  const activeLink = activeLinkOverride || defaultLink;
 
   if (!item.megaMenu) return null;
 

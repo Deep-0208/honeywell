@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
 import { MapPin, ArrowRight } from "lucide-react";
 export interface LocationCardProps {
   city: string;

@@ -14,7 +14,7 @@ export const siteNavigation: SiteNavigation = {
   ctaHref: '/request-quote/#quote-form',
 
   mainNav: [
-            /* ──────────────────────────────────────────────
+      /* ──────────────────────────────────────────────
        COMPANY — Dropdown
        ────────────────────────────────────────────── */
     {
@@ -135,6 +135,7 @@ export const siteNavigation: SiteNavigation = {
                 label: 'Gujarat',
                 href: '/locations/gujarat/',
                 description: 'Our primary manufacturing and supply hub.',
+                icon: 'mappin',
                 subcategories: [
                   { label: 'Ahmedabad', href: '/locations/ahmedabad/' },
                   { label: 'Surat', href: '/locations/surat/' },
@@ -154,6 +155,7 @@ export const siteNavigation: SiteNavigation = {
                 label: 'Maharashtra',
                 href: '/locations/maharashtra/',
                 description: 'Serving Pune, Mumbai, and major MIDC zones.',
+                icon: 'mappin',
                 subcategories: [
                   { label: 'Pune (Chakan, Bhosari, Ranjangaon)', href: '/locations/maharashtra/' },
                   { label: 'Mumbai & Thane', href: '/locations/maharashtra/' },
@@ -168,6 +170,7 @@ export const siteNavigation: SiteNavigation = {
                 label: 'Rajasthan',
                 href: '/locations/rajasthan/',
                 description: 'Supplying to RIICO industrial areas like Bhiwadi.',
+                icon: 'mappin',
                 subcategories: [
                   { label: 'Jaipur & Sitapura', href: '/locations/rajasthan/' },
                   { label: 'Bhiwadi & Neemrana RIICO', href: '/locations/rajasthan/' },
@@ -181,6 +184,7 @@ export const siteNavigation: SiteNavigation = {
                 label: 'Madhya Pradesh',
                 href: '/locations/madhya-pradesh/',
                 description: 'Automotive and engineering hubs — Indore, Pithampur, Bhopal.',
+                icon: 'mappin',
                 subcategories: [
                   { label: 'Indore & Pithampur', href: '/locations/madhya-pradesh/' },
                   { label: 'Bhopal & Mandideep', href: '/locations/madhya-pradesh/' },
@@ -193,6 +197,7 @@ export const siteNavigation: SiteNavigation = {
                 label: 'Karnataka',
                 href: '/locations/karnataka/',
                 description: 'Engineering and automation — Bengaluru, Hubli, Belgaum.',
+                icon: 'mappin',
                 subcategories: [
                   { label: 'Bengaluru (Peenya, Bommasandra)', href: '/locations/karnataka/' },
                   { label: 'Hubli-Dharwad', href: '/locations/karnataka/' },
@@ -205,6 +210,7 @@ export const siteNavigation: SiteNavigation = {
                 label: 'Tamil Nadu',
                 href: '/locations/tamil-nadu/',
                 description: 'Automotive and textile machinery — Chennai, Coimbatore.',
+                icon: 'mappin',
                 subcategories: [
                   { label: 'Chennai (Sriperumbudur, Oragadam)', href: '/locations/tamil-nadu/' },
                   { label: 'Coimbatore', href: '/locations/tamil-nadu/' },
@@ -217,6 +223,7 @@ export const siteNavigation: SiteNavigation = {
                 label: 'West Bengal',
                 href: '/locations/west-bengal/',
                 description: 'Steel and heavy engineering — Kolkata, Durgapur.',
+                icon: 'mappin',
                 subcategories: [
                   { label: 'Kolkata & Howrah', href: '/locations/west-bengal/' },
                   { label: 'Durgapur & Asansol', href: '/locations/west-bengal/' },
@@ -228,6 +235,7 @@ export const siteNavigation: SiteNavigation = {
                 label: 'Pan India',
                 href: '/locations/',
                 description: 'Nationwide delivery across all major industrial cities.',
+                icon: 'mappin',
                 subcategories: [
                   { label: 'North India (Delhi NCR, Haryana, Punjab)', href: '/locations/' },
                   { label: 'West India (Gujarat, Maharashtra, Rajasthan)', href: '/locations/' },
@@ -247,7 +255,7 @@ export const siteNavigation: SiteNavigation = {
        ────────────────────────────────────────────── */
     {
       label: 'Gallery',
-      href: '#',
+      href: '/gallery/',
     },
     /* ──────────────────────────────────────────────
        CONTACT — Direct Link
