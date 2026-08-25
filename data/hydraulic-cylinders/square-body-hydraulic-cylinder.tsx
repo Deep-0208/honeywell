@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShieldCheck, ArrowUpToLine, Settings, ShieldAlert, HardHat, Scale, Cog, FlaskConical, Package, FileCheck } from 'lucide-react';
-import { FaIndustry, FaBuilding, FaWarehouse, FaTractor } from 'react-icons/fa';
+import { FaIndustry, FaBuilding, FaWarehouse } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const squareBodyCylinderData: ProductPageData = {
@@ -28,14 +28,14 @@ export const squareBodyCylinderData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders/' },
     ],
     currentPage: 'Square Body Cylinders',
     subtitle: 'High Structural Rigidity for Compact Installations',
     h1: 'Square Body Hydraulic Cylinders',
     description: 'Honeywell Hydraulics manufactures heavy-duty square body hydraulic cylinders designed for severe industrial applications where space is limited but high structural rigidity is required. Engineered with a robust welded square profile, these cylinders offer exceptional strength and precise mounting alignment for machine tools, steel plants, and industrial automation.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/square-body-hydraulic-cylinder.webp',
@@ -110,8 +110,8 @@ export const squareBodyCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our square body cylinders are built using premium materials to endure the harsh realities of heavy industrial applications.',
-    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote' },
-    secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders' },
+    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote/#quote-form' },
+    secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders/' },
     tableTitle: 'Square Body Cylinder Specs',
     rows: [
       { parameter: 'Bore Diameter', value: '40 mm to 500 mm' },
@@ -212,25 +212,25 @@ export const squareBodyCylinderData: ProductPageData = {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Machine Tools',
         description: 'Clamping, positioning, and actuation in advanced CNC machining centers.',
-        href: '/industries/square-body-hydraulic-cylinder-manufacturer-honeywell-hydraulics',
+        href: '#',
       },
       {
         icon: <HardHat className="w-6 h-6" />,
         name: 'Steel Plants',
         description: 'Heavy-duty actuation for rolling mills, shears, and continuous casting equipment.',
-        href: '/industries/steel-plants',
+        href: '#',
       },
       {
         icon: <FaBuilding className="w-6 h-6" />,
         name: 'Industrial Automation',
         description: 'High-speed, high-precision actuation for specialized manufacturing assembly lines.',
-        href: '/industries/industrial-automation',
+        href: '#',
       },
       {
         icon: <FaWarehouse className="w-6 h-6" />,
         name: 'Hydraulic Presses',
         description: 'Specialized pressing mechanisms requiring extremely rigid, flush-mounted cylinders.',
-        href: '/industries/hydraulic-presses',
+        href: '#',
       },
     ],
   },
@@ -264,7 +264,7 @@ export const squareBodyCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need Custom Square Body Cylinders for Your Machinery?',
       description: 'Our engineers can design and manufacture cylinders based on your specific space constraints, mounting hole patterns, and stroke lengths.',
-      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote' },
+      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },
@@ -335,7 +335,7 @@ export const squareBodyCylinderData: ProductPageData = {
         description: 'Heavy-duty, compact round-body cylinders designed for extreme industrial and mobile applications.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/welded-hydraulic-cylinders-manufacturer.webp',
-        href: '/products/hydraulic-cylinders/welded-hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/welded-hydraulic-cylinders/',
         ctaText: 'View Details',
       },
       {
@@ -343,7 +343,7 @@ export const squareBodyCylinderData: ProductPageData = {
         description: 'Rigid mounting cylinders designed for high-force straight-line industrial presses.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder.webp',
-        href: '/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder',
+        href: '/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder/',
         ctaText: 'View Details',
       },
       {
@@ -351,7 +351,7 @@ export const squareBodyCylinderData: ProductPageData = {
         description: 'Heavy-duty trunnion mounted hydraulic cylinders engineered for pivoting machinery.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder.webp',
-        href: '/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder',
+        href: '/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder/',
         ctaText: 'View Details',
       },
     ],

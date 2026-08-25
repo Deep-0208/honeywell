@@ -51,8 +51,8 @@ function validate(d: ContactFormPayload): Errors {
   } else if (!/^[+\d\s\-()]{7,}$/.test(d.phone)) {
     e.phone = 'Please enter a valid phone number.';
   }
-  if (!d.message.trim() || d.message.trim().length < 10) {
-    e.message = 'Please say a little more — at least a sentence or two.';
+  if (!d.message.trim()) {
+    e.message = 'Please enter your message.';
   }
   return e;
 }
@@ -74,18 +74,30 @@ export function ContactForm() {
     e.preventDefault();
     const validationErrors = validate(form);
     if (Object.keys(validationErrors).length > 0) {
+      console.warn('[Form/Contact] Form validation failed on fields:', Object.keys(validationErrors));
       setErrors(validationErrors);
       const firstKey = Object.keys(validationErrors)[0];
       document.getElementById(firstKey)?.focus();
       return;
     }
+    console.log('[Form/Contact] Submitting contact inquiry...');
     setStatus('submitting');
     setErrors({});
     try {
-      await new Promise((r) => setTimeout(r, 1400));
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => null);
+        throw new Error(errorData?.error || `Server returned status ${res.status}`);
+      }
+      console.log('[Form/Contact] Inquiry submitted successfully');
       setStatus('success');
       setForm(INITIAL);
-    } catch {
+    } catch (err: unknown) {
+      console.error('[Form/Contact] Submission error:', err instanceof Error ? err.message : 'Network/Server error');
       setStatus('error');
     }
   };

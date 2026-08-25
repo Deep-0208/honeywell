@@ -11,10 +11,10 @@ export const siteNavigation: SiteNavigation = {
   phone: '+91-9924343873',
   phoneDisplay: '+91 99243 43873',
   ctaLabel: 'Request Quote',
-  ctaHref: '/request-quote/',
+  ctaHref: '/request-quote/#quote-form',
 
   mainNav: [
-            /* ──────────────────────────────────────────────
+      /* ──────────────────────────────────────────────
        COMPANY — Dropdown
        ────────────────────────────────────────────── */
     {
@@ -81,9 +81,15 @@ export const siteNavigation: SiteNavigation = {
                 description:
                   'Custom-engineered hydraulic power units delivering precise flow rates for automated machinery and heavy presses.',
                 subcategories: [
-                  { label: '3-Phase Power Packs', href: '/products/hydraulic-power-packs/3-phase-hydraulic-power-packs/' },
-                  { label: 'DC Mini Power Packs', href: '/products/hydraulic-power-packs/dc-mini-power-packs/' },
-                  { label: 'High/Low Power Packs', href: '/products/hydraulic-power-packs/high-low-hydraulic-power-packs/' },
+                  { label: 'Single Phase Power Packs', href: '/products/hydraulic-power-packs/single-phase-hydraulic-power-packs/' },
+                  { label: 'Three Phase Power Packs', href: '/products/hydraulic-power-packs/three-phase-hydraulic-power-packs/' },
+                  { label: 'Customized Power Packs', href: '/products/hydraulic-power-packs/customized-hydraulic-power-packs/' },
+                  { label: 'Power Packs for Press', href: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press/' },
+                  { label: 'Multistation Power Packs', href: '/products/hydraulic-power-packs/multistation-hydraulic-power-packs/' },
+                  { label: 'Accumulator Power Packs', href: '/products/hydraulic-power-packs/accumulator-hydraulic-power-packs/' },
+                  { label: 'Hand Lever Power Packs', href: '/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-packs/' },
+                  { label: 'Hand Pump Power Packs', href: '/products/hydraulic-power-packs/hand-pump-operated-hydraulic-power-packs/' },
+                  { label: 'High-Low Power Packs', href: '/products/hydraulic-power-packs/high-low-hydraulic-power-packs/' },
                 ],
               },
               {
@@ -112,69 +118,14 @@ export const siteNavigation: SiteNavigation = {
       },
     },
 
-/* ──────────────────────────────────────────────
-       INDUSTRIES — Dropdown
-       ────────────────────────────────────────────── */
-    {
-      label: 'Industries',
-      href: '/industries/',
-      megaMenu: {
-        columns: [
-          {
-            heading: 'Industries We Serve',
-            links: [
-              {
-                label: 'Injection Moulding',
-                href: '#',
-                description: 'High-speed core pulls and high-pressure clamping solutions.',
-              },
-              {
-                label: 'Automotive',
-                href: '#',
-                description: 'Synchronized robotic welding and assembly station hydraulics.',
-              },
-              {
-                label: 'Steel & Metallurgy',
-                href: '#',
-                description: 'Extreme-pressure fluid power for rolling mills and forging.',
-              },
-              {
-                label: 'Construction Equipment',
-                href: '#',
-                description: 'Rugged hydraulic cylinders and components for earthmoving and heavy machinery.',
-              },
-              {
-                label: 'Agriculture',
-                href: '#',
-                description: 'Reliable hydraulic solutions for farming and agri-equipment.',
-              },
-              {
-                label: 'Material Handling',
-                href: '#',
-                description: 'Judder-free lifting power for warehouse and logistics automation.',
-              },
-              {
-                label: 'Plastic Processing',
-                href: '#',
-                description: 'Precision hydraulics for extrusion, blow moulding, and thermoforming.',
-              },
-              {
-                label: 'Special Purpose Machines',
-                href: '#',
-                description: 'Custom fluid power for unique, one-off manufacturing equipment.',
-              },
-            ],
-          },
-        ],
-      },
-    },
+
 
     /* ──────────────────────────────────────────────
        AREAS WE SERVE — Mega Menu
        ────────────────────────────────────────────── */
     {
       label: 'Areas We Serve',
-      href: '/locations/gujarat/',
+      href: '/locations/',
       megaMenu: {
         columns: [
           {
@@ -184,36 +135,114 @@ export const siteNavigation: SiteNavigation = {
                 label: 'Gujarat',
                 href: '/locations/gujarat/',
                 description: 'Our primary manufacturing and supply hub.',
+                icon: 'mappin',
                 subcategories: [
                   { label: 'Ahmedabad', href: '/locations/ahmedabad/' },
                   { label: 'Surat', href: '/locations/surat/' },
                   { label: 'Vadodara', href: '/locations/vadodara/' },
                   { label: 'Rajkot', href: '/locations/rajkot/' },
-                  { label: 'Bhavnagar', href: '#' },
-                  { label: 'Gandhinagar', href: '#' },
-                  { label: 'Vapi', href: '#' },
-                  { label: 'Jamnagar', href: '#' },
+                  { label: 'Bhavnagar', href: '/locations/bhavnagar/' },
+                  { label: 'Gandhinagar', href: '/locations/gandhinagar/' },
+                  { label: 'Vapi', href: '/locations/vapi/' },
+                  { label: 'Jamnagar', href: '/locations/jamnagar/' },
+                  { label: 'Ankleshwar', href: '/locations/ankleshwar/' },
+                  { label: 'Morbi', href: '/locations/morbi/' },
+                  { label: 'Halol', href: '/locations/halol/' },
+                  { label: 'Kutch', href: '/locations/kutch/' },
                 ],
               },
               {
                 label: 'Maharashtra',
-                href: '#',
+                href: '/locations/maharashtra/',
                 description: 'Serving Pune, Mumbai, and major MIDC zones.',
+                icon: 'mappin',
+                subcategories: [
+                  { label: 'Pune (Chakan, Bhosari, Ranjangaon)', href: '/locations/maharashtra/' },
+                  { label: 'Mumbai & Thane', href: '/locations/maharashtra/' },
+                  { label: 'Nashik & Sinnar MIDC', href: '/locations/maharashtra/' },
+                  { label: 'Aurangabad (Sambhajinagar)', href: '/locations/maharashtra/' },
+                  { label: 'Kolhapur & Sangli', href: '/locations/maharashtra/' },
+                  { label: 'Nagpur & Butibori', href: '/locations/maharashtra/' },
+                  { label: 'Navi Mumbai & Raigad', href: '/locations/maharashtra/' },
+                ],
               },
               {
                 label: 'Rajasthan',
-                href: '#',
+                href: '/locations/rajasthan/',
                 description: 'Supplying to RIICO industrial areas like Bhiwadi.',
+                icon: 'mappin',
+                subcategories: [
+                  { label: 'Jaipur & Sitapura', href: '/locations/rajasthan/' },
+                  { label: 'Bhiwadi & Neemrana RIICO', href: '/locations/rajasthan/' },
+                  { label: 'Jodhpur', href: '/locations/rajasthan/' },
+                  { label: 'Kota & Bundi', href: '/locations/rajasthan/' },
+                  { label: 'Udaipur & Rajsamand', href: '/locations/rajasthan/' },
+                  { label: 'Alwar & Matsya', href: '/locations/rajasthan/' },
+                ],
+              },
+              {
+                label: 'Madhya Pradesh',
+                href: '/locations/madhya-pradesh/',
+                description: 'Automotive and engineering hubs — Indore, Pithampur, Bhopal.',
+                icon: 'mappin',
+                subcategories: [
+                  { label: 'Indore & Pithampur', href: '/locations/madhya-pradesh/' },
+                  { label: 'Bhopal & Mandideep', href: '/locations/madhya-pradesh/' },
+                  { label: 'Jabalpur', href: '/locations/madhya-pradesh/' },
+                  { label: 'Gwalior & Malanpur', href: '/locations/madhya-pradesh/' },
+                  { label: 'Ujjain & Dewas', href: '/locations/madhya-pradesh/' },
+                ],
+              },
+              {
+                label: 'Karnataka',
+                href: '/locations/karnataka/',
+                description: 'Engineering and automation — Bengaluru, Hubli, Belgaum.',
+                icon: 'mappin',
+                subcategories: [
+                  { label: 'Bengaluru (Peenya, Bommasandra)', href: '/locations/karnataka/' },
+                  { label: 'Hubli-Dharwad', href: '/locations/karnataka/' },
+                  { label: 'Belgaum (Belagavi)', href: '/locations/karnataka/' },
+                  { label: 'Mysuru & Kadakola', href: '/locations/karnataka/' },
+                  { label: 'Mangaluru', href: '/locations/karnataka/' },
+                ],
+              },
+              {
+                label: 'Tamil Nadu',
+                href: '/locations/tamil-nadu/',
+                description: 'Automotive and textile machinery — Chennai, Coimbatore.',
+                icon: 'mappin',
+                subcategories: [
+                  { label: 'Chennai (Sriperumbudur, Oragadam)', href: '/locations/tamil-nadu/' },
+                  { label: 'Coimbatore', href: '/locations/tamil-nadu/' },
+                  { label: 'Hosur', href: '/locations/tamil-nadu/' },
+                  { label: 'Tiruppur', href: '/locations/tamil-nadu/' },
+                  { label: 'Salem', href: '/locations/tamil-nadu/' },
+                ],
               },
               {
                 label: 'West Bengal',
-                href: '#',
-                description: 'Solutions for heavy engineering in Kolkata and Durgapur.',
+                href: '/locations/west-bengal/',
+                description: 'Steel and heavy engineering — Kolkata, Durgapur.',
+                icon: 'mappin',
+                subcategories: [
+                  { label: 'Kolkata & Howrah', href: '/locations/west-bengal/' },
+                  { label: 'Durgapur & Asansol', href: '/locations/west-bengal/' },
+                  { label: 'Haldia', href: '/locations/west-bengal/' },
+                  { label: 'Kharagpur', href: '/locations/west-bengal/' },
+                ],
               },
               {
                 label: 'Pan India',
-                href: '#',
+                href: '/locations/',
                 description: 'Nationwide delivery across all major industrial cities.',
+                icon: 'mappin',
+                subcategories: [
+                  { label: 'North India (Delhi NCR, Haryana, Punjab)', href: '/locations/' },
+                  { label: 'West India (Gujarat, Maharashtra, Rajasthan)', href: '/locations/' },
+                  { label: 'South India (Karnataka, Tamil Nadu, Telangana)', href: '/locations/' },
+                  { label: 'East & Central (West Bengal, MP, Odisha)', href: '/locations/' },
+                  { label: 'Express Transit Across All 28 States', href: '/locations/' },
+                ],
               },
             ],
           },
@@ -226,7 +255,7 @@ export const siteNavigation: SiteNavigation = {
        ────────────────────────────────────────────── */
     {
       label: 'Gallery',
-      href: '#',
+      href: '/gallery/',
     },
     /* ──────────────────────────────────────────────
        CONTACT — Direct Link

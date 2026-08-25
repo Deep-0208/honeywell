@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Ruler, Wrench, Settings2, Shield, Factory, Truck, Hammer, Tractor } from 'lucide-react';
+import { ShieldCheck, Ruler, Wrench, Settings2 } from 'lucide-react';
 import { FaIndustry, FaTruck, FaCogs, FaHammer, FaTractor } from 'react-icons/fa';
 
 
@@ -104,12 +104,12 @@ export const PILLAR_BLOCK_TYPES = [
     imageSrc: "/images/home/custom-hydraulic-cylinder-manufacturer.webp",
     href: "/products/hydraulic-cylinders/custom-hydraulic-cylinders/"
   },
-  {
-    title: "Car Parking Hydraulic Cylinders",
-    description: "Reliable hydraulic cylinders engineered for safe, smooth, and vibration-free vertical lifting in car parking systems.",
+    {
+    title: "Single Acting Hydraulic Cylinders",
+    description: "Designed for applications where gravity or a mechanical spring returns the cylinder to its original position.",
     category: "Hydraulic Cylinders",
-    imageSrc: "/images/products/hydraulic-cylinders/car-parking-hydraulic-cylinder-v2.webp",
-    href: "/products/hydraulic-cylinders/car-parking-hydraulic-cylinders/"
+    imageSrc: "/images/products/hydraulic-cylinders/single-acting-hydraulic-cylinder-manufacturer.webp",
+    href: "/products/hydraulic-cylinders/single-acting-hydraulic-cylinders/"
   },
   {
     title: "Scissor Lift Table Hydraulic Cylinders",
@@ -133,11 +133,11 @@ export const PILLAR_BLOCK_TYPES = [
     href: "/products/hydraulic-cylinders/goods-lift-hydraulic-cylinders/"
   },
   {
-    title: "Single Acting Hydraulic Cylinders",
-    description: "Designed for applications where gravity or a mechanical spring returns the cylinder to its original position.",
+    title: "Car Parking Hydraulic Cylinders",
+    description: "Reliable hydraulic cylinders engineered for safe, smooth, and vibration-free vertical lifting in car parking systems.",
     category: "Hydraulic Cylinders",
-    imageSrc: "/images/products/hydraulic-cylinders/single-acting-hydraulic-cylinder-manufacturer.webp",
-    href: "/products/hydraulic-cylinders/single-acting-hydraulic-cylinders/"
+    imageSrc: "/images/products/hydraulic-cylinders/car-parking-hydraulic-cylinder-v2.webp",
+    href: "/products/hydraulic-cylinders/car-parking-hydraulic-cylinders/"
   }
 ];
 

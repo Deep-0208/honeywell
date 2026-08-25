@@ -5,6 +5,7 @@ import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
 import { ArrowRight } from 'lucide-react';
 import type { HeroData } from './types';
+import { TechnicalBlueprintCard } from '@/components/products/TechnicalBlueprintCard';
 
 /**
  * ProductHero — Gold-standard hero section.
@@ -25,88 +26,91 @@ export function ProductHero({
 }: HeroData) {
   return (
     <div
-      className="relative bg-white pt-6 pb-16 md:pt-10 md:pb-24 overflow-hidden border-b border-slate-200"
+      className="relative bg-white pt-4 pb-12 sm:pt-6 md:pt-6 md:pb-20 overflow-hidden border-b border-slate-200"
       id="hero"
     >
       {/* Background Decorative Elements */}
-      <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
       <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red/5 skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block" />
-      <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
 
-      <Container>
+      <Container className="relative z-10">
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
-          <ol className="flex items-center gap-2 flex-wrap">
+        <nav aria-label="Breadcrumb" className="text-xs sm:text-sm font-body text-slate-500 mb-3 sm:mb-4">
+          <ol className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
             {breadcrumbs.map((bc, idx) => (
-              <li key={idx}>
-                {idx > 0 && <span aria-hidden="true" className="mr-2">&rsaquo;</span>}
+              <li key={idx} className="flex items-center gap-1.5 sm:gap-2">
+                {idx > 0 && <span aria-hidden="true" className="text-slate-400">&rsaquo;</span>}
                 <Link href={bc.href} className="hover:text-honeywell-red transition-colors duration-200 ease-out">
                   {bc.label}
                 </Link>
               </li>
             ))}
-            <li aria-hidden="true">&rsaquo;</li>
+            <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>
             <li className="text-honeywell-red font-semibold" aria-current="page">
               {currentPage}
             </li>
           </ol>
         </nav>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Content Column */}
-          <div className="flex flex-col items-start z-10">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-brand-steelGray text-sm font-medium">{subtitle}</span>
-            </div>
-
+          <div className="flex flex-col items-start z-10 pt-1 lg:pt-2">
             <Heading
               variant="section"
               as="h1"
-              className=" lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6"
+              className="text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.12] mb-5"
             >
               {h1}
             </Heading>
 
-            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed text-justify">
+            <p className="text-lg text-brand-darkSlate font-body mb-8 max-w-xl leading-relaxed">
               {description}
             </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
               <Button
-                href={primaryCta.href}
+                href={primaryCta?.href || '/request-quote/#quote-form'}
                 size="lg"
                 variant="primary"
                 className="w-full sm:w-auto font-bold tracking-wide"
               >
-                {primaryCta.label} <ArrowRight className="w-5 h-5 ml-2" />
+                REQUEST A QUOTE <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
-                href={secondaryCta.href}
+                href={secondaryCta?.href?.startsWith('#') ? secondaryCta.href : '#technical-specifications'}
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto bg-white"
+                className="w-full sm:w-auto bg-white font-bold tracking-wide"
               >
-                {secondaryCta.label} <ArrowRight className="w-5 h-5 ml-2" />
+                VIEW TECHNICAL SPECS <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
           </div>
 
-          {/* Image Column */}
-          <div className="relative w-full aspect-[4/3] lg:aspect-[4/3] bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
-            <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              priority
-              fetchPriority="high"
-              decoding="sync"
-              quality={85}
-              className="object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
+          {/* Technical Specs Blueprint or Image Column */}
+          <div className="w-full">
+            {image?.src && image.src !== '' ? (
+              <div className="relative w-full aspect-[4/3] lg:aspect-[4/3] bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group">
+                <div className="absolute inset-0 bg-brand-surfaceGray opacity-50 rounded-xl" />
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  priority
+                  fetchPriority="high"
+                  decoding="sync"
+                  quality={85}
+                  className="object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            ) : (
+              <TechnicalBlueprintCard
+                title={`${currentPage} TECHNICAL DATA`}
+                badge="PRECISION ENGINEERED"
+              />
+            )}
           </div>
         </div>
       </Container>

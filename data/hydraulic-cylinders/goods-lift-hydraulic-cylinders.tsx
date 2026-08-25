@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, ArrowUpToLine, Settings, ShieldAlert, HardHat, Scale, Cog, FlaskConical, Package, FileCheck } from 'lucide-react';
+import { ShieldCheck, ArrowUpToLine, Settings, ShieldAlert, HardHat, Scale, Cog, FlaskConical, FileCheck } from 'lucide-react';
 import { FaIndustry, FaWarehouse, FaBuilding, FaTruckLoading } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
@@ -28,14 +28,14 @@ export const goodsLiftCylinderData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders/' },
     ],
     currentPage: 'Goods Lift Cylinders',
     subtitle: 'Heavy-Duty Vertical Lifting Solutions',
     h1: 'Goods Lift Hydraulic Cylinder Manufacturer',
     description: 'Honeywell Hydraulics is a leading manufacturer of goods lift hydraulic cylinders. A hydraulic cylinder is a mechanical actuator used to give a unidirectional force through a unidirectional stroke, engineered specifically for safe, high-capacity industrial freight elevators.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/goods-lift-hydraulic-cylinder-v2.webp',
@@ -110,8 +110,8 @@ export const goodsLiftCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our goods lift cylinders are manufactured using the finest quality materials to meet the demanding requirements of vertical material handling.',
-    primaryCta: { label: 'DISCUSS YOUR LIFT REQUIREMENTS', href: '/request-quote' },
-    secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders' },
+    primaryCta: { label: 'DISCUSS YOUR LIFT REQUIREMENTS', href: '/request-quote/#quote-form' },
+    secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders/' },
     tableTitle: 'Goods Lift Cylinder Specs',
     rows: [
       { parameter: 'Maximum Bore Size', value: 'Up to 700 mm' },
@@ -210,25 +210,25 @@ export const goodsLiftCylinderData: ProductPageData = {
         icon: <FaWarehouse className="w-6 h-6" />,
         name: 'Warehouses & Logistics',
         description: 'Multi-floor freight elevators for moving pallets and heavy inventory safely between levels.',
-        href: '/industries/goods-lift-hydraulic-cylinder-manufacturer-honeywell-hydraulics',
+        href: '#',
       },
       {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Manufacturing Plants',
         description: 'Heavy-duty scissor lifts and mezzanine goods lifts for moving raw materials and finished products.',
-        href: '/industries/manufacturing-plants',
+        href: '#',
       },
       {
         icon: <FaBuilding className="w-6 h-6" />,
         name: 'Commercial Buildings',
         description: 'Automobile elevators, car parking systems, and heavy service elevators for retail complexes.',
-        href: '/industries/commercial-buildings',
+        href: '#',
       },
       {
         icon: <FaTruckLoading className="w-6 h-6" />,
         name: 'Loading Docks',
         description: 'Hydraulic dock levelers and pit-mounted lifting platforms for truck loading and unloading.',
-        href: '/industries/loading-docks',
+        href: '#',
       },
     ],
   },
@@ -262,7 +262,7 @@ export const goodsLiftCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need a Custom Goods Lift Cylinder?',
       description: 'Our engineers can design a cylinder based on your specific platform size, travel height, and payload capacity.',
-      primaryCta: { label: 'SUBMIT YOUR REQUIREMENTS', href: '/request-quote' },
+      primaryCta: { label: 'SUBMIT YOUR REQUIREMENTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },
@@ -309,7 +309,7 @@ export const goodsLiftCylinderData: ProductPageData = {
         description: 'Versatile cylinders providing powered force in both extension and retraction strokes.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinders-manufacturer.webp',
-        href: '/products/hydraulic-cylinders/double-acting-hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/',
         ctaText: 'View Details',
       },
       {
@@ -317,7 +317,7 @@ export const goodsLiftCylinderData: ProductPageData = {
         description: 'Bespoke actuators engineered for extreme parameters and specialized industrial machinery.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/custom-hydraulic-cylinder-manufacturer.webp',
-        href: '/products/hydraulic-cylinders/custom-hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/custom-hydraulic-cylinders/',
         ctaText: 'View Details',
       },
       {
@@ -325,7 +325,7 @@ export const goodsLiftCylinderData: ProductPageData = {
         description: 'Multi-stage cylinders providing exceptional stroke length from a compact retracted footprint.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/telescopic-hydraulic-cylinders-manufacturer.webp',
-        href: '/products/hydraulic-cylinders/telescopic-hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/telescopic-hydraulic-cylinders/',
         ctaText: 'View Details',
       },
     ],
@@ -363,7 +363,7 @@ export const goodsLiftCylinderData: ProductPageData = {
     title: 'Need a Reliable Cylinder for Your Goods Lift?',
     description: "Partner with Honeywell Hydraulics for precision-engineered, high-capacity lifting cylinders built for absolute safety and smooth operation.",
     primaryCtaText: 'REQUEST A QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Now',
     secondaryCtaHref: 'tel:+919924343873',
   },

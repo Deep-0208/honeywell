@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef, Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Phone, ChevronDown, Menu } from 'lucide-react';
+import { ArrowRight, ChevronDown, Menu } from 'lucide-react';
 import MegaMenu from './MegaMenu';
 import MobileMenu from './MobileMenu';
 import type { SiteNavigation } from '@/types/navigation';
@@ -40,6 +40,8 @@ export default function Header({ navigation }: HeaderProps) {
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
 
+  const isScrolledRef = useRef(false);
+
   /* ── Scroll detection ── */
   useEffect(() => {
     let ticking = false;
@@ -48,11 +50,11 @@ export default function Header({ navigation }: HeaderProps) {
       if (!ticking) {
         window.requestAnimationFrame(() => {
           const currentScrollY = window.scrollY;
-          setIsScrolled((prev) => {
-            if (!prev && currentScrollY > 50) return true;
-            if (prev && currentScrollY < 10) return false;
-            return prev;
-          });
+          const shouldBeScrolled = currentScrollY > 50;
+          if (shouldBeScrolled !== isScrolledRef.current) {
+            isScrolledRef.current = shouldBeScrolled;
+            setIsScrolled(shouldBeScrolled);
+          }
           ticking = false;
         });
         ticking = true;
@@ -173,14 +175,13 @@ export default function Header({ navigation }: HeaderProps) {
             Slides up via translateY on scroll (GPU-composited).
             Layout never changes — only position shifts. */}
         <div
-          className="relative z-10 w-full flex justify-center will-change-transform"
+          className="relative z-10 w-full flex justify-center will-change-transform px-4 sm:px-6 lg:px-8"
           style={{
             transform: isScrolled ? 'translateY(0px)' : 'translateY(16px)',
             transition: `transform 500ms cubic-bezier(0.16, 1, 0.3, 1)`,
-            padding: isScrolled ? '0 16px' : '0 16px',
           }}
         >
-          <div className="w-full max-w-[1360px] flex items-center justify-between h-16 lg:h-20 gap-2 lg:gap-4 xl:gap-8">
+          <div className="w-full max-w-7xl flex items-center justify-between h-16 lg:h-20 gap-2 sm:gap-4 lg:gap-6">
 
             {/* ═══════════════════════════════
                LEFT — Logo (Pill)
@@ -199,7 +200,7 @@ export default function Header({ navigation }: HeaderProps) {
                 alt="Honeywell Hydraulics — Custom Hydraulic Cylinder & Power Pack Manufacturer"
                 width={350}
                 height={100}
-                className="w-auto h-12 lg:h-[50px] xl:h-[60px]"
+                className="w-auto h-10 sm:h-12 lg:h-[48px] xl:h-[54px]"
                 priority
               />
             </Link>
@@ -208,141 +209,136 @@ export default function Header({ navigation }: HeaderProps) {
                RIGHT — Nav + Contact (Pill)
                ═══════════════════════════════ */}
             <div
-              className="flex items-center justify-end h-14 lg:h-[72px] px-3 sm:px-4 lg:px-4 xl:px-8 bg-white rounded-full"
+              className="flex items-center justify-end h-14 lg:h-[72px] px-3 sm:px-4 lg:px-4 xl:px-6 bg-white rounded-full shrink-0"
               style={{
                 boxShadow: isScrolled ? 'none' : '0 4px 20px rgb(0 0 0 / 0.06)',
                 transition: smoothTransition,
               }}
             >
 
-              {/* ─── Desktop Navigation ─── */}
+              {/* ─── Desktop & Tablet Landscape Navigation ─── */}
               <nav
-                className="hidden xl:flex items-center justify-end h-full"
+                className="hidden lg:flex items-center justify-end h-full"
                 aria-label="Main navigation"
               >
-                <ul className="flex items-center justify-end h-full pr-3 xl:pr-4">
+                <ul className="flex items-center justify-end h-full gap-0.5 xl:gap-1 pr-1.5 lg:pr-2">
                   {navigation.mainNav.map((item, index) => {
                     const hasMega = !!item.megaMenu;
                     const isMenuOpen = openMenu === item.label;
                     const isActive = isNavActive(item);
 
                     return (
-                      <li
-                        key={item.label}
-                        className="relative h-full flex items-center"
-                        onMouseEnter={() => hasMega && handleMouseEnter(item.label)}
-                        onMouseLeave={() => hasMega && handleMouseLeave()}
-                      >
-                        {hasMega ? (
-                          <Link
-                            href={item.href}
-                            aria-expanded={isMenuOpen}
-                            aria-haspopup="true"
-                            aria-controls={`nav-menu-${item.label.toLowerCase()}`}
-                            onKeyDown={(e) => handleNavKeyDown(e, item.label, hasMega)}
-                            className={`
-                              group inline-flex items-center gap-1 xl:gap-1.5
-                              h-[36px] xl:h-[40px] px-1 xl:px-2 rounded-full cursor-pointer
-                              text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-medium tracking-wide whitespace-nowrap
-                              font-body transition-colors duration-200
-                              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
-                              ${isActive || isMenuOpen
-                                ? 'text-honeywell-navy bg-slate-100'
-                                : 'text-honeywell-navy hover:text-honeywell-red hover:bg-slate-50'
-                              }
-                            `}
-                          >
-                            <span>{item.label}</span>
-                            <span className={`flex items-center transition-transform duration-200 ${isMenuOpen ? 'rotate-180' : ''}`}>
-                              <ChevronDown
-                                className={`w-4 h-4 transition-colors duration-200 ${isActive || isMenuOpen ? 'text-honeywell-navy' : 'text-slate-400 group-hover:text-honeywell-navy'
-                                  }`}
-                                strokeWidth={2}
-                                aria-hidden="true"
-                              />
-                            </span>
-                          </Link>
-                        ) : (
-                          <Link
-                            href={item.href}
-                            className={`
-                              group inline-flex items-center
-                              h-[36px] xl:h-[40px] px-1 xl:px-2 rounded-full cursor-pointer
-                              text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-medium tracking-wide whitespace-nowrap
-                              font-body transition-colors duration-200
-                              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
-                              ${isActive
-                                ? 'text-honeywell-navy bg-slate-100'
-                                : 'text-honeywell-navy hover:text-honeywell-red hover:bg-slate-50'
-                              }
-                            `}
-                          >
-                            <span>{item.label}</span>
-                          </Link>
-                        )}
+                      <Fragment key={item.label}>
+                        <li
+                          className="relative h-full flex items-center"
+                          onMouseEnter={() => hasMega && handleMouseEnter(item.label)}
+                          onMouseLeave={() => hasMega && handleMouseLeave()}
+                        >
+                          {hasMega ? (
+                            <Link
+                              href={item.href}
+                              aria-expanded={isMenuOpen}
+                              aria-haspopup="true"
+                              aria-controls={`nav-menu-${item.label.toLowerCase()}`}
+                              onKeyDown={(e) => handleNavKeyDown(e, item.label, hasMega)}
+                              className={`
+                                group inline-flex items-center gap-1 xl:gap-1.5
+                                h-[34px] lg:h-[36px] xl:h-[38px] px-2 lg:px-2.5 xl:px-3 rounded-full cursor-pointer
+                                text-[12.5px] lg:text-[13.5px] xl:text-[14.5px] font-medium tracking-wide whitespace-nowrap
+                                font-body transition-colors duration-200
+                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
+                                ${isActive || isMenuOpen
+                                  ? 'text-honeywell-navy bg-slate-100'
+                                  : 'text-honeywell-navy hover:text-honeywell-red hover:bg-slate-50'
+                                }
+                              `}
+                            >
+                              <span>{item.label}</span>
+                              <span className={`flex items-center transition-transform duration-200 ${isMenuOpen ? 'rotate-180' : ''}`}>
+                                <ChevronDown
+                                  className={`w-3.5 h-3.5 xl:w-4 xl:h-4 transition-colors duration-200 ${isActive || isMenuOpen ? 'text-honeywell-navy' : 'text-slate-400 group-hover:text-honeywell-navy'
+                                    }`}
+                                  strokeWidth={2}
+                                  aria-hidden="true"
+                                />
+                              </span>
+                            </Link>
+                          ) : (
+                            <Link
+                              href={item.href}
+                              className={`
+                                group inline-flex items-center
+                                h-[34px] lg:h-[36px] xl:h-[38px] px-2.5 lg:px-3 xl:px-3.5 rounded-full cursor-pointer
+                                text-[12.5px] lg:text-[13.5px] xl:text-[14.5px] font-medium tracking-wide whitespace-nowrap
+                                font-body transition-colors duration-200
+                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-honeywell-navy
+                                ${isActive
+                                  ? 'text-honeywell-navy bg-slate-100'
+                                  : 'text-honeywell-navy hover:text-honeywell-red hover:bg-slate-50'
+                                }
+                              `}
+                            >
+                              <span>{item.label}</span>
+                            </Link>
+                          )}
 
-                        {/* Mega/Dropdown Menu */}
-                        {hasMega && (
-                          <MegaMenu
-                            item={item}
-                            isOpen={isMenuOpen}
-                            onClose={handleCloseMega}
-                          />
-                        )}
+                          {/* Mega/Dropdown Menu */}
+                          {hasMega && (
+                            <MegaMenu
+                              item={item}
+                              isOpen={isMenuOpen}
+                              onClose={handleCloseMega}
+                            />
+                          )}
+                        </li>
 
-                        {/* Separator Line */}
+                        {/* Clean Symmetrical Separator Line */}
                         {index < navigation.mainNav.length - 1 && (
-                          <div className="hidden xl:block w-[1px] h-4 xl:h-5 bg-gray-200 mx-0.5 shrink-0" aria-hidden="true" />
+                          <li aria-hidden="true" className="hidden lg:flex items-center">
+                            <span className="w-[1px] h-3.5 bg-slate-200 shrink-0" />
+                          </li>
                         )}
-                      </li>
+                      </Fragment>
                     );
                   })}
                 </ul>
               </nav>
 
-              {/* ─── Phone + Mobile Toggle ─── */}
-              <div className="flex items-center gap-1 sm:gap-2 lg:gap-1 xl:gap-2 ml-auto lg:ml-0 shrink-0">
+              {/* ─── Request Quote CTA + Mobile Toggle ─── */}
+              <div className="flex items-center gap-1.5 sm:gap-2 ml-auto lg:ml-0 shrink-0">
 
-                {/* Phone — Desktop only */}
-                <a
-                  href={`tel:${navigation.phone}`}
+                {/* Request Quote CTA — Tablet & Desktop */}
+                <Link
+                  href={navigation.ctaHref || '/request-quote/#quote-form'}
                   className="
-                    hidden xl:inline-flex items-center gap-2
-                    px-3 xl:px-4 py-2 rounded-full cursor-pointer
-                    text-honeywell-navy
-                    hover:bg-slate-50
-                    transition-colors duration-200 font-body
-                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:ring-offset-2 focus-visible:rounded-full
-                    group
+                    group hidden sm:inline-flex items-center gap-1.5 lg:gap-2
+                    h-[34px] sm:h-[36px] lg:h-[38px] xl:h-[40px]
+                    px-3.5 sm:px-4 lg:px-4.5 xl:px-5 rounded-full cursor-pointer
+                    text-white bg-honeywell-red hover:bg-[#C41220]
+                    shadow-[0_2px_8px_-2px_rgba(227,27,35,0.35)] hover:shadow-[0_4px_16px_-2px_rgba(227,27,35,0.45)]
+                    transition-all duration-200 active:scale-[0.98] font-body
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red focus-visible:ring-offset-2
                   "
-                  aria-label={`Call us at ${navigation.phoneDisplay}`}
+                  aria-label={navigation.ctaLabel || 'Request Quote'}
                 >
-                  <span className="
-                    flex items-center justify-center w-8 h-8 rounded-full
-                    bg-honeywell-navy/[0.06] group-hover:bg-honeywell-red/10
-                    transition-colors duration-200
-                  ">
-                    <Phone
-                      className="w-[15px] h-[15px] text-honeywell-navy group-hover:text-honeywell-red transition-colors duration-200"
-                      strokeWidth={2}
-                      aria-hidden="true"
-                    />
+                  <span className="text-[12px] sm:text-[12.5px] lg:text-[13px] xl:text-[14px] font-semibold tracking-wide whitespace-nowrap font-body">
+                    {navigation.ctaLabel || 'Request Quote'}
                   </span>
-                  <span className="text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] font-medium tracking-[0.01em] font-body text-honeywell-navy group-hover:text-honeywell-navy">
-                    {navigation.phoneDisplay}
-                  </span>
-                </a>
+                  <ArrowRight
+                    className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-white transition-transform duration-200 group-hover:translate-x-0.5"
+                    strokeWidth={2.2}
+                    aria-hidden="true"
+                  />
+                </Link>
 
-                {/* Removed Request Quote CTA from header */}
-
-                {/* Mobile Menu Toggle */}
+                {/* Mobile Menu Toggle (Mobile & Tablet Portrait < 1024px) */}
                 <button
                   type="button"
                   onClick={() => setIsMobileMenuOpen(true)}
                   aria-label="Open navigation menu"
                   aria-expanded={isMobileMenuOpen}
                   className="
-                    xl:hidden p-2.5 rounded-full cursor-pointer
+                    lg:hidden p-2 sm:p-2.5 rounded-full cursor-pointer
                     text-honeywell-navy hover:bg-slate-100
                     border border-slate-200
                     transition-colors duration-200

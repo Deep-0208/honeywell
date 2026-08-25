@@ -67,22 +67,25 @@ export function WhyChooseUsSection() {
         {/* CTA group */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 md:mt-12">
           <Button
-            href="/contact-us"
+            href="/request-quote/#quote-form"
             variant="primary"
             size="lg"
             rightIcon={<ArrowRight className="w-5 h-5" />}
+            className="shadow-md font-bold tracking-wide"
           >
-            Contact Us
+            Request A Quote
           </Button>
           <Button
-            href="/contact-us"
-            variant="ghost"
+            href="/contact-us/"
+            variant="outline"
             size="lg"
+            rightIcon={<ArrowRight className="w-5 h-5" />}
           >
-            Get In Touch
+            Speak With Engineers
           </Button>
         </div>
       </Container>
     </Section>
   );
 }
+

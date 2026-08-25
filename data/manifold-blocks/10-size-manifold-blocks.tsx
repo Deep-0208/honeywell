@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Check,
-  Settings,
-  Box,
-  Layers,
-  Activity,
-  ArrowRight
-} from 'lucide-react';
+
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const ng16ManifoldBlocksData: ProductPageData = {
@@ -28,9 +21,8 @@ export const ng16ManifoldBlocksData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Manifold Blocks', href: '/products/manifold-blocks' },
-      { label: '10 Size Manifold Blocks', href: '/products/manifold-blocks/10-size-manifold-blocks' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Manifold Blocks', href: '/products/manifold-blocks/' },
     ],
     currentPage: '10 Size Manifold Blocks',
     subtitle: 'NG16 / 10-Size Manifolds',
@@ -38,11 +30,11 @@ export const ng16ManifoldBlocksData: ProductPageData = {
     description: 'When the job demands serious flow and serious force. We manufacture heavy-duty NG16 (CETOP 7 / 10-Size) manifold blocks — the correct specification for high-flow industrial hydraulic circuits up to 250 LPM.',
     primaryCta: {
       label: 'ORDER NG16 BLOCKS',
-      href: '/request-quote/',
+      href: '/request-quote/#quote-form',
     },
     secondaryCta: {
       label: 'DOWNLOAD DATASHEET',
-      href: '/resources/downloads/',
+      href: '/request-quote/#quote-form',
     },
     image: {
       src: '/images/products/manifold-blocks/10-size-manifold-block-ng16.webp',
@@ -144,7 +136,7 @@ export const ng16ManifoldBlocksData: ProductPageData = {
     tableTitle: 'NG16 Technical Data',
     primaryCta: {
       label: 'REQUEST QUOTE',
-      href: '/request-quote/',
+      href: '/request-quote/#quote-form',
     },
     secondaryCta: {
       label: 'CONTACT ENGINEERING',
@@ -243,7 +235,7 @@ export const ng16ManifoldBlocksData: ProductPageData = {
     title: 'Need NG16 subplates in stock with fast delivery?',
     description: 'The correct specification for high-flow industrial hydraulic circuits.',
     primaryCtaText: 'ORDER NG16 BLOCKS',
-    primaryCtaHref: '/request-quote/',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Submit Circuit Schematic',
     secondaryCtaHref: '/contact-us/',
   }

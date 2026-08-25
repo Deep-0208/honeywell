@@ -32,12 +32,25 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
 
+# temporary files
+scratch/
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
-.vercel
+# legacy website reference assets
+legacy-website/
+/legacy-website/
+
+# skills
+skills/
+/skills/
+
+# scripts
+scripts/
+/scripts/

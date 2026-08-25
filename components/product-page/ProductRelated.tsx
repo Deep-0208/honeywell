@@ -11,14 +11,13 @@ import type { RelatedProductsData } from './types';
  * Section header with "Browse all products" link and 3-column grid
  * using existing ProductCard component.
  */
-export function ProductRelated({
-  heading = 'Related Products',
+export function ProductRelated({ heading = 'Related Products',
   description,
   browseAllHref = '/products',
   items,
-}: RelatedProductsData) {
+  bg = 'gray' }: RelatedProductsData & { bg?: 'white' | 'gray' }) {
   return (
-    <Section aria-labelledby="related-products-heading" bg="gray" id="related-products">
+    <Section aria-labelledby="related-products-heading" bg={bg} id="related-products">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Heading

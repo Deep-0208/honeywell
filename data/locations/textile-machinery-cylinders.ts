@@ -4,11 +4,11 @@ export const textileMachineryData: LocationPageData = {
   seo: {
     title: 'Textile Machinery Hydraulic Cylinders Surat | Honeywell',
     description: 'Zero-leakage hydraulic cylinders for textile processing machinery in Surat & South Gujarat. High-speed, judder-free actuation for stenters & folding machines.',
-    canonical: 'https://www.honeywellhydraulics.com/locations/gujarat/textile-machinery-cylinders/',
+    canonical: 'https://honeywellhydraulics.in/locations/gujarat/textile-machinery-cylinders/',
     openGraph: {
       title: 'Textile Machinery Hydraulic Cylinders in Surat & South Gujarat',
       description: 'Zero-leakage hydraulic cylinders for textile processing machinery in Surat & South Gujarat. High-speed, judder-free actuation for stenters & folding machines.',
-      url: 'https://www.honeywellhydraulics.com/locations/gujarat/textile-machinery-cylinders/',
+      url: 'https://honeywellhydraulics.in/locations/gujarat/textile-machinery-cylinders/',
       images: [
         {
           url: '/images/locations/textile-machinery-cylinders-surat.jpg',
@@ -37,7 +37,7 @@ export const textileMachineryData: LocationPageData = {
     '@graph': [
       {
         '@type': 'Service',
-        '@id': 'https://www.honeywellhydraulics.com/locations/gujarat/textile-machinery-cylinders/#service',
+        '@id': 'https://honeywellhydraulics.in/locations/gujarat/textile-machinery-cylinders/#service',
         serviceType: 'Textile Machinery Hydraulic Solutions',
         provider: {
           '@type': 'ManufacturingBusiness',
@@ -60,17 +60,17 @@ export const textileMachineryData: LocationPageData = {
       },
       {
         '@type': 'WebPage',
-        '@id': 'https://www.honeywellhydraulics.com/locations/gujarat/textile-machinery-cylinders/',
+        '@id': 'https://honeywellhydraulics.in/locations/gujarat/textile-machinery-cylinders/',
         name: 'Textile Machinery Hydraulic Cylinders in Surat | Honeywell',
-        url: 'https://www.honeywellhydraulics.com/locations/gujarat/textile-machinery-cylinders/'
+        url: 'https://honeywellhydraulics.in/locations/gujarat/textile-machinery-cylinders/'
       },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.honeywellhydraulics.com/' },
-          { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.honeywellhydraulics.com/locations/' },
-          { '@type': 'ListItem', position: 3, name: 'Gujarat', item: 'https://www.honeywellhydraulics.com/locations/gujarat/' },
-          { '@type': 'ListItem', position: 4, name: 'Textile Machinery Cylinders', item: 'https://www.honeywellhydraulics.com/locations/gujarat/textile-machinery-cylinders/' }
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://honeywellhydraulics.in/' },
+          { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://honeywellhydraulics.in/locations/' },
+          { '@type': 'ListItem', position: 3, name: 'Gujarat', item: 'https://honeywellhydraulics.in/locations/gujarat/' },
+          { '@type': 'ListItem', position: 4, name: 'Textile Machinery Cylinders', item: 'https://honeywellhydraulics.in/locations/gujarat/textile-machinery-cylinders/' }
         ]
       },
       {
@@ -93,7 +93,7 @@ export const textileMachineryData: LocationPageData = {
       alt: 'Hydraulic cylinders operating in a textile processing plant in Surat',
     },
     ctas: {
-      primary: { label: 'REQUEST A QUOTE FOR TEXTILES', href: '/request-quote/' },
+      primary: { label: 'REQUEST A QUOTE FOR TEXTILES', href: '/request-quote/#quote-form' },
       secondary: { label: 'VIEW TEXTILE CYLINDERS', href: '/products/hydraulic-cylinders/' },
     },
   },
@@ -162,7 +162,7 @@ export const textileMachineryData: LocationPageData = {
         id: 'vapi-textiles',
         title: 'Technical Textiles (Vapi)',
         description: 'Robust hydraulic power packs and actuation systems for continuous production of industrial fabrics.',
-        href: '/industries/special-purpose-machines/',
+        href: '/locations/vapi/',
       },
     ],
   },

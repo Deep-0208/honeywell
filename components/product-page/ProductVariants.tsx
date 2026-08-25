@@ -11,9 +11,9 @@ import type { VariantsData } from './types';
  * 3-column grid with IconBox, title, description, and checklist highlights.
  * Hover effects: shadow-float, -translate-y-1.5, red top-border.
  */
-export function ProductVariants({ heading, description, items }: VariantsData) {
+export function ProductVariants({ heading, description, items , bg = 'gray' }: VariantsData & { bg?: 'white' | 'gray' }) {
   return (
-    <Section aria-labelledby="product-variants-heading" bg="gray" id="product-variants">
+    <Section aria-labelledby="product-variants-heading" bg={bg} id="product-variants">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Heading
@@ -34,7 +34,7 @@ export function ProductVariants({ heading, description, items }: VariantsData) {
           {items.map((variant, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-slate-200 p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red flex flex-col"
+              className="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 md:p-8 transition-all duration-350 ease-premium hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red flex flex-col"
             >
               <div className="mb-6">
                 <IconBox icon={variant.icon} variant="secondary" size="lg" />

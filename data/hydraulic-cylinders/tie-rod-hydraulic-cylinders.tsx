@@ -46,7 +46,7 @@ export const tieRodCylinderData: ProductPageData = {
       src: '/images/products/hydraulic-cylinders/tie-rod-hydraulic-cylinder-manufacturer.webp',
       alt: 'Tie Rod Hydraulic Cylinder Manufacturer in Ahmedabad - NFPA tie rod cylinder by Honeywell Hydraulics',
     },
-    primaryCta: { label: 'REQUEST OEM QUOTE', href: '/request-quote/' },
+    primaryCta: { label: 'REQUEST OEM QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW TECHNICAL SPECS', href: '#technical-specifications' },
     keySpecs: [
       { label: 'Bore', value: '40mm - 250mm' },
@@ -122,7 +122,7 @@ export const tieRodCylinderData: ProductPageData = {
       { parameter: 'Sealing Options', value: 'Polyurethane (Standard), Viton (High-Temp), PTFE (Low-Friction)' },
       { parameter: 'Cushioning', value: 'Adjustable internal cushioning available on both head and cap ends' },
     ],
-    primaryCta: { label: 'REQUEST OEM PRICING', href: '/request-quote/' },
+    primaryCta: { label: 'REQUEST OEM PRICING', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'DISCUSS SIZING', href: '/contact-us/' },
   },
 
@@ -151,25 +151,25 @@ export const tieRodCylinderData: ProductPageData = {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Automotive OEM',
         description: 'Providing high-speed, highly serviceable clamping cylinders for robotic welding stations and assembly lines.',
-        href: '/industries/tie-rod-hydraulic-cylinder-manufacturer-in-gujarat-nfpa-standard'
+        href: '#'
       },
       {
         icon: <FaBox className="w-6 h-6" />,
         name: 'Plastic Processing',
         description: 'Supplying standardized core-pull and ejector cylinders for injection moulding machines.',
-        href: '/industries/plastic-processing'
+        href: '#'
       },
       {
         icon: <FaWrench className="w-6 h-6" />,
         name: 'Machine Tool Builders',
         description: 'Delivering zero-distortion, low-friction actuation for automated CNC loading and unloading gantries.',
-        href: '/industries/machine-tool-builders'
+        href: '#'
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
         name: 'Packaging & Automation',
         description: 'Engineering rapid-cycle cylinders for high-speed corrugated box manufacturing and palletizing robots.',
-        href: '/industries/packaging-automation'
+        href: '#'
       },
     ],
   },
@@ -310,7 +310,7 @@ export const tieRodCylinderData: ProductPageData = {
     title: 'Need NFPA-standard tie rod hydraulic cylinders?',
     description: 'Field-serviceable design with replaceable seals and modular construction. Standard bore sizes ship within 7 working days.',
     primaryCtaText: 'REQUEST A QUOTE',
-    primaryCtaHref: '/request-quote/',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Talk to an Engineer',
     secondaryCtaHref: '/contact-us/',
   },

@@ -7,7 +7,6 @@ import {
   MapPin,
   ArrowRight,
 } from 'lucide-react';
-import { WhatsAppFloatingCTA } from '@/components/ui/WhatsAppFloatingCTA';
 import { COMPANY_INFO } from '@/lib/constants';
 
 /* ─────────────────────────────────────────────
@@ -30,19 +29,26 @@ const footerColumns = [
     links: [
       { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders/' },
       { label: 'Hydraulic Power Packs', href: '/products/hydraulic-power-packs/' },
-      { label: 'Hydraulic Accessories', href: '#' },
+      { label: 'Manifold Blocks', href: '/products/manifold-blocks/' },
+      { label: 'Custom Cylinders', href: '/products/hydraulic-cylinders/custom-hydraulic-cylinders/' },
     ],
   },
-
   {
-    heading: 'Industries',
+    heading: 'Cylinder Types',
     links: [
-      { label: 'Injection Moulding', href: '#' },
-      { label: 'Automotive', href: '#' },
-      { label: 'Steel & Metallurgy', href: '#' },
-      { label: 'Construction Equipment', href: '#' },
-      { label: 'Material Handling', href: '#' },
-      { label: 'Special Purpose Machines', href: '#' },
+      { label: 'Welded Cylinders', href: '/products/hydraulic-cylinders/welded-hydraulic-cylinders/' },
+      { label: 'Tie Rod Cylinders', href: '/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/' },
+      { label: 'Double Acting Cylinders', href: '/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/' },
+      { label: 'Telescopic Cylinders', href: '/products/hydraulic-cylinders/telescopic-hydraulic-cylinders/' },
+    ],
+  },
+  {
+    heading: 'Service Areas',
+    links: [
+      { label: 'Gujarat Hub', href: '/locations/gujarat/' },
+      { label: 'Maharashtra Hub', href: '/locations/maharashtra/' },
+      { label: 'Rajasthan Hub', href: '/locations/rajasthan/' },
+      { label: 'All Service Areas', href: '/locations/' },
     ],
   },
   {
@@ -50,6 +56,8 @@ const footerColumns = [
     links: [
       { label: 'About Us', href: '/about-us/' },
       { label: 'Manufacturing Facility', href: '/manufacturing-facility/' },
+      { label: 'Product & Plant Gallery', href: '/gallery/' },
+      { label: 'Request a Quote', href: '/request-quote/#quote-form' },
       { label: 'Contact Us', href: '/contact-us/' },
     ],
   },
@@ -57,11 +65,14 @@ const footerColumns = [
 
 const locationLinks = [
   { label: 'Gujarat', href: '/locations/gujarat/' },
+  { label: 'Ahmedabad', href: '/locations/ahmedabad/' },
+  { label: 'Surat', href: '/locations/surat/' },
+  { label: 'Vadodara', href: '/locations/vadodara/' },
+  { label: 'Rajkot', href: '/locations/rajkot/' },
   { label: 'Maharashtra', href: '/locations/maharashtra/' },
-  { label: 'Indore', href: '/locations/indore/' },
-  { label: 'West Bengal', href: '/locations/west-bengal/' },
   { label: 'Rajasthan', href: '/locations/rajasthan/' },
-  { label: 'Pan India', href: '/locations/india/' },
+  { label: 'West Bengal', href: '/locations/west-bengal/' },
+  { label: 'Pan India', href: '/locations/' },
 ];
 
 const trustBadges = [
@@ -89,17 +100,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <>
-      {/* ═══════════════════════════════════════
-          WHATSAPP FLOATING CTA
-          ═══════════════════════════════════════ */}
-      <WhatsAppFloatingCTA href={NAP.whatsapp} />
-
-      <footer
-        className="bg-brand-surfaceGray border-t border-slate-200"
-        role="contentinfo"
-        aria-label="Site footer"
-      >
+    <footer
+      className="bg-brand-surfaceGray border-t border-slate-200"
+      role="contentinfo"
+      aria-label="Site footer"
+    >
         {/* ═══════════════════════════════════════
             TRUST STRIP
             ═══════════════════════════════════════ */}
@@ -190,7 +195,7 @@ export default function Footer() {
 
               {/* Contact Us CTA */}
               <Link
-                href="/contact-us"
+                href="/contact-us/"
                 className="
                   inline-flex items-center gap-2 mt-6
                   px-5 py-2.5 rounded-sm
@@ -278,16 +283,16 @@ export default function Footer() {
               </p>
 
               {/* Legal + Social */}
-              <div className="flex items-center gap-6">
-                <nav aria-label="Legal navigation" className="flex items-center gap-4">
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6">
+                <nav aria-label="Legal navigation" className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
                   <Link
-                    href="/privacy-policy"
+                    href="/privacy-policy/"
                     className="text-xs text-[#94A3B8] hover:text-white transition-colors font-body focus-visible:outline-none focus-visible:underline"
                   >
                     Privacy Policy
                   </Link>
                   <Link
-                    href="/terms"
+                    href="/terms/"
                     className="text-xs text-[#94A3B8] hover:text-white transition-colors font-body focus-visible:outline-none focus-visible:underline"
                   >
                     Terms
@@ -301,7 +306,7 @@ export default function Footer() {
                 </nav>
 
                 {/* Social icons — inline SVG for brand accuracy */}
-                <div className="flex items-center gap-3" aria-label="Social media links">
+                <div className="flex items-center justify-center gap-2 sm:gap-3" aria-label="Social media links">
                   {/* LinkedIn */}
                   <a
                     href={COMPANY_INFO.socialUrls.linkedin}
@@ -344,7 +349,6 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-    </>
   );
 }
 

@@ -12,14 +12,13 @@ import type { ServicesData } from './types';
  * Section header, 2-column grid of horizontal service cards
  * (icon + title + description), and bottom centered CTA button.
  */
-export function ProductServices({
-  heading = 'The Engineering Advantage',
+export function ProductServices({ heading = 'The Engineering Advantage',
   description,
   items,
   cta,
-}: ServicesData) {
+  bg = 'white' }: ServicesData & { bg?: 'white' | 'gray' }) {
   return (
-    <Section aria-labelledby="engineering-advantage-heading" bg="white" id="engineering-advantage">
+    <Section aria-labelledby="engineering-advantage-heading" bg={bg} id="engineering-advantage">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Heading

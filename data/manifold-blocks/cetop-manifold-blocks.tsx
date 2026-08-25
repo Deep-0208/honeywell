@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Check,
-  Settings,
-  Box,
-  Layers,
-  ArrowRight
-} from 'lucide-react';
+import { Check } from 'lucide-react';
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const cetopManifoldBlocksData: ProductPageData = {
@@ -27,9 +21,8 @@ export const cetopManifoldBlocksData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Manifold Blocks', href: '/products/manifold-blocks' },
-      { label: 'Cetop Manifold Blocks', href: '/products/manifold-blocks/cetop-manifold-blocks' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Manifold Blocks', href: '/products/manifold-blocks/' },
     ],
     currentPage: 'Cetop Manifold Blocks',
     subtitle: 'CETOP Manifold Blocks',
@@ -37,11 +30,11 @@ export const cetopManifoldBlocksData: ProductPageData = {
     description: 'Standardized, zero-tolerance valve interfaces for universal compatibility. We machine ISO 4401-compliant subplates in CETOP 3, 5, 7, and 8 sizes to guarantee bolt-pattern and port compatibility with all major directional control valves.',
     primaryCta: {
       label: 'ORDER CETOP BLOCKS',
-      href: '/request-quote/',
+      href: '/request-quote/#quote-form',
     },
     secondaryCta: {
       label: 'DOWNLOAD DRAWINGS',
-      href: '/resources/downloads/',
+      href: '/request-quote/#quote-form',
     },
     image: {
       src: '/images/products/manifold-blocks/cetop-manifold-block-iso-4401.webp',
@@ -157,7 +150,7 @@ export const cetopManifoldBlocksData: ProductPageData = {
     tableTitle: 'CETOP Block Specs',
     primaryCta: {
       label: 'REQUEST OEM QUOTE',
-      href: '/request-quote/',
+      href: '/request-quote/#quote-form',
     },
     secondaryCta: {
       label: 'CONSULT ENGINEERING',
@@ -287,7 +280,7 @@ export const cetopManifoldBlocksData: ProductPageData = {
     title: 'Need OEM volume supply with guaranteed lead times?',
     description: 'Eliminate valve interface incompatibility and specify precisely manufactured, ISO 4401 certified CETOP subplates from Honeywell Hydraulics.',
     primaryCtaText: 'REQUEST OEM QUOTE',
-    primaryCtaHref: '/request-quote/',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Consult Engineering',
     secondaryCtaHref: '/contact-us/',
   }

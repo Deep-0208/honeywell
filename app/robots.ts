@@ -2,61 +2,32 @@ import { MetadataRoute } from 'next';
 import { COMPANY_INFO } from '@/lib/constants';
 
 /**
- * robots.txt configuration
+ * robots.txt configuration — Honeywell Hydraulics (Production Ready)
  *
- * ⚠️ MAINTENANCE MODE — ALL bots are currently BLOCKED.
- * The site is under active development. When the site is declared
- * "production-ready" by the owner, UNBLOCK the following:
- *   - Googlebot → allow: '/'
- *   - Googlebot-Image → allow: '/'
- *   - Bingbot → allow: '/'
- *   - GPTBot → allow: '/'
- *   - Google-Extended → allow: '/'
- *   - ClaudeBot → allow: '/'
- *   - PerplexityBot → allow: '/'
- *   - Remove the wildcard disallow
- *
- * Keep blocked permanently: AhrefsBot, SemrushBot, MJ12bot, DotBot
+ * Search engines (Googlebot, Bingbot) and AI search engines (GPTBot,
+ * ClaudeBot, PerplexityBot, Google-Extended) are FULLY ALLOWED.
+ * Commercial backlink scrapers remain blocked.
  */
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // ── MAINTENANCE MODE: Block all crawlers ──
+      // ── General search engines & users ──
       {
         userAgent: '*',
-        disallow: '/',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/thank-you/'],
       },
-      // ── Search engine crawlers — BLOCKED until production ──
+      // ── Primary Search Engine Crawlers ──
       {
-        userAgent: 'Googlebot',
-        disallow: '/',
+        userAgent: ['Googlebot', 'Googlebot-Image', 'Bingbot'],
+        allow: '/',
       },
+      // ── AI Answer & Search Engine Crawlers ──
       {
-        userAgent: 'Googlebot-Image',
-        disallow: '/',
+        userAgent: ['GPTBot', 'OAI-SearchBot', 'Google-Extended', 'ClaudeBot', 'PerplexityBot', 'Applebot-Extended'],
+        allow: '/',
       },
-      {
-        userAgent: 'Bingbot',
-        disallow: '/',
-      },
-      // ── AI crawlers — BLOCKED until production ──
-      {
-        userAgent: 'GPTBot',
-        disallow: '/',
-      },
-      {
-        userAgent: 'Google-Extended',
-        disallow: '/',
-      },
-      {
-        userAgent: 'ClaudeBot',
-        disallow: '/',
-      },
-      {
-        userAgent: 'PerplexityBot',
-        disallow: '/',
-      },
-      // ── Scraper bots — ALWAYS blocked ──
+      // ── Commercial Scraper Bots — Blocked ──
       {
         userAgent: [
           'AhrefsBot',

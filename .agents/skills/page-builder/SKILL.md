@@ -63,20 +63,6 @@ Ask the user for:
 4. **Primary keyword** (auto-suggest based on page name)
 5. **Section overrides** (optional — add/remove from default section list)
 
-### Step 3 — Homepage Design Validation (MANDATORY)
-
-Before generating ANY new component, require the AI to:
-- Search the homepage
-- Reuse the existing component
-- Copy the same styling
-- Reuse the same animations
-- Reuse spacing
-- Reuse typography
-- Reuse button variants
-- Reuse card variants
-
-Only create a new component if none exists.
-
 ---
 
 ## File Generation
@@ -88,9 +74,8 @@ For each page, generate these files:
 
 Must include:
 - `import type { Metadata } from 'next'`
-- **Completely data-driven structure**: The page should be almost entirely presentation-only, passing data to section components (e.g., `<LocationHero data={locationData.hero} />`).
-- SEO metadata via `buildMetadata()` from `@/lib/seo` powered by the data layer.
-- JSON-LD schemas (Breadcrumb + WebPage minimum, plus page-type-specific schemas) powered by the data layer.
+- SEO metadata via `buildMetadata()` from `@/lib/seo`
+- JSON-LD schemas (Breadcrumb + WebPage minimum, plus page-type-specific schemas)
 - Server Component (no `'use client'` unless section requires interactivity)
 - All section components imported and rendered in correct order
 - Comments with section numbering: `{/* 01 — Hero */}`
@@ -99,11 +84,9 @@ Must include:
 `data/<page-name>.ts`
 
 Must include:
-- **A single strongly typed object** (e.g., `export const gujaratFacility = { ... }`) that centralizes all page content.
-- **Centralized SEO metadata**: SEO Title, Meta Description, OpenGraph, Twitter Card, Canonical, Keywords, Breadcrumb data, and Schema data MUST be in this object.
-- All static content structured by section (e.g., hero, benefits, industries, products, faqs).
-- TypeScript interfaces for data structures.
-- Export the single named constant object.
+- All static content (FAQs, features, specs, stats)
+- TypeScript interfaces for data structures
+- Export named constants (not default exports)
 
 ### 3. Section Components (if new patterns needed)
 `components/<page-category>/<SectionName>.tsx`
@@ -116,15 +99,13 @@ Must follow:
 - Red divider under headings: `<div className="w-16 h-1 bg-honeywell-red rounded-full" />`
 
 ### 4. Image Requirements
-Append to `REQUIRED_IMAGES.md`. For every required image, specify:
-Filename, Alt text, Caption, Title attribute, Recommended size, Aspect ratio, WebP format, Lazy loading, Priority (Hero only).
-
+Append to `REQUIRED_IMAGES.md`:
 ```markdown
 ## <Page Name> Page
 
-| Asset | Path | Alt Text | Caption | Title | Size | Ratio | Format | Loading | Priority |
-|---|---|---|---|---|---|---|---|---|---|
-| <name> | `/images/<path>` | <alt text> | <caption> | <title> | <size> | <ratio> | WebP | lazy/eager | High/Medium/Low |
+| Asset | Status | Source | Path | Alt Text | Priority |
+|---|---|---|---|---|---|
+| <image name> | ❌ REQUIRED | Legacy or generate | `/images/<path>` | <SEO alt text> | High/Medium/Low |
 ```
 
 ---
@@ -218,18 +199,10 @@ See `references/section-library.md` for the complete catalog of 30+ reusable sec
 - `Article` — resource pages only
 
 ### Internal Linking
-Every location (and other) page must include contextual links to:
-- Homepage
-- Product Hub
-- Hydraulic Cylinders
-- Hydraulic Power Packs
-- Industry Pages
-- Application Pages
-- About
-- Contact
-- Resources
-- Blogs
-This improves crawlability and topical authority.
+- Breadcrumb navigation in hero
+- 3+ internal links to related pages
+- Section CTAs linking to conversion pages (`/request-quote`, `/contact-us`)
+- Related product/industry cross-links
 
 ### Heading Hierarchy
 ```
@@ -238,27 +211,6 @@ h1 — Page title (Hero section only, ONE per page)
     h3 — Sub-items (feature titles, card titles)
       h4 — Rarely needed
 ```
-
----
-
-## Performance Requirements
-Specify that the page must:
-- Use Server Components where possible
-- Avoid unnecessary client components
-- Optimize images
-- Minimize bundle size
-- Prevent layout shift (CLS)
-- Maintain homepage performance standards
-
-## Accessibility Requirements
-Ensure:
-- Semantic HTML
-- Single H1
-- Proper heading hierarchy
-- Keyboard-accessible interactive elements
-- ARIA labels where needed
-- Sufficient color contrast
-- Decorative images marked appropriately
 
 ---
 
@@ -297,25 +249,74 @@ Never two adjacent sections with the same background.
 
 ---
 
+## Strict Styling & UI Rules (CRITICAL)
+
+To maintain pixel-perfect consistency with existing pages, you MUST enforce the following styling rules:
+
+1. **Text Justification (Paragraphs):** 
+   - Body paragraphs (`<p>`) under H2/H3 headings must use `text-justify` alongside `leading-relaxed` for a premium, block-text look.
+   - Example: `<p className="text-brand-steelGray text-sm mt-2 leading-relaxed text-justify">`
+
+2. **Full-Fit Container Images:**
+   - Never use fixed width/height on images. Images must perfectly fill their container.
+   - Wrap the `<Image>` in a relative container with an aspect ratio and hidden overflow.
+   - Example: 
+     ```tsx
+     <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg border border-slate-200">
+       <Image src="..." alt="..." fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+     </div>
+     ```
+
+3. **H2 Red Underline:**
+   - Do NOT manually build the red underline `<div>`.
+   - Use the built-in `underline` prop on the `<Heading>` component.
+   - Example: `<Heading variant="section" as="h2" underline="center">` (or `underline="left"`).
+
+4. **Card Hover Effects:**
+   - Always use the standard `@/components/cards/` (ProductCard, IndustryCard, etc.) when possible.
+   - If building a custom card, it MUST have standard hover physics: `className="... transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group"`
+
+5. **Process / Progressive Steps:**
+   - When building a "Manufacturing Process" or "How it Works" section, stack the steps cleanly.
+   - Use an `<IconBox>` for the step icon, followed by an H3 and a `text-justify` paragraph.
+   - Use vertical spacing (`space-y-6` or `space-y-8`) to create a clear progressive flow down the page.
+
+6. **Hero Section Blueprint (MANDATORY for new templates):**
+   - Must use this exact background decorative wrapper:
+     ```tsx
+     <div className="relative bg-white pt-2 pb-16 md:pt-4 md:pb-24 overflow-hidden border-b border-slate-200">
+       <div className="absolute inset-0 bg-brand-surfaceGray" aria-hidden="true" />
+       <div className="absolute top-0 right-0 w-3/4 h-full bg-gradient-to-l from-white to-transparent" aria-hidden="true" />
+       <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red/5 skew-x-[-12deg] translate-x-20 -z-10 hidden lg:block" />
+       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay" aria-hidden="true" />
+       <Container> {/* Content */} </Container>
+     </div>
+     ```
+   - Pre-heading label must use: `inline-block py-1 px-3 rounded-full bg-white border border-slate-200 text-honeywell-red font-bold tracking-widest text-xs uppercase font-body shadow-sm`.
+   - Hero Heading must use: `text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-honeywell-navy leading-[1.1] mb-6`.
+
+7. **Buttons & CTAs:**
+   - Always include an `<ArrowRight className="w-5 h-5 ml-2" />` inside the primary Hero/Section buttons for high CTR.
+   - Example: `<Button variant="primary" size="lg">REQUEST A QUOTE <ArrowRight className="w-5 h-5 ml-2" /></Button>`
+
+---
+
 ## Post-Generation Checklist
 
 After generating all files, verify:
 
-- [ ] `npm run type-check` passes and `page.tsx` compiles without errors
-- [ ] No hydration warnings and no console errors
-- [ ] Mobile responsiveness is verified
-- [ ] Lighthouse scores meet standards
-- [ ] Schema validation passes
-- [ ] Internal link integrity is confirmed
-- [ ] Metadata rendering is correct
-- [ ] Design consistency with homepage is maintained
+- [ ] `page.tsx` compiles without TypeScript errors
+- [ ] All imports resolve to existing components
 - [ ] Single H1 in Hero section
+- [ ] Metadata title is 50-60 characters
+- [ ] Metadata description is 150-160 characters
 - [ ] JSON-LD includes BreadcrumbList + WebPage
 - [ ] All sections use `<Section>` + `<Container>` + `<Heading>`
 - [ ] Backgrounds alternate white/gray
-- [ ] Data file exports a single centralized object with SEO + content
-- [ ] Image requirements appended to `REQUIRED_IMAGES.md` with all new columns
-- [ ] Comprehensive contextual internal links present
+- [ ] Data file exports named constants
+- [ ] Image requirements appended to REQUIRED_IMAGES.md
+- [ ] 3+ internal links present
+- [ ] Mobile-first classes on all elements
 - [ ] No `'use client'` unless required for interactivity
 
 ---

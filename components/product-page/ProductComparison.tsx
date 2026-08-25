@@ -11,15 +11,18 @@ import type { ComparisonData } from './types';
  * Highlight-able cells for competitive advantages.
  * Optional footnote below table.
  */
-export function ProductComparison({
-  heading,
+export function ProductComparison({ heading,
   description,
   columns,
   rows,
   footnote,
-}: ComparisonData) {
+  bg = 'gray' }: ComparisonData & { bg?: 'white' | 'gray' }) {
+  const hasLeadingFeatureCol = rows.length > 0 && columns.length === rows[0].values.length + 1;
+  const firstColHeader = hasLeadingFeatureCol ? columns[0] : { heading: 'Feature' };
+  const valueColumns = hasLeadingFeatureCol ? columns.slice(1) : columns;
+
   return (
-    <Section aria-labelledby="comparison-heading" bg="gray" id="comparison">
+    <Section aria-labelledby="comparison-heading" bg={bg} id="comparison">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Heading
@@ -41,9 +44,18 @@ export function ProductComparison({
             <thead>
               <tr className="border-b border-slate-200 bg-honeywell-navy text-white">
                 <th className="px-6 py-4 font-display font-bold text-lg w-1/4">
-                  Feature
+                  {firstColHeader.href ? (
+                    <Link
+                      href={firstColHeader.href}
+                      className="hover:text-red-200 transition-colors underline decoration-white/30 underline-offset-4"
+                    >
+                      {firstColHeader.heading}
+                    </Link>
+                  ) : (
+                    firstColHeader.heading
+                  )}
                 </th>
-                {columns.map((col, idx) => (
+                {valueColumns.map((col, idx) => (
                   <th
                     key={idx}
                     className="px-6 py-4 font-display font-bold text-lg border-l border-white/20"

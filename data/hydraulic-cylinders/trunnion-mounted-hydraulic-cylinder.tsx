@@ -7,7 +7,7 @@ import {
   HardHat,
   Scale
 } from 'lucide-react';
-import { FaIndustry, FaBuilding, FaWarehouse, FaTractor } from 'react-icons/fa';
+import { FaIndustry, FaBuilding, FaTractor } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const trunnionMountedCylinderData: ProductPageData = {
@@ -35,14 +35,14 @@ export const trunnionMountedCylinderData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders/' },
     ],
     currentPage: 'Trunnion Mounted Cylinders',
     subtitle: 'Precision Alignment for Heavy Oscillating Loads',
     h1: 'Trunnion Mounted Hydraulic Cylinders',
     description: 'Honeywell Hydraulics manufactures heavy-duty trunnion mounted hydraulic cylinders designed for severe industrial applications requiring rotary or pivoting motion. Engineered with centerline trunnion mounts, these cylinders distribute immense forces evenly, providing exceptional stability and extremely long operating life in steel plants, presses, and construction machinery.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder.webp',
@@ -117,8 +117,8 @@ export const trunnionMountedCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our trunnion mounted cylinders are built using premium materials to endure the harsh realities of heavy industrial applications.',
-    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote' },
-    secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders' },
+    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote/#quote-form' },
+    secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders/' },
     tableTitle: 'Trunnion Mounted Cylinder Specs',
     rows: [
       { parameter: 'Bore Diameter', value: '40 mm to 500 mm' },
@@ -219,25 +219,25 @@ export const trunnionMountedCylinderData: ProductPageData = {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Steel Plants & Mills',
         description: 'Actuation for furnace doors, ladle tilters, and heavy continuous casting equipment.',
-        href: '/industries/trunnion-mounted-hydraulic-cylinder-manufacturer-honeywell-hydraulics',
+        href: '#',
       },
       {
         icon: <HardHat className="w-6 h-6" />,
         name: 'Hydraulic Presses',
         description: 'Tilting mechanisms and specialized pressing automation requiring precise alignment.',
-        href: '/industries/hydraulic-presses',
+        href: '#',
       },
       {
         icon: <FaBuilding className="w-6 h-6" />,
         name: 'Material Handling',
         description: 'Heavy-duty rotary tippers, industrial dumpers, and bulk material unloaders.',
-        href: '/industries/material-handling',
+        href: '#',
       },
       {
         icon: <FaTractor className="w-6 h-6" />,
         name: 'Construction Machinery',
         description: 'High-load articulation for massive mining shovels and specialized earthmoving equipment.',
-        href: '/industries/construction-machinery',
+        href: '#',
       },
     ],
   },
@@ -271,7 +271,7 @@ export const trunnionMountedCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need Custom Trunnion Cylinders for Your Plant?',
       description: 'Our engineers can design and manufacture cylinders based on your specific trunnion placement, pin diameter, and stroke length requirements.',
-      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote' },
+      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },
@@ -342,7 +342,7 @@ export const trunnionMountedCylinderData: ProductPageData = {
         description: 'Heavy-duty pivoting cylinders with forged clevis ends for mobile machinery.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder.webp',
-        href: '/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder',
+        href: '/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder/',
         ctaText: 'View Details',
       },
       {
@@ -350,7 +350,7 @@ export const trunnionMountedCylinderData: ProductPageData = {
         description: 'Rigid mounting cylinders designed for high-force straight-line industrial presses.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder.webp',
-        href: '/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder',
+        href: '/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder/',
         ctaText: 'View Details',
       },
       {
@@ -358,7 +358,7 @@ export const trunnionMountedCylinderData: ProductPageData = {
         description: 'Heavy-duty, compact cylinders designed for extreme industrial and mobile applications.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/welded-hydraulic-cylinders-manufacturer.webp',
-        href: '/products/hydraulic-cylinders/welded-hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/welded-hydraulic-cylinders/',
         ctaText: 'View Details',
       },
     ],

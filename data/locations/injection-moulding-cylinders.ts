@@ -4,11 +4,11 @@ export const injectionMouldingData: LocationPageData = {
   seo: {
     title: 'Injection Moulding Hydraulic Cylinders Gujarat | Honeywell',
     description: 'Specialized hydraulic cylinders for plastic injection moulding machines in Ahmedabad, Sanand & Halol GIDC. High-speed core pull cylinders & custom power packs.',
-    canonical: 'https://www.honeywellhydraulics.com/locations/gujarat/injection-moulding-cylinders/',
+    canonical: 'https://honeywellhydraulics.in/locations/gujarat/injection-moulding-cylinders/',
     openGraph: {
       title: 'Injection Moulding Hydraulic Cylinders & Power Packs in Gujarat',
       description: 'Specialized hydraulic cylinders for plastic injection moulding machines in Ahmedabad, Sanand & Halol GIDC. High-speed core pull cylinders & custom power packs.',
-      url: 'https://www.honeywellhydraulics.com/locations/gujarat/injection-moulding-cylinders/',
+      url: 'https://honeywellhydraulics.in/locations/gujarat/injection-moulding-cylinders/',
       images: [
         {
           url: '/images/locations/injection-moulding-cylinders-gujarat.jpg',
@@ -37,7 +37,7 @@ export const injectionMouldingData: LocationPageData = {
     '@graph': [
       {
         '@type': 'Service',
-        '@id': 'https://www.honeywellhydraulics.com/locations/gujarat/injection-moulding-cylinders/#service',
+        '@id': 'https://honeywellhydraulics.in/locations/gujarat/injection-moulding-cylinders/#service',
         serviceType: 'Injection Moulding Hydraulic Solutions',
         provider: {
           '@type': 'ManufacturingBusiness',
@@ -60,17 +60,17 @@ export const injectionMouldingData: LocationPageData = {
       },
       {
         '@type': 'WebPage',
-        '@id': 'https://www.honeywellhydraulics.com/locations/gujarat/injection-moulding-cylinders/',
+        '@id': 'https://honeywellhydraulics.in/locations/gujarat/injection-moulding-cylinders/',
         name: 'Injection Moulding Hydraulic Cylinders in Gujarat | Honeywell',
-        url: 'https://www.honeywellhydraulics.com/locations/gujarat/injection-moulding-cylinders/'
+        url: 'https://honeywellhydraulics.in/locations/gujarat/injection-moulding-cylinders/'
       },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.honeywellhydraulics.com/' },
-          { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.honeywellhydraulics.com/locations/' },
-          { '@type': 'ListItem', position: 3, name: 'Gujarat', item: 'https://www.honeywellhydraulics.com/locations/gujarat/' },
-          { '@type': 'ListItem', position: 4, name: 'Injection Moulding Cylinders', item: 'https://www.honeywellhydraulics.com/locations/gujarat/injection-moulding-cylinders/' }
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://honeywellhydraulics.in/' },
+          { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://honeywellhydraulics.in/locations/' },
+          { '@type': 'ListItem', position: 3, name: 'Gujarat', item: 'https://honeywellhydraulics.in/locations/gujarat/' },
+          { '@type': 'ListItem', position: 4, name: 'Injection Moulding Cylinders', item: 'https://honeywellhydraulics.in/locations/gujarat/injection-moulding-cylinders/' }
         ]
       },
       {
@@ -93,7 +93,7 @@ export const injectionMouldingData: LocationPageData = {
       alt: 'Hydraulic cylinders operating in a plastic injection moulding machine',
     },
     ctas: {
-      primary: { label: 'REQUEST A QUOTE FOR PLASTICS', href: '/request-quote/' },
+      primary: { label: 'REQUEST A QUOTE FOR PLASTICS', href: '/request-quote/#quote-form' },
       secondary: { label: 'VIEW HYDRAULIC POWER PACKS', href: '/products/hydraulic-power-packs/' },
     },
   },
@@ -150,13 +150,13 @@ export const injectionMouldingData: LocationPageData = {
         id: 'automotive-plastics',
         title: 'Automotive Plastics (Sanand)',
         description: 'High-tonnage clamping cylinders for large-scale injection moulding of automotive bumpers and dashboard components.',
-        href: '/locations/gujarat/ahmedabad/',
+        href: '/locations/ahmedabad/',
       },
       {
         id: 'consumer-goods',
         title: 'Consumer Goods (Halol & Odhav)',
         description: 'High-speed core pull cylinders for rapid, continuous production of consumer plastic goods and packaging.',
-        href: '/industries/special-purpose-machines/',
+        href: '/locations/halol/',
       },
       {
         id: 'extrusion',

@@ -109,9 +109,7 @@ function validate(data: QuoteFormPayload): Errors {
   }
   if (!data.productInterest) errors.productInterest = 'Please select what you\'re looking for.';
   if (!data.requirementDescription.trim()) {
-    errors.requirementDescription = 'Please describe what you need — even a few words help.';
-  } else if (data.requirementDescription.trim().length < 10) {
-    errors.requirementDescription = 'Please add a bit more detail (at least 10 characters).';
+    errors.requirementDescription = 'Please describe what you need.';
   }
   return errors;
 }
@@ -162,19 +160,31 @@ export function QuoteForm() {
     e.preventDefault();
     const validationErrors = validate(formData);
     if (Object.keys(validationErrors).length > 0) {
+      console.warn('[Form/Quote] Validation failed on fields:', Object.keys(validationErrors));
       setErrors(validationErrors);
       const firstErrorKey = Object.keys(validationErrors)[0];
       document.getElementById(firstErrorKey)?.focus();
       return;
     }
+    console.log('[Form/Quote] Submitting RFQ quote request...');
     setStatus('submitting');
     setErrors({});
     try {
-      await new Promise((res) => setTimeout(res, 1500));
+      const res = await fetch('/api/quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => null);
+        throw new Error(errorData?.error || `Server returned status ${res.status}`);
+      }
+      console.log('[Form/Quote] RFQ quote request submitted successfully');
       setStatus('success');
       setFormData(INITIAL_STATE);
       if (fileRef.current) fileRef.current.value = '';
-    } catch {
+    } catch (err: unknown) {
+      console.error('[Form/Quote] Submission error:', err instanceof Error ? err.message : 'Network/Server error');
       setStatus('error');
     }
   };

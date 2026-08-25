@@ -31,55 +31,58 @@ export interface ProductPageProps {
  * but can also render its own if needed.
  */
 export function ProductPage({ data }: ProductPageProps) {
+  let bgToggle = true; // true = white, false = gray
+  const getNextBg = (): 'white' | 'gray' => {
+    const bg = bgToggle ? 'white' : 'gray';
+    bgToggle = !bgToggle;
+    return bg;
+  };
+
   return (
     <>
-      {/* 01 — Hero (Mandatory) */}
+      {/* 01 — Hero (Mandatory, always white, so next is gray) */}
       <ProductHero {...data.hero} />
+      {(() => { bgToggle = false; return null; })()}
 
       {/* 02 — Overview */}
-      {data.overview && <ProductOverview {...data.overview} />}
+      {data.overview && <ProductOverview {...data.overview} bg={getNextBg()} />}
 
       {/* 03 — Key Features */}
-      {data.keyFeatures && <ProductKeyFeatures {...data.keyFeatures} />}
+      {data.keyFeatures && <ProductKeyFeatures {...data.keyFeatures} bg={getNextBg()} />}
 
       {/* 04 — Technical Specs */}
-      {data.technicalSpecs && <ProductTechnicalSpecs {...data.technicalSpecs} />}
+      {data.technicalSpecs && <ProductTechnicalSpecs {...data.technicalSpecs} bg={getNextBg()} />}
 
       {/* 05 — Variants */}
-      {data.variants && <ProductVariants {...data.variants} />}
+      {data.variants && <ProductVariants {...data.variants} bg={getNextBg()} />}
 
       {/* 06 — Comparisons (Repeatable) */}
       {data.comparisons && data.comparisons.map((comparison, idx) => (
-        <ProductComparison key={`comparison-${idx}`} {...comparison} />
+        <ProductComparison key={`comparison-${idx}`} {...comparison} bg={getNextBg()} />
       ))}
 
       {/* 07 — Industries */}
-      {data.industries && <ProductIndustries {...data.industries} />}
+      {data.industries && <ProductIndustries {...data.industries} bg={getNextBg()} />}
 
       {/* 08 — Engineering Considerations */}
-      {data.engineering && <ProductEngineering {...data.engineering} />}
+      {data.engineering && <ProductEngineering {...data.engineering} bg={getNextBg()} />}
 
       {/* 09 — Manufacturing */}
-      {data.manufacturing && <ProductManufacturing {...data.manufacturing} />}
+      {data.manufacturing && <ProductManufacturing {...data.manufacturing} bg={getNextBg()} />}
 
       {/* 10 — Spotlights / Case Studies (Repeatable) */}
       {data.spotlights && data.spotlights.map((spotlight, idx) => (
-        <ProductSpotlight key={`spotlight-${idx}`} {...spotlight} />
+        <ProductSpotlight key={`spotlight-${idx}`} {...spotlight} bg={getNextBg()} />
       ))}
 
       {/* 11 — Related Products */}
-      {data.relatedProducts && <ProductRelated {...data.relatedProducts} />}
+      {data.relatedProducts && <ProductRelated {...data.relatedProducts} bg={getNextBg()} />}
 
-      {/* 12 — Local Service Areas */}
+      {/* 12 — Local Service Areas (Always gray by definition? Actually, it's injected, let's skip it since it manages its own bg) */}
       {data.productName && <SiteLocationsSection productName={data.productName} />}
 
-      {/* 14 — FAQs */}
-      {/* 
-        Note: SiteFAQSection typically injects its own FAQPage schema. 
-        If buildProductSchema already builds it, you might want to disable it here,
-        but for now, we'll keep the standard behavior.
-      */}
-      {data.faqs && <SiteFAQSection faqs={data.faqs} />}
+      {/* 14 — FAQs (Schema handled by buildProductSchema at page level) */}
+      {data.faqs && <SiteFAQSection faqs={data.faqs} injectSchema={false} />}
 
       {/* 15 — Final CTA */}
       {data.cta && (

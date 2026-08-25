@@ -40,14 +40,14 @@ export const customCylinderData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders/' },
     ],
     currentPage: 'Custom Hydraulic Cylinders',
     subtitle: 'Custom Hydraulic Cylinders',
     h1: 'Custom Hydraulic Cylinder Manufacturer',
     description: 'Bespoke fluid power for when standard catalogs fail. Honeywell Hydraulics is a premier custom hydraulic cylinder manufacturer in Gujarat, specializing in extreme large bore actuators, reverse-engineering obsolete imported equipment, and designing one-off cylinders for specialized machinery.',
-    primaryCta: { label: 'SUBMIT DRAWINGS FOR QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'SUBMIT DRAWINGS FOR QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/custom-hydraulic-cylinder-manufacturer.webp',
@@ -68,7 +68,7 @@ export const customCylinderData: ProductPageData = {
       <>
         <p>
           Standard catalog cylinders—like{' '}
-          <a href="/products/hydraulic-cylinders" className="text-honeywell-red font-semibold hover:underline">
+          <a href="/products/hydraulic-cylinders/" className="text-honeywell-red font-semibold hover:underline">
             Tie Rod Cylinders
           </a>{' '}
           or standard Welded Cylinders—are designed to satisfy 80% of
@@ -138,8 +138,8 @@ export const customCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our custom manufacturing capabilities extend far beyond standard catalog parameters. Every specification is engineered to your exact requirements.',
-    primaryCta: { label: 'DISCUSS YOUR SPECS', href: '/request-quote' },
-    secondaryCta: { label: 'VIEW STANDARD RANGE', href: '/products/hydraulic-cylinders' },
+    primaryCta: { label: 'DISCUSS YOUR SPECS', href: '/request-quote/#quote-form' },
+    secondaryCta: { label: 'VIEW STANDARD RANGE', href: '/products/hydraulic-cylinders/' },
     tableTitle: 'Custom Capability Range',
     rows: [
       { parameter: 'Bore Sizes', value: 'Micro-bores up to Large Bores (400mm+)' },
@@ -195,7 +195,7 @@ export const customCylinderData: ProductPageData = {
     {
       heading: 'Custom vs. Standard Catalog Cylinders',
       description: 'Understanding when to bypass standard NFPA/ISO catalogs and engineer a bespoke solution.',
-      columns: [{ heading: 'Engineering Feature' }, { heading: 'Custom Cylinders' }, { heading: 'Standard Cylinders' }],
+      columns: [{ heading: 'Custom Cylinders' }, { heading: 'Standard Cylinders' }],
       rows: [
         { feature: 'Dimensional Envelope', values: [{ text: 'Engineered to perfectly fit your existing machine frame', highlight: true }, { text: 'Machine must be designed around the cylinder catalog' }] },
         { feature: 'Lead Time', values: [{ text: 'Requires engineering and prototyping phase' }, { text: 'Immediate availability' }] },
@@ -237,25 +237,25 @@ export const customCylinderData: ProductPageData = {
         icon: <FaTemperatureHigh className="w-6 h-6" />,
         name: 'Steel Plants & Foundries',
         description: 'Large bore pressing cylinders and extreme high-temperature actuators for ladle tilting.',
-        href: '/industries/custom-hydraulic-cylinder-manufacturer-honeywell',
+        href: '#',
       },
       {
         icon: <FaAnchor className="w-6 h-6" />,
         name: 'Marine & Offshore',
         description: 'Corrosion-resistant, heavy-duty lifting cylinders for winches, ship-cranes, and port material handling.',
-        href: '/industries/marine-offshore',
+        href: '#',
       },
       {
         icon: <FaBuilding className="w-6 h-6" />,
         name: 'Infrastructure Projects',
         description: 'Massive bespoke cylinders for dam spillway radial gates and heavy civil engineering projects.',
-        href: '/industries/infrastructure-projects',
+        href: '#',
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
         name: 'Special Purpose Machinery',
         description: 'Non-standard actuators with complex logic-valve blocks welded directly to the cylinder barrel for smart factory automation.',
-        href: '/industries/special-purpose-machinery',
+        href: '#',
       },
     ],
   },
@@ -289,7 +289,7 @@ export const customCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need to Reverse-Engineer a Damaged Imported Cylinder?',
       description: 'Our engineering team can dismantle, measure, and replicate any cylinder — even without documentation or part numbers.',
-      primaryCta: { label: 'REQUEST REVERSE ENGINEERING QUOTE', href: '/request-quote' },
+      primaryCta: { label: 'REQUEST REVERSE ENGINEERING QUOTE', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },
@@ -344,7 +344,7 @@ export const customCylinderData: ProductPageData = {
         description: 'Standard NFPA tie rod cylinders for heavy-duty industrial applications.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/tie-rod-hydraulic-cylinder-manufacturer.webp',
-        href: '/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/',
         ctaText: 'View Details',
       },
       {
@@ -352,7 +352,7 @@ export const customCylinderData: ProductPageData = {
         description: 'Robust welded construction for mobile equipment and severe duty cycles.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/welded-hydraulic-cylinder-manufacturer.webp',
-        href: '/products/hydraulic-cylinders/welded-hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/welded-hydraulic-cylinders/',
         ctaText: 'View Details',
       },
       {
@@ -360,7 +360,7 @@ export const customCylinderData: ProductPageData = {
         description: 'Multi-stage cylinders providing exceptional stroke length from a compact retracted footprint.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/telescopic-hydraulic-cylinders-manufacturer.webp',
-        href: '/products/hydraulic-cylinders/telescopic-hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/telescopic-hydraulic-cylinders/',
         ctaText: 'View Details',
       },
     ],
@@ -394,7 +394,7 @@ export const customCylinderData: ProductPageData = {
     title: 'Ready to Discuss Your Custom Cylinder Project?',
     description: "Don't let an obsolete cylinder halt your entire production line. Partner with an engineering firm capable of bespoke design, reverse engineering, and extreme-duty manufacturing.",
     primaryCtaText: 'REQUEST A QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Now',
     secondaryCtaHref: 'tel:+919924343873',
   },

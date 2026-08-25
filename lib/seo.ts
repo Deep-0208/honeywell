@@ -14,7 +14,7 @@ export function buildMetadata({
   description = SEO_DEFAULTS.description,
   canonical,
   image = SEO_DEFAULTS.ogImage,
-  noIndex = process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production', // true for preview/development/undefined
+  noIndex = false,
 }: {
   title?: string;
   description?: string;
@@ -22,21 +22,45 @@ export function buildMetadata({
   image?: string;
   noIndex?: boolean;
 }): Metadata {
+  // Normalize canonical path — strip absolute protocol/host if passed
+  let cleanPath = canonical || '/';
+  if (cleanPath.startsWith('http://') || cleanPath.startsWith('https://')) {
+    try {
+      cleanPath = new URL(cleanPath).pathname;
+    } catch {
+      cleanPath = cleanPath.replace(/^https?:\/\/[^\/]+/, '');
+    }
+  }
+  if (!cleanPath.startsWith('/')) {
+    cleanPath = '/' + cleanPath;
+  }
+  // Enforce trailing slash consistency matching next.config.ts (except root '/')
+  if (cleanPath !== '/' && !cleanPath.endsWith('/')) {
+    cleanPath = cleanPath + '/';
+  }
+
+  const fullCanonicalUrl = `${COMPANY_INFO.websiteUrl}${cleanPath === '/' ? '/' : cleanPath}`;
   const isDefaultImage = image === SEO_DEFAULTS.ogImage;
   const ogImageUrl = isDefaultImage 
-    ? `${COMPANY_INFO.websiteUrl}/api/og?title=${encodeURIComponent(title)}`
-    : `${COMPANY_INFO.websiteUrl}${image}`;
+    ? `${COMPANY_INFO.websiteUrl}/api/og/?title=${encodeURIComponent(title)}`
+    : (image.startsWith('http://') || image.startsWith('https://')
+        ? image 
+        : `${COMPANY_INFO.websiteUrl}${image.startsWith('/') ? '' : '/'}${image}`);
+
+  const finalTitle = title.includes('Honeywell') ? title : `${title} | Honeywell`;
 
   return {
-    title,
+    title: {
+      absolute: finalTitle,
+    },
     description,
     alternates: {
-      canonical: `${COMPANY_INFO.websiteUrl}${canonical}`,
+      canonical: fullCanonicalUrl,
     },
     openGraph: {
       title,
       description,
-      url: `${COMPANY_INFO.websiteUrl}${canonical}`,
+      url: fullCanonicalUrl,
       siteName: COMPANY_INFO.name,
       images: [
         {

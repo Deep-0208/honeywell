@@ -56,7 +56,7 @@ export function ProductsSection() {
         {/* Section CTA */}
         <div className="text-center mt-10">
           <Button
-            href="/products"
+            href="/products/"
             variant="primary"
             size="lg"
             rightIcon={<ArrowRight className="w-5 h-5" />}

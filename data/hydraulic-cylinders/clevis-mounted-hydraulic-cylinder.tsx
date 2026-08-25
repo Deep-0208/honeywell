@@ -7,7 +7,7 @@ import {
   HardHat,
   Scale
 } from 'lucide-react';
-import { FaIndustry, FaBuilding, FaWarehouse, FaTractor } from 'react-icons/fa';
+import { FaIndustry, FaBuilding, FaTractor } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const clevisMountedCylinderData: ProductPageData = {
@@ -35,14 +35,14 @@ export const clevisMountedCylinderData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders/' },
     ],
     currentPage: 'Clevis Mounted Cylinders',
     subtitle: 'High-Strength Articulation for Oscillating Machinery',
     h1: 'Clevis Mounted Hydraulic Cylinders',
     description: 'Honeywell Hydraulics manufactures rugged clevis mounted hydraulic cylinders designed specifically for pivoting applications. Built with heavy-duty forged steel clevis ends and precision-machined pivot pins, our cylinders provide extremely smooth articulation while absorbing the intense dynamic forces of mobile and agricultural machinery.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder.webp',
@@ -117,8 +117,8 @@ export const clevisMountedCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our clevis mounted cylinders are built using premium materials to endure the harsh realities of mobile and agricultural hydraulics.',
-    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote' },
-    secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders' },
+    primaryCta: { label: 'DISCUSS YOUR PROJECT', href: '/request-quote/#quote-form' },
+    secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders/' },
     tableTitle: 'Clevis Mounted Cylinder Specs',
     rows: [
       { parameter: 'Bore Diameter', value: '40 mm to 500 mm' },
@@ -220,25 +220,25 @@ export const clevisMountedCylinderData: ProductPageData = {
         icon: <FaTractor className="w-6 h-6" />,
         name: 'Agricultural Machinery',
         description: 'Actuation for tractor loaders, harvesters, plows, and heavy farming attachments.',
-        href: '/industries/clevis-mounted-hydraulic-cylinder-manufacturer-honeywell-hydraulics',
+        href: '#',
       },
       {
         icon: <HardHat className="w-6 h-6" />,
         name: 'Construction Equipment',
         description: 'Boom and bucket cylinders for excavators, backhoes, and front-end loaders.',
-        href: '/industries/construction-equipment',
+        href: '#',
       },
       {
         icon: <FaBuilding className="w-6 h-6" />,
         name: 'Material Handling',
         description: 'Tilt and lift cylinders for forklifts, telehandlers, and industrial dumpers.',
-        href: '/industries/material-handling',
+        href: '#',
       },
       {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Mobile Hydraulics',
         description: 'Hydraulic actuation for crane outriggers, aerial work platforms, and garbage trucks.',
-        href: '/industries/mobile-hydraulics',
+        href: '#',
       },
     ],
   },
@@ -272,7 +272,7 @@ export const clevisMountedCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need Custom Clevis Cylinders for Your Machinery?',
       description: 'Our engineers can design and manufacture cylinders based on your specific pin size, jaw width, and stroke length requirements.',
-      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote' },
+      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },
@@ -343,7 +343,7 @@ export const clevisMountedCylinderData: ProductPageData = {
         description: 'Rigid mounting cylinders designed for high-force straight-line industrial presses.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder.webp',
-        href: '/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder',
+        href: '/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder/',
         ctaText: 'View Details',
       },
       {
@@ -351,7 +351,7 @@ export const clevisMountedCylinderData: ProductPageData = {
         description: 'Heavy-duty, compact cylinders designed for extreme industrial and mobile applications.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/welded-hydraulic-cylinders-manufacturer.webp',
-        href: '/products/hydraulic-cylinders/welded-hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/welded-hydraulic-cylinders/',
         ctaText: 'View Details',
       },
       {
@@ -359,7 +359,7 @@ export const clevisMountedCylinderData: ProductPageData = {
         description: 'Standardized NFPA/ISO industrial cylinders held together by high-strength steel tie rods.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/tie-rod-hydraulic-cylinder-manufacturer.webp',
-        href: '/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/',
         ctaText: 'View Details',
       },
     ],

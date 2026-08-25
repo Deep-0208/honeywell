@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Metadata } from 'next';
 import { buildMetadata } from '@/lib/seo';
 import Image from 'next/image';
@@ -25,7 +25,6 @@ import {
   ShieldCheck,
   Gauge,
   Camera,
-  Users,
 } from 'lucide-react';
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -141,13 +140,13 @@ const CAPACITY_SPECS = [
   { label: 'Surface Finish', value: 'Ra 0.4 µm (honed barrels)' },
 ];
 
-type GalleryItem = { name: string; file: string; alt: string; isReady?: boolean };
+type GalleryItem = { name: string; file: string; alt: string; isReady?: boolean; objectPosition?: string };
 
 const GALLERY_ITEMS: GalleryItem[] = [
   { name: 'CNC Turning Centre', file: '/images/company/cnc-machining-center-hydraulic-cylinder.webp', alt: 'CNC turning centre for piston rod machining', isReady: true },
   { name: 'Welding Bay', file: '/images/company/hydraulic-cylinder-welding-fabrication.webp', alt: 'Heavy-duty welding bay for cylinder barrel construction', isReady: true },
-  { name: 'Assembly Area', file: '/images/company/hydraulic-cylinder-assembly-area.webp', alt: 'Hydraulic power pack assembly area', isReady: true },
-  { name: 'Test Rig', file: '/images/company/hydrostatic-pressure-testing-hydraulic-cylinder.webp', alt: 'Hydrostatic pressure test rig', isReady: true },
+  { name: 'Assembly Area', file: '/images/company/hydraulic-cylinder-assembly-area.webp', alt: 'Hydraulic power pack assembly area', isReady: true, objectPosition: 'top' },
+  { name: 'CNC Turning Lathe', file: '/images/company/cnc-turning-lathe-machining.webp', alt: 'CNC turning lathe for hydraulic cylinder machining', isReady: true },
 ];
 
 const MFG_FAQS = [
@@ -203,7 +202,7 @@ export default function ManufacturingFacilityPage() {
       <JsonLd data={faqSchema} />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="bg-white pt-12 md:pt-20 pb-20 relative overflow-hidden">
+      <section className="bg-white pt-6 pb-16 md:pt-8 md:pb-24 relative overflow-hidden border-b border-slate-200">
         {/* Subtle engineering grid background */}
         <div
           className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_10%_0%,#000_70%,transparent_100%)]"
@@ -211,12 +210,12 @@ export default function ManufacturingFacilityPage() {
         />
 
         <Container className="relative z-10">
-          <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
-            <ol className="flex items-center gap-2">
+          <nav aria-label="Breadcrumb" className="text-sm md:text-base font-body text-slate-500 mb-6">
+            <ol className="flex items-center gap-2 flex-wrap">
               <li>
                 <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
               </li>
-              <li aria-hidden="true">&rsaquo;</li>
+              <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>
               <li className="text-honeywell-red font-semibold" aria-current="page">Manufacturing Facility</li>
             </ol>
           </nav>
@@ -235,11 +234,11 @@ export default function ManufacturingFacilityPage() {
           </div>
 
           {/* Facility Overview Compact Stats */}
-          <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 p-6 md:p-8 bg-white border border-slate-100 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative z-10 transition-transform duration-500 hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 p-4 sm:p-6 md:p-8 bg-white border border-slate-100 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative z-10 transition-transform duration-500 hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] hover:-translate-y-1">
             {FACILITY_OVERVIEW.map((item) => (
               <div key={item.label} className="text-left flex flex-col justify-center">
-                <p className="text-xs text-brand-steelGray font-body uppercase tracking-widest font-semibold mb-2 text-justify">{item.label}</p>
-                <p className="text-base md:text-lg font-display font-bold text-honeywell-navy leading-tight text-justify">{item.value}</p>
+                <p className="text-xs text-brand-steelGray font-body uppercase tracking-widest font-semibold mb-1.5">{item.label}</p>
+                <p className="text-base md:text-lg font-display font-bold text-honeywell-navy leading-tight">{item.value}</p>
               </div>
             ))}
           </div>
@@ -267,12 +266,13 @@ export default function ManufacturingFacilityPage() {
                       alt={item.alt}
                       fill
                       className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                      style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
                       sizes="(max-width: 768px) 50vw, 25vw"
                     />
                   ) : (
                     <div className="text-center px-4">
                       <Camera className="w-8 h-8 text-brand-borderGray mx-auto mb-2" aria-hidden="true" />
-                      <p className="text-xs text-[#94A3B8] font-body text-justify">{item.name}</p>
+                      <p className="text-xs text-brand-steelGray font-body text-justify">{item.name}</p>
                     </div>
                   )}
                 </div>
@@ -281,7 +281,7 @@ export default function ManufacturingFacilityPage() {
           </div>
           <p className="mt-8 text-center text-sm text-brand-steelGray font-body">
             Want to see our facility in person?{' '}
-            <Link href="/contact-us" className="inline-block text-honeywell-red font-semibold transition-transform duration-150 ease-out hover:underline underline-offset-4 active:scale-[0.97]">
+            <Link href="/contact-us/" className="inline-block text-honeywell-red font-semibold transition-transform duration-150 ease-out hover:underline underline-offset-4 active:scale-[0.97]">
               Schedule a facility visit →
             </Link>
           </p>
@@ -302,9 +302,6 @@ export default function ManufacturingFacilityPage() {
           <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" aria-label="Manufacturing workflow steps">
             {WORKFLOW_STEPS.map((step) => (
               <li key={step.step} className="bg-white border border-slate-200 rounded-sm p-6 transition-[transform,box-shadow,border-color] duration-300 ease-out hover:shadow-float hover:-translate-y-1.5 border-t-2 border-t-transparent hover:border-t-honeywell-red active:scale-[0.98] relative group">
-                <span className="absolute top-4 right-4 w-7 h-7 rounded-full bg-honeywell-red text-white text-xs font-bold flex items-center justify-center font-body">
-                  {step.step}
-                </span>
                 <div className="w-12 h-12 rounded-full bg-honeywell-navy flex items-center justify-center text-white mb-4 transition-[background-color,transform] duration-200 ease-out group-hover:bg-honeywell-red group-hover:scale-110">
                   {step.icon}
                 </div>
@@ -341,13 +338,15 @@ export default function ManufacturingFacilityPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-8">
-              <div className="aspect-[4/3] bg-slate-200 rounded-sm flex items-center justify-center">
-                <div className="text-center px-6">
-                  <PenTool className="w-12 h-12 text-[#94A3B8] mx-auto mb-3" aria-hidden="true" />
-                  <p className="text-sm font-semibold text-brand-darkSlate font-body text-justify">Engineering Design</p>
-                  <p className="text-xs text-[#94A3B8] font-body text-justify">CAD-based hydraulic design</p>
-                </div>
+            <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-4 md:p-6">
+              <div className="aspect-[4/3] relative rounded-sm overflow-hidden border border-slate-200/80 shadow-card">
+                <Image
+                  src="/images/company/hydraulic-cad-engineering-design.webp"
+                  alt="CAD engineering workstation designing precision hydraulic cylinders at Honeywell Hydraulics Ahmedabad facility"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
@@ -357,45 +356,19 @@ export default function ManufacturingFacilityPage() {
       {/* ── Custom Manufacturing ──────────────────── */}
       <Section bg="white" aria-labelledby="custom-mfg-heading">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-honeywell-navy text-white rounded-sm p-8 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
-              <div className="relative z-10">
-                <Users className="w-10 h-10 text-honeywell-red mb-4" aria-hidden="true" />
-                <Heading as="h3" variant="card" className="text-white mb-4">OEM Partnership Benefits</Heading>
-                <ul className="space-y-3">
-                  {[
-                    'No additional design consultation fee for custom work',
-                    'First Article turnaround within 7–15 working days',
-                    'Dedicated capacity allocation for priority orders',
-                    'Direct factory communication — no middlemen',
-                    'Transparent pricing with firm delivery timelines',
-                    'Complete documentation package with every shipment',
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-brand-borderGray font-body">
-                      <CheckCircle2 className="w-4 h-4 text-honeywell-red shrink-0 mt-0.5" aria-hidden="true" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2">
-              <Heading as="h2" variant="section" id="custom-mfg-heading" className="mb-3">
-                Custom Manufacturing Capability
-              </Heading>
-              <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-justify">
-                The majority of our work is custom-engineered to specific load, speed, pressure, and spatial requirements. We design and manufacture hydraulic cylinders, power packs, and accessories to your exact specifications.
-              </p>
-              <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-justify">
-                Whether you are an OEM requiring consistent supply of custom-specified components, an SPM builder needing one-off hydraulic solutions, or a maintenance engineer seeking a precise replacement — our facility is equipped to deliver.
-              </p>
-              <div className="mt-6">
-                <Button href="/request-quote" variant="primary" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>
-                  Request Custom Quote
-                </Button>
-        \      </div>
-            </div>
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <Heading as="h2" variant="section" id="custom-mfg-heading" className="mb-3">
+              Custom Manufacturing Capability
+            </Heading>
+            <p className="text-brand-darkSlate font-body leading-relaxed mb-4 text-center">
+              The majority of our work is custom-engineered to specific load, speed, pressure, and spatial requirements. We design and manufacture hydraulic cylinders, power packs, and accessories to your exact specifications.
+            </p>
+            <p className="text-brand-darkSlate font-body leading-relaxed mb-8 text-center">
+              Whether you are an OEM requiring consistent supply of custom-specified components, an SPM builder needing one-off hydraulic solutions, or a maintenance engineer seeking a precise replacement — our facility is equipped to deliver.
+            </p>
+            <Button href="/request-quote/#quote-form" variant="primary" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>
+              Request Custom Quote
+            </Button>
           </div>
         </Container>
       </Section>
@@ -412,7 +385,7 @@ export default function ManufacturingFacilityPage() {
             {CAPACITY_SPECS.map((item) => (
               <div key={item.label} className="border border-white/10 rounded-sm p-5">
                 <p className="text-lg md:text-xl font-display font-extrabold text-white mb-1 text-justify">{item.value}</p>
-                <p className="text-xs text-[#94A3B8] font-body uppercase tracking-wider text-justify">{item.label}</p>
+                <p className="text-xs text-brand-steelGray font-body uppercase tracking-wider text-justify">{item.label}</p>
               </div>
             ))}
           </div>
@@ -447,17 +420,19 @@ export default function ManufacturingFacilityPage() {
       </Section>
 
       {/* ── Lead Generation CTA ──────────────────────────────────────────── */}
+      <SiteFAQSection faqs={MFG_FAQS} />
+
       <CTA
         title="Ready to See Our Factory in Action?"
         description="We welcome facility visits, witnessed pressure tests, and OEM capability audits. Factory-direct hydraulic manufacturing from our Ahmedabad facility."
         primaryCtaText="Request a Quote"
-        primaryCtaHref="/request-quote/"
+        primaryCtaHref="/request-quote/#quote-form"
         secondaryCtaText="Call +91 99243 43873"
         secondaryCtaHref="tel:+91-9924343873"
       />
 
-      {/* ── FAQ ───────────────────────────────────────────────────────────── */}
-      <SiteFAQSection faqs={MFG_FAQS} />
-    </>
+      </>
   );
 }
+
+

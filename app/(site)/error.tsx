@@ -51,7 +51,7 @@ export default function Error({
 
       {/* Error digest for support reference */}
       {error.digest && (
-        <p className="text-xs font-mono text-[#94A3B8] mb-8 bg-brand-surfaceGray px-3 py-1 rounded-sm border border-slate-200 text-justify">
+        <p className="text-xs font-mono text-brand-steelGray mb-8 bg-brand-surfaceGray px-3 py-1 rounded-sm border border-slate-200 text-justify">
           Reference: {error.digest}
         </p>
       )}
@@ -65,7 +65,7 @@ export default function Error({
             inline-flex items-center justify-center gap-2
             px-5 py-2.5 rounded-sm
             bg-honeywell-navy text-white text-sm font-semibold font-body
-            hover:bg-[#0a154a] transition-colors duration-150
+            hover:opacity-90 transition-opacity duration-150
             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:ring-offset-2
           "
         >
@@ -88,7 +88,7 @@ export default function Error({
         </Link>
 
         <Link
-          href="/contact-us"
+          href="/contact-us/"
           className="
             inline-flex items-center justify-center gap-2
             px-5 py-2.5 rounded-sm
@@ -103,7 +103,7 @@ export default function Error({
       </div>
 
       {/* Support contact */}
-      <p className="mt-10 text-sm text-[#94A3B8] font-body text-justify">
+      <p className="mt-10 text-sm text-brand-steelGray font-body text-justify">
         Need immediate help?{' '}
         <a
           href="tel:+91-9924343873"

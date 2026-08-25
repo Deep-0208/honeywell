@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Settings,
-  Box,
-  Layers,
-  Activity,
-  ArrowRight
-} from 'lucide-react';
+
 import type { ProductPageData } from '@/components/product-page/types';
 
 export const ng10ManifoldBlocksData: ProductPageData = {
@@ -27,9 +21,8 @@ export const ng10ManifoldBlocksData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Manifold Blocks', href: '/products/manifold-blocks' },
-      { label: '06 Size Manifold Blocks', href: '/products/manifold-blocks/06-size-manifold-blocks' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Manifold Blocks', href: '/products/manifold-blocks/' },
     ],
     currentPage: '06 Size Manifold Blocks',
     subtitle: 'NG10 / 06-Size Manifolds',
@@ -37,11 +30,11 @@ export const ng10ManifoldBlocksData: ProductPageData = {
     description: 'The most widely used hydraulic valve interface size in industrial manufacturing. We manufacture high-precision NG10 (CETOP 5 / 06-Size) manifold blocks — the universally adopted standard for medium-duty industrial automation up to 120 LPM.',
     primaryCta: {
       label: 'ORDER NG10 BLOCKS',
-      href: '/request-quote/',
+      href: '/request-quote/#quote-form',
     },
     secondaryCta: {
       label: 'DOWNLOAD LIBRARY',
-      href: '/resources/downloads/',
+      href: '/request-quote/#quote-form',
     },
     image: {
       src: '/images/products/manifold-blocks/06-size-manifold-block-ng10.webp',
@@ -158,11 +151,11 @@ export const ng10ManifoldBlocksData: ProductPageData = {
     tableTitle: 'NG10 Performance Envelope',
     primaryCta: {
       label: 'REQUEST QUOTE',
-      href: '/request-quote/',
+      href: '/request-quote/#quote-form',
     },
     secondaryCta: {
       label: 'DOWNLOAD DATASHEET',
-      href: '/resources/downloads/',
+      href: '/request-quote/#quote-form',
     },
     rows: [
       { parameter: 'ISO Standard', value: 'ISO 4401-05-05-0-05' },
@@ -252,7 +245,7 @@ export const ng10ManifoldBlocksData: ProductPageData = {
     title: 'Need standard NG10 subplates with fast delivery?',
     description: 'The most widely used hydraulic valve interface size in industrial manufacturing.',
     primaryCtaText: 'ORDER NG10 BLOCKS',
-    primaryCtaHref: '/request-quote/',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Submit SPM Schematic',
     secondaryCtaHref: '/contact-us/',
   }

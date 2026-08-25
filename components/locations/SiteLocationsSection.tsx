@@ -50,7 +50,7 @@ export function SiteLocationsSection({
               city={loc.city}
               description={loc.description}
               industries={loc.industries}
-              href="/contact-us"
+              href="/contact-us/"
               ctaText="Enquire Now"
             />
           ))}

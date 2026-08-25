@@ -4,11 +4,11 @@ export const ahmedabadData: LocationPageData = {
   seo: {
     title: 'Hydraulic Cylinder Manufacturer Ahmedabad | Honeywell',
     description: 'Top hydraulic cylinder manufacturer in Ahmedabad. Supplying Kathwada, Odhav, Sanand & Vatva GIDC at factory-direct pricing. Get a free quote today.',
-    canonical: 'https://www.honeywellhydraulics.com/locations/ahmedabad/',
+    canonical: 'https://honeywellhydraulics.in/locations/ahmedabad/',
     openGraph: {
       title: 'Hydraulic Cylinder Manufacturer Ahmedabad | Honeywell',
       description: 'Top hydraulic cylinder manufacturer in Ahmedabad. Supplying Kathwada, Odhav, Sanand & Vatva GIDC at factory-direct pricing. Get a free quote today.',
-      url: 'https://www.honeywellhydraulics.com/locations/ahmedabad/',
+      url: 'https://honeywellhydraulics.in/locations/ahmedabad/',
       images: [
         {
           url: '/images/locations/ahmedabad-hero.webp',
@@ -40,7 +40,7 @@ export const ahmedabadData: LocationPageData = {
     '@graph': [
       {
         '@type': 'Service',
-        '@id': 'https://www.honeywellhydraulics.com/locations/ahmedabad/#service',
+        '@id': 'https://honeywellhydraulics.in/locations/ahmedabad/#service',
         serviceType: 'Hydraulic Cylinder Manufacturing & Supply',
         provider: {
           '@type': 'ManufacturingBusiness',
@@ -67,16 +67,16 @@ export const ahmedabadData: LocationPageData = {
       },
       {
         '@type': 'WebPage',
-        '@id': 'https://www.honeywellhydraulics.com/locations/ahmedabad/',
+        '@id': 'https://honeywellhydraulics.in/locations/ahmedabad/',
         name: 'Hydraulic Cylinder Manufacturer in Ahmedabad | Honeywell Hydraulics',
-        url: 'https://www.honeywellhydraulics.com/locations/ahmedabad/'
+        url: 'https://honeywellhydraulics.in/locations/ahmedabad/'
       },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.honeywellhydraulics.com/' },
-          { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.honeywellhydraulics.com/locations/' },
-          { '@type': 'ListItem', position: 3, name: 'Ahmedabad', item: 'https://www.honeywellhydraulics.com/locations/ahmedabad/' }
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://honeywellhydraulics.in/' },
+          { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://honeywellhydraulics.in/locations/' },
+          { '@type': 'ListItem', position: 3, name: 'Ahmedabad', item: 'https://honeywellhydraulics.in/locations/ahmedabad/' }
         ]
       },
       {
@@ -101,7 +101,7 @@ export const ahmedabadData: LocationPageData = {
       alt: 'Honeywell Hydraulics manufacturing facility serving Ahmedabad GIDC estates',
     },
     ctas: {
-      primary: { label: 'GET A QUOTE — LOCAL DELIVERY', href: '/request-quote/' },
+      primary: { label: 'GET A QUOTE — LOCAL DELIVERY', href: '/request-quote/#quote-form' },
       secondary: { label: 'VISIT OUR FACTORY', href: '/contact-us/' },
     },
   },
@@ -148,53 +148,47 @@ export const ahmedabadData: LocationPageData = {
         description: 'Precision CNC-machined CETOP manifolds to consolidate complex hydraulic circuitry and eliminate leak points.',
         href: '/products/manifold-blocks/',
       },
-      {
-        id: 'systems',
-        title: 'Turnkey Hydraulic Systems',
-        description: 'Complete hydraulic automation solutions for SPM builders and OEMs across Ahmedabad\'s engineering zones.',
-        href: '/products/hydraulic-systems/',
-      },
     ],
   },
   industries: {
-    title: 'Local Industries We Serve in Ahmedabad',
+    title: 'Powering Ahmedabad\'s Core Manufacturing Industries',
     description: 'Ahmedabad is a diverse industrial hub. We have deep engineering experience providing fluid power solutions tailored to the city\'s specific manufacturing sectors.',
     items: [
       {
         id: 'plastic-moulding',
         title: 'Plastic & Injection Moulding (Odhav & Kathwada)',
         description: 'We supply high-speed core pull cylinders and high-low power units for rapid approach and high-pressure clamping in local plastic processing plants.',
-        href: '/industries/injection-moulding/',
+        href: '/products/hydraulic-cylinders/',
       },
       {
         id: 'textile',
         title: 'Textile Machinery (Narol & Vatva)',
         description: 'Ahmedabad is the Manchester of the East. We build synchronized, judder-free hydraulic components for modern textile processing and fabric folding machinery.',
-        href: '/industries/special-purpose-machines/',
+        href: '/products/hydraulic-cylinders/',
       },
       {
         id: 'auto-parts',
         title: 'Automotive & Stamping (Sanand)',
         description: 'We supply high-cycle press cylinders with specialized rod coatings to tier-1 auto component manufacturers in the Sanand automotive belt.',
-        href: '/industries/automotive/',
+        href: '/products/hydraulic-cylinders/',
       },
       {
         id: 'pharma',
         title: 'Pharmaceuticals & Packaging (Changodar & Bavla)',
         description: 'Clean, reliable hydraulic actuation systems designed for the precise requirements of pharmaceutical packaging and tableting machines.',
-        href: '/industries/special-purpose-machines/',
+        href: '/products/hydraulic-power-packs/',
       },
       {
         id: 'chemical',
         title: 'Chemical Processing (Vatva & Naroda)',
         description: 'Hydraulic systems built with specialized corrosion-resistant epoxies and stainless steel components to survive harsh chemical atmospheres.',
-        href: '/industries/chemical-processing/',
+        href: '/products/hydraulic-cylinders/',
       },
       {
         id: 'material-handling',
         title: 'Material Handling (Aslali & Sarkhej)',
         description: 'Heavy-duty lifting cylinders and compact DC power packs for dock levelers, scissor lifts, and logistics automation.',
-        href: '/industries/material-handling/',
+        href: '/products/hydraulic-cylinders/',
       },
     ],
   },

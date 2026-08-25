@@ -160,11 +160,11 @@ export default function HydraulicPowerPacksHubPage() {
       {/* 01 — Hero */}
       <HydraulicPowerPackHero />
 
-      {/* 02 — Product Overview */}
-      <PowerPackOverview />
-
-      {/* 03 — Power Pack Types Grid */}
+      {/* 02 — Power Pack Types Grid */}
       <PowerPackTypesGrid />
+
+      {/* 03 — Product Overview */}
+      <PowerPackOverview />
 
 
 
@@ -188,7 +188,7 @@ export default function HydraulicPowerPacksHubPage() {
         title="Ready to Discuss Your Power Unit Needs?"
         description="Connect with our engineering team today. Provide your system requirements, and we'll design a customized power pack optimized for your application."
         primaryCtaText="REQUEST QUOTE"
-        primaryCtaHref="/request-quote"
+        primaryCtaHref="/request-quote/#quote-form"
         secondaryCtaText="Call Now"
         secondaryCtaHref="tel:+919924343873"
       />

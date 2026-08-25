@@ -26,7 +26,7 @@ export function CylinderTechnicalSpecs() {
               <p className="text-sm text-brand-steelGray mb-4 text-justify">
                 We specialize in drawing-to-delivery services for non-standard requirements.
               </p>
-              <Button href="/request-quote" variant="primary">
+              <Button href="/request-quote/#quote-form" variant="primary">
                 REQUEST CUSTOM QUOTE
               </Button>
             </div>

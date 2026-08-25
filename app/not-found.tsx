@@ -47,7 +47,7 @@ export default function NotFound() {
         </Link>
         
         <Link 
-          href="/products"
+          href="/products/"
           className="flex items-center justify-center gap-2 p-4 border border-brand-borderGray rounded-sm hover:border-honeywell-navy hover:shadow-card transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy"
         >
           <ArrowRight className="w-5 h-5 text-brand-steelGray group-hover:text-honeywell-navy" />
@@ -55,7 +55,7 @@ export default function NotFound() {
         </Link>
         
         <Link 
-          href="/request-quote"
+          href="/request-quote/"
           className="flex items-center justify-center gap-2 p-4 border border-brand-borderGray rounded-sm hover:border-honeywell-red hover:shadow-card transition-all group sm:col-span-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-red"
         >
           <span className="font-medium text-honeywell-red font-body">Request a Custom Quote</span>

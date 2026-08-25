@@ -10,9 +10,9 @@ import type { EngineeringData } from './types';
  * Stacked cards with letter labels (A, B, C...) for engineering guidance,
  * selection criteria, design recommendations, and installation notes.
  */
-export function ProductEngineering({ heading, description, items }: EngineeringData) {
+export function ProductEngineering({ heading, description, items , bg = 'white' }: EngineeringData & { bg?: 'white' | 'gray' }) {
   return (
-    <Section aria-labelledby="engineering-considerations-heading" bg="white" id="engineering-considerations">
+    <Section aria-labelledby="engineering-considerations-heading" bg={bg} id="engineering-considerations">
       <Container>
         <div className="max-w-4xl mx-auto">
           <Heading
@@ -30,23 +30,23 @@ export function ProductEngineering({ heading, description, items }: EngineeringD
             </div>
           )}
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {items.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-brand-surfaceGray p-8 rounded-xl border border-slate-200"
+                className="bg-brand-surfaceGray p-5 sm:p-8 rounded-xl border border-slate-200"
               >
                 <Heading
                   variant="subsection"
                   as="h3"
-                  className="text-xl font-bold text-honeywell-navy mb-3 flex items-center gap-3"
+                  className="text-lg sm:text-xl font-bold text-honeywell-navy mb-3 flex items-center gap-3"
                 >
-                  <span className="bg-honeywell-navy text-white w-8 h-8 rounded flex items-center justify-center text-sm font-bold">
+                  <span className="inline-flex items-center justify-center min-w-[2rem] h-8 px-2.5 rounded-lg bg-honeywell-navy text-white text-xs font-bold uppercase tracking-wide whitespace-nowrap shrink-0 shadow-xs">
                     {item.label}
                   </span>
-                  {item.title}
+                  <span>{item.title}</span>
                 </Heading>
-                <p className="text-brand-darkSlate text-sm leading-relaxed pl-11 text-justify">
+                <p className="text-brand-darkSlate text-sm leading-relaxed mt-2 text-justify">
                   {item.description}
                 </p>
               </div>

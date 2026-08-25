@@ -104,11 +104,11 @@ export const gujaratData: LocationPageData = {
   seo: {
     title: 'Hydraulic Cylinder Manufacturer Gujarat | Honeywell',
     description: 'Leading hydraulic cylinder & power pack manufacturer in Gujarat. Supplying Ahmedabad, Surat & Rajkot at factory-direct pricing. Get a free quote today.',
-    canonical: 'https://www.honeywellhydraulics.com/locations/gujarat/',
+    canonical: 'https://honeywellhydraulics.in/locations/gujarat/',
     openGraph: {
       title: 'Hydraulic Cylinder Manufacturer Gujarat | Honeywell',
       description: 'Leading hydraulic cylinder & power pack manufacturer in Gujarat. Supplying Ahmedabad, Surat & Rajkot at factory-direct pricing. Get a free quote today.',
-      url: 'https://www.honeywellhydraulics.com/locations/gujarat/',
+      url: 'https://honeywellhydraulics.in/locations/gujarat/',
       images: [
         {
           url: '/images/locations/honeywell-hydraulics-manufacturing-facility-ahmedabad.jpg',
@@ -144,7 +144,7 @@ export const gujaratData: LocationPageData = {
     '@graph': [
       {
         '@type': 'Service',
-        '@id': 'https://www.honeywellhydraulics.com/locations/gujarat/#service',
+        '@id': 'https://honeywellhydraulics.in/locations/gujarat/#service',
         serviceType: 'Hydraulic Cylinder Manufacturing & Supply',
         provider: {
           '@type': 'ManufacturingBusiness',
@@ -171,16 +171,16 @@ export const gujaratData: LocationPageData = {
       },
       {
         '@type': 'WebPage',
-        '@id': 'https://www.honeywellhydraulics.com/locations/gujarat/',
+        '@id': 'https://honeywellhydraulics.in/locations/gujarat/',
         name: 'Hydraulic Cylinder Manufacturer in Gujarat | Honeywell Hydraulics',
-        url: 'https://www.honeywellhydraulics.com/locations/gujarat/'
+        url: 'https://honeywellhydraulics.in/locations/gujarat/'
       },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.honeywellhydraulics.com/' },
-          { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.honeywellhydraulics.com/locations/' },
-          { '@type': 'ListItem', position: 3, name: 'Gujarat', item: 'https://www.honeywellhydraulics.com/locations/gujarat/' }
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://honeywellhydraulics.in/' },
+          { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://honeywellhydraulics.in/locations/' },
+          { '@type': 'ListItem', position: 3, name: 'Gujarat', item: 'https://honeywellhydraulics.in/locations/gujarat/' }
         ]
       },
       {
@@ -208,8 +208,8 @@ export const gujaratData: LocationPageData = {
       alt: 'Honeywell Hydraulics manufacturing facility in Gujarat',
     },
     ctas: {
-      primary: { label: 'GET A QUOTE — GUJARAT DELIVERY', href: '/request-quote/' },
-      secondary: { label: 'DOWNLOAD PRODUCT BROCHURE', href: '/resources/downloads/' },
+      primary: { label: 'GET A QUOTE — GUJARAT DELIVERY', href: '/request-quote/#quote-form' },
+      secondary: { label: 'DOWNLOAD PRODUCT BROCHURE', href: '/request-quote/#quote-form' },
     },
   },
   benefits: {
@@ -255,12 +255,6 @@ export const gujaratData: LocationPageData = {
         description: 'Precision CNC-machined aluminum and steel manifold blocks to consolidate your hydraulic circuitry.',
         href: '/products/manifold-blocks/',
       },
-      {
-        id: 'systems',
-        title: 'Complete Hydraulic Systems',
-        description: 'Beyond individual components, we provide turnkey hydraulic automation for specialized machinery.',
-        href: '/products/hydraulic-systems/',
-      },
     ],
   },
   industries: {
@@ -271,37 +265,37 @@ export const gujaratData: LocationPageData = {
         id: 'plastic',
         title: 'Plastic & Injection Moulding (Ahmedabad & Halol)',
         description: 'We supply high-low power packs for rapid approach and high-pressure clamping, core-pull cylinders, and manifold blocks for modern moulding machines.',
-        href: '/industries/injection-moulding/',
+        href: '/products/hydraulic-cylinders/',
       },
       {
         id: 'textile',
         title: 'Textiles & Diamond Processing (Surat & Navsari)',
         description: 'Surat\'s massive textile mills rely on precise automation. We manufacture compact, highly accurate components for processing machinery.',
-        href: '/industries/special-purpose-machines/',
+        href: '/products/hydraulic-cylinders/',
       },
       {
         id: 'auto-parts',
         title: 'Auto Parts & Machine Tools (Rajkot)',
         description: 'Rajkot is the engineering heart of Gujarat. We supply heavy-duty cylinders matching strict requirements for dimensional accuracy.',
-        href: '/industries/automotive/',
+        href: '/products/hydraulic-cylinders/',
       },
       {
         id: 'chemicals',
         title: 'Chemicals & Pharmaceuticals (Vadodara & Vapi)',
         description: 'We engineer custom cylinders utilizing specialized corrosion-resistant coatings to withstand the harsh atmospheres of Vadodara and Vapi.',
-        href: '/industries/chemical-processing/',
+        href: '/products/hydraulic-cylinders/',
       },
       {
         id: 'ship-breaking',
         title: 'Ship Breaking & Heavy Industry (Bhavnagar)',
         description: 'Alang\'s ship-breaking yards require massive force generation. We build oversized, extreme-pressure cylinders designed specifically to survive extreme mechanical shock.',
-        href: '/industries/material-handling/',
+        href: '/products/hydraulic-cylinders/',
       },
       {
         id: 'brass-parts',
         title: 'Brass Parts & Hardware (Jamnagar)',
         description: 'Our dedicated press cylinders deliver rapid approach speeds and high-tonnage pressing required for brass component production.',
-        href: '/industries/special-purpose-machines/',
+        href: '/products/hydraulic-power-packs/',
       },
     ],
   },

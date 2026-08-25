@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { ChevronRight } from 'lucide-react';
 import JsonLd from '@/components/seo/JsonLd';
 import { buildBreadcrumbJsonLd } from '@/lib/seo';
 
@@ -37,35 +36,32 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
       {/* Inject Breadcrumb Schema */}
       <JsonLd data={schema} />
 
-      <nav aria-label="Breadcrumb" className={`py-4 ${className}`}>
-        <ol className="flex items-center space-x-2 text-base font-body text-brand-steelGray flex-wrap">
+      <nav aria-label="Breadcrumb" className={`text-sm md:text-base font-body text-slate-500 mb-6 ${className}`}>
+        <ol className="flex items-center gap-2 flex-wrap">
           {items.map((item, index) => {
             const isLast = index === items.length - 1;
 
             return (
-              <li key={item.href} className="flex items-center">
+              <React.Fragment key={item.href || index}>
+                {index > 0 && <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>}
                 {isLast ? (
-                  <span
-                    className="text-honeywell-navy font-medium"
+                  <li
+                    className="text-honeywell-red font-semibold"
                     aria-current="page"
                   >
                     {item.name}
-                  </span>
+                  </li>
                 ) : (
-                  <>
+                  <li>
                     <Link
                       href={item.href}
-                      className="hover:text-honeywell-red transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:rounded-sm"
+                      className="hover:text-honeywell-red transition-colors duration-200 ease-out"
                     >
                       {item.name}
                     </Link>
-                    <ChevronRight
-                      className="w-4 h-4 mx-2 text-brand-borderGray shrink-0"
-                      aria-hidden="true"
-                    />
-                  </>
+                  </li>
                 )}
-              </li>
+              </React.Fragment>
             );
           })}
         </ol>

@@ -45,7 +45,7 @@ export const singleActingCylinderData: ProductPageData = {
       src: '/images/products/hydraulic-cylinders/single-acting-hydraulic-cylinder-manufacturer.webp',
       alt: 'Single Acting Hydraulic Cylinder Manufacturer',
     },
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'VIEW TECHNICAL SPECS', href: '#technical-specifications' },
     keySpecs: [
       { label: 'Max Pressure', value: '450 Bar' },
@@ -103,7 +103,7 @@ export const singleActingCylinderData: ProductPageData = {
       { parameter: 'Piston Rod Material', value: 'EN 8 / EN 9 / EN 19 / EN 31 (Tolerance f7)' },
       { parameter: 'Piston and Gland', value: 'EN 8' },
     ],
-    primaryCta: { label: 'DISCUSS YOUR SPECS', href: '/request-quote/' },
+    primaryCta: { label: 'DISCUSS YOUR SPECS', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'REQUEST CAD MODELS', href: '/contact-us/' },
   },
 
@@ -178,19 +178,19 @@ export const singleActingCylinderData: ProductPageData = {
         icon: <FaHardHat className="w-6 h-6" />,
         name: 'Material Handling',
         description: 'Used extensively in scissor lifts, goods elevators, and platform lifts where gravity handles the return stroke.',
-        href: '/industries/single-acting-hydraulic-cylinder-manufacturer-honeywell'
+        href: '#'
       },
       {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Heavy Forging & Presses',
         description: 'Ideal for hydraulic presses where massive unidirectional downward force is required to stamp or bend metal.',
-        href: '/industries/heavy-forging-presses'
+        href: '#'
       },
       {
         icon: <FaCar className="w-6 h-6" />,
         name: 'Automotive & Parking',
         description: 'Reliable actuators for car parking systems and hydraulic jacks.',
-        href: '/industries/automotive-parking'
+        href: '#'
       },
     ],
   },
@@ -304,7 +304,7 @@ export const singleActingCylinderData: ProductPageData = {
     title: 'Need a single acting hydraulic cylinder for your application?',
     description: 'Spring-return and gravity-return configurations with bore sizes up to 250mm. Every cylinder is 100% hydrostatically pressure tested before dispatch.',
     primaryCtaText: 'REQUEST A QUOTE',
-    primaryCtaHref: '/request-quote/',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Talk to an Engineer',
     secondaryCtaHref: '/contact-us/',
   },

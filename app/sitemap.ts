@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/about-us/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/contact-us/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/manufacturing-facility/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/gallery/', changeFrequency: 'weekly', priority: 0.8 },
     
     // ── Conversion Pages ──
     { path: '/request-quote/', changeFrequency: 'monthly', priority: 0.9 },
@@ -41,10 +42,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/products/hydraulic-cylinders/telescopic-hydraulic-cylinders/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/products/hydraulic-cylinders/welded-hydraulic-cylinders/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-cylinders/goods-lift-hydraulic-cylinders/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-cylinders/car-parking-hydraulic-cylinders/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-cylinders/scissor-lift-table-hydraulic-cylinder/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-cylinders/square-body-hydraulic-cylinder/', changeFrequency: 'monthly', priority: 0.8 },
 
     // ── Hydraulic Power Pack Product Pages ──
-    { path: '/products/hydraulic-power-packs/3-phase-hydraulic-power-packs/', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/products/hydraulic-power-packs/dc-mini-power-packs/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-power-packs/single-phase-hydraulic-power-packs/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-power-packs/three-phase-hydraulic-power-packs/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-power-packs/customized-hydraulic-power-packs/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-power-packs/hydraulic-power-packs-for-press/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-power-packs/multistation-hydraulic-power-packs/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-power-packs/accumulator-hydraulic-power-packs/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-packs/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/products/hydraulic-power-packs/hand-pump-operated-hydraulic-power-packs/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/products/hydraulic-power-packs/high-low-hydraulic-power-packs/', changeFrequency: 'monthly', priority: 0.8 },
 
     // ── Hydraulic Manifold Blocks Product Pages ──
@@ -54,20 +68,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/products/manifold-blocks/custom-manifold-blocks/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/products/manifold-blocks/multi-station-manifold-blocks/', changeFrequency: 'monthly', priority: 0.8 },
 
-    // ── Location Pages ──
-    { path: '/locations/ahmedabad/', changeFrequency: 'monthly', priority: 0.9 },
+    // ── Location Hub ──
+    { path: '/locations/', changeFrequency: 'monthly', priority: 0.9 },
+
+    // ── Gujarat State Hub ──
     { path: '/locations/gujarat/', changeFrequency: 'monthly', priority: 0.9 },
+
+    // ── Gujarat Cities ──
+    { path: '/locations/ahmedabad/', changeFrequency: 'monthly', priority: 0.9 },
+    { path: '/locations/surat/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/locations/vadodara/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/locations/rajkot/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/locations/bhavnagar/', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/locations/jamnagar/', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/locations/kutch/', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/locations/gandhinagar/', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/locations/morbi/', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/locations/vapi/', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/locations/ankleshwar/', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/locations/halol/', changeFrequency: 'monthly', priority: 0.7 },
+
+    // ── Gujarat Industrial Spokes ──
     { path: '/locations/gujarat/injection-moulding-cylinders/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/locations/gujarat/ship-breaking-cylinders/', changeFrequency: 'monthly', priority: 0.8 },
     { path: '/locations/gujarat/textile-machinery-cylinders/', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/locations/rajkot/', changeFrequency: 'monthly', priority: 0.9 },
-    { path: '/locations/surat/', changeFrequency: 'monthly', priority: 0.9 },
-    { path: '/locations/vadodara/', changeFrequency: 'monthly', priority: 0.9 },
+
+    // ── National State Hubs ──
+    { path: '/locations/maharashtra/', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/locations/madhya-pradesh/', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/locations/rajasthan/', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/locations/karnataka/', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/locations/tamil-nadu/', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/locations/west-bengal/', changeFrequency: 'monthly', priority: 0.7 },
   ];
 
   return pages.map((page) => ({
     url: `${siteUrl}${page.path}`,
-    lastModified: now,
+    lastModified: new Date(),
     changeFrequency: page.changeFrequency,
     priority: page.priority,
   }));

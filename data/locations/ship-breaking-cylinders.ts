@@ -4,11 +4,11 @@ export const shipBreakingData: LocationPageData = {
   seo: {
     title: 'Ship Breaking Hydraulic Cylinders Bhavnagar | Heavy Duty',
     description: 'We manufacture massive, high-tonnage hydraulic cylinders for Alang\'s ship-breaking industry in Bhavnagar. Engineered to survive extreme mechanical shock.',
-    canonical: 'https://www.honeywellhydraulics.com/locations/gujarat/ship-breaking-cylinders/',
+    canonical: 'https://honeywellhydraulics.in/locations/gujarat/ship-breaking-cylinders/',
     openGraph: {
       title: 'Heavy-Duty Hydraulic Cylinders for Ship Breaking in Alang',
       description: 'We manufacture massive, high-tonnage hydraulic cylinders for Alang\'s ship-breaking industry in Bhavnagar. Engineered to survive extreme mechanical shock.',
-      url: 'https://www.honeywellhydraulics.com/locations/gujarat/ship-breaking-cylinders/',
+      url: 'https://honeywellhydraulics.in/locations/gujarat/ship-breaking-cylinders/',
       images: [
         {
           url: '/images/locations/ship-breaking-cylinders-bhavnagar.jpg',
@@ -37,7 +37,7 @@ export const shipBreakingData: LocationPageData = {
     '@graph': [
       {
         '@type': 'Service',
-        '@id': 'https://www.honeywellhydraulics.com/locations/gujarat/ship-breaking-cylinders/#service',
+        '@id': 'https://honeywellhydraulics.in/locations/gujarat/ship-breaking-cylinders/#service',
         serviceType: 'Ship Breaking Hydraulic Solutions',
         provider: {
           '@type': 'ManufacturingBusiness',
@@ -60,17 +60,17 @@ export const shipBreakingData: LocationPageData = {
       },
       {
         '@type': 'WebPage',
-        '@id': 'https://www.honeywellhydraulics.com/locations/gujarat/ship-breaking-cylinders/',
+        '@id': 'https://honeywellhydraulics.in/locations/gujarat/ship-breaking-cylinders/',
         name: 'Ship Breaking Hydraulic Cylinders in Bhavnagar | Heavy Duty',
-        url: 'https://www.honeywellhydraulics.com/locations/gujarat/ship-breaking-cylinders/'
+        url: 'https://honeywellhydraulics.in/locations/gujarat/ship-breaking-cylinders/'
       },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.honeywellhydraulics.com/' },
-          { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.honeywellhydraulics.com/locations/' },
-          { '@type': 'ListItem', position: 3, name: 'Gujarat', item: 'https://www.honeywellhydraulics.com/locations/gujarat/' },
-          { '@type': 'ListItem', position: 4, name: 'Ship Breaking Cylinders', item: 'https://www.honeywellhydraulics.com/locations/gujarat/ship-breaking-cylinders/' }
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://honeywellhydraulics.in/' },
+          { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://honeywellhydraulics.in/locations/' },
+          { '@type': 'ListItem', position: 3, name: 'Gujarat', item: 'https://honeywellhydraulics.in/locations/gujarat/' },
+          { '@type': 'ListItem', position: 4, name: 'Ship Breaking Cylinders', item: 'https://honeywellhydraulics.in/locations/gujarat/ship-breaking-cylinders/' }
         ]
       },
       {
@@ -93,8 +93,8 @@ export const shipBreakingData: LocationPageData = {
       alt: 'Massive hydraulic cylinders for ship breaking in Alang, Bhavnagar',
     },
     ctas: {
-      primary: { label: 'REQUEST A HEAVY-DUTY QUOTE', href: '/request-quote/' },
-      secondary: { label: 'VIEW MATERIAL HANDLING SOLUTIONS', href: '/industries/material-handling/' },
+      primary: { label: 'REQUEST A HEAVY-DUTY QUOTE', href: '/request-quote/#quote-form' },
+      secondary: { label: 'VIEW HYDRAULIC CYLINDERS', href: '/products/hydraulic-cylinders/' },
     },
   },
   benefits: {
@@ -162,7 +162,7 @@ export const shipBreakingData: LocationPageData = {
         id: 'material-handling',
         title: 'Scrap & Material Handling',
         description: 'Robust hydraulic power packs and actuation systems for scrap balers and heavy lifters.',
-        href: '/industries/material-handling/',
+        href: '/products/hydraulic-power-packs/',
       },
     ],
   },

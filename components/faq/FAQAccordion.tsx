@@ -22,7 +22,7 @@ export interface FAQAccordionProps {
  * Can optionally inject FAQPage schema automatically.
  * Client component to handle state.
  */
-export function FAQAccordion({ faqs, className = '', injectSchema = true }: FAQAccordionProps) {
+export function FAQAccordion({ faqs, className = '', injectSchema = false }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // First item open by default
 
   const handleToggle = (index: number) => {

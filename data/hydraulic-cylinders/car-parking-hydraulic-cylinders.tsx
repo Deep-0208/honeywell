@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, ArrowUpToLine, Settings, ShieldAlert, HardHat, Scale, Cog, FlaskConical, Package, FileCheck } from 'lucide-react';
+import { ShieldCheck, ArrowUpToLine, Settings, ShieldAlert, HardHat, Scale, Cog, FlaskConical, Package } from 'lucide-react';
 import { FaIndustry, FaBuilding, FaWarehouse, FaCarSide } from 'react-icons/fa';
 import type { ProductPageData } from '@/components/product-page/types';
 
@@ -28,14 +28,14 @@ export const carParkingCylinderData: ProductPageData = {
   hero: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders' },
+      { label: 'Products', href: '/products/' },
+      { label: 'Hydraulic Cylinders', href: '/products/hydraulic-cylinders/' },
     ],
     currentPage: 'Car Parking Cylinders',
     subtitle: 'Smooth & Stable Vehicle Lifting',
     h1: 'Car Parking Hydraulic Cylinder Manufacturer',
     description: 'Honeywell Hydraulics manufactures premium hydraulic cylinders designed specifically for modern car parking systems. Engineered for high-cycle continuous operation, our cylinders provide the reliable, judder-free lifting force required to safely raise and lower vehicles in stack parking, multi-level systems, and automated parking structures.',
-    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote' },
+    primaryCta: { label: 'REQUEST A QUOTE', href: '/request-quote/#quote-form' },
     secondaryCta: { label: 'TECHNICAL SPECS', href: '#technical-specifications' },
     image: {
       src: '/images/products/hydraulic-cylinders/car-parking-hydraulic-cylinder-v2.webp',
@@ -110,8 +110,8 @@ export const carParkingCylinderData: ProductPageData = {
   technicalSpecs: {
     heading: 'Technical Specifications',
     description: 'Our car parking cylinders are manufactured using the finest quality materials to meet the rigorous demands of vehicle lifting and storage.',
-    primaryCta: { label: 'DISCUSS YOUR PARKING LIFT', href: '/request-quote' },
-    secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders' },
+    primaryCta: { label: 'DISCUSS YOUR PARKING LIFT', href: '/request-quote/#quote-form' },
+    secondaryCta: { label: 'VIEW ALL PRODUCTS', href: '/products/hydraulic-cylinders/' },
     tableTitle: 'Car Parking Cylinder Specs',
     rows: [
       { parameter: 'Maximum Lifting Height (Stroke)', value: 'Up to 2100 mm (Standard)' },
@@ -210,25 +210,25 @@ export const carParkingCylinderData: ProductPageData = {
         icon: <FaCarSide className="w-6 h-6" />,
         name: 'Stack Parking Systems',
         description: 'Standard 2-post and 4-post residential and commercial stack parking lifts to double parking capacity.',
-        href: '/industries/car-parking-hydraulic-cylinder-manufacturer-honeywell-hydraulics',
+        href: '#',
       },
       {
         icon: <FaBuilding className="w-6 h-6" />,
         name: 'Multi-Level Parking',
         description: 'Automated puzzle parking and tower parking systems for high-density urban commercial buildings.',
-        href: '/industries/multi-level-parking',
+        href: '#',
       },
       {
         icon: <FaWarehouse className="w-6 h-6" />,
         name: 'Basement Parking',
         description: 'Compact pit-parking and subterranean vehicle lifts designed for limited overhead clearance.',
-        href: '/industries/basement-parking',
+        href: '#',
       },
       {
         icon: <FaIndustry className="w-6 h-6" />,
         name: 'Car Elevators',
         description: 'Heavy-duty hydraulic vehicle elevators for moving cars between floors in showrooms and service centers.',
-        href: '/industries/car-elevators',
+        href: '#',
       },
     ],
   },
@@ -262,7 +262,7 @@ export const carParkingCylinderData: ProductPageData = {
     midCta: {
       heading: 'Need Cylinders for Your Parking Systems?',
       description: 'Our engineers can design and manufacture cylinders in volume based on your specific platform size and lifting height requirements.',
-      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote' },
+      primaryCta: { label: 'SUBMIT OEM REQUIREMENTS', href: '/request-quote/#quote-form' },
       whatsappLabel: 'WhatsApp Us',
     },
   },
@@ -309,7 +309,7 @@ export const carParkingCylinderData: ProductPageData = {
         description: 'Heavy-duty cylinders with integrated safety rupture valves for industrial freight elevators.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/goods-lift-hydraulic-cylinder-v2.webp',
-        href: '/products/hydraulic-cylinders/goods-lift-hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/goods-lift-hydraulic-cylinders/',
         ctaText: 'View Details',
       },
       {
@@ -317,7 +317,7 @@ export const carParkingCylinderData: ProductPageData = {
         description: 'Versatile cylinders providing powered force in both extension and retraction strokes.',
         category: 'Hydraulic Cylinders',
         imageSrc: '/images/products/hydraulic-cylinders/double-acting-hydraulic-cylinders-manufacturer.webp',
-        href: '/products/hydraulic-cylinders/double-acting-hydraulic-cylinders',
+        href: '/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/',
         ctaText: 'View Details',
       },
       {
@@ -325,7 +325,7 @@ export const carParkingCylinderData: ProductPageData = {
         description: 'Custom engineered power units to drive your parking system hydraulic cylinders.',
         category: 'Power Packs',
         imageSrc: '/images/products/hydraulic-power-packs/hydraulic-power-pack-manufacturer.webp',
-        href: '/products/hydraulic-power-packs',
+        href: '/products/hydraulic-power-packs/',
         ctaText: 'View Details',
       },
     ],
@@ -363,7 +363,7 @@ export const carParkingCylinderData: ProductPageData = {
     title: 'Require Reliable Cylinders for Your Parking Systems?',
     description: "Partner with Honeywell Hydraulics for OEM-grade, precision-engineered lifting cylinders built for high-cycle operations and absolute safety.",
     primaryCtaText: 'REQUEST OEM QUOTE',
-    primaryCtaHref: '/request-quote',
+    primaryCtaHref: '/request-quote/#quote-form',
     secondaryCtaText: 'Call Now',
     secondaryCtaHref: 'tel:+919924343873',
   },

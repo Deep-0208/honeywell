@@ -13,15 +13,14 @@ import type { SpotlightData } from './types';
  * 3-column timeline cards with numbered badges.
  * Last card supports dark variant (navy background).
  */
-export function ProductSpotlight({
-  badge = 'CASE STUDY',
+export function ProductSpotlight({ badge = 'CASE STUDY',
   heading,
   subheading,
   stats,
   phases,
-}: SpotlightData) {
+  bg = 'white' }: SpotlightData & { bg?: 'white' | 'gray' }) {
   return (
-    <Section aria-labelledby="project-spotlight-heading" bg="white" id="project-spotlight">
+    <Section aria-labelledby="project-spotlight-heading" bg={bg} id="project-spotlight">
       <Container>
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
@@ -43,13 +42,13 @@ export function ProductSpotlight({
 
           {/* Stats Strip */}
           {stats.length > 0 && (
-            <div className="grid grid-cols-3 gap-4 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-10">
               {stats.map((stat, idx) => (
-                <div key={idx} className="bg-brand-surfaceGray rounded-xl p-5 text-center border border-slate-200">
+                <div key={idx} className="bg-brand-surfaceGray rounded-xl p-4 sm:p-5 text-center border border-slate-200">
                   <span className="block text-2xl md:text-3xl font-display font-bold text-honeywell-red">
                     {stat.value}
                   </span>
-                  <span className="text-xs font-body text-brand-steelGray uppercase tracking-wider mt-1">
+                  <span className="text-xs font-body text-brand-steelGray uppercase tracking-wider mt-1 block">
                     {stat.label}
                   </span>
                 </div>

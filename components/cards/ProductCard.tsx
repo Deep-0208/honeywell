@@ -18,6 +18,7 @@ export interface ProductCardProps {
  * ProductCard Component
  *
  * Used for listing hydraulic cylinders, power packs, and systems.
+ * The entire card is clickable when href is provided.
  */
 export function ProductCard({
   title,
@@ -28,7 +29,7 @@ export function ProductCard({
 }: ProductCardProps) {
   const isComingSoon = !href;
 
-  return (
+  const cardContent = (
     <Card
       variant={isComingSoon ? "default" : "interactive"}
       className={`relative flex flex-col h-full bg-white border border-slate-100 overflow-hidden ${isComingSoon ? "" : "group transition-all duration-300 ease-premium active:scale-[0.98]"}`}
@@ -42,7 +43,7 @@ export function ProductCard({
       )}
 
       {/* Image Container */}
-      <div className="relative w-full aspect-[4/3] bg-white overflow-hidden border-b border-slate-100 z-10 p-4">
+      <div className="relative w-full aspect-[4/3] bg-white overflow-hidden border-b border-slate-100 p-4">
         <Image
           src={imageSrc}
           alt={`${title} - Honeywell Hydraulics`}
@@ -52,18 +53,9 @@ export function ProductCard({
         />
       </div>
 
-      <CardContent className="flex flex-col flex-1 p-6 relative z-10">
+      <CardContent className="flex flex-col flex-1 p-6">
         <Heading variant="card" as="h3" className={`mb-3 ${isComingSoon ? "text-brand-deepNavy" : "text-brand-deepNavy group-hover:text-honeywell-navy transition-colors duration-200"}`}>
-          {isComingSoon ? (
-            title
-          ) : (
-            <Link
-              href={href}
-              className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:rounded-sm before:absolute before:inset-0 before:z-10"
-            >
-              {title}
-            </Link>
-          )}
+          {title}
         </Heading>
 
         <p className={`font-body text-sm mb-6 line-clamp-2 flex-1 ${isComingSoon ? "text-brand-steelGray" : "text-brand-steelGray group-hover:text-brand-darkSlate transition-colors duration-200"}`}>
@@ -88,4 +80,15 @@ export function ProductCard({
       </CardContent>
     </Card>
   );
+
+  if (isComingSoon) {
+    return cardContent;
+  }
+
+  return (
+    <Link href={href} className="block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-honeywell-navy focus-visible:rounded-xl">
+      {cardContent}
+    </Link>
+  );
 }
+

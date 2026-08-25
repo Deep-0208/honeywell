@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: 'Hydraulic Products Manufacturer | Honeywell',
     description:
-      'Leading hydraulic products manufacturer in India. Explore precision-engineered hydraulic cylinders, power packs, manifold blocks, and turnkey systems.',
+      'Leading hydraulic products manufacturer in India. Explore precision-engineered hydraulic cylinders, custom power packs, and reliable manifold blocks today.',
     canonical: '/products',
   }),
 };
@@ -96,22 +96,19 @@ export default function ProductsHubPage() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={productListSchema} />
       {/* Hero Section */}
-      <section className="relative bg-slate-50 text-honeywell-navy pt-6 md:pt-8 lg:pt-10 pb-16 lg:pb-24 overflow-hidden border-b border-slate-200">
-        {/* Background Decorative Elements */}
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.02] pointer-events-none mix-blend-overlay" aria-hidden="true" />
-
+      <section className="relative bg-white text-honeywell-navy pt-6 pb-16 md:pt-8 md:pb-24 overflow-hidden border-b border-slate-200">
         <Container className="relative z-10">
-          <nav aria-label="Breadcrumb" className="text-base font-body text-slate-500 mb-8">
-            <ol className="flex items-center space-x-2">
+          <nav aria-label="Breadcrumb" className="text-sm md:text-base font-body text-slate-500 mb-6">
+            <ol className="flex items-center gap-2 flex-wrap">
               <li>
-                <Link href="/" className="hover:text-honeywell-red transition-colors duration-200">Home</Link>
+                <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">Home</Link>
               </li>
-              <li aria-hidden="true" className="text-slate-300">/</li>
-              <li className="text-honeywell-navy font-semibold tracking-wide" aria-current="page">Products</li>
+              <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>
+              <li className="text-honeywell-red font-semibold" aria-current="page">Products</li>
             </ol>
           </nav>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center lg:items-start lg:pt-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center lg:items-start">
             <div className="lg:col-span-7">
               <Heading variant="section" as="h1" className="text-honeywell-navy mb-6 leading-tight drop-shadow-sm">
                 Industrial Hydraulic System Manufacturer
@@ -120,10 +117,10 @@ export default function ProductsHubPage() {
                 Precision-engineered fluid power solutions for heavy industry. As a leading hydraulic products manufacturer, we design, machine, and test highly reliable hydraulic cylinders and power packs. Built for continuous operation in the most demanding manufacturing environments.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="primary" size="lg" href="/request-quote" rightIcon={<ArrowRight className="w-5 h-5" />} className="shadow-lg shadow-honeywell-red/20">
+                <Button variant="primary" size="lg" href="/request-quote/#quote-form" rightIcon={<ArrowRight className="w-5 h-5" />} className="shadow-lg shadow-honeywell-red/20">
                   REQUEST A QUOTE
                 </Button>
-                <Button variant="outline" size="lg" href="/contact-us" className="border-honeywell-navy text-honeywell-navy hover:bg-honeywell-navy hover:text-white backdrop-blur-sm">
+                <Button variant="outline" size="lg" href="/contact-us/" className="border-honeywell-navy text-honeywell-navy hover:bg-honeywell-navy hover:text-white backdrop-blur-sm">
                   CONTACT ENGINEERING TEAM
                 </Button>
               </div>
@@ -135,20 +132,17 @@ export default function ProductsHubPage() {
                 <div className="absolute inset-4 rounded-3xl border border-slate-200 bg-slate-100/70 backdrop-blur-md overflow-hidden flex items-center justify-center p-4 shadow-2xl">
                    <div className="grid grid-cols-2 gap-4 w-full h-full">
                       <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image unoptimized src="/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad-manufacturer.webp" alt="Hydraulic Cylinders" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image unoptimized src="/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad-manufacturer.webp" alt="Hydraulic Cylinders" fill priority className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
                       <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image unoptimized src="/images/products/hero/hydraulic-power-pack.webp" alt="Hydraulic Power Packs" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image unoptimized src="/images/products/hero/hydraulic-power-pack.webp" alt="Hydraulic Power Packs" fill priority className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
                       <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image unoptimized src="/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp" alt="Hydraulic Manifold Blocks" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image unoptimized src="/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp" alt="Hydraulic Manifold Blocks" fill priority className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
                       <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image unoptimized src="/images/products/hero/custom-hydraulic-systems-ahmedabad.webp" alt="Custom Hydraulic Systems" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image unoptimized src="/images/products/hero/custom-hydraulic-systems-ahmedabad.webp" alt="Custom Hydraulic Systems" fill priority className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
-                   </div>
-                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <Cog className="w-16 h-16 text-honeywell-red drop-shadow-lg animate-[spin_10s_linear_infinite]" />
                    </div>
                 </div>
               </div>
@@ -161,7 +155,7 @@ export default function ProductsHubPage() {
            Tracked in REQUIRED_IMAGES_MASTER.md */}
 
       {/* Product Categories Grid */}
-      <Section bg="white" id="categories" aria-labelledby="categories-heading">
+      <Section bg="gray" id="categories" aria-labelledby="categories-heading">
         <Container>
           <div className="max-w-3xl mb-12 mx-auto text-center">
             <Heading variant="section" as="h2" id="categories-heading" underline="center">
@@ -177,15 +171,15 @@ export default function ProductsHubPage() {
               description="Heavy-duty linear actuators available in custom bore sizes from 40mm to 300mm. Variants: Double Acting, Single Acting, Flange Mounting, Clevis Mounting, Tie-Rod, Telescopic."
               category="Actuators"
               imageSrc="/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad-manufacturer.webp"
-              href="/products/hydraulic-cylinders"
+              href="/products/hydraulic-cylinders/"
               ctaText="EXPLORE HYDRAULIC CYLINDERS"
             />
             <ProductCard
               title="Hydraulic Power Packs"
               description="Pre-assembled, piped, and tested fluid power generation units. Variants: 3-Phase Industrial Units, Single-Phase Units, Dedicated Press Machine High-Low Circuits."
               category="Power Generation"
-              imageSrc="/images/products/hero/multi-station-hydraulic-power-pack.webp"
-              href="/products/hydraulic-power-packs"
+              imageSrc="/images/products/hero/hydraulic-power-pack.webp"
+              href="/products/hydraulic-power-packs/"
               ctaText="EXPLORE HYDRAULIC POWER PACKS"
             />
             <ProductCard
@@ -193,14 +187,14 @@ export default function ProductsHubPage() {
               description="Precision-machined logic blocks. Standard CETOP subplates and custom multi-station cartridge valve manifolds ensuring zero-leak fluid control."
               category="Fluid Control"
               imageSrc="/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp"
-              href="/products/manifold-blocks"
+              href="/products/manifold-blocks/"
               ctaText="EXPLORE MANIFOLD BLOCKS"
             />
           </div>
         </Container>
       </Section>
       {/* Product Selection Guide */}
-      <Section bg="gray" id="selection-guide" aria-labelledby="selection-heading">
+      <Section bg="white" id="selection-guide" aria-labelledby="selection-heading">
         <Container>
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col items-center justify-center mb-12 text-center">
@@ -229,7 +223,7 @@ export default function ProductsHubPage() {
                     </p>
                   </div>
                   <div className="flex items-center md:items-end">
-                    <Link href="/products/hydraulic-cylinders" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
+                    <Link href="/products/hydraulic-cylinders/" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
                       <span className="relative z-10 flex items-center">
                         View Cylinders <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
                     </Link>
@@ -251,7 +245,7 @@ export default function ProductsHubPage() {
                     </p>
                   </div>
                   <div className="flex items-center md:items-end">
-                    <Link href="/products/hydraulic-power-packs" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
+                    <Link href="/products/hydraulic-power-packs/" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
                       <span className="relative z-10 flex items-center">
                         View Power Packs <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
                     </Link>
@@ -266,16 +260,16 @@ export default function ProductsHubPage() {
                     <span className="text-2xl md:text-3xl font-display font-bold text-honeywell-red group-hover:text-white transition-colors">3</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Do you need both + control logic integrated?</h3>
-                    <p className="text-brand-steelGray font-body mb-3 text-justify">For complex machines requiring synchronized motion, proportional control, and PLC integration — you need a <strong>Turnkey Hydraulic System</strong>.</p>
+                    <h3 className="text-xl font-display font-bold text-honeywell-navy mb-3">Do you need to consolidate valves and eliminate piping leaks?</h3>
+                    <p className="text-brand-steelGray font-body mb-3 text-justify">If you need to simplify multi-valve circuits, integrate CETOP valves, or eliminate complex hose plumbing — you need a <strong>Hydraulic Manifold Block</strong>.</p>
                     <p className="text-sm text-brand-darkSlate font-body bg-brand-lightSurface p-4 rounded-xl border-l-4 border-honeywell-red text-justify">
-                      <em>Key consideration:</em> Share your machine cycle diagram and we'll engineer the complete fluid power package: cylinders, power pack, manifold, and controls.
+                      <em>Key consideration:</em> Specify your valve pattern (CETOP 03 / NG06, CETOP 05 / NG10) and required number of stations for custom CNC machining.
                     </p>
                   </div>
                   <div className="flex items-center md:items-end">
-                    <Link href="/products/turnkey-systems" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
+                    <Link href="/products/manifold-blocks/" className="text-honeywell-red font-medium font-body text-sm flex items-center group-hover:gap-2 transition-all before:absolute before:inset-0 before:z-0">
                       <span className="relative z-10 flex items-center">
-                        View Systems <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
+                        View Manifold Blocks <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" /></span>
                     </Link>
                   </div>
                 </CardContent>
@@ -285,7 +279,7 @@ export default function ProductsHubPage() {
         </Container>
       </Section>
       {/* Industries Overview */}
-      <Section bg="white" id="industries" aria-labelledby="industries-heading">
+      <Section bg="gray" id="industries" aria-labelledby="industries-heading">
         <Container>
           <div className="flex flex-col items-center justify-center mb-12 text-center">
             <div className="max-w-2xl">
@@ -295,7 +289,7 @@ export default function ProductsHubPage() {
               <p className="text-lg text-brand-steelGray font-body text-center mb-6">
                 We supply premium fluid power components to over 20 distinct industrial sectors PAN-India.
               </p>
-              <Link href="/request-quote" className="text-honeywell-red font-bold hover:underline inline-flex items-center gap-1">
+              <Link href="/request-quote/#quote-form" className="text-honeywell-red font-bold hover:underline inline-flex items-center gap-1">
                 Don&apos;t see your industry? Contact us
                 <ArrowRight className="w-4 h-4" />
               </Link>
@@ -305,62 +299,62 @@ export default function ProductsHubPage() {
             <IndustryCard
               industryName="Injection Moulding"
               description="High-speed, high-cycle tie-rod hydraulic cylinders designed for rapid core-pulling and mould clamping."
-              href="/industries/injection-moulding"
+              href="/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/"
               icon={<Activity className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Automotive OEM"
               description="Highly repeatable hydraulic systems for robotic assembly, welding lines, and press automation."
-              href="#"
+              href="/products/hydraulic-cylinders/custom-hydraulic-cylinders/"
               icon={<Shield className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Steel & Metallurgy"
               description="Rugged mill-type hydraulic cylinders built with high-temperature Viton seals to withstand extreme foundry environments."
-              href="#"
+              href="/products/hydraulic-cylinders/welded-hydraulic-cylinders/"
               icon={<Activity className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Construction & Earthmoving"
               description="Heavy-duty boom, stick, and bucket hydraulic cylinders engineered for shock resistance in excavators and earthmovers."
-              href="#"
+              href="/products/hydraulic-cylinders/welded-hydraulic-cylinders/"
               icon={<Shield className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Material Handling"
               description="Reliable, leak-free telescopic and double-acting cylinders for forklifts, scissor lifts, and AGVs."
-              href="#"
+              href="/products/hydraulic-cylinders/scissor-lift-table-hydraulic-cylinder/"
               icon={<Activity className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Rolling Mill"
               description="High-force hydraulic cylinders with precision-ground rods for continuous rolling mill operations."
-              href="#"
+              href="/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/"
               icon={<Shield className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Wooden Industries"
               description="High-tonnage hydraulic press cylinders optimized for plywood pressing, veneer peeling, and timber cutting."
-              href="#"
+              href="/products/hydraulic-power-packs/hydraulic-power-packs-for-press/"
               icon={<Activity className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Power Generation"
               description="Custom hydraulic actuators for turbine control, valve actuation, and dam gate operations."
-              href="#"
+              href="/products/manifold-blocks/custom-manifold-blocks/"
               icon={<Shield className="w-6 h-6" />}
             />
             <IndustryCard
               industryName="Defence & Aerospace"
               description="Military-grade hydraulic cylinders meeting stringent defence specifications for launch systems and ground support."
-              href="#"
+              href="/products/hydraulic-cylinders/custom-hydraulic-cylinders/"
               icon={<Activity className="w-6 h-6" />}
             />
           </div>
         </Container>
       </Section>
       {/* Engineering & Manufacturing Capabilities */}
-      <Section bg="gray" id="capabilities" aria-labelledby="capabilities-heading">
+      <Section bg="white" id="capabilities" aria-labelledby="capabilities-heading">
         <Container>
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col items-center justify-center mb-12 text-center">
@@ -406,8 +400,8 @@ export default function ProductsHubPage() {
                     Every hydraulic product we manufacture is backed by our strict Defect Warranty. In the event of an operational anomaly, our emergency engineering team dispatches replacement components or seal kits to minimize your production downtime.
                   </p>
                   <div className="mt-auto flex items-center text-honeywell-red font-medium font-body text-sm">
-                    <Link href="/warranty" className="flex items-center group-hover:gap-2 transition-all">
-                      View Warranty Details <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" />
+                    <Link href="/terms/" className="flex items-center group-hover:gap-2 transition-all">
+                      View Terms  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300 ease-premium" />
                     </Link>
                   </div>
                 </CardContent>
@@ -475,7 +469,7 @@ export default function ProductsHubPage() {
         </Container>
       </Section>
       {/* Trust Stats Strip */}
-      <Section bg="white" className="py-8 md:py-12" aria-hidden="true">
+      <Section bg="gray" className="py-8 md:py-12">
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="p-4">
@@ -502,14 +496,15 @@ export default function ProductsHubPage() {
         faqs={faqs}
         title="Frequently Asked Questions"
         description="Find answers to common questions about our hydraulic products, manufacturing capabilities, and custom engineering services."
-        bg="gray"
+        bg="white"
+        injectSchema={true}
       />
       {/* Conversion CTA — M2: replaced dead # href */}
       <CTA
         title="Ready to discuss your exact requirements?"
         description="Whether you are in the initial design phase of a new machine or require an urgent breakdown replacement, Honeywell Hydraulics has the engineering capability to deliver."
         primaryCtaText="REQUEST A CUSTOM ENGINEERING QUOTE"
-        primaryCtaHref="/request-quote"
+        primaryCtaHref="/request-quote/#quote-form"
         secondaryCtaText="Contact Engineering Team"
         secondaryCtaHref="/contact-us/"
       />
