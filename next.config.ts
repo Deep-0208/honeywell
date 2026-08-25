@@ -23,7 +23,7 @@ const securityHeaders = [
   },
   {
     key: 'Permissions-Policy',
-    value: 'camera=(), geolocation=(), browsing-topics=()'
+    value: 'camera=(), geolocation=(), browsing-topics=(), microphone=(self)'
   },
   // HSTS — signals HTTPS trust to Google and browsers
   {
@@ -33,12 +33,18 @@ const securityHeaders = [
   // CSP — prevents XSS, clickjacking, and data injection attacks
   {
     key: 'Content-Security-Policy',
-    value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://vercel.live https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://*.elevenlabs.io wss://*.elevenlabs.io; frame-src 'self' https://www.google.com https://maps.google.com; media-src 'self' https://*.elevenlabs.io; object-src 'none'; base-uri 'self'; form-action 'self';"
+    value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://www.googletagmanager.com https://www.google-analytics.com https://vercel.live https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://*.elevenlabs.io wss://*.elevenlabs.io; frame-src 'self' https://www.google.com https://maps.google.com; media-src 'self' blob: https://*.elevenlabs.io; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self';"
   },
 ];
 
 const nextConfig: NextConfig = {
   compress: true,
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
+  },
   // Enforce trailing slash on all URLs for canonical consistency
   trailingSlash: true,
   images: {
@@ -90,11 +96,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
     ];
-  },
-  // TODO: Remove ignoreBuildErrors after fixing all TypeScript errors
-  // Keeping for now during dev phase to prevent build failures
-  typescript: {
-    ignoreBuildErrors: true,
   },
 };
 

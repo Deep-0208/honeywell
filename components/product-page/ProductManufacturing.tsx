@@ -13,12 +13,11 @@ import type { ManufacturingData } from './types';
  * icon hover scale animation, and mid-page navy CTA banner
  * with skewed red accent.
  */
-export function ProductManufacturing({
-  heading,
+export function ProductManufacturing({ heading,
   description,
   steps,
   midCta,
-}: ManufacturingData) {
+  bg = 'white' }: ManufacturingData & { bg?: 'white' | 'gray' }) {
   const gridColsClass =
     steps.length === 2
       ? 'lg:grid-cols-2'
@@ -34,7 +33,7 @@ export function ProductManufacturing({
       : '12.5%';
 
   return (
-    <Section aria-labelledby="manufacturing-process-heading" bg="white" id="manufacturing-process">
+    <Section aria-labelledby="manufacturing-process-heading" bg={bg} id="manufacturing-process">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Heading

@@ -77,7 +77,7 @@ export async function GET(req: NextRequest) {
   } catch (e) {
     // SAFE FALLBACK: Never return a 500 error for OG images to protect SEO!
     // Return a basic, hardcoded ImageResponse so the crawler always gets a valid 200 OK image.
-    console.error('Fatal error in OG image generation:', e);
+    console.error('[API/OG] OpenGraph image generation failed:', e instanceof Error ? e.message : 'Unknown error');
     return new ImageResponse(
       (
         <div style={{ backgroundColor: '#0D1B5C', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '64px', fontWeight: 'bold' }}>

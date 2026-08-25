@@ -10,9 +10,9 @@ import type { EngineeringData } from './types';
  * Stacked cards with letter labels (A, B, C...) for engineering guidance,
  * selection criteria, design recommendations, and installation notes.
  */
-export function ProductEngineering({ heading, description, items }: EngineeringData) {
+export function ProductEngineering({ heading, description, items , bg = 'white' }: EngineeringData & { bg?: 'white' | 'gray' }) {
   return (
-    <Section aria-labelledby="engineering-considerations-heading" bg="white" id="engineering-considerations">
+    <Section aria-labelledby="engineering-considerations-heading" bg={bg} id="engineering-considerations">
       <Container>
         <div className="max-w-4xl mx-auto">
           <Heading

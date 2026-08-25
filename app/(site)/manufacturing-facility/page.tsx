@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Metadata } from 'next';
 import { buildMetadata } from '@/lib/seo';
 import Image from 'next/image';
@@ -272,7 +272,7 @@ export default function ManufacturingFacilityPage() {
                   ) : (
                     <div className="text-center px-4">
                       <Camera className="w-8 h-8 text-brand-borderGray mx-auto mb-2" aria-hidden="true" />
-                      <p className="text-xs text-[#94A3B8] font-body text-justify">{item.name}</p>
+                      <p className="text-xs text-brand-steelGray font-body text-justify">{item.name}</p>
                     </div>
                   )}
                 </div>
@@ -338,13 +338,15 @@ export default function ManufacturingFacilityPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-8">
-              <div className="aspect-[4/3] bg-slate-200 rounded-sm flex items-center justify-center">
-                <div className="text-center px-6">
-                  <PenTool className="w-12 h-12 text-[#94A3B8] mx-auto mb-3" aria-hidden="true" />
-                  <p className="text-sm font-semibold text-brand-darkSlate font-body text-justify">Engineering Design</p>
-                  <p className="text-xs text-[#94A3B8] font-body text-justify">CAD-based hydraulic design</p>
-                </div>
+            <div className="bg-brand-surfaceGray border border-slate-200 rounded-sm p-4 md:p-6">
+              <div className="aspect-[4/3] relative rounded-sm overflow-hidden border border-slate-200/80 shadow-card">
+                <Image
+                  src="/images/company/hydraulic-cad-engineering-design.webp"
+                  alt="CAD engineering workstation designing precision hydraulic cylinders at Honeywell Hydraulics Ahmedabad facility"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
@@ -383,7 +385,7 @@ export default function ManufacturingFacilityPage() {
             {CAPACITY_SPECS.map((item) => (
               <div key={item.label} className="border border-white/10 rounded-sm p-5">
                 <p className="text-lg md:text-xl font-display font-extrabold text-white mb-1 text-justify">{item.value}</p>
-                <p className="text-xs text-[#94A3B8] font-body uppercase tracking-wider text-justify">{item.label}</p>
+                <p className="text-xs text-brand-steelGray font-body uppercase tracking-wider text-justify">{item.label}</p>
               </div>
             ))}
           </div>
@@ -418,6 +420,8 @@ export default function ManufacturingFacilityPage() {
       </Section>
 
       {/* ── Lead Generation CTA ──────────────────────────────────────────── */}
+      <SiteFAQSection faqs={MFG_FAQS} />
+
       <CTA
         title="Ready to See Our Factory in Action?"
         description="We welcome facility visits, witnessed pressure tests, and OEM capability audits. Factory-direct hydraulic manufacturing from our Ahmedabad facility."
@@ -427,8 +431,8 @@ export default function ManufacturingFacilityPage() {
         secondaryCtaHref="tel:+91-9924343873"
       />
 
-      {/* ── FAQ ───────────────────────────────────────────────────────────── */}
-      <SiteFAQSection faqs={MFG_FAQS} />
-    </>
+      </>
   );
 }
+
+

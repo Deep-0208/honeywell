@@ -23,9 +23,9 @@ import {
 // SEO Metadata
 // ─────────────────────────────────────────────────────────────────────────────
 export const metadata: Metadata = buildMetadata({
-  title: 'Service Areas | Hydraulic Cylinder Manufacturer Across India | Honeywell Hydraulics',
+  title: 'Service Areas & Industrial Hubs | Honeywell Hydraulics',
   description:
-    'Honeywell Hydraulics supplies custom hydraulic cylinders and power packs across Gujarat, Maharashtra, Rajasthan, Karnataka, Tamil Nadu, and all major Indian industrial hubs. Factory-direct from Ahmedabad.',
+    'Custom hydraulic cylinders & power packs supplied across Gujarat, Maharashtra, and major industrial hubs in India. Direct from our Ahmedabad facility.',
   canonical: '/locations/',
 });
 

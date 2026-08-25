@@ -1,15 +1,17 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { 
-  Building2, 
-  Wrench, 
-  Cpu, 
-  ArrowRight, 
-  Phone, 
+import {
+  Building2,
+  Wrench,
+  Cpu,
+  ArrowRight,
+  Phone,
   Gauge
 } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
+import { Section } from '@/components/ui/Section';
+import { CTA } from '@/components/ui/CTA';
 import { Heading } from '@/components/ui/Heading';
 import { buildMetadata, buildBreadcrumbJsonLd } from '@/lib/seo';
 import { COMPANY_INFO } from '@/lib/constants';
@@ -21,7 +23,7 @@ import { GALLERY_ITEMS } from '@/data/gallery';
 export const metadata: Metadata = {
   ...buildMetadata({
     title: 'Hydraulic Manufacturing & Product Gallery | Honeywell Hydraulics',
-    description: "Explore Honeywell Hydraulics' engineering gallery: custom hydraulic cylinders, power packs, manifold blocks, CNC machining, assembly bays, and 400 bar testing in Ahmedabad, Gujarat.",
+    description: "Explore Honeywell Hydraulics' facility & product gallery: custom cylinders, power packs, manifold blocks, CNC machining, and 400 bar testing in Gujarat.",
     canonical: '/gallery/',
     image: '/images/company/honeywell-manufacturing-facility-kathwada.webp',
   }),
@@ -55,59 +57,60 @@ export default function GalleryPage() {
     },
   };
 
-  return (
-    <>
-      <JsonLd data={breadcrumbSchema} />
-      <JsonLd data={collectionPageSchema} />
+return (
+  <>
+    <JsonLd data={breadcrumbSchema} />
+    <JsonLd data={collectionPageSchema} />
 
-      <main className="min-h-screen bg-slate-50/50 pb-20">
-        {/* ── Top Header & Gallery Hero Section ── */}
-        <section className="bg-white border-b border-slate-200 pt-4 pb-10">
-          <Container>
-            {/* Breadcrumb Navigation */}
-            <nav aria-label="Breadcrumb" className="text-xs sm:text-sm font-body text-slate-500 mb-4">
-              <ol className="flex items-center gap-2 flex-wrap">
-                <li>
-                  <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">
-                    Home
-                  </Link>
-                </li>
-                <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>
-                <li className="text-honeywell-red font-semibold" aria-current="page">
-                  Gallery
-                </li>
-              </ol>
-            </nav>
+    <main className="min-h-screen bg-slate-50/50 pb-0">
+      {/* ── Top Header & Gallery Hero Section ── */}
+      <Section bg="white" aria-labelledby="gallery-hero-heading" className="!pt-6 !pb-12 border-b border-slate-200">
+        <Container>
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="text-xs sm:text-sm font-body text-slate-500 mb-6">
+            <ol className="flex items-center gap-2 flex-wrap">
+              <li>
+                <Link href="/" className="hover:text-honeywell-red transition-colors duration-200 ease-out">
+                  Home
+                </Link>
+              </li>
+              <li aria-hidden="true" className="text-slate-400">&rsaquo;</li>
+              <li className="text-honeywell-red font-semibold" aria-current="page">
+                Gallery
+              </li>
+            </ol>
+          </nav>
 
-            {/* Title Block - Full Width */}
-            <div className="w-full pb-6 border-b border-slate-100">
-              <Heading variant="section" as="h1" className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-honeywell-navy tracking-tight w-full">
-                Hydraulic Manufacturing &amp; Product Gallery
-              </Heading>
-              
-              <p className="text-xs sm:text-sm md:text-base text-brand-steelGray mt-2 leading-relaxed font-light w-full">
-                Verified visual portfolio of our custom hydraulic cylinders, continuous-duty power packs, CNC-machined manifold blocks, and fabrication bays at Kathwada GIDC, Ahmedabad.
-              </p>
-            </div>
+          {/* Title Block - Full Width */}
+          <div className="w-full pb-6 border-b border-slate-100 flex flex-col items-center text-center">
+            <Heading variant="section" as="h1" id="gallery-hero-heading" className="font-extrabold text-honeywell-navy tracking-tight w-full mb-3">
+              Hydraulic Manufacturing &amp; Product Gallery
+            </Heading>
 
-            {/* Interactive Gallery System */}
-            <div className="pt-6">
-              <Gallery items={GALLERY_ITEMS} />
-            </div>
-          </Container>
-        </section>
+            <p className="text-sm md:text-base text-brand-steelGray leading-relaxed font-light w-full max-w-3xl">
+              Verified visual portfolio of our custom hydraulic cylinders, continuous-duty power packs, CNC-machined manifold blocks, and fabrication bays at Kathwada GIDC, Ahmedabad.
+            </p>
+          </div>
 
-        {/* ── Inside Honeywell Hydraulics Manufacturing (AEO / GEO Section) ── */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-          <div className="bg-white rounded-2xl border border-slate-200/90 shadow-card p-6 sm:p-10 lg:p-12">
+          {/* Interactive Gallery System */}
+          <div className="pt-8">
+            <Gallery items={GALLERY_ITEMS} />
+          </div>
+        </Container>
+      </Section>
+
+      {/* ── Inside Honeywell Hydraulics Manufacturing (AEO / GEO Section) ── */}
+      <Section bg="gray" aria-labelledby="engineering-heading">
+        <Container>
+          <div className="bg-white rounded-2xl border border-slate-200/90 shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-6 sm:p-10 lg:p-12 transition-transform duration-500 hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)]">
             <div className="max-w-3xl">
               <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-honeywell-red">
                 Engineering Depth &amp; Quality Standards
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-honeywell-navy mt-1 tracking-tight">
+              <Heading as="h2" variant="subsection" id="engineering-heading" className="mt-2 mb-3">
                 Inside Honeywell Hydraulics Manufacturing
-              </h2>
-              <p className="mt-3 text-sm sm:text-base text-brand-darkSlate/90 leading-relaxed">
+              </Heading>
+              <p className="text-sm sm:text-base text-brand-darkSlate/90 leading-relaxed text-justify">
                 At our specialized engineering facility in Kathwada GIDC, Ahmedabad, every hydraulic cylinder, power unit, and manifold block is manufactured under strict ISO 9001:2015 certified quality controls. Here is how our production processes ensure zero-leak reliability:
               </p>
             </div>
@@ -121,7 +124,7 @@ export default function GalleryPage() {
                 <h3 className="text-base font-bold text-honeywell-navy">
                   1. CNC Machining &amp; Turning
                 </h3>
-                <p className="text-xs sm:text-sm text-brand-steelGray mt-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-brand-steelGray mt-2 leading-relaxed text-justify">
                   Precision CNC turning lathes and vertical machining centers produce micro-finished piston rods (f7/f8 tolerances) and manifold cavities with surface finishes down to Ra 0.2 µm.
                 </p>
               </div>
@@ -134,7 +137,7 @@ export default function GalleryPage() {
                 <h3 className="text-base font-bold text-honeywell-navy">
                   2. Welding &amp; Fabrication
                 </h3>
-                <p className="text-xs sm:text-sm text-brand-steelGray mt-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-brand-steelGray mt-2 leading-relaxed text-justify">
                   Heavy-duty barrel construction using submerged arc and certified TIG welding on St52 / E355 grade cold-drawn seamless steel tubes and forged end mountings.
                 </p>
               </div>
@@ -147,7 +150,7 @@ export default function GalleryPage() {
                 <h3 className="text-base font-bold text-honeywell-navy">
                   3. Cleanroom Seal Assembly
                 </h3>
-                <p className="text-xs sm:text-sm text-brand-steelGray mt-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-brand-steelGray mt-2 leading-relaxed text-justify">
                   Assembly in contamination-controlled bays utilizing premium Parker and Merkel polyurethane, PTFE, and NBR multi-lip seal kits designed for high-cycle industrial duty.
                 </p>
               </div>
@@ -160,7 +163,7 @@ export default function GalleryPage() {
                 <h3 className="text-base font-bold text-honeywell-navy">
                   4. 100% Hydrostatic Testing
                 </h3>
-                <p className="text-xs sm:text-sm text-brand-steelGray mt-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-brand-steelGray mt-2 leading-relaxed text-justify">
                   Every cylinder and power unit undergoes static and dynamic pressure proof testing up to 400 bar (5800 PSI) with digital transducers to guarantee zero internal bypass.
                 </p>
               </div>
@@ -168,9 +171,9 @@ export default function GalleryPage() {
 
             {/* Quick Links to Core Divisions */}
             <div className="mt-10 p-5 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div className="text-xs sm:text-sm text-brand-darkSlate">
-                <span className="font-bold text-honeywell-navy">Explore Specific Product Divisions:</span>{' '}
-                <span className="text-brand-steelGray">
+              <div className="text-xs sm:text-sm text-brand-darkSlate text-justify">
+                <span className="font-bold text-honeywell-navy block sm:inline">Explore Specific Product Divisions:</span>{' '}
+                <span className="text-brand-steelGray block sm:inline">
                   Hydraulic Cylinders, Hydraulic Power Packs, and Custom Manifolds.
                 </span>
               </div>
@@ -196,43 +199,20 @@ export default function GalleryPage() {
               </div>
             </div>
           </div>
-        </section>
+        </Container>
+      </Section>
 
-        {/* ── Conversion Section ── */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-          <div className="bg-gradient-to-r from-honeywell-navy via-brand-technicalBlue to-honeywell-navy rounded-2xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
-            <div className="relative z-10 max-w-3xl">
-              <span className="text-xs font-bold uppercase tracking-wider text-honeywell-red bg-white/10 px-3 py-1 rounded-md">
-                Direct Engineering Collaboration
-              </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mt-3 leading-tight">
-                Need Custom Hydraulic Engineering or a Facility Visit?
-              </h2>
-              <p className="text-sm sm:text-base text-slate-200 mt-3 leading-relaxed">
-                Our Ahmedabad engineering team manufactures custom cylinders (bore up to 500mm), power packs (up to 100 HP), and CNC logic blocks. Send us your technical drawings or schedule a walkthrough at our Kathwada GIDC plant.
-              </p>
-
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link
-                  href="/request-quote/#quote-form"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-honeywell-red hover:bg-red-700 text-white font-bold text-sm sm:text-base shadow-glow hover:shadow-lg transition-all transform hover:scale-[1.02]"
-                >
-                  <span>Request Engineering Quote</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-
-                <a
-                  href={`tel:${COMPANY_INFO.phone}`}
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm sm:text-base border border-white/15 transition-all"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>Call {COMPANY_INFO.phone}</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
-  );
+      {/* ── Conversion Section ── */}
+      <CTA
+        title="Need Custom Hydraulic Engineering or a Facility Visit?"
+        description="Our Ahmedabad engineering team manufactures custom cylinders (bore up to 500mm), power packs (up to 100 HP), and CNC logic blocks. Send us your technical drawings or schedule a walkthrough at our Kathwada GIDC plant."
+        primaryCtaText="Request Engineering Quote"
+        primaryCtaHref="/request-quote/#quote-form"
+        secondaryCtaText={`Call ${COMPANY_INFO.phone}`}
+        secondaryCtaHref={`tel:${COMPANY_INFO.phone.replace(/\\s/g, '')}`}
+        />
+    </main>
+  </>
+);
 }
+

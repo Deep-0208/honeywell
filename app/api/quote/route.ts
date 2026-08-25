@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
   try {
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
-      console.warn('RESEND_API_KEY environment variable is not set.');
+      console.warn('[API/Quote] Missing RESEND_API_KEY environment variable');
       return NextResponse.json(
         { error: 'Email service is not configured yet.' },
         { status: 500 }
@@ -35,12 +35,14 @@ export async function POST(req: NextRequest) {
 
     // Server-side validation
     if (!fullName || !email || !phone) {
+      console.warn('[API/Quote] Validation failed: missing contact info');
       return NextResponse.json(
         { error: 'Full name, email, and phone number are required.' },
         { status: 400 }
       );
     }
 
+    console.log('[API/Quote] Processing RFQ email dispatch');
     const salesEmail = process.env.SALES_NOTIFICATION_EMAIL || 'honeywellhydraulics@gmail.com';
 
     const { data, error } = await resend.emails.send({
@@ -92,13 +94,14 @@ export async function POST(req: NextRequest) {
     });
 
     if (error) {
-      console.error('Resend RFQ error:', error);
+      console.error('[API/Quote] Resend dispatch failed:', error.message);
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
+    console.log('[API/Quote] RFQ email delivered successfully (ID:', data?.id, ')');
     return NextResponse.json({ success: true, id: data?.id });
   } catch (err: unknown) {
-    console.error('Quote API error:', err);
+    console.error('[API/Quote] Unhandled exception:', err instanceof Error ? err.message : 'Unknown error');
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

@@ -12,16 +12,15 @@ import type { TechnicalSpecsData } from './types';
  * Left: heading, description, and dual CTAs.
  * Right: SpecTable component.
  */
-export function ProductTechnicalSpecs({
-  heading = 'Technical Specifications',
+export function ProductTechnicalSpecs({ heading = 'Technical Specifications',
   description,
   primaryCta,
   secondaryCta,
   tableTitle,
   rows,
-}: TechnicalSpecsData) {
+  bg = 'white' }: TechnicalSpecsData & { bg?: 'white' | 'gray' }) {
   return (
-    <Section aria-labelledby="technical-specifications-heading" bg="white" id="technical-specifications">
+    <Section aria-labelledby="technical-specifications-heading" bg={bg} id="technical-specifications">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>

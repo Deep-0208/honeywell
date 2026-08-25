@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
   try {
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
-      console.warn('RESEND_API_KEY environment variable is not set.');
+      console.warn('[API/Contact] Missing RESEND_API_KEY environment variable');
       return NextResponse.json(
         { error: 'Email service is not configured yet.' },
         { status: 500 }
@@ -18,12 +18,14 @@ export async function POST(req: NextRequest) {
     const { fullName, company, phone, email, message } = await req.json();
 
     if (!fullName || !email || !message) {
+      console.warn('[API/Contact] Validation failed: missing required fields');
       return NextResponse.json(
         { error: 'Name, email, and message are required.' },
         { status: 400 }
       );
     }
 
+    console.log('[API/Contact] Processing contact inquiry notification');
     const salesEmail = process.env.SALES_NOTIFICATION_EMAIL || 'honeywellhydraulics@gmail.com';
 
     const { data, error } = await resend.emails.send({
@@ -73,13 +75,14 @@ export async function POST(req: NextRequest) {
     });
 
     if (error) {
-      console.error('Resend error:', error);
+      console.error('[API/Contact] Resend dispatch failed:', error.message);
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
+    console.log('[API/Contact] Contact notification sent successfully (ID:', data?.id, ')');
     return NextResponse.json({ success: true, id: data?.id });
   } catch (err: unknown) {
-    console.error('Contact API error:', err);
+    console.error('[API/Contact] Unhandled exception:', err instanceof Error ? err.message : 'Unknown error');
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

@@ -10,14 +10,13 @@ import type { KeyFeaturesData } from './types';
  * 3-column grid with IconBox, optional step numbers, title + description.
  * Hover effects: shadow-float, -translate-y-1.5, red top-border.
  */
-export function ProductKeyFeatures({
-  heading,
+export function ProductKeyFeatures({ heading,
   description,
   items,
   showStepNumbers = false,
-}: KeyFeaturesData) {
+  bg = 'gray' }: KeyFeaturesData & { bg?: 'white' | 'gray' }) {
   return (
-    <Section aria-labelledby="key-features-heading" bg="gray" id="key-features">
+    <Section aria-labelledby="key-features-heading" bg={bg} id="key-features">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Heading

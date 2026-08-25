@@ -7,12 +7,14 @@ export async function GET() {
   try {
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey || apiKey === 're_xxxxxxxxx') {
+      console.warn('[API/TestEmail] RESEND_API_KEY is not configured or using default placeholder.');
       return NextResponse.json({
         success: false,
         error: 'Please replace "re_xxxxxxxxx" with your real Resend API Key in .env.local',
       }, { status: 400 });
     }
 
+    console.log('[API/TestEmail] Sending diagnostic test email...');
     const resend = new Resend(apiKey);
     const { data, error } = await resend.emails.send({
       from: 'Honeywell Hydraulics <onboarding@resend.dev>',
@@ -22,9 +24,11 @@ export async function GET() {
     });
 
     if (error) {
+      console.error('[API/TestEmail] Diagnostic email dispatch failed:', error.message);
       return NextResponse.json({ success: false, error }, { status: 500 });
     }
 
+    console.log('[API/TestEmail] Diagnostic email sent successfully (ID:', data?.id, ')');
     return NextResponse.json({
       success: true,
       message: 'Test email sent successfully!',
@@ -32,6 +36,7 @@ export async function GET() {
     });
   } catch (err: unknown) {
     const errorMsg = err instanceof Error ? err.message : 'Unknown error';
+    console.error('[API/TestEmail] Unhandled exception:', errorMsg);
     return NextResponse.json({ success: false, error: errorMsg }, { status: 500 });
   }
 }

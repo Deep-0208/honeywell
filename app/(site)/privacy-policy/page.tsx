@@ -2,7 +2,10 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
-import { buildMetadata } from '@/lib/seo';
+import { Section } from '@/components/ui/Section';
+import { Button } from '@/components/ui/Button';
+import { buildMetadata, buildBreadcrumbJsonLd, buildWebPageJsonLd } from '@/lib/seo';
+import JsonLd from '@/components/seo/JsonLd';
 import Link from 'next/link';
 import { Shield, Lock, FileText, Phone, Mail, MapPin, CheckCircle2 } from 'lucide-react';
 
@@ -11,6 +14,17 @@ export const metadata: Metadata = buildMetadata({
   description: 'Privacy Policy for Honeywell Hydraulics. Understand how we collect, use, and protect your information when inquiring about hydraulic equipment.',
   canonical: '/privacy-policy/',
 });
+
+const breadcrumbSchema = buildBreadcrumbJsonLd([
+  { name: 'Home', item: '/' },
+  { name: 'Privacy Policy', item: '/privacy-policy/' }
+]);
+
+const webPageSchema = buildWebPageJsonLd(
+  'Privacy Policy | Honeywell Hydraulics',
+  'Privacy Policy for Honeywell Hydraulics. Understand how we collect, use, and protect your information when inquiring about hydraulic equipment.',
+  '/privacy-policy/'
+);
 
 const TOC_LINKS = [
   { id: 'overview', title: '1. Overview' },
@@ -22,7 +36,10 @@ const TOC_LINKS = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="bg-slate-50 min-h-screen">
+    <>
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={webPageSchema} />
+      <div className="bg-slate-50 min-h-screen">
       {/* Header Banner */}
       <div className="bg-white border-b border-slate-200 py-8 md:py-10">
         <Container>
@@ -208,6 +225,31 @@ export default function PrivacyPolicyPage() {
           </div>
         </Container>
       </div>
-    </div>
+
+      {/* Conversion & Inquiry Strip */}
+      <Section bg="white" aria-labelledby="privacy-cta-heading" className="border-t border-slate-200">
+        <Container>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-6 sm:p-8 bg-brand-surfaceGray rounded-xl border border-brand-borderGray">
+            <div>
+              <Heading as="h3" variant="subsection" id="privacy-cta-heading" className="text-honeywell-navy mb-1">
+                Have questions about our data policy or custom manufacturing?
+              </Heading>
+              <p className="text-sm text-brand-steelGray font-body">
+                Our engineering and sales team is available Monday through Saturday to assist you.
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <Button href="/contact-us/" variant="outline" size="sm">
+                Contact Support
+              </Button>
+              <Button href="/request-quote/" variant="primary" size="sm">
+                Request a Quote
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </Section>
+      </div>
+    </>
   );
 }

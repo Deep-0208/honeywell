@@ -7,28 +7,44 @@ import { twMerge } from 'tailwind-merge';
 
 function ConversationModal({ onClose }: { onClose: () => void }) {
   const [hasPermission, setHasPermission] = useState<boolean | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const conversation = useConversation({
-    onConnect: () => console.log('Connected to ElevenLabs'),
-    onDisconnect: () => console.log('Disconnected'),
-    onMessage: (message) => console.log('Message:', message),
-    onError: (error) => console.error('Error:', error),
+    onConnect: () => {
+      console.log('[ElevenLabs/Voice] Session connected successfully');
+      setErrorMessage(null);
+    },
+    onDisconnect: () => {
+      console.log('[ElevenLabs/Voice] Session disconnected');
+    },
+    onError: (error) => {
+      const msg = typeof error === 'string' ? error : (error as Error)?.message || 'Connection error';
+      console.error('[ElevenLabs/Voice] Runtime error:', msg);
+      setErrorMessage(msg);
+    },
   });
 
   const startConversation = useCallback(async () => {
+    setErrorMessage(null);
     try {
-      await navigator.mediaDevices.getUserMedia({ audio: true });
+      const agentId = process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID || 'agent_2201kw1tqva6f8697azmfvd801fw';
+      console.log('[ElevenLabs/Voice] Initializing voice session');
       setHasPermission(true);
       await conversation.startSession({
-        agentId: 'agent_2201kw1tqva6f8697azmfvd801fw',
+        agentId,
       });
-    } catch (error) {
-      console.error('Failed to start conversation:', error);
-      setHasPermission(false);
+    } catch (error: unknown) {
+      const msg = error instanceof Error ? error.message : 'Microphone or connection failed';
+      console.error('[ElevenLabs/Voice] Failed to start conversation:', msg);
+      setErrorMessage(msg);
+      if (msg.toLowerCase().includes('permission') || msg.toLowerCase().includes('not allowed')) {
+        setHasPermission(false);
+      }
     }
   }, [conversation]);
 
   const stopConversation = useCallback(async () => {
+    console.log('[ElevenLabs/Voice] Ending voice session');
     await conversation.endSession();
   }, [conversation]);
 
@@ -132,8 +148,13 @@ function ConversationModal({ onClose }: { onClose: () => void }) {
               <Mic className="w-5 h-5 relative z-10" />
               <span className="relative z-10 tracking-wide">Start Conversation</span>
             </button>
-            {hasPermission === false && (
-              <p className="text-red-500 text-xs mt-5 font-medium bg-red-50 py-2 px-3 rounded-lg border border-red-100 text-justify">
+            {errorMessage && (
+              <p className="text-red-500 text-xs mt-4 font-medium bg-red-50 py-2 px-3 rounded-lg border border-red-100 text-left">
+                {errorMessage}
+              </p>
+            )}
+            {hasPermission === false && !errorMessage && (
+              <p className="text-red-500 text-xs mt-5 font-medium bg-red-50 py-2 px-3 rounded-lg border border-red-100 text-left">
                 Microphone access is required.
               </p>
             )}

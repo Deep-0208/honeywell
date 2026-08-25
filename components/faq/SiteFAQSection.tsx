@@ -25,7 +25,7 @@ export function SiteFAQSection({
   faqs,
   title = "Frequently Asked Questions",
   description = "Find answers to common questions about our custom hydraulic cylinder manufacturing process and capabilities.",
-  injectSchema = true,
+  injectSchema = false,
   bg = "white",
 }: SiteFAQSectionProps) {
   return (

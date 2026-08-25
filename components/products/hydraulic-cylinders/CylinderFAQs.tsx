@@ -13,7 +13,7 @@ export function CylinderFAQs() {
     <Section bg="white" id="faqs" aria-labelledby="faqs-heading">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
+
           <div className="lg:col-span-4">
             <Heading variant="section" underline="center" as="h2" id="faqs-heading" className="mb-4">
               Frequently Asked Questions
@@ -36,9 +36,9 @@ export function CylinderFAQs() {
           </div>
 
           <div className="lg:col-span-8">
-            <FAQAccordion 
-              faqs={PILLAR_FAQS} 
-              injectSchema={false} 
+            <FAQAccordion
+              faqs={PILLAR_FAQS}
+              injectSchema={false}
             />
           </div>
 

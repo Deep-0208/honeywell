@@ -47,8 +47,12 @@ export function buildMetadata({
         ? image 
         : `${COMPANY_INFO.websiteUrl}${image.startsWith('/') ? '' : '/'}${image}`);
 
+  const finalTitle = title.includes('Honeywell') ? title : `${title} | Honeywell`;
+
   return {
-    title,
+    title: {
+      absolute: finalTitle,
+    },
     description,
     alternates: {
       canonical: fullCanonicalUrl,

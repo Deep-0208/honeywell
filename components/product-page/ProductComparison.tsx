@@ -11,19 +11,18 @@ import type { ComparisonData } from './types';
  * Highlight-able cells for competitive advantages.
  * Optional footnote below table.
  */
-export function ProductComparison({
-  heading,
+export function ProductComparison({ heading,
   description,
   columns,
   rows,
   footnote,
-}: ComparisonData) {
+  bg = 'gray' }: ComparisonData & { bg?: 'white' | 'gray' }) {
   const hasLeadingFeatureCol = rows.length > 0 && columns.length === rows[0].values.length + 1;
   const firstColHeader = hasLeadingFeatureCol ? columns[0] : { heading: 'Feature' };
   const valueColumns = hasLeadingFeatureCol ? columns.slice(1) : columns;
 
   return (
-    <Section aria-labelledby="comparison-heading" bg="gray" id="comparison">
+    <Section aria-labelledby="comparison-heading" bg={bg} id="comparison">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Heading

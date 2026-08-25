@@ -160,11 +160,13 @@ export function QuoteForm() {
     e.preventDefault();
     const validationErrors = validate(formData);
     if (Object.keys(validationErrors).length > 0) {
+      console.warn('[Form/Quote] Validation failed on fields:', Object.keys(validationErrors));
       setErrors(validationErrors);
       const firstErrorKey = Object.keys(validationErrors)[0];
       document.getElementById(firstErrorKey)?.focus();
       return;
     }
+    console.log('[Form/Quote] Submitting RFQ quote request...');
     setStatus('submitting');
     setErrors({});
     try {
@@ -173,11 +175,16 @@ export function QuoteForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-      if (!res.ok) throw new Error('Quote submission failed');
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => null);
+        throw new Error(errorData?.error || `Server returned status ${res.status}`);
+      }
+      console.log('[Form/Quote] RFQ quote request submitted successfully');
       setStatus('success');
       setFormData(INITIAL_STATE);
       if (fileRef.current) fileRef.current.value = '';
-    } catch {
+    } catch (err: unknown) {
+      console.error('[Form/Quote] Submission error:', err instanceof Error ? err.message : 'Network/Server error');
       setStatus('error');
     }
   };

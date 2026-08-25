@@ -7,7 +7,7 @@ export const threePhasePowerPackData: ProductPageData = {
   // ── SEO ──
   seo: {
     title: 'Three Phase Hydraulic Power Pack Manufacturer | 415V',
-    description: 'Leading Three Phase Hydraulic Power Pack Manufacturer in India. We engineer heavy-duty 415V AC industrial hydraulic power units for continuous-duty manufacturing and high-flow machinery.',
+    description: 'Leading Three Phase Hydraulic Power Pack Manufacturer in India. Heavy-duty 415V AC industrial power units engineered for continuous-duty manufacturing.',
     url: '/products/hydraulic-power-packs/three-phase-hydraulic-power-packs',
     image: '/images/products/hydraulic-power-packs/three-phase-hydraulic-power-pack.webp',
   },

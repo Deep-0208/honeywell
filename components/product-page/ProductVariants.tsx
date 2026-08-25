@@ -11,9 +11,9 @@ import type { VariantsData } from './types';
  * 3-column grid with IconBox, title, description, and checklist highlights.
  * Hover effects: shadow-float, -translate-y-1.5, red top-border.
  */
-export function ProductVariants({ heading, description, items }: VariantsData) {
+export function ProductVariants({ heading, description, items , bg = 'gray' }: VariantsData & { bg?: 'white' | 'gray' }) {
   return (
-    <Section aria-labelledby="product-variants-heading" bg="gray" id="product-variants">
+    <Section aria-labelledby="product-variants-heading" bg={bg} id="product-variants">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Heading

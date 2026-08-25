@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { buildMetadata } from '@/lib/seo';
 import JsonLd from '@/components/seo/JsonLd';
 import { COMPANY_INFO } from '@/lib/constants';
@@ -173,14 +173,14 @@ export default function HydraulicCylindersHubPage() {
       {/* 07 — Manufacturing Process */}
       <CylinderManufacturingProcess />
 
-      {/* 08 — FAQs */}
-      <CylinderFAQs />
-
       {/* 09 — Cylinder Selection Matrix */}
       <ProductComparison {...PILLAR_COMPARISONS[0]} />
 
       {/* 10 — Engineering Advantage */}
       <ProductEngineering {...PILLAR_ENGINEERING} />
+
+      {/* 08 — FAQs */}
+      <CylinderFAQs />
 
       {/* 11 — CTA Section */}
       <CTA
@@ -194,3 +194,4 @@ export default function HydraulicCylindersHubPage() {
     </>
   );
 }
+

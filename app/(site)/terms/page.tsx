@@ -2,7 +2,10 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
-import { buildMetadata } from '@/lib/seo';
+import { Section } from '@/components/ui/Section';
+import { Button } from '@/components/ui/Button';
+import { buildMetadata, buildBreadcrumbJsonLd, buildWebPageJsonLd } from '@/lib/seo';
+import JsonLd from '@/components/seo/JsonLd';
 import Link from 'next/link';
 import { ShieldCheck, Truck, Wrench, FileCheck, Phone, Mail, MapPin, Scale } from 'lucide-react';
 
@@ -11,6 +14,17 @@ export const metadata: Metadata = buildMetadata({
   description: 'Terms and Conditions for purchasing and servicing industrial hydraulic cylinders, power packs, and manifold blocks from Honeywell Hydraulics.',
   canonical: '/terms/',
 });
+
+const breadcrumbSchema = buildBreadcrumbJsonLd([
+  { name: 'Home', item: '/' },
+  { name: 'Terms & Conditions', item: '/terms/' }
+]);
+
+const webPageSchema = buildWebPageJsonLd(
+  'Terms & Conditions | Honeywell Hydraulics',
+  'Terms and Conditions for purchasing and servicing industrial hydraulic cylinders, power packs, and manifold blocks from Honeywell Hydraulics.',
+  '/terms/'
+);
 
 const TOC_LINKS = [
   { id: 'quotations', title: '1. Quotations & Orders' },
@@ -22,7 +36,10 @@ const TOC_LINKS = [
 
 export default function TermsPage() {
   return (
-    <div className="bg-slate-50 min-h-screen">
+    <>
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={webPageSchema} />
+      <div className="bg-slate-50 min-h-screen">
       {/* Header Banner */}
       <div className="bg-white border-b border-slate-200 py-8 md:py-10">
         <Container>
@@ -196,6 +213,31 @@ export default function TermsPage() {
           </div>
         </Container>
       </div>
-    </div>
+
+      {/* Conversion & Inquiry Strip */}
+      <Section bg="white" aria-labelledby="terms-cta-heading" className="border-t border-slate-200">
+        <Container>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-6 sm:p-8 bg-brand-surfaceGray rounded-xl border border-brand-borderGray">
+            <div>
+              <Heading as="h3" variant="subsection" id="terms-cta-heading" className="text-honeywell-navy mb-1">
+                Ready to initiate a purchase order or custom requirement?
+              </Heading>
+              <p className="text-sm text-brand-steelGray font-body">
+                Our sales and applications engineering team will review your parameters within 24 hours.
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <Button href="/contact-us/" variant="outline" size="sm">
+                Contact Sales
+              </Button>
+              <Button href="/request-quote/" variant="primary" size="sm">
+                Request a Quote
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </Section>
+      </div>
+    </>
   );
 }

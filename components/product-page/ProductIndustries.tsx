@@ -9,9 +9,9 @@ import type { IndustriesData } from './types';
  *
  * Section header + 3-column grid using existing IndustryCard component.
  */
-export function ProductIndustries({ heading, description, items }: IndustriesData) {
+export function ProductIndustries({ heading, description, items , bg = 'gray' }: IndustriesData & { bg?: 'white' | 'gray' }) {
   return (
-    <Section aria-labelledby="industries-heading" bg="gray" id="industries">
+    <Section aria-labelledby="industries-heading" bg={bg} id="industries">
       <Container>
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Heading

@@ -1,8 +1,9 @@
-import React from 'react';
+﻿import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
+import { CTA } from '@/components/ui/CTA';
 import { Heading } from '@/components/ui/Heading';
 import { SiteFAQSection } from '@/components/faq/SiteFAQSection';
 import { QuoteForm } from '@/components/forms/QuoteForm';
@@ -234,6 +235,12 @@ export default function RequestQuotePage() {
                   <MessageCircle className="w-4 h-4 text-green-600" aria-hidden="true" />
                   WhatsApp Us
                 </a>
+                <Link
+                  href="/contact-us/"
+                  className="inline-flex items-center justify-center gap-2 bg-transparent border border-slate-200 text-honeywell-navy hover:bg-slate-50 font-semibold font-body text-sm px-6 py-3 rounded-full transition-all duration-200 hover:border-honeywell-navy/30"
+                >
+                  Contact Us
+                </Link>
               </div>
             </div>
 
@@ -257,7 +264,7 @@ export default function RequestQuotePage() {
       </section>
 
       {/* ── Trust stats bar ────────────────────────────────────────────────── */}
-      <div className="bg-gradient-to-r from-honeywell-navy to-[#0f172a] py-8 relative overflow-hidden shadow-inner">
+      <div className="bg-gradient-to-r from-honeywell-navy to-slate-900 py-8 relative overflow-hidden shadow-inner">
         {/* Subtle red accent line */}
         <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-honeywell-red to-transparent opacity-70" aria-hidden="true" />
         <Container className="relative z-10">
@@ -265,7 +272,7 @@ export default function RequestQuotePage() {
             {TRUST_STATS.map((stat, index) => (
               <div key={stat.label} className={`px-4 ${index % 2 === 1 ? 'border-l border-white/10 md:border-0' : ''}`}>
                 <p className="text-2xl md:text-3xl font-display font-extrabold text-white mb-1.5">{stat.value}</p>
-                <p className="text-[11px] text-[#94A3B8] font-body uppercase tracking-widest">{stat.label}</p>
+                <p className="text-[11px] text-brand-steelGray font-body uppercase tracking-widest">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -299,7 +306,7 @@ export default function RequestQuotePage() {
               {/* Prefer to talk? — rounded-sm to match design system */}
               <div className="bg-honeywell-navy text-white rounded-xl p-6 transition-all duration-350 ease-premium hover:-translate-y-1.5 hover:shadow-float border-t-2 border-t-transparent hover:border-t-honeywell-red">
                 <p className="font-display font-bold text-lg mb-1 text-justify">Prefer to talk?</p>
-                <p className="text-[#94A3B8] text-sm font-body mb-5 text-justify">Reach us directly — we&apos;re happy to answer any questions.</p>
+                <p className="text-brand-steelGray text-sm font-body mb-5 text-justify">Reach us directly — we&apos;re happy to answer any questions.</p>
 
                 <div className="space-y-3">
                   <a
@@ -310,7 +317,7 @@ export default function RequestQuotePage() {
                       <Phone className="w-4 h-4 text-white" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="text-[10px] text-[#94A3B8] font-body uppercase tracking-wider text-justify">Call Us</p>
+                      <p className="text-[10px] text-brand-steelGray font-body uppercase tracking-wider text-justify">Call Us</p>
                       <p className="text-sm font-semibold text-white group-hover:text-honeywell-red transition-colors text-justify">+91 9924343873</p>
                     </div>
                   </a>
@@ -325,7 +332,7 @@ export default function RequestQuotePage() {
                       <MessageCircle className="w-4 h-4 text-white" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="text-[10px] text-[#94A3B8] font-body uppercase tracking-wider text-justify">WhatsApp</p>
+                      <p className="text-[10px] text-brand-steelGray font-body uppercase tracking-wider text-justify">WhatsApp</p>
                       <p className="text-sm font-semibold text-white group-hover:text-green-400 transition-colors text-justify">Message Our Engineers</p>
                     </div>
                   </a>
@@ -338,18 +345,18 @@ export default function RequestQuotePage() {
                       <Mail className="w-4 h-4 text-white" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="text-[10px] text-[#94A3B8] font-body uppercase tracking-wider text-justify">Email</p>
+                      <p className="text-[10px] text-brand-steelGray font-body uppercase tracking-wider text-justify">Email</p>
                       <p className="text-sm font-semibold text-white group-hover:text-honeywell-red transition-colors break-words text-justify">sales@honeywellhydraulics.com</p>
                     </div>
                   </a>
 
                   <div className="flex items-center gap-3 px-4 py-3">
                     <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0">
-                      <MapPin className="w-4 h-4 text-[#94A3B8]" aria-hidden="true" />
+                      <MapPin className="w-4 h-4 text-brand-steelGray" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="text-[10px] text-[#94A3B8] font-body uppercase tracking-wider text-justify">Location</p>
-                      <p className="text-sm text-[#CBD5E1] font-body text-justify">Kathwada GIDC, Ahmedabad</p>
+                      <p className="text-[10px] text-brand-steelGray font-body uppercase tracking-wider text-justify">Location</p>
+                      <p className="text-sm text-brand-borderGray font-body text-justify">Kathwada GIDC, Ahmedabad</p>
                     </div>
                   </div>
                 </div>
@@ -435,40 +442,18 @@ export default function RequestQuotePage() {
       </Section>
 
       {/* ── FAQ ──────────────────────────────────────────────────────────── */}
-      <SiteFAQSection faqs={FAQS} />
+      <SiteFAQSection faqs={FAQS} bg="gray" />
 
-      {/* ── Final CTA — rounded-full buttons ─────────────────────────────── */}
-      <section className="bg-gradient-to-r from-honeywell-navy to-[#0f172a] shadow-inner py-16 md:py-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 w-1/3 h-full bg-honeywell-red opacity-[0.03] skew-x-12 -translate-x-1/4" aria-hidden="true" />
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-honeywell-red/40 to-transparent" aria-hidden="true" />
-        <Container className="relative z-10 text-center">
-          <Heading variant="section" className="text-white mb-4">
-            Still Have Questions?
-          </Heading>
-          <p className="text-[#CBD5E1] font-body max-w-xl mx-auto mb-8 text-lg leading-relaxed text-justify">
-            Our team is happy to talk through your requirement before you even fill a form. Just call or WhatsApp us.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="tel:+919924343873"
-              className="inline-flex items-center gap-2 bg-honeywell-red hover:bg-red-700 text-white font-semibold font-body text-sm px-7 py-3.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-honeywell-red/30"
-            >
-              <Phone className="w-4 h-4" aria-hidden="true" />
-              Talk to an Engineer
-            </a>
-            <a
-              href="https://wa.me/919924343873"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-transparent border border-white/30 text-white hover:bg-white hover:text-honeywell-navy font-semibold font-body text-sm px-7 py-3.5 rounded-full transition-all duration-200"
-            >
-              <MessageCircle className="w-4 h-4" aria-hidden="true" />
-              WhatsApp Us
-            </a>
-          </div>
-        </Container>
-      </section>
+      {/* ── Final CTA ── */}
+      <CTA
+        title="Still Have Questions?"
+        description="Our team is happy to talk through your requirement before you even fill a form. Just call or WhatsApp us."
+        primaryCtaText="Talk to an Engineer"
+        primaryCtaHref="tel:+91-9924343873"
+        secondaryCtaText="WhatsApp Us"
+        secondaryCtaHref="https://wa.me/919924343873"
+      />
     </>
   );
 }
+

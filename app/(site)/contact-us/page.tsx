@@ -219,9 +219,9 @@ export default function ContactUsPage() {
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="bg-white pt-6 pb-16 md:pt-8 md:pb-24 relative overflow-hidden border-b border-slate-200">
         {/* Subtle engineering grid background */}
-        <div 
-          className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_10%_0%,#000_70%,transparent_100%)]" 
-          aria-hidden="true" 
+        <div
+          className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_10%_0%,#000_70%,transparent_100%)]"
+          aria-hidden="true"
         />
 
         <Container className="relative z-10">
@@ -394,17 +394,16 @@ export default function ContactUsPage() {
                 <div className="px-5 pt-5 pb-3 border-b border-slate-100">
                   <h2 className="text-base font-display font-bold text-honeywell-navy">Find Us on Map</h2>
                 </div>
-                <div className="relative w-full" style={{ height: '220px' }}>
+                <div className="relative w-full h-[220px]">
                   <iframe
                     src={`https://maps.google.com/maps?q=Honeywell+Hydraulics,+Ahmedabad,+Gujarat&t=&z=15&ie=UTF8&iwloc=&output=embed`}
                     width="100%"
                     height="100%"
-                    style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Honeywell Hydraulics Location — Kathwada GIDC, Ahmedabad"
-                    className="absolute inset-0"
+                    className="absolute inset-0 border-0"
                   />
                 </div>
                 <div className="px-5 py-3">
@@ -474,14 +473,14 @@ export default function ContactUsPage() {
       <SiteFAQSection faqs={CONTACT_FAQS} />
 
       {/* ── Final CTA Banner — rounded-full buttons ── */}
-      <section className="bg-gradient-to-r from-honeywell-navy to-[#0f172a] shadow-inner py-14 relative overflow-hidden" aria-label="Final contact strip">
+      <section className="bg-gradient-to-r from-honeywell-navy to-slate-900 shadow-inner py-14 relative overflow-hidden" aria-label="Final contact strip">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-honeywell-red opacity-5 -skew-x-12 translate-x-1/4" aria-hidden="true" />
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-honeywell-red/40 to-transparent" aria-hidden="true" />
         <Container className="relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-white text-center md:text-left">
               <p className="text-xl font-display font-bold mb-1 text-justify">Ready to discuss your project?</p>
-              <p className="text-[#CBD5E1] font-body text-sm max-w-md text-justify">
+              <p className="text-brand-borderGray font-body text-sm max-w-md text-justify">
                 Our engineers are happy to help — whether you have a full specification or just a rough idea.
               </p>
             </div>

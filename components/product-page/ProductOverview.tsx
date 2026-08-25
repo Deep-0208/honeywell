@@ -9,9 +9,9 @@ import type { OverviewData } from './types';
  * Centered max-w-4xl text section with H2 + underline.
  * Content is rich JSX (ReactNode) allowing internal links, bold text, etc.
  */
-export function ProductOverview({ heading, content }: OverviewData) {
+export function ProductOverview({ heading, content , bg = 'white' }: OverviewData & { bg?: 'white' | 'gray' }) {
   return (
-    <Section aria-labelledby="overview-heading" bg="white" id="overview">
+    <Section aria-labelledby="overview-heading" bg={bg} id="overview">
       <Container>
         <div className="max-w-4xl mx-auto">
           <Heading

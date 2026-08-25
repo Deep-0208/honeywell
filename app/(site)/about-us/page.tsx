@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Metadata } from 'next';
 import { buildMetadata } from '@/lib/seo';
 import Link from 'next/link';
@@ -281,11 +281,11 @@ export default function AboutUsPage() {
           ═══════════════════════════════════════════════════════════════════ */}
       <section className="bg-white pt-6 pb-16 md:pt-8 md:pb-24 relative overflow-hidden border-b border-slate-200">
         {/* Subtle engineering grid background */}
-        <div 
-          className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_10%_0%,#000_70%,transparent_100%)]" 
-          aria-hidden="true" 
+        <div
+          className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_10%_0%,#000_70%,transparent_100%)]"
+          aria-hidden="true"
         />
-        
+
         <Container className="relative z-10">
           <nav aria-label="Breadcrumb" className="text-sm md:text-base font-body text-slate-500 mb-6">
             <ol className="flex items-center gap-2 flex-wrap">
@@ -302,7 +302,7 @@ export default function AboutUsPage() {
               Honeywell Hydraulics —<br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-honeywell-navy via-honeywell-navy to-honeywell-red"> Hydraulic System Manufacturer</span>{" "}Since 2018
             </Heading>
-            
+
             <p className="text-brand-steelGray text-lg md:text-xl font-body leading-relaxed text-justify">
               Honeywell Hydraulics is a premier engineering firm specialising in the design, manufacturing, and supply of industrial hydraulic cylinders and power packs. Based in the Kathwada GIDC industrial zone in Ahmedabad, we deliver precision-engineered fluid power solutions that minimise downtime and maximise operational efficiency.
             </p>
@@ -341,7 +341,7 @@ export default function AboutUsPage() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-premium"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              
+
               {/* Floating Banner */}
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-md p-4 shadow-lg border border-slate-100 z-10">
                 <p className="text-[10px] sm:text-xs font-bold text-honeywell-red uppercase tracking-widest mb-1 font-body text-justify">Manufacturing Headquarters</p>

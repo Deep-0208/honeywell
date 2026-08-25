@@ -13,15 +13,14 @@ import type { SpotlightData } from './types';
  * 3-column timeline cards with numbered badges.
  * Last card supports dark variant (navy background).
  */
-export function ProductSpotlight({
-  badge = 'CASE STUDY',
+export function ProductSpotlight({ badge = 'CASE STUDY',
   heading,
   subheading,
   stats,
   phases,
-}: SpotlightData) {
+  bg = 'white' }: SpotlightData & { bg?: 'white' | 'gray' }) {
   return (
-    <Section aria-labelledby="project-spotlight-heading" bg="white" id="project-spotlight">
+    <Section aria-labelledby="project-spotlight-heading" bg={bg} id="project-spotlight">
       <Container>
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}

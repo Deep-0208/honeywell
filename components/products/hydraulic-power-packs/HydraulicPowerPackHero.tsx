@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
+import { Heading } from '@/components/ui/Heading';
 import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
 
 export function HydraulicPowerPackHero() {
@@ -39,9 +40,9 @@ export function HydraulicPowerPackHero() {
           
           {/* Content */}
           <div className="flex flex-col items-start z-10">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-honeywell-navy leading-tight mb-6">
+            <Heading variant="section" as="h1" className="text-honeywell-navy mb-6">
               Hydraulic Power Pack Manufacturer in Gujarat
-            </h1>
+            </Heading>
             
             <p className="text-lg md:text-xl text-brand-steelGray font-body mb-8 max-w-xl leading-relaxed text-justify">
               Generating reliable, continuous fluid power for heavy industry. Custom-engineered hydraulic power units delivering precise flow rates and exact operating pressures to drive automated machinery and commercial lifting equipment without fluctuation or heat degradation.
