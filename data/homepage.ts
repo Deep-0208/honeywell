@@ -164,15 +164,6 @@ export const homepageProducts: HomepageProduct[] = [
     href: '/products/manifold-blocks/',
     ctaText: 'View Manifold Blocks',
   },
-  {
-    title: 'Custom Hydraulic Systems',
-    description:
-      'Complex hydraulic systems tailored for your specific industrial application, including automated test rigs and integrated manifolds.',
-    category: 'Engineered Solutions',
-    imageSrc: '/images/products/hero/custom-hydraulic-systems-ahmedabad.webp',
-    href: '#',
-    ctaText: 'View Systems',
-  },
 ];
 
 /* ═══════════════════════════════════════════════

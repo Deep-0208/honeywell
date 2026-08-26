@@ -132,16 +132,16 @@ export default function ProductsHubPage() {
                 <div className="absolute inset-4 rounded-3xl border border-slate-200 bg-slate-100/70 backdrop-blur-md overflow-hidden flex items-center justify-center p-4 shadow-2xl">
                    <div className="grid grid-cols-2 gap-4 w-full h-full">
                       <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image unoptimized src="/images/products/hero/hydraulic-cylinders-manufacturing-hero.webp" alt="Hydraulic Cylinders" fill priority className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image unoptimized src="/images/products/hero/hydraulic-cylinders-manufacturing-hero.webp" alt="Hydraulic Cylinders" fill priority className="object-contain p-4 transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
                       <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image unoptimized src="/images/products/hero/hydraulic-power-pack.webp" alt="Hydraulic Power Packs" fill priority className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image unoptimized src="/images/products/hero/hydraulic-power-pack.webp" alt="Hydraulic Power Packs" fill priority className="object-contain p-4 transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
                       <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image unoptimized src="/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp" alt="Hydraulic Manifold Blocks" fill priority className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image unoptimized src="/images/products/hero/hydraulic-manifold-blocks-manufacturer.webp" alt="Hydraulic Manifold Blocks" fill priority className="object-contain p-4 transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
                       <div className="bg-white rounded-xl border border-slate-200 relative overflow-hidden group">
-                        <Image unoptimized src="/images/products/hero/custom-hydraulic-systems-ahmedabad.webp" alt="Custom Hydraulic Systems" fill priority className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <Image unoptimized src="/images/products/hero/custom-hydraulic-systems-ahmedabad.webp" alt="Custom Hydraulic Systems" fill priority className="object-contain p-4 transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 50vw" />
                       </div>
                    </div>
                 </div>
@@ -170,7 +170,7 @@ export default function ProductsHubPage() {
               title="Hydraulic Cylinders"
               description="Heavy-duty linear actuators available in custom bore sizes from 40mm to 300mm. Variants: Double Acting, Single Acting, Flange Mounting, Clevis Mounting, Tie-Rod, Telescopic."
               category="Actuators"
-              imageSrc="/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad-manufacturer.webp"
+              imageSrc="/images/products/hero/hydraulic-cylinders-manufacturing-hero.webp"
               href="/products/hydraulic-cylinders/"
               ctaText="EXPLORE HYDRAULIC CYLINDERS"
             />
