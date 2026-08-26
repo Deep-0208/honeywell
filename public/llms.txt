@@ -2,86 +2,84 @@
 
 > Industrial hydraulic cylinders, custom hydraulic power packs, and precision CNC-machined manifold blocks manufactured in Ahmedabad, Gujarat, India. ISO 9001:2015 certified OEM manufacturer serving 25+ heavy industrial sectors and 18 major industrial corridors across India.
 
-## Company Overview
 Honeywell Hydraulics (est. 2018) is a precision fluid power manufacturer headquartered in Kathwada GIDC, Ahmedabad, Gujarat, India. We engineer, manufacture, and test heavy-duty hydraulic equipment for continuous high-cycle operations in plastics, steel, construction, material handling, automotive, and industrial machinery sectors.
 
-- **Primary Website:** https://honeywellhydraulics.in
-- **Certification:** ISO 9001:2015 Certified
-- **Factory Address:** B-18, Suryam Plaza Estate, Near Nilkanth Estate, Road no. 15, Kathwada GIDC, Ahmedabad, Gujarat 382430, India
+- **Primary Domain:** https://honeywellhydraulics.in
+- **Headquarters & Factory:** B-18, Suryam Plaza Estate, Near Nilkanth Estate, Road no. 15, Kathwada GIDC, Ahmedabad, Gujarat 382430, India
 - **Coordinates:** 23.035° N, 72.668° E
 - **Direct Phone:** +91 99243 43873
-- **Sales Email:** sales@honeywellhydraulics.com
-- **Operating Hours:** Monday – Saturday, 09:00 – 19:00 IST
+- **Sales Inquiries:** sales@honeywellhydraulics.com
 
----
+## Core Company & Capabilities
 
-## Core Product Portfolio & Technical Specifications
+- [About Honeywell Hydraulics](https://honeywellhydraulics.in/about-us/): Company profile, ISO 9001:2015 certification, engineering expertise, and industrial fluid power capabilities since 2018.
+- [Manufacturing Facility & Infrastructure](https://honeywellhydraulics.in/manufacturing-facility/): In-house CNC/VMC machining centers, hard chrome plating, 100% hydrostatic pressure testing, and EN 10204 3.1 material traceability.
+- [Industrial Product & Facility Gallery](https://honeywellhydraulics.in/gallery/): High-resolution visual gallery of hydraulic cylinders, power packs, manifold blocks, and production facilities.
+- [Request Engineering Quote](https://honeywellhydraulics.in/request-quote/): Custom RFQ submission for hydraulic cylinders, power packs, and manifold blocks with rapid 24-hour turnaround.
+- [Contact Sales & Engineering](https://honeywellhydraulics.in/contact-us/): Factory location in Kathwada GIDC Ahmedabad, contact numbers, direct email, and technical consultation.
 
-### 1. Hydraulic Cylinders (Bore: 40mm to 500mm | Stroke: up to 6,000mm | Pressure: up to 700 Bar)
-- **Custom Hydraulic Cylinders:** Application-tailored bore/stroke geometries with custom porting, cushioning, and heavy-duty load capacities.
-- **Double Acting Hydraulic Cylinders:** Powered extension and retraction for metal forming, presses, and high-repetition cycle automation (up to 350 Bar).
-- **Single Acting Hydraulic Cylinders:** Gravity or spring-return single-stroke actuators for tippers, clamps, and lifting fixtures (up to 250 Bar).
-- **Telescopic Hydraulic Cylinders:** Multi-stage (2 to 5 stage) nested chrome stages for long extension in compact retracted footprints (tipping trailers, high-reach platforms).
-- **Tie-Rod Hydraulic Cylinders:** NFPA standard interchangeability, high tensile tie-rods for injection moulding and machine tooling (up to 160 Bar).
-- **Welded Hydraulic Cylinders:** Heavy-wall welded construction, forged end caps for earthmoving, construction equipment, and high-vibration applications (up to 350 Bar).
-- **Goods Lift & Car Parking Cylinders:** High-safety dual-seal hydraulic rams for warehouse freight lifts and automated multi-level puzzle parking.
-- **Scissor Lift Table Cylinders:** Heavy-thrust compact actuators with built-in velocity fuses for ergonomic assembly lifting tables.
-- **Specialized Mounting Types:** Front/Rear Flange (ISO 6022), Clevis (pivoting clevis pins), Trunnion (intermediate/head/cap pivot), and Square Body Industrial Jacks.
+## Industrial Hydraulic Cylinders
 
-### 2. Hydraulic Power Packs (Motor: 0.5 HP to 75 HP | Tank: 10L to 2,000L | Pressure: up to 450 Bar)
-- **Three-Phase Hydraulic Power Packs:** 415V continuous duty power units with immersed/external gear or piston pumps for 24/7 plant production lines.
-- **Single-Phase Hydraulic Power Packs:** 220V compact hydraulic power units for small workshop machinery, auto garage lifts, and mobile units.
-- **High-Low Dual Pump Power Packs:** High-flow low-pressure rapid approach paired with low-flow high-pressure clamping (cycle time reduction up to 20%).
-- **Hydraulic Power Packs for Hydraulic Presses:** High-tonnage fluid units for 50T to 1,000T deep-drawing, compression moulding, and forging presses.
-- **Multi-Station Solenoid Power Packs:** Centralized multi-valve manifold assemblies for synchronized sequencing of multiple hydraulic cylinders.
-- **Accumulator Power Packs:** Bladder/piston hydraulic energy storage units for instantaneous peak flow discharge and fail-safe emergency backup.
-- **Hand-Lever & Hand-Pump Power Units:** Rugged manual directional valve and zero-power manual backup pumping stations for field machinery.
-- **Custom Engineered Power Packs:** Tailored reservoirs, fluid filtration (10-micron return), air/water oil coolers, and PLC/electric control panels.
+- [Hydraulic Cylinders Overview](https://honeywellhydraulics.in/products/hydraulic-cylinders/): Bore 40mm to 500mm, stroke up to 6,000mm, working pressure up to 700 Bar.
+- [Custom Hydraulic Cylinders](https://honeywellhydraulics.in/products/hydraulic-cylinders/custom-hydraulic-cylinders/): Tailored bore, stroke, porting, cushioning, and mounting geometries for specialized machinery.
+- [Double Acting Hydraulic Cylinders](https://honeywellhydraulics.in/products/hydraulic-cylinders/double-acting-hydraulic-cylinders/): High-cycle powered extension and retraction cylinders for presses, automation, and metal forming (up to 350 Bar).
+- [Single Acting Hydraulic Cylinders](https://honeywellhydraulics.in/products/hydraulic-cylinders/single-acting-hydraulic-cylinders/): Gravity and spring return single-stroke hydraulic actuators for tippers, clamps, and fixtures (up to 250 Bar).
+- [Telescopic Hydraulic Cylinders](https://honeywellhydraulics.in/products/hydraulic-cylinders/telescopic-hydraulic-cylinders/): 2 to 5 stage multi-stage nested chrome cylinders for high extension in compact retracted lengths.
+- [Tie-Rod Hydraulic Cylinders](https://honeywellhydraulics.in/products/hydraulic-cylinders/tie-rod-hydraulic-cylinders/): NFPA standard interchangeable cylinders for injection moulding, machine tooling, and factory automation (up to 160 Bar).
+- [Welded Hydraulic Cylinders](https://honeywellhydraulics.in/products/hydraulic-cylinders/welded-hydraulic-cylinders/): Heavy-wall forged construction for construction equipment, earthmoving, mining, and high-vibration applications (up to 350 Bar).
+- [Flange Mounted Hydraulic Cylinders](https://honeywellhydraulics.in/products/hydraulic-cylinders/flange-mounted-hydraulic-cylinder/): ISO 6022 front and rear flange mounting for rigid axial hydraulic thrust.
+- [Clevis Mounted Hydraulic Cylinders](https://honeywellhydraulics.in/products/hydraulic-cylinders/clevis-mounted-hydraulic-cylinder/): Pivoting clevis pin mounted cylinders for angular articulation and moving linkages.
+- [Trunnion Mounted Hydraulic Cylinders](https://honeywellhydraulics.in/products/hydraulic-cylinders/trunnion-mounted-hydraulic-cylinder/): Head, cap, or intermediate trunnion mountings for balanced pivotal load distribution.
+- [Square Body Hydraulic Cylinders](https://honeywellhydraulics.in/products/hydraulic-cylinders/square-body-hydraulic-cylinder/): Compact block-style industrial hydraulic cylinders for die-casting, plastic moulds, and machine tools.
+- [Goods Lift Hydraulic Cylinders](https://honeywellhydraulics.in/products/hydraulic-cylinders/goods-lift-hydraulic-cylinders/): High-safety dual-seal single and double-acting rams for freight elevators and warehouse lifts.
+- [Car Parking Hydraulic Cylinders](https://honeywellhydraulics.in/products/hydraulic-cylinders/car-parking-hydraulic-cylinders/): Direct-acting lifting cylinders for multi-level puzzle parking and stacker systems.
+- [Scissor Lift Table Cylinders](https://honeywellhydraulics.in/products/hydraulic-cylinders/scissor-lift-table-hydraulic-cylinder/): Heavy-thrust compact actuators with built-in velocity fuses for industrial lifting platforms.
 
-### 3. Hydraulic Manifold Blocks (NG6 / CETOP 3 to NG32 / CETOP 10)
-- **06-Size (CETOP 03 / NG6 / D03) Manifold Blocks:** Precision-drilled subplates and parallel circuits for compact valve stacks (up to 315 Bar).
-- **10-Size (CETOP 05 / NG10 / D05) Manifold Blocks:** High-flow ductile iron/steel manifold blocks for heavy industrial circuits (up to 350 Bar).
-- **CETOP Modular Manifold Blocks:** ISO 4401 compliant sandwich and subplate blocks for modular circuit stacking.
-- **Custom CNC-Machined Manifolds:** In-house 4-axis CNC machined complex integrated logic blocks with Sun, HydraForce, and Rexroth cavity tooling.
-- **Multi-Station Parallel Manifold Blocks:** 2 to 10 station monolithic blocks eliminating external hydraulic piping and preventing leak paths.
+## Custom Hydraulic Power Packs
 
----
+- [Hydraulic Power Packs Overview](https://honeywellhydraulics.in/products/hydraulic-power-packs/): Motor 0.5 HP to 75 HP, tank 10L to 2,000L, working pressure up to 450 Bar.
+- [Three-Phase Hydraulic Power Packs](https://honeywellhydraulics.in/products/hydraulic-power-packs/three-phase-hydraulic-power-packs/): 415V continuous duty power units with gear/piston pumps for 24/7 manufacturing plants.
+- [Single-Phase Hydraulic Power Packs](https://honeywellhydraulics.in/products/hydraulic-power-packs/single-phase-hydraulic-power-packs/): 220V compact hydraulic power units for small workshop machinery, auto garage lifts, and mobile units.
+- [High-Low Hydraulic Power Packs](https://honeywellhydraulics.in/products/hydraulic-power-packs/high-low-hydraulic-power-packs/): Dual pump high-flow low-pressure rapid approach with low-flow high-pressure clamping.
+- [Hydraulic Power Packs for Hydraulic Presses](https://honeywellhydraulics.in/products/hydraulic-power-packs/hydraulic-power-packs-for-press/): High-tonnage fluid power units for 50T to 1,000T deep-drawing, compression, and forging presses.
+- [Multi-Station Solenoid Power Packs](https://honeywellhydraulics.in/products/hydraulic-power-packs/multistation-hydraulic-power-packs/): Centralized multi-valve manifold assemblies for synchronized sequencing of multiple hydraulic actuators.
+- [Accumulator Hydraulic Power Packs](https://honeywellhydraulics.in/products/hydraulic-power-packs/accumulator-hydraulic-power-packs/): Bladder and piston accumulator storage units for instantaneous peak flow and emergency fail-safe backup.
+- [Hand Lever Operated Power Packs](https://honeywellhydraulics.in/products/hydraulic-power-packs/hand-lever-operated-hydraulic-power-packs/): Rugged manual directional valve power units for proportional operator control.
+- [Hand Pump Operated Power Packs](https://honeywellhydraulics.in/products/hydraulic-power-packs/hand-pump-operated-hydraulic-power-packs/): Zero-power manual backup pumping stations for field machinery and emergency positioning.
+- [Custom Engineered Hydraulic Power Packs](https://honeywellhydraulics.in/products/hydraulic-power-packs/customized-hydraulic-power-packs/): Tailored reservoirs, fluid filtration, air/water heat exchangers, and PLC electric control panels.
 
-## Manufacturing & Quality Infrastructure (E-E-A-T)
+## Hydraulic Manifold Blocks
 
-- **CNC Machining Center:** High-precision VMC and CNC turning lathes guarantee bore tolerances within H8/H9 and surface roughness Ra < 0.2 µm.
-- **Hard Chrome Plating:** Piston rods induction hardened and hard chrome plated (minimum 25–30 microns thickness, corrosion resistance 96 hrs salt spray).
-- **Seal Packaging:** Standard polyurethane (PU), Viton (FKM for high temperatures), and PTFE step seals sourced from Parker, Hallite, and Merkel.
-- **Hydrostatic Test Rig:** 100% of manufactured cylinders, manifolds, and power packs undergo hydrostatic pressure testing at 1.5× rated working pressure prior to dispatch.
-- **Material Traceability:** EN 10204 Type 3.1 test certificates provided for ST52, EN8, EN19, EN24, and SS316 raw materials.
-- **Delivery Lead Times:** Standard items dispatched in 7–10 days; fully custom-engineered systems within 15–20 days.
+- [Hydraulic Manifold Blocks Overview](https://honeywellhydraulics.in/products/manifold-blocks/): CETOP 03 / NG6 to CETOP 10 / NG32 precision subplates and multi-station blocks.
+- [06-Size Manifold Blocks (CETOP 3 / NG6)](https://honeywellhydraulics.in/products/manifold-blocks/06-size-manifold-blocks/): Compact subplates and parallel circuits for D03 directional control valves (up to 315 Bar).
+- [10-Size Manifold Blocks (CETOP 5 / NG10)](https://honeywellhydraulics.in/products/manifold-blocks/10-size-manifold-blocks/): High-flow ductile iron/steel manifold blocks for heavy industrial circuits (up to 350 Bar).
+- [CETOP Modular Manifold Blocks](https://honeywellhydraulics.in/products/manifold-blocks/cetop-manifold-blocks/): ISO 4401 compliant sandwich blocks for modular pressure, flow, and check valve stacking.
+- [Custom CNC Manifold Blocks](https://honeywellhydraulics.in/products/manifold-blocks/custom-manifold-blocks/): In-house 4-axis CNC machined complex integrated logic blocks with Sun, HydraForce, and Rexroth cavities.
+- [Multi-Station Manifold Blocks](https://honeywellhydraulics.in/products/manifold-blocks/multi-station-manifold-blocks/): 2 to 10 station monolithic blocks eliminating external piping and leak paths.
 
----
+## Regional Industrial Hubs & Supply Corridors
 
-## Geographical Service Network (18 Key Industrial Corridors)
+- [Ahmedabad Industrial Hub](https://honeywellhydraulics.in/locations/ahmedabad/): Kathwada GIDC headquarters, Vatva, Odhav, Naroda, Changodar, and Sanand auto corridor.
+- [Surat Industrial Hub](https://honeywellhydraulics.in/locations/surat/): Sachin, Hazira, and Pandesara textile and diamond machinery clusters.
+- [Vadodara Industrial Hub](https://honeywellhydraulics.in/locations/vadodara/): Makarpura, Savli, and Waghodia heavy engineering and chemical equipment.
+- [Rajkot Industrial Hub](https://honeywellhydraulics.in/locations/rajkot/): Metoda, Aji, and Shapar-Veraval machine tools, foundries, and diesel engine components.
+- [Morbi Industrial Hub](https://honeywellhydraulics.in/locations/morbi/): Hydraulic press systems and cylinders for India's ceramic tile manufacturing hub.
+- [Vapi & Ankleshwar Chemical Belt](https://honeywellhydraulics.in/locations/vapi/): Chemical processing, paper mills, and pharmaceutical fluid power applications.
+- [Bhavnagar & Alang Marine Hub](https://honeywellhydraulics.in/locations/bhavnagar/): Marine hydraulic systems and ultra-heavy ship breaking cutting shear cylinders.
+- [Gujarat State Overview](https://honeywellhydraulics.in/locations/gujarat/): Comprehensive state-wide manufacturing and supply chain footprint across 12 industrial districts.
+- [Maharashtra Industrial Corridor](https://honeywellhydraulics.in/locations/maharashtra/): Pune (Chakan / Bhosari / Pimpri), Mumbai, Nashik, and Aurangabad automotive OEM supply.
+- [Karnataka Industrial Hubs](https://honeywellhydraulics.in/locations/karnataka/): Bengaluru (Peenya / Bommasandra), Hubli, and Belagavi aerospace and precision engineering.
+- [Tamil Nadu Industrial Hubs](https://honeywellhydraulics.in/locations/tamil-nadu/): Chennai (Sriperumbudur / Oragadam), Coimbatore, and Hosur automotive and manufacturing belts.
+- [Madhya Pradesh Industrial Hubs](https://honeywellhydraulics.in/locations/madhya-pradesh/): Indore, Pithampur auto cluster, Sanwer Road, and Bhopal engineering corridor.
+- [Rajasthan Industrial Hubs](https://honeywellhydraulics.in/locations/rajasthan/): Bhiwadi, Neemrana Japanese zone, Jaipur, and Udaipur mining equipment.
+- [West Bengal Industrial Hubs](https://honeywellhydraulics.in/locations/west-bengal/): Kolkata, Howrah foundry hub, and Durgapur steel corridor.
 
-### Gujarat (Manufacturing Base & Key Hubs):
-- **Ahmedabad:** Kathwada GIDC, Vatva, Odhav, Naroda, Changodar, Sanand
-- **Surat:** Sachin, Hazira, Pandesara, Pipodara (Textile & Diamond Machinery)
-- **Vadodara:** Makarpura, Savli, Waghodia, Por-Ramangamdi (Chemical & Heavy Engineering)
-- **Rajkot:** Metoda GIDC, Aji, Shapar-Veraval (Machine Tools, Castings & Auto Parts)
-- **Morbi:** Ceramic Tile Presses & Hydraulic Machinery
-- **Vapi & Ankleshwar:** Chemical, Paper, and Pharmaceutical Process Machinery
-- **Bhavnagar & Alang:** Marine Hydraulics & Heavy Ship-Breaking Shears
-- **Jamnagar, Gandhinagar, Halol & Kutch:** Brass parts, Automotive OEMs, Ports & Logistics
+## Machine-Readable Resources & Data
 
-### National Industrial Hubs:
-- **Maharashtra:** Pune (Chakan / Bhosari / Pimpri), Mumbai, Nashik, Aurangabad
-- **Karnataka:** Bengaluru (Peenya / Bommasandra), Hubli, Belagavi
-- **Tamil Nadu:** Chennai (Sriperumbudur / Oragadam), Coimbatore, Hosur
-- **Madhya Pradesh:** Indore, Pithampur, Sanwer Road, Bhopal
-- **Rajasthan:** Bhiwadi, Neemrana, Jaipur, Udaipur
-- **West Bengal:** Kolkata, Howrah, Durgapur Steel Corridor
+- [Machine-Readable Product Catalog](https://honeywellhydraulics.in/catalog.md): Complete structured markdown catalog containing engineering specifications, bore/stroke charts, and ordering matrices.
+- [XML Sitemap](https://honeywellhydraulics.in/sitemap.xml): Full index of all 68 canonical URLs for automated crawlers and AI search indexers.
 
----
+## Optional
 
-## Machine-Readable Data & API Endpoints
-- **Product Catalog (Markdown):** https://honeywellhydraulics.in/catalog.md
-- **XML Sitemap:** https://honeywellhydraulics.in/sitemap.xml
-- **Request a Quote API:** `POST https://honeywellhydraulics.in/api/quote`
-- **Contact API:** `POST https://honeywellhydraulics.in/api/contact`
+- [Privacy Policy](https://honeywellhydraulics.in/privacy-policy/): Data protection, customer privacy, and compliance guidelines.
+- [Terms of Service](https://honeywellhydraulics.in/terms/): Commercial terms, warranty provisions, and supply conditions.
