@@ -142,7 +142,7 @@ export const homepageProducts: HomepageProduct[] = [
     description:
       'Heavy-duty hydraulic cylinders for continuous industrial operations. 8 standard mounting types including flange, clevis, trunnion, and tie-rod configurations.',
     category: 'Core Products',
-    imageSrc: '/images/products/hydraulic-cylinders/hydraulic-cylinders-ahmedabad-manufacturer.webp',
+    imageSrc: '/images/products/hero/hydraulic-cylinders-manufacturing-hero.webp',
     href: '/products/hydraulic-cylinders/',
     ctaText: 'View Cylinders',
   },
