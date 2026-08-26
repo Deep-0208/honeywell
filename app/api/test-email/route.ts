@@ -4,6 +4,11 @@ import { Resend } from 'resend';
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
+  // P0 SECURITY: Only allow in development — prevents abuse in production
+  if (process.env.NODE_ENV !== 'development') {
+    return NextResponse.json({ error: 'Not available' }, { status: 404 });
+  }
+
   try {
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey || apiKey === 're_xxxxxxxxx') {

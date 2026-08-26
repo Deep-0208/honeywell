@@ -100,6 +100,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/locations/karnataka/', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/locations/tamil-nadu/', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/locations/west-bengal/', changeFrequency: 'monthly', priority: 0.7 },
+
+    // ── Legal Pages ──
+    { path: '/privacy-policy/', changeFrequency: 'yearly', priority: 0.2 },
+    { path: '/terms/', changeFrequency: 'yearly', priority: 0.2 },
   ];
 
   return pages.map((page) => ({

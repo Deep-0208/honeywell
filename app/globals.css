@@ -253,7 +253,7 @@
 }
 
 /* =========================================
-   POPPINS AND ROBOTO FONT CLASSES
+   POPPINS FONT CLASSES
    ========================================= */
 .poppins-thin {
   font-family: var(--font-poppins), sans-serif;
@@ -359,78 +359,6 @@
 
 .poppins-black-italic {
   font-family: var(--font-poppins), sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
-.roboto-thin {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.roboto-light {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.roboto-regular {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-medium {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.roboto-bold {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.roboto-black {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.roboto-thin-italic {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.roboto-light-italic {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.roboto-regular-italic {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.roboto-medium-italic {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.roboto-bold-italic {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.roboto-black-italic {
-  font-family: var(--font-roboto), sans-serif;
   font-weight: 900;
   font-style: italic;
 }

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import JsonLd from './JsonLd';
 import { COMPANY_INFO } from '@/lib/constants';
@@ -44,7 +43,7 @@ export function SEO({
 }: SEOProps) {
   const siteUrl = COMPANY_INFO.websiteUrl;
 
-  const graph: any[] = [
+  const graph: Array<Record<string, unknown>> = [
     {
       '@type': 'Organization',
       '@id': `${siteUrl}/#organization`,
@@ -107,34 +106,42 @@ export function SEO({
         '@id': `${siteUrl}/#organization`,
       },
     },
-    buildWebSiteJsonLd(),
-    buildWebPageJsonLd(title, description, url),
+    buildWebSiteJsonLd() as Record<string, unknown>,
+    buildWebPageJsonLd(title, description, url) as Record<string, unknown>,
   ];
 
   if (product) {
-    const productSchema = buildProductJsonLd(product);
-    // Add an @id to link it into the graph
-    (productSchema as any)['@id'] = `${siteUrl}${url}#product`;
+    const productSchema: Record<string, unknown> = {
+      ...buildProductJsonLd(product),
+      '@id': `${siteUrl}${url}#product`,
+    };
     graph.push(productSchema);
   }
 
   if (faqs && faqs.length > 0) {
-    const faqSchema = buildFAQJsonLd(faqs);
-    if (faqSchema) {
-      (faqSchema as any)['@id'] = `${siteUrl}${url}#faq`;
+    const faqSchemaData = buildFAQJsonLd(faqs);
+    if (faqSchemaData) {
+      const faqSchema: Record<string, unknown> = {
+        ...faqSchemaData,
+        '@id': `${siteUrl}${url}#faq`,
+      };
       graph.push(faqSchema);
     }
   }
 
   if (breadcrumbs && breadcrumbs.length > 0) {
-    const breadcrumbSchema = buildBreadcrumbJsonLd(breadcrumbs);
-    (breadcrumbSchema as any)['@id'] = `${siteUrl}${url}#breadcrumb`;
+    const breadcrumbSchema: Record<string, unknown> = {
+      ...buildBreadcrumbJsonLd(breadcrumbs),
+      '@id': `${siteUrl}${url}#breadcrumb`,
+    };
     graph.push(breadcrumbSchema);
   }
 
   if (article) {
-    const articleSchema = buildArticleJsonLd(article);
-    (articleSchema as any)['@id'] = `${siteUrl}${url}#article`;
+    const articleSchema: Record<string, unknown> = {
+      ...buildArticleJsonLd(article),
+      '@id': `${siteUrl}${url}#article`,
+    };
     graph.push(articleSchema);
   }
 

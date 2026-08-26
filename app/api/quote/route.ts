@@ -1,10 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { getClientIp, isHoneypotTriggered } from '@/lib/security';
 
 export const dynamic = 'force-dynamic';
 
+/** Escape HTML entities to prevent XSS in email templates */
+function escapeHtml(str: string): string {
+  if (!str) return '';
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
 export async function POST(req: NextRequest) {
   try {
+    const clientIp = getClientIp(req);
+    const body = await req.json();
+
+    // Honeypot check for automated bot submissions
+    if (isHoneypotTriggered(body)) {
+      console.warn(`[API/Quote] Honeypot triggered from IP: ${clientIp}`);
+      return NextResponse.json({ success: true, message: 'Quote request received' });
+    }
+
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
       console.warn('[API/Quote] Missing RESEND_API_KEY environment variable');
@@ -15,23 +36,20 @@ export async function POST(req: NextRequest) {
     }
 
     const resend = new Resend(apiKey);
-    const body = await req.json();
-    const {
-      fullName,
-      company,
-      email,
-      phone,
-      city,
-      productInterest,
-      industry,
-      application,
-      requirementDescription,
-      pressure,
-      boreSize,
-      strokeLength,
-      flowRate,
-      quantity,
-    } = body;
+    const fullName = escapeHtml(body.fullName);
+    const company = escapeHtml(body.company);
+    const email = escapeHtml(body.email);
+    const phone = escapeHtml(body.phone);
+    const city = escapeHtml(body.city);
+    const productInterest = escapeHtml(body.productInterest);
+    const industry = escapeHtml(body.industry);
+    const application = escapeHtml(body.application);
+    const requirementDescription = escapeHtml(body.requirementDescription);
+    const pressure = escapeHtml(body.pressure);
+    const boreSize = escapeHtml(body.boreSize);
+    const strokeLength = escapeHtml(body.strokeLength);
+    const flowRate = escapeHtml(body.flowRate);
+    const quantity = escapeHtml(body.quantity);
 
     // Server-side validation
     if (!fullName || !email || !phone) {
@@ -46,7 +64,7 @@ export async function POST(req: NextRequest) {
     const salesEmail = process.env.SALES_NOTIFICATION_EMAIL || 'honeywellhydraulics@gmail.com';
 
     const { data, error } = await resend.emails.send({
-      from: 'Honeywell Hydraulics RFQ <onboarding@resend.dev>',
+      from: 'Honeywell Hydraulics RFQ <quotes@honeywellhydraulics.in>',
       to: [salesEmail],
       replyTo: email,
       subject: `🚨 New RFQ Request: ${fullName} (${company || 'Individual'}) — ${productInterest || 'Hydraulics'}`,

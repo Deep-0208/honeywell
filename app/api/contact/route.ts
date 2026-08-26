@@ -1,10 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { getClientIp, isHoneypotTriggered } from '@/lib/security';
 
 export const dynamic = 'force-dynamic';
 
+/** Escape HTML entities to prevent XSS in email templates */
+function escapeHtml(str: string): string {
+  if (!str) return '';
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
 export async function POST(req: NextRequest) {
   try {
+    const clientIp = getClientIp(req);
+    const raw = await req.json();
+
+    // Honeypot check for automated bot submissions
+    if (isHoneypotTriggered(raw)) {
+      console.warn(`[API/Contact] Honeypot triggered from IP: ${clientIp}`);
+      return NextResponse.json({ success: true, message: 'Inquiry received' });
+    }
+
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
       console.warn('[API/Contact] Missing RESEND_API_KEY environment variable');
@@ -15,7 +36,11 @@ export async function POST(req: NextRequest) {
     }
 
     const resend = new Resend(apiKey);
-    const { fullName, company, phone, email, message } = await req.json();
+    const fullName = escapeHtml(raw.fullName);
+    const company = escapeHtml(raw.company);
+    const phone = escapeHtml(raw.phone);
+    const email = escapeHtml(raw.email);
+    const message = escapeHtml(raw.message);
 
     if (!fullName || !email || !message) {
       console.warn('[API/Contact] Validation failed: missing required fields');
@@ -29,7 +54,7 @@ export async function POST(req: NextRequest) {
     const salesEmail = process.env.SALES_NOTIFICATION_EMAIL || 'honeywellhydraulics@gmail.com';
 
     const { data, error } = await resend.emails.send({
-      from: 'Honeywell Hydraulics <onboarding@resend.dev>',
+      from: 'Honeywell Hydraulics <sales@honeywellhydraulics.in>',
       to: [salesEmail],
       replyTo: email,
       subject: `📩 New Contact Message: ${fullName} (${company || 'Direct Inquiry'})`,

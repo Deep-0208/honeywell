@@ -13,6 +13,7 @@ export interface ContactFormPayload {
   phone: string;
   email: string;
   message: string;
+  _hp_company_fax?: string;
 }
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
@@ -23,6 +24,7 @@ const INITIAL: ContactFormPayload = {
   phone: '',
   email: '',
   message: '',
+  _hp_company_fax: '',
 };
 
 type Errors = Partial<Record<keyof ContactFormPayload, string>>;
@@ -131,6 +133,19 @@ export function ContactForm() {
       aria-label="Contact inquiry form"
       className="space-y-5"
     >
+      {/* Bot honeypot anti-spam field */}
+      <div style={{ display: 'none' }} aria-hidden="true">
+        <label htmlFor="_hp_company_fax">Leave this field blank</label>
+        <input
+          id="_hp_company_fax"
+          name="_hp_company_fax"
+          type="text"
+          value={form._hp_company_fax || ''}
+          onChange={(e) => update('_hp_company_fax', e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       {status === 'error' && (
         <div role="alert" className="flex items-start gap-3 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-sm text-sm font-body">
           <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />

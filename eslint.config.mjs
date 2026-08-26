@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
     "scripts/**",
+    "skills/**",
+    "legacy-website/**",
     "*.cjs",
   ]),
   {

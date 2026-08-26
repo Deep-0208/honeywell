@@ -245,14 +245,6 @@ export function buildWebSiteJsonLd() {
     publisher: {
       '@id': `${COMPANY_INFO.websiteUrl}/#organization`,
     },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${COMPANY_INFO.websiteUrl}/search?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
     inLanguage: 'en-IN',
   };
 }
@@ -264,7 +256,7 @@ export function buildWebSiteJsonLd() {
  * Schemas included:
  * 1. Organization
  * 2. ManufacturingBusiness
- * 3. WebSite (with SearchAction)
+ * 3. WebSite
  * 4. WebPage
  * 5. FAQPage
  * 6. BreadcrumbList

@@ -23,6 +23,7 @@ export interface QuoteFormPayload {
   flowRate?: string;
   quantity?: string;
   attachmentName?: string;
+  _hp_company_fax?: string;
 }
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
@@ -43,6 +44,7 @@ const INITIAL_STATE: QuoteFormPayload = {
   flowRate: '',
   quantity: '',
   attachmentName: '',
+  _hp_company_fax: '',
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -229,6 +231,19 @@ export function QuoteForm() {
       aria-label="Hydraulic Quote Request Form"
       className="space-y-8"
     >
+      {/* Bot honeypot anti-spam field */}
+      <div style={{ display: 'none' }} aria-hidden="true">
+        <label htmlFor="_hp_quote_fax">Leave this field blank</label>
+        <input
+          id="_hp_quote_fax"
+          name="_hp_company_fax"
+          type="text"
+          value={formData._hp_company_fax || ''}
+          onChange={(e) => update('_hp_company_fax', e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       {status === 'error' && (
         <div
           role="alert"

@@ -7,19 +7,12 @@ import './globals.css';
 import { Agentation } from 'agentation';
 import { ElevenLabsWidget } from '@/components/ElevenLabsWidget';
 import JsonLd from '@/components/seo/JsonLd';
-import { Poppins, Roboto } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800'],
   variable: '--font-poppins',
-  display: 'swap',
-});
-
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-roboto',
   display: 'swap',
 });
 
@@ -98,7 +91,7 @@ export default function RootLayout({
   return (
       <html
       lang="en-IN"
-      className={`scroll-smooth poppins-regular ${poppins.variable} ${roboto.variable}`}
+      className={`scroll-smooth poppins-regular ${poppins.variable}`}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
