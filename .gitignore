@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -13,44 +14,58 @@
 # testing
 /coverage
 
-# next.js
+# next.js build output
 /.next/
+.next/
 /out/
+out/
 
 # production
 /build
 
-# misc
-.DS_Store
-*.pem
-
-# debug
+# logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files (preserve .env.example)
+.env
+.env.local
+.env.*.local
 .env*
 !.env.example
 
-# vercel
+# vercel local project metadata
 .vercel
+.vercel/
 
-# temporary files
-scratch/
+# local AI / IDE state
+.gemini/
+.agents/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# OS files
+.DS_Store
+Thumbs.db
+*.pem
+
+# Editor / IDE local settings
+.vscode/
+.idea/
+
+# temporary files
+scratch/
 
 # legacy website reference assets
 legacy-website/
 /legacy-website/
 
-# skills
-skills/
-/skills/
-
-# scripts
+# scripts & local utilities
 scripts/
 /scripts/

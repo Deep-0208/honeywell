@@ -6,53 +6,6 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.3.0-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Transactional Email](https://img.shields.io/badge/Email-Resend_API-black?style=flat)](https://resend.com/)
 
-> **Technical Architecture & Operations Manual**: Comprehensive documentation of codebase structure, component hierarchies, data layer contracts, prerendered route inventory, and technical SEO / AEO / GEO implementation for **Honeywell Hydraulics**.
-
----
-
-## Documentation Status
-
-This document reflects the verified implementation in the codebase as of the last technical audit.
-
-### Status Legend
-- **Implemented**: Fully confirmed and verified in source code and static build output.
-- **Production Configuration**: Implemented in code; requires active hosting environment / DNS settings.
-- **Manual Verification**: Operational item requiring runtime testing or external service configuration.
-- **Planned**: Documented architectural roadmap item for future phases.
-
-### Audit Summary (August 2026)
-
-| Parameter | Confirmed Production Value | Status |
-|---|---|---|
-| **Last Audit Date** | August 25, 2026 | Implemented |
-| **Framework Version** | Next.js `16.2.7` (App Router) / React `19.2.4` | Implemented |
-| **Language & Tooling** | TypeScript `^5.0` / Tailwind CSS `v4.3.0` / PostCSS `^8.5.15` | Implemented |
-| **Prerendered Page Routes** | **62 Static Pages** (Prerendered at build time) | Implemented |
-| **Serverless API Routes** | **4 Endpoints** (`/api/contact`, `/api/quote`, `/api/og`, `/api/test-email`) | Implemented |
-| **Total Route Entries** | **66 Next.js Application Routes** | Implemented |
-| **Production Domain** | `https://honeywellhydraulics.in` (Trailing slash enforced) | Production Configuration |
-| **Robots Directives** | Maintenance Mode (Crawlers blocked pending production signoff) | Implemented |
-| **Transactional Mailer** | Resend API client configured in `/api/contact` & `/api/quote` | Implemented (Requires API Key) |
-
----
-
-## Implemented vs. Manual Verification Matrix
-
-| Area | Implementation Mechanism | Repository Status | Operational Verification Needed |
-|---|---|---|---|
-| **Page Rendering** | React Server Components (RSC) & static generation | Implemented (`app/(site)/`) | Verify build output via `npm run build` |
-| **Dynamic Sitemap** | Programmatic generator in `app/sitemap.ts` | Implemented (62 paths) | Confirm XML output at `/sitemap.xml` |
-| **Robots Configuration** | Programmatic rules in `app/robots.ts` | Implemented (Maintenance mode) | Update crawler rules for launch signoff |
-| **Structured Data** | Schema.org `@graph` generation via `lib/seo.ts` | Implemented | Test URLs via Google Rich Results Tool |
-| **Quote RFQ Ingestion** | Serverless API route `app/api/quote/route.ts` | Implemented | Supply valid `RESEND_API_KEY` in environment |
-| **Contact Ingestion** | Serverless API route `app/api/contact/route.ts` | Implemented | Verify inbox delivery in target email account |
-| **OpenGraph Generator** | Edge ImageResponse in `app/api/og/route.tsx` | Implemented | Verify social preview rendering |
-| **DNS & Domain Binding** | Canonical `https://honeywellhydraulics.in/` | Configured in codebase | Verify DNS A/CNAME records on hosting platform |
-| **Search Console** | Meta tag in `app/layout.tsx` via env variable | Implemented | Supply `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` |
-| **Web Analytics** | GA4 Script & `@vercel/analytics` in root layout | Implemented | Supply `NEXT_PUBLIC_GA_ID` in production env |
-
----
-
 ## Table of Contents
 
 1. [Documentation Status & Verification Matrix](#documentation-status)
@@ -82,9 +35,8 @@ This document reflects the verified implementation in the codebase as of the las
 14. [Testing & Quality Assurance Workflow](#13-testing--quality-assurance-workflow)
 15. [Development Setup & NPM Scripts](#14-development-setup--npm-scripts)
 16. [Content Management & Operational Maintenance](#15-content-management--operational-maintenance)
-17. [Production Deployment & Launch Checklist](#16-production-deployment--launch-checklist)
-18. [Engineering Rules & Development Guidelines](#17-engineering-rules--development-guidelines)
-19. [Planned Architectural Improvements](#18-planned-architectural-improvements)
+17. [Engineering Rules & Development Guidelines](#16-engineering-rules--development-guidelines)
+18. [Planned Architectural Improvements](#17-planned-architectural-improvements)
 
 ---
 
@@ -767,23 +719,7 @@ The development server starts at **http://localhost:3000**.
 
 ---
 
-## 16. Production Deployment & Launch Checklist
-
-### Deployment Configuration
-- [ ] Connect Git repository to hosting provider (e.g. Vercel).
-- [ ] Configure environment variables: `RESEND_API_KEY`, `SALES_NOTIFICATION_EMAIL`, `NEXT_PUBLIC_GA_ID`, `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`.
-- [ ] Map custom domain `honeywellhydraulics.in` with SSL certificate.
-
-### Launch SEO Verification
-- [ ] **Robots Policy Update**: Update `app/robots.ts` to allow search engine crawlers (`Googlebot`, `Bingbot`) upon stakeholder signoff.
-- [ ] **Sitemap Verification**: Confirm accessibility of `https://honeywellhydraulics.in/sitemap.xml`.
-- [ ] **Search Console**: Verify property ownership in Google Search Console using the verification meta tag.
-- [ ] **Forms Testing**: Execute end-to-end quote submissions to confirm email delivery.
-- [ ] **Redirect Verification**: Confirm 301 redirects function correctly on production edge nodes.
-
----
-
-## 17. Engineering Rules & Development Guidelines
+## 16. Engineering Rules & Development Guidelines
 
 1. **Preserve Real Engineering Specifications**: Never modify product dimensions, pressure boundaries, or mounting standards without verification from Honeywell Hydraulics technical personnel.
 2. **Authentic Product Imagery**: Preserve real factory and hardware imagery; avoid generic synthetic AI mockups for industrial equipment.
@@ -794,14 +730,13 @@ The development server starts at **http://localhost:3000**.
 
 ---
 
-## 18. Planned Architectural Improvements
+## 17. Planned Architectural Improvements
 
 The following items represent architectural proposals for future consideration:
 
 1. **Dynamic Technical Knowledge Base (`/blog/`)**: Activating an MDX-driven technical resource section for fluid power engineering guides and maintenance checklists.
 2. **Interactive 3D Cylinder Viewer**: Integrating a WebGL/Three.js CAD viewer to visualize stroke and mounting bracket geometries.
 3. **Regional Language Localization**: Localizing selected industrial landing pages into Gujarati (`gu-IN`) and Hindi (`hi-IN`).
-4. **ERP / CRM Lead Ingestion**: Connecting `/api/quote` directly to internal ERP or CRM webhooks.
 
 ---
 
