@@ -4,42 +4,37 @@ import { COMPANY_INFO } from '@/lib/constants';
 /**
  * robots.txt configuration — Honeywell Hydraulics (Production Ready)
  *
- * Search engines (Googlebot, Bingbot) and AI search engines (GPTBot,
- * ClaudeBot, PerplexityBot, Google-Extended) are FULLY ALLOWED.
- * Commercial backlink scrapers remain blocked.
+ * Clean production crawler policy:
+ * - General crawlers & AI discovery engines: Allowed with private route exclusions
+ * - Commercial scrapers (AhrefsBot, SemrushBot, MJ12bot, DotBot): Disallowed
+ * - Private routes disallowed: /api/, /admin/, /thank-you/
  */
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // ── General search engines & users ──
       {
         userAgent: '*',
         allow: '/',
         disallow: ['/api/', '/admin/', '/thank-you/'],
       },
-      // ── Primary Search Engine Crawlers ──
       {
-        userAgent: ['Googlebot', 'Googlebot-Image', 'Bingbot'],
-        allow: '/',
+        userAgent: 'AhrefsBot',
+        disallow: '/',
       },
-      // ── AI Answer & Search Engine Crawlers ──
       {
-        userAgent: ['GPTBot', 'OAI-SearchBot', 'Google-Extended', 'ClaudeBot', 'PerplexityBot', 'Applebot-Extended'],
-        allow: '/',
+        userAgent: 'SemrushBot',
+        disallow: '/',
       },
-      // ── Commercial Scraper Bots — Blocked ──
       {
-        userAgent: [
-          'AhrefsBot',
-          'SemrushBot',
-          'MJ12bot',
-          'DotBot',
-        ],
+        userAgent: 'MJ12bot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'DotBot',
         disallow: '/',
       },
     ],
-    sitemap: [
-      `${COMPANY_INFO.websiteUrl}/sitemap.xml`,
-    ],
+    sitemap: `${COMPANY_INFO.websiteUrl}/sitemap.xml`,
   };
 }
+

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
@@ -132,6 +132,7 @@ const PROMISES = [
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
+  '@id': `${COMPANY_INFO.websiteUrl}/request-quote#breadcrumb`,
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${COMPANY_INFO.websiteUrl}/` },
     { '@type': 'ListItem', position: 2, name: 'Request Quote', item: `${COMPANY_INFO.websiteUrl}/request-quote` },

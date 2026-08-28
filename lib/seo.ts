@@ -147,23 +147,11 @@ export function buildProductJsonLd(product: Product) {
       '@type': 'Brand',
       name: COMPANY_INFO.name,
     },
-    offers: {
-      '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        priceCurrency: 'INR',
-      },
-      seller: {
-        '@type': 'Organization',
-        name: COMPANY_INFO.name,
-      },
-      url: `${COMPANY_INFO.websiteUrl}/request-quote`,
-    },
   };
 }
 
 export function buildBreadcrumbJsonLd(items: { name: string; item: string }[]) {
+  if (!items || items.length === 0) return null;
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -171,7 +159,7 @@ export function buildBreadcrumbJsonLd(items: { name: string; item: string }[]) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `${COMPANY_INFO.websiteUrl}${item.item}`,
+      item: item.item.startsWith('http') ? item.item : `${COMPANY_INFO.websiteUrl}${item.item}`,
     })),
   };
 }
@@ -259,7 +247,6 @@ export function buildWebSiteJsonLd() {
  * 3. WebSite
  * 4. WebPage
  * 5. FAQPage
- * 6. BreadcrumbList
  *
  * @see SEO_ARCHITECTURE.md § Schema Architecture
  */
@@ -374,20 +361,6 @@ export function buildHomepageGraphSchema({
             text: faq.answer,
           },
         })),
-      },
-
-      /* ── 6. BreadcrumbList ── */
-      {
-        '@type': 'BreadcrumbList',
-        '@id': `${siteUrl}/#breadcrumb`,
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: siteUrl,
-          },
-        ],
       },
     ],
   };

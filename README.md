@@ -456,7 +456,7 @@ Structured data is generated via `lib/seo.ts` and `components/product-page/schem
    - `BreadcrumbList`: Root breadcrumb hierarchy.
 
 2. **Product Page `@graph` (`components/product-page/schema.ts`)**:
-   - `Product`: Name, description, image, brand (`Honeywell Hydraulics`), manufacturer link, category, `additionalProperty` (Bore, Stroke, Pressure), and `offers` linking to `/request-quote`.
+   - `Product`: Name, description, image, brand (`Honeywell Hydraulics`), manufacturer link, category, and `additionalProperty` (Bore, Stroke, Pressure).
    - `WebPage`: Page-level schema linked to the product entity.
    - `BreadcrumbList`: Multi-level breadcrumb path.
    - `FAQPage`: Product-specific technical questions.
