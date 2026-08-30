@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { buildMetadata } from '@/lib/seo';
 import JsonLd from '@/components/seo/JsonLd';
 import { COMPANY_INFO } from '@/lib/constants';
@@ -74,7 +74,7 @@ function buildPageSchema() {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: siteUrl,
+            item: `${siteUrl}/`,
           },
           {
             '@type': 'ListItem',

@@ -35,7 +35,7 @@ export default function ProductsHubPage() {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    '@id': `${siteUrl}/products#breadcrumb`,
+    '@id': `${siteUrl}/products/#breadcrumb`,
     itemListElement: [
       {
         '@type': 'ListItem',
@@ -47,29 +47,30 @@ export default function ProductsHubPage() {
         '@type': 'ListItem',
         position: 2,
         name: 'Products',
-        item: `${siteUrl}/products`,
+        item: `${siteUrl}/products/`,
       },
     ],
   };
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': `${siteUrl}/products#webpage`,
-    url: `${siteUrl}/products`,
+    '@id': `${siteUrl}/products/#webpage`,
+    url: `${siteUrl}/products/`,
     name: 'Industrial Hydraulic Products Manufacturer | Honeywell Hydraulics',
     description: 'Leading hydraulic products manufacturer in India. Explore our precision-engineered hydraulic cylinders and power packs.',
     isPartOf: { '@id': `${siteUrl}/#website` },
+    breadcrumb: breadcrumbSchema,
     inLanguage: 'en-IN',
   };
   const productListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    '@id': `${siteUrl}/products#itemlist`,
+    '@id': `${siteUrl}/products/#itemlist`,
     name: 'Honeywell Hydraulics Product Categories',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Hydraulic Cylinders', url: `${siteUrl}/products/hydraulic-cylinders` },
-      { '@type': 'ListItem', position: 2, name: 'Hydraulic Power Packs', url: `${siteUrl}/products/hydraulic-power-packs` },
-      { '@type': 'ListItem', position: 3, name: 'Hydraulic Manifold Blocks', url: `${siteUrl}/products/manifold-blocks` },
+      { '@type': 'ListItem', position: 1, name: 'Hydraulic Cylinders', url: `${siteUrl}/products/hydraulic-cylinders/` },
+      { '@type': 'ListItem', position: 2, name: 'Hydraulic Power Packs', url: `${siteUrl}/products/hydraulic-power-packs/` },
+      { '@type': 'ListItem', position: 3, name: 'Hydraulic Manifold Blocks', url: `${siteUrl}/products/manifold-blocks/` },
     ],
   };
   const faqs = [
