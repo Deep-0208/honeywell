@@ -19,3 +19,11 @@
   - `https://www.honeywellhydraulics.in` (301 Permanent Redirect to apex)
   - All HTTP requests 308 redirect to HTTPS.
 
+## Mandatory Branching & Deployment Workflow (STRICT)
+**Rule**: Always make changes in the `development` branch first!
+1. **Active Work Branch**: All new features, page changes, code updates, and fixes MUST be written and committed on the `development` branch.
+2. **Local & Preview Verification**: Test locally (`http://localhost:3000`) and on Vercel preview (`honeywell-two.vercel.app`).
+3. **Merge to Master for Production**: Only merge `development` into `master` after changes are verified and approved for production release.
+4. **Never Commit Directly to Master**: Do not make untested direct changes on `master`.
+
+
