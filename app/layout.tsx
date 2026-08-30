@@ -116,15 +116,25 @@ export default function RootLayout({
             {
               '@context': 'https://schema.org',
               '@type': 'Organization',
+              '@id': `${COMPANY_INFO.websiteUrl}/#organization`,
               name: COMPANY_INFO.name,
               url: COMPANY_INFO.websiteUrl,
-              logo: `${COMPANY_INFO.websiteUrl}/images/shared/logos/honeywell-hydraulics-logo-full.png`,
+              logo: {
+                '@type': 'ImageObject',
+                '@id': `${COMPANY_INFO.websiteUrl}/#logo`,
+                url: `${COMPANY_INFO.websiteUrl}/images/shared/logos/honeywell-hydraulics-logo-full.png`,
+                contentUrl: `${COMPANY_INFO.websiteUrl}/images/shared/logos/honeywell-hydraulics-logo-full.png`,
+                caption: COMPANY_INFO.name,
+                width: '350',
+                height: '100',
+              },
+              image: `${COMPANY_INFO.websiteUrl}/images/shared/logos/honeywell-hydraulics-logo-full.png`,
               contactPoint: {
                 '@type': 'ContactPoint',
                 telephone: COMPANY_INFO.phone,
                 contactType: 'sales',
                 areaServed: 'IN',
-                availableLanguage: ['English', 'Hindi'],
+                availableLanguage: ['English', 'Hindi', 'Gujarati'],
               },
               address: {
                 '@type': 'PostalAddress',
@@ -135,8 +145,12 @@ export default function RootLayout({
             {
               '@context': 'https://schema.org',
               '@type': 'WebSite',
+              '@id': `${COMPANY_INFO.websiteUrl}/#website`,
               name: COMPANY_INFO.name,
               url: COMPANY_INFO.websiteUrl,
+              publisher: {
+                '@id': `${COMPANY_INFO.websiteUrl}/#organization`,
+              },
             },
           ]}
         />
