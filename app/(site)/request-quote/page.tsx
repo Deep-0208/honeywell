@@ -132,10 +132,10 @@ const PROMISES = [
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  '@id': `${COMPANY_INFO.websiteUrl}/request-quote#breadcrumb`,
+  '@id': `${COMPANY_INFO.websiteUrl}/request-quote/#breadcrumb`,
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${COMPANY_INFO.websiteUrl}/` },
-    { '@type': 'ListItem', position: 2, name: 'Request Quote', item: `${COMPANY_INFO.websiteUrl}/request-quote` },
+    { '@type': 'ListItem', position: 2, name: 'Request Quote', item: `${COMPANY_INFO.websiteUrl}/request-quote/` },
   ],
 };
 
@@ -144,7 +144,7 @@ const contactPageSchema = {
   '@type': 'ContactPage',
   name: 'Request a Hydraulic Solution Quote',
   description: 'Request a free quote for custom hydraulic cylinders, power packs, and hydraulic accessories from Honeywell Hydraulics, Ahmedabad.',
-  url: `${COMPANY_INFO.websiteUrl}/request-quote`,
+  url: `${COMPANY_INFO.websiteUrl}/request-quote/`,
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: COMPANY_INFO.phone,
@@ -160,8 +160,8 @@ const webPageSchema = {
   '@type': 'WebPage',
   name: 'Request a Free Hydraulic Quote | Honeywell Hydraulics Ahmedabad',
   description: 'Submit your hydraulic project requirements online and get a fast response from our engineering team.',
-  url: `${COMPANY_INFO.websiteUrl}/request-quote`,
-  breadcrumb: { '@id': `${COMPANY_INFO.websiteUrl}/request-quote#breadcrumb` },
+  url: `${COMPANY_INFO.websiteUrl}/request-quote/`,
+  breadcrumb: breadcrumbSchema,
 };
 
 const faqSchema = {

@@ -63,7 +63,7 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${COMPANY_INFO.websiteUrl}/` },
-    { '@type': 'ListItem', position: 2, name: 'Contact Us', item: `${COMPANY_INFO.websiteUrl}/contact-us` },
+    { '@type': 'ListItem', position: 2, name: 'Contact Us', item: `${COMPANY_INFO.websiteUrl}/contact-us/` },
   ],
 };
 
@@ -73,7 +73,7 @@ const contactPageSchema = {
   name: 'Contact Honeywell Hydraulics',
   description:
     'Contact page for Honeywell Hydraulics — hydraulic cylinder and power pack manufacturer in Ahmedabad, Gujarat.',
-  url: `${COMPANY_INFO.websiteUrl}/contact-us`,
+  url: `${COMPANY_INFO.websiteUrl}/contact-us/`,
   contactPoint: [
     {
       '@type': 'ContactPoint',

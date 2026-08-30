@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Metadata } from 'next';
 import { buildMetadata } from '@/lib/seo';
 import Image from 'next/image';
@@ -47,17 +47,17 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${COMPANY_INFO.websiteUrl}/` },
-    { '@type': 'ListItem', position: 2, name: 'About Us', item: `${COMPANY_INFO.websiteUrl}/about-us` },
-    { '@type': 'ListItem', position: 3, name: 'Manufacturing Facility', item: `${COMPANY_INFO.websiteUrl}/manufacturing-facility` },
+    { '@type': 'ListItem', position: 2, name: 'About Us', item: `${COMPANY_INFO.websiteUrl}/about-us/` },
+    { '@type': 'ListItem', position: 3, name: 'Manufacturing Facility', item: `${COMPANY_INFO.websiteUrl}/manufacturing-facility/` },
   ],
 };
 
 const manufacturingBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ManufacturingBusiness',
-  '@id': `${COMPANY_INFO.websiteUrl}/manufacturing-facility#facility`,
+  '@id': `${COMPANY_INFO.websiteUrl}/manufacturing-facility/#facility`,
   name: COMPANY_INFO.name,
-  url: `${COMPANY_INFO.websiteUrl}/manufacturing-facility`,
+  url: `${COMPANY_INFO.websiteUrl}/manufacturing-facility/`,
   description: 'Hydraulic cylinder and power pack manufacturing facility in Kathwada GIDC, Ahmedabad.',
   telephone: COMPANY_INFO.phone,
   email: COMPANY_INFO.email,
