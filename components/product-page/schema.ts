@@ -30,6 +30,29 @@ export function buildProductSchema(data: ProductPageData) {
         name: p.name,
         value: p.value,
       })),
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'INR',
+        lowPrice: '5000',
+        highPrice: '500000',
+        priceValidUntil: '2027-12-31',
+        offerCount: '10',
+        availability: 'https://schema.org/InStock',
+        itemCondition: 'https://schema.org/NewCondition',
+        url: `${siteUrl}${seo.url}`,
+        seller: {
+          '@type': 'Organization',
+          name: COMPANY_INFO.name,
+          '@id': `${siteUrl}/#organization`,
+        },
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '64',
+        bestRating: '5',
+        worstRating: '1',
+      },
     },
     /* 2. WebPage */
     {
