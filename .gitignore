@@ -69,3 +69,4 @@ legacy-website/
 # scripts & local utilities
 scripts/
 /scripts/
+!scripts/submit-indexnow.mjs
