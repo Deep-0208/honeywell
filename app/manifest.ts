@@ -12,11 +12,6 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: COMPANY_INFO.themeColor,
     icons: [
       {
-        src: '/favicon.ico',
-        sizes: 'any',
-        type: 'image/x-icon',
-      },
-      {
         src: '/favicon-48x48.png',
         sizes: '48x48',
         type: 'image/png',
@@ -30,6 +25,12 @@ export default function manifest(): MetadataRoute.Manifest {
         src: '/icon-512.png',
         sizes: '512x512',
         type: 'image/png',
+      },
+      {
+        src: '/icon-512.png',
+        sizes: '512x512',
+        type: 'image/png',
+        purpose: 'maskable',
       },
     ],
   };
