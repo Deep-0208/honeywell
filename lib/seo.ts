@@ -58,7 +58,9 @@ export function buildMetadata({
       canonical: fullCanonicalUrl,
     },
     openGraph: {
-      title,
+      title: {
+        absolute: finalTitle,
+      },
       description,
       url: fullCanonicalUrl,
       siteName: COMPANY_INFO.name,
@@ -74,7 +76,9 @@ export function buildMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: {
+        absolute: finalTitle,
+      },
       description,
       images: [ogImageUrl],
     },

@@ -70,3 +70,6 @@ legacy-website/
 scripts/
 /scripts/
 !scripts/submit-indexnow.mjs
+
+skills/
+/skills/
